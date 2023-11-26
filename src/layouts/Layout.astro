@@ -1,0 +1,47 @@
+---
+// import { ViewTransitions } from 'astro:transitions'
+
+import Header from '../components/Header.astro'
+
+import '../styles/tailwind.css'
+import '../styles/global.css'
+
+export interface Props {
+	filterButtons?: boolean
+	languageButtons?: boolean
+	switchViewButtons?: boolean
+	dark?: boolean
+	header?: boolean
+	title?: string
+}
+
+const { filterButtons, languageButtons, dark, header, title, switchViewButtons } = Astro.props as Props
+---
+
+<!doctype html>
+<html lang='en'>
+	<head>
+		<!-- Todo: Change before publication  -->
+		<meta name='robots' content='noindex' />
+		<meta name='googlebot' content='noindex' />
+		<meta name='googlebot-news' content='nosnippet' />
+		<meta charset='iso-8859-1' />
+		<meta http-equiv='X-UA-Compatible' content='IE=edge' />
+		<meta name='viewport' content='width=device-width, initial-scale=1.0' />
+		<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1' />
+		<link rel='shortcut icon' href='/favicon.ico' />
+		<link rel='icon' type='image/x-icon' href='/favicon.ico' />
+		<title>{title || 'The New Humanitarian'}</title>
+		<!-- To do: Google Tag Manager -->
+		<!-- To do: Create SEO component for more meta tags -->
+		<!-- <ViewTransitions fallback='swap' /> -->
+	</head>
+	<body>
+		<!-- Header  -->
+		{header && <Header dark={dark} filterButtons={filterButtons} languageButtons={languageButtons} switchViewButtons={switchViewButtons} />}
+		<!-- Main content -->
+		<slot />
+		<!-- Footer  -->
+		<!-- No footer set -->
+	</body>
+</html>
