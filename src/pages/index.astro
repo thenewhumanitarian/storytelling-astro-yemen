@@ -4,7 +4,7 @@ import { ViewTransitions } from 'astro:transitions'
 import Layout from '../layouts/Layout.astro'
 import StoryWrapper from '../components/StoryWrapper.astro'
 
-import stories from '../data/stories.json'
+import stories from '../data/all_stories.json'
 
 function shuffleArray(array) {
 	for (let i = array.length - 1; i > 0; i--) {
@@ -17,7 +17,7 @@ function shuffleArray(array) {
 }
 // Todo: Can this be done "once" per session perhaps? // Testing pipeline
 shuffleArray(stories)
---- 
+---
 
 <>
 	<ViewTransitions />
@@ -42,7 +42,7 @@ shuffleArray(stories)
 					A project by{' '}
 					<a href='https://www.thenewhumanitarian.org/' class='text-white underline hover:text-burgundy transition-colors'>
 						{' '}
-						 The New Humanitarian
+						The New Humanitarian
 					</a>
 				</p>
 			</div>
