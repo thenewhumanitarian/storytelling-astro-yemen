@@ -13,13 +13,14 @@ export interface Props {
 	dark?: boolean
 	header?: boolean
 	title?: string
+	dir?: string
 }
 
-const { filterButtons, languageButtons, dark, header, title, switchViewButtons } = Astro.props as Props
+const { filterButtons, languageButtons, dark, header, title, switchViewButtons, dir } = Astro.props as Props
 ---
 
 <!doctype html>
-<html lang='en'>
+<html lang='en' dir={dir || 'ltr'}>
 	<head>
 		<!-- Todo: Change before publication  -->
 		<meta name='robots' content='noindex' />
@@ -45,3 +46,16 @@ const { filterButtons, languageButtons, dark, header, title, switchViewButtons }
 		<!-- No footer set -->
 	</body>
 </html>
+
+<style>
+	html[dir='ltr'] {
+		/* Styles for left-to-right direction */
+	}
+
+	html[dir='rtl'] {
+		/* Styles for right-to-left direction */
+		* {
+			text-align: right;
+		}
+	}
+</style>

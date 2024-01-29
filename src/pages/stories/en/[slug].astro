@@ -3,8 +3,10 @@ import BackButton from '../../../components/Buttons/BackButton.astro'
 import Layout from '../../../layouts/Layout.astro'
 import stories from '../../../data/all_stories.json'
 
-// import the Image component and the image
-import { Image } from 'astro:assets'
+import Prose from '../../../components/Prose.astro'
+import AuthorSection from '../../../components/AuthorSection.astro'
+import Attachments from '../../../components/Attachments.astro'
+import Message from '../../../components/Message.astro'
 
 export async function getStaticPaths() {
 	return stories.map((story) => ({
@@ -19,24 +21,27 @@ export async function getStaticPaths() {
 
 // Define props
 const { story } = Astro.props
+
+// Create array out of story.story.en.content by splitting the string wherever there is an \n
+const contentArray = story.story.en.content.split('\n')
 ---
 
 <Layout dark title='The Yemen Listening Project' header={true} switchViewButtons={false}>
 	<div class='w-full max-w-5xl mx-auto mt-2 sm:mt-12 lg:mt-16 mb-8 sm:mb-24 px-4' class='story-detail-page--wrapper' id='story-wrapper'>
 		<BackButton />
-		<h1 class='pt-1 sm:pt-0 text-left w-full font-serif lg:text-5xl lg:pt-7'>{story.story.en.title}</h1>
-		<!-- <p class='text-xl mb-6 sm:mb-10'>{story.subheading}</p> -->
-		<!-- <Image
-			quality={50}
-			src={`/downloaded_images/${story.image.fileName}`}
-			width={story.image.width}
-			height={story.image.height}
-			decoding='async'
-			loading='lazy'
-			alt={`${story.title}`}
-			class='w-full'
-		/> -->
-		<p set:html={story.story.en.content} class='text-xl pt-2' />
+		<Prose>
+			<h1 class='pt-1 sm:pt-0 text-left w-full font-serif lg:text-5xl lg:pt-7 pb-3'>
+				{story.story.en.title || `EN TITLE ID ${story.id} MISSING`}
+			</h1>
+			<Attachments attachments={story.attachments} />
+			<Message contentArray={contentArray} />
+			<AuthorSection
+				name={`${story.personalInfo.en.name} ${story.personalInfo.en.surname}`}
+				from={story.personalInfo.en.whereFrom}
+				livingIn={story.personalInfo.en.livingIn}
+				age={story.contact.age}
+			/>
+		</Prose>
 	</div>
 </Layout>
 
@@ -63,23 +68,23 @@ const { story } = Astro.props
 </style>
 
 <script define:vars={{ slug: story.slugs.en }}>
-// Add article slug to array of read articles in lStorage
+	// Add article slug to array of read articles in lStorage
 
-// Retrieve the read articles array from localStorage or initialize a new one
-let readArticles = JSON.parse(localStorage.getItem('readArticles')) || []
+	// Retrieve the read articles array from localStorage or initialize a new one
+	let readArticles = JSON.parse(localStorage.getItem('readArticles')) || []
 
-// Check if the current article's slug is not in the array
-if (!readArticles.some((article) => article.slug === slug)) {
-	// Create an object with the current article's slug and the current timestamp
-	const articleObject = {
-		slug: slug,
-		timestamp: new Date().toISOString(),
+	// Check if the current article's slug is not in the array
+	if (!readArticles.some((article) => article.slug === slug)) {
+		// Create an object with the current article's slug and the current timestamp
+		const articleObject = {
+			slug: slug,
+			timestamp: new Date().toISOString(),
+		}
+
+		// Add the object to the read articles array
+		readArticles.push(articleObject)
+
+		// Save the updated array back to localStorage
+		localStorage.setItem('readArticles', JSON.stringify(readArticles))
 	}
-
-	// Add the object to the read articles array
-	readArticles.push(articleObject)
-
-	// Save the updated array back to localStorage
-	localStorage.setItem('readArticles', JSON.stringify(readArticles))
-}
 </script>

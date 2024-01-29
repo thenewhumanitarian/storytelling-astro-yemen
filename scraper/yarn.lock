@@ -361,6 +361,11 @@ jws@^4.0.0:
     jwa "^2.0.0"
     safe-buffer "^5.0.1"
 
+masonry-css@^0.0.6:
+  version "0.0.6"
+  resolved "https://registry.yarnpkg.com/masonry-css/-/masonry-css-0.0.6.tgz#bd646ce0e1c3a3e3f7a1c3f33bd17bb3b30baafb"
+  integrity sha512-hnxHQTBvoIOUPjPfnvro89fTboLm3iUzVC/ewINWJ/m6DEQHgr+gYeUthxs0xyHR1lwnmCAAf9EIreu6kXNJVw==
+
 mime-db@1.52.0:
   version "1.52.0"
   resolved "https://registry.yarnpkg.com/mime-db/-/mime-db-1.52.0.tgz#bbabcdc02859f4987301c856e3387ce5ec43bf70"

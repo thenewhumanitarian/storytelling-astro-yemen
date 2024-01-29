@@ -2,10 +2,10 @@
   {
     "id": "20",
     "slugs": {
-      "en": "en-story-0",
-      "ar": "ar-story-0"
+      "en": "en-story-20",
+      "ar": "ar-story-20"
     },
-    "storyImage": "../images/placeholder_images/puzzle-30.png",
+    "storyImage": "../images/placeholder_images/puzzle-14.png",
     "personalInfo": {
       "en": {
         "name": "Ana",
@@ -49,10 +49,10 @@
   {
     "id": "21",
     "slugs": {
-      "en": "en-story-1",
-      "ar": "ar-story-1"
+      "en": "en-story-21",
+      "ar": "ar-story-21"
     },
-    "storyImage": "../images/placeholder_images/puzzle-25.png",
+    "storyImage": "../images/placeholder_images/puzzle-10.png",
     "personalInfo": {
       "en": {
         "name": "Riad",
@@ -96,10 +96,10 @@
   {
     "id": "27",
     "slugs": {
-      "en": "en-story-2",
-      "ar": "ar-story-2"
+      "en": "en-story-27",
+      "ar": "ar-story-27"
     },
-    "storyImage": "../images/placeholder_images/puzzle-18.png",
+    "storyImage": "../images/placeholder_images/puzzle-30.png",
     "personalInfo": {
       "en": {
         "name": "ALMOATAZ BELLH",
@@ -131,7 +131,7 @@
     },
     "attachments": [],
     "notes": "",
-    "highlighted": false,
+    "highlighted": true,
     "languageOfSubmission": "Arabic",
     "location": "",
     "methodOfSubmission": "MachForm",
@@ -143,10 +143,10 @@
   {
     "id": "28",
     "slugs": {
-      "en": "en-story-3",
-      "ar": "ar-story-3"
+      "en": "en-story-28",
+      "ar": "ar-story-28"
     },
-    "storyImage": "../images/placeholder_images/puzzle-11.png",
+    "storyImage": "../images/placeholder_images/puzzle-08.png",
     "personalInfo": {
       "en": {
         "name": "Arzaq Al-Najjar",
@@ -190,10 +190,10 @@
   {
     "id": "35",
     "slugs": {
-      "en": "en-story-4",
-      "ar": "ar-story-4"
+      "en": "en-story-35",
+      "ar": "ar-story-35"
     },
-    "storyImage": "../images/placeholder_images/puzzle-06.png",
+    "storyImage": "../images/placeholder_images/puzzle-27.png",
     "personalInfo": {
       "en": {
         "name": "Zaid",
@@ -224,7 +224,7 @@
       }
     },
     "attachments": [
-      "20230207_094137.heic",
+      "20230207_094137.png",
       "٢٠٢٢١٢١٠_٢١٢٨٤١.jpg"
     ],
     "notes": "",
@@ -240,10 +240,10 @@
   {
     "id": "36",
     "slugs": {
-      "en": "en-story-5",
-      "ar": "ar-story-5"
+      "en": "en-story-36",
+      "ar": "ar-story-36"
     },
-    "storyImage": "../images/placeholder_images/puzzle-15.png",
+    "storyImage": "../images/placeholder_images/puzzle-08.png",
     "personalInfo": {
       "en": {
         "name": "G. Moh'D",
@@ -287,8 +287,8 @@
   {
     "id": "37",
     "slugs": {
-      "en": "en-story-6",
-      "ar": "ar-story-6"
+      "en": "en-story-37",
+      "ar": "ar-story-37"
     },
     "storyImage": "../images/placeholder_images/puzzle-05.png",
     "personalInfo": {
@@ -334,10 +334,10 @@
   {
     "id": "38",
     "slugs": {
-      "en": "en-story-7",
-      "ar": "ar-story-7"
+      "en": "en-story-38",
+      "ar": "ar-story-38"
     },
-    "storyImage": "../images/placeholder_images/puzzle-29.png",
+    "storyImage": "../images/placeholder_images/puzzle-28.png",
     "personalInfo": {
       "en": {
         "name": "",
@@ -381,10 +381,10 @@
   {
     "id": "39",
     "slugs": {
-      "en": "en-story-8",
-      "ar": "ar-story-8"
+      "en": "en-story-39",
+      "ar": "ar-story-39"
     },
-    "storyImage": "../images/placeholder_images/puzzle-32.png",
+    "storyImage": "../images/placeholder_images/puzzle-22.png",
     "personalInfo": {
       "en": {
         "name": "Ibrahim Yahia",
@@ -428,10 +428,10 @@
   {
     "id": "40",
     "slugs": {
-      "en": "en-story-9",
-      "ar": "ar-story-9"
+      "en": "en-story-40",
+      "ar": "ar-story-40"
     },
-    "storyImage": "../images/placeholder_images/puzzle-18.png",
+    "storyImage": "../images/placeholder_images/puzzle-17.png",
     "personalInfo": {
       "en": {
         "name": "Hessah",
@@ -475,10 +475,10 @@
   {
     "id": "41",
     "slugs": {
-      "en": "en-story-10",
-      "ar": "ar-story-10"
+      "en": "en-story-41",
+      "ar": "ar-story-41"
     },
-    "storyImage": "../images/placeholder_images/puzzle-30.png",
+    "storyImage": "../images/placeholder_images/puzzle-01.png",
     "personalInfo": {
       "en": {
         "name": "Dhuha",
@@ -522,10 +522,10 @@
   {
     "id": "42",
     "slugs": {
-      "en": "en-story-11",
-      "ar": "ar-story-11"
+      "en": "en-story-42",
+      "ar": "ar-story-42"
     },
-    "storyImage": "../images/placeholder_images/puzzle-25.png",
+    "storyImage": "../images/placeholder_images/puzzle-26.png",
     "personalInfo": {
       "en": {
         "name": "A.A",
@@ -569,10 +569,10 @@
   {
     "id": "43",
     "slugs": {
-      "en": "en-story-12",
-      "ar": "ar-story-12"
+      "en": "en-story-43",
+      "ar": "ar-story-43"
     },
-    "storyImage": "../images/placeholder_images/puzzle-19.png",
+    "storyImage": "../images/placeholder_images/puzzle-25.png",
     "personalInfo": {
       "en": {
         "name": "Redha",
@@ -618,10 +618,10 @@
   {
     "id": "44",
     "slugs": {
-      "en": "en-story-13",
-      "ar": "ar-story-13"
+      "en": "en-story-44",
+      "ar": "ar-story-44"
     },
-    "storyImage": "../images/placeholder_images/puzzle-15.png",
+    "storyImage": "../images/placeholder_images/puzzle-08.png",
     "personalInfo": {
       "en": {
         "name": "S.A",
@@ -665,10 +665,10 @@
   {
     "id": "45",
     "slugs": {
-      "en": "en-story-14",
-      "ar": "ar-story-14"
+      "en": "en-story-45",
+      "ar": "ar-story-45"
     },
-    "storyImage": "../images/placeholder_images/puzzle-32.png",
+    "storyImage": "../images/placeholder_images/puzzle-27.png",
     "personalInfo": {
       "en": {
         "name": "",
@@ -700,7 +700,7 @@
     },
     "attachments": [],
     "notes": "",
-    "highlighted": false,
+    "highlighted": true,
     "languageOfSubmission": "English",
     "location": "",
     "methodOfSubmission": "MachForm",
@@ -712,10 +712,10 @@
   {
     "id": "46",
     "slugs": {
-      "en": "en-story-15",
-      "ar": "ar-story-15"
+      "en": "en-story-46",
+      "ar": "ar-story-46"
     },
-    "storyImage": "../images/placeholder_images/puzzle-24.png",
+    "storyImage": "../images/placeholder_images/puzzle-30.png",
     "personalInfo": {
       "en": {
         "name": "Yusra",
@@ -759,10 +759,10 @@
   {
     "id": "47",
     "slugs": {
-      "en": "en-story-16",
-      "ar": "ar-story-16"
+      "en": "en-story-47",
+      "ar": "ar-story-47"
     },
-    "storyImage": "../images/placeholder_images/puzzle-16.png",
+    "storyImage": "../images/placeholder_images/puzzle-20.png",
     "personalInfo": {
       "en": {
         "name": "علي عبدالرحمن علي الحمادي",
@@ -806,10 +806,10 @@
   {
     "id": "48",
     "slugs": {
-      "en": "en-story-17",
-      "ar": "ar-story-17"
+      "en": "en-story-48",
+      "ar": "ar-story-48"
     },
-    "storyImage": "../images/placeholder_images/puzzle-15.png",
+    "storyImage": "../images/placeholder_images/puzzle-16.png",
     "personalInfo": {
       "en": {
         "name": "T.Saleh",
@@ -853,10 +853,10 @@
   {
     "id": "49",
     "slugs": {
-      "en": "en-story-18",
-      "ar": "ar-story-18"
+      "en": "en-story-49",
+      "ar": "ar-story-49"
     },
-    "storyImage": "../images/placeholder_images/puzzle-20.png",
+    "storyImage": "../images/placeholder_images/puzzle-03.png",
     "personalInfo": {
       "en": {
         "name": "Bushra",
@@ -903,10 +903,10 @@
   {
     "id": "50",
     "slugs": {
-      "en": "en-story-19",
-      "ar": "ar-story-19"
+      "en": "en-story-50",
+      "ar": "ar-story-50"
     },
-    "storyImage": "../images/placeholder_images/puzzle-17.png",
+    "storyImage": "../images/placeholder_images/puzzle-04.png",
     "personalInfo": {
       "en": {
         "name": "Abdullah",
@@ -950,10 +950,10 @@
   {
     "id": "51",
     "slugs": {
-      "en": "en-story-20",
-      "ar": "ar-story-20"
+      "en": "en-story-51",
+      "ar": "ar-story-51"
     },
-    "storyImage": "../images/placeholder_images/puzzle-09.png",
+    "storyImage": "../images/placeholder_images/puzzle-26.png",
     "personalInfo": {
       "en": {
         "name": "",
@@ -997,10 +997,10 @@
   {
     "id": "52",
     "slugs": {
-      "en": "en-story-21",
-      "ar": "ar-story-21"
+      "en": "en-story-52",
+      "ar": "ar-story-52"
     },
-    "storyImage": "../images/placeholder_images/puzzle-08.png",
+    "storyImage": "../images/placeholder_images/puzzle-14.png",
     "personalInfo": {
       "en": {
         "name": "M",
@@ -1044,10 +1044,10 @@
   {
     "id": "53",
     "slugs": {
-      "en": "en-story-22",
-      "ar": "ar-story-22"
+      "en": "en-story-53",
+      "ar": "ar-story-53"
     },
-    "storyImage": "../images/placeholder_images/puzzle-10.png",
+    "storyImage": "../images/placeholder_images/puzzle-26.png",
     "personalInfo": {
       "en": {
         "name": "Abdulrazak",
@@ -1093,10 +1093,10 @@
   {
     "id": "54",
     "slugs": {
-      "en": "en-story-23",
-      "ar": "ar-story-23"
+      "en": "en-story-54",
+      "ar": "ar-story-54"
     },
-    "storyImage": "../images/placeholder_images/puzzle-24.png",
+    "storyImage": "../images/placeholder_images/puzzle-01.png",
     "personalInfo": {
       "en": {
         "name": "",
@@ -1140,10 +1140,10 @@
   {
     "id": "55",
     "slugs": {
-      "en": "en-story-24",
-      "ar": "ar-story-24"
+      "en": "en-story-55",
+      "ar": "ar-story-55"
     },
-    "storyImage": "../images/placeholder_images/puzzle-20.png",
+    "storyImage": "../images/placeholder_images/puzzle-11.png",
     "personalInfo": {
       "en": {
         "name": "Sofiane Alsaar",
@@ -1186,7 +1186,7 @@
       "E25C3BB3-9585-418C-8761-1809A6A5503C.JPG"
     ],
     "notes": "",
-    "highlighted": false,
+    "highlighted": true,
     "languageOfSubmission": "English",
     "location": "",
     "methodOfSubmission": "MachForm",
@@ -1198,10 +1198,10 @@
   {
     "id": "56",
     "slugs": {
-      "en": "en-story-25",
-      "ar": "ar-story-25"
+      "en": "en-story-56",
+      "ar": "ar-story-56"
     },
-    "storyImage": "../images/placeholder_images/puzzle-29.png",
+    "storyImage": "../images/placeholder_images/puzzle-21.png",
     "personalInfo": {
       "en": {
         "name": "SA",
@@ -1245,10 +1245,10 @@
   {
     "id": "57",
     "slugs": {
-      "en": "en-story-26",
-      "ar": "ar-story-26"
+      "en": "en-story-57",
+      "ar": "ar-story-57"
     },
-    "storyImage": "../images/placeholder_images/puzzle-01.png",
+    "storyImage": "../images/placeholder_images/puzzle-28.png",
     "personalInfo": {
       "en": {
         "name": "Wafa",
@@ -1292,10 +1292,10 @@
   {
     "id": "58",
     "slugs": {
-      "en": "en-story-27",
-      "ar": "ar-story-27"
+      "en": "en-story-58",
+      "ar": "ar-story-58"
     },
-    "storyImage": "../images/placeholder_images/puzzle-29.png",
+    "storyImage": "../images/placeholder_images/puzzle-10.png",
     "personalInfo": {
       "en": {
         "name": "Hanan",
@@ -1339,10 +1339,10 @@
   {
     "id": "59",
     "slugs": {
-      "en": "en-story-28",
-      "ar": "ar-story-28"
+      "en": "en-story-59",
+      "ar": "ar-story-59"
     },
-    "storyImage": "../images/placeholder_images/puzzle-18.png",
+    "storyImage": "../images/placeholder_images/puzzle-27.png",
     "personalInfo": {
       "en": {
         "name": "S",
@@ -1386,10 +1386,10 @@
   {
     "id": "60",
     "slugs": {
-      "en": "en-story-29",
-      "ar": "ar-story-29"
+      "en": "en-story-60",
+      "ar": "ar-story-60"
     },
-    "storyImage": "../images/placeholder_images/puzzle-19.png",
+    "storyImage": "../images/placeholder_images/puzzle-14.png",
     "personalInfo": {
       "en": {
         "name": "",
@@ -1433,10 +1433,10 @@
   {
     "id": "61",
     "slugs": {
-      "en": "en-story-30",
-      "ar": "ar-story-30"
+      "en": "en-story-61",
+      "ar": "ar-story-61"
     },
-    "storyImage": "../images/placeholder_images/puzzle-14.png",
+    "storyImage": "../images/placeholder_images/puzzle-05.png",
     "personalInfo": {
       "en": {
         "name": "Majda",
@@ -1480,10 +1480,10 @@
   {
     "id": "62",
     "slugs": {
-      "en": "en-story-31",
-      "ar": "ar-story-31"
+      "en": "en-story-62",
+      "ar": "ar-story-62"
     },
-    "storyImage": "../images/placeholder_images/puzzle-26.png",
+    "storyImage": "../images/placeholder_images/puzzle-01.png",
     "personalInfo": {
       "en": {
         "name": "Elham Hassan",
@@ -1517,7 +1517,7 @@
       "The Yemen Listening Project- Elham Hassan.docx"
     ],
     "notes": "",
-    "highlighted": false,
+    "highlighted": true,
     "languageOfSubmission": "Arabic",
     "location": "",
     "methodOfSubmission": "MachForm",
@@ -1529,10 +1529,10 @@
   {
     "id": "63",
     "slugs": {
-      "en": "en-story-32",
-      "ar": "ar-story-32"
+      "en": "en-story-63",
+      "ar": "ar-story-63"
     },
-    "storyImage": "../images/placeholder_images/puzzle-25.png",
+    "storyImage": "../images/placeholder_images/puzzle-03.png",
     "personalInfo": {
       "en": {
         "name": "Marwah",
@@ -1578,10 +1578,10 @@
   {
     "id": "64",
     "slugs": {
-      "en": "en-story-33",
-      "ar": "ar-story-33"
+      "en": "en-story-64",
+      "ar": "ar-story-64"
     },
-    "storyImage": "../images/placeholder_images/puzzle-24.png",
+    "storyImage": "../images/placeholder_images/puzzle-10.png",
     "personalInfo": {
       "en": {
         "name": "Salem",
@@ -1625,10 +1625,10 @@
   {
     "id": "65",
     "slugs": {
-      "en": "en-story-34",
-      "ar": "ar-story-34"
+      "en": "en-story-65",
+      "ar": "ar-story-65"
     },
-    "storyImage": "../images/placeholder_images/puzzle-11.png",
+    "storyImage": "../images/placeholder_images/puzzle-15.png",
     "personalInfo": {
       "en": {
         "name": "Ahmed",
@@ -1672,10 +1672,10 @@
   {
     "id": "66",
     "slugs": {
-      "en": "en-story-35",
-      "ar": "ar-story-35"
+      "en": "en-story-66",
+      "ar": "ar-story-66"
     },
-    "storyImage": "../images/placeholder_images/puzzle-28.png",
+    "storyImage": "../images/placeholder_images/puzzle-09.png",
     "personalInfo": {
       "en": {
         "name": "",
@@ -1722,10 +1722,10 @@
   {
     "id": "67",
     "slugs": {
-      "en": "en-story-36",
-      "ar": "ar-story-36"
+      "en": "en-story-67",
+      "ar": "ar-story-67"
     },
-    "storyImage": "../images/placeholder_images/puzzle-18.png",
+    "storyImage": "../images/placeholder_images/puzzle-01.png",
     "personalInfo": {
       "en": {
         "name": "W",
@@ -1769,10 +1769,10 @@
   {
     "id": "68",
     "slugs": {
-      "en": "en-story-37",
-      "ar": "ar-story-37"
+      "en": "en-story-68",
+      "ar": "ar-story-68"
     },
-    "storyImage": "../images/placeholder_images/puzzle-19.png",
+    "storyImage": "../images/placeholder_images/puzzle-07.png",
     "personalInfo": {
       "en": {
         "name": "Mahasen",
@@ -1818,10 +1818,10 @@
   {
     "id": "69",
     "slugs": {
-      "en": "en-story-38",
-      "ar": "ar-story-38"
+      "en": "en-story-69",
+      "ar": "ar-story-69"
     },
-    "storyImage": "../images/placeholder_images/puzzle-05.png",
+    "storyImage": "../images/placeholder_images/puzzle-31.png",
     "personalInfo": {
       "en": {
         "name": "H",
@@ -1865,10 +1865,10 @@
   {
     "id": "70",
     "slugs": {
-      "en": "en-story-39",
-      "ar": "ar-story-39"
+      "en": "en-story-70",
+      "ar": "ar-story-70"
     },
-    "storyImage": "../images/placeholder_images/puzzle-18.png",
+    "storyImage": "../images/placeholder_images/puzzle-05.png",
     "personalInfo": {
       "en": {
         "name": "Yaqoob",
@@ -1912,10 +1912,10 @@
   {
     "id": "1001",
     "slugs": {
-      "en": "en-story-40",
-      "ar": "ar-story-40"
+      "en": "en-story-1001",
+      "ar": "ar-story-1001"
     },
-    "storyImage": "../images/placeholder_images/puzzle-13.png",
+    "storyImage": "../images/placeholder_images/puzzle-28.png",
     "personalInfo": {
       "en": {
         "name": "Assem",
@@ -1959,10 +1959,10 @@
   {
     "id": "1002",
     "slugs": {
-      "en": "en-story-41",
-      "ar": "ar-story-41"
+      "en": "en-story-1002",
+      "ar": "ar-story-1002"
     },
-    "storyImage": "../images/placeholder_images/puzzle-17.png",
+    "storyImage": "../images/placeholder_images/puzzle-10.png",
     "personalInfo": {
       "en": {
         "name": "Shamsan",
@@ -2006,10 +2006,10 @@
   {
     "id": "1003",
     "slugs": {
-      "en": "en-story-42",
-      "ar": "ar-story-42"
+      "en": "en-story-1003",
+      "ar": "ar-story-1003"
     },
-    "storyImage": "../images/placeholder_images/puzzle-09.png",
+    "storyImage": "../images/placeholder_images/puzzle-30.png",
     "personalInfo": {
       "en": {
         "name": "Ebtehal",
@@ -2053,10 +2053,10 @@
   {
     "id": "1004",
     "slugs": {
-      "en": "en-story-43",
-      "ar": "ar-story-43"
+      "en": "en-story-1004",
+      "ar": "ar-story-1004"
     },
-    "storyImage": "../images/placeholder_images/puzzle-32.png",
+    "storyImage": "../images/placeholder_images/puzzle-29.png",
     "personalInfo": {
       "en": {
         "name": "Basheer",
@@ -2102,10 +2102,10 @@
   {
     "id": "1005",
     "slugs": {
-      "en": "en-story-44",
-      "ar": "ar-story-44"
+      "en": "en-story-1005",
+      "ar": "ar-story-1005"
     },
-    "storyImage": "../images/placeholder_images/puzzle-23.png",
+    "storyImage": "../images/placeholder_images/puzzle-30.png",
     "personalInfo": {
       "en": {
         "name": "Wafaa",
@@ -2149,10 +2149,10 @@
   {
     "id": "1006",
     "slugs": {
-      "en": "en-story-45",
-      "ar": "ar-story-45"
+      "en": "en-story-1006",
+      "ar": "ar-story-1006"
     },
-    "storyImage": "../images/placeholder_images/puzzle-03.png",
+    "storyImage": "../images/placeholder_images/puzzle-28.png",
     "personalInfo": {
       "en": {
         "name": "Ameen",
@@ -2196,10 +2196,10 @@
   {
     "id": "1007",
     "slugs": {
-      "en": "en-story-46",
-      "ar": "ar-story-46"
+      "en": "en-story-1007",
+      "ar": "ar-story-1007"
     },
-    "storyImage": "../images/placeholder_images/puzzle-24.png",
+    "storyImage": "../images/placeholder_images/puzzle-18.png",
     "personalInfo": {
       "en": {
         "name": "Abduljabar",
@@ -2243,10 +2243,10 @@
   {
     "id": "1008",
     "slugs": {
-      "en": "en-story-47",
-      "ar": "ar-story-47"
+      "en": "en-story-1008",
+      "ar": "ar-story-1008"
     },
-    "storyImage": "../images/placeholder_images/puzzle-20.png",
+    "storyImage": "../images/placeholder_images/puzzle-29.png",
     "personalInfo": {
       "en": {
         "name": "Yahia",
@@ -2290,10 +2290,10 @@
   {
     "id": "1009",
     "slugs": {
-      "en": "en-story-48",
-      "ar": "ar-story-48"
+      "en": "en-story-1009",
+      "ar": "ar-story-1009"
     },
-    "storyImage": "../images/placeholder_images/puzzle-21.png",
+    "storyImage": "../images/placeholder_images/puzzle-27.png",
     "personalInfo": {
       "en": {
         "name": "Yaqoub",
@@ -2325,7 +2325,7 @@
     },
     "attachments": [],
     "notes": "",
-    "highlighted": false,
+    "highlighted": true,
     "languageOfSubmission": "Arabic",
     "location": "Yemen",
     "methodOfSubmission": "WhatsApp",
@@ -2337,10 +2337,10 @@
   {
     "id": "1010",
     "slugs": {
-      "en": "en-story-49",
-      "ar": "ar-story-49"
+      "en": "en-story-1010",
+      "ar": "ar-story-1010"
     },
-    "storyImage": "../images/placeholder_images/puzzle-07.png",
+    "storyImage": "../images/placeholder_images/puzzle-13.png",
     "personalInfo": {
       "en": {
         "name": "Kafa",
@@ -2384,10 +2384,10 @@
   {
     "id": "1011",
     "slugs": {
-      "en": "en-story-50",
-      "ar": "ar-story-50"
+      "en": "en-story-1011",
+      "ar": "ar-story-1011"
     },
-    "storyImage": "../images/placeholder_images/puzzle-29.png",
+    "storyImage": "../images/placeholder_images/puzzle-27.png",
     "personalInfo": {
       "en": {
         "name": "Ahmed",
@@ -2431,10 +2431,10 @@
   {
     "id": "1012",
     "slugs": {
-      "en": "en-story-51",
-      "ar": "ar-story-51"
+      "en": "en-story-1012",
+      "ar": "ar-story-1012"
     },
-    "storyImage": "../images/placeholder_images/puzzle-09.png",
+    "storyImage": "../images/placeholder_images/puzzle-25.png",
     "personalInfo": {
       "en": {
         "name": "Aref",
@@ -2478,10 +2478,10 @@
   {
     "id": "1013",
     "slugs": {
-      "en": "en-story-52",
-      "ar": "ar-story-52"
+      "en": "en-story-1013",
+      "ar": "ar-story-1013"
     },
-    "storyImage": "../images/placeholder_images/puzzle-16.png",
+    "storyImage": "../images/placeholder_images/puzzle-06.png",
     "personalInfo": {
       "en": {
         "name": "Om Ayman",
@@ -2525,10 +2525,10 @@
   {
     "id": "1014",
     "slugs": {
-      "en": "en-story-53",
-      "ar": "ar-story-53"
+      "en": "en-story-1014",
+      "ar": "ar-story-1014"
     },
-    "storyImage": "../images/placeholder_images/puzzle-22.png",
+    "storyImage": "../images/placeholder_images/puzzle-21.png",
     "personalInfo": {
       "en": {
         "name": "Amatalrahman",
@@ -2572,10 +2572,10 @@
   {
     "id": "1015",
     "slugs": {
-      "en": "en-story-54",
-      "ar": "ar-story-54"
+      "en": "en-story-1015",
+      "ar": "ar-story-1015"
     },
-    "storyImage": "../images/placeholder_images/puzzle-01.png",
+    "storyImage": "../images/placeholder_images/puzzle-05.png",
     "personalInfo": {
       "en": {
         "name": "Adel",
@@ -2619,10 +2619,10 @@
   {
     "id": "1016",
     "slugs": {
-      "en": "en-story-55",
-      "ar": "ar-story-55"
+      "en": "en-story-1016",
+      "ar": "ar-story-1016"
     },
-    "storyImage": "../images/placeholder_images/puzzle-28.png",
+    "storyImage": "../images/placeholder_images/puzzle-01.png",
     "personalInfo": {
       "en": {
         "name": "Lutf",
@@ -2666,10 +2666,10 @@
   {
     "id": "1017",
     "slugs": {
-      "en": "en-story-56",
-      "ar": "ar-story-56"
+      "en": "en-story-1017",
+      "ar": "ar-story-1017"
     },
-    "storyImage": "../images/placeholder_images/puzzle-24.png",
+    "storyImage": "../images/placeholder_images/puzzle-03.png",
     "personalInfo": {
       "en": {
         "name": "Ahmed",
@@ -2713,10 +2713,10 @@
   {
     "id": "1018",
     "slugs": {
-      "en": "en-story-57",
-      "ar": "ar-story-57"
+      "en": "en-story-1018",
+      "ar": "ar-story-1018"
     },
-    "storyImage": "../images/placeholder_images/puzzle-21.png",
+    "storyImage": "../images/placeholder_images/puzzle-32.png",
     "personalInfo": {
       "en": {
         "name": "Abdulrahman",
@@ -2760,10 +2760,10 @@
   {
     "id": "1019",
     "slugs": {
-      "en": "en-story-58",
-      "ar": "ar-story-58"
+      "en": "en-story-1019",
+      "ar": "ar-story-1019"
     },
-    "storyImage": "../images/placeholder_images/puzzle-28.png",
+    "storyImage": "../images/placeholder_images/puzzle-14.png",
     "personalInfo": {
       "en": {
         "name": "Basel",
@@ -2807,10 +2807,10 @@
   {
     "id": "1020",
     "slugs": {
-      "en": "en-story-59",
-      "ar": "ar-story-59"
+      "en": "en-story-1020",
+      "ar": "ar-story-1020"
     },
-    "storyImage": "../images/placeholder_images/puzzle-05.png",
+    "storyImage": "../images/placeholder_images/puzzle-12.png",
     "personalInfo": {
       "en": {
         "name": "Mohsen",
@@ -2854,10 +2854,10 @@
   {
     "id": "1021",
     "slugs": {
-      "en": "en-story-60",
-      "ar": "ar-story-60"
+      "en": "en-story-1021",
+      "ar": "ar-story-1021"
     },
-    "storyImage": "../images/placeholder_images/puzzle-26.png",
+    "storyImage": "../images/placeholder_images/puzzle-12.png",
     "personalInfo": {
       "en": {
         "name": "Amal",
@@ -2901,10 +2901,10 @@
   {
     "id": "1022",
     "slugs": {
-      "en": "en-story-61",
-      "ar": "ar-story-61"
+      "en": "en-story-1022",
+      "ar": "ar-story-1022"
     },
-    "storyImage": "../images/placeholder_images/puzzle-03.png",
+    "storyImage": "../images/placeholder_images/puzzle-05.png",
     "personalInfo": {
       "en": {
         "name": "Abdulrahman",
@@ -2948,10 +2948,10 @@
   {
     "id": "1023",
     "slugs": {
-      "en": "en-story-62",
-      "ar": "ar-story-62"
+      "en": "en-story-1023",
+      "ar": "ar-story-1023"
     },
-    "storyImage": "../images/placeholder_images/puzzle-25.png",
+    "storyImage": "../images/placeholder_images/puzzle-07.png",
     "personalInfo": {
       "en": {
         "name": "Mohammed",
@@ -2995,10 +2995,10 @@
   {
     "id": "1024",
     "slugs": {
-      "en": "en-story-63",
-      "ar": "ar-story-63"
+      "en": "en-story-1024",
+      "ar": "ar-story-1024"
     },
-    "storyImage": "../images/placeholder_images/puzzle-10.png",
+    "storyImage": "../images/placeholder_images/puzzle-28.png",
     "personalInfo": {
       "en": {
         "name": "Mohammed",
@@ -3042,10 +3042,10 @@
   {
     "id": "1025",
     "slugs": {
-      "en": "en-story-64",
-      "ar": "ar-story-64"
+      "en": "en-story-1025",
+      "ar": "ar-story-1025"
     },
-    "storyImage": "../images/placeholder_images/puzzle-27.png",
+    "storyImage": "../images/placeholder_images/puzzle-29.png",
     "personalInfo": {
       "en": {
         "name": "Om Khaled",
@@ -3089,10 +3089,10 @@
   {
     "id": "1026",
     "slugs": {
-      "en": "en-story-65",
-      "ar": "ar-story-65"
+      "en": "en-story-1026",
+      "ar": "ar-story-1026"
     },
-    "storyImage": "../images/placeholder_images/puzzle-15.png",
+    "storyImage": "../images/placeholder_images/puzzle-31.png",
     "personalInfo": {
       "en": {
         "name": "Eman",
@@ -3136,8 +3136,8 @@
   {
     "id": "1027",
     "slugs": {
-      "en": "en-story-66",
-      "ar": "ar-story-66"
+      "en": "en-story-1027",
+      "ar": "ar-story-1027"
     },
     "storyImage": "../images/placeholder_images/puzzle-01.png",
     "personalInfo": {
@@ -3183,10 +3183,10 @@
   {
     "id": "1028",
     "slugs": {
-      "en": "en-story-67",
-      "ar": "ar-story-67"
+      "en": "en-story-1028",
+      "ar": "ar-story-1028"
     },
-    "storyImage": "../images/placeholder_images/puzzle-21.png",
+    "storyImage": "../images/placeholder_images/puzzle-09.png",
     "personalInfo": {
       "en": {
         "name": "Abdulrazaq",
@@ -3230,10 +3230,10 @@
   {
     "id": "1029",
     "slugs": {
-      "en": "en-story-68",
-      "ar": "ar-story-68"
+      "en": "en-story-1029",
+      "ar": "ar-story-1029"
     },
-    "storyImage": "../images/placeholder_images/puzzle-27.png",
+    "storyImage": "../images/placeholder_images/puzzle-10.png",
     "personalInfo": {
       "en": {
         "name": "Afaf",
@@ -3277,10 +3277,10 @@
   {
     "id": "1030",
     "slugs": {
-      "en": "en-story-69",
-      "ar": "ar-story-69"
+      "en": "en-story-1030",
+      "ar": "ar-story-1030"
     },
-    "storyImage": "../images/placeholder_images/puzzle-08.png",
+    "storyImage": "../images/placeholder_images/puzzle-25.png",
     "personalInfo": {
       "en": {
         "name": "Nagat",
@@ -3324,10 +3324,10 @@
   {
     "id": "1031",
     "slugs": {
-      "en": "en-story-70",
-      "ar": "ar-story-70"
+      "en": "en-story-1031",
+      "ar": "ar-story-1031"
     },
-    "storyImage": "../images/placeholder_images/puzzle-19.png",
+    "storyImage": "../images/placeholder_images/puzzle-15.png",
     "personalInfo": {
       "en": {
         "name": "H-",
@@ -3371,10 +3371,10 @@
   {
     "id": "1032",
     "slugs": {
-      "en": "en-story-71",
-      "ar": "ar-story-71"
+      "en": "en-story-1032",
+      "ar": "ar-story-1032"
     },
-    "storyImage": "../images/placeholder_images/puzzle-24.png",
+    "storyImage": "../images/placeholder_images/puzzle-11.png",
     "personalInfo": {
       "en": {
         "name": "Om Fatima",
@@ -3418,10 +3418,10 @@
   {
     "id": "1033",
     "slugs": {
-      "en": "en-story-72",
-      "ar": "ar-story-72"
+      "en": "en-story-1033",
+      "ar": "ar-story-1033"
     },
-    "storyImage": "../images/placeholder_images/puzzle-31.png",
+    "storyImage": "../images/placeholder_images/puzzle-14.png",
     "personalInfo": {
       "en": {
         "name": "Om Mariam",
@@ -3465,10 +3465,10 @@
   {
     "id": "1034",
     "slugs": {
-      "en": "en-story-73",
-      "ar": "ar-story-73"
+      "en": "en-story-1034",
+      "ar": "ar-story-1034"
     },
-    "storyImage": "../images/placeholder_images/puzzle-31.png",
+    "storyImage": "../images/placeholder_images/puzzle-22.png",
     "personalInfo": {
       "en": {
         "name": "Teacher (No Name)",
@@ -3512,10 +3512,10 @@
   {
     "id": "1035",
     "slugs": {
-      "en": "en-story-74",
-      "ar": "ar-story-74"
+      "en": "en-story-1035",
+      "ar": "ar-story-1035"
     },
-    "storyImage": "../images/placeholder_images/puzzle-11.png",
+    "storyImage": "../images/placeholder_images/puzzle-01.png",
     "personalInfo": {
       "en": {
         "name": "Alaa",
@@ -3559,10 +3559,10 @@
   {
     "id": "1036",
     "slugs": {
-      "en": "en-story-75",
-      "ar": "ar-story-75"
+      "en": "en-story-1036",
+      "ar": "ar-story-1036"
     },
-    "storyImage": "../images/placeholder_images/puzzle-10.png",
+    "storyImage": "../images/placeholder_images/puzzle-17.png",
     "personalInfo": {
       "en": {
         "name": "Fahd",
@@ -3606,10 +3606,10 @@
   {
     "id": "1037",
     "slugs": {
-      "en": "en-story-76",
-      "ar": "ar-story-76"
+      "en": "en-story-1037",
+      "ar": "ar-story-1037"
     },
-    "storyImage": "../images/placeholder_images/puzzle-16.png",
+    "storyImage": "../images/placeholder_images/puzzle-14.png",
     "personalInfo": {
       "en": {
         "name": "Ali",
@@ -3653,10 +3653,10 @@
   {
     "id": "1038",
     "slugs": {
-      "en": "en-story-77",
-      "ar": "ar-story-77"
+      "en": "en-story-1038",
+      "ar": "ar-story-1038"
     },
-    "storyImage": "../images/placeholder_images/puzzle-07.png",
+    "storyImage": "../images/placeholder_images/puzzle-27.png",
     "personalInfo": {
       "en": {
         "name": "Nageeb",
@@ -3700,10 +3700,10 @@
   {
     "id": "1039",
     "slugs": {
-      "en": "en-story-78",
-      "ar": "ar-story-78"
+      "en": "en-story-1039",
+      "ar": "ar-story-1039"
     },
-    "storyImage": "../images/placeholder_images/puzzle-21.png",
+    "storyImage": "../images/placeholder_images/puzzle-22.png",
     "personalInfo": {
       "en": {
         "name": "Duaa",
@@ -3747,10 +3747,10 @@
   {
     "id": "1040",
     "slugs": {
-      "en": "en-story-79",
-      "ar": "ar-story-79"
+      "en": "en-story-1040",
+      "ar": "ar-story-1040"
     },
-    "storyImage": "../images/placeholder_images/puzzle-22.png",
+    "storyImage": "../images/placeholder_images/puzzle-08.png",
     "personalInfo": {
       "en": {
         "name": "Asia",
@@ -3794,10 +3794,10 @@
   {
     "id": "1041",
     "slugs": {
-      "en": "en-story-80",
-      "ar": "ar-story-80"
+      "en": "en-story-1041",
+      "ar": "ar-story-1041"
     },
-    "storyImage": "../images/placeholder_images/puzzle-14.png",
+    "storyImage": "../images/placeholder_images/puzzle-21.png",
     "personalInfo": {
       "en": {
         "name": "Sami",
@@ -3841,10 +3841,10 @@
   {
     "id": "1042",
     "slugs": {
-      "en": "en-story-81",
-      "ar": "ar-story-81"
+      "en": "en-story-1042",
+      "ar": "ar-story-1042"
     },
-    "storyImage": "../images/placeholder_images/puzzle-25.png",
+    "storyImage": "../images/placeholder_images/puzzle-08.png",
     "personalInfo": {
       "en": {
         "name": "Abdulrahman",
@@ -3888,10 +3888,10 @@
   {
     "id": "1043",
     "slugs": {
-      "en": "en-story-82",
-      "ar": "ar-story-82"
+      "en": "en-story-1043",
+      "ar": "ar-story-1043"
     },
-    "storyImage": "../images/placeholder_images/puzzle-29.png",
+    "storyImage": "../images/placeholder_images/puzzle-10.png",
     "personalInfo": {
       "en": {
         "name": "Ahmed",
@@ -3935,10 +3935,10 @@
   {
     "id": "1044",
     "slugs": {
-      "en": "en-story-83",
-      "ar": "ar-story-83"
+      "en": "en-story-1044",
+      "ar": "ar-story-1044"
     },
-    "storyImage": "../images/placeholder_images/puzzle-08.png",
+    "storyImage": "../images/placeholder_images/puzzle-29.png",
     "personalInfo": {
       "en": {
         "name": "Samera",
@@ -3982,10 +3982,10 @@
   {
     "id": "1045",
     "slugs": {
-      "en": "en-story-84",
-      "ar": "ar-story-84"
+      "en": "en-story-1045",
+      "ar": "ar-story-1045"
     },
-    "storyImage": "../images/placeholder_images/puzzle-05.png",
+    "storyImage": "../images/placeholder_images/puzzle-11.png",
     "personalInfo": {
       "en": {
         "name": "Gamel",
@@ -4029,10 +4029,10 @@
   {
     "id": "1046",
     "slugs": {
-      "en": "en-story-85",
-      "ar": "ar-story-85"
+      "en": "en-story-1046",
+      "ar": "ar-story-1046"
     },
-    "storyImage": "../images/placeholder_images/puzzle-24.png",
+    "storyImage": "../images/placeholder_images/puzzle-06.png",
     "personalInfo": {
       "en": {
         "name": "Zain",
@@ -4076,10 +4076,10 @@
   {
     "id": "1047",
     "slugs": {
-      "en": "en-story-86",
-      "ar": "ar-story-86"
+      "en": "en-story-1047",
+      "ar": "ar-story-1047"
     },
-    "storyImage": "../images/placeholder_images/puzzle-17.png",
+    "storyImage": "../images/placeholder_images/puzzle-01.png",
     "personalInfo": {
       "en": {
         "name": "Eyad",
@@ -4123,10 +4123,10 @@
   {
     "id": "1048",
     "slugs": {
-      "en": "en-story-87",
-      "ar": "ar-story-87"
+      "en": "en-story-1048",
+      "ar": "ar-story-1048"
     },
-    "storyImage": "../images/placeholder_images/puzzle-28.png",
+    "storyImage": "../images/placeholder_images/puzzle-01.png",
     "personalInfo": {
       "en": {
         "name": "Galal",
@@ -4170,10 +4170,10 @@
   {
     "id": "1049",
     "slugs": {
-      "en": "en-story-88",
-      "ar": "ar-story-88"
+      "en": "en-story-1049",
+      "ar": "ar-story-1049"
     },
-    "storyImage": "../images/placeholder_images/puzzle-08.png",
+    "storyImage": "../images/placeholder_images/puzzle-27.png",
     "personalInfo": {
       "en": {
         "name": "Manal",
@@ -4217,10 +4217,10 @@
   {
     "id": "1050",
     "slugs": {
-      "en": "en-story-89",
-      "ar": "ar-story-89"
+      "en": "en-story-1050",
+      "ar": "ar-story-1050"
     },
-    "storyImage": "../images/placeholder_images/puzzle-26.png",
+    "storyImage": "../images/placeholder_images/puzzle-27.png",
     "personalInfo": {
       "en": {
         "name": "Wadha",
@@ -4264,10 +4264,10 @@
   {
     "id": "1051",
     "slugs": {
-      "en": "en-story-90",
-      "ar": "ar-story-90"
+      "en": "en-story-1051",
+      "ar": "ar-story-1051"
     },
-    "storyImage": "../images/placeholder_images/puzzle-30.png",
+    "storyImage": "../images/placeholder_images/puzzle-12.png",
     "personalInfo": {
       "en": {
         "name": "Sanaa",
@@ -4311,8 +4311,8 @@
   {
     "id": "1052",
     "slugs": {
-      "en": "en-story-91",
-      "ar": "ar-story-91"
+      "en": "en-story-1052",
+      "ar": "ar-story-1052"
     },
     "storyImage": "../images/placeholder_images/puzzle-23.png",
     "personalInfo": {
@@ -4358,10 +4358,10 @@
   {
     "id": "1053",
     "slugs": {
-      "en": "en-story-92",
-      "ar": "ar-story-92"
+      "en": "en-story-1053",
+      "ar": "ar-story-1053"
     },
-    "storyImage": "../images/placeholder_images/puzzle-11.png",
+    "storyImage": "../images/placeholder_images/puzzle-21.png",
     "personalInfo": {
       "en": {
         "name": "Yaqoub",
@@ -4405,10 +4405,10 @@
   {
     "id": "1054",
     "slugs": {
-      "en": "en-story-93",
-      "ar": "ar-story-93"
+      "en": "en-story-1054",
+      "ar": "ar-story-1054"
     },
-    "storyImage": "../images/placeholder_images/puzzle-16.png",
+    "storyImage": "../images/placeholder_images/puzzle-02.png",
     "personalInfo": {
       "en": {
         "name": "Amaal",
@@ -4452,10 +4452,10 @@
   {
     "id": "1055",
     "slugs": {
-      "en": "en-story-94",
-      "ar": "ar-story-94"
+      "en": "en-story-1055",
+      "ar": "ar-story-1055"
     },
-    "storyImage": "../images/placeholder_images/puzzle-07.png",
+    "storyImage": "../images/placeholder_images/puzzle-06.png",
     "personalInfo": {
       "en": {
         "name": "Abduljabar",
@@ -4499,10 +4499,10 @@
   {
     "id": "1056",
     "slugs": {
-      "en": "en-story-95",
-      "ar": "ar-story-95"
+      "en": "en-story-1056",
+      "ar": "ar-story-1056"
     },
-    "storyImage": "../images/placeholder_images/puzzle-18.png",
+    "storyImage": "../images/placeholder_images/puzzle-09.png",
     "personalInfo": {
       "en": {
         "name": "Abdulsalam",
@@ -4546,10 +4546,10 @@
   {
     "id": "1057",
     "slugs": {
-      "en": "en-story-96",
-      "ar": "ar-story-96"
+      "en": "en-story-1057",
+      "ar": "ar-story-1057"
     },
-    "storyImage": "../images/placeholder_images/puzzle-02.png",
+    "storyImage": "../images/placeholder_images/puzzle-15.png",
     "personalInfo": {
       "en": {
         "name": "Mona",
@@ -4593,10 +4593,10 @@
   {
     "id": "1058",
     "slugs": {
-      "en": "en-story-97",
-      "ar": "ar-story-97"
+      "en": "en-story-1058",
+      "ar": "ar-story-1058"
     },
-    "storyImage": "../images/placeholder_images/puzzle-28.png",
+    "storyImage": "../images/placeholder_images/puzzle-21.png",
     "personalInfo": {
       "en": {
         "name": "Om Tarek",
@@ -4640,10 +4640,10 @@
   {
     "id": "1059",
     "slugs": {
-      "en": "en-story-98",
-      "ar": "ar-story-98"
+      "en": "en-story-1059",
+      "ar": "ar-story-1059"
     },
-    "storyImage": "../images/placeholder_images/puzzle-16.png",
+    "storyImage": "../images/placeholder_images/puzzle-07.png",
     "personalInfo": {
       "en": {
         "name": "Mohammed",
@@ -4687,10 +4687,10 @@
   {
     "id": "1060",
     "slugs": {
-      "en": "en-story-99",
-      "ar": "ar-story-99"
+      "en": "en-story-1060",
+      "ar": "ar-story-1060"
     },
-    "storyImage": "../images/placeholder_images/puzzle-12.png",
+    "storyImage": "../images/placeholder_images/puzzle-05.png",
     "personalInfo": {
       "en": {
         "name": "Magedah",
@@ -4734,10 +4734,10 @@
   {
     "id": "1061",
     "slugs": {
-      "en": "en-story-100",
-      "ar": "ar-story-100"
+      "en": "en-story-1061",
+      "ar": "ar-story-1061"
     },
-    "storyImage": "../images/placeholder_images/puzzle-22.png",
+    "storyImage": "../images/placeholder_images/puzzle-11.png",
     "personalInfo": {
       "en": {
         "name": "Ahmed",
@@ -4781,10 +4781,10 @@
   {
     "id": "1062",
     "slugs": {
-      "en": "en-story-101",
-      "ar": "ar-story-101"
+      "en": "en-story-1062",
+      "ar": "ar-story-1062"
     },
-    "storyImage": "../images/placeholder_images/puzzle-19.png",
+    "storyImage": "../images/placeholder_images/puzzle-22.png",
     "personalInfo": {
       "en": {
         "name": "Sahar",
@@ -4828,10 +4828,10 @@
   {
     "id": "1063",
     "slugs": {
-      "en": "en-story-102",
-      "ar": "ar-story-102"
+      "en": "en-story-1063",
+      "ar": "ar-story-1063"
     },
-    "storyImage": "../images/placeholder_images/puzzle-01.png",
+    "storyImage": "../images/placeholder_images/puzzle-20.png",
     "personalInfo": {
       "en": {
         "name": "Safa",

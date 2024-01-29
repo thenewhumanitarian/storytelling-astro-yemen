@@ -61,22 +61,28 @@ function parseCsv(csvData) {
 }
 
 function processData(data) {
-    const processedData = data.map((entry, index) => {
+    const processedData = data.map(entry => {
         // Slugify titles or use fallback pattern
         const enSlug = entry['EN\nTitle of story'].trim()
             ? slugify(entry['EN\nTitle of story'])
-            : `en-story-${index}`;
+            : `en-story-${entry.ID}`;
         const arSlug = entry['AR \nTitle of story'].trim()
             ? slugify(entry['AR \nTitle of story'])
-            : `ar-story-${index}`;
+            : `ar-story-${entry.ID}`;
 
-        // Process attachments, treating '-' or empty as no attachment
-        let attachments = entry.Attachments && entry.Attachments.trim() && entry.Attachments.trim() !== '-'
-            ? entry.Attachments.split(',')
-            : [];
-
+        // Pick a random placeholder image
         const randomImage = placeholderImageArray[Math.floor(Math.random() * placeholderImageArray.length)];
 
+        // Process attachments, treating '-' or empty as no attachment, and replace .heic with .png
+        let attachments = entry.Attachments && entry.Attachments.trim() && entry.Attachments.trim() !== '-'
+            ? entry.Attachments.split(',').map(file => {
+                // Check if the file ends with .heic and replace it with .png
+                return file.trim().endsWith('.heic') ? file.trim().replace('.heic', '.png') : file.trim();
+            })
+            : [];
+
+
+        // Attachments submitted via WhatsApp
         if (entry['Method of submission'] === 'WhatsApp') {
             attachments = attachments.map(file => `ID/${entry.ID}/${file.trim()}`);
         }

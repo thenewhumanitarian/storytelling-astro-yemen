@@ -1,0 +1,19 @@
+---
+export interface Props {
+	contentArray: string[]
+}
+
+const { contentArray } = Astro.props as Props
+---
+
+{
+	contentArray.length > 0 && (
+		<div class='bg-zinc-50 px-5 py-1'>
+			{contentArray.map((line) => {
+				if (line !== '') {
+					return <p class='text-black' set:html={line} />
+				}
+			})}
+		</div>
+	)
+}
