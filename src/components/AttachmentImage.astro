@@ -3,46 +3,9 @@ export interface Props {
 	fileName: string
 }
 
+import DynamicImage from './DynamicImage.astro'
+
 const { fileName } = Astro.props as Props
-
-// Function to slugify the fileName
-function slugify(string) {
-	return string
-		.toLowerCase()
-		.replace(/[^a-z0-9 -]/g, '') // Remove invalid chars
-		.replace(/\s+/g, '-') // Replace spaces with -
-		.replace(/-+/g, '-') // Replace multiple - with single -
-}
-
-const imageSlug = slugify(fileName.replace(/\.[^/.]+$/, '')) // Also remove the file extension
 ---
 
-<div id='lightbox' class='fixed flex items-center justify-center z-50 bg-black w-screen h-screen top-0 left-0 right-0 left-0' style='display: none;'>
-	<span id='close-lightbox' class='absolute top-10 right-10 w-16 h-16 pointer-events-none'>
-		<svg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke-width='1.5' stroke='currentColor' class='w-full h-auto'>
-			<path stroke-linecap='round' stroke-linejoin='round' d='M6 18 18 6M6 6l12 12'></path>
-		</svg>
-	</span>
-	<div class='w-full h-full flex items-center justify-center' id='lightbox-open'>
-		<img class='m-0' id='lightbox-img' class='modal-content' />
-	</div>
-</div>
-
-<img src={`/attachments/${fileName}`} loading='lazy' alt='Description' class='cursor-pointer m-0 w-full h-full object-cover' id={imageSlug} />
-
-<script define:vars={{ imageSlug }}>
-	const img = document.getElementById(imageSlug)
-	const lightbox = document.getElementById('lightbox')
-	const lightboxOpen = document.getElementById('lightbox-open')
-	const lightboxImg = document.getElementById('lightbox-img')
-	const closeLightbox = document.getElementById('close-lightbox')
-
-	img.onclick = function () {
-		lightbox.style.display = 'block'
-		lightboxImg.src = this.src
-	}
-
-	lightboxOpen.onclick = function () {
-		lightbox.style.display = 'none'
-	}
-</script>
+<DynamicImage fileName={fileName} altText="An image alt text" />

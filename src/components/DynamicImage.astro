@@ -1,0 +1,58 @@
+---
+import type { ImageMetadata } from 'astro'
+import { Image } from 'astro:assets'
+
+interface Props {
+	fileName: string
+	altText: string
+	name?: string
+	age?: number
+}
+
+const { fileName, altText, name, age } = Astro.props
+const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/*.{jpeg,jpg,png,gif}')
+
+const imagePath = `/src/assets/${fileName}`
+
+if (!images[imagePath]) throw new Error(`"${imagePath}" does not exist in glob: "src/assets/*.{jpeg,jpg,png,gif}"`)
+
+// Function to slugify the fileName
+function slugify(string) {
+	return string
+		.toLowerCase()
+		.replace(/[^a-z0-9 -]/g, '') // Remove invalid chars
+		.replace(/\s+/g, '-') // Replace spaces with -
+		.replace(/-+/g, '-') // Replace multiple - with single -
+}
+
+const imageSlug = slugify(fileName.replace(/\.[^/.]+$/, '')) // Also remove the file extension
+---
+
+<Image width='400' class='w-full h-full object-cover cursor-pointer' src={images[imagePath]()} alt={altText} id={imageSlug} />
+
+<div id='lightbox' class='fixed flex items-center justify-center z-50 bg-black w-screen h-screen top-0 left-0 right-0 left-0' style='display: none;'>
+	<span id='close-lightbox' class='absolute top-10 right-10 w-16 h-16 pointer-events-none'>
+		<svg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke-width='1.5' stroke='currentColor' class='w-full h-auto'>
+			<path stroke-linecap='round' stroke-linejoin='round' d='M6 18 18 6M6 6l12 12'></path>
+		</svg>
+	</span>
+	<div class='w-full h-full flex items-center justify-center' id='lightbox-open'>
+		<Image width='1024' class='w-full h-full object-cover cursor-pointer' src={images[imagePath]()} alt={altText} id={imageSlug} />
+	</div>
+</div>
+
+<script define:vars={{ imageSlug }}>
+	const img = document.getElementById(imageSlug)
+	const lightbox = document.getElementById('lightbox')
+	const lightboxOpen = document.getElementById('lightbox-open')
+	const lightboxImg = document.getElementById('lightbox-img')
+
+	img.onclick = function () {
+		lightbox.style.display = 'block'
+		// lightboxImg.src = this.src
+	}
+
+	lightboxOpen.onclick = function () {
+		lightbox.style.display = 'none'
+	}
+</script>
