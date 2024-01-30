@@ -47,7 +47,7 @@ const { filterButtons, languageButtons, dark, header, title, switchViewButtons, 
 	</body>
 </html>
 
-<style>
+<style is:global>
 	html[dir='ltr'] {
 		/* Styles for left-to-right direction */
 	}
@@ -57,5 +57,9 @@ const { filterButtons, languageButtons, dark, header, title, switchViewButtons, 
 		* {
 			text-align: right;
 		}
+	}
+
+	body {
+		background: black;
 	}
 </style>
