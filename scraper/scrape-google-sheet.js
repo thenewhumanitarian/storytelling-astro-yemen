@@ -47,7 +47,10 @@ async function createThumbnail(sourcePath, destinationPath) {
             .resize(400, 400) // Resize the image to 400x400
             .toFile(destinationPath);
         console.log(`Thumbnail created: ${destinationPath}`);
-        return destinationPath.replace(/^public/, ''); // Remove 'public' from path for web access
+
+        // Convert the full path to a relative path
+        const relativePath = destinationPath.replace('/Users/marcfehr/Sites/tnh-storytelling-astro-yemen/public', '..');
+        return relativePath;
     } catch (err) {
         console.error('Error creating thumbnail:', err);
         return null;
@@ -89,7 +92,6 @@ function slugify(text) {
         .replace(/-+$/, '');            // Trim - from end of text
 }
 
-
 function saveToJson(data) {
     fs.writeFile('output.json', JSON.stringify(data, null, 2), (err) => {
         if (err) return console.error('Error saving JSON:', err);
@@ -98,7 +100,9 @@ function saveToJson(data) {
 }
 
 async function processData(data) {
-    const processedEntries = data.map(async entry => {
+    const processedData = [];
+
+    for (const entry of data) {
         // Slugify titles or use fallback pattern
         const enSlug = entry['EN\nTitle of story'].trim()
             ? slugify(entry['EN\nTitle of story'])
@@ -115,51 +119,47 @@ async function processData(data) {
         const imageAttachments = attachments.filter(isImage);
 
         if (entry['Method of submission'] === 'MachForm' && imageAttachments.length > 0) {
-            // Process first image attachment to create thumbnail
             const firstImage = imageAttachments[0];
             const sourceFilePath = path.join(__dirname, './machform_assets/', firstImage);
             const thumbnailPath = path.join(__dirname, '../public/images/thumbnails/', `thumbnail-${entry.ID}.jpg`);
+            // storyImage = `../images/thumbnails/thumbnail-${entry.ID}.jpg`
             const thumbnailResult = await createThumbnail(sourceFilePath, thumbnailPath);
 
             if (thumbnailResult) {
+                // console.log('Thumbnail result:', thumbnailResult)
                 storyImage = thumbnailResult; // Update storyImage to the thumbnail path
-            } else {
-                storyImage = placeholderImageArray[Math.floor(Math.random() * placeholderImageArray.length)];
             }
-
-            let attachmentCounter = 1;
-            attachments = attachments.map(file => {
-                let extension = path.extname(file).toLowerCase();
-                let newFilename = `${entry.ID}-${attachmentCounter}${extension}`;
-                const sourceFilePath = path.join(__dirname, './machform_assets/', file);
-                const newFilePath = path.join(__dirname, '../src/assets/', newFilename);
-
-                if (extension === '.heic') {
-                    // Rename .heic to .jpg
-                    newFilename = `${entry.ID}-${attachmentCounter}.jpg`;
-                    const jpgFilePath = path.join(__dirname, '../src/assets/', newFilename);
-                    try {
-                        fs.renameSync(sourceFilePath, jpgFilePath);
-                        console.log(`Renamed HEIC to JPG: ${jpgFilePath}`);
-                    } catch (err) {
-                        console.error('Error renaming HEIC to JPG:', err);
-                    }
-                } else {
-                    try {
-                        fs.copyFileSync(sourceFilePath, newFilePath);
-                        console.log(`File copied to ${newFilePath}`);
-                    } catch (err) {
-                        console.error('Error copying file:', err);
-                    }
-                }
-
-                attachmentCounter++;
-                console.log(newFilename)
-                return newFilename;
-            });
         }
 
-        return {
+        let attachmentCounter = 1;
+        attachments = attachments.map(file => {
+            let extension = path.extname(file).toLowerCase();
+            let newFilename = `${entry.ID}-${attachmentCounter}${extension}`;
+            const sourceFilePath = path.join(__dirname, './machform_assets/', file);
+            const newFilePath = path.join(__dirname, '../src/assets/', newFilename);
+
+            if (extension === '.heic') {
+                // Rename .heic to .jpg
+                newFilename = `${entry.ID}-${attachmentCounter}.jpg`;
+                const jpgFilePath = path.join(__dirname, '../src/assets/', newFilename);
+                try {
+                    fs.renameSync(sourceFilePath, jpgFilePath);
+                } catch (err) {
+                    console.error('Error renaming HEIC to JPG:', err);
+                }
+            } else {
+                try {
+                    fs.copyFileSync(sourceFilePath, newFilePath);
+                } catch (err) {
+                    console.error('Error copying file:', err);
+                }
+            }
+
+            attachmentCounter++;
+            return newFilename;
+        });
+
+        processedData.push({
             id: entry.ID,
             slugs: {
                 en: enSlug,
@@ -191,7 +191,7 @@ async function processData(data) {
                     content: entry['EN\nYour story']
                 },
                 ar: {
-                    title: entry['AR \nTitle of story'], // Adjusted for the space before the line break
+                    title: entry['AR \nTitle of story'],
                     content: entry['AR\nYour story']
                 }
             },
@@ -205,11 +205,9 @@ async function processData(data) {
             contacted: entry.Contacted === 'x',
             contactedBeforePublication: entry['Contacted before publication?'] === 'x',
             englishEdited: entry['English edited? Y/N (Annie)'] === 'Y',
-        };
-    });
+        });
+    }
 
-    // Wait for all entries to be processed
-    const processedData = await Promise.all(processedEntries);
     saveToJson(processedData);
 }
 
