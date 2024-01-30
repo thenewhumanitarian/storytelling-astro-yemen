@@ -21,5 +21,5 @@ module.exports = {
 			},
 		},
 	},
-	plugins: [require('@tailwindcss/typography'), require('@rvxlab/tailwind-plugin-ios-full-height')],
+	plugins: [require('@tailwindcss/typography'), require('@rvxlab/tailwind-plugin-ios-full-height'), require('@tailwindcss/line-clamp')],
 }

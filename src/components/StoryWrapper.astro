@@ -2,11 +2,11 @@
 const { stories, lang } = Astro.props
 ---
 
-<div class={`stories-container--grid bg-black`} id='stories-container--grid'>
+<div class={`stories-container--grid`} id='stories-container--grid'>
 	<div id='grid' class='grid bg-black'></div>
 </div>
-<div class={`stories-container--list mt-36 lg:mt-24 bg-black`} id='stories-container--list'>
-	<div class='list bg-black' id='list'>
+<div class={`stories-container--list mt-36 lg:mt-24`} id='stories-container--list'>
+	<div class='list' id='list'>
 		{
 			stories.map((story, i) => {
 				return (
@@ -17,7 +17,14 @@ const { stories, lang } = Astro.props
 							data-slug={story.slugs.en}
 						>
 							{story.storyImage && <img src={`${story.storyImage}`} alt={story.story.en.title} class='w-14 h-14' />}
-							<h3 class='story-item--title lang--en text-white m-0'>{story.story['en'].title || `EN TITLE ${story.id} MISSING`}</h3>
+							<div class='flex flex-col'>
+								<h3 class='story-item--title lang--en text-white m-0 line-clamp'>
+									{story.story['ar'].title || `AR TITLE ID ${story.id} MISSING`}
+								</h3>
+								<p class='text-zinc-200 m-0'>
+									{story.personalInfo.en.name} {story.personalInfo.en.surname}
+								</p>
+							</div>
 						</a>
 						<a
 							href={`/stories/ar/${story.slugs.ar}`}
@@ -25,7 +32,14 @@ const { stories, lang } = Astro.props
 							data-slug={story.slugs.ar}
 						>
 							{story.storyImage && <img src={`${story.storyImage}`} alt={story.story.ar.title} class='w-14 h-14' />}
-							<h3 class='story-item--title lang--ar text-white m-0'>{story.story['ar'].title || `AR TITLE ID ${story.id} MISSING`}</h3>
+							<div class='flex flex-col'>
+								<h3 class='story-item--title lang--ar text-white m-0 line-clamp'>
+									{story.story['ar'].title || `AR TITLE ID ${story.id} MISSING`}
+								</h3>
+								<p class='text-zinc-200 m-0'>
+									{story.personalInfo.ar.name} {story.personalInfo.ar.surname}
+								</p>
+							</div>
 						</a>
 					</>
 				)
@@ -607,7 +621,6 @@ const { stories, lang } = Astro.props
 		box-decoration-break: clone;
 		font-size: 1.4rem;
 		line-height: 1.15;
-		padding: 0 0.4rem;
 		cursor: pointer;
 		display: inline;
 	}

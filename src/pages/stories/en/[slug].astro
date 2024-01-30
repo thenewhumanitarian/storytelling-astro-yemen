@@ -34,14 +34,18 @@ const contentArray = story.story.en.content.split('\n')
 		<BackButton />
 		<Prose>
 			<div class='flex flex-col gap-10'>
-				<div class="flex flex-col lg:flex-row">
-					<Title>{story.story.en.title || `EN TITLE ID ${story.id} MISSING`}</Title>
-					<AuthorSection
-						name={`${story.personalInfo.en.name} ${story.personalInfo.en.surname}`}
-						from={story.personalInfo.en.whereFrom}
-						livingIn={story.personalInfo.en.livingIn}
-						age={story.contact.age}
-					/>
+				<div class='flex flex-col lg:flex-row lg:gap-x-5'>
+					<div class='w-1/2'>
+						<Title>{story.story.en.title || `EN TITLE ID ${story.id} MISSING`}</Title>
+					</div>
+					<div class='w-1/2'>
+						<AuthorSection
+							name={`${story.personalInfo.en.name} ${story.personalInfo.en.surname}`}
+							from={story.personalInfo.en.whereFrom}
+							livingIn={story.personalInfo.en.livingIn}
+							age={story.contact.age}
+						/>
+					</div>
 				</div>
 				<Attachments attachments={story.attachments} />
 				<Message contentArray={contentArray} />
@@ -56,6 +60,7 @@ const contentArray = story.story.en.content.split('\n')
 		background-image: url('https://assets.thenewhumanitarian.org/s3fs-public/styles/responsive_large/public/2023-06/night-sky-overlay_0.png.webp');
 		background-size: 100%;
 		background-position: top center;
+		background-repeat: no-repeat;
 	}
 
 	body * {
