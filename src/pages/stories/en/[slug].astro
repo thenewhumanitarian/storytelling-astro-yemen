@@ -4,6 +4,7 @@ import Layout from '../../../layouts/Layout.astro'
 import stories from '../../../data/all_stories.json'
 
 import Prose from '../../../components/Prose.astro'
+import Title from '../../../components/Title.astro'
 import AuthorSection from '../../../components/AuthorSection.astro'
 import Attachments from '../../../components/Attachments.astro'
 import Message from '../../../components/Message.astro'
@@ -32,17 +33,19 @@ const contentArray = story.story.en.content.split('\n')
 	<div class='w-full max-w-5xl mx-auto mt-2 sm:mt-12 lg:mt-16 mb-8 sm:mb-24 px-4' class='story-detail-page--wrapper' id='story-wrapper'>
 		<BackButton />
 		<Prose>
-			<h1 class='pt-1 sm:pt-0 text-left w-full font-serif lg:text-5xl lg:pt-7 pb-8'>
-				{story.story.en.title || `EN TITLE ID ${story.id} MISSING`}
-			</h1>
-			<Message contentArray={contentArray} />
-			<Attachments attachments={story.attachments} />
-			<AuthorSection
-				name={`${story.personalInfo.en.name} ${story.personalInfo.en.surname}`}
-				from={story.personalInfo.en.whereFrom}
-				livingIn={story.personalInfo.en.livingIn}
-				age={story.contact.age}
-			/>
+			<div class='flex flex-col gap-10'>
+				<div class="flex flex-col lg:flex-row">
+					<Title>{story.story.en.title || `EN TITLE ID ${story.id} MISSING`}</Title>
+					<AuthorSection
+						name={`${story.personalInfo.en.name} ${story.personalInfo.en.surname}`}
+						from={story.personalInfo.en.whereFrom}
+						livingIn={story.personalInfo.en.livingIn}
+						age={story.contact.age}
+					/>
+				</div>
+				<Attachments attachments={story.attachments} />
+				<Message contentArray={contentArray} />
+			</div>
 		</Prose>
 	</div>
 </Layout>
@@ -50,6 +53,9 @@ const contentArray = story.story.en.content.split('\n')
 <style is:global>
 	body {
 		background: black;
+		background-image: url('https://assets.thenewhumanitarian.org/s3fs-public/styles/responsive_large/public/2023-06/night-sky-overlay_0.png.webp');
+		background-size: 100%;
+		background-position: top center;
 	}
 
 	body * {
