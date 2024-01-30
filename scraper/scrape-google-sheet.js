@@ -1,5 +1,6 @@
 const path = require('path');
 const fs = require('fs');
+const sharp = require('sharp');
 const axios = require('axios');
 const Papa = require('papaparse');
 
@@ -40,6 +41,24 @@ const placeholderImageArray = [
     '../images/placeholder_images/puzzle-32.png',
 ]
 
+async function createThumbnail(sourcePath, destinationPath) {
+    try {
+        await sharp(sourcePath)
+            .resize(400, 400) // Resize the image to 400x400
+            .toFile(destinationPath);
+        console.log(`Thumbnail created: ${destinationPath}`);
+        return destinationPath.replace(/^public/, ''); // Remove 'public' from path for web access
+    } catch (err) {
+        console.error('Error creating thumbnail:', err);
+        return null;
+    }
+}
+
+function isImage(file) {
+    const imageExtensions = ['.jpg', '.jpeg', '.png', '.heic'];
+    return imageExtensions.includes(path.extname(file).toLowerCase());
+}
+
 axios.get(csvUrl)
     .then(response => {
         const csvData = response.data;
@@ -61,8 +80,25 @@ function parseCsv(csvData) {
     });
 }
 
-function processData(data) {
-    const processedData = data.map(entry => {
+function slugify(text) {
+    return text.toString().toLowerCase()
+        .replace(/\s+/g, '-')           // Replace spaces with -
+        .replace(/[^\w\-]+/g, '')       // Remove all non-word chars
+        .replace(/\-\-+/g, '-')         // Replace multiple - with single -
+        .replace(/^-+/, '')             // Trim - from start of text
+        .replace(/-+$/, '');            // Trim - from end of text
+}
+
+
+function saveToJson(data) {
+    fs.writeFile('output.json', JSON.stringify(data, null, 2), (err) => {
+        if (err) return console.error('Error saving JSON:', err);
+        console.log('Data saved to output.json');
+    });
+}
+
+async function processData(data) {
+    const processedEntries = data.map(async entry => {
         // Slugify titles or use fallback pattern
         const enSlug = entry['EN\nTitle of story'].trim()
             ? slugify(entry['EN\nTitle of story'])
@@ -71,14 +107,26 @@ function processData(data) {
             ? slugify(entry['AR \nTitle of story'])
             : `ar-story-${entry.ID}`;
 
-        // Pick a random placeholder image
-        const randomImage = placeholderImageArray[Math.floor(Math.random() * placeholderImageArray.length)];
-
         let attachments = entry.Attachments && entry.Attachments.trim() && entry.Attachments.trim() !== '-'
             ? entry.Attachments.split(',').map(file => file.trim())
             : [];
+        let storyImage = placeholderImageArray[Math.floor(Math.random() * placeholderImageArray.length)];
 
-        if (entry['Method of submission'] === 'MachForm' && attachments.length > 0) {
+        const imageAttachments = attachments.filter(isImage);
+
+        if (entry['Method of submission'] === 'MachForm' && imageAttachments.length > 0) {
+            // Process first image attachment to create thumbnail
+            const firstImage = imageAttachments[0];
+            const sourceFilePath = path.join(__dirname, './machform_assets/', firstImage);
+            const thumbnailPath = path.join(__dirname, '../public/images/thumbnails/', `thumbnail-${entry.ID}.jpg`);
+            const thumbnailResult = await createThumbnail(sourceFilePath, thumbnailPath);
+
+            if (thumbnailResult) {
+                storyImage = thumbnailResult; // Update storyImage to the thumbnail path
+            } else {
+                storyImage = placeholderImageArray[Math.floor(Math.random() * placeholderImageArray.length)];
+            }
+
             let attachmentCounter = 1;
             attachments = attachments.map(file => {
                 let extension = path.extname(file).toLowerCase();
@@ -117,7 +165,7 @@ function processData(data) {
                 en: enSlug,
                 ar: arSlug
             },
-            storyImage: randomImage,
+            storyImage: storyImage,
             personalInfo: {
                 en: {
                     name: entry['EN\nName'].trim(),
@@ -160,22 +208,8 @@ function processData(data) {
         };
     });
 
+    // Wait for all entries to be processed
+    const processedData = await Promise.all(processedEntries);
     saveToJson(processedData);
 }
 
-function slugify(text) {
-    return text.toString().toLowerCase()
-        .replace(/\s+/g, '-')           // Replace spaces with -
-        .replace(/[^\w\-]+/g, '')       // Remove all non-word chars
-        .replace(/\-\-+/g, '-')         // Replace multiple - with single -
-        .replace(/^-+/, '')             // Trim - from start of text
-        .replace(/-+$/, '');            // Trim - from end of text
-}
-
-
-function saveToJson(data) {
-    fs.writeFile('output.json', JSON.stringify(data, null, 2), (err) => {
-        if (err) return console.error('Error saving JSON:', err);
-        console.log('Data saved to output.json');
-    });
-}
