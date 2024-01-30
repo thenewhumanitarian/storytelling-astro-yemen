@@ -9,45 +9,39 @@ export interface Props {
 const { name, age, from, livingIn } = Astro.props as Props
 ---
 
-{ name &&
-	<section class='mt-14'>
-		<h3>About the author</h3>
-	
-		<table class='table-fixed w-full prose'>
-			<tbody>
-				{
-					name && (
+{
+	name && (
+		<section class='mt-14'>
+			<h3>About the author</h3>
+
+			<table class='table-fixed w-full prose'>
+				<tbody>
+					{name && (
 						<tr>
 							<td>Name</td>
 							<td>{name}</td>
 						</tr>
-					)
-				}
-				{
-					age && (
+					)}
+					{age && (
 						<tr>
 							<td>Age</td>
 							<td>{age}</td>
 						</tr>
-					)
-				}
-				{
-					from && (
+					)}
+					{from && (
 						<tr>
 							<td>From</td>
 							<td>{from}</td>
 						</tr>
-					)
-				}
-				{
-					livingIn && (
+					)}
+					{livingIn && (
 						<tr>
 							<td>Is living in</td>
 							<td>{livingIn}</td>
 						</tr>
-					)
-				}
-			</tbody>
-		</table>
-	</section>
+					)}
+				</tbody>
+			</table>
+		</section>
+	)
 }

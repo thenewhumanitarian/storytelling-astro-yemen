@@ -73,61 +73,65 @@ if (categorisedAttachments.images.length === 1) {
 
 {
 	attachments.length > 0 && (
-		<section
-			class={`mb-8 md:-mx-0 lg:my-10 ${
-				categorisedAttachments.images?.length > 1 ? 'lg:-mx-20 2xl:-mx-56' : ''
-			} 2xl:my-16 bg-zinc-900 border-y border-zinc-500 px-2 sm:px-5 py-2 sm:pb-6 sm:pt-5 prose-xl prose-p:mb-0 prose-p:mt-2 prose-img:m0 prose-h3:pb-3`}
-		>
-			{categorisedAttachments.images.length > 0 && (
-				<div>
-					<h3 class='flex items-center justify-start gap-x-3'>
-						<span class='inline-block w-8 h-8 flex items-center'>
-							<svg
-								xmlns='http://www.w3.org/2000/svg'
-								fill='none'
-								viewBox='0 0 24 24'
-								stroke-width='1.5'
-								stroke='currentColor'
-								class='w-full h-auto'
-							>
-								<path
-									stroke-linecap='round'
-									stroke-linejoin='round'
-									d='m2.25 15.75 5.159-5.159a2.25 2.25 0 0 1 3.182 0l5.159 5.159m-1.5-1.5 1.409-1.409a2.25 2.25 0 0 1 3.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 0 0 1.5-1.5V6a1.5 1.5 0 0 0-1.5-1.5H3.75A1.5 1.5 0 0 0 2.25 6v12a1.5 1.5 0 0 0 1.5 1.5Zm10.5-11.25h.008v.008h-.008V8.25Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z'
-								/>
-							</svg>
-						</span>
-						Images
-					</h3>
-					<div class={`${imageGridClasses}`}>
-						{categorisedAttachments.images.map((image) => (
-							<AttachmentImage fileName={image} />
+		<>
+			<section
+				class={`mb-8 md:-mx-0 lg:my-10 ${
+					categorisedAttachments.images?.length > 1 ? 'lg:-mx-20 2xl:-mx-56' : ''
+				} 2xl:my-16 bg-zinc-900 border-y border-zinc-500 px-2 sm:px-5 py-2 sm:pb-6 sm:pt-5 prose-xl prose-p:mb-0 prose-p:mt-2 prose-img:m0 prose-h3:pb-3`}
+			>
+				{categorisedAttachments.images.length > 0 && (
+					<div>
+						<h3 class='flex items-center justify-start gap-x-3'>
+							<span class='inline-block w-8 h-8 flex items-center'>
+								<svg
+									xmlns='http://www.w3.org/2000/svg'
+									fill='none'
+									viewBox='0 0 24 24'
+									stroke-width='1.5'
+									stroke='currentColor'
+									class='w-full h-auto'
+								>
+									<path
+										stroke-linecap='round'
+										stroke-linejoin='round'
+										d='m2.25 15.75 5.159-5.159a2.25 2.25 0 0 1 3.182 0l5.159 5.159m-1.5-1.5 1.409-1.409a2.25 2.25 0 0 1 3.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 0 0 1.5-1.5V6a1.5 1.5 0 0 0-1.5-1.5H3.75A1.5 1.5 0 0 0 2.25 6v12a1.5 1.5 0 0 0 1.5 1.5Zm10.5-11.25h.008v.008h-.008V8.25Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z'
+									/>
+								</svg>
+							</span>
+							Images
+						</h3>
+						<div class={`${imageGridClasses}`}>
+							{categorisedAttachments.images.map((image) => (
+								<div id={image} class='image-wrapper'>
+									<AttachmentImage fileName={image} />
+								</div>
+							))}
+						</div>
+					</div>
+				)}
+
+				{categorisedAttachments.videos.length > 0 && (
+					<div>
+						<h3>Videos</h3>
+						{categorisedAttachments.videos.map((video, index) => (
+							<p>{video}</p>
 						))}
 					</div>
-				</div>
-			)}
+				)}
 
-			{categorisedAttachments.videos.length > 0 && (
-				<div>
-					<h3>Videos</h3>
-					{categorisedAttachments.videos.map((video, index) => (
-						<p>{video}</p>
-					))}
-				</div>
-			)}
-
-			{categorisedAttachments.documents.length > 0 && (
-				<div>
-					<h3>Documents</h3>
-					{categorisedAttachments.documents.map((document, index) => (
-						<p>
-							<a href={`../assets/${document}`} target='_blank' rel='noopener noreferrer'>
-								{document}
-							</a>
-						</p>
-					))}
-				</div>
-			)}
-		</section>
+				{categorisedAttachments.documents.length > 0 && (
+					<div>
+						<h3>Documents</h3>
+						{categorisedAttachments.documents.map((document, index) => (
+							<p>
+								<a href={`../../src/assets/${document}`} target='_blank' rel='noopener noreferrer'>
+									{document}
+								</a>
+							</p>
+						))}
+					</div>
+				)}
+			</section>
+		</>
 	)
 }

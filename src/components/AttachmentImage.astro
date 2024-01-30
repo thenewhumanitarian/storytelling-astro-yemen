@@ -8,4 +8,4 @@ import DynamicImage from './DynamicImage.astro'
 const { fileName } = Astro.props as Props
 ---
 
-{fileName !== undefined && fileName && <DynamicImage fileName={fileName} altText='An image alt text' />}
+<DynamicImage fileName={fileName} altText='An image alt text' />

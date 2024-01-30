@@ -60,24 +60,26 @@ const { stories, lang } = Astro.props
 
 	// Window load event
 	window.addEventListener('pageshow', function () {
+		console.log('pageshow')
+
 		filterGridBasedOnLocalStorage()
 
 		// Get read articles or default to an empty array
 		let readArticles = JSON.parse(localStorage.getItem('readArticles')) || []
 
 		// Update grid elements based on read articles
-		document.querySelectorAll('.story-item').forEach((element) => {
-			const slug = element.getAttribute('data-slug')
-			const readArticle = readArticles.find((article) => article.slug === slug)
+		// document.querySelectorAll('.story-item').forEach((element) => {
+		// 	const slug = element.getAttribute('data-slug')
+		// 	const readArticle = readArticles.find((article) => article.slug === slug)
 
-			// Update element based on whether the article has been read before
-			if (readArticle) {
-				element.setAttribute('data-lastread', readArticle.timestamp)
-				// element.style.opacity = 0.2
-			} else {
-				element.setAttribute('data-lastread', 'never')
-			}
-		})
+		// 	// Update element based on whether the article has been read before
+		// 	if (readArticle) {
+		// 		element.setAttribute('data-lastread', readArticle.timestamp)
+		// 		// element.style.opacity = 0.2
+		// 	} else {
+		// 		element.setAttribute('data-lastread', 'never')
+		// 	}
+		// })
 
 		const grid = optimalGridDimensions()
 		Infinite.setGrid(grid.cols, grid.rows)
