@@ -1,0 +1,16 @@
+---
+export interface Props {
+	classNames: string
+}
+
+const { classNames } = Astro.props as Props
+---
+
+<div class={classNames} id='pergament'><slot /></div>
+
+<style>
+	#pergament {
+		background-color: #fffdeb;
+		background-image: url('https://www.transparenttextures.com/patterns/textured-paper.png');
+	}
+</style>

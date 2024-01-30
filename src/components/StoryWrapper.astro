@@ -60,12 +60,12 @@ const { stories, lang } = Astro.props
 
 	// Window load event
 	window.addEventListener('pageshow', function () {
-		console.log('pageshow')
+		// console.log('pageshow')
 
 		filterGridBasedOnLocalStorage()
 
 		// Get read articles or default to an empty array
-		let readArticles = JSON.parse(localStorage.getItem('readArticles')) || []
+		// let readArticles = JSON.parse(localStorage.getItem('readArticles')) || []
 
 		// Update grid elements based on read articles
 		// document.querySelectorAll('.story-item').forEach((element) => {
@@ -133,6 +133,11 @@ const { stories, lang } = Astro.props
 			// Determine the new image URL
 			// let newImageUrl = `/downloaded_images/thumbnails/${story.storyImage}`
 			let newImageUrl = `${story.storyImage}`
+
+			console.groupCollapsed('Story')
+			console.log(story.storyImage)
+			console.log(newImageUrl)
+			console.groupEnd()
 
 			// Check if there's already an <img> element inside the grid-item
 			let currentImageElement = this.item.querySelector('img')
