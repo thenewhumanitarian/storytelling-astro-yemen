@@ -148,11 +148,6 @@ const { stories, lang } = Astro.props
 			// let newImageUrl = `/downloaded_images/thumbnails/${story.storyImage}`
 			let newImageUrl = `${story.storyImage}`
 
-			console.groupCollapsed('Story')
-			console.log(story.storyImage)
-			console.log(newImageUrl)
-			console.groupEnd()
-
 			// Check if there's already an <img> element inside the grid-item
 			let currentImageElement = this.item.querySelector('img')
 
