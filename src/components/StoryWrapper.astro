@@ -2,11 +2,11 @@
 const { stories, lang } = Astro.props
 ---
 
-<div class={`stories-container--grid`} id='stories-container--grid'>
-	<div id='grid' class='grid'></div>
+<div class={`stories-container--grid bg-black`} id='stories-container--grid'>
+	<div id='grid' class='grid bg-black'></div>
 </div>
-<div class={`stories-container--list mt-36 lg:mt-24`} id='stories-container--list'>
-	<div class='list' id='list'>
+<div class={`stories-container--list mt-36 lg:mt-24 bg-black`} id='stories-container--list'>
+	<div class='list bg-black' id='list'>
 		{
 			stories.map((story, i) => {
 				return (
@@ -123,7 +123,10 @@ const { stories, lang } = Astro.props
 			let story = stories[this.index % stories.length]
 
 			// Add both language titles
-			const titles = { ar: story.story['ar'].title || `AR TITLE ID ${story.id} MISSING`, en: story.story['en'].title || `EN TITLE ID ${story.id} MISSING` }
+			const titles = {
+				ar: story.story['ar'].title || `AR TITLE ID ${story.id} MISSING`,
+				en: story.story['en'].title || `EN TITLE ID ${story.id} MISSING`,
+			}
 
 			// Determine the new image URL
 			// let newImageUrl = `/downloaded_images/thumbnails/${story.storyImage}`
