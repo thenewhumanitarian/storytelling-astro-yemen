@@ -22,3 +22,6 @@ pnpm-debug.log*
 
 # Google API key files
 scraper/key.json
+scraper/downloaded_images/**/*
+scraper/machform_assets/**/*
+scraper/whatsapp_assets/**/*

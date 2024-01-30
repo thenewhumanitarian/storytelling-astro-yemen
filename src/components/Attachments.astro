@@ -73,7 +73,7 @@ if (categorisedAttachments.images.length === 1) {
 
 {
 	attachments.length > 0 && (
-		<section class='mb-8 md:-mx-0 lg:-mx-20 lg:my-10 2xl:-mx-56 2xl:my-16 bg-zinc-900 border-y border-zinc-500 px-2 sm:px-5 py-2 sm:pb-6 sm:pt-5 prose-xl prose-p:mb-0 prose-p:mt-2 prose-img:m0 prose-h3:pb-3'>
+		<section class={`mb-8 md:-mx-0 lg:my-10 ${categorisedAttachments.images?.length > 1 ? 'lg:-mx-20 2xl:-mx-56' : ''} 2xl:my-16 bg-zinc-900 border-y border-zinc-500 px-2 sm:px-5 py-2 sm:pb-6 sm:pt-5 prose-xl prose-p:mb-0 prose-p:mt-2 prose-img:m0 prose-h3:pb-3`}>
 			{categorisedAttachments.images.length > 0 && (
 				<div>
 					<h3 class='flex items-center justify-start gap-x-3'>
@@ -117,7 +117,7 @@ if (categorisedAttachments.images.length === 1) {
 					<h3>Documents</h3>
 					{categorisedAttachments.documents.map((document, index) => (
 						<p>
-							<a href={`/attachments/${document}`} target='_blank' rel='noopener noreferrer'>
+							<a href={`../assets/${document}`} target='_blank' rel='noopener noreferrer'>
 								{document}
 							</a>
 						</p>

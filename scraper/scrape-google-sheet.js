@@ -1,6 +1,7 @@
+const path = require('path');
+const fs = require('fs');
 const axios = require('axios');
 const Papa = require('papaparse');
-const fs = require('fs');
 
 const csvUrl = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSo1JkBPpgo-jq5HbgZhdrWZ8lDGI8vF0C30gHPweWebwoKJbsmuKtED07jLqSDz3zpZMAfBpFl_Khv/pub?output=csv'; // Replace with your published CSV URL
 
@@ -73,18 +74,41 @@ function processData(data) {
         // Pick a random placeholder image
         const randomImage = placeholderImageArray[Math.floor(Math.random() * placeholderImageArray.length)];
 
-        // Process attachments, treating '-' or empty as no attachment, and replace .heic with .png
         let attachments = entry.Attachments && entry.Attachments.trim() && entry.Attachments.trim() !== '-'
-            ? entry.Attachments.split(',').map(file => {
-                // Check if the file ends with .heic and replace it with .png
-                return file.trim().endsWith('.heic') ? file.trim().replace('.heic', '.png') : file.trim();
-            })
+            ? entry.Attachments.split(',').map(file => file.trim())
             : [];
 
+        if (entry['Method of submission'] === 'MachForm' && attachments.length > 0) {
+            let attachmentCounter = 1;
+            attachments = attachments.map(file => {
+                let extension = path.extname(file).toLowerCase();
+                let newFilename = `${entry.ID}-${attachmentCounter}${extension}`;
+                const sourceFilePath = path.join(__dirname, './machform_assets/', file);
+                const newFilePath = path.join(__dirname, '../src/assets/', newFilename);
 
-        // Attachments submitted via WhatsApp
-        if (entry['Method of submission'] === 'WhatsApp') {
-            attachments = attachments.map(file => `ID/${entry.ID}/${file.trim()}`);
+                if (extension === '.heic') {
+                    // Rename .heic to .jpg
+                    newFilename = `${entry.ID}-${attachmentCounter}.jpg`;
+                    const jpgFilePath = path.join(__dirname, '../src/assets/', newFilename);
+                    try {
+                        fs.renameSync(sourceFilePath, jpgFilePath);
+                        console.log(`Renamed HEIC to JPG: ${jpgFilePath}`);
+                    } catch (err) {
+                        console.error('Error renaming HEIC to JPG:', err);
+                    }
+                } else {
+                    try {
+                        fs.copyFileSync(sourceFilePath, newFilePath);
+                        console.log(`File copied to ${newFilePath}`);
+                    } catch (err) {
+                        console.error('Error copying file:', err);
+                    }
+                }
+
+                attachmentCounter++;
+                console.log(newFilename)
+                return newFilename;
+            });
         }
 
         return {
