@@ -147,7 +147,7 @@ function processData(data) {
                     content: entry['AR\nYour story']
                 }
             },
-            attachments: attachments,
+            attachments: entry['Method of submission'] === 'MachForm' ? attachments : [],
             notes: entry.Notes,
             highlighted: entry.Highlighted === 'x',
             languageOfSubmission: entry['Language of submission'],
