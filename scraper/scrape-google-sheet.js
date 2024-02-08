@@ -33,13 +33,13 @@ async function processData(data) {
       ? slugify(entry['AR \nTitle of story'])
       : `ar-story-${entry.ID}`;
 
-    let attachments = entry.Attachments && entry.Attachments.trim() && entry.Attachments.trim() !== '-'
+    let machformAttachments = entry.Attachments && entry.Attachments.trim() && entry.Attachments.trim() !== '-'
       ? entry.Attachments.split(',').map(file => file.trim())
       : [];
 
     // Find and use the first image attachment as the story image
     let storyImage = placeholderImageArray[Math.floor(Math.random() * placeholderImageArray.length)];
-    const imageAttachments = attachments.filter(isImage);
+    const imageAttachments = machformAttachments.filter(isImage);
 
     // Process attachments that came through MachForm
     if (entry['Method of submission'] === 'MachForm' && imageAttachments.length > 0) {
@@ -63,7 +63,7 @@ async function processData(data) {
 
       // Process all attachments for MachForm entry
       let attachmentCounter = 1;
-      attachments = attachments.map(file => {
+      machformAttachments = machformAttachments.map(file => {
         let extension = path.extname(file).toLowerCase();
         let newFilename = `${entry.ID}-${attachmentCounter}${extension}`;
         const sourceFilePath = path.join(__dirname, './assets/machform_assets/', file);
@@ -91,7 +91,7 @@ async function processData(data) {
       });
     }
 
-
+    let whatsAppAttachments = [];
 
     // Process WhatsApp attachments
     if (entry['Method of submission'] === 'WhatsApp') {
@@ -108,16 +108,40 @@ async function processData(data) {
           // Proceed to process these files
           const processedFiles = processWhatsAppAttachments(entryID, files, __dirname);
           console.log(`Processed files for entry ${entryID}:`, processedFiles);
+          whatsAppAttachments = processedFiles;
+
+          // Find the first image file for thumbnail creation
+          const firstImageFile = files.find(file => isImage(file));
+
+          if (firstImageFile) {
+            const sourceFilePath = path.join(whatsappAssetsDir, firstImageFile);
+            const thumbnailPath = path.join(__dirname, '../public/images/thumbnails/', `thumbnail-${entryID}.jpg`);
+
+            // Create a thumbnail for the first image file
+            try {
+              const thumbnailResult = await createThumbnail(sourceFilePath, thumbnailPath);
+              console.log(`Thumbnail created for entry ${entryID}:`, thumbnailResult);
+              // Optionally store or use `thumbnailResult` as needed
+              storyImage = thumbnailResult;
+            } catch (error) {
+              console.error(`Error creating thumbnail for entry ${entryID}:`, error);
+            }
+          }
+        } else {
+          // No image files or directory is empty
+          console.log(`No image files found for WhatsApp entry ${entryID}`);
         }
       } catch (error) {
         if (error.code === 'ENOENT') {
           // Directory does not exist
-          console.log(`No directory found for WhatsApp entry ${entryID}, proceeding with an empty array.`);
+          // console.log(`No directory found for WhatsApp entry ${entryID}, proceeding with an empty array.`);
         } else {
-          console.error(`Error accessing WhatsApp assets for entry ${entryID}:`, error);
+          // No assets
+          // console.error(`Error accessing WhatsApp assets for entry ${entryID}:`, error);
         }
       }
     }
+
     processedData.push({
       id: entry.ID,
       slugs: {
@@ -154,7 +178,7 @@ async function processData(data) {
           content: entry['AR\nYour story']
         }
       },
-      attachments: entry['Method of submission'] === 'MachForm' ? attachments : [],
+      attachments: entry['Method of submission'] === 'MachForm' ? machformAttachments : whatsAppAttachments,
       notes: entry.Notes,
       highlighted: entry.Highlighted === 'x',
       languageOfSubmission: entry['Language of submission'],

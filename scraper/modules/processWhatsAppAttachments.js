@@ -10,15 +10,18 @@ const path = require('path');
  * @returns {string[]} An array of new filenames after processing.
  */
 function processWhatsAppAttachments(entryID, files, basePath) {
-  const processedFiles = files.map((file, index) => {
+  // Exclude .txt files
+  const filteredFiles = files.filter(file => !file.endsWith('.txt'));
+
+  const processedFiles = filteredFiles.map((file, index) => {
     const extension = path.extname(file).toLowerCase();
     let newFilename = `${entryID}-${index + 1}${extension}`;
     const sourceFilePath = path.join(basePath, `./assets/whatsapp_assets/${entryID}`, file);
-    const newFilePath = path.join(basePath, './src/assets/', newFilename);
+    const newFilePath = path.join(basePath, '../src/assets/', newFilename);
 
     if (extension === '.heic') {
       newFilename = `${entryID}-${index + 1}.jpg`;
-      const jpgFilePath = path.join(basePath, './src/assets/', newFilename);
+      const jpgFilePath = path.join(basePath, '../src/assets/', newFilename);
       try {
         fs.renameSync(sourceFilePath, jpgFilePath);
       } catch (err) {
