@@ -5,7 +5,7 @@
       "en": "en-story-20",
       "ar": "ar-story-20"
     },
-    "storyImage": "../images/placeholder_images/puzzle-03.png",
+    "storyImage": "../images/placeholder_images/puzzle-13.png",
     "personalInfo": {
       "en": {
         "name": "Ana",
@@ -52,17 +52,17 @@
       "en": "en-story-21",
       "ar": "ar-story-21"
     },
-    "storyImage": "../images/placeholder_images/puzzle-16.png",
+    "storyImage": "../images/placeholder_images/puzzle-06.png",
     "personalInfo": {
       "en": {
         "name": "Riad",
         "surname": "Dahboool",
-        "whereFrom": "",
-        "livingIn": ""
+        "whereFrom": "Yemen",
+        "livingIn": "Sanaa"
       },
       "ar": {
-        "name": "",
-        "surname": "",
+        "name": "رائد",
+        "surname": "دهبول",
         "whereFrom": "اليمن",
         "livingIn": "صنعاء"
       }
@@ -75,11 +75,11 @@
     "story": {
       "en": {
         "title": "",
-        "content": "English text"
+        "content": "The war destroyed my life, both physically and financially. \n"
       },
       "ar": {
         "title": "",
-        "content": "دمرت حياتي الحرب دمرتنا ماليا وجسديا"
+        "content": "دمرت حياتي. الحرب دمرتنا ماليا وجسديا."
       }
     },
     "attachments": [],
@@ -146,7 +146,7 @@
       "en": "en-story-28",
       "ar": "ar-story-28"
     },
-    "storyImage": "../images/placeholder_images/puzzle-23.png",
+    "storyImage": "../images/placeholder_images/puzzle-01.png",
     "personalInfo": {
       "en": {
         "name": "Arzaq Al-Najjar",
@@ -243,7 +243,7 @@
       "en": "en-story-36",
       "ar": "ar-story-36"
     },
-    "storyImage": "../images/placeholder_images/puzzle-02.png",
+    "storyImage": "../images/placeholder_images/puzzle-11.png",
     "personalInfo": {
       "en": {
         "name": "G. Moh'D",
@@ -266,7 +266,7 @@
     "story": {
       "en": {
         "title": "",
-        "content": "When the civil unrest started in Yemen in 2011, shortly after another civil unrest sparked in 2014 followed by a full scall war across the country in 2015 putting many lives at risks and damaging the basic infrastructure in Yemen. This had a devastating toll on many Yemenis, especially women and girls, it is estimated that 1/3rd of the women population is now widowed female household heads, and they have to bring some means of livelihoods to their dependents with almost no skills in hand on how to survive in a weak economic era. As a man I had to fight my way through to survive, my options were limited, and the competition was high in favor to those in power. I went through trauma, severe mental shocks and uncertainties that kept hunting me every day along with another 7 million Yemenis who suffer from mental illnesses as a result of the prolonged 9 years' war and economic shocks. It still is a rocky path for me to live in a land surrounded by hyaenas. I had to look after my dependents, I finally found a job which I liked, it happens to be the only healthy environment in, and I spend many hours working relentlessly - to avoid going out to the unpleasant land that was once called the Happy Yemen \" AlYemen AlSaeed\". I am the only source of income to my family and to our extended families, looking after 7 households in total with a limited income, yet equally distributed among us all - to survive. I am happy with where I've reached despite the limitations. I still believe that things will unfold to the better, not sure when, but hope is keeping me alive. Yemenis are still holding their breaths, but they are not the same."
+        "content": "When the war started, I had to fight to find a way to survive, with limited options [for jobs] and high competition that favoured those in power. I went through trauma, severe mental shocks, and uncertainties that haunted me every day along with millions of other Yemenis who suffer from mental difficulties as a result of the prolonged war and economic shocks. It still is a rocky path for me to live in a land surrounded by hyenas. \nI finally found a job I liked. It’s the only healthy environment I have right now, and I spend hours working relentlessly, to avoid going out into the unpleasant land that was once known as Happy Yemen (al-Yemen al-Saeed). \nI am happy with where I've reached in spite of so many limitations. I still believe that things will unfold for the better, although I’m not sure when. But hope is keeping me alive. Yemenis are still holding their breaths for this change, but we are not the same anymore.\n\n"
       },
       "ar": {
         "title": "",
@@ -290,7 +290,7 @@
       "en": "en-story-37",
       "ar": "ar-story-37"
     },
-    "storyImage": "../images/placeholder_images/puzzle-05.png",
+    "storyImage": "../images/placeholder_images/puzzle-03.png",
     "personalInfo": {
       "en": {
         "name": "ن",
@@ -337,7 +337,7 @@
       "en": "en-story-38",
       "ar": "ar-story-38"
     },
-    "storyImage": "../images/placeholder_images/puzzle-32.png",
+    "storyImage": "../images/placeholder_images/puzzle-17.png",
     "personalInfo": {
       "en": {
         "name": "",
@@ -381,10 +381,10 @@
   {
     "id": "39",
     "slugs": {
-      "en": "en-story-39",
+      "en": "i-hoped-it-was-a-cruel-joke",
       "ar": "ar-story-39"
     },
-    "storyImage": "../images/placeholder_images/puzzle-12.png",
+    "storyImage": "../images/placeholder_images/puzzle-29.png",
     "personalInfo": {
       "en": {
         "name": "Ibrahim Yahia",
@@ -406,7 +406,7 @@
     },
     "story": {
       "en": {
-        "title": "",
+        "title": "\"I hoped it was a cruel joke.\"",
         "content": "I am one among millions who call this country home, where the land is our mother and our heritage is ingrained within us. \n\nAs the conflict escalated, I was ill-prepared, ignorant of its devastating consequences, naively hoping it was a cruel joke. Regrettably, it was an unimaginable truth I was compelled to accept. \n\nThe misery I witnessed and endured over nine years of sheer horror weighs heavily on my heart. Our nation still bears the burden of political and economic remnants that bring millions to their knees. Luckily I survived, narrowly avoiding the long-lasting trauma that only a few could endure. \n\nWithin this narrative, there is no love story, no glory, and no tears. Our failure, as humans, to discover a moral alternative to war is a profound shame. It is a testament to the absence of such an alternative, and it is disheartening. \n\nA story worth telling will emerge only when world leaders, local politicians, arms traders, and all those involved acknowledge their responsibility to compensate the widows, orphans, and victims of this bloodshed. It will be a tale of healing when our air and land ports reopen, our sovereignty is safeguarded, our economy flourishes, and the memory of our fallen is honored. Justice must prevail as criminals are held accountable and duly punished. Finally, a promise must be made that such horrors shall not befall us again, at least for a substantial period of time. \n\nOnly then, when these conditions are met, can a story emerge from the ashes—a story of resilience, hope, and the triumph of humanity over the ravages of war."
       },
       "ar": {
@@ -431,7 +431,7 @@
       "en": "en-story-40",
       "ar": "ar-story-40"
     },
-    "storyImage": "../images/placeholder_images/puzzle-15.png",
+    "storyImage": "../images/placeholder_images/puzzle-12.png",
     "personalInfo": {
       "en": {
         "name": "Hessah",
@@ -475,10 +475,10 @@
   {
     "id": "41",
     "slugs": {
-      "en": "en-story-41",
+      "en": "our-lives-are-suspended",
       "ar": "ar-story-41"
     },
-    "storyImage": "../images/placeholder_images/puzzle-27.png",
+    "storyImage": "../images/placeholder_images/puzzle-12.png",
     "personalInfo": {
       "en": {
         "name": "Dhuha",
@@ -500,8 +500,8 @@
     },
     "story": {
       "en": {
-        "title": "",
-        "content": "I woke up everyday in Amman, asking myself, Where to next year? But we have been here for eight and a half years, and the ninth year is knocking on the doors. We are living in one of the rental houses. After my family and I left the house that we owned in Taiz City due to the war, it displaced all my family from the neighbourhood where we used to live.\nEven my neighbours left that neighbourhood, while some were killed by bombing or by a sniper's bullet.\nIt took us a long time to obtain the official residency papers after I spent most of my days in official offices renewing the temporary residency for three months so that we would not fall under the daily payment of fines for remaining without residency.\nEvery day we say that we will return to our city next year, but the fire clashes there do not stop. We are here, still waiting; we do not buy many things because we will go back; we do not settle down because we think of our return. But we may be heading into our tenth year carrying our travel bags.\nThe matter affected us the most because we could not plan for the future. After all, we did not settle down and did not give up on the idea of ​​living here. Therefore, everything in our lives was suspended. Dreaming, thinking about luxury or stability, stopped. Perhaps one day we will return. I have not married yet because I am waiting to return to Yemen.\nI cannot imagine myself alone here without my family. There is a lot to be said, but the article is small enough to collect the details of eight years and more in a few words.\n"
+        "title": "\"Our lives are suspended.\"",
+        "content": "I wake up every day in Amman and ask myself, \"Where to next year?\" But we have been here in Jordan for eight and a half years, and the ninth year is knocking on the door. We have been staying in this rented house since my family and I had to flee the home we owned in Taiz city due to the war. The war displaced my entire family. Our neighbours left too, though some were killed by bombing or by a sniper's bullet.\nFor a long time, I spent most of my days in government offices, renewing temporary residence permits so that we wouldn't have to pay fines for staying without papers. Now we finally have official residency papers, but every day we  \"Next year we will return to our city.\" But the clashes there don't stop. \nSo we are here, still waiting. We do not buy many things because we will go back; we do not settle in because we are thinking of return. But we may be heading into our tenth year living out of suitcases.\nWe can't plan for the future, and everything in our lives has been suspended. Dreaming about luxury or stability has stopped. Perhaps one day we will return. I have not married yet because I am waiting to return to Yemen.\nI cannot imagine myself alone here without my family. There is a lot to be said, but the article is small enough to collect the details of eight years and more in a few words.\n"
       },
       "ar": {
         "title": "",
@@ -525,7 +525,7 @@
       "en": "en-story-42",
       "ar": "ar-story-42"
     },
-    "storyImage": "../images/placeholder_images/puzzle-08.png",
+    "storyImage": "../images/placeholder_images/puzzle-29.png",
     "personalInfo": {
       "en": {
         "name": "A.A",
@@ -572,7 +572,7 @@
       "en": "en-story-43",
       "ar": "ar-story-43"
     },
-    "storyImage": "../images/placeholder_images/puzzle-01.png",
+    "storyImage": "../images/placeholder_images/puzzle-20.png",
     "personalInfo": {
       "en": {
         "name": "Redha",
@@ -595,7 +595,7 @@
     "story": {
       "en": {
         "title": "",
-        "content": "My journey began upon my graduation in Egypt, where I returned to my homeland with a plethora of aspirations that I had always envisioned. Having spent years in exile, far from my family and country, I felt like a bird whose wings had grown weary from flying for eight long years. Upon landing, I was overcome with emotion and anticipation as I was greeted by my mother's warm embrace. I commenced my career as an assistant professor at the University of Medicine and Health Sciences, specializing in clinical biochemistry, feeling as though I had taken the first steps toward realizing my dreams. However, my newfound sense of warmth was short-lived as the onset of war shattered all hopes and dreams. I was gripped with panic and fear, not wanting to lose my life, a part of my body, or a member of my family. As we fled, we encountered a horrific accident caused by collisions and gunfire, but miraculously, we survived and returned. Despite the destruction and siege imposed on our city, we refused to succumb to the circumstances and opened universities to continue teaching. However, as time passed, I felt helpless and yearned for personal development. The war had limited us all, and I endeavoured to reach out to organizations for assistance. Eventually, Kara, a UK-based charity, responded to my pleas and provided me with the support and resources necessary to travel and further my education. I continue to persevere in pursuit of my aspiration to enhance my academic and research capabilities, despite encountering numerous obstacles. I remain steadfast in my determination to attain my objective."
+        "content": "My journey began upon my graduation in Egypt, where I returned to my homeland of Yemen, full of aspirations. Having spent years in exile, far from my family and country, I felt like a bird whose wings had grown weary from flying for eight long years. Upon landing, I was overcome with emotion and anticipation as I was greeted by my mother's warm embrace. I commenced my career as an assistant professor at the University of Medicine and Health Sciences, specializing in clinical biochemistry, feeling as though I had taken the first steps toward realising my dreams. \nMy newfound sense of warmth was short-lived, as the onset of war shattered all hopes and dreams. I was gripped with panic and fear, not wanting to lose my life, a part of my body, or a member of my family. As we fled, we encountered a horrific accident caused by collisions and gunfire, but miraculously, we survived and returned. Despite the destruction and siege imposed on our city, we refused to succumb to the circumstances and opened universities to continue teaching. \nHowever, as time passed, I felt helpless and yearned for personal development. The war had limited us all, and I endeavored to reach out to organizations for assistance. Eventually, a UK-based charity responded to my pleas and provided me with the support and resources necessary to travel and further my education. I continue to persevere in pursuit of my aspiration to enhance my academic and research capabilities, despite encountering numerous obstacles. I remain steadfast in my determination to attain my objective.\n\n"
       },
       "ar": {
         "title": "",
@@ -621,7 +621,7 @@
       "en": "en-story-44",
       "ar": "ar-story-44"
     },
-    "storyImage": "../images/placeholder_images/puzzle-08.png",
+    "storyImage": "../images/placeholder_images/puzzle-30.png",
     "personalInfo": {
       "en": {
         "name": "S.A",
@@ -644,7 +644,7 @@
     "story": {
       "en": {
         "title": "",
-        "content": "I am a Yemeni citizen. I do not live in Yemen, nor do I live with my family, and all of this is because of the war.\nI have been without my family for a year and time still passes and I have not seen them, and other Yemenis have gone for more than five and six years without seeing their families.\nIn a normal situation, parents and families fear for their expatriate son in the foreign country, but in the situation of Yemenis, the expatriate and immigrant is the one who fears for his family from the homeland.\nHow long will this situation remain and where will we go with this country?\nHow long will we remain expatriates, immigrants and displaced from our homeland?\nHow long will we continue to think that those in Yemen have no future except killing, kidnapping, or looting?\nWhen will we have a country like all other countries and live in complete security, peace and stability?\nAll flags fly with pride for the homeland, except our flags, which fly with blood, murder, shame, and corruption like the corruption of our rulers and politicians.\nSorry, my country, but I did not find anything from you or about you that makes me proud. It is not denial of you, but denial and cursing of the politicians who brought my country to this point.\n"
+        "content": "I am a Yemeni citizen. I do not live in Yemen, nor do I live with my family. All of this is because of the war.\nI have been without my family for a year. Time keeps passing without seeing them, and other Yemenis have gone for more than five or six years without seeing their families.\nIn a normal situation, parents and families worry about their expatriate son who is in a foreign country. But for Yemenis it is the expatriate and the immigrant who fears for his family back home.\nHow long will it remain like this where will we go with this country?\nHow long will we remain expatriates, immigrants, and people displaced from our homeland?\nHow long will we continue to think that those in Yemen have no future except death, kidnapping, or looting?\nWhen will we have a country like all other countries and live in real security, peace and stability?\nAll flags fly with pride for the homeland, except our flags, which fly with blood, murder, shame, and corruption, like the corruption of our rulers and politicians.\nI am sorry, my country, but I can't find anything from you or about you that makes me proud. It is not a denial of you, but denial and cursing of the politicians who brought my country to this point.\n"
       },
       "ar": {
         "title": "",
@@ -668,19 +668,19 @@
       "en": "en-story-45",
       "ar": "ar-story-45"
     },
-    "storyImage": "../images/placeholder_images/puzzle-31.png",
+    "storyImage": "../images/placeholder_images/puzzle-05.png",
     "personalInfo": {
       "en": {
-        "name": "",
-        "surname": "",
-        "whereFrom": "",
-        "livingIn": ""
+        "name": "Ali / Abo arsalan",
+        "surname": "Mansoor Al-Khayat",
+        "whereFrom": "Almahwit-Yemen",
+        "livingIn": "Saudi Arabia"
       },
       "ar": {
-        "name": "علي منصور الخياطي",
-        "surname": "ابو رسلان",
+        "name": "علي / ابو رسلان",
+        "surname": "منصور الخياطي",
         "whereFrom": "اليمن محافظة المحويت",
-        "livingIn": "أقيم في المملكة العربية السعودية"
+        "livingIn": "المملكة العربية السعودية"
       }
     },
     "contact": {
@@ -691,7 +691,7 @@
     "story": {
       "en": {
         "title": "",
-        "content": "English text"
+        "content": "When the war began, we thought that everything was over, and we did not know that a new era in our lives had begun. We did not even own a house; we were six brothers and sisters. I decided then to study any specialty that the market needed. I completed my studies after some difficulties in 2017. I did not wait for an organisation to help me or a country to hire me because aid is only for those with luxurious bellies. I searched until I got a visa to work with one of my father’s acquaintances. When I decided to travel, all the ports were closed except for the shipping port. I decided to go through it. A sheikh at the port mediated for us, and they gave us a visit visa as a transit from Amman. I put my trust in it as if I owned the world. Because I was going to support my family. I arrived at the port. I entered and was surprised, my money was gone. This is the first time I travel. I found someone with a kind heart. He rented a car for us and told me to get in. I could pay back at a later time.\nLater, I arrived at the airport, and I had a prior reservation. My flight was in the evening, and I still have time. I found another person, and he asked me, from which governorate am I? I told him I was from Al-Mahwit. He was from Shabwa. We went to dinner, and he swore that he would pay the bill. I was happy because I had nothing much at the time. He booked a hotel for us to rest, and I was full of shame. The Prophet Mohammed spoke the truth when he said, “The most gentle of hearts and the softest of hearts are the Yemenis.” We headed to the airport in the evening. We traveled to Riyadh, and the person who was going to arrive communicated with me. He sent one of his friends to give me some money to cover the expenses of my needs. We rode to one of my friends, and I told the one I knew from the road with me that you were in my hospitality.\nAfter effort and hard work, I built a house, got married, and took my wife with me. I managed to let my siblings study and now I am a partner in the work I am doing. It was not the end, as I thought."
       },
       "ar": {
         "title": "",
@@ -715,7 +715,7 @@
       "en": "en-story-46",
       "ar": "ar-story-46"
     },
-    "storyImage": "../images/placeholder_images/puzzle-02.png",
+    "storyImage": "../images/placeholder_images/puzzle-08.png",
     "personalInfo": {
       "en": {
         "name": "Yusra",
@@ -724,10 +724,10 @@
         "livingIn": "Ma’reb"
       },
       "ar": {
-        "name": "",
-        "surname": "",
-        "whereFrom": "",
-        "livingIn": ""
+        "name": "يسرى",
+        "surname": "احمد",
+        "whereFrom": "صنعاء",
+        "livingIn": "مأرب"
       }
     },
     "contact": {
@@ -738,11 +738,11 @@
     "story": {
       "en": {
         "title": "",
-        "content": "English text"
+        "content": "When the war began in Yemen in 2014, I was in Tunisia to participate in a forum for journalists with a group of Yemenis. When I came down from my hotel room to the conference hall on my third day in Tunis, I was horrified to hear about the coalition's operations in Yemen and the news of the war. \nMy Yemeni colleagues who were taking part in the forum were all feeling shocked and upset. I was feeling the same for my family and the entire country at the time.\nI was not even able to attend the remaining days of the forum and locked myself in the hotel room following the news of the war and communicating with my family.\nWhen I visited the Yemeni embassy in Tunisia with the delegation from Yemen, the consul informed us that we would not be allowed to return to Yemen due to the air ban, which only made me feel worse. The news was so devastating to me that I fell into a state of depression. I sat for a whole week in my hotel room, watching the news and falling into a long sleep. After four months in Tunisia, I couldn't decide whether to go to Egypt, where several of my friends were living, or Turkey, where I could work for a Yemeni channel that had started up again.\nThe Yemeni embassy got in touch with me the day I got my visa to enter Egypt, informing me they had discovered a way for us to go back to Yemen from Jordan. I couldn't decide at the moment whether to go back to my own country or fly to Egypt and Turkey to continue practicing journalism there.\nFinally, i took my decision to return to Yemen. I moved to the airport on the second day, and traveled to Jordan. I had to wait two days in Jordan for my Yemeni Airlines flight to Yemen; on the return trip, the plane landed at the Saudi Bishah Airport for inspection. There, we sat for almost three hours. As the plane approached Sana'a Airport, we were shocked to hear the captain's voice informing us that we would have to head back to Bisha Airport due to bombing at Sana'a Airport and the no-fly zone. I cried at the thought that I would not be able to go back. We were waiting at Bisha Airport for two hours before hearing that the ban had been lifted. The plane was headed for Sanaa Airport.\nAfter arriving in Sanaa, I sat at home for months, unable to practice my profession due to the closure of all media and journalistic institutions and the persecution of journalists.\nAfter a year and a half of war, I married my fellow journalist who fled to Aden for fear of kidnapping. Especially since many of our fellow journalists were kidnapped and forcibly disappeared by the Houthis, I moved to the city of Aden and returned to practice my profession as a news editor for a press website. I joined the Association of Mothers of Abductees in Aden to demand the abductees who were arrested and kidnapped by the transitional forces in prisons created by the UAE. I sat in Aden for a year, but as journalists, because of my work, our work became difficult in Aden, and our lives were threatened. We decided to move to the city of Marib. For four years, I have been settled in the city of Ma’rib. But I have difficulty adapting to the city of Marib because of its atmosphere and desert nature.\n"
       },
       "ar": {
         "title": "",
-        "content": "يسرى أحمد صحفية يمنية حاصلة على بكالوريوس اعلام من جامعة صنعاء..\nعندما بدأت الحرب في اليمن عام 2014 كنت حينها في تونس للمشاركة في منتدى للصحفيين أنا ومجموعة من اليمنيين.\nفي ثالث يوم لي في مدينة تونس، نزلت من غرفتي في الفندق لقاعة المنتدى لاصدم بخبر الغارات التي شنها التحالف على اليمن، وبخبر الحرب!! كان كل زملائي اليمنيين المشاركين في المنتدى في حالة صدمة، وحزن!! وقتها كنت بحالة صدمة وحزن وخوف على أهلي وبلدي. حتى أنني لم استطع حضور باقي ايام المنتدى وحبست نفسي في غرفة الفندق واتابع اخبار الحرب على. واتواصل بأهلي.\nالامر الذي زادني سوء عندما ذهبت مع الوفد اليمني للسفارة اليمنية في تونس، واخبرنا القنصل أننا لن نستطيع العودة لليمن بسبب الحظر جوي! كان الخبر كارثي بالنسبة لي حتى أنني دخلت في حالة اكتئاب! جلست اسبوع كامل في غرفتي في الفندق اتابع الاخبار وادخل في نوبات طويلة من النوم!!\nبعد اربعة اشهر على تواجدي في تونس قررت أن اسافر لمصر لتواجد بعض من اصدقائي هناك أو لتركيا بعد أن قدمت للعمل في احدى القنوات اليمنية التي استأنفت عملها من اسطنبول! في اليوم الذي حصلت فيه على فيزا لدخول مصر تواصلت بي السفارة اليمنية أنهم وجدوا لنا فرصة للعودة لليمن من الاردن!! وقتها كنت محتاره هل اسافر لمصر من ثم تركيا وامارس عملي الصحفي من هناك، أو ارجع لبلدي!! فكان آخيرا القرار أن ارجع لليمن جهزت نفسي للسفر وتحركت اليوم الثاني للمطار وسافرت للاردن! في الاردن انتظرت يومين لرحلتي لليمن عبر طيران اليمنية، وعند طريق عودتنا لليمن نزلت الطائرة في مطار بيشه السعودي للتفتيش جلسنا مايقارب ثلاث ساعات!! تحركت الطائرة بإتجاه مطار صنعاء لنتفاجئ بصوت كابتن الطيارة يقول لنا اننا سنرجع لمطار بيشه لإن مطار صنعاء يتعرض للقصف، وهناك حظر جوي. وقتها انتابتني خوف وبكيت اني لن استطيع العودة!! انتظرنا في مطار بيشه ساعتين ، حتى جاء خبر أنه تم رفع الحظر! تحركت الطائرة بإتجاه مطار صنعاء"
+        "content": "عندما بدأت الحرب في اليمن عام 2014 كنت حينها في تونس للمشاركة في منتدى للصحفيين أنا ومجموعة من اليمنيين.\nفي ثالث يوم لي في مدينة تونس، نزلت من غرفتي في الفندق لقاعة المنتدى لاصدم بخبر الغارات التي شنها التحالف على اليمن، وبخبر الحرب!! كان كل زملائي اليمنيين المشاركين في المنتدى في حالة صدمة، وحزن!! وقتها كنت بحالة صدمة وحزن وخوف على أهلي وبلدي. حتى أنني لم استطع حضور باقي ايام المنتدى وحبست نفسي في غرفة الفندق واتابع اخبار الحرب على. واتواصل بأهلي.\nالامر الذي زادني سوء عندما ذهبت مع الوفد اليمني للسفارة اليمنية في تونس، واخبرنا القنصل أننا لن نستطيع العودة لليمن بسبب الحظر جوي! كان الخبر كارثي بالنسبة لي حتى أنني دخلت في حالة اكتئاب! جلست اسبوع كامل في غرفتي في الفندق اتابع الاخبار وادخل في نوبات طويلة من النوم!!\nبعد اربعة اشهر على تواجدي في تونس قررت أن اسافر لمصر لتواجد بعض من اصدقائي هناك أو لتركيا بعد أن قدمت للعمل في احدى القنوات اليمنية التي استأنفت عملها من اسطنبول! في اليوم الذي حصلت فيه على فيزا لدخول مصر تواصلت بي السفارة اليمنية أنهم وجدوا لنا فرصة للعودة لليمن من الاردن!! وقتها كنت محتاره هل اسافر لمصر من ثم تركيا وامارس عملي الصحفي من هناك، أو ارجع لبلدي!! فكان آخيرا القرار أن ارجع لليمن جهزت نفسي للسفر وتحركت اليوم الثاني للمطار وسافرت للاردن! في الاردن انتظرت يومين لرحلتي لليمن عبر طيران اليمنية، وعند طريق عودتنا لليمن نزلت الطائرة في مطار بيشه السعودي للتفتيش جلسنا مايقارب ثلاث ساعات!! تحركت الطائرة بإتجاه مطار صنعاء لنتفاجئ بصوت كابتن الطيارة يقول لنا اننا سنرجع لمطار بيشه لإن مطار صنعاء يتعرض للقصف، وهناك حظر جوي. وقتها انتابتني خوف وبكيت اني لن استطيع العودة!! انتظرنا في مطار بيشه ساعتين ، حتى جاء خبر أنه تم رفع الحظر! تحركت الطائرة بإتجاه مطار صنعاء\nبعد وصولي صنعاء جلست أشهر في البيت لم استطع مزاولة مهنتي بسبب اغلاق كل المؤسسات الاعلامية والصحفية، وملاحقة الصحفيين.\nبعد سنة ونصف من الحرب، تزوجت بزميلي الصحفي الذي هرب لمدينة عدن خوفا من الاختطاف!! خاصة وانه الكثير من زملائنا الصحفيين تعرضوا للاختطاف والاخفاء القسري من قبل الحوثيين، انتقلت لمدينة عدن وعدت لمزاولة مهنتي كمحررة اخبار بعد سنة ونصف من الحرب، \nلموقع صحفي، والتحقت برابطة امهات المختطفين في عدن للمطالبة بالمختطفين الذين اعتقلتهم واختطفتهم قوات الانتقالي في سجون استحدثتها الامارات.\nجلست في عدن سنة ولكن كصحفيين وبسبب عملي اصبح عملنا صعب في عدن، وكانت حياتنا مهددة.\nفقررنا الانتقال لمدينة مأرب. وانتقلت لمدينة مأرب واجهت صعوبة بالتأقلم في مدينة مأرب بسبب جوها وطبيعتها الصحراوية، منذ اربع سنوات وانا مستقرة في مدينة مأرب."
       }
     },
     "attachments": [],
@@ -762,7 +762,7 @@
       "en": "en-story-47",
       "ar": "ar-story-47"
     },
-    "storyImage": "../images/placeholder_images/puzzle-25.png",
+    "storyImage": "../images/placeholder_images/puzzle-23.png",
     "personalInfo": {
       "en": {
         "name": "علي عبدالرحمن علي الحمادي",
@@ -809,7 +809,7 @@
       "en": "en-story-48",
       "ar": "ar-story-48"
     },
-    "storyImage": "../images/placeholder_images/puzzle-16.png",
+    "storyImage": "../images/placeholder_images/puzzle-24.png",
     "personalInfo": {
       "en": {
         "name": "T.Saleh",
@@ -832,7 +832,7 @@
     "story": {
       "en": {
         "title": "",
-        "content": "English text"
+        "content": "marc.fehr@gmail.com I think something may be missing from this Mach Form entry. Can you please check? Thanks!"
       },
       "ar": {
         "title": "",
@@ -840,7 +840,7 @@
       }
     },
     "attachments": [],
-    "notes": "The rest of the story:\r\n\r\nAs the days passed, I realized that the pain was not only to see people die without getting the simplest medical help, or to hear the sound of bullets and exploding bombs, but also to see those who die of hunger and perhaps cold, or the intensity of burning feelings for a sudden parting, no one knows what his or her fate will be.\r\n\r\nDespite my clinging to hope all the time my belief that tomorrow the situation will get better, and my attempts to cope to save myself, every day carried a new kind of pain. Finding a  woman who carries her baby and looks for leftover food next to the trash can, the child who sits at the time of going to school on the edge of the road to sell water bottles to passers-by, the man who tells you while begging that his children have not eaten anything for days, and all of them no longer pay any attention to the war, war bullets are probably the kindest kind of death here.\r\n\r\nAnd then the day came when I decided to leave again. However, this time with a decision without a quick return with hands still, I realized that all I had to do was continue to develop myself to reach a stage where I could help. \r\n\r\n\r\nAnd then the day came when I decided to leave again. However, this time with a decision without a quick return with hands still, I realized that all I had to do that I should continue to develop myself to reach a stage where I could help. It would only be with continuous education and skills development.",
+    "notes": "The rest of the story:\n\nAs the days passed, I realized that the pain was not only to see people die without getting the simplest medical help, or to hear the sound of bullets and exploding bombs, but also to see those who die of hunger and perhaps cold, or the intensity of burning feelings for a sudden parting, no one knows what his or her fate will be.\n\nDespite my clinging to hope all the time my belief that tomorrow the situation will get better, and my attempts to cope to save myself, every day carried a new kind of pain. Finding a  woman who carries her baby and looks for leftover food next to the trash can, the child who sits at the time of going to school on the edge of the road to sell water bottles to passers-by, the man who tells you while begging that his children have not eaten anything for days, and all of them no longer pay any attention to the war, war bullets are probably the kindest kind of death here.\n\nAnd then the day came when I decided to leave again. However, this time with a decision without a quick return with hands still, I realized that all I had to do was continue to develop myself to reach a stage where I could help. \n\n\nAnd then the day came when I decided to leave again. However, this time with a decision without a quick return with hands still, I realized that all I had to do that I should continue to develop myself to reach a stage where I could help. It would only be with continuous education and skills development.",
     "highlighted": false,
     "languageOfSubmission": "English",
     "location": "",
@@ -853,7 +853,7 @@
   {
     "id": "49",
     "slugs": {
-      "en": "en-story-49",
+      "en": "i-proved-them-all-wrong",
       "ar": "ar-story-49"
     },
     "storyImage": "../images/thumbnails/thumbnail-49.jpg",
@@ -878,7 +878,7 @@
     },
     "story": {
       "en": {
-        "title": "",
+        "title": "\"I proved them all wrong.\"",
         "content": "My family arranged my marriage when I was 14 years to an older man, a year later I became pregnant. I am mother of six now. \n\nMy husband lost his job because of the war.  I had to pull my kids out of school and teach them at home. I could not bear my life. We had nothing. \"So I started to look for a solution for my family.\n\nDuring my search, I came across books on the private security business, and successful women entrepreneurs. \n\nI learnt about the Springboard programme that aims to empower women by helping them create livelihoods for themselves.\n\nI visited the office and pitched my idea for a women-run private security firm. I was delighted when the organization agreed to provide me with a grant to start my business and training to help run it. \n\nWith the grant, I managed to launch the first ever women-run security business in Yemen. My team now helps protect women at weddings, exhibitions and bazaars in a country where this job was until now is only performed by men.\nMy family argued that women should stay at home; women should not wear a military uniform, nor carry the same weapons used by men. \nDespite criticism from my community, I insisted on opening my security office – and proved them all wrong.\n\nNow I enjoy a steady income and provides my family with clothing, food and drink. Helping women protect women in the end helped protect my own kids, too.\n\nWhen I finish my work and go to my house, everyone welcomes me with great joy. After I have succeeded, everyone is courting me and trying to be closer to me."
       },
       "ar": {
@@ -906,7 +906,7 @@
       "en": "en-story-50",
       "ar": "ar-story-50"
     },
-    "storyImage": "../images/placeholder_images/puzzle-24.png",
+    "storyImage": "../images/placeholder_images/puzzle-29.png",
     "personalInfo": {
       "en": {
         "name": "Abdullah",
@@ -953,13 +953,13 @@
       "en": "en-story-51",
       "ar": "ar-story-51"
     },
-    "storyImage": "../images/placeholder_images/puzzle-30.png",
+    "storyImage": "../images/placeholder_images/puzzle-09.png",
     "personalInfo": {
       "en": {
-        "name": "",
-        "surname": "",
-        "whereFrom": "",
-        "livingIn": ""
+        "name": "Amani",
+        "surname": "Mutahar",
+        "whereFrom": "Ibb-Yemen",
+        "livingIn": "Sanaa"
       },
       "ar": {
         "name": "اماني مطهر",
@@ -976,7 +976,7 @@
     "story": {
       "en": {
         "title": "",
-        "content": "English text"
+        "content": "I'm a married mother of four kids. Because of the war, we face difficult living conditions in Yemen. I might not be as bad off as many people who have challenging living circumstances. Despite not having finished elementary school, I married a decent man who stood up for me and our kids when I was just 14 years old. I hope that this battle ends and that paying salaries to the people, which has become the main focus, will be the top goal for the reconciliation's conclusion.\n"
       },
       "ar": {
         "title": "",
@@ -1003,9 +1003,9 @@
     "storyImage": "../images/placeholder_images/puzzle-20.png",
     "personalInfo": {
       "en": {
-        "name": "M",
-        "surname": "ERY",
-        "whereFrom": "Sana'a, Yemen",
+        "name": "M.",
+        "surname": "Al-Eryani",
+        "whereFrom": "Sanaa-Yemen",
         "livingIn": "Sana'a, Yemen"
       },
       "ar": {
@@ -1051,7 +1051,7 @@
     "personalInfo": {
       "en": {
         "name": "Abdulrazak",
-        "surname": "Alazazai",
+        "surname": "al-Azazai",
         "whereFrom": "Taiz",
         "livingIn": "Kwait"
       },
@@ -1080,7 +1080,7 @@
     "attachments": [
       "53-1.jpg"
     ],
-    "notes": "بلا أهل، ولا أصدقاء؛ يستنزف عبدالرزاق العزعزي \"38 عامًا\" سنواته التي لم يتبقَ منها الكثير، يعيش في الكويت: كجسد بلا روح، وفي منزل عرضه 8 أمتار وطوله 4، بالكاد يستوعب مشاغبة طفليه التوأم إيفان ولاثينا \"سنتين ونصف\" واختهما ريفا \"7 سنوات\".\r\nأنجبت زوجته الأطفال في الكويت ولم يكن أحدًا بجوارها، فقط عبدالرزاق الذي تعلّم في يوتيوب كيف يعتني بها أثناء الحمل والولادة، وبأطفالها الرضّع حين يُسقطها الإعياء.\r\nالسابعة صباحًا؛ يرتدي ملابسه بخفة؛ حتى لا يوقظ أحد، بهدوء يغادر المنزل الضيق، متوجهًا للعمل، يشتري تذاكر الباص، يجلس في الكرسي الأخير، يضع على رأسه سماعة؛ ليستمع بودكاست ليساعده في تحمّل ساعتين يقضيهما في المواصلات.\r\nمن الجهراء إلى حولّي مرورًا بالعاصمة، هي المسافة التي يقطعها يوميًا والمقدرة ب45 كم، يتخللها السير على الأقدام تحت أشعة الشمس الحارقة. لا يستطيع شراء سيارة بسبب دخله المتدني الذي دفعه للسكن بعيدًا.\r\nفي التاسعة يصل إلى العمل: هناك شكاوٍ تنتظره؛ ليستمع إليها، وانتهاكات لرصدها. يعمل لدى منظمة حقوقية تقدم استشارات لضحايا الانتهاكات، ومع أن قلبه مثقل بالمعاناة، يحاول تجاوز ذلك حين يتعلّق الأمر بمساعدة المظلومين.\r\nفي رحلة العودة للمنزل، يتحدث مع أهله وأصدقاءه الذين يشتاق إليهم ولا يستطيع زيارتهم بسبب نشاطه المتصل بالحريات الدينية. \"تركت جسدي في اليمن منذ 26 مايو 2015 لكن روحي ما تزال معلقة هناك\" يقول عبدالرزاق.\r\nفي 16 أغسطس 2015 دفعته الحرب للاحتفال بعرسه وحيدًا في السودان؛ البلد التي فر إليها قبل انتقاله إلى الكويت. لم يكن أحدًا بجواره سوى زوجته الحبيبة فاطمة، التي ارتبط بها في اليمن قبل أن تشردها الحرب أيضًا، لتستقر رفقة أهلها في السودان. بدموع والدته، والأمنيات المكسورة لوالده؛ احتفل، ثم أنجب أطفاله الذين لم يلتقوا يومًا بأهل والديهم.\r\nهكذا تغلغلت الحرب إلى أطفاله الفاقدين لعطف الجد، وحنان الجدة. لقد دفعوا ثمن الحرب مُبكرًا، ثمن هجرة والديهم الفارين من وطنهم، وذكريات طفولتهم المنقوشة على جدران الأزقة، ليصنعوا ذكريات جديدة، ممتلئة بالبؤس المستمر، والألم المتوارث؛ والحزن الذي لا يغيب.",
+    "notes": "بلا أهل، ولا أصدقاء؛ يستنزف عبدالرزاق العزعزي \"38 عامًا\" سنواته التي لم يتبقَ منها الكثير، يعيش في الكويت: كجسد بلا روح، وفي منزل عرضه 8 أمتار وطوله 4، بالكاد يستوعب مشاغبة طفليه التوأم إيفان ولاثينا \"سنتين ونصف\" واختهما ريفا \"7 سنوات\".\nأنجبت زوجته الأطفال في الكويت ولم يكن أحدًا بجوارها، فقط عبدالرزاق الذي تعلّم في يوتيوب كيف يعتني بها أثناء الحمل والولادة، وبأطفالها الرضّع حين يُسقطها الإعياء.\nالسابعة صباحًا؛ يرتدي ملابسه بخفة؛ حتى لا يوقظ أحد، بهدوء يغادر المنزل الضيق، متوجهًا للعمل، يشتري تذاكر الباص، يجلس في الكرسي الأخير، يضع على رأسه سماعة؛ ليستمع بودكاست ليساعده في تحمّل ساعتين يقضيهما في المواصلات.\nمن الجهراء إلى حولّي مرورًا بالعاصمة، هي المسافة التي يقطعها يوميًا والمقدرة ب45 كم، يتخللها السير على الأقدام تحت أشعة الشمس الحارقة. لا يستطيع شراء سيارة بسبب دخله المتدني الذي دفعه للسكن بعيدًا.\nفي التاسعة يصل إلى العمل: هناك شكاوٍ تنتظره؛ ليستمع إليها، وانتهاكات لرصدها. يعمل لدى منظمة حقوقية تقدم استشارات لضحايا الانتهاكات، ومع أن قلبه مثقل بالمعاناة، يحاول تجاوز ذلك حين يتعلّق الأمر بمساعدة المظلومين.\nفي رحلة العودة للمنزل، يتحدث مع أهله وأصدقاءه الذين يشتاق إليهم ولا يستطيع زيارتهم بسبب نشاطه المتصل بالحريات الدينية. \"تركت جسدي في اليمن منذ 26 مايو 2015 لكن روحي ما تزال معلقة هناك\" يقول عبدالرزاق.\nفي 16 أغسطس 2015 دفعته الحرب للاحتفال بعرسه وحيدًا في السودان؛ البلد التي فر إليها قبل انتقاله إلى الكويت. لم يكن أحدًا بجواره سوى زوجته الحبيبة فاطمة، التي ارتبط بها في اليمن قبل أن تشردها الحرب أيضًا، لتستقر رفقة أهلها في السودان. بدموع والدته، والأمنيات المكسورة لوالده؛ احتفل، ثم أنجب أطفاله الذين لم يلتقوا يومًا بأهل والديهم.\nهكذا تغلغلت الحرب إلى أطفاله الفاقدين لعطف الجد، وحنان الجدة. لقد دفعوا ثمن الحرب مُبكرًا، ثمن هجرة والديهم الفارين من وطنهم، وذكريات طفولتهم المنقوشة على جدران الأزقة، ليصنعوا ذكريات جديدة، ممتلئة بالبؤس المستمر، والألم المتوارث؛ والحزن الذي لا يغيب.",
     "highlighted": true,
     "languageOfSubmission": "Arabic",
     "location": "",
@@ -1096,13 +1096,13 @@
       "en": "en-story-54",
       "ar": "ar-story-54"
     },
-    "storyImage": "../images/placeholder_images/puzzle-25.png",
+    "storyImage": "../images/placeholder_images/puzzle-02.png",
     "personalInfo": {
       "en": {
-        "name": "",
-        "surname": "",
-        "whereFrom": "",
-        "livingIn": ""
+        "name": "Malek",
+        "surname": "Lukah",
+        "whereFrom": "Ibb",
+        "livingIn": "Outside Yemen"
       },
       "ar": {
         "name": "مالك",
@@ -1119,7 +1119,7 @@
     "story": {
       "en": {
         "title": "",
-        "content": "English text"
+        "content": "The war took away my dream that I was pursuing. My plan was to complete my master's degree and then apply to the Higher Judicial Institute; but, the curse of war prevented me from returning home, leaving me to live out a nightmare in a dream.\n"
       },
       "ar": {
         "title": "",
@@ -1201,7 +1201,7 @@
       "en": "en-story-56",
       "ar": "ar-story-56"
     },
-    "storyImage": "../images/placeholder_images/puzzle-02.png",
+    "storyImage": "../images/placeholder_images/puzzle-10.png",
     "personalInfo": {
       "en": {
         "name": "SA",
@@ -1248,7 +1248,7 @@
       "en": "en-story-57",
       "ar": "ar-story-57"
     },
-    "storyImage": "../images/placeholder_images/puzzle-26.png",
+    "storyImage": "../images/placeholder_images/puzzle-25.png",
     "personalInfo": {
       "en": {
         "name": "Wafa",
@@ -1295,7 +1295,7 @@
       "en": "en-story-58",
       "ar": "ar-story-58"
     },
-    "storyImage": "../images/placeholder_images/puzzle-12.png",
+    "storyImage": "../images/placeholder_images/puzzle-11.png",
     "personalInfo": {
       "en": {
         "name": "Hanan",
@@ -1342,7 +1342,7 @@
       "en": "en-story-59",
       "ar": "ar-story-59"
     },
-    "storyImage": "../images/placeholder_images/puzzle-07.png",
+    "storyImage": "../images/placeholder_images/puzzle-05.png",
     "personalInfo": {
       "en": {
         "name": "S",
@@ -1365,7 +1365,7 @@
     "story": {
       "en": {
         "title": "",
-        "content": "The war changed everyone and everything. It changed my whole life. It changed the way I see things. I learned not to take everyday things for granted like water, electricity, food, money, and peace. I also learned to live with fear and just accept it. Whenever we heard planes, we waited for bombs. Looking back at the year since I left Yemen, I remember that every time I heard planes, I thought a bomb might be coming.\n\nAs a woman, the war brought even more restrictions and challenges into our lives.Living in a place with no system or law to protect its people is just unbearable. Being unable to dream of good days because everyday is getting more difficult and more complicated. Never feeling safe or secure. \n\nWar was especially tough on children. They had to spend their mornings collecting water and often had very little or no access to things like food, medicine, or schools. It's heart-breaking to see kids begging because they're helping their families get food. The feeling of being unable to help and the constant sadness and frustration I experienced most of my days.\n\nNo one should have to endure these conditions, and yet, sadly, many yemenis are. What's even more disheartening is traveling abroad and realizing that most people haven't even heard of Yemen, let alone the conflict and the dire circumstances people are living in. It's incredibly frustrating."
+        "content": "The war changed everyone and everything. It changed my whole life. It changed the way I see things. I learned not to take everyday things for granted like water, electricity, food, money, and peace. I also learned to live with fear and just accept it. Whenever we heard planes, we waited for the bombs. Looking back at the year after I left Yemen, I remember that every time I heard planes, I thought a bomb might be coming.\nAs a woman, the war brought even more restrictions and challenges into my life. Living in a place with no laws or systems to protect its people is just unbearable. So is being unable to dream of good days, because every day becomes more difficult and more complicated. Never feeling safe or secure. \nThe war has been especially tough on children. They have to spend their mornings collecting water, often having very little or no access to things like food, medicine, or school. It's heartbreaking to see kids begging because they are trying to help their families get food. For me, the feeling of being unable to help meant constant sadness and frustration.\nNo one should have to endure these conditions, and yet, sadly, many Yemenis still are. What's even more disheartening is traveling abroad and realising that most people haven't even heard of Yemen, let alone the conflict and the dire circumstances people are living in. It's incredibly frustrating.\n"
       },
       "ar": {
         "title": "",
@@ -1389,7 +1389,7 @@
       "en": "en-story-60",
       "ar": "ar-story-60"
     },
-    "storyImage": "../images/placeholder_images/puzzle-09.png",
+    "storyImage": "../images/placeholder_images/puzzle-01.png",
     "personalInfo": {
       "en": {
         "name": "",
@@ -1412,7 +1412,7 @@
     "story": {
       "en": {
         "title": "",
-        "content": "English text"
+        "content": ""
       },
       "ar": {
         "title": "",
@@ -1436,7 +1436,7 @@
       "en": "en-story-61",
       "ar": "ar-story-61"
     },
-    "storyImage": "../images/placeholder_images/puzzle-20.png",
+    "storyImage": "../images/placeholder_images/puzzle-15.png",
     "personalInfo": {
       "en": {
         "name": "Majda",
@@ -1459,7 +1459,7 @@
     "story": {
       "en": {
         "title": "",
-        "content": "I’m a single woman coming with my three children from Yemen holding fear, hopes, saddenss and ambition. I came to America in 2014 to find a new life, safety, home, dignity, equality, justice and freedom.\n\nI’m an activist, I participated in Arab spring in 2011, I was in change square since the first day in our revolution that was against the regime, we spend more than 8 months working on demonstrations, denunciation, meetings and violent confrontation, we faced death, shooting and gas bombs, we watched our friends got shot and died, we were strong full of life and hopes, we were dreaming for a new Yemen but our revolution ended with the Gulf initiative, and that was our first biggest failure.\n\n I believe that we are not responsables, but I know that our revolution was not well prepared and well organized, and also there were three years between the revolution and the beginning of the war.\nIn the three years after the Arab spring we continued working on campaigns, demonstrations, conferences and meetings to find the Yemen that we want.\n\nI was the owner and the principal of The New School in Sana’a and because of the Arab spring and the war we couldn’t continue. I lost my school and all my business and it was necessary to leave Yemen. \n\nIt was difficult for a single mom and three children to start a new life in America but I was strong enough to do so. Me and my children finished our higher education and found different jobs and we built our new lives but Yemen remains our greatest pain!"
+        "content": "I am a single woman who left Yemen with my three children and fear, hope, sadness, and ambition. I came to the United States in 2014 to find a new life, safety, home, dignity, equality, justice, and freedom.\nI am an activist. I participated in the Arab Spring in 2011, and I was in Change Square [the centre of activism in Sana’a] since the first day of our revolution against the regime [of President Ali Abdullah Saleh]. We spent more than eight months working on demonstrations and meetings. There were violent confrontations, we faced death, gunfire, and tear gas. We watched our friends shot and killed, but we remained strong, full of life and hope. We dreamt of a new Yemen, but our revolution ended with the Gulf initiative [a late 2011 plan for political transition]. It was our first big failure.\nI do not believe we are to blame for the war, which began a few years later, but I know that our revolution was not well prepared or well organised. In those three years we continued to work on campaigns, demonstrations, and conferences, in search of the Yemen we wanted. \nI was the owner and principal of a school in Sana’a, but because of the Arab Spring and the war, we couldn’t continue. I lost my school, and my business, and I had to leave Yemen.\nIt was difficult for a single mom and three children to start a new life in America, but I was strong enough to do it. My children and I all finished our higher education, found jobs, and built new lives. But Yemen remains our greatest pain.\n\n\n\n"
       },
       "ar": {
         "title": "",
@@ -1483,7 +1483,7 @@
       "en": "en-story-62",
       "ar": "ar-story-62"
     },
-    "storyImage": "../images/placeholder_images/puzzle-32.png",
+    "storyImage": "../images/placeholder_images/puzzle-09.png",
     "personalInfo": {
       "en": {
         "name": "Elham Hassan",
@@ -1581,7 +1581,7 @@
       "en": "en-story-64",
       "ar": "ar-story-64"
     },
-    "storyImage": "../images/placeholder_images/puzzle-18.png",
+    "storyImage": "../images/placeholder_images/puzzle-12.png",
     "personalInfo": {
       "en": {
         "name": "Salem",
@@ -1628,7 +1628,7 @@
       "en": "en-story-65",
       "ar": "ar-story-65"
     },
-    "storyImage": "../images/placeholder_images/puzzle-28.png",
+    "storyImage": "../images/placeholder_images/puzzle-01.png",
     "personalInfo": {
       "en": {
         "name": "Ahmed",
@@ -1651,7 +1651,7 @@
     "story": {
       "en": {
         "title": "",
-        "content": "I am working in a humanitarian program in the field of mines victims assistance. \nI have seven children ( five sons and two daughters. The war affected on my family's life and on me personally. I had to send one of my sons out country to finish his study away of the war. The others have stopped study in the university and the others two young are in an unknown future.\nThe war affected on my life that i couldn't cover the expenses of my children's study. I am trying to Keep my sons safe and not involved in the war any how and this is the biggest challenge i face. I am wary all timesabout their future."
+        "content": "I have seven children, five sons and two daughters. The war affected my family’s life, and me personally. I had to send one of my sons out of the country to finish his studies, away from the war. But I couldn’t cover the costs of all of childrens’ education, so the others stopped their university studies. The youngest ones have an unknown future. \nI now work in a humanitarian organisation helping the victims of mines. But the biggest challenge I face is keeping my sons safe and not involved in this war. I worry all the time about their future. \n\n"
       },
       "ar": {
         "title": "",
@@ -1675,7 +1675,7 @@
       "en": "en-story-66",
       "ar": "ar-story-66"
     },
-    "storyImage": "../images/placeholder_images/puzzle-05.png",
+    "storyImage": "../images/placeholder_images/puzzle-09.png",
     "personalInfo": {
       "en": {
         "name": "",
@@ -1698,7 +1698,7 @@
     "story": {
       "en": {
         "title": "",
-        "content": "English text"
+        "content": "The story is an Audio "
       },
       "ar": {
         "title": "",
@@ -1725,7 +1725,7 @@
       "en": "en-story-67",
       "ar": "ar-story-67"
     },
-    "storyImage": "../images/placeholder_images/puzzle-15.png",
+    "storyImage": "../images/placeholder_images/puzzle-04.png",
     "personalInfo": {
       "en": {
         "name": "W",
@@ -1772,7 +1772,7 @@
       "en": "en-story-68",
       "ar": "ar-story-68"
     },
-    "storyImage": "../images/placeholder_images/puzzle-03.png",
+    "storyImage": "../images/placeholder_images/puzzle-23.png",
     "personalInfo": {
       "en": {
         "name": "Mahasen",
@@ -1821,7 +1821,7 @@
       "en": "en-story-69",
       "ar": "ar-story-69"
     },
-    "storyImage": "../images/placeholder_images/puzzle-27.png",
+    "storyImage": "../images/placeholder_images/puzzle-01.png",
     "personalInfo": {
       "en": {
         "name": "H",
@@ -1868,7 +1868,7 @@
       "en": "en-story-70",
       "ar": "ar-story-70"
     },
-    "storyImage": "../images/placeholder_images/puzzle-08.png",
+    "storyImage": "../images/placeholder_images/puzzle-15.png",
     "personalInfo": {
       "en": {
         "name": "Yaqoob",
@@ -1915,7 +1915,7 @@
       "en": "en-story-1001",
       "ar": "ar-story-1001"
     },
-    "storyImage": "../images/placeholder_images/puzzle-20.png",
+    "storyImage": "../images/placeholder_images/puzzle-02.png",
     "personalInfo": {
       "en": {
         "name": "Assem",
@@ -1962,7 +1962,7 @@
       "en": "en-story-1002",
       "ar": "ar-story-1002"
     },
-    "storyImage": "../images/placeholder_images/puzzle-12.png",
+    "storyImage": "../images/placeholder_images/puzzle-02.png",
     "personalInfo": {
       "en": {
         "name": "Shamsan",
@@ -1971,10 +1971,10 @@
         "livingIn": "AlDale"
       },
       "ar": {
-        "name": "",
-        "surname": "",
-        "whereFrom": "",
-        "livingIn": ""
+        "name": "شمسان",
+        "surname": "ناصر",
+        "whereFrom": "الضالع",
+        "livingIn": "الضالع"
       }
     },
     "contact": {
@@ -1985,7 +1985,7 @@
     "story": {
       "en": {
         "title": "",
-        "content": "English text"
+        "content": "If I say sign up for the lottery, I have the worst luck of all.\nAnd if I say, “Be patient, how long will a rational person be patient?”\nLiving since nine years of age, most of them on loans.\nI want to leave a homeland, where I lived as a stranger.\nA displaced stranger whose value is like a mosquito.\nPoverty and our suspicious reality,\nand the war that we have been fighting for nine years.\nThe fiercest battles, whose heat rages like flames,\nIt contains massacres, injuries and bruises.\nIt is playing games with us.\nFrom every side, it prevailed, and the mystery increased.\n(A citizen’s dream of leaving his homeland)\nWe ask God to grant relief to the country and the people.\n"
       },
       "ar": {
         "title": "",
@@ -2009,7 +2009,7 @@
       "en": "en-story-1003",
       "ar": "ar-story-1003"
     },
-    "storyImage": "../images/placeholder_images/puzzle-11.png",
+    "storyImage": "../images/placeholder_images/puzzle-14.png",
     "personalInfo": {
       "en": {
         "name": "Ebtehal",
@@ -2056,7 +2056,7 @@
       "en": "en-story-1004",
       "ar": "ar-story-1004"
     },
-    "storyImage": "../images/placeholder_images/puzzle-25.png",
+    "storyImage": "../images/placeholder_images/puzzle-22.png",
     "personalInfo": {
       "en": {
         "name": "Basheer",
@@ -2103,7 +2103,7 @@
       "en": "en-story-1005",
       "ar": "ar-story-1005"
     },
-    "storyImage": "../images/placeholder_images/puzzle-04.png",
+    "storyImage": "../images/placeholder_images/puzzle-14.png",
     "personalInfo": {
       "en": {
         "name": "Wafaa",
@@ -2112,10 +2112,10 @@
         "livingIn": "AlDhale"
       },
       "ar": {
-        "name": "",
-        "surname": "",
-        "whereFrom": "",
-        "livingIn": ""
+        "name": "وفاء",
+        "surname": "الأشول",
+        "whereFrom": "إب",
+        "livingIn": "الضالع"
       }
     },
     "contact": {
@@ -2126,7 +2126,7 @@
     "story": {
       "en": {
         "title": "",
-        "content": "English text"
+        "content": "What impact has the war had on our way of life? We are currently going through our hardest time in life. We have been shocked, exhausted, and destroyed by this war. We lack education, health, and nutrition and live in a world of fear, anxiety, delusion, destruction, and widespread diseases. We make an appeal to everyone on the globe to view the oppression of our country and ourselves with humanity, conscience, and action. for the purpose of rescuing our country from this exhausting ordeal.\n\n"
       },
       "ar": {
         "title": "",
@@ -2150,17 +2150,17 @@
       "en": "en-story-1006",
       "ar": "ar-story-1006"
     },
-    "storyImage": "../images/placeholder_images/puzzle-24.png",
+    "storyImage": "../images/placeholder_images/puzzle-17.png",
     "personalInfo": {
       "en": {
         "name": "Ameen",
-        "surname": "Alwajeeh",
+        "surname": "al-Wajeeh",
         "whereFrom": "AlDhale",
         "livingIn": "AlDhale"
       },
       "ar": {
-        "name": "",
-        "surname": "",
+        "name": "امين",
+        "surname": "الوجيه",
         "whereFrom": "",
         "livingIn": ""
       }
@@ -2177,7 +2177,7 @@
       },
       "ar": {
         "title": "",
-        "content": "ماذا اثرت الحرب على حياتنا؟ الحرب ليسة نزهة،الحرب دماروخراب وتشريد وقتل عانينا فيها الامرين منذو ثمان سنوات ومازلنا، نعاني، رواتبنا مقطوعه اعمالنا منقطعة مدارسنا نعاني من نقص في الغذا والدواءوفي كل مانحتاجه من سبل العيش الكريم نناشد العالم ومنظماته ومؤسساته النظرالينا، بإنسانية وضمير اوقفو الحرب هذامطلبن"
+        "content": "الحرب ليسة نزهة،الحرب دماروخراب وتشريد وقتل عانينا فيها الامرين منذو ثمان سنوات ومازلنا، نعاني، رواتبنا مقطوعه اعمالنا منقطعة مدارسنا نعاني من نقص في الغذا والدواءوفي كل مانحتاجه من سبل العيش الكريم نناشد العالم ومنظماته ومؤسساته النظرالينا، بإنسانية وضمير اوقفو الحرب هذامطلبن"
       }
     },
     "attachments": [],
@@ -2197,7 +2197,7 @@
       "en": "en-story-1007",
       "ar": "ar-story-1007"
     },
-    "storyImage": "../images/placeholder_images/puzzle-07.png",
+    "storyImage": "../images/placeholder_images/puzzle-05.png",
     "personalInfo": {
       "en": {
         "name": "Abduljabar",
@@ -2224,7 +2224,7 @@
       },
       "ar": {
         "title": "",
-        "content": "كيف اثرت الحرب علئ حياتك؟  اثرت الحرب  على الشعب اليمني من جميع النواحي  أولا  تدهور الاقتصاد  المعيشي  النحو 80% من الشعب اليمني  لا يوجد لديهم مايسدو رمق أولادهم  من ابسط الاشياء الضروريه  من الغذاء لا يوجد فرص عمل  لكي نطعم أولادنا  توقف  عجلة الانتاج بسب الحرب  العبثيه نحن كنازحين من ويلات الحرب نعاني من ارتفاع اسعار الايجارات واسعار المواد الغذائيه بسب تدهور سعر الصرف مقابل العملات الاجنبيه  منذو تسع سنوات ونحن  نعاني الامرين  لهذا نطلب من جميع المنظمات الاغاثيه إن تقوم بواجباتها  تجاها شعبنا اليمني وندعو المجتمع الدولي بالظغط على الاطراف المسؤووله عن هذه الحرب العبثيه بالتوقف سوا داخلينا أوخارجينا.  مطلبنا الوحيد بإن توقفو الحرب  وتعود اليمن الئ اليمن السعيد.    وشكرا."
+        "content": "اثرت الحرب  على الشعب اليمني من جميع النواحي  أولا  تدهور الاقتصاد  المعيشي  النحو 80% من الشعب اليمني  لا يوجد لديهم مايسدو رمق أولادهم  من ابسط الاشياء الضروريه  من الغذاء لا يوجد فرص عمل  لكي نطعم أولادنا  توقف  عجلة الانتاج بسب الحرب  العبثيه نحن كنازحين من ويلات الحرب نعاني من ارتفاع اسعار الايجارات واسعار المواد الغذائيه بسب تدهور سعر الصرف مقابل العملات الاجنبيه  منذو تسع سنوات ونحن  نعاني الامرين  لهذا نطلب من جميع المنظمات الاغاثيه إن تقوم بواجباتها  تجاها شعبنا اليمني وندعو المجتمع الدولي بالظغط على الاطراف المسؤووله عن هذه الحرب العبثيه بالتوقف سوا داخلينا أوخارجينا.  مطلبنا الوحيد بإن توقفو الحرب  وتعود اليمن الئ اليمن السعيد.    وشكرا."
       }
     },
     "attachments": [],
@@ -2244,7 +2244,7 @@
       "en": "en-story-1008",
       "ar": "ar-story-1008"
     },
-    "storyImage": "../images/placeholder_images/puzzle-05.png",
+    "storyImage": "../images/placeholder_images/puzzle-26.png",
     "personalInfo": {
       "en": {
         "name": "Yahya",
@@ -2253,8 +2253,8 @@
         "livingIn": ""
       },
       "ar": {
-        "name": "",
-        "surname": "",
+        "name": "يحي",
+        "surname": "علي حسن علي",
         "whereFrom": "",
         "livingIn": ""
       }
@@ -2271,7 +2271,7 @@
       },
       "ar": {
         "title": "",
-        "content": "كيف اثرت الحرب علي اليمنين ؟؟؟؟؟؟؟؟؟ثمان سنوات من الحرب سببها سؤ الادارات المتعاقبه  من حكم الامامة وصالح  والجهل و.التدخلات الخارجيه  والتي انهكت الشعب المنهك اصلا  وقضت علي كل امل وحلم لدى الشعب واصبح يعيش حالة الاغتراب في الوطن يبحث عن وطن اخر. يوفر له عيش كريم  فقد اصبح الشعب فاقد لمقومات الحياة. والتعليم. القوي ياكل الضعيف والحرب الهمجية التي اصبحت للترزق  من قبل تجار. الحروب. ووقودها الفقراء  انه وضع نعجز عن وصفه. وصفا دقيقا بسبب الحرب فقد  الطلاب تعليمهم. المتدني اصلا. فقد الموظفون رواتبهم.  تقلد القتله والمجرمون المناصب   نزح الملاين فجرت البيوت ونهبت الحقوق ومصادرت الاموال. وقطعت الطرق.  واصبح الملاين لايستطيعوا زيارة اقاربهم  امتلات المقابر بالضحايا الابرياء والاطفال والمسنين وامتلات السجون  باصحاب الراي. والاعلاميين.    كثيرا من الشباب التحق بالحرب مع احد الاطراف بسبب الفقر.   كون الحرب ترزق. قضت الحرب علي الاخلاق ومزقت النسيج الاحتماعي  وانتشر العنف الاسري. والانتحار. بسبب سؤ.  العيش.  انتشرت كل العصبيات  الهمجيه. وكل الاساليب اللااخلاقية.  انها حياة. فضيعة.  يقودها المجرمون والقتلة  والنهابين  وتسيرها الايادي الخارجية. لقد فقد الشعب الامل لطول الحرب وقذارتها  وعدم وجود. بارق امل للحلول. لانعدام الضمير في النخب الداخليه  والقوى الخارجيه.  ...شعب اصبح في حالة احتضار.  من كافة الجوانب. يحي علي حسن علي 48سنة.   الضالع"
+        "content": "ثمان سنوات من الحرب سببها سؤ الادارات المتعاقبه  من حكم الامامة وصالح  والجهل و.التدخلات الخارجيه  والتي انهكت الشعب المنهك اصلا  وقضت علي كل امل وحلم لدى الشعب واصبح يعيش حالة الاغتراب في الوطن يبحث عن وطن اخر. يوفر له عيش كريم  فقد اصبح الشعب فاقد لمقومات الحياة. والتعليم. القوي ياكل الضعيف والحرب الهمجية التي اصبحت للترزق  من قبل تجار. الحروب. ووقودها الفقراء  انه وضع نعجز عن وصفه. وصفا دقيقا بسبب الحرب فقد  الطلاب تعليمهم. المتدني اصلا. فقد الموظفون رواتبهم.  تقلد القتله والمجرمون المناصب   نزح الملاين فجرت البيوت ونهبت الحقوق ومصادرت الاموال. وقطعت الطرق.  واصبح الملاين لايستطيعوا زيارة اقاربهم  امتلات المقابر بالضحايا الابرياء والاطفال والمسنين وامتلات السجون  باصحاب الراي. والاعلاميين.    كثيرا من الشباب التحق بالحرب مع احد الاطراف بسبب الفقر.   كون الحرب ترزق. قضت الحرب علي الاخلاق ومزقت النسيج الاحتماعي  وانتشر العنف الاسري. والانتحار. بسبب سؤ.  العيش.  انتشرت كل العصبيات  الهمجيه. وكل الاساليب اللااخلاقية.  انها حياة. فضيعة.  يقودها المجرمون والقتلة  والنهابين  وتسيرها الايادي الخارجية. لقد فقد الشعب الامل لطول الحرب وقذارتها  وعدم وجود. بارق امل للحلول. لانعدام الضمير في النخب الداخليه  والقوى الخارجيه.  ...شعب اصبح في حالة احتضار.  من كافة الجوانب. "
       }
     },
     "attachments": [],
@@ -2291,7 +2291,7 @@
       "en": "en-story-1009",
       "ar": "ar-story-1009"
     },
-    "storyImage": "../images/placeholder_images/puzzle-04.png",
+    "storyImage": "../images/placeholder_images/puzzle-03.png",
     "personalInfo": {
       "en": {
         "name": "Yaqoub",
@@ -2338,7 +2338,7 @@
       "en": "en-story-1010",
       "ar": "ar-story-1010"
     },
-    "storyImage": "../images/placeholder_images/puzzle-29.png",
+    "storyImage": "../images/placeholder_images/puzzle-02.png",
     "personalInfo": {
       "en": {
         "name": "Kafa",
@@ -2385,7 +2385,7 @@
       "en": "en-story-1011",
       "ar": "ar-story-1011"
     },
-    "storyImage": "../images/placeholder_images/puzzle-19.png",
+    "storyImage": "../images/placeholder_images/puzzle-13.png",
     "personalInfo": {
       "en": {
         "name": "Ahmed",
@@ -2432,7 +2432,7 @@
       "en": "en-story-1012",
       "ar": "ar-story-1012"
     },
-    "storyImage": "../images/placeholder_images/puzzle-10.png",
+    "storyImage": "../images/placeholder_images/puzzle-08.png",
     "personalInfo": {
       "en": {
         "name": "Aref",
@@ -2479,7 +2479,7 @@
       "en": "en-story-1013",
       "ar": "ar-story-1013"
     },
-    "storyImage": "../images/placeholder_images/puzzle-01.png",
+    "storyImage": "../images/placeholder_images/puzzle-31.png",
     "personalInfo": {
       "en": {
         "name": "Om Ayman",
@@ -2526,7 +2526,7 @@
       "en": "en-story-1014",
       "ar": "ar-story-1014"
     },
-    "storyImage": "../images/placeholder_images/puzzle-05.png",
+    "storyImage": "../images/placeholder_images/puzzle-07.png",
     "personalInfo": {
       "en": {
         "name": "Amatalrahman",
@@ -2573,7 +2573,7 @@
       "en": "en-story-1015",
       "ar": "ar-story-1015"
     },
-    "storyImage": "../images/placeholder_images/puzzle-28.png",
+    "storyImage": "../images/placeholder_images/puzzle-31.png",
     "personalInfo": {
       "en": {
         "name": "Adel",
@@ -2630,9 +2630,9 @@
       },
       "ar": {
         "name": "لطف",
-        "surname": "",
-        "whereFrom": "",
-        "livingIn": ""
+        "surname": "الذخاب",
+        "whereFrom": "الضالع",
+        "livingIn": "الضالع"
       }
     },
     "contact": {
@@ -2643,7 +2643,7 @@
     "story": {
       "en": {
         "title": "",
-        "content": "English text"
+        "content": "The war drove me from my home and my land\nThe war took from me my 14-year-old son \nThe war wounded me in my stomach and my right foot\nThe war made me lose my source of livelihood. A clinic consisting of a pharmacy and a laboratory was completely looted\nThe war separated me from my relatives, and friends\n\n"
       },
       "ar": {
         "title": "",
@@ -2667,7 +2667,7 @@
       "en": "en-story-1017",
       "ar": "ar-story-1017"
     },
-    "storyImage": "../images/placeholder_images/puzzle-24.png",
+    "storyImage": "../images/placeholder_images/puzzle-15.png",
     "personalInfo": {
       "en": {
         "name": "Ahmed",
@@ -2690,7 +2690,7 @@
     "story": {
       "en": {
         "title": "",
-        "content": "English text"
+        "content": "The story started with the war in Yemen. I am a doctor, pharmacist, married and I have a daughter. My wife was pregnant. After that, I decided to travel from Taiz to Aden. Taiz was under siege. I walked through Mashraa and Talouq looking for a place of safety until I continued to Aden and then to Ras Al-Ara. From there I sat for two days waiting for a ship to to.  He traveled with him and the journey was risky, but he continued to be scolded and arrested, then I was transferred to the camp and I sat in the camp for a month without communicating with my family in Yemen. Life was difficult there. One day, a lady named Beta came from Poland and I was helping her with translation work and I was kind-hearted and after that I registered  In the UNICEF organization and also Mrs. Natalie is a professor at the American University of Dubai, then I went to look for a job in the city of Djibouti and worked in more than one job from building or selling clothes or an assistant to accounts, and so I was my meaning in exile. I would love to have an opportunity for me to travel to Canada or Britain, but  I could not take the advice of Mrs. Beta, a Polish woman, with the decision to return home. The situation was bad. She was with us until sea travel was opened, and I traveled and returned to my family and family. I started looking for a job in medicine, and I worked as a salesman in a wholesale store. This is in brief, but here are details and stories that I did not mention"
       },
       "ar": {
         "title": "",
@@ -2714,7 +2714,7 @@
       "en": "en-story-1018",
       "ar": "ar-story-1018"
     },
-    "storyImage": "../images/placeholder_images/puzzle-12.png",
+    "storyImage": "../images/placeholder_images/puzzle-05.png",
     "personalInfo": {
       "en": {
         "name": "Abdulrahman",
@@ -2723,8 +2723,8 @@
         "livingIn": "AlDhale"
       },
       "ar": {
-        "name": "",
-        "surname": "",
+        "name": "عبدالرحمن",
+        "surname": "الفتاحي",
         "whereFrom": "",
         "livingIn": ""
       }
@@ -2741,7 +2741,7 @@
       },
       "ar": {
         "title": "",
-        "content": ""
+        "content": "هنا لنا مشاركه عن التاثير التي خلفت الحرب من عده نواحي مثل الناحيه الاقتصاديه فقد ادت الحرب الى قطع المصدر الاساسي لدخل المواطن مثل الرواتب وكذالك فرص العمل التي كان يحصل عليها من خلال توفر السيوله للمواطن مما انعكس سلباً وكانت النتيجه على الناحيه النفسيه التي اصبح المواطنين يشكون سوء الحال وقلة الحيله وقد قادت الكثير من المواطنين في كثير من المحافظات للانتحار، وكذالك ظهور السرقه وومارسه مهن غير المهن المعتاد،  وقد كان لبعض دكاتره جامعين للممارسه عملً حمال في بعض المحلات التجاريه اكبر دلاله على التاثير التي اثرت على كل الطبقات المجتمعيه"
       }
     },
     "attachments": [],
@@ -2761,7 +2761,7 @@
       "en": "en-story-1019",
       "ar": "ar-story-1019"
     },
-    "storyImage": "../images/placeholder_images/puzzle-14.png",
+    "storyImage": "../images/placeholder_images/puzzle-09.png",
     "personalInfo": {
       "en": {
         "name": "Basel",
@@ -2808,17 +2808,17 @@
       "en": "en-story-1020",
       "ar": "ar-story-1020"
     },
-    "storyImage": "../images/placeholder_images/puzzle-05.png",
+    "storyImage": "../images/placeholder_images/puzzle-02.png",
     "personalInfo": {
       "en": {
         "name": "Mohsen",
-        "surname": "Algunaid",
+        "surname": "al-Junaid",
         "whereFrom": "AlDhale",
         "livingIn": "AlDhale"
       },
       "ar": {
-        "name": "",
-        "surname": "",
+        "name": "محسن",
+        "surname": "الجنيد",
         "whereFrom": "",
         "livingIn": ""
       }
@@ -2835,7 +2835,7 @@
       },
       "ar": {
         "title": "",
-        "content": ""
+        "content": "لقد اثرت الحرب تاثيرا كبيرا علي النسيج الاجتماعي بشكل عام حيث انقطعت الطرقات واصبحنا نعاني من صعوبه كبيره بالتنقل كما اثرت الحرب بانقطاع مصادر الدخل ونواجه صعوبه بالحصول علي الحاجات الاساسية للاسرة ولم نستطع مواصلة تعليم ابنائنا في الجامعات بسبب فقدان مصادر الدخل كما فقدنا الكثير من شبابنا واقاربنا لقد سقطوا ضحايا هذه الحرب الظالمه."
       }
     },
     "attachments": [],
@@ -2855,17 +2855,17 @@
       "en": "en-story-1021",
       "ar": "ar-story-1021"
     },
-    "storyImage": "../images/placeholder_images/puzzle-20.png",
+    "storyImage": "../images/placeholder_images/puzzle-05.png",
     "personalInfo": {
       "en": {
         "name": "Amal",
-        "surname": "Alashwal",
+        "surname": "al-Ashawal",
         "whereFrom": "Ibb",
         "livingIn": "Ibb"
       },
       "ar": {
-        "name": "",
-        "surname": "",
+        "name": "امل",
+        "surname": "الاشول",
         "whereFrom": "",
         "livingIn": ""
       }
@@ -2878,11 +2878,11 @@
     "story": {
       "en": {
         "title": "",
-        "content": "English text"
+        "content": "The story is that the war that happened in Yemen changed and exhausted us. People are tired of poverty, insecurity, and tranquility. We always feel that there is something in our hearts that has been broken, something that has made us insecure, and there is a gap inside our souls that has made us older and more terrified.\n"
       },
       "ar": {
         "title": "",
-        "content": ""
+        "content": "القصة ومافيها انه الحرب اللي حصلت في اليمن غيرتنا  وانهكتنا الناس تعبوا فقر وانعدام الأمن والسكينة.\nدائما نحس انه في شي بقلوبنا انكسر في شي مخلينا مش مطمئنين في فجوة داخل ارواحنا كبرتنا وخلتنا مرهوبين."
       }
     },
     "attachments": [],
@@ -2902,7 +2902,7 @@
       "en": "en-story-1022",
       "ar": "ar-story-1022"
     },
-    "storyImage": "../images/placeholder_images/puzzle-23.png",
+    "storyImage": "../images/placeholder_images/puzzle-03.png",
     "personalInfo": {
       "en": {
         "name": "Abdulrahman",
@@ -2949,19 +2949,19 @@
       "en": "en-story-1023",
       "ar": "ar-story-1023"
     },
-    "storyImage": "../images/placeholder_images/puzzle-15.png",
+    "storyImage": "../images/placeholder_images/puzzle-23.png",
     "personalInfo": {
       "en": {
         "name": "Mohammed",
-        "surname": "Algunaid",
+        "surname": "al-Junaid",
         "whereFrom": "AlDhale",
         "livingIn": "AlDhale"
       },
       "ar": {
-        "name": "",
-        "surname": "",
-        "whereFrom": "",
-        "livingIn": ""
+        "name": "محمد",
+        "surname": "الجنيد",
+        "whereFrom": "الضالع",
+        "livingIn": "الضالع"
       }
     },
     "contact": {
@@ -2972,11 +2972,11 @@
     "story": {
       "en": {
         "title": "",
-        "content": "English text"
+        "content": "I am displaced from Al-Hasha District, Al-Dhale Governorate. 2015 was the displacement date and continues to this day. My family lives in Al-Hasha District, and I haven't been able to reach them since I was displaced to the Al-Dhale Governorate. I've spent the last eight years in Al-Dhale'e. I'm unemployed, don't have any work, and can't support my family financially. I pay forty thousand riyals for a bag of flour and an additional ten thousand riyals to have the flour delivered to my family. Even though I don't make enough money each month to support my family, I still have to take care of my seven brothers and my father, who is unemployed.\nThe country was destroyed by the war, roads were blocked, and I'm currently under siege in the Governorate of Al-Dhalea. In order to provide for my family, I am struggling here. I even had dreams of studying medicine at a university, but the war prevented me from doing so.\nMy dream is still pending, but the situation did not allow me to study and chase after it. In contrast, I am thinking about how to bring the cost of flour and other expenses to my family. Rather than that, I have lost people dear to my heart and to my family. And also from my colleagues.\n"
       },
       "ar": {
         "title": "",
-        "content": ""
+        "content": "أنا نازح من مديرية الحشاء محافظة الضالع ..تاريخ النزوح عام ٢٠١٥م حتا يومنا هذا وأنا نازح في محافظة الضالع وأسرتي في مديرية الحشاء ولا أقدر أوصل اليهم من ذو ٨ سنوات وأنا في الضالع لن أمتلك شغل ولا أي عمل ومتحمل مصاريف الأسرة أشتري الكيس الدقيق ب٤٠ الف ريال وأجيب كراء الكيس الدقيق ١٠ الف ريال يعني يوصل الكيس الدقيق الى مديرية الحشاء ب٥٠ الف ريال وأنا لن أمتلك راتب شهري ولا عمل يكفي مصاريف أسرتي وأملك من الأخوة ٧ أنفار في البيت وأبي معطل عن العمل لا يجد عمل يكفي قوت يومه وأنا لن أقدر أوصل لهم بسبب الحرب التي دمرت البلاد قطعت الطرق وما زلتو محاصر في محافظة الضالع وأنا هنا مكافح وشاقي على الأسرة بحق الدقيق والمصاريف التي تغطي حاجة الأسرة حتا أني كنتو أحلم أدخل جامعة الطب أدرس ولاكن قدر الله وما شاء فعل...وبسبب الحرب تدهور الوضع وأقتطعت الطرق وفارقتو أسرتي من ذو ٢٠١٥م وما زال حلمي معلق بالطلب ولاكن الوضع لن يسمح لي أن أدرس وأمشي بعد حلمي ولاكن الان أفكر كيف أدخل قيمة الدقيق والمصاريف الى أسرتي في مديرية الحشاء وبسبب هذا الحرب فقدتو ناس أعزاء على قلبي ومن أسرتي ومن زملائي ولاكن أقول قدر الله وماشاء فعل...وحسبي الله ونعم الوكيل..ولا حول ولا قوة الا بالله العلي العظيم..."
       }
     },
     "attachments": [],
@@ -2996,11 +2996,11 @@
       "en": "en-story-1024",
       "ar": "ar-story-1024"
     },
-    "storyImage": "../images/placeholder_images/puzzle-18.png",
+    "storyImage": "../images/placeholder_images/puzzle-04.png",
     "personalInfo": {
       "en": {
         "name": "Mohammed",
-        "surname": "AlMahdi",
+        "surname": "al-Mahdi",
         "whereFrom": "Old Sanaa",
         "livingIn": "Kambodia"
       },
@@ -3043,19 +3043,19 @@
       "en": "en-story-1025",
       "ar": "ar-story-1025"
     },
-    "storyImage": "../images/placeholder_images/puzzle-04.png",
+    "storyImage": "../images/placeholder_images/puzzle-13.png",
     "personalInfo": {
       "en": {
-        "name": "Om Khaled",
+        "name": "Umm Khaled",
         "surname": "bint Alshehab",
         "whereFrom": "Sanaa",
         "livingIn": "Netherlands"
       },
       "ar": {
-        "name": "",
-        "surname": "",
-        "whereFrom": "",
-        "livingIn": ""
+        "name": "أم خالد",
+        "surname": "بنت الشهاب",
+        "whereFrom": "صنعاء",
+        "livingIn": "هولندا"
       }
     },
     "contact": {
@@ -3066,11 +3066,11 @@
     "story": {
       "en": {
         "title": "",
-        "content": "English text"
+        "content": "The war affected me; it made me strong in mind and sensitive in heart. It killed my fear of death or loss. It lit up my sky with lights that were not present in my city. I saw grey coloured smoke in it. And a red liquid on the road I was walking on. It played to my ears a piece of music of the tones of bombing and deadly destruction. And it woke us up to the beating of a heart that made our hearts tremble, and to hear the sound of people screaming in my ears calling, “Who will answer my call?” All that remained in my eyes were images of destroyed houses, filled cemeteries, and crowded mosques. And the people were carried on top of the coffin. The war affected me, that my right in my homeland was stolen and lost and my entity was destroyed and looted. After a laughter, I was living with it until a new year, it became a bloody day to part with a friend. My joys turned into distress. While I was blowing out the candle of wishes. My friend's house was bombed and the bloody fire was lit. Who is looking for Reem? We turned around and found her with the Most Gracious, the Most Merciful Allah. The war affected me by displacing me from my home and made me move to more than one city and countryside. \n What is my fault if the bombing was for no purpose? Or an error in information? No one can build my house? Or bring back my friend's soul.  What was my fault if my father lost his job? And that person lost one or both of his limbs. And that poor pregnant woman was prepared for the joy of her coming baby. He died so that she could be saved.\nOnly those who lived in the war and suffered from the separation of their people will feel the pain of war. But, be sure, despite every pain, a new hope is born for a wonderful future to achieve a dream that is in the inside of our eyes and achieved by our will.\n\n"
       },
       "ar": {
         "title": "",
-        "content": ""
+        "content": "\nأَثَّرَتْ فِينِي اَلْحَرْبِ أَنَّهَا جَعَلَتْنِي قَوِيَّةٌ اَلْعَقْلِ مُرْهَفَةً اَلْفُؤَادِ .\n أَمَاتَتْ فِينِي اَلشُّعُورِ مِنْ خَوْفِ اَلْمَوْتِ أَوْ اَلضَّيَاعِ .\n أَضَاءَتْ عَلَى سَمَائِي أَنْوَارًا لَمْ تَكُنْ مَوْجُودَةً فِي مَدِينَتِي .\n وَرَأَيْتُ فِيهَا دُخَّانًا رَمَادِي اَللَّوْنِ .\n وَسَائِل أَحْمَرَ عَلَى طَرِيقٍ كُنْتُ أَمْشِي عَلَيْهِ .\n وَعَزَفَتْ عَلَى أُذُنِي مَقْطُوعَةً لِمُوسِيقَى لِنَغَمَاتِ اَلْقَصْفِ وَالدَّمَارِ اَلْمُمِيتِ . وَأَيْقَظَتْنَا عَلَى دَقَّاتِ قَلْبٍ كَانَتْ تَرْتَجِفُ بِهِ أَفْئِدَتُنَا ، وَسَمَاعَ صَوْتِ صُرَاخِ اَلنَّاسِ فِي أُذُنِي يُنَادِي مِنْ يُلَبِّي نِدَائِي ؟ \nلَمْ تَبْقَ فِي عَيْنِي سِوَى صُوَرٍ لِمَنَازِلَ تَحَطَّمَتْ ، وَمَقَابِرُ اِمْتَلَأَتْ ، وَجَوَامِعُ اِزْدَحَمَتْ . \nوَالنَّاسُ فَوْقَ اَلنَّعْشِ حَمَّلَتْ .\nأَثَّرَتْ فِينِي اَلْحَرْبِ أَنَّ حَقِّي فِي وَطَنِيٍّ سَلْبٍ وَضَاعَ كِيَانِيٌّ وَنَهْبٌ . \nمِنْ بَعْدُ ضَحِكِهِ كُنْتُ أَحْيَا فِيهَا لِعَامٍ جَدِيدٍ ، أَصْبَحَ يَوْمًا دَامِيًا لَمُفَارَقَةَ صَدِيق . وَتَحَوَّلَتْ أَفْرَاحِي إِلَى ضِيقٍ .\n وَبَيْنَمَا كُنْتُ أَطْفَأَ شَمْعَةَ اَلْأَمَانِي .\n قَصْفُ مَنْزِلِ صَدِيقَتِي وَأَشْتَعِلُ اَلنَّارَ اَلدَّامِيَ .\n مَنْ يَبْحَثُ عَنْ رِيمْ فَالْتَفَتْنَا وَإِذْ هِيَ\n هِيَ عِنْدَ اَلرَّحْمَنِ الرَّحِيمِ . \nأَثَّرَتْ فِينِي اَلْحَرْبِ بِأَنَّهَا شَرَّدَتنِي مِنْ مَنْزِلِي وَجَعَلَتْنِي أَنْزَح فِي أَكْثَرَ مِنْ مَدِينَةٍ وَرِيفٍ .\n مَا ذَنْبِي إِنَّ كَانَ اَلْقَصْفُ لِغَيْرِ اَلْهَدَفِ ؟ \nأَوْ خَطَأٍ مِنْ مَعْلُومَاتٍ ؟ \nلَا أَحَدَ يَسْتَطِيعُ بِنَاءً مَنْزِلِيّ؟ !\n أَوْ إِعَادَةِ رُوحِ صَدِيقَتِي .\n مَا ذَنْبِي إِنَّ كَانَ وَاَلَّدي قَدْ فَقَدَ عَمَلُهُ ؟\n وَذَاكَ خَسِرَ أَحَدًا أَوْ كِلْتَا أَطْرَافهُ .\n وَتِلْكَ اَلْحَامِلُ اَلْمِسْكِينَةُ قَدْ جُهِّزَتْ لِفَرْحَةِ جَنِينِهَا .\n وَتُوُفِّيَ لِيَتِمَّ إِنْقَاذَهَا . \nلَنْ يَشْعُرَ بِأَلَمِ اَلْحَرْبِ سَوَّى مَنْ عَاشَ فِيهَا وَتَأَلَّمَ لِفِرَاقِ أَهْلِهَا .\n\n وَلَكِنْ تَأَكَّدُوا رَغْمُ كُلِّ أَلَمٍ يُوَلِّدُ عَلَى مَطْلَعِ فَجْرِ أَمَلٍ جَدِيدٍ لِمُسْتَقْبَلٍ رَائِعٍ لِتَحْقِيقِ حُلْمٍ بَاتَ فِي جَوْفِ أَعْيُنِنَا وَتُحَقِّقُ بِإِرَادَتِنَا .\nقلم/أم خالد بنت الشهاب .\nيمنيه مقيمه في هولندا🇳🇱"
       }
     },
     "attachments": [],
@@ -3090,7 +3090,7 @@
       "en": "en-story-1026",
       "ar": "ar-story-1026"
     },
-    "storyImage": "../images/placeholder_images/puzzle-05.png",
+    "storyImage": "../images/placeholder_images/puzzle-06.png",
     "personalInfo": {
       "en": {
         "name": "Eman",
@@ -3137,19 +3137,19 @@
       "en": "en-story-1027",
       "ar": "ar-story-1027"
     },
-    "storyImage": "../images/placeholder_images/puzzle-12.png",
+    "storyImage": "../images/placeholder_images/puzzle-15.png",
     "personalInfo": {
       "en": {
         "name": "Eyad",
-        "surname": "Aldalali",
+        "surname": "al-Dalali",
         "whereFrom": "AlDhale",
         "livingIn": "Damt"
       },
       "ar": {
-        "name": "",
-        "surname": "",
-        "whereFrom": "",
-        "livingIn": ""
+        "name": "إياد",
+        "surname": "الدلالي",
+        "whereFrom": "الضالع",
+        "livingIn": "دمت"
       }
     },
     "contact": {
@@ -3160,11 +3160,11 @@
     "story": {
       "en": {
         "title": "",
-        "content": "English text"
+        "content": "What effect did the war have on our lives?\nThe war has had an extraordinary impact on us Yemenis\nThe war completely destroyed the infrastructure. The war killed children, women, elderly men, and leaders.\n The war killed us in the funeral halls. It killed us in our homes while we were safe and asleep.\nThe war destroyed our homes.\nThe war has scattered us all over the world, refugees, and displaced persons.\nThe war cut off roads and closed the passages between governorates and cities, and we incurred heavy losses due to transporting people’s needs to and from areas where roads were cut off.\nThe war deprived us of all necessities of life, deprived us of salaries, and made most employees taste the bitterness of life. It deprived us of medical services and the lack of medicines. \nThe war deprived many students of continuing their studies, whether in primary, secondary, university, or other educational levels, due to the lack of salaries, lack of work, and people losing their jobs and businesses. \nPoverty has crushed the joints of this poor, innocent people. It is an eight-year war.\nIt destroyed everything beautiful in my country.\nThat is why we appeal to the world of all sects, international organisations and the United Nations to consider the situation of this people and to stand seriously in supporting this people, whether politically, educationally or financially and stop this senseless war.\n\n"
       },
       "ar": {
         "title": "",
-        "content": ""
+        "content": "ماذا اثرت الحرب على حياتنا؟\nلقد اثرت الحرب علينا نحن اليمنيين تاثيرا غير عادي\nالحرب هدمت البنيه التحتيه تماما الحرب قتلت الأطفال والنساء والمسنين قتلت\nالرجال والقاده قتلتنا في صالات العزاء قتلتنا في بيوتنا ونحن امنون نائمون\nالحرب هدمت منازلنا\nالحرب شتت بنا شر مشتت على جميع أنحاء العالم لاجئين ونازحين ومشردين\nالحرب قطعت الطرقات واغلقت الممرات بين المحافظات والمدن وكبدتنا خسائر باهضه بسبب نقل احتياجات الشعب من والى المناطق المقطوعه\nالطريق فيها\nالحرب احرمتنا من كل مقومات الحياة  احرمتنا من المرتبات وجعلت اغلب الموظفين يتذوق مرارة العيش احرمتنا من الخدمات الطبيه وانعدام الادوي\nالحرب حرمت كثيرا من الطلاب من مواصلة دراستهم سواء بالتعليم الاساسي أو الثانوي أو الجامعي وغيره من المستويات التعليميه بسبب انعدام الرواتب وانعدام الأعمال وخسارة الناس لوظائفهم واعمالهم\nلقد  جوعا لقد طحن الفقر مفاصل هذا الشعب المسكين البريء انها حرب ثمان سنوات \nدمرت كل شيء جميل في وطني \nلهذا نحن نناشد العالم بكل اطيافه والمنظمات الدولية والامم المتحده \nبالنظر إلى حالة هذا الشعب \nوالوقوف بجديه بدعم هذا الشعب الدعم السخي واللا محدود من جميع النواحي سواء سياسي او تعليمي أو مادي \nوايقاف هذه الحرب العبثيه\n"
       }
     },
     "attachments": [],
@@ -3184,7 +3184,7 @@
       "en": "en-story-1028",
       "ar": "ar-story-1028"
     },
-    "storyImage": "../images/placeholder_images/puzzle-16.png",
+    "storyImage": "../images/placeholder_images/puzzle-24.png",
     "personalInfo": {
       "en": {
         "name": "Abdulrazaq",
@@ -3193,10 +3193,10 @@
         "livingIn": "Kuwait"
       },
       "ar": {
-        "name": "",
-        "surname": "",
-        "whereFrom": "",
-        "livingIn": ""
+        "name": "عبدالرزاق",
+        "surname": "العزعزي",
+        "whereFrom": "تعز",
+        "livingIn": "الكويت"
       }
     },
     "contact": {
@@ -3231,7 +3231,7 @@
       "en": "en-story-1029",
       "ar": "ar-story-1029"
     },
-    "storyImage": "../images/placeholder_images/puzzle-21.png",
+    "storyImage": "../images/placeholder_images/puzzle-26.png",
     "personalInfo": {
       "en": {
         "name": "Afaf",
@@ -3258,7 +3258,7 @@
       },
       "ar": {
         "title": "",
-        "content": ""
+        "content": "انا عفاف علي  عمري٤٥ سنه من تعز أثرت الحرب عليا من جميع النواحي نفسا معنوي مادي اخذت كل شي جميل  حتي اولادي لما يكملوا التعليم السب الفقر لانجد لقمه العيش أصبحنا   اليوم يمشي علينا كا سنه."
       }
     },
     "attachments": [],
@@ -3278,7 +3278,7 @@
       "en": "en-story-1030",
       "ar": "ar-story-1030"
     },
-    "storyImage": "../images/placeholder_images/puzzle-18.png",
+    "storyImage": "../images/placeholder_images/puzzle-13.png",
     "personalInfo": {
       "en": {
         "name": "Nagat",
@@ -3309,7 +3309,7 @@
       }
     },
     "attachments": [],
-    "notes": "-via jornalist",
+    "notes": "-via jornalist ANNIE TO ASK NUHA ABOUT ORDER",
     "highlighted": false,
     "languageOfSubmission": "Arabic",
     "location": "Yemen",
@@ -3325,19 +3325,19 @@
       "en": "en-story-1031",
       "ar": "ar-story-1031"
     },
-    "storyImage": "../images/placeholder_images/puzzle-16.png",
+    "storyImage": "../images/placeholder_images/puzzle-13.png",
     "personalInfo": {
       "en": {
-        "name": "H-",
-        "surname": "H",
+        "name": "H.",
+        "surname": "H.",
         "whereFrom": "Taiz",
         "livingIn": "Taiz"
       },
       "ar": {
-        "name": "",
-        "surname": "",
-        "whereFrom": "",
-        "livingIn": ""
+        "name": "ه.",
+        "surname": "ه.",
+        "whereFrom": "تعز",
+        "livingIn": "تعز"
       }
     },
     "contact": {
@@ -3348,11 +3348,11 @@
     "story": {
       "en": {
         "title": "",
-        "content": "English text"
+        "content": "This war destroyed everything beautiful in my family. It took from us the dearest thing in the world, my mother. After my mother died, life became difficult. Only after that, death came and took my support, my brother, and the pain did not leave; it took my second brother too. Now life has become depressing, full of pain and wounds. Thank God for everything.\n"
       },
       "ar": {
         "title": "",
-        "content": ""
+        "content": "اني  ح - ح هذا الحرب لقد حطم كل شي جميل باسرتي وخذ علينا اعز شي بدنيا وهي امي وبعد فراق امي فاصبح العيش صعب وبعد ذلك جاء الموت واخذ سندي اخي أ-ح وزاد الوجع والجرح واخذ اخي الثاني م-ح واصبحت العيشه كئيبه ووجع وجروح والحمدلله على كل حال."
       }
     },
     "attachments": [],
@@ -3372,19 +3372,19 @@
       "en": "en-story-1032",
       "ar": "ar-story-1032"
     },
-    "storyImage": "../images/placeholder_images/puzzle-29.png",
+    "storyImage": "../images/placeholder_images/puzzle-28.png",
     "personalInfo": {
       "en": {
-        "name": "Om Fatima",
-        "surname": "AlAfandi",
+        "name": "Umm Fatima",
+        "surname": "al-Afandi",
         "whereFrom": "Taiz",
         "livingIn": "Taiz"
       },
       "ar": {
-        "name": "",
-        "surname": "",
-        "whereFrom": "",
-        "livingIn": ""
+        "name": "أم فاطمة",
+        "surname": "الأفندي",
+        "whereFrom": "تعز",
+        "livingIn": "تعز"
       }
     },
     "contact": {
@@ -3395,11 +3395,11 @@
     "story": {
       "en": {
         "title": "",
-        "content": "English text"
+        "content": "My 13-year-old daughter, five years ago, at the end of her school days, was injured by a gunshot wound in her mouth and shrapnel in her brain and chest, which led to internal bleeding, and the doctors were forced to perform an emergency operation and open the brain.\nTo remove part of the remains, and due to the lack of capabilities in hospitals and the siege on Taiz, they were unable to remove all of the remains, so it was suggested that we take her abroad to remove the rest of the remains. At the same time, there was a group that was trying to prevent travel and prevent us from demanding our rights in this case.\nBut thanks to God, good people and the former governor, we were able to travel to Cairo, and another operation was performed on the brain and mouth, but it was not completely treated because her health condition did not allow for any other cosmetic operations at the time. Both our psychological states and hers deteriorated as a result of this accident. Fear penetrated her heart, and she was unable to tolerate loud or annoying noises or the sound of gunfire or explosions. She was afflicted with panic and fear.\nOur safety was taken from us, as anxiety and fear became prevalent in my family due to the war and its strong effects on us. She returned from her travels to finish her study in spite of the difficulties she faced, including physical discomfort. She refused to give up on the war. We persisted in encouraging her to finish her education, and we still worry about her safety from the moment she arrives at school until she and the other children return."
       },
       "ar": {
         "title": "",
-        "content": ""
+        "content": "ابنتي البالغ من عمرها  13 سنه. قبل  خمس سنوات من الان أصيبت ابنتي عند انتهاء دوامها في المدرسة بطلق ناري في فمها وشضايا  في الدماغ والصدر مما أدى الى نزيف داخلي واضطر الاطباء  الى اجراء عملية اسعافيه وفتح الدماغ.\n لإخراج جزء من الشضايا ولعدم وجود إمكانيات في المستشفيات والحصار على تعز لم يتمكنوا من إخراج جميع الشضايا فتم الاقتراح علينا ان يتم اسعافها الى الخارج لإخراج باقي الشضايا وفي الوقت ذاته كان هناك مجموعه لا نعلم ما مصادرها كانت تحاول منع السفر ومنعنا من مطالبة حقوقنا بهذه القضيه.\n لكن بفضل الله ثم بفضل  الناس الطيبة والمحافظ السابق تمكنا من السفر الى القاهرة وتم اجراء عمليه أخرى للدماغ وللفم ولم يتم معالجتها كاملاً لأن وضعها الصحي لم يكن يسمح في وقتها بأي عمليات تجميلية اخرى مما ادى هذا الحادث الى تدهور حالتها النفسية هي ولنا.. لذلك تغلغل الخوف الى قلبها ولم تعد تحتمل اي اصوات مزعجة او عالية او اصوات الرصاص والقنابل فيصيبها الهلع والخوف....\n تزعزع الامان من داخلنا حيث ان القلق والخوف اصبح هو السائد في عائلتي بسبب الحرب ومؤثراته القويه علينا ورغم ذلك لم تستسلم للحرب فعادت من السفر لتكمل تعليمها رغم المضاعفات التي مرت بها من تشنجات في جسدها...\n لكننا استمرينا في تشجيعها لتكمل باقي مراحل دراستها ومازلنا الى الان ونحن في خوف عليها منذ ذاهبها الى المدرسه الى حين عودتها هي وزميلاتها وكل الطلاب."
       }
     },
     "attachments": [],
@@ -3419,10 +3419,10 @@
       "en": "en-story-1033",
       "ar": "ar-story-1033"
     },
-    "storyImage": "../images/placeholder_images/puzzle-17.png",
+    "storyImage": "../images/placeholder_images/puzzle-11.png",
     "personalInfo": {
       "en": {
-        "name": "Om Mariam",
+        "name": "Umm Mariam",
         "surname": "",
         "whereFrom": "Radaa-Albaydha",
         "livingIn": "Netherlands"
@@ -3466,10 +3466,10 @@
       "en": "en-story-1034",
       "ar": "ar-story-1034"
     },
-    "storyImage": "../images/placeholder_images/puzzle-23.png",
+    "storyImage": "../images/placeholder_images/puzzle-22.png",
     "personalInfo": {
       "en": {
-        "name": "Teacher (No Name)",
+        "name": "A teacher",
         "surname": "",
         "whereFrom": "Taiz",
         "livingIn": "Taiz"
@@ -3477,8 +3477,8 @@
       "ar": {
         "name": "",
         "surname": "",
-        "whereFrom": "",
-        "livingIn": ""
+        "whereFrom": "تعز",
+        "livingIn": "تعز"
       }
     },
     "contact": {
@@ -3513,7 +3513,7 @@
       "en": "en-story-1035",
       "ar": "ar-story-1035"
     },
-    "storyImage": "../images/placeholder_images/puzzle-10.png",
+    "storyImage": "../images/placeholder_images/puzzle-26.png",
     "personalInfo": {
       "en": {
         "name": "Alaa",
@@ -3524,8 +3524,8 @@
       "ar": {
         "name": "",
         "surname": "",
-        "whereFrom": "",
-        "livingIn": ""
+        "whereFrom": "تعز",
+        "livingIn": "تعز"
       }
     },
     "contact": {
@@ -3560,19 +3560,19 @@
       "en": "en-story-1036",
       "ar": "ar-story-1036"
     },
-    "storyImage": "../images/placeholder_images/puzzle-16.png",
+    "storyImage": "../images/placeholder_images/puzzle-22.png",
     "personalInfo": {
       "en": {
         "name": "Fahd",
-        "surname": "Al Zuhairi",
+        "surname": "al-Zuhairi",
         "whereFrom": "Taiz",
         "livingIn": "Taiz"
       },
       "ar": {
-        "name": "",
-        "surname": "",
-        "whereFrom": "",
-        "livingIn": ""
+        "name": "فهد",
+        "surname": "الزهيري",
+        "whereFrom": "تعز",
+        "livingIn": "تعز"
       }
     },
     "contact": {
@@ -3583,11 +3583,11 @@
     "story": {
       "en": {
         "title": "",
-        "content": "English text"
+        "content": "The war has affected us in all aspects. Our livelihood, our children's future, and our safety have all been impacted. In addition to epidemics and diseases, we also face a lack of safety, higher expenses, a shortage of electricity and water, and a lack of the basic needs for a peaceful life.\nIn addition, the war shattered our family who had fled, took away our friends and loved ones, and made it harder for us to travel because of the high price of oil derivatives. The country's economy and infrastructure were devastated by the war.\nTo the extent that, given endless conflict, we are unable to give our kids a living or even the joyful life we seek for them.\nWe now experience frustration and despair on a daily basis. Additionally, the war has expanded criminality and violated the rights of the weak. It is hard to ensure our children's futures because we no longer have one."
       },
       "ar": {
         "title": "",
-        "content": ""
+        "content": "الحرب اثرت علي من جميع النواحي اثرت من ناحيه المعيشه ومن ناحيه الامان ومن ناحيه مستقبل اولادنا نعاني من عدم وجود الامان وكذلك ارتفاع الاسعار وكذلك عدم وجود مقومات الحياه الهادئه وعدم وجود المياه وكذلك عدم وجود كهرباء وعدم وجود الصحه وكذلك الاوبئه والامراض وايضا الحرب اخذه مننا احبه واصدقاء وايضا الحرب حرمتنا من اهلنا وصعبت علينا السفر في ضل غلا المشتقات النفطيه والحرب اطاحت بالبنيه التحتيه واطاحت باقتصاد البلد وايضا انعدام سبل العيش فبتنا مشردين وانعدم الامن والامان واتفشت الامراض حتي صرنا لانستطيع توفير لقمه عيش لاولادنا او حتي نوفر لهم حياه سعيده الي نتمناها في ظل الحرب الحاصله فصار اليئس والاحباط موجود في حياتنا اليوميه وايضا الحرب افشت الجرائم والنهب والسلب واكل حقوق الضعيف وصرنا بلا مستقبل وصعب ان نامن مستقبل اولادنا"
       }
     },
     "attachments": [],
@@ -3607,7 +3607,7 @@
       "en": "en-story-1037",
       "ar": "ar-story-1037"
     },
-    "storyImage": "../images/placeholder_images/puzzle-26.png",
+    "storyImage": "../images/placeholder_images/puzzle-12.png",
     "personalInfo": {
       "en": {
         "name": "Ali",
@@ -3616,10 +3616,10 @@
         "livingIn": "Taiz"
       },
       "ar": {
-        "name": "",
-        "surname": "",
-        "whereFrom": "",
-        "livingIn": ""
+        "name": "علي",
+        "surname": "عبد القوي",
+        "whereFrom": "تعز",
+        "livingIn": "تعز"
       }
     },
     "contact": {
@@ -3630,11 +3630,11 @@
     "story": {
       "en": {
         "title": "",
-        "content": "English text"
+        "content": "My suffering from the war is that I ended up unable to finish my studies at the university. Living has been increasingly difficult in Taiz. I can't find any jobs. I am unable to pay the rent of the house nor can i afford its expenses. There is no access to government hospital services, and the water and electricity have been cut off. Every day I wish to travel from my country and escape from the land to which I belong. We have been fighting for a living as if tomorrow is our last day of existence for the past seven years. a great deal of hardship and extreme difficulty in surviving in Yemen.\n"
       },
       "ar": {
         "title": "",
-        "content": ""
+        "content": "معناتي من الحرب../  انه ماعرفت اكمل درستي الجامعيه والمعيشه. في تعز اصبحت صعبه لايوجد عمل لااستطيع توفير ايجار المنزل ولا صرفت البيت صعوبه في المعيشه دخل تعز انقطع الكهرباء انقطع الماء خدمات المستشفيات الحكوميه كل يوم اتمني انه اسافر من بلادي والهروب من الارض الذي انتمي ليها سبع سنين ونحنا نتسابق على المعيشه مسابقه وكنه غدا اخر يوم نعيشه  معنات كثيره وصعبه جدا"
       }
     },
     "attachments": [],
@@ -3654,7 +3654,7 @@
       "en": "en-story-1038",
       "ar": "ar-story-1038"
     },
-    "storyImage": "../images/placeholder_images/puzzle-08.png",
+    "storyImage": "../images/placeholder_images/puzzle-29.png",
     "personalInfo": {
       "en": {
         "name": "Nageeb",
@@ -3665,8 +3665,8 @@
       "ar": {
         "name": "",
         "surname": "",
-        "whereFrom": "",
-        "livingIn": ""
+        "whereFrom": "تعز",
+        "livingIn": "تعز"
       }
     },
     "contact": {
@@ -3701,7 +3701,7 @@
       "en": "en-story-1039",
       "ar": "ar-story-1039"
     },
-    "storyImage": "../images/placeholder_images/puzzle-15.png",
+    "storyImage": "../images/placeholder_images/puzzle-05.png",
     "personalInfo": {
       "en": {
         "name": "Duaa",
@@ -3710,10 +3710,10 @@
         "livingIn": "Taiz"
       },
       "ar": {
-        "name": "",
-        "surname": "",
-        "whereFrom": "",
-        "livingIn": ""
+        "name": "دعاء",
+        "surname": "محمد سعيد",
+        "whereFrom": "تعز",
+        "livingIn": "تعز"
       }
     },
     "contact": {
@@ -3724,11 +3724,11 @@
     "story": {
       "en": {
         "title": "",
-        "content": "English text"
+        "content": "Undoubtedly, the war had an enormous effect on us and completely changed our lives from when we were comfortable both financially and psychologically.\nOur whole lives have become filled with problems, arguments, distress, and worries, which often lead married couples to get divorced. My health has started to improve after it reached its lowest point, and I was treated for a five-year illness due to psychiatric issues and depression. Because of anxieties and issues, my husband also experienced the same illness, though it was more severe. After losing his job, my husband is now working as a bus driver. Our house's rent has increased four times, making it impossible for us to make enough money to survive for several months. We have begun to eat only what is required and what we need because the cost has killed us to the point where everything has doubled. We are now at the point where we can only afford to buy the necessities. And water is heartache, certainly. In the streets, we struggle and sit in lines to get water. The cost of the goods we need has increased to the point where we can no longer afford them or pay our debts."
       },
       "ar": {
         "title": "",
-        "content": ""
+        "content": "طبعا الحرب أثرت علينا بشكل كبير وقلبت حياتنا ١٨٠ درجه للاسواء بعد ماكنا مرتاحين ماديا ونفسيا والحال مستور  أصبحت  حياتنا كله مشاكل وصياح وضيق وهموم توصل اغلب الاحيان للطلاق  وصحتنا تدهورت للاسواء واصبت بحاله نفسيه واكتئاب لدرجه جلست اتعالج ٥ سنين من المرض والان الحمدلله بدأت صحتنا تتحسن وزوجي كمان اجاء لة نفس المرض واشد منه بسبب الهموم  والمشاكل طبعا زوجي خسر شغله والان رجع يشتغل بباص والبيت رفعو الإيجارات مررة ٤ أضعاف  لدرجه انه يجي شهور مانقدر حتا ندفعه والغلا قتلنا قتل لدرجه انه كل شي أصبح مضاعف واصبحنا ما ناكل الا الشي الضروري وقدر حاجتنا  ووصلنا لمرحله مانقدر نشتري اي شي اخر  الا المهم وطبعا المياة وجع قلب نجلس نطوبر ونضارب بالسبيلات حق المياة  وراشان البيت أصبح مررة غاالي ماتقدر حتا نوفره والديون  طبعا فوقنا من كل مكان وصلنا لمرحله مانقدر حتا نبرجه ونرجع للناس حقوقهم 😩😩😩والحمدلله على كل حال 🥹😊"
       }
     },
     "attachments": [],
@@ -3748,7 +3748,7 @@
       "en": "en-story-1040",
       "ar": "ar-story-1040"
     },
-    "storyImage": "../images/placeholder_images/puzzle-06.png",
+    "storyImage": "../images/placeholder_images/puzzle-09.png",
     "personalInfo": {
       "en": {
         "name": "Asia",
@@ -3759,8 +3759,8 @@
       "ar": {
         "name": "",
         "surname": "",
-        "whereFrom": "",
-        "livingIn": ""
+        "whereFrom": "تعز",
+        "livingIn": "تعز"
       }
     },
     "contact": {
@@ -3795,7 +3795,7 @@
       "en": "en-story-1041",
       "ar": "ar-story-1041"
     },
-    "storyImage": "../images/placeholder_images/puzzle-32.png",
+    "storyImage": "../images/placeholder_images/puzzle-19.png",
     "personalInfo": {
       "en": {
         "name": "Sami",
@@ -3842,7 +3842,7 @@
       "en": "en-story-1042",
       "ar": "ar-story-1042"
     },
-    "storyImage": "../images/placeholder_images/puzzle-21.png",
+    "storyImage": "../images/placeholder_images/puzzle-04.png",
     "personalInfo": {
       "en": {
         "name": "Abdulrahman",
@@ -3889,7 +3889,7 @@
       "en": "en-story-1043",
       "ar": "ar-story-1043"
     },
-    "storyImage": "../images/placeholder_images/puzzle-23.png",
+    "storyImage": "../images/placeholder_images/puzzle-16.png",
     "personalInfo": {
       "en": {
         "name": "Ahmed",
@@ -3933,10 +3933,10 @@
   {
     "id": "1044",
     "slugs": {
-      "en": "en-story-1044",
+      "en": "i-am-alone",
       "ar": "ar-story-1044"
     },
-    "storyImage": "../images/placeholder_images/puzzle-03.png",
+    "storyImage": "../images/placeholder_images/puzzle-05.png",
     "personalInfo": {
       "en": {
         "name": "Samera",
@@ -3958,8 +3958,8 @@
     },
     "story": {
       "en": {
-        "title": "",
-        "content": "My name is Samira Abdo Muhammad, and I am 55 years old. I now live in people's houses, moving from one house to another because my house was destroyed due to the war, and I am alone and have no relatives.\n\n"
+        "title": "\"I am alone.\"",
+        "content": "My name is Samira Abdo Muhammad, and I am 55 years old. I now live in other people's houses, moving from one house to another, because my own home was destroyed in the war. I have no relatives. I am alone.\n\n"
       },
       "ar": {
         "title": "",
@@ -3983,7 +3983,7 @@
       "en": "en-story-1045",
       "ar": "ar-story-1045"
     },
-    "storyImage": "../images/placeholder_images/puzzle-25.png",
+    "storyImage": "../images/placeholder_images/puzzle-11.png",
     "personalInfo": {
       "en": {
         "name": "Gamel",
@@ -4030,7 +4030,7 @@
       "en": "en-story-1046",
       "ar": "ar-story-1046"
     },
-    "storyImage": "../images/placeholder_images/puzzle-17.png",
+    "storyImage": "../images/placeholder_images/puzzle-07.png",
     "personalInfo": {
       "en": {
         "name": "Zain",
@@ -4077,7 +4077,7 @@
       "en": "en-story-1047",
       "ar": "ar-story-1047"
     },
-    "storyImage": "../images/placeholder_images/puzzle-06.png",
+    "storyImage": "../images/placeholder_images/puzzle-24.png",
     "personalInfo": {
       "en": {
         "name": "Eyad",
@@ -4124,7 +4124,7 @@
       "en": "en-story-1048",
       "ar": "ar-story-1048"
     },
-    "storyImage": "../images/placeholder_images/puzzle-11.png",
+    "storyImage": "../images/placeholder_images/puzzle-16.png",
     "personalInfo": {
       "en": {
         "name": "Galal",
@@ -4171,7 +4171,7 @@
       "en": "en-story-1049",
       "ar": "ar-story-1049"
     },
-    "storyImage": "../images/placeholder_images/puzzle-23.png",
+    "storyImage": "../images/placeholder_images/puzzle-16.png",
     "personalInfo": {
       "en": {
         "name": "Manal",
@@ -4218,7 +4218,7 @@
       "en": "en-story-1050",
       "ar": "ar-story-1050"
     },
-    "storyImage": "../images/placeholder_images/puzzle-31.png",
+    "storyImage": "../images/placeholder_images/puzzle-04.png",
     "personalInfo": {
       "en": {
         "name": "Wadha",
@@ -4265,7 +4265,7 @@
       "en": "en-story-1051",
       "ar": "ar-story-1051"
     },
-    "storyImage": "../images/placeholder_images/puzzle-06.png",
+    "storyImage": "../images/placeholder_images/puzzle-26.png",
     "personalInfo": {
       "en": {
         "name": "Sanaa",
@@ -4288,7 +4288,7 @@
     "story": {
       "en": {
         "title": "",
-        "content": "What if we go back far away, to the washed streets, each with the other's blood? If only it would return, washed with nostalgia. The music of machine guns and night bombings, if its voices turn into childish laughter, caressing the cheeks of the night, and the armed ghosts, hiding behind the barricades, if they return to lovers in love with the moon and stars. What if electricity comes back to light up our nights?\nAnd every child torn apart by shrapnel—what if he returns to his mother’s womb? And every bullet is taken from the heart of its innocent owner and returned to its machine gun. And every city afflicted with bombing, if only it would return afflicted with joy. To those hanging around on the sidewalks of exile, fleeing from war, what if they returned to the warmth of the fields, and to the memories, a moment of memory?\nIf only the city that was conceived in war returned to its mind.\n\n"
+        "content": "What if we could go back to the streets that have been washed with each other's blood? If only we could go back to streets washed with nostalgia. The sound of machine guns and nighttime bombings would turn into voices of childish laughter, caressing the cheeks of the night. The armed ghosts hiding behind the barricades would go back to being lovers of the moon and stars. What if electricity came back to light up our nights?\nAnd every child torn apart by shrapnel -- what if he returns to his mother’s womb? And every bullet is taken from the heart of its innocent owner and returned to its machine gun. And every city afflicted with bombing, if only it would return afflicted with joy. To those hanging around on the sidewalks of exile, fleeing from war, what if they returned to the warmth of the fields, and to the memories, a moment of memory?\nIf only the city that was conceived in war returned to its mind.\n\n"
       },
       "ar": {
         "title": "",
@@ -4312,7 +4312,7 @@
       "en": "en-story-1052",
       "ar": "ar-story-1052"
     },
-    "storyImage": "../images/placeholder_images/puzzle-15.png",
+    "storyImage": "../images/placeholder_images/puzzle-04.png",
     "personalInfo": {
       "en": {
         "name": "Doaa",
@@ -4359,7 +4359,7 @@
       "en": "en-story-1053",
       "ar": "ar-story-1053"
     },
-    "storyImage": "../images/placeholder_images/puzzle-11.png",
+    "storyImage": "../images/placeholder_images/puzzle-10.png",
     "personalInfo": {
       "en": {
         "name": "Yaqoub",
@@ -4406,7 +4406,7 @@
       "en": "en-story-1054",
       "ar": "ar-story-1054"
     },
-    "storyImage": "../images/placeholder_images/puzzle-23.png",
+    "storyImage": "../images/placeholder_images/puzzle-16.png",
     "personalInfo": {
       "en": {
         "name": "Amaal",
@@ -4453,7 +4453,7 @@
       "en": "en-story-1055",
       "ar": "ar-story-1055"
     },
-    "storyImage": "../images/placeholder_images/puzzle-05.png",
+    "storyImage": "../images/placeholder_images/puzzle-08.png",
     "personalInfo": {
       "en": {
         "name": "Abduljabar",
@@ -4500,7 +4500,7 @@
       "en": "en-story-1056",
       "ar": "ar-story-1056"
     },
-    "storyImage": "../images/placeholder_images/puzzle-16.png",
+    "storyImage": "../images/placeholder_images/puzzle-25.png",
     "personalInfo": {
       "en": {
         "name": "Abdulsalam",
@@ -4547,7 +4547,7 @@
       "en": "en-story-1057",
       "ar": "ar-story-1057"
     },
-    "storyImage": "../images/placeholder_images/puzzle-22.png",
+    "storyImage": "../images/placeholder_images/puzzle-17.png",
     "personalInfo": {
       "en": {
         "name": "Mona",
@@ -4594,7 +4594,7 @@
       "en": "en-story-1058",
       "ar": "ar-story-1058"
     },
-    "storyImage": "../images/placeholder_images/puzzle-17.png",
+    "storyImage": "../images/placeholder_images/puzzle-09.png",
     "personalInfo": {
       "en": {
         "name": "Om Tarek",
@@ -4641,7 +4641,7 @@
       "en": "en-story-1059",
       "ar": "ar-story-1059"
     },
-    "storyImage": "../images/placeholder_images/puzzle-17.png",
+    "storyImage": "../images/placeholder_images/puzzle-24.png",
     "personalInfo": {
       "en": {
         "name": "Mohammed",
@@ -4688,7 +4688,7 @@
       "en": "en-story-1060",
       "ar": "ar-story-1060"
     },
-    "storyImage": "../images/placeholder_images/puzzle-23.png",
+    "storyImage": "../images/placeholder_images/puzzle-05.png",
     "personalInfo": {
       "en": {
         "name": "Magedah",
@@ -4735,7 +4735,7 @@
       "en": "en-story-1061",
       "ar": "ar-story-1061"
     },
-    "storyImage": "../images/placeholder_images/puzzle-30.png",
+    "storyImage": "../images/placeholder_images/puzzle-15.png",
     "personalInfo": {
       "en": {
         "name": "Ahmed",
@@ -4782,7 +4782,7 @@
       "en": "en-story-1062",
       "ar": "ar-story-1062"
     },
-    "storyImage": "../images/placeholder_images/puzzle-22.png",
+    "storyImage": "../images/placeholder_images/puzzle-10.png",
     "personalInfo": {
       "en": {
         "name": "Sahar",
@@ -4829,7 +4829,7 @@
       "en": "en-story-1063",
       "ar": "ar-story-1063"
     },
-    "storyImage": "../images/placeholder_images/puzzle-10.png",
+    "storyImage": "../images/placeholder_images/puzzle-13.png",
     "personalInfo": {
       "en": {
         "name": "Safa",
