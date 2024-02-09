@@ -318,19 +318,20 @@ const { stories, lang } = Astro.props
 		}
 
 		onStart(ev) {
+			ev.preventDefault()
+
 			if (document.getElementById('grid').style.display === 'none') return
 			this.touchStartTime = Date.now()
-			ev.preventDefault()
 
 			// Add 'is-dragging' class to body to disable hover effects
 			document.body.classList.add('is-dragging')
 
-			// Add 'hide-images' class to grid or image container to hide images
-			document.getElementById('grid').classList.add('hide-images')
-
 			this.dragging = true
 			this.lastX = ev.clientX
 			this.lastY = ev.clientY
+
+			// Add 'hide-images' class to grid or image container to hide images
+			document.getElementById('grid').classList.add('hide-images')
 		}
 
 		onMove(ev) {
