@@ -38,7 +38,8 @@ async function processData(data) {
       : [];
 
     // Find and use the first image attachment as the story image
-    let storyImage = placeholderImageArray[Math.floor(Math.random() * placeholderImageArray.length)];
+    // To do: pixelate the puzzle placeholder images
+    let storyImage = { main: placeholderImageArray[Math.floor(Math.random() * placeholderImageArray.length)], pixelated: placeholderImageArray[Math.floor(Math.random() * placeholderImageArray.length)] };
     const imageAttachments = machformAttachments.filter(isImage);
 
     // Process attachments that came through MachForm
@@ -122,7 +123,12 @@ async function processData(data) {
               const thumbnailResult = await createThumbnail(sourceFilePath, thumbnailPath);
               console.log(`Thumbnail created for entry ${entryID}:`, thumbnailResult);
               // Optionally store or use `thumbnailResult` as needed
-              storyImage = thumbnailResult;
+              storyImage = {
+                main: thumbnailResult.mainImage,
+                pixelated: thumbnailResult.pixelatedImage || thumbnailResult.mainImage
+              }
+              tileImage = thumbnailResult.mainImage;
+              pixelatedImage = thumbnailResult.pixelatedImage || thumbnailResult.mainImage;
             } catch (error) {
               console.error(`Error creating thumbnail for entry ${entryID}:`, error);
             }

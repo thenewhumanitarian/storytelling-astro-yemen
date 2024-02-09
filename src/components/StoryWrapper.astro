@@ -16,7 +16,7 @@ const { stories, lang } = Astro.props
 							class={`list-item--en flex justify-start items-center gap-x-3 story-item p-3 sm:p-5 ${i % 2 === 0 ? 'bg-zinc-700' : 'bg-zinc-800'}`}
 							data-slug={story.slugs.en}
 						>
-							{story.storyImage && <img src={`${story.storyImage}`} alt={story.story.en.title} class='w-14 h-14' />}
+							{story.storyImage && <img src={`${story.storyImage.main}`} alt={story.story.en.title} class='w-14 h-14 sm:w-16 sm:h-16' />}
 							<div class='flex flex-col'>
 								<h3 class='story-item--title lang--en text-white m-0 line-clamp'>
 									{story.story['ar'].title || `AR TITLE ID ${story.id} MISSING`}
@@ -31,7 +31,7 @@ const { stories, lang } = Astro.props
 							class={`list-item--ar flex justify-start items-center gap-x-3 story-item p-3 sm:p-5 ${i % 2 === 0 ? 'bg-zinc-700' : 'bg-zinc-800'}`}
 							data-slug={story.slugs.ar}
 						>
-							{story.storyImage && <img src={`${story.storyImage}`} alt={story.story.ar.title} class='w-14 h-14' />}
+							{story.storyImage && <img src={`${story.storyImage.main}`} alt={story.story.ar.title} class='w-14 h-14' />}
 							<div class='flex flex-col'>
 								<h3 class='story-item--title lang--ar text-white m-0 line-clamp'>
 									{story.story['ar'].title || `AR TITLE ID ${story.id} MISSING`}
@@ -145,8 +145,8 @@ const { stories, lang } = Astro.props
 			}
 
 			// Determine the new image URL
-			// let newImageUrl = `/downloaded_images/thumbnails/${story.storyImage}`
-			let newImageUrl = `${story.storyImage}`
+			// let newImageUrl = `/downloaded_images/thumbnails/${story.storyImage.main}`
+			let newImageUrl = `${story.storyImage.main}`
 
 			// Check if there's already an <img> element inside the grid-item
 			let currentImageElement = this.item.querySelector('img')
@@ -162,11 +162,11 @@ const { stories, lang } = Astro.props
 			}
 
 			// Set the background to the placeholder
-			this.item.style.backgroundImage = `url('${story.storyImage}')`
+			this.item.style.backgroundImage = `url('${story.storyImage.main}')`
 
 			// Check for initial load to decide between lazy loading or direct image set
 			if (this.initialLoad) {
-				this.lazyLoadImage(story.storyImage, story.titles[lang])
+				this.lazyLoadImage(story.storyImage.main, story.titles[lang])
 			} else {
 				const imageElement = document.createElement('img')
 				imageElement.src = newImageUrl
@@ -223,7 +223,7 @@ const { stories, lang } = Astro.props
 			// this.titleArabic.classList.add('inline')
 
 			// Add data-bg attribute to the element to load image later
-			this.item.setAttribute('data-bg', `${story.storyImage}`)
+			this.item.setAttribute('data-bg', `${story.storyImage.main}`)
 
 			// Set highlighted if that's in the data
 			if (story.highlighted) {
@@ -234,7 +234,7 @@ const { stories, lang } = Astro.props
 
 			// Lazy load the image to replace the blurry placeholder
 			if (!this.isImageLoaded()) {
-				this.lazyLoadImage(story.storyImage, story.story[lang].title)
+				this.lazyLoadImage(story.storyImage.main, story.story[lang].title)
 			}
 
 			// Add href to this grid item using slug

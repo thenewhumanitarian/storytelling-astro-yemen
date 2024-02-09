@@ -5,7 +5,10 @@
       "en": "en-story-20",
       "ar": "ar-story-20"
     },
-    "storyImage": "../images/placeholder_images/puzzle-27.png",
+    "storyImage": {
+      "main": "../images/placeholder_images/puzzle-07.png",
+      "pixelated": "../images/placeholder_images/puzzle-27.png"
+    },
     "personalInfo": {
       "en": {
         "name": "Ana",
@@ -52,7 +55,10 @@
       "en": "en-story-21",
       "ar": "ar-story-21"
     },
-    "storyImage": "../images/placeholder_images/puzzle-28.png",
+    "storyImage": {
+      "main": "../images/placeholder_images/puzzle-30.png",
+      "pixelated": "../images/placeholder_images/puzzle-01.png"
+    },
     "personalInfo": {
       "en": {
         "name": "Riad",
@@ -99,7 +105,10 @@
       "en": "en-story-27",
       "ar": "ar-story-27"
     },
-    "storyImage": "../images/placeholder_images/puzzle-21.png",
+    "storyImage": {
+      "main": "../images/placeholder_images/puzzle-32.png",
+      "pixelated": "../images/placeholder_images/puzzle-32.png"
+    },
     "personalInfo": {
       "en": {
         "name": "ALMOATAZ BELLH",
@@ -146,7 +155,10 @@
       "en": "en-story-28",
       "ar": "ar-story-28"
     },
-    "storyImage": "../images/placeholder_images/puzzle-14.png",
+    "storyImage": {
+      "main": "../images/placeholder_images/puzzle-18.png",
+      "pixelated": "../images/placeholder_images/puzzle-12.png"
+    },
     "personalInfo": {
       "en": {
         "name": "Arzaq Al-Najjar",
@@ -193,7 +205,10 @@
       "en": "en-story-35",
       "ar": "ar-story-35"
     },
-    "storyImage": "../images/thumbnails/thumbnail-35.jpg",
+    "storyImage": {
+      "mainImage": "../images/thumbnails/thumbnail-35.jpg",
+      "pixelatedImage": "../images/thumbnails/pixelated/thumbnail-35.jpg"
+    },
     "personalInfo": {
       "en": {
         "name": "Zaid",
@@ -243,7 +258,10 @@
       "en": "en-story-36",
       "ar": "ar-story-36"
     },
-    "storyImage": "../images/placeholder_images/puzzle-19.png",
+    "storyImage": {
+      "main": "../images/placeholder_images/puzzle-04.png",
+      "pixelated": "../images/placeholder_images/puzzle-18.png"
+    },
     "personalInfo": {
       "en": {
         "name": "G. Moh'D",
@@ -290,7 +308,10 @@
       "en": "en-story-37",
       "ar": "ar-story-37"
     },
-    "storyImage": "../images/placeholder_images/puzzle-32.png",
+    "storyImage": {
+      "main": "../images/placeholder_images/puzzle-26.png",
+      "pixelated": "../images/placeholder_images/puzzle-11.png"
+    },
     "personalInfo": {
       "en": {
         "name": "ن",
@@ -337,7 +358,10 @@
       "en": "en-story-38",
       "ar": "ar-story-38"
     },
-    "storyImage": "../images/placeholder_images/puzzle-10.png",
+    "storyImage": {
+      "main": "../images/placeholder_images/puzzle-09.png",
+      "pixelated": "../images/placeholder_images/puzzle-06.png"
+    },
     "personalInfo": {
       "en": {
         "name": "",
@@ -384,7 +408,10 @@
       "en": "i-hoped-it-was-a-cruel-joke",
       "ar": "ar-story-39"
     },
-    "storyImage": "../images/placeholder_images/puzzle-28.png",
+    "storyImage": {
+      "main": "../images/placeholder_images/puzzle-29.png",
+      "pixelated": "../images/placeholder_images/puzzle-16.png"
+    },
     "personalInfo": {
       "en": {
         "name": "Ibrahim Yahia",
@@ -431,7 +458,10 @@
       "en": "en-story-40",
       "ar": "ar-story-40"
     },
-    "storyImage": "../images/placeholder_images/puzzle-21.png",
+    "storyImage": {
+      "main": "../images/placeholder_images/puzzle-02.png",
+      "pixelated": "../images/placeholder_images/puzzle-27.png"
+    },
     "personalInfo": {
       "en": {
         "name": "Hessah",
@@ -478,7 +508,10 @@
       "en": "our-lives-are-suspended",
       "ar": "ar-story-41"
     },
-    "storyImage": "../images/placeholder_images/puzzle-29.png",
+    "storyImage": {
+      "main": "../images/placeholder_images/puzzle-29.png",
+      "pixelated": "../images/placeholder_images/puzzle-28.png"
+    },
     "personalInfo": {
       "en": {
         "name": "Dhuha",
@@ -525,7 +558,10 @@
       "en": "en-story-42",
       "ar": "ar-story-42"
     },
-    "storyImage": "../images/placeholder_images/puzzle-01.png",
+    "storyImage": {
+      "main": "../images/placeholder_images/puzzle-29.png",
+      "pixelated": "../images/placeholder_images/puzzle-20.png"
+    },
     "personalInfo": {
       "en": {
         "name": "A.A",
@@ -572,7 +608,10 @@
       "en": "en-story-43",
       "ar": "ar-story-43"
     },
-    "storyImage": "../images/placeholder_images/puzzle-24.png",
+    "storyImage": {
+      "main": "../images/placeholder_images/puzzle-11.png",
+      "pixelated": "../images/placeholder_images/puzzle-20.png"
+    },
     "personalInfo": {
       "en": {
         "name": "Redha",
@@ -621,7 +660,10 @@
       "en": "en-story-44",
       "ar": "ar-story-44"
     },
-    "storyImage": "../images/placeholder_images/puzzle-24.png",
+    "storyImage": {
+      "main": "../images/placeholder_images/puzzle-03.png",
+      "pixelated": "../images/placeholder_images/puzzle-09.png"
+    },
     "personalInfo": {
       "en": {
         "name": "S.A",
@@ -668,7 +710,10 @@
       "en": "en-story-45",
       "ar": "ar-story-45"
     },
-    "storyImage": "../images/placeholder_images/puzzle-06.png",
+    "storyImage": {
+      "main": "../images/placeholder_images/puzzle-30.png",
+      "pixelated": "../images/placeholder_images/puzzle-24.png"
+    },
     "personalInfo": {
       "en": {
         "name": "Ali / Abo arsalan",
@@ -715,7 +760,10 @@
       "en": "en-story-46",
       "ar": "ar-story-46"
     },
-    "storyImage": "../images/placeholder_images/puzzle-18.png",
+    "storyImage": {
+      "main": "../images/placeholder_images/puzzle-32.png",
+      "pixelated": "../images/placeholder_images/puzzle-03.png"
+    },
     "personalInfo": {
       "en": {
         "name": "Yusra",
@@ -762,7 +810,10 @@
       "en": "en-story-47",
       "ar": "ar-story-47"
     },
-    "storyImage": "../images/placeholder_images/puzzle-05.png",
+    "storyImage": {
+      "main": "../images/placeholder_images/puzzle-07.png",
+      "pixelated": "../images/placeholder_images/puzzle-20.png"
+    },
     "personalInfo": {
       "en": {
         "name": "علي عبدالرحمن علي الحمادي",
@@ -809,7 +860,10 @@
       "en": "en-story-48",
       "ar": "ar-story-48"
     },
-    "storyImage": "../images/placeholder_images/puzzle-23.png",
+    "storyImage": {
+      "main": "../images/placeholder_images/puzzle-10.png",
+      "pixelated": "../images/placeholder_images/puzzle-04.png"
+    },
     "personalInfo": {
       "en": {
         "name": "T.Saleh",
@@ -856,7 +910,10 @@
       "en": "i-proved-them-all-wrong",
       "ar": "ar-story-49"
     },
-    "storyImage": "../images/thumbnails/thumbnail-49.jpg",
+    "storyImage": {
+      "mainImage": "../images/thumbnails/thumbnail-49.jpg",
+      "pixelatedImage": "../images/thumbnails/pixelated/thumbnail-49.jpg"
+    },
     "personalInfo": {
       "en": {
         "name": "Bushra",
@@ -906,7 +963,10 @@
       "en": "en-story-50",
       "ar": "ar-story-50"
     },
-    "storyImage": "../images/placeholder_images/puzzle-03.png",
+    "storyImage": {
+      "main": "../images/placeholder_images/puzzle-06.png",
+      "pixelated": "../images/placeholder_images/puzzle-31.png"
+    },
     "personalInfo": {
       "en": {
         "name": "Abdullah",
@@ -953,7 +1013,10 @@
       "en": "en-story-51",
       "ar": "ar-story-51"
     },
-    "storyImage": "../images/placeholder_images/puzzle-10.png",
+    "storyImage": {
+      "main": "../images/placeholder_images/puzzle-19.png",
+      "pixelated": "../images/placeholder_images/puzzle-01.png"
+    },
     "personalInfo": {
       "en": {
         "name": "Amani",
@@ -1000,7 +1063,10 @@
       "en": "en-story-52",
       "ar": "ar-story-52"
     },
-    "storyImage": "../images/placeholder_images/puzzle-02.png",
+    "storyImage": {
+      "main": "../images/placeholder_images/puzzle-14.png",
+      "pixelated": "../images/placeholder_images/puzzle-28.png"
+    },
     "personalInfo": {
       "en": {
         "name": "M.",
@@ -1047,7 +1113,10 @@
       "en": "en-story-53",
       "ar": "ar-story-53"
     },
-    "storyImage": "../images/thumbnails/thumbnail-53.jpg",
+    "storyImage": {
+      "mainImage": "../images/thumbnails/thumbnail-53.jpg",
+      "pixelatedImage": "../images/thumbnails/pixelated/thumbnail-53.jpg"
+    },
     "personalInfo": {
       "en": {
         "name": "Abdulrazak",
@@ -1096,7 +1165,10 @@
       "en": "en-story-54",
       "ar": "ar-story-54"
     },
-    "storyImage": "../images/placeholder_images/puzzle-28.png",
+    "storyImage": {
+      "main": "../images/placeholder_images/puzzle-12.png",
+      "pixelated": "../images/placeholder_images/puzzle-20.png"
+    },
     "personalInfo": {
       "en": {
         "name": "Malek",
@@ -1143,7 +1215,10 @@
       "en": "en-story-55",
       "ar": "ar-story-55"
     },
-    "storyImage": "../images/thumbnails/thumbnail-55.jpg",
+    "storyImage": {
+      "mainImage": "../images/thumbnails/thumbnail-55.jpg",
+      "pixelatedImage": "../images/thumbnails/pixelated/thumbnail-55.jpg"
+    },
     "personalInfo": {
       "en": {
         "name": "Sofiane Alsaar",
@@ -1201,7 +1276,10 @@
       "en": "en-story-56",
       "ar": "ar-story-56"
     },
-    "storyImage": "../images/placeholder_images/puzzle-03.png",
+    "storyImage": {
+      "main": "../images/placeholder_images/puzzle-25.png",
+      "pixelated": "../images/placeholder_images/puzzle-04.png"
+    },
     "personalInfo": {
       "en": {
         "name": "SA",
@@ -1248,7 +1326,10 @@
       "en": "en-story-57",
       "ar": "ar-story-57"
     },
-    "storyImage": "../images/placeholder_images/puzzle-18.png",
+    "storyImage": {
+      "main": "../images/placeholder_images/puzzle-17.png",
+      "pixelated": "../images/placeholder_images/puzzle-19.png"
+    },
     "personalInfo": {
       "en": {
         "name": "Wafa",
@@ -1295,7 +1376,10 @@
       "en": "en-story-58",
       "ar": "ar-story-58"
     },
-    "storyImage": "../images/placeholder_images/puzzle-11.png",
+    "storyImage": {
+      "main": "../images/placeholder_images/puzzle-10.png",
+      "pixelated": "../images/placeholder_images/puzzle-15.png"
+    },
     "personalInfo": {
       "en": {
         "name": "Hanan",
@@ -1342,7 +1426,10 @@
       "en": "en-story-59",
       "ar": "ar-story-59"
     },
-    "storyImage": "../images/placeholder_images/puzzle-12.png",
+    "storyImage": {
+      "main": "../images/placeholder_images/puzzle-11.png",
+      "pixelated": "../images/placeholder_images/puzzle-14.png"
+    },
     "personalInfo": {
       "en": {
         "name": "S",
@@ -1389,7 +1476,10 @@
       "en": "en-story-60",
       "ar": "ar-story-60"
     },
-    "storyImage": "../images/placeholder_images/puzzle-17.png",
+    "storyImage": {
+      "main": "../images/placeholder_images/puzzle-22.png",
+      "pixelated": "../images/placeholder_images/puzzle-30.png"
+    },
     "personalInfo": {
       "en": {
         "name": "",
@@ -1436,7 +1526,10 @@
       "en": "en-story-61",
       "ar": "ar-story-61"
     },
-    "storyImage": "../images/placeholder_images/puzzle-23.png",
+    "storyImage": {
+      "main": "../images/placeholder_images/puzzle-15.png",
+      "pixelated": "../images/placeholder_images/puzzle-25.png"
+    },
     "personalInfo": {
       "en": {
         "name": "Majda",
@@ -1483,7 +1576,10 @@
       "en": "en-story-62",
       "ar": "ar-story-62"
     },
-    "storyImage": "../images/placeholder_images/puzzle-30.png",
+    "storyImage": {
+      "main": "../images/placeholder_images/puzzle-02.png",
+      "pixelated": "../images/placeholder_images/puzzle-06.png"
+    },
     "personalInfo": {
       "en": {
         "name": "Elham Hassan",
@@ -1532,7 +1628,10 @@
       "en": "en-story-63",
       "ar": "ar-story-63"
     },
-    "storyImage": "../images/thumbnails/thumbnail-63.jpg",
+    "storyImage": {
+      "mainImage": "../images/thumbnails/thumbnail-63.jpg",
+      "pixelatedImage": "../images/thumbnails/pixelated/thumbnail-63.jpg"
+    },
     "personalInfo": {
       "en": {
         "name": "Marwah",
@@ -1581,7 +1680,10 @@
       "en": "en-story-64",
       "ar": "ar-story-64"
     },
-    "storyImage": "../images/placeholder_images/puzzle-28.png",
+    "storyImage": {
+      "main": "../images/placeholder_images/puzzle-06.png",
+      "pixelated": "../images/placeholder_images/puzzle-30.png"
+    },
     "personalInfo": {
       "en": {
         "name": "Salem",
@@ -1628,7 +1730,10 @@
       "en": "en-story-65",
       "ar": "ar-story-65"
     },
-    "storyImage": "../images/placeholder_images/puzzle-07.png",
+    "storyImage": {
+      "main": "../images/placeholder_images/puzzle-16.png",
+      "pixelated": "../images/placeholder_images/puzzle-15.png"
+    },
     "personalInfo": {
       "en": {
         "name": "Ahmed",
@@ -1675,7 +1780,10 @@
       "en": "en-story-66",
       "ar": "ar-story-66"
     },
-    "storyImage": "../images/placeholder_images/puzzle-12.png",
+    "storyImage": {
+      "main": "../images/placeholder_images/puzzle-04.png",
+      "pixelated": "../images/placeholder_images/puzzle-11.png"
+    },
     "personalInfo": {
       "en": {
         "name": "",
@@ -1725,7 +1833,10 @@
       "en": "en-story-67",
       "ar": "ar-story-67"
     },
-    "storyImage": "../images/placeholder_images/puzzle-11.png",
+    "storyImage": {
+      "main": "../images/placeholder_images/puzzle-05.png",
+      "pixelated": "../images/placeholder_images/puzzle-07.png"
+    },
     "personalInfo": {
       "en": {
         "name": "W",
@@ -1772,7 +1883,10 @@
       "en": "en-story-68",
       "ar": "ar-story-68"
     },
-    "storyImage": "../images/placeholder_images/puzzle-05.png",
+    "storyImage": {
+      "main": "../images/placeholder_images/puzzle-01.png",
+      "pixelated": "../images/placeholder_images/puzzle-07.png"
+    },
     "personalInfo": {
       "en": {
         "name": "Mahasen",
@@ -1821,7 +1935,10 @@
       "en": "en-story-69",
       "ar": "ar-story-69"
     },
-    "storyImage": "../images/placeholder_images/puzzle-23.png",
+    "storyImage": {
+      "main": "../images/placeholder_images/puzzle-07.png",
+      "pixelated": "../images/placeholder_images/puzzle-15.png"
+    },
     "personalInfo": {
       "en": {
         "name": "H",
@@ -1868,7 +1985,10 @@
       "en": "en-story-70",
       "ar": "ar-story-70"
     },
-    "storyImage": "../images/placeholder_images/puzzle-30.png",
+    "storyImage": {
+      "main": "../images/placeholder_images/puzzle-21.png",
+      "pixelated": "../images/placeholder_images/puzzle-28.png"
+    },
     "personalInfo": {
       "en": {
         "name": "Yaqoob",
@@ -1915,7 +2035,10 @@
       "en": "en-story-1001",
       "ar": "ar-story-1001"
     },
-    "storyImage": null,
+    "storyImage": {
+      "main": "../images/thumbnails/thumbnail-1001.jpg",
+      "pixelated": "../images/thumbnails/pixelated/thumbnail-1001.jpg"
+    },
     "personalInfo": {
       "en": {
         "name": "Assem",
@@ -1966,7 +2089,10 @@
       "en": "en-story-1002",
       "ar": "ar-story-1002"
     },
-    "storyImage": "../images/placeholder_images/puzzle-21.png",
+    "storyImage": {
+      "main": "../images/placeholder_images/puzzle-21.png",
+      "pixelated": "../images/placeholder_images/puzzle-05.png"
+    },
     "personalInfo": {
       "en": {
         "name": "Shamsan",
@@ -2013,7 +2139,10 @@
       "en": "en-story-1003",
       "ar": "ar-story-1003"
     },
-    "storyImage": "../images/placeholder_images/puzzle-19.png",
+    "storyImage": {
+      "main": "../images/placeholder_images/puzzle-26.png",
+      "pixelated": "../images/placeholder_images/puzzle-12.png"
+    },
     "personalInfo": {
       "en": {
         "name": "Ebtehal",
@@ -2060,7 +2189,10 @@
       "en": "en-story-1004",
       "ar": "ar-story-1004"
     },
-    "storyImage": "../images/thumbnails/thumbnail-1004.jpg",
+    "storyImage": {
+      "main": "../images/thumbnails/thumbnail-1004.jpg",
+      "pixelated": "../images/thumbnails/pixelated/thumbnail-1004.jpg"
+    },
     "personalInfo": {
       "en": {
         "name": "Basheer",
@@ -2109,7 +2241,10 @@
       "en": "en-story-1005",
       "ar": "ar-story-1005"
     },
-    "storyImage": "../images/placeholder_images/puzzle-24.png",
+    "storyImage": {
+      "main": "../images/placeholder_images/puzzle-16.png",
+      "pixelated": "../images/placeholder_images/puzzle-21.png"
+    },
     "personalInfo": {
       "en": {
         "name": "Wafaa",
@@ -2156,7 +2291,10 @@
       "en": "en-story-1006",
       "ar": "ar-story-1006"
     },
-    "storyImage": "../images/placeholder_images/puzzle-31.png",
+    "storyImage": {
+      "main": "../images/placeholder_images/puzzle-32.png",
+      "pixelated": "../images/placeholder_images/puzzle-08.png"
+    },
     "personalInfo": {
       "en": {
         "name": "Ameen",
@@ -2167,8 +2305,8 @@
       "ar": {
         "name": "امين",
         "surname": "الوجيه",
-        "whereFrom": "",
-        "livingIn": ""
+        "whereFrom": "الضالع",
+        "livingIn": "الضالع"
       }
     },
     "contact": {
@@ -2179,7 +2317,7 @@
     "story": {
       "en": {
         "title": "",
-        "content": "English text"
+        "content": "The war is no picnic. The war is destruction, devastation, displacement, and killing. We have suffered for eight years until now and are still suffering.\nOur salaries, jobs, and schools are all cut. We are suffering from a shortage of food, medicine, and all the means of decent living. We appeal to the world and its organisations to look at us with humanity and conscience. Stop the war. This is our demand.\n"
       },
       "ar": {
         "title": "",
@@ -2203,7 +2341,10 @@
       "en": "en-story-1007",
       "ar": "ar-story-1007"
     },
-    "storyImage": "../images/placeholder_images/puzzle-06.png",
+    "storyImage": {
+      "main": "../images/placeholder_images/puzzle-28.png",
+      "pixelated": "../images/placeholder_images/puzzle-21.png"
+    },
     "personalInfo": {
       "en": {
         "name": "Abduljabar",
@@ -2212,10 +2353,10 @@
         "livingIn": "AlDhale"
       },
       "ar": {
-        "name": "",
-        "surname": "",
-        "whereFrom": "",
-        "livingIn": ""
+        "name": "عبدالجبار",
+        "surname": "الشرام",
+        "whereFrom": "الضالع",
+        "livingIn": "الضالع"
       }
     },
     "contact": {
@@ -2226,7 +2367,7 @@
     "story": {
       "en": {
         "title": "",
-        "content": "English text"
+        "content": "The war affected the Yemeni people in all aspects. First, the deterioration of the living economy. Eighty percent of Yemeni families do not have even the most basic necessities, like food, for their children. as there aren't any jobs available to cover the cost of that food. The wheel of production has stopped due to the senseless war. We, as displaced people, have suffered from the rise in rent prices and food prices due to the deterioration of the exchange rate for nine years until now. Consequently, we demand that all organisations fulfil their roles and that the international community apply pressure to all parties involved in this absurd war to cease their actions, whether internally or externally. All we ask for is an end to the conflict and a return of happiness to Yemen.\n"
       },
       "ar": {
         "title": "",
@@ -2250,7 +2391,10 @@
       "en": "en-story-1008",
       "ar": "ar-story-1008"
     },
-    "storyImage": "../images/placeholder_images/puzzle-22.png",
+    "storyImage": {
+      "main": "../images/placeholder_images/puzzle-15.png",
+      "pixelated": "../images/placeholder_images/puzzle-01.png"
+    },
     "personalInfo": {
       "en": {
         "name": "Yahya",
@@ -2261,7 +2405,7 @@
       "ar": {
         "name": "يحي",
         "surname": "علي حسن علي",
-        "whereFrom": "",
+        "whereFrom": "الضالع",
         "livingIn": ""
       }
     },
@@ -2273,7 +2417,7 @@
     "story": {
       "en": {
         "title": "",
-        "content": "English text"
+        "content": "Eight years of war were due to the misconduct of the successive administrations of Imamate, Saleh’s rule, ignorance, and foreign interventions, which exhausted the already exhausted people and eliminated every hope and dream the people had. People began to live in a state of alienation in their homeland, searching for another homeland that could provide them with a decent living, as the people have become deprived of the necessities of life and education.\nThe strong eat the weak, and the barbaric war has become a means of livelihood for merchants, and its fuel is the poor people. It is a situation that we cannot describe accurately.\nBecause of the war, students lost their right to education, which was very low from the beginning; employees lost their salaries; and murderers and criminals held positions. Millions were displaced, homes were blown up, rights were looted, and funds were confiscated. Roads were cut off; millions are no longer able to visit their relatives. The cemeteries are filled with innocent victims, children, and the elderly. The prisons are filled with people of opinion and journalists. Many young people joined the war with one of the parties because of poverty. The war destroyed morals, spread unethical values, tore apart social relationships, and caused domestic violence and suicide because of bad living. \nIt's a horrible life, run by criminals, murderers, and looters under the control of foreign hands. The people have lost hope due to the prolonged war and the lack of a glimmer of hope for solutions. Due to the lack of conscience among the internal elites and external forces, the people have become in a state of dying."
       },
       "ar": {
         "title": "",
@@ -2297,7 +2441,10 @@
       "en": "en-story-1009",
       "ar": "ar-story-1009"
     },
-    "storyImage": "../images/placeholder_images/puzzle-21.png",
+    "storyImage": {
+      "main": "../images/placeholder_images/puzzle-03.png",
+      "pixelated": "../images/placeholder_images/puzzle-11.png"
+    },
     "personalInfo": {
       "en": {
         "name": "Yaqoub",
@@ -2344,7 +2491,10 @@
       "en": "en-story-1010",
       "ar": "ar-story-1010"
     },
-    "storyImage": "../images/placeholder_images/puzzle-02.png",
+    "storyImage": {
+      "main": "../images/placeholder_images/puzzle-17.png",
+      "pixelated": "../images/placeholder_images/puzzle-19.png"
+    },
     "personalInfo": {
       "en": {
         "name": "Kafa",
@@ -2391,7 +2541,10 @@
       "en": "en-story-1011",
       "ar": "ar-story-1011"
     },
-    "storyImage": "../images/placeholder_images/puzzle-15.png",
+    "storyImage": {
+      "main": "../images/placeholder_images/puzzle-08.png",
+      "pixelated": "../images/placeholder_images/puzzle-19.png"
+    },
     "personalInfo": {
       "en": {
         "name": "Ahmed",
@@ -2438,7 +2591,10 @@
       "en": "en-story-1012",
       "ar": "ar-story-1012"
     },
-    "storyImage": "../images/placeholder_images/puzzle-28.png",
+    "storyImage": {
+      "main": "../images/placeholder_images/puzzle-25.png",
+      "pixelated": "../images/placeholder_images/puzzle-20.png"
+    },
     "personalInfo": {
       "en": {
         "name": "Aref",
@@ -2485,7 +2641,10 @@
       "en": "en-story-1013",
       "ar": "ar-story-1013"
     },
-    "storyImage": "../images/placeholder_images/puzzle-19.png",
+    "storyImage": {
+      "main": "../images/placeholder_images/puzzle-30.png",
+      "pixelated": "../images/placeholder_images/puzzle-10.png"
+    },
     "personalInfo": {
       "en": {
         "name": "Om Ayman",
@@ -2532,7 +2691,10 @@
       "en": "en-story-1014",
       "ar": "ar-story-1014"
     },
-    "storyImage": "../images/thumbnails/thumbnail-1014.jpg",
+    "storyImage": {
+      "main": "../images/thumbnails/thumbnail-1014.jpg",
+      "pixelated": "../images/thumbnails/pixelated/thumbnail-1014.jpg"
+    },
     "personalInfo": {
       "en": {
         "name": "Amatalrahman",
@@ -2581,7 +2743,10 @@
       "en": "en-story-1015",
       "ar": "ar-story-1015"
     },
-    "storyImage": "../images/placeholder_images/puzzle-24.png",
+    "storyImage": {
+      "main": "../images/placeholder_images/puzzle-20.png",
+      "pixelated": "../images/placeholder_images/puzzle-20.png"
+    },
     "personalInfo": {
       "en": {
         "name": "Adel",
@@ -2592,8 +2757,8 @@
       "ar": {
         "name": "عادل",
         "surname": "المالكي",
-        "whereFrom": "",
-        "livingIn": ""
+        "whereFrom": "الضالع",
+        "livingIn": "الضالع"
       }
     },
     "contact": {
@@ -2604,7 +2769,7 @@
     "story": {
       "en": {
         "title": "",
-        "content": "English text"
+        "content": "The effects of the war on the Yemeni individual are huge and devastating. These direct negative impacts include loss of life and physical injuries, the displacement of many people and the loss of safe shelter. In addition, there are significant economic and social impacts, including job loss, deteriorating economic situation, and high rates of poverty and hunger. The war also caused the deterioration of infrastructure and basic services, such as electricity, water, health, and education. There is also a psychological impact on individuals, including anxiety, stress and trauma. The war has also exacerbated political and social divisions in Yemen, increasing tensions and conflicts. All of these effects leave deep scars and continue to affect the life of the Yemeni individual for a long time.\n"
       },
       "ar": {
         "title": "",
@@ -2628,7 +2793,10 @@
       "en": "en-story-1016",
       "ar": "ar-story-1016"
     },
-    "storyImage": "../images/placeholder_images/puzzle-09.png",
+    "storyImage": {
+      "main": "../images/placeholder_images/puzzle-01.png",
+      "pixelated": "../images/placeholder_images/puzzle-20.png"
+    },
     "personalInfo": {
       "en": {
         "name": "Lutf",
@@ -2675,7 +2843,10 @@
       "en": "en-story-1017",
       "ar": "ar-story-1017"
     },
-    "storyImage": "../images/placeholder_images/puzzle-10.png",
+    "storyImage": {
+      "main": "../images/placeholder_images/puzzle-08.png",
+      "pixelated": "../images/placeholder_images/puzzle-10.png"
+    },
     "personalInfo": {
       "en": {
         "name": "Ahmed",
@@ -2722,7 +2893,10 @@
       "en": "en-story-1018",
       "ar": "ar-story-1018"
     },
-    "storyImage": "../images/placeholder_images/puzzle-27.png",
+    "storyImage": {
+      "main": "../images/placeholder_images/puzzle-08.png",
+      "pixelated": "../images/placeholder_images/puzzle-22.png"
+    },
     "personalInfo": {
       "en": {
         "name": "Abdulrahman",
@@ -2769,7 +2943,10 @@
       "en": "en-story-1019",
       "ar": "ar-story-1019"
     },
-    "storyImage": "../images/thumbnails/thumbnail-1019.jpg",
+    "storyImage": {
+      "main": "../images/thumbnails/thumbnail-1019.jpg",
+      "pixelated": "../images/thumbnails/pixelated/thumbnail-1019.jpg"
+    },
     "personalInfo": {
       "en": {
         "name": "Basel",
@@ -2818,7 +2995,10 @@
       "en": "en-story-1020",
       "ar": "ar-story-1020"
     },
-    "storyImage": "../images/placeholder_images/puzzle-17.png",
+    "storyImage": {
+      "main": "../images/placeholder_images/puzzle-12.png",
+      "pixelated": "../images/placeholder_images/puzzle-24.png"
+    },
     "personalInfo": {
       "en": {
         "name": "Mohsen",
@@ -2865,7 +3045,10 @@
       "en": "en-story-1021",
       "ar": "ar-story-1021"
     },
-    "storyImage": "../images/placeholder_images/puzzle-32.png",
+    "storyImage": {
+      "main": "../images/placeholder_images/puzzle-17.png",
+      "pixelated": "../images/placeholder_images/puzzle-32.png"
+    },
     "personalInfo": {
       "en": {
         "name": "Amal",
@@ -2912,7 +3095,10 @@
       "en": "en-story-1022",
       "ar": "ar-story-1022"
     },
-    "storyImage": "../images/placeholder_images/puzzle-03.png",
+    "storyImage": {
+      "main": "../images/placeholder_images/puzzle-04.png",
+      "pixelated": "../images/placeholder_images/puzzle-26.png"
+    },
     "personalInfo": {
       "en": {
         "name": "Abdulrahman",
@@ -2959,7 +3145,10 @@
       "en": "en-story-1023",
       "ar": "ar-story-1023"
     },
-    "storyImage": "../images/placeholder_images/puzzle-22.png",
+    "storyImage": {
+      "main": "../images/placeholder_images/puzzle-07.png",
+      "pixelated": "../images/placeholder_images/puzzle-24.png"
+    },
     "personalInfo": {
       "en": {
         "name": "Mohammed",
@@ -3006,7 +3195,10 @@
       "en": "en-story-1024",
       "ar": "ar-story-1024"
     },
-    "storyImage": "../images/thumbnails/thumbnail-1024.jpg",
+    "storyImage": {
+      "main": "../images/thumbnails/thumbnail-1024.jpg",
+      "pixelated": "../images/thumbnails/pixelated/thumbnail-1024.jpg"
+    },
     "personalInfo": {
       "en": {
         "name": "Mohammed",
@@ -3059,7 +3251,10 @@
       "en": "en-story-1025",
       "ar": "ar-story-1025"
     },
-    "storyImage": "../images/placeholder_images/puzzle-17.png",
+    "storyImage": {
+      "main": "../images/placeholder_images/puzzle-18.png",
+      "pixelated": "../images/placeholder_images/puzzle-05.png"
+    },
     "personalInfo": {
       "en": {
         "name": "Umm Khaled",
@@ -3106,7 +3301,10 @@
       "en": "en-story-1026",
       "ar": "ar-story-1026"
     },
-    "storyImage": "../images/placeholder_images/puzzle-23.png",
+    "storyImage": {
+      "main": "../images/placeholder_images/puzzle-26.png",
+      "pixelated": "../images/placeholder_images/puzzle-23.png"
+    },
     "personalInfo": {
       "en": {
         "name": "Eman",
@@ -3155,7 +3353,10 @@
       "en": "en-story-1027",
       "ar": "ar-story-1027"
     },
-    "storyImage": "../images/placeholder_images/puzzle-03.png",
+    "storyImage": {
+      "main": "../images/placeholder_images/puzzle-19.png",
+      "pixelated": "../images/placeholder_images/puzzle-03.png"
+    },
     "personalInfo": {
       "en": {
         "name": "Eyad",
@@ -3202,7 +3403,10 @@
       "en": "en-story-1028",
       "ar": "ar-story-1028"
     },
-    "storyImage": "../images/placeholder_images/puzzle-08.png",
+    "storyImage": {
+      "main": "../images/placeholder_images/puzzle-14.png",
+      "pixelated": "../images/placeholder_images/puzzle-07.png"
+    },
     "personalInfo": {
       "en": {
         "name": "Abdulrazaq",
@@ -3225,11 +3429,11 @@
     "story": {
       "en": {
         "title": "",
-        "content": "English text"
+        "content": "\nThe story in a literary context ___ 53-\n\nThe story in a journalistic context\n\n\nNo family, no friends; Abdul Razzaq Al-Azazi is exhausted, at 38 years of age, of which there are not many remaining. He lives in Kuwait, as a body without a soul, in a house 8 meters width and 4 in height. He can barely cope with the naughtiness of his twin children, Evan and Athena, “two and a half years old,” and their sister, Riva, “7 years old” His wife gave birth to the children in Kuwait, and no one was around her, except Abdul Razzaq, who learned on YouTube how to take care of her during pregnancy and childbirth, and of her infant children when she fell ill. At seven in the morning; He dresses lightly; not to wake anyone up, he quietly leaves the narrow house, heading to work, buys bus tickets, sits in the last chair, puts a headset on his head; He listens to a podcast to help him endure the two hours that he spends on transportation. From Jahra to Hawalli, passing through the capital, the distance he travels daily, which is estimated at 45 km, including walking under the burning sun. He cannot buy a car because of his low income, which forces him to live far away. At nine he arrives at work: there are complaints waiting for him; to be heard, and violations to be monitored. He works for a human rights organisation that provides counselling to victims of abuse, and although his heart is heavy with suffering, he tries to go beyond when it comes to helping the oppressed. On his way home home, he talks to his family and friends, whom he misses and cannot visit because of his religious freedom I left my body in Yemen since the 26th of May 2015, but my soul is still hanging there, Abdul Razzaq says. On the 16th of August 2015, the war forced him to celebrate his wedding alone in Sudan. The country he fled to before moving to Kuwait. There was no one next to him except his beloved wife, Fatima, with whom he was engaged in Yemen, before the war also displaced her and settled with her family in Sudan. With his mother's tears, and his father's broken wishes; He celebrated, then had his children who never met their parents' families. This is how the war penetrated his children, who lacked the kindness of the grandfather and the tenderness of the grandmother. They paid the price of war early, the price of the migration of their parents fleeing their homeland, and their childhood memories engraved on the walls of the alleys, to create new memories, filled with continuous misery and inherited pain and the sadness that never goes away. \n\n"
       },
       "ar": {
         "title": "",
-        "content": ""
+        "content": "القصة بسياق أدبي\n\nعبدالرزاق العزعزي\nأخذتني الحرب بعيدًا عن بلدي، وأعاشتني قسوتها، وفرضت عليّ أن أكونَ بلا أهلٍ أو أصدقاء، فقط كائن يستنزف سنواته التي لم يبقَ منها الكثير.\nأقيم في الكويت، وأجد نفسي كجسدٍ بلا روح، وفي مساحة تُسمّى مجازاً منزل، عُرضها 8 أمتار وطولها 4؛ بالكاد تستوعبُ شقاوة أطفالي ايفان ولاثينا \"سنتين ونصف\" وريفا ذات السبع سنوات.\nأنجبت زوجتي الأطفال في الكويت ولم يكن أحدا بجوارها عداي، كان \"اليوتيوب\" هو المرشد لي في تعليمي كيف أعتني بها أثناء الحمل والولادة، وكيف أعتني بأطفالي حديثو الولادة؛ لأقاسم زوجتي العناية.\nلم أعُد كما أنا، كل شيءٍ تغيّر بي\nأستيقظُ فجراً، وأرتدي ملابسي بخفةٍ كيلا أوقظ أحداً، وأغادرُ منزلي متجهاً إلى العمل عبر المواصلات التي أقضي بها ساعتين.\nرحلة العمل تبدأ من الجهراء محل إقامتي، مرورا بالعاصمة، ثم إلى حولّي، وهي مسافة تصل إلى 45 كم، يتخللها المشي تحت أشعة شمس الكويت الحارقة.\nأصلُ نحو التاسعة إلى عملي، بالتأكيد هناك شكاوٍ تنتظروني يجب أن أستمع لها، وهناك انتهاكات يجب رصدها، أعمل في منظمة حقوقية تساعد ضحايا الانتهاكات، قلبي المثقلٌ بالمعاناة، يتعاطف مع قصص الضحايا ويحاول مساعدتهم بكل طاقته.\nينتهي عملي في الخامسة، لتبدأ رحلة العودة إلى المنزل. تطالبني ريفا أن أشتري سيارة، لكن كيف يمكن اقناعها أن دخلي الشهري لا يفِ بالتزاماتي تجاه أسرتي وأهلي؟ كيف لي أن أخبرها أننا نسكن في منزل ضيق وبعيد، لنستطيع ترشيد النفقات، يا لها من مصطلحات فارغة بالنسبة لطفلة في السابعة.\nلقد تركت اليمن مرغمًا، نشاطي المتصل بالحريات الدينية جعلني أبدو كهدف يجب تصفيته، ذهبت إلى السودان لأبدأ من جديد، تزوجت من حبيبة قلبي فاطمة التي كانت قد سافرت وأهلها إلى السودان هربًا من الحرب، كنت وحيدًا في عرسي، كما نحن الآن وحيدون في مجتمع يصعب الاندماج فيه، وحيدًا كما أطفالي الذين حرمتهم الحرب عطف الجد وحنان الجدة ليدفعوا ثمن الحرب مبكرًا، ثمن هجرة والديهما الفارين من وطنهم، ومن طفولتهما المنقوشة على أزقة وجدران صنعاء التي لم تعد تشبهنا أبدًا.\n....\n\nالقصة بسياق صحفي\nبلا أهل، ولا أصدقاء؛ يستنزف عبدالرزاق العزعزي \"38 عامًا\" سنواته التي لم يتبقَ منها الكثير، يعيش في الكويت: كجسد بلا روح، وفي منزل عرضه 8 أمتار وطوله 4، بالكاد يستوعب مشاغبة طفليه التوأم إيفان ولاثينا \"سنتين ونصف\" واختهما ريفا \"7 سنوات\".\nأنجبت زوجته الأطفال في الكويت ولم يكن أحدًا بجوارها، فقط عبدالرزاق الذي تعلّم في يوتيوب كيف يعتني بها أثناء الحمل والولادة، وبأطفالها الرضّع حين يُسقطها الإعياء.\nالسابعة صباحًا؛ يرتدي ملابسه بخفة؛ حتى لا يوقظ أحد، بهدوء يغادر المنزل الضيق، متوجهًا للعمل، يشتري تذاكر الباص، يجلس في الكرسي الأخير، يضع على رأسه سماعة؛ ليستمع بودكاست ليساعده في تحمّل ساعتين يقضيهما في المواصلات.\nمن الجهراء إلى حولّي مرورًا بالعاصمة، هي المسافة التي يقطعها يوميًا والمقدرة ب45 كم، يتخللها السير على الأقدام تحت أشعة الشمس الحارقة. لا يستطيع شراء سيارة بسبب دخله المتدني الذي دفعه للسكن بعيدًا.\nفي التاسعة يصل إلى العمل: هناك شكاوٍ تنتظره؛ ليستمع إليها، وانتهاكات لرصدها. يعمل لدى منظمة حقوقية تقدم استشارات لضحايا الانتهاكات، ومع أن قلبه مثقل بالمعاناة، يحاول تجاوز ذلك حين يتعلّق الأمر بمساعدة المظلومين.\nفي رحلة العودة للمنزل، يتحدث مع أهله وأصدقاءه الذين يشتاق إليهم ولا يستطيع زيارتهم بسبب نشاطه المتصل بالحريات الدينية. \"تركت جسدي في اليمن منذ 26 مايو 2015 لكن روحي ما تزال معلقة هناك\" يقول عبدالرزاق.\nفي 16 أغسطس 2015 دفعته الحرب للاحتفال بعرسه وحيدًا في السودان؛ البلد التي فر إليها قبل انتقاله إلى الكويت. لم يكن أحدًا بجواره سوى زوجته الحبيبة فاطمة، التي ارتبط بها في اليمن قبل أن تشردها الحرب أيضًا، لتستقر رفقة أهلها في السودان. بدموع والدته، والأمنيات المكسورة لوالده؛ احتفل، ثم أنجب أطفاله الذين لم يلتقوا يومًا بأهل والديهم.\nهكذا تغلغلت الحرب إلى أطفاله الفاقدين لعطف الجد، وحنان الجدة. لقد دفعوا ثمن الحرب مُبكرًا، ثمن هجرة والديهم الفارين من وطنهم، وذكريات طفولتهم المنقوشة على جدران الأزقة، ليصنعوا ذكريات جديدة، ممتلئة بالبؤس المستمر، والألم المتوارث؛ والحزن الذي لا يغيب.\n\n"
       }
     },
     "attachments": [],
@@ -3249,7 +3453,10 @@
       "en": "en-story-1029",
       "ar": "ar-story-1029"
     },
-    "storyImage": "../images/placeholder_images/puzzle-13.png",
+    "storyImage": {
+      "main": "../images/placeholder_images/puzzle-30.png",
+      "pixelated": "../images/placeholder_images/puzzle-20.png"
+    },
     "personalInfo": {
       "en": {
         "name": "Afaf",
@@ -3296,7 +3503,10 @@
       "en": "en-story-1030",
       "ar": "ar-story-1030"
     },
-    "storyImage": "../images/placeholder_images/puzzle-31.png",
+    "storyImage": {
+      "main": "../images/placeholder_images/puzzle-20.png",
+      "pixelated": "../images/placeholder_images/puzzle-07.png"
+    },
     "personalInfo": {
       "en": {
         "name": "Nagat",
@@ -3347,7 +3557,10 @@
       "en": "en-story-1031",
       "ar": "ar-story-1031"
     },
-    "storyImage": "../images/placeholder_images/puzzle-01.png",
+    "storyImage": {
+      "main": "../images/placeholder_images/puzzle-10.png",
+      "pixelated": "../images/placeholder_images/puzzle-27.png"
+    },
     "personalInfo": {
       "en": {
         "name": "H.",
@@ -3394,7 +3607,10 @@
       "en": "en-story-1032",
       "ar": "ar-story-1032"
     },
-    "storyImage": "../images/placeholder_images/puzzle-08.png",
+    "storyImage": {
+      "main": "../images/placeholder_images/puzzle-05.png",
+      "pixelated": "../images/placeholder_images/puzzle-06.png"
+    },
     "personalInfo": {
       "en": {
         "name": "Umm Fatima",
@@ -3441,7 +3657,10 @@
       "en": "en-story-1033",
       "ar": "ar-story-1033"
     },
-    "storyImage": "../images/placeholder_images/puzzle-23.png",
+    "storyImage": {
+      "main": "../images/placeholder_images/puzzle-16.png",
+      "pixelated": "../images/placeholder_images/puzzle-25.png"
+    },
     "personalInfo": {
       "en": {
         "name": "Umm Mariam",
@@ -3488,7 +3707,10 @@
       "en": "en-story-1034",
       "ar": "ar-story-1034"
     },
-    "storyImage": "../images/placeholder_images/puzzle-17.png",
+    "storyImage": {
+      "main": "../images/placeholder_images/puzzle-14.png",
+      "pixelated": "../images/placeholder_images/puzzle-27.png"
+    },
     "personalInfo": {
       "en": {
         "name": "A teacher",
@@ -3537,7 +3759,10 @@
       "en": "en-story-1035",
       "ar": "ar-story-1035"
     },
-    "storyImage": "../images/placeholder_images/puzzle-02.png",
+    "storyImage": {
+      "main": "../images/placeholder_images/puzzle-08.png",
+      "pixelated": "../images/placeholder_images/puzzle-15.png"
+    },
     "personalInfo": {
       "en": {
         "name": "Alaa",
@@ -3586,7 +3811,10 @@
       "en": "en-story-1036",
       "ar": "ar-story-1036"
     },
-    "storyImage": "../images/placeholder_images/puzzle-12.png",
+    "storyImage": {
+      "main": "../images/placeholder_images/puzzle-02.png",
+      "pixelated": "../images/placeholder_images/puzzle-29.png"
+    },
     "personalInfo": {
       "en": {
         "name": "Fahd",
@@ -3633,7 +3861,10 @@
       "en": "en-story-1037",
       "ar": "ar-story-1037"
     },
-    "storyImage": "../images/placeholder_images/puzzle-07.png",
+    "storyImage": {
+      "main": "../images/placeholder_images/puzzle-04.png",
+      "pixelated": "../images/placeholder_images/puzzle-06.png"
+    },
     "personalInfo": {
       "en": {
         "name": "Ali",
@@ -3680,7 +3911,10 @@
       "en": "en-story-1038",
       "ar": "ar-story-1038"
     },
-    "storyImage": "../images/placeholder_images/puzzle-31.png",
+    "storyImage": {
+      "main": "../images/placeholder_images/puzzle-24.png",
+      "pixelated": "../images/placeholder_images/puzzle-11.png"
+    },
     "personalInfo": {
       "en": {
         "name": "Nageeb",
@@ -3729,7 +3963,10 @@
       "en": "en-story-1039",
       "ar": "ar-story-1039"
     },
-    "storyImage": "../images/placeholder_images/puzzle-19.png",
+    "storyImage": {
+      "main": "../images/placeholder_images/puzzle-13.png",
+      "pixelated": "../images/placeholder_images/puzzle-09.png"
+    },
     "personalInfo": {
       "en": {
         "name": "Duaa",
@@ -3776,7 +4013,10 @@
       "en": "en-story-1040",
       "ar": "ar-story-1040"
     },
-    "storyImage": "../images/placeholder_images/puzzle-25.png",
+    "storyImage": {
+      "main": "../images/placeholder_images/puzzle-09.png",
+      "pixelated": "../images/placeholder_images/puzzle-31.png"
+    },
     "personalInfo": {
       "en": {
         "name": "Asia",
@@ -3825,7 +4065,10 @@
       "en": "en-story-1041",
       "ar": "ar-story-1041"
     },
-    "storyImage": "../images/placeholder_images/puzzle-05.png",
+    "storyImage": {
+      "main": "../images/placeholder_images/puzzle-15.png",
+      "pixelated": "../images/placeholder_images/puzzle-17.png"
+    },
     "personalInfo": {
       "en": {
         "name": "Sami",
@@ -3874,7 +4117,10 @@
       "en": "en-story-1042",
       "ar": "ar-story-1042"
     },
-    "storyImage": "../images/placeholder_images/puzzle-03.png",
+    "storyImage": {
+      "main": "../images/placeholder_images/puzzle-20.png",
+      "pixelated": "../images/placeholder_images/puzzle-20.png"
+    },
     "personalInfo": {
       "en": {
         "name": "Abdulrahman",
@@ -3923,7 +4169,10 @@
       "en": "en-story-1043",
       "ar": "ar-story-1043"
     },
-    "storyImage": "../images/placeholder_images/puzzle-11.png",
+    "storyImage": {
+      "main": "../images/placeholder_images/puzzle-12.png",
+      "pixelated": "../images/placeholder_images/puzzle-01.png"
+    },
     "personalInfo": {
       "en": {
         "name": "Ahmed",
@@ -3972,7 +4221,10 @@
       "en": "i-am-alone",
       "ar": "ar-story-1044"
     },
-    "storyImage": "../images/placeholder_images/puzzle-26.png",
+    "storyImage": {
+      "main": "../images/placeholder_images/puzzle-16.png",
+      "pixelated": "../images/placeholder_images/puzzle-19.png"
+    },
     "personalInfo": {
       "en": {
         "name": "Samera",
@@ -4021,7 +4273,10 @@
       "en": "en-story-1045",
       "ar": "ar-story-1045"
     },
-    "storyImage": "../images/placeholder_images/puzzle-18.png",
+    "storyImage": {
+      "main": "../images/placeholder_images/puzzle-08.png",
+      "pixelated": "../images/placeholder_images/puzzle-15.png"
+    },
     "personalInfo": {
       "en": {
         "name": "Gamel",
@@ -4070,7 +4325,10 @@
       "en": "en-story-1046",
       "ar": "ar-story-1046"
     },
-    "storyImage": "../images/placeholder_images/puzzle-26.png",
+    "storyImage": {
+      "main": "../images/placeholder_images/puzzle-26.png",
+      "pixelated": "../images/placeholder_images/puzzle-10.png"
+    },
     "personalInfo": {
       "en": {
         "name": "Zain",
@@ -4119,7 +4377,10 @@
       "en": "en-story-1047",
       "ar": "ar-story-1047"
     },
-    "storyImage": "../images/placeholder_images/puzzle-18.png",
+    "storyImage": {
+      "main": "../images/placeholder_images/puzzle-13.png",
+      "pixelated": "../images/placeholder_images/puzzle-20.png"
+    },
     "personalInfo": {
       "en": {
         "name": "Eyad",
@@ -4168,7 +4429,10 @@
       "en": "en-story-1048",
       "ar": "ar-story-1048"
     },
-    "storyImage": "../images/placeholder_images/puzzle-22.png",
+    "storyImage": {
+      "main": "../images/placeholder_images/puzzle-04.png",
+      "pixelated": "../images/placeholder_images/puzzle-13.png"
+    },
     "personalInfo": {
       "en": {
         "name": "Galal",
@@ -4217,7 +4481,10 @@
       "en": "en-story-1049",
       "ar": "ar-story-1049"
     },
-    "storyImage": "../images/placeholder_images/puzzle-05.png",
+    "storyImage": {
+      "main": "../images/placeholder_images/puzzle-14.png",
+      "pixelated": "../images/placeholder_images/puzzle-16.png"
+    },
     "personalInfo": {
       "en": {
         "name": "Manal",
@@ -4266,7 +4533,10 @@
       "en": "en-story-1050",
       "ar": "ar-story-1050"
     },
-    "storyImage": "../images/thumbnails/thumbnail-1050.jpg",
+    "storyImage": {
+      "main": "../images/thumbnails/thumbnail-1050.jpg",
+      "pixelated": "../images/thumbnails/pixelated/thumbnail-1050.jpg"
+    },
     "personalInfo": {
       "en": {
         "name": "Wadha",
@@ -4316,7 +4586,10 @@
       "en": "en-story-1051",
       "ar": "ar-story-1051"
     },
-    "storyImage": "../images/placeholder_images/puzzle-01.png",
+    "storyImage": {
+      "main": "../images/placeholder_images/puzzle-02.png",
+      "pixelated": "../images/placeholder_images/puzzle-18.png"
+    },
     "personalInfo": {
       "en": {
         "name": "Sanaa",
@@ -4366,7 +4639,10 @@
       "en": "en-story-1052",
       "ar": "ar-story-1052"
     },
-    "storyImage": "../images/placeholder_images/puzzle-21.png",
+    "storyImage": {
+      "main": "../images/placeholder_images/puzzle-18.png",
+      "pixelated": "../images/placeholder_images/puzzle-06.png"
+    },
     "personalInfo": {
       "en": {
         "name": "Doaa",
@@ -4415,7 +4691,10 @@
       "en": "en-story-1053",
       "ar": "ar-story-1053"
     },
-    "storyImage": "../images/placeholder_images/puzzle-14.png",
+    "storyImage": {
+      "main": "../images/placeholder_images/puzzle-31.png",
+      "pixelated": "../images/placeholder_images/puzzle-16.png"
+    },
     "personalInfo": {
       "en": {
         "name": "Yaqoub",
@@ -4464,7 +4743,10 @@
       "en": "en-story-1054",
       "ar": "ar-story-1054"
     },
-    "storyImage": "../images/thumbnails/thumbnail-1054.jpg",
+    "storyImage": {
+      "main": "../images/thumbnails/thumbnail-1054.jpg",
+      "pixelated": "../images/thumbnails/pixelated/thumbnail-1054.jpg"
+    },
     "personalInfo": {
       "en": {
         "name": "Amaal",
@@ -4521,7 +4803,10 @@
       "en": "en-story-1055",
       "ar": "ar-story-1055"
     },
-    "storyImage": "../images/placeholder_images/puzzle-14.png",
+    "storyImage": {
+      "main": "../images/placeholder_images/puzzle-24.png",
+      "pixelated": "../images/placeholder_images/puzzle-13.png"
+    },
     "personalInfo": {
       "en": {
         "name": "Abduljabar",
@@ -4568,7 +4853,10 @@
       "en": "en-story-1056",
       "ar": "ar-story-1056"
     },
-    "storyImage": "../images/placeholder_images/puzzle-25.png",
+    "storyImage": {
+      "main": "../images/placeholder_images/puzzle-04.png",
+      "pixelated": "../images/placeholder_images/puzzle-13.png"
+    },
     "personalInfo": {
       "en": {
         "name": "Abdulsalam",
@@ -4615,7 +4903,10 @@
       "en": "en-story-1057",
       "ar": "ar-story-1057"
     },
-    "storyImage": "../images/placeholder_images/puzzle-12.png",
+    "storyImage": {
+      "main": "../images/placeholder_images/puzzle-11.png",
+      "pixelated": "../images/placeholder_images/puzzle-19.png"
+    },
     "personalInfo": {
       "en": {
         "name": "Mona",
@@ -4662,7 +4953,10 @@
       "en": "en-story-1058",
       "ar": "ar-story-1058"
     },
-    "storyImage": "../images/placeholder_images/puzzle-12.png",
+    "storyImage": {
+      "main": "../images/placeholder_images/puzzle-17.png",
+      "pixelated": "../images/placeholder_images/puzzle-28.png"
+    },
     "personalInfo": {
       "en": {
         "name": "Om Tarek",
@@ -4709,7 +5003,10 @@
       "en": "en-story-1059",
       "ar": "ar-story-1059"
     },
-    "storyImage": "../images/placeholder_images/puzzle-14.png",
+    "storyImage": {
+      "main": "../images/placeholder_images/puzzle-02.png",
+      "pixelated": "../images/placeholder_images/puzzle-28.png"
+    },
     "personalInfo": {
       "en": {
         "name": "Mohammed",
@@ -4756,7 +5053,10 @@
       "en": "en-story-1060",
       "ar": "ar-story-1060"
     },
-    "storyImage": "../images/placeholder_images/puzzle-03.png",
+    "storyImage": {
+      "main": "../images/placeholder_images/puzzle-21.png",
+      "pixelated": "../images/placeholder_images/puzzle-26.png"
+    },
     "personalInfo": {
       "en": {
         "name": "Magedah",
@@ -4803,7 +5103,10 @@
       "en": "en-story-1061",
       "ar": "ar-story-1061"
     },
-    "storyImage": "../images/placeholder_images/puzzle-01.png",
+    "storyImage": {
+      "main": "../images/placeholder_images/puzzle-03.png",
+      "pixelated": "../images/placeholder_images/puzzle-26.png"
+    },
     "personalInfo": {
       "en": {
         "name": "Ahmed",
@@ -4850,7 +5153,10 @@
       "en": "en-story-1062",
       "ar": "ar-story-1062"
     },
-    "storyImage": "../images/placeholder_images/puzzle-05.png",
+    "storyImage": {
+      "main": "../images/placeholder_images/puzzle-15.png",
+      "pixelated": "../images/placeholder_images/puzzle-17.png"
+    },
     "personalInfo": {
       "en": {
         "name": "Sahar",
@@ -4897,7 +5203,10 @@
       "en": "en-story-1063",
       "ar": "ar-story-1063"
     },
-    "storyImage": "../images/placeholder_images/puzzle-10.png",
+    "storyImage": {
+      "main": "../images/placeholder_images/puzzle-10.png",
+      "pixelated": "../images/placeholder_images/puzzle-31.png"
+    },
     "personalInfo": {
       "en": {
         "name": "Safa",
