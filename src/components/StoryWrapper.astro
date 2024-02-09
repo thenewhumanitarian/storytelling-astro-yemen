@@ -318,10 +318,10 @@ const { stories, lang } = Astro.props
 		}
 
 		onStart(ev) {
-			ev.preventDefault()
-
-			if (document.getElementById('grid').style.display === 'none') return
+      if (document.getElementById('grid').style.display === 'none') return
 			this.touchStartTime = Date.now()
+			
+      ev.preventDefault()
 
 			// Add 'is-dragging' class to body to disable hover effects
 			document.body.classList.add('is-dragging')
@@ -336,7 +336,8 @@ const { stories, lang } = Astro.props
 
 		onMove(ev) {
 			if (!this.dragging) return
-			if (document.getElementById('grid').style.display === 'none') return
+
+      if (document.getElementById('grid').style.display === 'none') return
 			ev = ev.type == 'touchmove' ? ev.touches[0] : ev
 
 			let xDelta = ev.clientX - this.lastX
@@ -424,8 +425,6 @@ const { stories, lang } = Astro.props
 				this.offsetY -= pixelHeight * Math.sign(this.offsetY)
 				jumpY = Math.sign(this.offsetY)
 			}
-
-			// console.log(this.rows, this.cols, jumpY)
 
 			if (jumpX || jumpY) {
 				this.items.forEach((item) => {
