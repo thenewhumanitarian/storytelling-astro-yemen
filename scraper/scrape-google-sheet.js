@@ -16,7 +16,7 @@ const placeholderImageArray = require('./data/placeholderImages');
 const csvUrl = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSo1JkBPpgo-jq5HbgZhdrWZ8lDGI8vF0C30gHPweWebwoKJbsmuKtED07jLqSDz3zpZMAfBpFl_Khv/pub?output=csv'; // Replace with your published CSV URL
 
 // Define the output directory for pixelated images, relative to the main script
-const pixelatedPlaceholderImageOutputDirectory = path.join(__dirname, '../images/placeholder_images/pixelated/');
+const pixelatedPlaceholderImageOutputDirectory = path.join(__dirname, '../../public/images/placeholder_images/pixelated');
 
 // Fetch data
 fetchAndParseCSV(csvUrl)
