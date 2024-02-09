@@ -326,6 +326,8 @@ const { stories, lang } = Astro.props
 			// Add 'is-dragging' class to body to disable hover effects
 			document.body.classList.add('is-dragging')
 
+			ev = ev.type == 'touchstart' ? ev.touches[0] : ev
+
 			this.dragging = true
 			this.lastX = ev.clientX
 			this.lastY = ev.clientY
@@ -377,12 +379,12 @@ const { stories, lang } = Astro.props
 
 			// Check duration and act accordingly
 			if (touchDuration < 100) {
-        // This checks if the touch lasted less than 8ms
+				// This checks if the touch lasted less than 8ms
 				// This was a short tap
 				if (ev.target.tagName.toLowerCase() === 'a') {
-          const href = ev.target.getAttribute('href')
+					const href = ev.target.getAttribute('href')
 					if (href) {
-            window.location = href
+						window.location = href
 					}
 				} else {
 					return
