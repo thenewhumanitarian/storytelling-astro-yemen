@@ -55,7 +55,8 @@ async function processData(data) {
     const randomValueForImage = Math.floor(Math.random() * placeholderImageArray.length)
     let storyImage = {
       main: placeholderImageArray[randomValueForImage],
-      pixelated: placeholderImageArray[randomValueForImage]
+      // Adjust the pixelated image path to point to the /pixelated/ subfolder
+      pixelated: placeholderImageArray[randomValueForImage].replace('/placeholder_images/', '/placeholder_images/pixelated/')
     };
     const imageAttachments = machformAttachments.filter(isImage);
 
