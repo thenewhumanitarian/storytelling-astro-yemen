@@ -537,7 +537,8 @@ const { stories, lang } = Astro.props
 
 	/* Hide images when dragging */
 	#grid.hide-images .story-item img {
-		display: none;
+		opacity: 0;
+    transition: all 0s;
 	}
 
 	header {
@@ -584,7 +585,7 @@ const { stories, lang } = Astro.props
 		user-select: none;
 		overflow: hidden;
 		will-change: auto;
-		transition: transform 0.25s ease-in-out;
+		/* transition: transform 0.25s ease-in-out; */
 		transform: scale(1);
 		padding-top: 0.1rem;
 	}
@@ -602,7 +603,7 @@ const { stories, lang } = Astro.props
 
 	.full-image {
 		opacity: 0;
-		transition: opacity 0.5s ease;
+		/* transition: opacity 0.5s ease; */
 	}
 
 	.full-image.loaded {
