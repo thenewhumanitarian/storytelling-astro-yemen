@@ -169,7 +169,7 @@ const { stories, lang } = Astro.props
 			this.item.style.backgroundPosition = 'center'
 
 			// Set the background to the placeholder
-			this.item.style.backgroundImage = `url('${story.storyImage.main}')`
+			this.item.style.backgroundImage = `url('${story.storyImage.pixelated}')`
 
 			// Check for initial load to decide between lazy loading or direct image set
 			if (this.initialLoad) {
@@ -322,13 +322,13 @@ const { stories, lang } = Astro.props
 			this.touchStartTime = Date.now()
 			ev.preventDefault()
 
-			// Disable hover classes temporarily
+			// Add 'is-dragging' class to body to disable hover effects
 			document.body.classList.add('is-dragging')
 
-			ev = ev.type == 'touchstart' ? ev.touches[0] : ev
+			// Add 'hide-images' class to grid or image container to hide images
+			document.getElementById('grid').classList.add('hide-images')
 
 			this.dragging = true
-
 			this.lastX = ev.clientX
 			this.lastY = ev.clientY
 		}
@@ -363,7 +363,11 @@ const { stories, lang } = Astro.props
 		onEnd(ev) {
 			this.dragging = false
 
+			// Remove 'is-dragging' class from body
 			document.body.classList.remove('is-dragging')
+
+			// Remove 'hide-images' class to show images again
+			document.getElementById('grid').classList.remove('hide-images')
 
 			// Calculate the duration of the tap
 			const touchDuration = Date.now() - this.touchStartTime
@@ -527,6 +531,11 @@ const { stories, lang } = Astro.props
 	body.is-dragging .story-item h2,
 	body.is-dragging .story-item {
 		cursor: move;
+	}
+
+	/* Hide images when dragging */
+	#grid.hide-images .story-item img {
+		display: none;
 	}
 
 	header {

@@ -6,10 +6,17 @@ const { fetchAndParseCSV } = require('./modules/csvHandler');
 const { createThumbnail, isImage } = require('./modules/imageProcessor');
 const slugify = require('./modules/slugify'); // Adjust the path based on
 const saveToJson = require('./modules/saveToJson'); // Adjust the path based on your directory structure
-const placeholderImageArray = require('./data/placeholderImages');
 const processWhatsAppAttachments = require('./modules/processWhatsAppAttachments'); // Adjust the path as necessary
+const createPixelatedImages = require('./modules/createPixelatedPuzzleImages');
 
+// Import placeholder images from array
+const placeholderImageArray = require('./data/placeholderImages');
+
+// Set CSV URL
 const csvUrl = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSo1JkBPpgo-jq5HbgZhdrWZ8lDGI8vF0C30gHPweWebwoKJbsmuKtED07jLqSDz3zpZMAfBpFl_Khv/pub?output=csv'; // Replace with your published CSV URL
+
+// Define the output directory for pixelated images, relative to the main script
+const pixelatedPlaceholderImageOutputDirectory = path.join(__dirname, '../images/placeholder_images/pixelated/');
 
 // Fetch data
 fetchAndParseCSV(csvUrl)
@@ -22,6 +29,12 @@ fetchAndParseCSV(csvUrl)
   });
 
 async function processData(data) {
+  // First, create pixelated images of the puzzle placeholder images
+  // Process the images
+  createPixelatedImages(placeholderImageArray, pixelatedPlaceholderImageOutputDirectory)
+    .then(() => console.log('All puzzle placeholders have been processed.'))
+    .catch(error => console.error('An error occurred:', error));
+
   const processedData = [];
 
   for (const entry of data) {
@@ -39,9 +52,10 @@ async function processData(data) {
 
     // Find and use the first image attachment as the story image
     // To do: pixelate the puzzle placeholder images
+    const randomValueForImage = Math.floor(Math.random() * placeholderImageArray.length)
     let storyImage = {
-      main: placeholderImageArray[Math.floor(Math.random() * placeholderImageArray.length)],
-      pixelated: placeholderImageArray[Math.floor(Math.random() * placeholderImageArray.length)]
+      main: placeholderImageArray[randomValueForImage],
+      pixelated: placeholderImageArray[randomValueForImage]
     };
     const imageAttachments = machformAttachments.filter(isImage);
 
