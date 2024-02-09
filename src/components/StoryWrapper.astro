@@ -16,7 +16,13 @@ const { stories, lang } = Astro.props
 							class={`list-item--en flex justify-start items-center gap-x-3 lg:gap-x-8 story-item p-3 sm:p-5 ${i % 2 === 0 ? 'bg-zinc-700' : 'bg-zinc-800'}`}
 							data-slug={story.slugs.en}
 						>
-							{story.storyImage && <img src={`${story.storyImage.main}`} alt={story.story.en.title} class='w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 lg:w-24 lg:h-24' />}
+							{story.storyImage && (
+								<img
+									src={`${story.storyImage.main}`}
+									alt={story.story.en.title}
+									class='w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 lg:w-24 lg:h-24'
+								/>
+							)}
 							<div class='flex flex-col'>
 								<h3 class='story-item--title lang--en text-white m-0 line-clamp'>
 									{story.story['ar'].title || `AR TITLE ID ${story.id} MISSING`}
@@ -145,8 +151,9 @@ const { stories, lang } = Astro.props
 			}
 
 			// Determine the new image URL
-			// let newImageUrl = `/downloaded_images/thumbnails/${story.storyImage.main}`
-			let newImageUrl = `${story.storyImage.main}`
+			// Extract URLs for the main and pixelated images
+			let newImageUrl = story.storyImage.main
+			let pixelatedImageUrl = story.storyImage.pixelated
 
 			// Check if there's already an <img> element inside the grid-item
 			let currentImageElement = this.item.querySelector('img')
@@ -156,10 +163,10 @@ const { stories, lang } = Astro.props
 				return
 			}
 
-			// Remove the previous image if it's different or if there wasn't any image
-			if (currentImageElement) {
-				currentImageElement.remove()
-			}
+			// Set the background to the pixelated placeholder image
+			// this.item.style.backgroundImage = `url('${pixelatedImageUrl}')`
+			this.item.style.backgroundSize = 'cover'
+			this.item.style.backgroundPosition = 'center'
 
 			// Set the background to the placeholder
 			this.item.style.backgroundImage = `url('${story.storyImage.main}')`
