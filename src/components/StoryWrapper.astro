@@ -13,10 +13,10 @@ const { stories, lang } = Astro.props
 					<>
 						<a
 							href={`/stories/en/${story.slugs.en}`}
-							class={`list-item--en flex justify-start items-center gap-x-3 story-item p-3 sm:p-5 ${i % 2 === 0 ? 'bg-zinc-700' : 'bg-zinc-800'}`}
+							class={`list-item--en flex justify-start items-center gap-x-3 lg:gap-x-8 story-item p-3 sm:p-5 ${i % 2 === 0 ? 'bg-zinc-700' : 'bg-zinc-800'}`}
 							data-slug={story.slugs.en}
 						>
-							{story.storyImage && <img src={`${story.storyImage.main}`} alt={story.story.en.title} class='w-14 h-14 sm:w-16 sm:h-16' />}
+							{story.storyImage && <img src={`${story.storyImage.main}`} alt={story.story.en.title} class='w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 lg:w-24 lg:h-24' />}
 							<div class='flex flex-col'>
 								<h3 class='story-item--title lang--en text-white m-0 line-clamp'>
 									{story.story['ar'].title || `AR TITLE ID ${story.id} MISSING`}
