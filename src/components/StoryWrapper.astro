@@ -163,13 +163,12 @@ const { stories, lang } = Astro.props
 				return
 			}
 
-			// Set the background to the pixelated placeholder image
-			// this.item.style.backgroundImage = `url('${pixelatedImageUrl}')`
+			// Set the background to the placeholder
+			this.item.style.backgroundImage = `url('${pixelatedImageUrl}')`
 			this.item.style.backgroundSize = 'cover'
 			this.item.style.backgroundPosition = 'center'
-
-			// Set the background to the placeholder
-			this.item.style.backgroundImage = `url('${story.storyImage.pixelated}')`
+			this.item.style.width = '100%'
+			this.item.style.height = '100%'
 
 			// Check for initial load to decide between lazy loading or direct image set
 			if (this.initialLoad) {
@@ -538,7 +537,7 @@ const { stories, lang } = Astro.props
 	/* Hide images when dragging */
 	#grid.hide-images .story-item img {
 		opacity: 0;
-    transition: all 0s;
+		transition: all 0s;
 	}
 
 	header {
