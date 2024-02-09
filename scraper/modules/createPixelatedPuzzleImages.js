@@ -8,7 +8,7 @@ const fs = require('fs');
  * @param {string} outputDirectory - Directory where the pixelated images will be saved.
  * @param {string} baseImagePath - The base path to prepend to each imagePath to locate the images correctly.
  */
-const createPixelatedImages = async (imagePaths, outputDirectory = './pixelated', baseImagePath = '../../public/images/placeholder_images/') => {
+const createPixelatedImages = async (imagePaths, outputDirectory = './pixelated', baseImagePath = '../public/') => {
   for (const imagePath of imagePaths) {
     try {
       const filename = path.basename(imagePath);
