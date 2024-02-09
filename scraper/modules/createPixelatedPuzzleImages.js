@@ -5,15 +5,19 @@ const fs = require('fs');
 /**
  * Creates pixelated versions of images and saves them to a specified directory.
  * @param {Array<string>} imagePaths - Array of paths to the original images.
- * @param {string} outputDirectory - Directory where the pixelated images will be saved.
- * @param {string} baseImagePath - The base path to prepend to each imagePath to locate the images correctly.
+ * @param {string} outputDirectory - Directory where the pixelated images will be saved, relative to the script's execution context.
+ * @param {string} baseImagePath - The base path to prepend to each imagePath to locate the images correctly, relative to the script's execution context.
  */
-const createPixelatedImages = async (imagePaths, outputDirectory = './pixelated', baseImagePath = '../public/') => {
+const createPixelatedImages = async (imagePaths, outputDirectory = './public/images/placeholder_images/pixelated', baseImagePath = '../public/') => {
   for (const imagePath of imagePaths) {
     try {
       const filename = path.basename(imagePath);
-      const fullImagePath = path.resolve(baseImagePath, imagePath.replace(/^\.\.\//, '')); // Adjust the path relative to the baseImagePath
-      const pixelatedImagePath = path.join(outputDirectory, filename);
+      // Here, the imagePath is assumed to be relative from the baseImagePath.
+      // Ensure fullImagePath is correctly resolved from the base to the specific image.
+      const fullImagePath = path.resolve(baseImagePath, imagePath);
+      const pixelatedImagePath = path.resolve(outputDirectory, filename);
+
+      console.log(pixelatedImagePath);
 
       // Ensure the output directory exists
       if (!fs.existsSync(outputDirectory)) {
