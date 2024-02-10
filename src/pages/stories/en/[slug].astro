@@ -1,5 +1,5 @@
 ---
-import BackButton from '../../../components/Buttons/BackButton.astro'
+import NavButtons from '../../../components/Buttons/NavButtons.astro'
 import Layout from '../../../layouts/Layout.astro'
 import stories from '../../../data/all_stories.json'
 
@@ -31,7 +31,11 @@ const contentArray = story.story.en.content.split('\n')
 	<div class='fixed top-0 left-0 w-screen h-screen -z-1 pointer-events-none' id='stars'></div>
 	<div class='fixed top-0 left-0 w-screen h-screen -z-1 pointer-events-none' id='city'></div>
 	<div class='w-full max-w-5xl mx-auto mt-2 sm:mt-12 lg:mt-16 mb-8 sm:mb-24 px-4' class='story-detail-page--wrapper' id='story-wrapper'>
-		<BackButton />
+		<div class='flex justify-between items-center'>
+			<NavButtons button='back' lang={'en'} />
+			<NavButtons button='overview' lang={'en'} />
+			<NavButtons button='next' lang={'en'} />
+		</div>
 		<Prose>
 			<div class='flex flex-col gap-10'>
 				<div class='flex flex-col lg:flex-row lg:gap-x-5'>
@@ -238,7 +242,7 @@ const contentArray = story.story.en.content.split('\n')
 	var addPulse = function (element) {
 		var pulseTime = Math.random() * 10000
 		setTimeout(function () {
-			console.log('asdf')
+			// console.log('asdf')
 			element.className += ' pulse'
 		}, pulseTime)
 	}
