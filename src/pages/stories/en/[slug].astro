@@ -25,6 +25,17 @@ const { story } = Astro.props
 
 // Create array out of story.story.en.content by splitting the string wherever there is an \n
 const contentArray = story.story.en.content.split('\n')
+
+// Find the current story index based on the slug in the provided language
+const currentIndex = stories.findIndex((s) => s.slugs.en === story.slugs.en) // Adjust 'en' as needed
+
+// Calculate previous and next indexes with wrapping
+const prevIndex = currentIndex - 1 < 0 ? stories.length - 1 : currentIndex - 1
+const nextIndex = (currentIndex + 1) % stories.length
+
+// Extract slugs for previous and next stories in the desired language
+const prevStorySlug = stories[prevIndex].slugs.en // Adjust 'en' as needed for language
+const nextStorySlug = stories[nextIndex].slugs.en // Adjust 'en' as needed for language
 ---
 
 <Layout dark title='The Yemen Listening Project' header={true} switchViewButtons={false}>
@@ -32,9 +43,9 @@ const contentArray = story.story.en.content.split('\n')
 	<div class='fixed top-0 left-0 w-screen h-screen -z-1 pointer-events-none' id='city'></div>
 	<div class='w-full max-w-5xl mx-auto mt-2 sm:mt-12 lg:mt-16 mb-8 sm:mb-24 px-4' class='story-detail-page--wrapper' id='story-wrapper'>
 		<div class='flex justify-between items-center'>
-			<NavButtons button='back' lang={'en'} />
+			<NavButtons button='previous' lang={'en'} href={`/stories/en/${prevStorySlug}`} />
 			<NavButtons button='overview' lang={'en'} />
-			<NavButtons button='next' lang={'en'} />
+			<NavButtons button='next' lang={'en'} href={`/stories/en/${nextStorySlug}`} />
 		</div>
 		<Prose>
 			<div class='flex flex-col gap-10'>
@@ -59,6 +70,10 @@ const contentArray = story.story.en.content.split('\n')
 </Layout>
 
 <style is:global>
+	body * {
+		color: white;
+	}
+
 	#stars {
 		z-index: -1;
 		background: black;
@@ -70,10 +85,6 @@ const contentArray = story.story.en.content.split('\n')
 		background-size: 100%;
 		background-position: top center;
 		background-repeat: no-repeat;
-	}
-
-	body * {
-		color: white;
 	}
 
 	.story-w a {
@@ -213,6 +224,19 @@ const contentArray = story.story.en.content.split('\n')
 </style>
 
 <script define:vars={{ slug: story.slugs.en }}>
+	// Initial check to filter grid if necessary, same for list
+	function filterGridBasedOnLocalStorage() {
+		if (localStorage.getItem('showAll') === 'false') {
+			document.getElementById('grid').classList.add('filter--read')
+			document.getElementById('list').classList.add('filter--read')
+		} else {
+			document.getElementById('grid').classList.remove('filter--read')
+			document.getElementById('list').classList.remove('filter--read')
+		}
+	}
+
+	filterGridBasedOnLocalStorage()
+
 	// Add article slug to array of read articles in lStorage
 
 	// Retrieve the read articles array from localStorage or initialize a new one
@@ -239,6 +263,7 @@ const contentArray = story.story.en.content.split('\n')
 		NUMBER_OF_STARS = 50
 	}
 
+	// Make stars pulsate
 	var addPulse = function (element) {
 		var pulseTime = Math.random() * 10000
 		setTimeout(function () {

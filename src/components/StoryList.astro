@@ -1,0 +1,124 @@
+---
+const { stories } = Astro.props
+---
+
+<div class='list' id='list'>
+	{
+		stories.map((story, i) => {
+			return (
+				<>
+					<a
+						href={`/stories/en/${story.slugs.en}`}
+						class={`list-item--en flex justify-start items-center gap-x-3 lg:gap-x-8 story-item p-3 sm:p-5 ${i % 2 === 0 ? 'bg-zinc-700' : 'bg-zinc-800'}`}
+						data-slug={story.slugs.en}
+					>
+						{story.storyImage && (
+							<img
+								src={`${story.storyImage.main}`}
+								alt={story.story.en.title}
+								class='w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 lg:w-24 lg:h-24'
+							/>
+						)}
+						<div class='flex flex-col'>
+							<h3 class='story-item--title lang--en text-white m-0 line-clamp'>{story.story['ar'].title || `AR TITLE ID ${story.id} MISSING`}</h3>
+							<p class='text-zinc-200 m-0'>
+								{story.personalInfo.en.name} {story.personalInfo.en.surname}
+							</p>
+						</div>
+					</a>
+					<a
+						href={`/stories/ar/${story.slugs.ar}`}
+						class={`list-item--ar flex justify-start items-center gap-x-3 story-item p-3 sm:p-5 ${i % 2 === 0 ? 'bg-zinc-700' : 'bg-zinc-800'}`}
+						data-slug={story.slugs.ar}
+					>
+						{story.storyImage && (
+							<img
+								src={`${story.storyImage.main}`}
+								alt={story.story.en.title}
+								class='w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 lg:w-24 lg:h-24'
+							/>
+						)}
+						<div class='flex flex-col'>
+							<h3 class='story-item--title lang--ar text-white m-0 line-clamp'>{story.story['ar'].title || `AR TITLE ID ${story.id} MISSING`}</h3>
+							<p class='text-zinc-200 m-0'>
+								{story.personalInfo.ar.name} {story.personalInfo.ar.surname}
+							</p>
+						</div>
+					</a>
+				</>
+			)
+		})
+	}
+</div>
+
+<style is:global>
+	/* Show and hide based on language */
+	.list.language--ar .list-item--en {
+		display: none;
+	}
+	.list.language--en .list-item--ar {
+		display: none;
+	}
+
+	@media screen and (min-width: 800px) {
+		.story-item {
+			outline: 10px solid transparent;
+		}
+
+		body:not(.is-dragging) #grid .story-item:not(.filter--read):hover,
+		body:not(.is-dragging) .grid-item[data-lastread='never']:hover {
+			transform: scale(1.05);
+			outline: 0.7rem solid white;
+			z-index: 9999;
+		}
+
+		body:not(.is-dragging) .filter--read .grid-item[data-lastread='never']:hover .story-item--title {
+			color: black;
+			background: white;
+		}
+	}
+
+	.grid-item--link {
+		display: none;
+		position: absolute;
+		background: white;
+		color: black;
+		padding: 0.25rem 0.5rem;
+		bottom: 0;
+		right: 0;
+		z-index: 9999;
+	}
+
+	.grid-item:hover .grid-item--link {
+		display: block;
+	}
+
+	@media screen and (max-width: 500px) {
+		.story-item--title {
+			font-size: 1rem;
+			height: auto;
+		}
+	}
+
+	/* List view styles */
+
+	#list .story-item a {
+		pointer-events: auto;
+	}
+
+	#list.filter--read .story-item:not([data-lastread='never']) {
+		opacity: 0.2;
+		pointer-events: none;
+		/* transition: opacity 1s ease-out; */
+	}
+
+	#list.filter--read .story-item:not([data-lastread='never']),
+	#list.filter--read .story-item:not([data-lastread='never']) * {
+		pointer-events: none;
+	}
+
+	#list.filter--read .story-item:not([data-lastread='never']):hover,
+	#list .filter--read .story-item:not([data-lastread='never']):hover * {
+		cursor: move;
+	}
+</style>
