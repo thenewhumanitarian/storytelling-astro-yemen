@@ -12,8 +12,8 @@ const { stories } = Astro.props
 
 	#grid .story-item h2 {
 		font-family: 'Roboto', sans-serif;
-    font-weight: 500;
-    line-height: 1;
+		font-weight: 500;
+		line-height: 1;
 	}
 
 	/* Hide images when dragging */
@@ -113,14 +113,14 @@ const { stories } = Astro.props
 		text-align: right;
 	}
 
-  /* Show/hide titles based on current language */
-  .language--en .story-item h2.lang--ar {
-    display: none;
-  }
+	/* Show/hide titles based on current language */
+	.language--en .story-item h2.lang--ar {
+		display: none;
+	}
 
-  .language--ar .story-item h2.lang--en {
-    display: none;
-  }
+	.language--ar .story-item h2.lang--en {
+		display: none;
+	}
 </style>
 
 <!-- Library to help moving around the grid -->

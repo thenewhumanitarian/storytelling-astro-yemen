@@ -114,7 +114,17 @@ if (categorisedAttachments.images.length === 1) {
 					<div>
 						<h3>Videos</h3>
 						{categorisedAttachments.videos.map((video, index) => (
-							<p>{video}</p>
+							<div class='aspect-[16/9] w-full relative'>
+								<div
+									class='absolute inset-0 -z-1 no-repeat bg-cover bg-center bg-zinc-500'
+									style={{
+										backgroundImage: `url(/images/thumbnails/thumbnail-${1040}.jpg)`,
+									}}
+								/>
+								<video controls class="z-50 absolute top-0 left-0 w-full h-full m-0">
+									<source src={`../../src/assets/${video}`} type='video/mp4' />
+								</video>
+							</div>
 						))}
 					</div>
 				)}
