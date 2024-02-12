@@ -235,8 +235,6 @@ const nextStorySlug = stories[nextIndex].slugs.en // Adjust 'en' as needed for l
 		}
 	}
 
-	filterGridBasedOnLocalStorage()
-
 	// Add article slug to array of read articles in lStorage
 
 	// Retrieve the read articles array from localStorage or initialize a new one
@@ -263,7 +261,6 @@ const nextStorySlug = stories[nextIndex].slugs.en // Adjust 'en' as needed for l
 		NUMBER_OF_STARS = 50
 	}
 
-	// Make stars pulsate
 	var addPulse = function (element) {
 		var pulseTime = Math.random() * 10000
 		setTimeout(function () {
