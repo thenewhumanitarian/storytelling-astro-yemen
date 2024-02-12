@@ -34,8 +34,8 @@ const { button, lang, href } = Astro.props as Props
 				id='next-button'
 			>
 				<>
-					<span class='group-hover:text-burgundy text-sm'>↤</span>
-					<span class='group-hover:text-burgundy inline text-sm'>{translations.next[lang]}</span>
+        <span class='group-hover:text-burgundy inline text-sm'>{translations.next[lang]}</span>
+        <span class='group-hover:text-burgundy text-sm'>→</span>
 				</>
 			</button>
 		</a>
@@ -51,7 +51,7 @@ const { button, lang, href } = Astro.props as Props
 			>
 				<>
 					<span class='group-hover:text-burgundy inline text-sm'>{translations.overview[lang]}</span>
-					<span class='group-hover:text-burgundy text-sm'>→</span>
+					<span class='group-hover:text-burgundy text-sm'>↥</span>
 				</>
 			</button>
 		</a>
