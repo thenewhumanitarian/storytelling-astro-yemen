@@ -34,8 +34,8 @@ const { button, lang, href } = Astro.props as Props
 				id='next-button'
 			>
 				<>
-        <span class='group-hover:text-burgundy inline text-sm'>{translations.next[lang]}</span>
-        <span class='group-hover:text-burgundy text-sm'>→</span>
+					{/* <span class='group-hover:text-burgundy inline text-sm'>{translations.next[lang]}</span> */}
+					<span class='group-hover:text-burgundy text-sm'>→</span>
 				</>
 			</button>
 		</a>
@@ -51,7 +51,7 @@ const { button, lang, href } = Astro.props as Props
 			>
 				<>
 					<span class='group-hover:text-burgundy inline text-sm'>{translations.overview[lang]}</span>
-					{ /* <span class='group-hover:text-burgundy text-sm'>↑</span> */ }
+					{/* <span class='group-hover:text-burgundy text-sm'>↑</span> */}
 				</>
 			</button>
 		</a>
@@ -62,12 +62,12 @@ const { button, lang, href } = Astro.props as Props
 	button === 'previous' && (
 		<a href={`${href || '/'}`} target='_self'>
 			<button
-				class='transition-colors duration-150 relative inline-flex gap-x-2 items-center bg-transparent px-3 py-2 text-sm font-semibold text-burgundy ring-1 ring-inset ring-gray-300 hover:text-white group focus:z-10 mb-6'
+				class='transition-colors duration-150 relative inline-flex gap-x-2 items-center bg-transparent px-3 py-2 text-sm font-semibold text-burgundy ring-1 ring-inset ring-gray-300 hover:text-white group focus:z-10 mb-6 w-30'
 				id='prev-button'
 			>
 				<>
 					<span class='group-hover:text-burgundy text-sm'>←</span>
-					<span class='group-hover:text-burgundy inline text-sm'>{translations.previous[lang]}</span>
+					{/* <span class='group-hover:text-burgundy inline text-sm'>{translations.previous[lang]}</span> */}
 				</>
 			</button>
 		</a>

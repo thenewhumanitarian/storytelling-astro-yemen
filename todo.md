@@ -18,11 +18,10 @@
 * Titles of entries will probably be quotes
 * Editing should be done by Monday 12 February 2024, in English at least
 –––
+* Modal box when loading the page for the first time
 * DONE Title Yemen Listening Project somewhere on the main page, maybe in top nav?
 * DONE Next button additionally to Back button on entry detail page
 * DONE Create bespoke logo that combines TNH with Yemen Listening Project
-* Highlighting style needs to be adjusted, ideally they should be bigger
-* Highlighted ones maybe even using 2/4 fields, would that be possible?
 * Fallback is to have them stand out with transform and drop shadow
 * Modal box in the beginning explaining the project
 * Categorising or tagging the entries? Using colour schemes for this?
@@ -31,6 +30,9 @@
 * Video ones should take still from the video as teaser tile image
 * The static pages need to be designed and written
 * "Share this story" buttons on detail pages with social media card
-* Modal box when loading the page for the first time
 * Remove stars on mobile and reduce number of stars on mobile to save computing power
+* Highlighting style needs to be adjusted, ideally they should be bigger
+* Highlighted ones maybe even using 2/4 fields, would that be possible?
 * Create embeddable for Spotlight on homepage?
+---
+* Audio: Can should we turn these all into videos with subtitles? Ciara? Add to Google Drive pls.

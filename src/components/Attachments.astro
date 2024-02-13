@@ -12,6 +12,7 @@ function categoriseAttachments(attachments) {
 		images: [],
 		videos: [],
 		documents: [],
+		audios: [],
 	}
 
 	if (attachments.length > 0) {
@@ -32,7 +33,11 @@ function categoriseAttachments(attachments) {
 				case 'docx':
 					categories.documents.push(attachment)
 					break
-				// Add more cases as needed
+				case 'm4a':
+				case 'wav':
+				case 'mp3':
+					categories.audios.push(attachment)
+					break
 			}
 		})
 	}
@@ -117,15 +122,22 @@ if (categorisedAttachments.images.length === 1) {
 						<h3>Videos</h3>
 						{categorisedAttachments.videos.map((video, index) => (
 							<div class='aspect-[16/9] w-full relative'>
-								<div
-									class='absolute inset-0 -z-1 no-repeat bg-cover bg-center bg-zinc-500'
-									style={{
-										backgroundImage: `url(/images/thumbnails/thumbnail-${1040}.jpg)`,
-									}}
-								/>
 								<video controls class='z-50 absolute top-0 left-0 w-full h-full m-0'>
 									<source src={`../../src/assets/${video}`} type='video/mp4' />
 								</video>
+							</div>
+						))}
+					</div>
+				)}
+
+				{categorisedAttachments.audios.length > 0 && (
+					<div>
+						<h3>Audio</h3>
+						{categorisedAttachments.audios.map((audio, index) => (
+							<div class='relative'>
+								<audio controls class='w-full mb-4'>
+									<source src={`../../src/assets/${audio}`} type='audio/mp3' />
+								</audio>
 							</div>
 						))}
 					</div>
