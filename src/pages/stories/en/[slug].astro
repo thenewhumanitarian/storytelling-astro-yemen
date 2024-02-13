@@ -1,4 +1,5 @@
 ---
+import { ViewTransitions } from 'astro:transitions'
 import NavButtons from '../../../components/Buttons/NavButtons.astro'
 import Layout from '../../../layouts/Layout.astro'
 import stories from '../../../data/all_stories.json'
@@ -39,6 +40,7 @@ const nextStorySlug = stories[nextIndex].slugs.en // Adjust 'en' as needed for l
 ---
 
 <Layout dark title='The Yemen Listening Project' header={true} switchViewButtons={false}>
+	<ViewTransitions />
 	<div class='fixed top-0 left-0 w-screen h-screen -z-1 pointer-events-none' id='stars'></div>
 	<div class='fixed top-0 left-0 w-screen h-screen -z-1 pointer-events-none' id='city'></div>
 	<div class='w-full max-w-5xl mx-auto mt-2 sm:mt-12 lg:mt-16 mb-8 sm:mb-24 px-4' class='story-detail-page--wrapper' id='story-wrapper'>
