@@ -44,7 +44,7 @@ const { button, lang, href } = Astro.props as Props
 
 {
 	button === 'overview' && (
-		<a href={`${href || '/'}`} target='_self' data-astro-prefetch>
+		<a href={`${href || '/'}`} target='_self' data-astro-prefetch data-astro-reload>
 			<button
 				class='transition-colors duration-150 relative inline-flex gap-x-2 items-center bg-burgundy px-3 py-2 text-sm font-semibold text-white ring-1 ring-inset ring-gray-300 hover:bg-white hover:text-burgundy group focus:z-10 mb-6'
 				id='overview-button'
