@@ -12,7 +12,7 @@ const { button, lang, href } = Astro.props as Props
 
 {
 	button === 'back' && (
-		<a href={`${href || '/'}`} target='_self'>
+		<a href={`${href || '/'}`} target='_self' data-astro-prefetch>
 			<button
 				class='transition-colors duration-150 relative inline-flex gap-x-2 items-center bg-burgundy px-3 py-2 text-sm font-semibold text-white ring-1 ring-inset ring-gray-300 hover:bg-white hover:text-burgundy group focus:z-10 mb-6'
 				id='back-button'
@@ -28,7 +28,7 @@ const { button, lang, href } = Astro.props as Props
 
 {
 	button === 'next' && (
-		<a href={`${href || '/'}`} target='_self'>
+		<a href={`${href || '/'}`} target='_self' data-astro-prefetch>
 			<button
 				class='transition-colors duration-150 relative inline-flex gap-x-2 items-center bg-transparent px-3 py-2 text-sm font-semibold text-burgundy ring-1 ring-inset ring-gray-300 hover:text-white group focus:z-10 mb-6'
 				id='next-button'
@@ -44,7 +44,7 @@ const { button, lang, href } = Astro.props as Props
 
 {
 	button === 'overview' && (
-		<a href={`${href || '/'}`} target='_self'>
+		<a href={`${href || '/'}`} target='_self' data-astro-prefetch>
 			<button
 				class='transition-colors duration-150 relative inline-flex gap-x-2 items-center bg-burgundy px-3 py-2 text-sm font-semibold text-white ring-1 ring-inset ring-gray-300 hover:bg-white hover:text-burgundy group focus:z-10 mb-6'
 				id='overview-button'
@@ -60,7 +60,7 @@ const { button, lang, href } = Astro.props as Props
 
 {
 	button === 'previous' && (
-		<a href={`${href || '/'}`} target='_self'>
+		<a href={`${href || '/'}`} target='_self' data-astro-prefetch>
 			<button
 				class='transition-colors duration-150 relative inline-flex gap-x-2 items-center bg-transparent px-3 py-2 text-sm font-semibold text-burgundy ring-1 ring-inset ring-gray-300 hover:text-white group focus:z-10 mb-6 w-30'
 				id='prev-button'
