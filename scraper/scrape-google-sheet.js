@@ -7,8 +7,7 @@ const { createThumbnail, isImage } = require('./modules/imageProcessor');
 const slugify = require('./modules/slugify'); // Adjust the path based on
 const saveToJson = require('./modules/saveToJson'); // Adjust the path based on your directory structure
 const processWhatsAppAttachments = require('./modules/processWhatsAppAttachments'); // Adjust the path as necessary
-const createPixelatedImages = require('./modules/createPixelatedPuzzleImages');
-const { extractFrame, resizeTo16by9 } = require('./modules/processVideos');
+const createPixelatedImages = require('./modules/createPixelatedImages');
 
 // Import placeholder images from array
 const placeholderImageArray = require('./data/placeholderImages');
@@ -138,35 +137,6 @@ async function processData(data) {
           const processedFiles = processWhatsAppAttachments(entryID, files, __dirname);
           // console.log(`Processed files for entry ${entryID}:`, processedFiles);
           whatsAppAttachments = processedFiles;
-
-          // Find all video files for thumbnail creation
-          const videoFiles = files.filter(file => path.extname(file).toLowerCase() === '.mp4');
-
-          for (const videoFile of videoFiles) {
-            console.log('Processing WhatsApp video file:', videoFile);
-
-            const videoPath = path.join(whatsappAssetsDir, videoFile); // Adjust based on your directory structure
-            const framePath = path.join(whatsappAssetsDir, 'temp_frame.jpg'); // Temporary path for extracted frame
-            const resizedImagePath = path.join(__dirname, '../public/images/thumbnails/', `thumbnail-${entryID}.jpg`);; // Final path for the resized image
-
-            try {
-              // Extract a frame from the video
-              await extractFrame(videoPath, framePath);
-              console.log('Frame extracted successfully from', videoFile);
-
-              // Resize the extracted frame to 16:9 aspect ratio
-              await resizeTo16by9(framePath, resizedImagePath);
-              console.log('Image resized to 16:9 successfully for', videoFile);
-
-              // Optionally, delete the temporary frame
-              fs.unlinkSync(framePath);
-              console.log('Temporary frame deleted for', videoFile);
-
-              // Here, you might want to update your data structure or perform additional actions with the resized image
-            } catch (error) {
-              console.error('An error occurred while processing video file:', videoFile, error);
-            }
-          }
 
           // Find the first image file for thumbnail creation
           const firstImageFile = files.find(file => isImage(file));
