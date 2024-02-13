@@ -150,6 +150,9 @@ const { stories } = Astro.props
 			// Create anchor element for grid item as a container
 			this.item = document.createElement('a')
 
+			// Add data-astro-prefetch to the anchor element
+			this.item.setAttribute('data-astro-prefetch', 'true')
+
 			// Variable to check if currently loading image
 			this.currentLoadingImage = null
 
