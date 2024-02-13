@@ -17,7 +17,7 @@ function processWhatsAppAttachments(entryID, files, basePath) {
     const extension = path.extname(file).toLowerCase();
     let newFilename = `${entryID}-${index + 1}${extension}`;
     const sourceFilePath = path.join(basePath, `./assets/whatsapp_assets/${entryID}`, file);
-    const newFilePath = path.join(basePath, '../src/assets/', newFilename);
+    let newFilePath = path.join(basePath, '../src/assets/', newFilename);
 
     if (extension === '.heic') {
       newFilename = `${entryID}-${index + 1}.jpg`;
@@ -26,6 +26,14 @@ function processWhatsAppAttachments(entryID, files, basePath) {
         fs.renameSync(sourceFilePath, jpgFilePath);
       } catch (err) {
         console.error('Error renaming HEIC to JPG:', err);
+      }
+    }
+    else if (extension === '.mp4') {
+      newFilePath = path.join(basePath, '../public/attachments/', newFilename);
+      try {
+        fs.copyFileSync(sourceFilePath, newFilePath);
+      } catch (err) {
+        console.error('Error copying file:', err);
       }
     } else {
       try {

@@ -123,7 +123,7 @@ if (categorisedAttachments.images.length === 1) {
 						{categorisedAttachments.videos.map((video, index) => (
 							<div class='aspect-[16/9] w-full relative'>
 								<video controls class='z-50 absolute top-0 left-0 w-full h-full m-0'>
-									<source src={`../../src/assets/${video}`} type='video/mp4' />
+									<source src={`/attachments/${video}`} type='video/mp4' />
 								</video>
 							</div>
 						))}
