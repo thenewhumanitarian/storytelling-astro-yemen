@@ -9,14 +9,11 @@ const saveToJson = require('./modules/saveToJson'); // Adjust the path based on 
 const processWhatsAppAttachments = require('./modules/processWhatsAppAttachments'); // Adjust the path as necessary
 const createPixelatedImages = require('./modules/createPixelatedImages');
 
-// Import placeholder images from array
-const placeholderImageArray = require('./data/placeholderImages');
-
 // Set CSV URL
 const csvUrl = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSo1JkBPpgo-jq5HbgZhdrWZ8lDGI8vF0C30gHPweWebwoKJbsmuKtED07jLqSDz3zpZMAfBpFl_Khv/pub?output=csv'; // Replace with your published CSV URL
 
-// Define the output directory for pixelated images, relative to the main script
-const pixelatedPlaceholderImageOutputDirectory = path.join(__dirname, '../public/images/placeholder_images/pixelated');
+// Define the output directory for preview images and pixelated images, relative to the main script
+const placeholderImageOutputDirectory = path.join(__dirname, '../public/images/placeholder_images');
 
 // Fetch data
 fetchAndParseCSV(csvUrl)
@@ -28,15 +25,46 @@ fetchAndParseCSV(csvUrl)
     console.error('An error occurred:', error);
   });
 
+/* CREATE PLACEHOLDER IMAGES FROM PUZZLE PIECES */
+const placeholderImagesDir = path.join(__dirname, './assets/placeholder_images');
+let placeholderImageArray = [];
+
+try {
+  placeholderImageArray = fs.readdirSync(placeholderImagesDir)
+    .filter(file => isImage(file))
+    .map(file => path.join(placeholderImagesDir, file));
+} catch (err) {
+  console.error("Error reading placeholder images directory:", err);
+}
+
+async function processAllPlaceholderImages() {
+  for (const sourceImagePath of placeholderImageArray) {
+    const filename = path.basename(sourceImagePath);
+    const destinationPath = path.join(placeholderImageOutputDirectory, filename);
+
+    // Create main and pixelated thumbnails
+    try {
+      const result = await createThumbnail(sourceImagePath, destinationPath);
+      if (result) {
+        console.log(`Thumbnail and pixelated image created for: ${filename}`);
+      } else {
+        console.log(`Failed to create thumbnail for: ${filename}`);
+      }
+    } catch (error) {
+      console.error(`Error processing ${filename}:`, error);
+    }
+  }
+}
+
 async function processData(data) {
-  // First, create pixelated images of the puzzle placeholder images
-  // Process the images
-  createPixelatedImages(placeholderImageArray, pixelatedPlaceholderImageOutputDirectory)
-    .then(() => console.log('All puzzle placeholders have been processed.'))
+  // Process all placeholder images first
+  processAllPlaceholderImages()
+    .then(() => console.log('Finished processing all placeholder images.'))
     .catch(error => console.error('An error occurred:', error));
 
   const processedData = [];
 
+  // Process the data found in the Google Document
   for (const entry of data) {
     // Slugify titles or use fallback pattern
     const enSlug = entry['EN\nTitle of story'].trim()
@@ -46,18 +74,21 @@ async function processData(data) {
       ? slugify(entry['AR \nTitle of story'])
       : `ar-story-${entry.ID}`;
 
+    // Find MachForm attachments
     let machformAttachments = entry.Attachments && entry.Attachments.trim() && entry.Attachments.trim() !== '-'
       ? entry.Attachments.split(',').map(file => file.trim())
       : [];
 
-    // Find and use the first image attachment as the story image
-    // To do: pixelate the puzzle placeholder images
-    const randomValueForImage = Math.floor(Math.random() * placeholderImageArray.length)
+    // Assuming placeholderImageArray is populated with filenames of the original images
+    const randomIndex = Math.floor(Math.random() * placeholderImageArray.length);
+    const selectedImageFilename = path.basename(placeholderImageArray[randomIndex]);
+
+    // Construct paths for the processed images
     let storyImage = {
-      main: placeholderImageArray[randomValueForImage],
-      // Adjust the pixelated image path to point to the /pixelated/ subfolder
-      pixelated: placeholderImageArray[randomValueForImage].replace('/placeholder_images/', '/placeholder_images/pixelated/')
+      main: `/images/placeholder_images/${selectedImageFilename}`,
+      pixelated: `/images/placeholder_images/pixelated/${selectedImageFilename}`
     };
+
     const imageAttachments = machformAttachments.filter(isImage);
 
     // Process attachments that came through MachForm

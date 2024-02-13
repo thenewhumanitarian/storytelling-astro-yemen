@@ -16,7 +16,7 @@ async function createThumbnail(sourcePath, destinationPath, width = 400, height 
     await sharp(sourcePath, { failOnError: false })
       .resize(width, height, { fit: 'cover', position: 'attention' })
       .toFile(destinationPath);
-    // console.log(`Main thumbnail created: ${destinationPath}`);
+    console.log(`Main thumbnail created: ${destinationPath}`);
 
     // Pixelated thumbnail creation
     const pixelatedDir = path.join(path.dirname(destinationPath), 'pixelated');
@@ -28,7 +28,7 @@ async function createThumbnail(sourcePath, destinationPath, width = 400, height 
     await sharp(sourcePath, { failOnError: false })
       .resize(25, 25, { fit: 'cover', position: 'attention' })
       .toFile(pixelatedPath);
-    // console.log(`Pixelated thumbnail created: ${pixelatedPath}`);
+    console.log(`Pixelated thumbnail created: ${pixelatedPath}`);
 
     // Adjust the paths to be relative if needed
     const relativeMainPath = destinationPath.replace('/Users/marcfehr/Sites/tnh-storytelling-astro-yemen/public', '..');

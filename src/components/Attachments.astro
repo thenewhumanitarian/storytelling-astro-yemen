@@ -2,7 +2,7 @@
 import AttachmentImage from './AttachmentImage.astro'
 
 export interface Props {
-	attachments: Array<String>
+	attachments?: Array<String>
 }
 
 const { attachments } = Astro.props as Props
@@ -14,26 +14,28 @@ function categoriseAttachments(attachments) {
 		documents: [],
 	}
 
-	attachments.forEach((attachment) => {
-		const extension = attachment.split('.').pop().toLowerCase()
+	if (attachments.length > 0) {
+		attachments.forEach((attachment) => {
+			const extension = attachment.split('.').pop().toLowerCase()
 
-		switch (extension) {
-			case 'jpg':
-			case 'png':
-			case 'heic':
-				categories.images.push(attachment)
-				break
-			case 'mp4':
-				categories.videos.push(attachment)
-				break
-			case 'pdf':
-			case 'doc':
-			case 'docx':
-				categories.documents.push(attachment)
-				break
-			// Add more cases as needed
-		}
-	})
+			switch (extension) {
+				case 'jpg':
+				case 'png':
+				case 'heic':
+					categories.images.push(attachment)
+					break
+				case 'mp4':
+					categories.videos.push(attachment)
+					break
+				case 'pdf':
+				case 'doc':
+				case 'docx':
+					categories.documents.push(attachment)
+					break
+				// Add more cases as needed
+			}
+		})
+	}
 
 	return categories
 }
@@ -121,7 +123,7 @@ if (categorisedAttachments.images.length === 1) {
 										backgroundImage: `url(/images/thumbnails/thumbnail-${1040}.jpg)`,
 									}}
 								/>
-								<video controls class="z-50 absolute top-0 left-0 w-full h-full m-0">
+								<video controls class='z-50 absolute top-0 left-0 w-full h-full m-0'>
 									<source src={`../../src/assets/${video}`} type='video/mp4' />
 								</video>
 							</div>
