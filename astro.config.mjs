@@ -7,7 +7,9 @@ import tailwind from '@astrojs/tailwind';
 export default defineConfig({
   // output: 'server',
   // adapter: vercel(),
-  prefetch: true,
+  prefetch: {
+    prefetchAll: true
+  },
   integrations: [tailwind({
     applyBaseStyles: false
   })
