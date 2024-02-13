@@ -135,9 +135,7 @@ if (categorisedAttachments.images.length === 1) {
 						<h3>Audio</h3>
 						{categorisedAttachments.audios.map((audio, index) => (
 							<div class='relative'>
-								<audio controls class='w-full mb-4'>
-									<source src={`../../src/assets/${audio}`} type='audio/mp3' />
-								</audio>
+								<audio controls class='w-full mb-4' src={`/attachments/${audio}`} />
 							</div>
 						))}
 					</div>

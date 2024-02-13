@@ -35,6 +35,13 @@ function processWhatsAppAttachments(entryID, files, basePath) {
       } catch (err) {
         console.error('Error copying file:', err);
       }
+    } else if (extension === '.m4a' || extension === '.opus' || extension === '.ogg' || extension === '.wav' || extension === '.mp3') {
+      newFilePath = path.join(basePath, '../public/attachments/', newFilename);
+      try {
+        fs.copyFileSync(sourceFilePath, newFilePath);
+      } catch (err) {
+        console.error('Error copying file:', err);
+      }
     } else {
       try {
         fs.copyFileSync(sourceFilePath, newFilePath);
