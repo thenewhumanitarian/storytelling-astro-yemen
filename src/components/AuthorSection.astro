@@ -12,8 +12,8 @@ export interface Props {
 const { lang, name, age, from, livingIn } = Astro.props as Props
 ---
 
-<p class='mt-0'>
-	<span class='font-bold'>{name ? name : translations.nameUnknown[lang]}</span>
+<p class='mt-0' dir={`${lang === 'ar' ? 'rtl' : 'ltr'}`}>
+	<span class='font-bold'>{name && name !== '' ? 'name' : translations.nameUnknown[lang]}</span>
 	{age ? `, ${age} ${translations.yearsOld[lang]}` : ``}{from ? `, ${translations.from[lang].toLowerCase()} ${from}` : ``}
 </p>
 
