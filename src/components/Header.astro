@@ -1,5 +1,6 @@
 ---
 import MenuIcon from './Menu.astro'
+import IntroIcon from './Intro.astro'
 // import HeaderLogo from './HeaderLogo.astro'
 import HeaderLogo from './HeaderLogoSimple.astro'
 import FilterButtons from './Buttons/FilterButtons.astro'
@@ -21,6 +22,9 @@ const { filterButtons, languageButtons, dark, switchViewButtons } = Astro.props 
 		<div class='flex justify-start gap-x-2 sm:gap-x-3 items-center'>
 			<div class={`${dark ? 'text-white' : 'text-black'} fill-current flex gap-3 items-center justify-start`}>
 				<MenuIcon />
+			</div>
+			<div class={`${dark ? 'text-white' : 'text-black'} fill-current flex gap-3 items-center justify-start`}>
+				<IntroIcon />
 			</div>
 			{switchViewButtons && <SwitchViewButtons />}
 		</div>

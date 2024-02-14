@@ -127,10 +127,19 @@ const { stories } = Astro.props
 <script src='https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.min.js' is:inline></script>
 
 <script async define:vars={{ stories }} is:inline>
+	// Initial check to filter grid if necessary, same for list
+	function filterGridBasedOnLocalStorage() {
+		if (localStorage.getItem('showAll') === 'false') {
+			document.getElementById('grid').classList.add('filter--read')
+			document.getElementById('list').classList.add('filter--read')
+		} else {
+			document.getElementById('grid').classList.remove('filter--read')
+			document.getElementById('list').classList.remove('filter--read')
+		}
+	}
+
 	// Window load event
 	window.addEventListener('pageshow', function () {
-		// console.log('pageshow')
-
 		filterGridBasedOnLocalStorage()
 
 		const grid = optimalGridDimensions()

@@ -3,28 +3,21 @@ import IntroOverlay from './IntroOverlay.astro'
 ---
 
 <!-- Menu icon -->
-<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' class='fill-current text-white cursor-pointer'>
-	<path d='M0 2v2h24V2Zm0 9v2h24v-2Zm0 9v2h24v-2Z'></path>
-</svg>
+<div class='z-50 w-7 h-7 flex items-center justify-center bg-white font-bold rounded-full font-body cursor-pointer' id='intro-button'>
+	<span class='text-black'>i</span>
+</div>
 
 <IntroOverlay />
 
 <script>
-	// Intro overlay logic
-	const introButton = document.querySelector('#menu-button')
-
-	// Select intro overlay element
-	const introOverlay = document.getElementById('intro-overlay')
-
 	document.addEventListener('DOMContentLoaded', () => {
+		const introButton = document.querySelector('#intro-button')
+		const introOverlay = document.getElementById('intro-overlay')
+
 		introButton.addEventListener('click', function () {
+			localStorage.setItem('showIntro', 'false')
 			fadeIn(introOverlay)
 			document.body.classList.add('no-scroll')
-		})
-
-		introOverlay.addEventListener('click', function () {
-			fadeOut(introOverlay)
-			document.body.classList.remove('no-scroll')
 		})
 	})
 
@@ -32,18 +25,4 @@ import IntroOverlay from './IntroOverlay.astro'
 		element.style.opacity = 1
 		element.style.visibility = 'visible'
 	}
-
-	function fadeOut(element) {
-		element.style.opacity = 0
-		setTimeout(function () {
-			element.style.visibility = 'hidden'
-		}, 500) // This timing of 500ms should match the transition time (0.5s)
-	}
 </script>
-
-<style>
-	#intro-button {
-		cursor: pointer;
-		z-index: 9999;
-	}
-</style>

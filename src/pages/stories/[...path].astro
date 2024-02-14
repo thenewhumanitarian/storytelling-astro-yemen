@@ -265,17 +265,6 @@ const dir = lang === 'ar' ? 'rtl' : 'ltr'
 </style>
 
 <script define:vars={{ lang: lang, slugEN: story.slugs.en, slugAR: story.slugs.ar }}>
-	// Initial check to filter grid if necessary, same for list
-	function filterGridBasedOnLocalStorage() {
-		if (localStorage.getItem('showAll') === 'false') {
-			document.getElementById('grid').classList.add('filter--read')
-			document.getElementById('list').classList.add('filter--read')
-		} else {
-			document.getElementById('grid').classList.remove('filter--read')
-			document.getElementById('list').classList.remove('filter--read')
-		}
-	}
-
 	// Retrieve the read articles array from localStorage or initialize a new one
 	let readArticles = JSON.parse(localStorage.getItem('readArticles')) || []
 

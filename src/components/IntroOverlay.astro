@@ -2,28 +2,51 @@
 import HeaderLogoSimple from './HeaderLogoSimple.astro'
 ---
 
-<div id='intro-overlay' class='flex flex-col top-0 left-0 w-full h-screen bg-black items-center justify-center z-40 text-white'>
+<div
+	id='intro-overlay'
+	class='flex flex-col top-0 left-0 w-full h-screen bg-black items-center justify-center z-40 text-white z-50 fixed top-0 left-0 w-full h-full z-[9999] cursor-pointer'
+>
 	<HeaderLogoSimple />
-	<div class='mt-5 text-center'>
-		<h1>The Yemen Listening Project</h1>
+
+	<div class='mt-5 text-center prose text-white'>
+		<h1 class='text-white'>The Yemen Listening Project</h1>
 		<p>Intro slide needs to be done.</p>
+		<div
+			class='text-white absolute top-5 right-10 w-10 h-10 cursor-pointer hover:text-burgundy transition-colors pointer-events-none'
+			id='intro-close-button'
+		>
+			<svg class='fill-current' width='100%' height='90' viewBox='0 0 90 90' fill='none' xmlns='http://www.w3.org/2000/svg'>
+				<path
+					class='fill-current'
+					fill-rule='evenodd'
+					clip-rule='evenodd'
+					d='M1.84937 1.84937C4.02123 -0.317302 7.53683 -0.317302 9.7087 1.84937L44.6674 36.8134L79.626 1.84937C81.7979 -0.317302 85.3135 -0.317302 87.4854 1.84937C89.652 4.02123 89.652 7.53683 87.4854 9.7087L52.5214 44.6674L87.4854 79.626C89.652 81.7979 89.652 85.3135 87.4854 87.4854C85.3135 89.652 81.7979 89.652 79.626 87.4854L44.6674 52.5214L9.7087 87.4854C7.53683 89.652 4.02123 89.652 1.84937 87.4854C-0.317302 85.3135 -0.317302 81.7979 1.84937 79.626L36.8134 44.6674L1.84937 9.7087C-0.317302 7.53683 -0.317302 4.02123 1.84937 1.84937Z'
+					fill='black'></path>
+			</svg>
+		</div>
 	</div>
 </div>
 
-<style>
-	#intro-overlay {
-		position: fixed;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		background-color: rgba(0, 0, 0, 0.85);
-		/* opacity: 0; */
-		/* visibility: hidden; */
-		transition: opacity 0.5s;
-		z-index: 9999;
-	}
-	#close-button {
-		z-index: 9999;
-	}
-</style>
+<script>
+	document.addEventListener('DOMContentLoaded', () => {
+		const introOverlay = document.getElementById('intro-overlay')
+		const introCloseButton = document.getElementById('intro-close-button')
+
+		// Check localStorage and hide intro if showIntro is false
+		if (localStorage.getItem('showIntro') === 'false') {
+			introOverlay.style.opacity = '0'
+			introOverlay.style.visibility = 'hidden'
+		}
+
+		introOverlay.addEventListener('click', (e) => {
+			if (e.target === introOverlay) {
+				console.log('clicked')
+
+				introOverlay.style.opacity = '0'
+				introOverlay.style.visibility = 'hidden'
+
+				localStorage.setItem('showIntro', 'false')
+			}
+		})
+	})
+</script>
