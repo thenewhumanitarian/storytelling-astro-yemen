@@ -38,6 +38,7 @@ import HeaderLogoSimple from './HeaderLogoSimple.astro'
 			introOverlay.style.visibility = 'hidden'
 		}
 
+		// Remove intro overlay when clicking on it
 		introOverlay.addEventListener('click', (e) => {
 			if (e.target === introOverlay) {
 				console.log('clicked')
