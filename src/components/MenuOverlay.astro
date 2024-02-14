@@ -1,4 +1,4 @@
-<div id='menu-overlay' class='flex top-0 left-0 w-full h-screen bg-black items-center justify-center z-40 cursor-pointer'>
+<div id='menu-overlay' class='flex top-0 left-0 w-full h-screen bg-black items-center justify-center z-40 cursor-pointer' transition:persist>
 	<div class='flex flex-row gap-x-5'>
 		<nav class='space-y-4 flex flex-col text-right'>
 			<a href='/about' class='text-white text-lg sm:text-4xl hover:text-burgundy transition-colors'>حول هذا المشروع</a>
@@ -13,8 +13,8 @@
 			<!-- Add more links as needed -->
 		</nav>
 	</div>
-	<div class='absolute -top-1 right-6 w-8 h-8 cursor-pointer hover:text-burgundy transition-colors z-50' id='menu-close-button'>
-		<svg class='fill-burgundy' width='100%' height='90' viewBox='0 0 90 90' fill='none' xmlns='http://www.w3.org/2000/svg'>
+	<div class='absolute -top-1 right-6 w-8 h-8 cursor-pointer hover:text-burgundy transition-colors' id='menu-close-button'>
+		<svg class='fill-current' width='100%' height='90' viewBox='0 0 90 90' fill='none' xmlns='http://www.w3.org/2000/svg'>
 			<path
 				class='fill-current'
 				fill-rule='evenodd'
@@ -39,26 +39,10 @@
 		z-index: 9999;
 	}
 	#menu-close-button {
-		z-index: 9999;
+		pointer-events: auto;
+	}
+
+	#menu-close-button:active {
+		pointer-events: none;
 	}
 </style>
-
-<script>
-	document.addEventListener('DOMContentLoaded', () => {
-		const menuOverlay = document.getElementById('menu-overlay')
-		const menuCloseButton = document.getElementById('menu-close-button')
-
-		menuOverlay.addEventListener('click', (e) => {
-			if (e.target === menuOverlay) {
-				menuOverlay.style.opacity = '0'
-				menuOverlay.style.visibility = 'hidden'
-			}
-		})
-
-		menuCloseButton.addEventListener('click', (e) => {
-			console.log(e)
-			menuOverlay.style.opacity = '0'
-			menuOverlay.style.visibility = 'hidden'
-		})
-	})
-</script>
