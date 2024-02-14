@@ -14,9 +14,10 @@ export interface Props {
 	header?: boolean
 	title?: string
 	dir?: string
+	overflow?: string
 }
 
-const { filterButtons, languageButtons, dark, header, title, switchViewButtons, dir } = Astro.props as Props
+const { filterButtons, languageButtons, dark, header, title, switchViewButtons, dir, overflow } = Astro.props as Props
 ---
 
 <!doctype html>
@@ -37,7 +38,7 @@ const { filterButtons, languageButtons, dark, header, title, switchViewButtons, 
 		<!-- To do: Create SEO component for more meta tags -->
 		<!-- <ViewTransitions fallback='swap' /> -->
 	</head>
-	<body>
+	<body class={`${overflow === 'always' ? 'overflow-scroll' : 'auto'}`}>
 		<!-- Header  -->
 		{header && <Header dark={dark} filterButtons={filterButtons} languageButtons={languageButtons} switchViewButtons={switchViewButtons} />}
 		<!-- Main content -->

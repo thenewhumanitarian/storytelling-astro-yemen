@@ -1,12 +1,15 @@
 ---
 export interface Props {
 	classNames: string
+	lang: string
 }
 
-const { classNames } = Astro.props as Props
+const { classNames, lang } = Astro.props as Props
 ---
 
-<div class={classNames} id='pergament'><slot /></div>
+<div class={classNames} id='pergament' dir={`${lang === 'ar' ? 'rtl' : 'ltr'}`}>
+	<slot />
+</div>
 
 <style>
 	#pergament {

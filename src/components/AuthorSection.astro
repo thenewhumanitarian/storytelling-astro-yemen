@@ -1,12 +1,15 @@
 ---
+import { translations } from '../data/translations'
+
 export interface Props {
 	name: string
 	age?: string
 	from?: string
 	livingIn?: string
+	lang: string
 }
 
-const { name, age, from, livingIn } = Astro.props as Props
+const { lang, name, age, from, livingIn } = Astro.props as Props
 ---
 
 {
@@ -16,25 +19,25 @@ const { name, age, from, livingIn } = Astro.props as Props
 				<tbody>
 					{name && (
 						<tr>
-							<td>Name</td>
+							<td>{translations.name[lang]}</td>
 							<td>{name}</td>
 						</tr>
 					)}
 					{age && (
 						<tr>
-							<td>Age</td>
+							<td>{translations.age[lang]}</td>
 							<td>{age}</td>
 						</tr>
 					)}
 					{from && (
 						<tr>
-							<td>From</td>
+							<td>{translations.from[lang]}</td>
 							<td>{from}</td>
 						</tr>
 					)}
 					{livingIn && (
 						<tr>
-							<td>Is living in</td>
+							<td>{translations.livingIn[lang]}</td>
 							<td>{livingIn}</td>
 						</tr>
 					)}

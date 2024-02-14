@@ -5,18 +5,18 @@ interface Props {
 	lang?: string
 	button: string
 	href?: string
+	classNames?: string
 }
 
-const { button, lang, href } = Astro.props as Props
+const { button, lang, href, classNames } = Astro.props as Props
+
+const className = `transition-colors duration-150 relative inline-flex gap-x-2 items-center px-3 py-2 text-sm font-semibold ring-1 ring-inset ring-zinc-300 group focus:z-10 mb-6 ${classNames}`
 ---
 
 {
 	button === 'back' && (
 		<a href={`${href || '/'}`} target='_self' data-astro-prefetch>
-			<button
-				class='transition-colors duration-150 relative inline-flex gap-x-2 items-center bg-burgundy px-3 py-2 text-sm font-semibold text-white ring-1 ring-inset ring-gray-300 hover:bg-white hover:text-burgundy group focus:z-10 mb-6'
-				id='back-button'
-			>
+			<button class={className} id='back-button'>
 				<>
 					<span class='group-hover:text-burgundy text-sm'>←</span>
 					<span class='group-hover:text-burgundy inline text-sm'>{translations.back[lang]}</span>
@@ -29,10 +29,7 @@ const { button, lang, href } = Astro.props as Props
 {
 	button === 'next' && (
 		<a href={`${href || '/'}`} target='_self' data-astro-prefetch>
-			<button
-				class='transition-colors duration-150 relative inline-flex gap-x-2 items-center bg-transparent px-3 py-2 text-sm font-semibold text-burgundy ring-1 ring-inset ring-gray-300 hover:text-white group focus:z-10 mb-6'
-				id='next-button'
-			>
+			<button class={className} id='next-button'>
 				<>
 					{/* <span class='group-hover:text-burgundy inline text-sm'>{translations.next[lang]}</span> */}
 					<span class='group-hover:text-burgundy text-sm'>→</span>
@@ -45,10 +42,7 @@ const { button, lang, href } = Astro.props as Props
 {
 	button === 'overview' && (
 		<a href={`${href || '/'}`} target='_self' data-astro-prefetch data-astro-reload>
-			<button
-				class='transition-colors duration-150 relative inline-flex gap-x-2 items-center bg-burgundy px-3 py-2 text-sm font-semibold text-white ring-1 ring-inset ring-gray-300 hover:bg-white hover:text-burgundy group focus:z-10 mb-6'
-				id='overview-button'
-			>
+			<button class={className} id='overview-button'>
 				<>
 					<span class='group-hover:text-burgundy inline text-sm'>{translations.overview[lang]}</span>
 					{/* <span class='group-hover:text-burgundy text-sm'>↑</span> */}
@@ -61,10 +55,7 @@ const { button, lang, href } = Astro.props as Props
 {
 	button === 'previous' && (
 		<a href={`${href || '/'}`} target='_self' data-astro-prefetch>
-			<button
-				class='transition-colors duration-150 relative inline-flex gap-x-2 items-center bg-transparent px-3 py-2 text-sm font-semibold text-burgundy ring-1 ring-inset ring-gray-300 hover:text-white group focus:z-10 mb-6 w-30'
-				id='prev-button'
-			>
+			<button class={className} id='prev-button'>
 				<>
 					<span class='group-hover:text-burgundy text-sm'>←</span>
 					{/* <span class='group-hover:text-burgundy inline text-sm'>{translations.previous[lang]}</span> */}
