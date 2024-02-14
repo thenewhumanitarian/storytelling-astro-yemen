@@ -12,6 +12,7 @@ import MenuOverlay from './MenuOverlay.astro'
 <MenuOverlay />
 
 <script is:inline>
+	// Define functions
 	function openMenu() {
 		const menuOverlay = document.getElementById('menu-overlay')
 		console.log('Open menu button clicked')
@@ -25,9 +26,23 @@ import MenuOverlay from './MenuOverlay.astro'
 		if (e.target === menuOverlay) {
 			menuOverlay.style.opacity = '0'
 			menuOverlay.style.visibility = 'hidden'
+			setShowIntroFalse() // Call this function when the menu is closed
 		}
 	}
 
+	function checkIntroOverlay() {
+		// Check if 'showIntro' is not set to 'false'
+		if (localStorage.getItem('showIntro') !== 'false') {
+			openMenu() // Automatically open the menu if condition is met
+		}
+	}
+
+	function setShowIntroFalse() {
+		localStorage.setItem('showIntro', 'false') // Set 'showIntro' to 'false' in localStorage
+		console.log('showIntro set to false in localStorage')
+	}
+
+	// Deal with eventHandlers
 	document.addEventListener('DOMContentLoaded', () => {
 		const menuOverlay = document.getElementById('menu-overlay')
 		const menuButton = document.getElementById('menu-button')
@@ -35,6 +50,9 @@ import MenuOverlay from './MenuOverlay.astro'
 		// Add event listeners
 		menuButton.addEventListener('click', openMenu)
 		menuOverlay.addEventListener('click', closeMenu)
+
+		// Show once
+		checkIntroOverlay() // Check and potentially show the intro overlay
 	})
 
 	document.addEventListener('astro:before-swap', () => {
