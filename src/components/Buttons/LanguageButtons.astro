@@ -97,6 +97,9 @@
 		}
 
 		if (currentLanguage === 'ar' && buttonArabic) {
+      // Set language var to adjust dir in of html tag
+      // document.documentElement.dir = 'rtl'
+
 			buttonArabic.classList.add('bg-burgundy')
 			buttonEnglish.classList.remove('bg-burgundy')
 			if (document.querySelector('#grid')) {
@@ -110,6 +113,9 @@
 				document.querySelector('#list').classList.add('language--ar')
 			}
 		} else if (buttonEnglish) {
+      // Set language var to adjust dir in of html tag
+      // document.documentElement.dir = 'ltr'
+
 			buttonEnglish.classList.add('bg-burgundy')
 			buttonArabic.classList.remove('bg-burgundy')
 			if (document.querySelector('#grid')) {
