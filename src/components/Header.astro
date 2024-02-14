@@ -17,7 +17,10 @@ export interface Props {
 const { filterButtons, languageButtons, dark, switchViewButtons } = Astro.props as Props
 ---
 
-<header class={`${dark ? 'bg-black shadow-xs shadow-white' : 'bg-white'} flex items-center justify-between w-full cursor-default h-20 top-0 left-0 z-50`} dir="ltr">
+<header
+	class={`${dark ? 'bg-black shadow-xs shadow-white' : 'bg-white'} flex items-center justify-between w-full cursor-default h-20 top-0 left-0 z-50 shadow-zinc-400 shadow-sm`}
+	dir='ltr'
+>
 	<div class='grid grid-cols-3 items-center px-6 w-full'>
 		<div class='flex justify-start gap-x-2 sm:gap-x-3 items-center'>
 			<div class={`${dark ? 'text-white' : 'text-black'} fill-current flex gap-3 items-center justify-start`}>
@@ -28,7 +31,7 @@ const { filterButtons, languageButtons, dark, switchViewButtons } = Astro.props 
 			</div>
 			{switchViewButtons && <SwitchViewButtons />}
 		</div>
-		<div class='flex justify-center'>
+		<div class='flex justify-center z-[9999]'>
 			<HeaderLogo dark={dark} />
 		</div>
 		<!-- <div class='justify-end hidden sm:flex'><p class={`${dark ? 'text-white' : ''} font-serif`}>Journalism from the heart of crises</p></div> -->

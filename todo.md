@@ -15,24 +15,39 @@
 
 ## Call with Annie on 6 February 2023
 
-* Titles of entries will probably be quotes
-* Editing should be done by Monday 12 February 2024, in English at least
-–––
-* Modal box when loading the page for the first time
+* DONE Modal box in the beginning explaining the project, also add info button
 * DONE Title Yemen Listening Project somewhere on the main page, maybe in top nav?
 * DONE Next button additionally to Back button on entry detail page
 * DONE Create bespoke logo that combines TNH with Yemen Listening Project
+* DONE Video ones should take still from the video as teaser tile image
+---
 * Fallback is to have them stand out with transform and drop shadow
-* Modal box in the beginning explaining the project
-* Categorising or tagging the entries? Using colour schemes for this?
 * Maybe show little icons for the ones highlighted to say why they are highlighted?
 * Little icons for video/audio/image/document on the tiles
-* Video ones should take still from the video as teaser tile image
-* The static pages need to be designed and written
-* "Share this story" buttons on detail pages with social media card
 * Remove stars on mobile and reduce number of stars on mobile to save computing power
 * Highlighting style needs to be adjusted, ideally they should be bigger
 * Highlighted ones maybe even using 2/4 fields, would that be possible?
-* Create embeddable for Spotlight on homepage?
 ---
+
+## Call with Annie on 14 February 2023
+
 * Audio: Can should we turn these all into videos with subtitles? Ciara? Add to Google Drive pls.
+* The static pages need to be designed and written
+* Static pages by Annie
+* Sofia should help us turn the audios into videos
+---
+* "Share this story" buttons on detail pages with social media card
+* White border under header
+* Grid and list views on desktop but only list view on mobile?
+* Check titles and encoding etc. in scraper
+* Button to change language on the detail page
+* Icons such as world anad filter can go?
+* Intro modal inside hamburger menu and remove (i) icon
+* Infinite grid highlighted entries shouldn't touch each other
+* Make a cooler grid for the Attachments component with lightbox
+* Detail page title big  then name age and location
+* Pergament doesn't look like part of identity, maybe change?
+* Creating 
+---
+* Create embeddable for Spotlight on homepage?
+* Categorising or tagging the entries? Using colour schemes for this?
