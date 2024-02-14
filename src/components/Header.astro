@@ -1,7 +1,5 @@
 ---
 import MenuIcon from './Menu.astro'
-import IntroIcon from './Intro.astro'
-// import HeaderLogo from './HeaderLogo.astro'
 import HeaderLogo from './HeaderLogoSimple.astro'
 import FilterButtons from './Buttons/FilterButtons.astro'
 import SwitchViewButtons from './Buttons/SwitchViewButtons.astro'
@@ -26,12 +24,9 @@ const { filterButtons, languageButtons, dark, switchViewButtons } = Astro.props 
 			<div class={`${dark ? 'text-white' : 'text-black'} fill-current flex gap-3 items-center justify-start`}>
 				<MenuIcon />
 			</div>
-			<div class={`${dark ? 'text-white' : 'text-black'} fill-current flex gap-3 items-center justify-start`}>
-				<IntroIcon />
-			</div>
 			{switchViewButtons && <SwitchViewButtons />}
 		</div>
-		<div class='flex justify-center z-[9999]'>
+		<div class='flex justify-center'>
 			<HeaderLogo dark={dark} />
 		</div>
 		<!-- <div class='justify-end hidden sm:flex'><p class={`${dark ? 'text-white' : ''} font-serif`}>Journalism from the heart of crises</p></div> -->

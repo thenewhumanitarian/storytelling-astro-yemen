@@ -43,4 +43,16 @@ export const translations = {
     ar: 'يعيش في',
     en: 'Living in'
   },
+  allStories: {
+    ar: 'كل القصص',
+    en: 'All Stories'
+  },
+  nameUnknown: {
+    ar: 'اسم غير معروف',
+    en: 'Name unknown'
+  },
+  yearsOld: {
+    ar: 'سنة',
+    en: 'years old'
+  },
 }

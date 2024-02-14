@@ -64,10 +64,10 @@ const dir = lang === 'ar' ? 'rtl' : 'ltr'
 
 <Layout dark title='The Yemen Listening Project' header={true} switchViewButtons={false} overflow={'always'} dir={dir}>
 	<ViewTransitions />
-	<div class='fixed top-0 left-0 w-screen h-screen -z-1 pointer-events-none' id='stars'></div>
+	<div class='fixed top-0 left-0 w-screen h-screen -z-1 pointer-events-none' id='stars'></div>ƒ
 	<div class='fixed top-0 left-0 w-screen h-screen -z-1 pointer-events-none' id='city'></div>
 	<div
-		class='w-full max-w-5xl mx-auto mt-2 sm:mt-12 lg:mt-16 mb-8 sm:mb-24 px-4'
+		class='w-full max-w-5xl mx-auto mt-2 sm:mt-12 lg:mt-5 mb-8 sm:mb-24 px-4'
 		class='story-detail-page--wrapper'
 		id='story-wrapper'
 		dir={lang === 'ar' ? 'rtl' : 'ltr'}
@@ -80,10 +80,11 @@ const dir = lang === 'ar' ? 'rtl' : 'ltr'
 		<Prose>
 			<div class='flex flex-col gap-10'>
 				<div class='flex flex-col lg:flex-row lg:gap-x-5'>
-					<div class='sm:w-1/2'>
-						<Title>{story.story[lang].title || `${lang.toUpperCase()} title for story ID #${story.id} is missing`}</Title>
-					</div>
-					<div class='sm:w-1/2'>
+					{/* Header section */}
+					<div class='w-full flex flex-col items-center justify-center'>
+						<Title>
+							{story.story[lang].title || `${lang.toUpperCase()} title for story ID #${story.id} is missing`}
+						</Title>
 						<AuthorSection
 							lang={lang}
 							name={`${story.personalInfo[lang].name} ${story.personalInfo[lang].surname}`}
@@ -93,6 +94,7 @@ const dir = lang === 'ar' ? 'rtl' : 'ltr'
 						/>
 					</div>
 				</div>
+				{/* Attachments section */}
 				<Attachments attachments={story.attachments} />
 				<Message contentArray={contentArray} lang={lang} />
 			</div>

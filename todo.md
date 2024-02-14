@@ -21,31 +21,32 @@
 * DONE Create bespoke logo that combines TNH with Yemen Listening Project
 * DONE Video ones should take still from the video as teaser tile image
 ---
-* Fallback is to have them stand out with transform and drop shadow
-* Maybe show little icons for the ones highlighted to say why they are highlighted?
 * Little icons for video/audio/image/document on the tiles
-* Remove stars on mobile and reduce number of stars on mobile to save computing power
 * Highlighting style needs to be adjusted, ideally they should be bigger
 * Highlighted ones maybe even using 2/4 fields, would that be possible?
+* Fallback (for highlighted stories) is to have them stand out with transform and drop shadow
+* Remove stars on mobile and reduce number of stars on mobile to save computing power
 ---
 
 ## Call with Annie on 14 February 2023
 
-* Audio: Can should we turn these all into videos with subtitles? Ciara? Add to Google Drive pls.
-* The static pages need to be designed and written
-* Static pages by Annie
+* Audio: Can should we turn these all into videos with subtitles?
 * Sofia should help us turn the audios into videos
+* Once videos ready pls to Google Drive structure with ID folders
+* The static pages need to be designed (Marc) and written (Annie)
 ---
-* "Share this story" buttons on detail pages with social media card
-* White border under header
-* Grid and list views on desktop but only list view on mobile?
-* Check titles and encoding etc. in scraper
-* Button to change language on the detail page
-* Icons such as world anad filter can go?
-* Intro modal inside hamburger menu and remove (i) icon
 * Infinite grid highlighted entries shouldn't touch each other
-* Make a cooler grid for the Attachments component with lightbox
+* DONE White border under header
+* Intro modal inside hamburger menu and remove (i) icon
+* Button to change language on the detail page
+* Send UI translations to Annie
+* "Share this story" buttons on detail pages with social media card
+* Grid and list views on desktop but only list view on mobile?
+* Tidy up header make sure it's looking good everywhere
+* Check titles and encoding etc. in scraper
+* Icons such as "world" and "filter" can go?
 * Detail page title big  then name age and location
+* Make a cooler grid for the Attachments component with lightbox
 * Pergament doesn't look like part of identity, maybe change?
 * Creating 
 ---

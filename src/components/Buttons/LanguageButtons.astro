@@ -1,5 +1,5 @@
 <!-- Language icon (globe) -->
-<div class='gap-2 ml-4 hidden sm:flex'>
+<!-- <div class='gap-2 ml-4 hidden sm:flex'>
 	<svg width='18px' viewBox='0 0 105 105' fill='none' xmlns='http://www.w3.org/2000/svg'>
 		<g clip-path='url(#clip0_222_26)'>
 			<path
@@ -12,12 +12,12 @@
 			</clipPath>
 		</defs>
 	</svg>
-</div>
+</div> -->
 <!-- Language buttons  -->
 <div class='isolate inline-flex rounded-xs shadow-sm' transition:persist>
 	<button
 		type='button'
-		class='transition-colors duration-150 relative -ml-px inline-flex items-center rounded-r-xs bg-black px-3 py-2 text-sm font-semibold text-white ring-1 ring-inset ring-gray-300 hover:bg-white hover:text-burgundy focus:z-10'
+		class='transition-colors duration-150 relative -ml-px inline-flex items-center rounded-r-xs bg-black px-3 py-1 text-sm font-semibold text-white ring-1 ring-inset ring-gray-300 hover:bg-white hover:text-burgundy focus:z-10'
 		id='change-language--en'
 		transition:persist
 	>
@@ -97,8 +97,8 @@
 		}
 
 		if (currentLanguage === 'ar' && buttonArabic) {
-      // Set language var to adjust dir in of html tag
-      // document.documentElement.dir = 'rtl'
+			// Set language var to adjust dir in of html tag
+			// document.documentElement.dir = 'rtl'
 
 			buttonArabic.classList.add('bg-burgundy')
 			buttonEnglish.classList.remove('bg-burgundy')
@@ -113,8 +113,8 @@
 				document.querySelector('#list').classList.add('language--ar')
 			}
 		} else if (buttonEnglish) {
-      // Set language var to adjust dir in of html tag
-      // document.documentElement.dir = 'ltr'
+			// Set language var to adjust dir in of html tag
+			// document.documentElement.dir = 'ltr'
 
 			buttonEnglish.classList.add('bg-burgundy')
 			buttonArabic.classList.remove('bg-burgundy')

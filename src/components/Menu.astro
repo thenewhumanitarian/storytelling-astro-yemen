@@ -3,27 +3,52 @@ import MenuOverlay from './MenuOverlay.astro'
 ---
 
 <!-- Menu icon -->
-<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' class='fill-current text-white cursor-pointer' id='menu-button'>
-	<path d='M0 2v2h24V2Zm0 9v2h24v-2Zm0 9v2h24v-2Z'></path>
-</svg>
+<div title='Open menu' transition:persist>
+	<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' class='fill-current text-white cursor-pointer' id='menu-button'>
+		<path d='M0 2v2h24V2Zm0 9v2h24v-2Zm0 9v2h24v-2Z'></path>
+	</svg>
+</div>
 
 <MenuOverlay />
 
 <script>
+	const menuOverlay = document.getElementById('menu-overlay')
+	const menuButton = document.getElementById('menu-button')
+
+	// Define the functions for adding and removing event listeners
+	function openMenu() {
+		console.log('Open menu button clicked')
+		menuOverlay.style.opacity = '1'
+		menuOverlay.style.visibility = 'visible'
+		menuOverlay.style.pointerEvents = 'auto'
+		menuOverlay.style.zIndex = '9999'
+	}
+
+	function closeMenu(e) {
+		console.log('Close menu overlay clicked')
+		if (e.target === menuOverlay) {
+			menuOverlay.style.opacity = '0'
+			menuOverlay.style.visibility = 'hidden'
+			menuOverlay.style.pointerEvents = 'none'
+			menuOverlay.style.zIndex = '-1'
+		}
+	}
+
+	document.addEventListener('astro:before-preparation', () => {
+		// Correctly remove event listeners using the named functions
+		menuButton.removeEventListener('click', openMenu)
+		menuOverlay.removeEventListener('click', closeMenu) // Assuming you meant to attach this to `document`
+	})
+
+	document.addEventListener('astro:after-preparation', () => {
+		// Add event listeners
+		menuButton.addEventListener('click', openMenu)
+		menuOverlay.addEventListener('click', closeMenu) // Assuming you meant to attach this to `document`
+	})
+
 	document.addEventListener('DOMContentLoaded', () => {
-		const menuOverlay = document.getElementById('menu-overlay')
-		const menuButton = document.getElementById('menu-button')
-
-		menuButton.addEventListener('click', () => {
-			menuOverlay.style.opacity = '1'
-			menuOverlay.style.visibility = 'visible'
-		})
-
-		menuOverlay.addEventListener('click', (e) => {
-			if (e.target === menuOverlay) {
-				menuOverlay.style.opacity = '0'
-				menuOverlay.style.visibility = 'hidden'
-			}
-		})
+		// Add event listeners
+		menuButton.addEventListener('click', openMenu)
+		menuOverlay.addEventListener('click', closeMenu) // Assuming you meant to attach this to `document`
 	})
 </script>
