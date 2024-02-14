@@ -3,6 +3,7 @@ import { ViewTransitions } from 'astro:transitions'
 
 import Layout from '../layouts/Layout.astro'
 import StoryWrapper from '../components/StoryWrapper.astro'
+import Intro from '../components/Intro.astro'
 
 import stories from '../data/all_stories.json'
 
@@ -59,6 +60,7 @@ shuffleArray(stories)
 	<div class='hidden' id='content' transition:persist>
 		<Layout dark title='The Yemen Listening Project' header={true} filterButtons={true} languageButtons={true} switchViewButtons={true}>
 			<StoryWrapper stories={stories} transition:persist />
+			<Intro />
 		</Layout>
 	</div>
 </>

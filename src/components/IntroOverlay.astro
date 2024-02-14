@@ -1,0 +1,29 @@
+---
+import HeaderLogoSimple from './HeaderLogoSimple.astro'
+---
+
+<div id='intro-overlay' class='flex flex-col top-0 left-0 w-full h-screen bg-black items-center justify-center z-40 text-white'>
+	<HeaderLogoSimple />
+	<div class='mt-5 text-center'>
+		<h1>The Yemen Listening Project</h1>
+		<p>Intro slide needs to be done.</p>
+	</div>
+</div>
+
+<style>
+	#intro-overlay {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0, 0, 0, 0.85);
+		/* opacity: 0; */
+		/* visibility: hidden; */
+		transition: opacity 0.5s;
+		z-index: 9999;
+	}
+	#close-button {
+		z-index: 9999;
+	}
+</style>
