@@ -72,7 +72,7 @@ const dir = lang === 'ar' ? 'rtl' : 'ltr'
 		id='story-wrapper'
 		dir={lang === 'ar' ? 'rtl' : 'ltr'}
 	>
-		<div class='flex justify-center items-center flex-row-reverse'>
+		<div class={`flex justify-center items-center ${lang === 'ar' ? 'flex-row-reverse' : 'flex-row'}`}>
 			<NavButtons button='previous' lang={lang} href={`/stories/${lang}/${prevStorySlug}`} classNames='hover:text-white hover:bg-zinc-100' />
 			<NavButtons button='overview' lang={lang} classNames='text-white bg-burgundy hover:bg-zinc-100 hover:text-burgundy' />
 			<NavButtons button='next' lang={lang} href={`/stories/${lang}/${nextStorySlug}`} classNames='hover:text-white hover:bg-zinc-100' />
@@ -80,10 +80,10 @@ const dir = lang === 'ar' ? 'rtl' : 'ltr'
 		<Prose>
 			<div class='flex flex-col gap-10'>
 				<div class='flex flex-col lg:flex-row lg:gap-x-5'>
-					<div class='w-1/2'>
+					<div class='sm:w-1/2'>
 						<Title>{story.story[lang].title || `${lang.toUpperCase()} title for story ID #${story.id} is missing`}</Title>
 					</div>
-					<div class='w-1/2'>
+					<div class='sm:w-1/2'>
 						<AuthorSection
 							lang={lang}
 							name={`${story.personalInfo[lang].name} ${story.personalInfo[lang].surname}`}
@@ -276,23 +276,39 @@ const dir = lang === 'ar' ? 'rtl' : 'ltr'
 		}
 	}
 
-	// Add article slug to array of read articles in lStorage
 	// Retrieve the read articles array from localStorage or initialize a new one
 	let readArticles = JSON.parse(localStorage.getItem('readArticles')) || []
 
-	// Check if the current article's slug is not in the array
-	if (!readArticles.some((article) => article.slug === slug)) {
-		// Create an object with the current article's slug and the current timestamp
-		const articleObject = {
-			slug: slug,
-			timestamp: new Date().toISOString(),
+	if (lang === 'en') {
+		// Check if the current article's slug is not in the array
+		if (!readArticles.some((article) => article.slug === slugEN)) {
+			// Create an object with the current article's slug and the current timestamp
+			const articleObject = {
+				slug: slugEN,
+				timestamp: new Date().toISOString(),
+			}
+
+			// Add the object to the read articles array
+			readArticles.push(articleObject)
+
+			// Save the updated array back to localStorage
+			localStorage.setItem('readArticles', JSON.stringify(readArticles))
 		}
+	} else {
+		// Check if the current article's slug is not in the array
+		if (!readArticles.some((article) => article.slug === slugAR)) {
+			// Create an object with the current article's slug and the current timestamp
+			const articleObject = {
+				slug: slugAR,
+				timestamp: new Date().toISOString(),
+			}
 
-		// Add the object to the read articles array
-		readArticles.push(articleObject)
+			// Add the object to the read articles array
+			readArticles.push(articleObject)
 
-		// Save the updated array back to localStorage
-		localStorage.setItem('readArticles', JSON.stringify(readArticles))
+			// Save the updated array back to localStorage
+			localStorage.setItem('readArticles', JSON.stringify(readArticles))
+		}
 	}
 
 	/* Adds twinkling stars */
