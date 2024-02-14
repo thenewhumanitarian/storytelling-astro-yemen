@@ -64,8 +64,8 @@ const dir = lang === 'ar' ? 'rtl' : 'ltr'
 
 <Layout dark title='The Yemen Listening Project' header={true} switchViewButtons={false} overflow={'always'} dir={dir}>
 	<ViewTransitions />
-	<div class='fixed top-0 left-0 w-screen h-screen -z-1 pointer-events-none' id='stars'></div>ƒ
-	<div class='fixed top-0 left-0 w-screen h-screen -z-1 pointer-events-none' id='city'></div>
+	<div class='fixed top-0 left-0 w-screen h-screen -z-1 pointer-events-none' id='stars' transition:persist></div>
+	<div class='fixed top-0 left-0 w-screen h-screen -z-1 pointer-events-none' id='city' transition:persist></div>
 	<div
 		class='w-full max-w-5xl mx-auto mt-2 sm:mt-12 lg:mt-5 mb-8 sm:mb-24 px-4'
 		class='story-detail-page--wrapper'
@@ -319,17 +319,36 @@ const dir = lang === 'ar' ? 'rtl' : 'ltr'
 	var starContainer = document.querySelector('#stars')
 	var starAnimationClassesArray = ['one', 'two', 'three', 'four', 'five']
 
-	for (var jess = 0; jess < NUMBER_OF_STARS; jess++) {
-		var aStar = document.createElement('div')
-		var randomDuration = starAnimationClassesArray[Math.floor(Math.random() * starAnimationClassesArray.length)]
-		aStar.className = 'star ' + randomDuration
-		var windowWidth = window.innerWidth
-		var windowHeight = window.innerHeight - 90
-		var x = Math.random() * windowWidth
-		aStar.style.left = x + 'px'
-		starContainer.appendChild(aStar)
-		var y = Math.random() * windowHeight
-		aStar.style.top = y + 'px'
-		addPulse(aStar)
+	function createStars() {
+		for (var jess = 0; jess < NUMBER_OF_STARS; jess++) {
+			setTimeout(() => {
+				var aStar = document.createElement('div')
+				var randomDuration = starAnimationClassesArray[Math.floor(Math.random() * starAnimationClassesArray.length)]
+				aStar.className = 'star ' + randomDuration
+				var windowWidth = window.innerWidth
+				var windowHeight = window.innerHeight - 90
+				var x = Math.random() * windowWidth
+				aStar.style.left = x + 'px'
+				starContainer.appendChild(aStar)
+				var y = Math.random() * windowHeight
+				aStar.style.top = y + 'px'
+				addPulse(aStar)
+			}, jess * 100)
+		}
 	}
+
+	// Deal with eventHandlers
+	document.addEventListener('DOMContentLoaded', () => {
+		createStars()
+	})
+
+	document.addEventListener('astro:before-swap', () => {
+		// Remove all stars
+		starContainer.innerHTML = ''
+	})
+
+	document.addEventListener('astro:after-swap', () => {
+		starContainer.innerHTML = ''
+		createStars()
+	})
 </script>
