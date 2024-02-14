@@ -36,7 +36,10 @@ import HeaderLogoSimple from './HeaderLogoSimple.astro'
 		if (localStorage.getItem('showIntro') === 'false') {
 			introOverlay.style.opacity = '0'
 			introOverlay.style.visibility = 'hidden'
-		}
+		} else {
+      introOverlay.style.opacity = '1'
+      introOverlay.style.visibility = 'visible'
+    }
 
 		// Remove intro overlay when clicking on it
 		introOverlay.addEventListener('click', (e) => {
