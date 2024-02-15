@@ -16,7 +16,7 @@ const { filterButtons, languageButtons, dark, switchViewButtons } = Astro.props 
 ---
 
 <header
-	class={`${dark ? 'bg-black shadow-xs shadow-white' : 'bg-white'} flex items-center justify-between w-full cursor-default h-20 top-0 left-0 z-50 shadow-zinc-400 shadow-sm`}
+	class={`${dark ? 'bg-black shadow-xs shadow-white' : 'bg-white'} flex items-center justify-between w-full cursor-default h-20 top-0 left-0 z-20 shadow-zinc-400 shadow-sm`}
 	dir='ltr'
 >
 	<div class='grid grid-cols-3 items-center px-6 w-full'>
@@ -33,7 +33,7 @@ const { filterButtons, languageButtons, dark, switchViewButtons } = Astro.props 
 		<div class='justify-end flex'>
 			{
 				languageButtons && (
-					<div class='fixed top-24 right-4 -mt-2 sm:-mt-0 sm:top-0 sm:left-0 shadow-lg sm:shadow-none sm:relative flex items-center gap-3 z-50'>
+					<div class='fixed top-24 right-4 -mt-2 sm:-mt-0 sm:top-0 sm:left-0 shadow-lg sm:shadow-none sm:relative flex items-center gap-3 z-20'>
 						<LanguageButtons />
 					</div>
 				)
