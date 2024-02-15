@@ -19,7 +19,6 @@ const { stories } = Astro.props
 	/* Hide images when dragging */
 	#grid.hide-images .story-item img {
 		opacity: 0;
-		transition: all 0s;
 	}
 
 	/* Grid view styles */
@@ -138,20 +137,64 @@ const { stories } = Astro.props
 		}
 	}
 
-	// Window load event
-	window.addEventListener('pageshow', function () {
-		filterGridBasedOnLocalStorage()
+	// Find best grid sizes based on window size
+	function optimalGridDimensions(minSide = window.innerWidth > 500 ? 180 : 130) {
+		const width = window.innerWidth
+		const height = window.innerHeight
 
-		const grid = optimalGridDimensions()
-		Infinite.setGrid(grid.cols, grid.rows)
-	})
+		const maxCols = Math.floor(width / minSide)
+		const maxRows = Math.floor(height / minSide)
 
+		let bestCols = 1
+		let bestRows = maxRows
+		let closestToSquare = Infinity
+
+		for (let cols = 1; cols <= maxCols; cols++) {
+			const cellWidth = width / cols
+			const rowsForSquare = Math.floor(height / cellWidth)
+
+			if (rowsForSquare > 0 && cellWidth >= minSide) {
+				const aspectRatioDiff = Math.abs(cellWidth * cols - (width * rowsForSquare) / height)
+
+				if (aspectRatioDiff < closestToSquare) {
+					closestToSquare = aspectRatioDiff
+					bestCols = cols
+					bestRows = rowsForSquare
+				}
+			}
+		}
+
+		return {
+			cols: bestCols,
+			rows: bestRows,
+		}
+	}
+
+	// Function to truncate text with ellipses
 	function truncateWithEllipses(text, maxLength) {
 		if (text.length <= maxLength) {
 			return text
 		}
 		return text.substr(0, maxLength - 3) + '...' // Subtract 3 for the length of the ellipses
 	}
+
+	// Function to initialise the grid
+	function initGrid() {
+		filterGridBasedOnLocalStorage()
+		const grid = optimalGridDimensions()
+		Infinite.setGrid(grid.cols, grid.rows)
+	}
+
+	// Window load event
+	window.addEventListener('pageshow', function () {
+		const grid = optimalGridDimensions()
+		const Infinite = new InfiniteGrid(grid.cols, grid.rows)
+	})
+
+	// window.addEventListener('astro:after-swap', function () {
+	// 	const grid = optimalGridDimensions()
+	// 	const Infinite = new InfiniteGrid(grid.cols, grid.rows)
+	// })
 
 	/* Grid magic */
 	class GridItem {
@@ -381,13 +424,19 @@ const { stories } = Astro.props
 			this.dragging = true
 			this.lastX = ev.clientX
 			this.lastY = ev.clientY
-
-			// Add 'hide-images' class to grid or image container to hide images
-			document.getElementById('grid').classList.add('hide-images')
 		}
 
 		onMove(ev) {
 			if (!this.dragging) return
+
+			// Calculate the duration of the tap
+			const touchDuration = Date.now() - this.touchStartTime
+
+			// Check duration and act accordingly
+			if (touchDuration > 100) {
+				// Add 'hide-images' class to grid or image container to hide images
+				document.getElementById('grid').classList.add('hide-images')
+			}
 
 			if (document.getElementById('grid').style.display === 'none') return
 			ev = ev.type == 'touchmove' ? ev.touches[0] : ev
@@ -425,7 +474,6 @@ const { stories } = Astro.props
 
 			// Calculate the duration of the tap
 			const touchDuration = Date.now() - this.touchStartTime
-			// console.log(touchDuration)
 
 			// Check duration and act accordingly
 			if (touchDuration < 100) {
@@ -537,44 +585,8 @@ const { stories } = Astro.props
 		}
 	}
 
-	const grid = optimalGridDimensions()
-	const Infinite = new InfiniteGrid(grid.cols, grid.rows)
-
 	// Re-calculate when user resizes browser
 	window.addEventListener('resize', () => {
-		const grid = optimalGridDimensions()
-		Infinite.setGrid(grid.cols, grid.rows)
+		initGrid()
 	})
-
-	function optimalGridDimensions(minSide = window.innerWidth > 500 ? 180 : 130) {
-		const width = window.innerWidth
-		const height = window.innerHeight
-
-		const maxCols = Math.floor(width / minSide)
-		const maxRows = Math.floor(height / minSide)
-
-		let bestCols = 1
-		let bestRows = maxRows
-		let closestToSquare = Infinity
-
-		for (let cols = 1; cols <= maxCols; cols++) {
-			const cellWidth = width / cols
-			const rowsForSquare = Math.floor(height / cellWidth)
-
-			if (rowsForSquare > 0 && cellWidth >= minSide) {
-				const aspectRatioDiff = Math.abs(cellWidth * cols - (width * rowsForSquare) / height)
-
-				if (aspectRatioDiff < closestToSquare) {
-					closestToSquare = aspectRatioDiff
-					bestCols = cols
-					bestRows = rowsForSquare
-				}
-			}
-		}
-
-		return {
-			cols: bestCols,
-			rows: bestRows,
-		}
-	}
 </script>
