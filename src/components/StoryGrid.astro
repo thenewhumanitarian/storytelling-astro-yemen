@@ -126,6 +126,12 @@ const { stories } = Astro.props
 <script src='https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.min.js' is:inline></script>
 
 <script async define:vars={{ stories }} is:inline>
+	// Window load event
+	window.addEventListener('pageshow', function () {
+		const grid = optimalGridDimensions()
+		const Infinite = new InfiniteGrid(grid.cols, grid.rows)
+	})
+
 	// Initial check to filter grid if necessary, same for list
 	function filterGridBasedOnLocalStorage() {
 		if (localStorage.getItem('showAll') === 'false') {
@@ -184,17 +190,6 @@ const { stories } = Astro.props
 		const grid = optimalGridDimensions()
 		Infinite.setGrid(grid.cols, grid.rows)
 	}
-
-	// Window load event
-	window.addEventListener('pageshow', function () {
-		const grid = optimalGridDimensions()
-		const Infinite = new InfiniteGrid(grid.cols, grid.rows)
-	})
-
-	// window.addEventListener('astro:after-swap', function () {
-	// 	const grid = optimalGridDimensions()
-	// 	const Infinite = new InfiniteGrid(grid.cols, grid.rows)
-	// })
 
 	/* Grid magic */
 	class GridItem {
