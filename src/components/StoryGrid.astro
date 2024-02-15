@@ -126,72 +126,7 @@ const { stories } = Astro.props
 <script src='https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.min.js' is:inline></script>
 
 <script async define:vars={{ stories }} is:inline>
-	// Window load event
-	window.addEventListener('pageshow', function () {
-		const grid = optimalGridDimensions()
-		const Infinite = new InfiniteGrid(grid.cols, grid.rows)
-	})
-
-	// Initial check to filter grid if necessary, same for list
-	function filterGridBasedOnLocalStorage() {
-		if (localStorage.getItem('showAll') === 'false') {
-			document.getElementById('grid').classList.add('filter--read')
-			document.getElementById('list').classList.add('filter--read')
-		} else {
-			document.getElementById('grid').classList.remove('filter--read')
-			document.getElementById('list').classList.remove('filter--read')
-		}
-	}
-
-	// Find best grid sizes based on window size
-	function optimalGridDimensions(minSide = window.innerWidth > 500 ? 180 : 130) {
-		const width = window.innerWidth
-		const height = window.innerHeight
-
-		const maxCols = Math.floor(width / minSide)
-		const maxRows = Math.floor(height / minSide)
-
-		let bestCols = 1
-		let bestRows = maxRows
-		let closestToSquare = Infinity
-
-		for (let cols = 1; cols <= maxCols; cols++) {
-			const cellWidth = width / cols
-			const rowsForSquare = Math.floor(height / cellWidth)
-
-			if (rowsForSquare > 0 && cellWidth >= minSide) {
-				const aspectRatioDiff = Math.abs(cellWidth * cols - (width * rowsForSquare) / height)
-
-				if (aspectRatioDiff < closestToSquare) {
-					closestToSquare = aspectRatioDiff
-					bestCols = cols
-					bestRows = rowsForSquare
-				}
-			}
-		}
-
-		return {
-			cols: bestCols,
-			rows: bestRows,
-		}
-	}
-
-	// Function to truncate text with ellipses
-	function truncateWithEllipses(text, maxLength) {
-		if (text.length <= maxLength) {
-			return text
-		}
-		return text.substr(0, maxLength - 3) + '...' // Subtract 3 for the length of the ellipses
-	}
-
-	// Function to initialise the grid
-	function initGrid() {
-		filterGridBasedOnLocalStorage()
-		const grid = optimalGridDimensions()
-		Infinite.setGrid(grid.cols, grid.rows)
-	}
-
-	/* Grid magic */
+	/* CLASSES */
 	class GridItem {
 		constructor(index = 0) {
 			// Create anchor element for grid item as a container
@@ -580,8 +515,78 @@ const { stories } = Astro.props
 		}
 	}
 
+	// Initial check to filter grid if necessary, same for list
+	function filterGridBasedOnLocalStorage() {
+		if (localStorage.getItem('showAll') === 'false') {
+			document.getElementById('grid').classList.add('filter--read')
+			document.getElementById('list').classList.add('filter--read')
+		} else {
+			document.getElementById('grid').classList.remove('filter--read')
+			document.getElementById('list').classList.remove('filter--read')
+		}
+	}
+
+	// Find best grid sizes based on window size
+	function optimalGridDimensions(minSide = window.innerWidth > 500 ? 180 : 130) {
+		const width = window.innerWidth
+		const height = window.innerHeight
+
+		const maxCols = Math.floor(width / minSide)
+		const maxRows = Math.floor(height / minSide)
+
+		let bestCols = 1
+		let bestRows = maxRows
+		let closestToSquare = Infinity
+
+		for (let cols = 1; cols <= maxCols; cols++) {
+			const cellWidth = width / cols
+			const rowsForSquare = Math.floor(height / cellWidth)
+
+			if (rowsForSquare > 0 && cellWidth >= minSide) {
+				const aspectRatioDiff = Math.abs(cellWidth * cols - (width * rowsForSquare) / height)
+
+				if (aspectRatioDiff < closestToSquare) {
+					closestToSquare = aspectRatioDiff
+					bestCols = cols
+					bestRows = rowsForSquare
+				}
+			}
+		}
+
+		return {
+			cols: bestCols,
+			rows: bestRows,
+		}
+	}
+
+	// Function to truncate text with ellipses
+	function truncateWithEllipses(text, maxLength) {
+		if (text.length <= maxLength) {
+			return text
+		}
+		return text.substr(0, maxLength - 3) + '...' // Subtract 3 for the length of the ellipses
+	}
+
+	// Function to initialise the grid
+	function initGrid() {
+		filterGridBasedOnLocalStorage()
+		const grid = optimalGridDimensions()
+		Infinite.setGrid(grid.cols, grid.rows)
+	}
+
+	// Then, after defining all your classes, use them in your script
+	window.addEventListener('DOMContentLoaded', function () {
+		const grid = optimalGridDimensions() // Ensure this is defined before you use it
+		const Infinite = new InfiniteGrid(grid.cols, grid.rows)
+		initGrid()
+	})
+
 	// Re-calculate when user resizes browser
 	window.addEventListener('resize', () => {
 		initGrid()
 	})
+
+	const Infinite = new InfiniteGrid(grid.cols, grid.rows)
+	const grid = optimalGridDimensions()
+	initGrid()
 </script>
