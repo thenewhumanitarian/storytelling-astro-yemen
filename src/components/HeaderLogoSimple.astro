@@ -4,11 +4,16 @@ export interface Props {
 }
 
 const { dark } = Astro.props as Props
+
+let { lang } = Astro.params
+if (!lang) {
+	lang = 'en'
+}
 ---
 
 <!-- Logo of The New Humanitarian -->
 <div class='h-10 sm:h-12'>
-	<a href='/' data-astro-prefetch data-astro-reload>
+	<a href=`/${lang}` data-astro-prefetch data-astro-reload>
 		<svg
 			width='881'
 			height='162'

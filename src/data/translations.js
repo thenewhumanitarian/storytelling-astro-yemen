@@ -59,4 +59,20 @@ export const translations = {
     ar: 'شارك هذه القصة',
     en: 'Share this story'
   },
+  all: {
+    ar: 'الكل',
+    en: 'All'
+  },
+  unread: {
+    ar: 'غير مقروء',
+    en: 'Unread'
+  },
+  arabic: {
+    ar: 'العربية',
+    en: 'Arabic'
+  },
+  english: {
+    ar: 'الإنجليزية',
+    en: 'English'
+  },
 }

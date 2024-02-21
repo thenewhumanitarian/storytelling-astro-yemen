@@ -8,7 +8,7 @@ import '../styles/global.css'
 
 export interface Props {
 	filterButtons?: boolean
-	languageButtons?: boolean
+	languageButtons?: object
 	switchViewButtons?: boolean
 	dark?: boolean
 	header?: boolean
@@ -17,11 +17,12 @@ export interface Props {
 	overflow?: string
 }
 
-const { filterButtons, languageButtons, dark, header, title, switchViewButtons, dir, overflow } = Astro.props as Props
+const { filterButtons, languageButtons, dark, header, title, switchViewButtons, dir } = Astro.props as Props
+const { lang } = Astro.params
 ---
 
 <!doctype html>
-<html lang='en' dir={dir || 'ltr'}>
+<html lang='en' dir={lang === 'ar' ? 'rtl' : 'ltr'}>
 	<head>
 		<!-- Todo: Change before publication  -->
 		<meta name='robots' content='noindex' />

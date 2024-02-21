@@ -88,8 +88,8 @@ if (categorisedAttachments.images.length === 1) {
 			>
 				{categorisedAttachments.images.length > 0 && (
 					<div>
-						<h3 class='flex items-center justify-start gap-x-3'>
-							<span class='inline-block w-8 h-8 flex items-center'>
+						<h3 class='flex items-center justify-start gap-x-3 m-0'>
+							<span class='w-8 h-8 flex items-center'>
 								<svg
 									xmlns='http://www.w3.org/2000/svg'
 									fill='none'
@@ -119,7 +119,7 @@ if (categorisedAttachments.images.length === 1) {
 
 				{categorisedAttachments.videos.length > 0 && (
 					<div>
-						<h3>Videos</h3>
+						<h3 class="m-0">Videos</h3>
 						{categorisedAttachments.videos.map((video, index) => (
 							<div class='aspect-[16/9] w-full relative'>
 								<video controls class='z-50 absolute top-0 left-0 w-full h-full m-0'>
@@ -132,7 +132,7 @@ if (categorisedAttachments.images.length === 1) {
 
 				{categorisedAttachments.audios.length > 0 && (
 					<div>
-						<h3>Audio</h3>
+						<h3 class="m-0">Audio</h3>
 						{categorisedAttachments.audios.map((audio, index) => (
 							<div class='relative'>
 								<audio controls class='w-full mb-4' src={`/attachments/${audio}`} />
@@ -143,7 +143,7 @@ if (categorisedAttachments.images.length === 1) {
 
 				{categorisedAttachments.documents.length > 0 && (
 					<div>
-						<h3>Documents</h3>
+						<h3 class="m-0">Documents</h3>
 						{categorisedAttachments.documents.map((document, index) => (
 							<p>
 								<a href={`../../src/assets/${document}`} target='_blank' rel='noopener noreferrer'>

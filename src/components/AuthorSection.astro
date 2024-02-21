@@ -17,41 +17,6 @@ const { lang, name, age, from, livingIn } = Astro.props as Props
 	{age ? `, ${age} ${translations.yearsOld[lang]}` : ``}{from ? `, ${translations.from[lang].toLowerCase()} ${from}` : ``}
 </div>
 
-<!-- {
-	name && (
-		<section>
-			<table class='table-fixed prose w-full text-sm sm:text-lg'>
-				<tbody>
-					{name && (
-						<tr>
-							<td>{translations.name[lang]}</td>
-							<td>{name}</td>
-						</tr>
-					)}
-					{age && (
-						<tr>
-							<td>{translations.age[lang]}</td>
-							<td>{age}</td>
-						</tr>
-					)}
-					{from && (
-						<tr>
-							<td>{translations.from[lang]}</td>
-							<td>{from}</td>
-						</tr>
-					)}
-					{livingIn && (
-						<tr>
-							<td>{translations.livingIn[lang]}</td>
-							<td>{livingIn}</td>
-						</tr>
-					)}
-				</tbody>
-			</table>
-		</section>
-	)
-} -->
-
 <style>
 	strong {
 		font-weight: bold;

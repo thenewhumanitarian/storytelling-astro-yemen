@@ -7,17 +7,23 @@ import LanguageButtons from './Buttons/LanguageButtons.astro'
 
 export interface Props {
 	filterButtons?: boolean
-	languageButtons?: boolean
+	languageButtons?: object
 	switchViewButtons?: boolean
 	dark?: boolean
 }
 
 const { filterButtons, languageButtons, dark, switchViewButtons } = Astro.props as Props
+
+let { lang } = Astro.params
+if (!lang) {
+	lang = 'en'
+}
 ---
 
 <header
 	class={`${dark ? 'bg-black shadow-xs shadow-white' : 'bg-white'} flex items-center justify-between w-full cursor-default h-20 top-0 left-0 z-20 shadow-zinc-400 shadow-sm`}
 	dir='ltr'
+	transition:animate='none'
 >
 	<div class='grid grid-cols-3 items-center px-6 w-full'>
 		<div class='flex justify-start gap-x-2 sm:gap-x-3 items-center'>
@@ -25,22 +31,22 @@ const { filterButtons, languageButtons, dark, switchViewButtons } = Astro.props 
 				<MenuIcon />
 			</div>
 			{switchViewButtons && <SwitchViewButtons />}
+      {filterButtons && <FilterButtons />}
 		</div>
 		<div class='flex justify-center'>
 			<HeaderLogo dark={dark} />
 		</div>
 		<!-- <div class='justify-end hidden sm:flex'><p class={`${dark ? 'text-white' : ''} font-serif`}>Journalism from the heart of crises</p></div> -->
-		<div class='justify-end flex'>
+		<div class='justify-end flex gap-x-4'>
 			{
 				languageButtons && (
 					<div class='fixed top-24 right-4 -mt-2 sm:-mt-0 sm:top-0 sm:left-0 shadow-lg sm:shadow-none sm:relative flex items-center gap-3 z-20'>
-						<LanguageButtons />
+						<LanguageButtons links={languageButtons} />
 					</div>
 				)
 			}
-			{filterButtons && <FilterButtons />}
 		</div>
-		<div class={`hidden justify-end items-center gap-2 flex sm:hidden ${dark ? 'text-white' : 'text-black'}`}>
+		<div class={`justify-end items-center gap-2 flex sm:hidden ${dark ? 'text-white' : 'text-black'}`}>
 			<svg xmlns='http://www.w3.org/2000/svg' width='20px' height='20px' viewBox='0 0 100 100' class='inline-block'>
 				<path
 					fill={dark ? 'white' : 'black'}

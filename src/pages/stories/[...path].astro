@@ -2,21 +2,18 @@
 import { ViewTransitions } from 'astro:transitions'
 import NavButtons from '../../components/Buttons/NavButtons.astro'
 import Layout from '../../layouts/Layout.astro'
-import stories from '../../data/all_stories.json'
-
-import Prose from '../../components/Prose.astro'
 import Title from '../../components/Title.astro'
 import AuthorSection from '../../components/AuthorSection.astro'
 import Attachments from '../../components/Attachments.astro'
 import Message from '../../components/Message.astro'
 import ShareStory from '../../components/ShareStory.astro'
+import stories from '../../data/all_stories.json'
 
 // Read path parameters for language and slug
 const { path } = Astro.params
+
 const pathParams = path?.toString().split('/')
 const lang = pathParams?.[0] || 'en'
-// const slug = pathParams?.[1] || '/'
-// console.log(lang, slug)
 
 // Create all pages based on stories array, for both English and Arabic language
 export async function getStaticPaths() {
@@ -63,7 +60,15 @@ const nextStorySlug = stories[nextIndex].slugs[lang] // Adjust 'en' as needed fo
 const dir = lang === 'ar' ? 'rtl' : 'ltr'
 ---
 
-<Layout dark title='The Yemen Listening Project' header={true} switchViewButtons={false} overflow={'always'} dir={dir}>
+<Layout
+	dark
+	title='The Yemen Listening Project'
+	header={true}
+	languageButtons={{ ar: `/stories/ar/${story.slugs.ar}`, en: `/stories/en/${story.slugs.en}` }}
+	switchViewButtons={false}
+	overflow={'always'}
+	dir={dir}
+>
 	<ViewTransitions />
 	<div class='fixed top-0 left-0 w-screen h-screen -z-1 pointer-events-none' id='stars'></div>
 	<div class='fixed top-0 left-0 w-screen h-screen -z-1 pointer-events-none' id='city'></div>
@@ -75,31 +80,29 @@ const dir = lang === 'ar' ? 'rtl' : 'ltr'
 	>
 		<div class={`flex justify-center items-center ${lang === 'ar' ? 'flex-row-reverse' : 'flex-row'}`}>
 			<NavButtons button='previous' lang={lang} href={`/stories/${lang}/${prevStorySlug}`} classNames='hover:text-white hover:bg-zinc-100' />
-			<NavButtons button='overview' lang={lang} classNames='text-white bg-burgundy hover:bg-zinc-100 hover:text-burgundy' />
+			<NavButtons button='overview' href={`/${lang}`} lang={lang} classNames='text-white bg-burgundy hover:bg-zinc-100 hover:text-burgundy' />
 			<NavButtons button='next' lang={lang} href={`/stories/${lang}/${nextStorySlug}`} classNames='hover:text-white hover:bg-zinc-100' />
 		</div>
-		<Prose>
-      <div class='flex flex-col gap-3 sm:gap-5'>
-      <div class='flex flex-col lg:flex-row lg:gap-x-5 mb-6'>
-					{/* Header section */}
-					<div class='w-full flex flex-col items-center justify-center'>
-						<Title>
-							{story.story[lang].title || `${lang.toUpperCase()} title for story ID #${story.id} is missing`}
-						</Title>
-						<AuthorSection
-							lang={lang}
-							name={`${story.personalInfo[lang].name} ${story.personalInfo[lang].surname}`}
-							from={story.personalInfo[lang].whereFrom}
-							livingIn={story.personalInfo[lang].livingIn}
-							age={story.contact.age}
-						/>
-					</div>
+		<div class='flex flex-col gap-3 sm:gap-5'>
+			<div class='flex flex-col lg:flex-row lg:gap-x-5 mb-6'>
+				{/* Header section */}
+				<div class='w-full flex flex-col items-center justify-center'>
+					<Title>
+						{story.story[lang].title || `${lang.toUpperCase()} title for story ID #${story.id} is missing`}
+					</Title>
+					<AuthorSection
+						lang={lang}
+						name={`${story.personalInfo[lang].name} ${story.personalInfo[lang].surname}`}
+						from={story.personalInfo[lang].whereFrom}
+						livingIn={story.personalInfo[lang].livingIn}
+						age={story.contact.age}
+					/>
 				</div>
-				{/* Attachments section */}
-				<Attachments attachments={story.attachments} />
-				<Message contentArray={contentArray} lang={lang} />
 			</div>
-		</Prose>
+			{/* Attachments section */}
+			<Attachments attachments={story.attachments} />
+			<Message contentArray={contentArray} lang={lang} />
+		</div>
 		{/* Share story section */}
 		<ShareStory story={story} lang={lang} />
 	</div>

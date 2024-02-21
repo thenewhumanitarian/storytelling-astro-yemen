@@ -1,10 +1,17 @@
 ---
+// Create pages for both languages
+export function getStaticPaths() {
+	// Return a list of possible value for lang
+	return [{ params: { lang: 'en' } }, { params: { lang: 'ar' } }]
+}
+
 import { ViewTransitions } from 'astro:transitions'
 
 import Layout from '../layouts/Layout.astro'
 import StoryWrapper from '../components/StoryWrapper.astro'
 
 import stories from '../data/all_stories.json'
+import { STORY_DATA } from '../data/story_data'
 
 function shuffleArray(array) {
 	for (let i = array.length - 1; i > 0; i--) {
@@ -17,6 +24,8 @@ function shuffleArray(array) {
 }
 // Todo: Can this be done "once" per session perhaps? // Testing pipeline
 shuffleArray(stories)
+
+const { lang } = Astro.params
 ---
 
 <>

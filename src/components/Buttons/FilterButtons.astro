@@ -1,8 +1,15 @@
+---
+import { translations } from '../../data/translations'
+
+const { lang } = Astro.params
+---
+
 <div class='fixed top-24 left-4 -mt-2 lg:-mt-0 lg:top-0 lg:left-0 shadow-lg lg:shadow-none lg:relative flex items-center gap-3 z-20'>
-	<div class='gap-2 ml-4 hidden lg:flex'>
+	<div class='gap-2 ml-3 hidden lg:flex'>
 		<!-- Filter icon (funnel) -->
 		<svg width='14px' viewBox='0 0 117 118' xmlns='http://www.w3.org/2000/svg'>
-			<path fill="white"
+			<path
+				fill='white'
 				d='M4.50008 0.333252C1.37501 0.333252 -0.708187 3.87485 0.95848 6.58325L46.1665 66.9993V112.833C46.1665 115.958 49.4998 118.041 52.2081 116.583L68.8747 108.249C70.3331 107.624 71.1665 106.166 71.1665 104.499V66.9993L116.374 6.58325C118.041 3.87499 115.958 0.333252 112.833 0.333252H4.50008Z'
 			></path>
 		</svg>
@@ -14,14 +21,14 @@
 			class='transition-colors duration-150 filter-button relative inline-flex items-center rounded-l-xs bg-black px-3 py-2 text-sm font-semibold text-white ring-1 ring-inset ring-gray-300 hover:bg-white hover:text-burgundy focus:z-10'
 			id='filter-button--all'
 		>
-			All
+			{translations.all[lang]}
 		</button>
 		<button
 			type='button'
 			class='transition-colors duration-150 filter-button relative -ml-px inline-flex items-center rounded-r-xs bg-black px-3 py-2 text-sm font-semibold text-white ring-1 ring-inset ring-gray-300 hover:bg-white hover:text-burgundy focus:z-10'
 			id='filter-button--unread'
 		>
-			Unread
+			{translations.unread[lang]}
 		</button>
 	</div>
 </div>

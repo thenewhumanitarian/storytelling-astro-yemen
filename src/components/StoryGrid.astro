@@ -1,5 +1,7 @@
 ---
 const { stories } = Astro.props
+
+const { lang } = Astro.params
 ---
 
 <div id='grid' class='grid bg-black'></div>
@@ -125,7 +127,7 @@ const { stories } = Astro.props
 <!-- Library to help moving around the grid -->
 <script src='https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.min.js' is:inline></script>
 
-<script async define:vars={{ stories }} is:inline>
+<script async define:vars={{ stories, lang: 'en' }} is:inline>
 	// Initial check to filter grid if necessary, same for list
 	function filterGridBasedOnLocalStorage() {
 		if (localStorage.getItem('showAll') === 'false') {
@@ -164,13 +166,17 @@ const { stories } = Astro.props
 			// Variable to check if currently loading image
 			this.currentLoadingImage = null
 
-			// Create h2 element for the English title
-			this.titleEnglish = document.createElement('h2')
-			this.item.append(this.titleEnglish)
+			if (lang === 'en') {
+				// Create h2 element for the English title
+				this.titleEnglish = document.createElement('h2')
+				this.item.append(this.titleEnglish)
+			}
 
-			// Create h2 element for the Arabic title
-			this.titleArabic = document.createElement('h2')
-			this.item.append(this.titleArabic)
+			if (lang === 'ar') {
+				// Create h2 element for the Arabic title
+				this.titleArabic = document.createElement('h2')
+				this.item.append(this.titleArabic)
+			}
 
 			// Set index and add classes
 			this.index = index
@@ -189,15 +195,15 @@ const { stories } = Astro.props
 
 		setNewCard() {
 			// Get language from localStorage value 'lang'
-			const lang = localStorage.getItem('lang') || 'en'
+			// const lang = localStorage.getItem('lang') || 'en'
 
 			// Define vars to be used later
 			let story = stories[this.index % stories.length]
 
 			// Add both language titles
 			const titles = {
-				ar: story.story['ar'].title || `AR TITLE ID ${story.id} MISSING`,
-				en: story.story['en'].title || `EN TITLE ID ${story.id} MISSING`,
+				ar: story.story['ar'].title || `Arabic title for story with ID ${story.id} is missing.`,
+				en: story.story['en'].title || `English title for story with ID ${story.id} is missing`,
 			}
 
 			// Determine the new image URL
@@ -242,41 +248,41 @@ const { stories } = Astro.props
 				this.item.setAttribute('data-lastread', 'never')
 			}
 
-			// Set English title for the grid item
-			this.titleEnglish.textContent = truncateWithEllipses(titles['en'], 100)
+			if (lang === 'en') {
+				// Set English title for the grid item
+				this.titleEnglish.textContent = truncateWithEllipses(titles['en'], 100)
 
-			// Set title classes and add text for English title
-			this.titleEnglish.classList.add('story-item--title')
-			this.titleEnglish.classList.add('lang--en')
-			this.titleEnglish.classList.add('box-decoration-clone')
-			this.titleEnglish.classList.add('px-2')
-			this.titleEnglish.classList.add('sm:leading-7')
-			this.titleEnglish.classList.add('text-white')
-			this.titleEnglish.classList.add('font-normal')
-			this.titleEnglish.classList.add('bg-black')
-			this.titleEnglish.classList.add('pt-0')
-			this.titleEnglish.classList.add('pointer-events-none')
-			this.titleEnglish.setAttribute('dir', 'ltr')
-			// this.titleEnglish.classList.add('sm:pointer-events-auto')
-			// this.titleEnglish.classList.add('inline')
+				// Set title classes and add text for English title
+				this.titleEnglish.classList.add('story-item--title')
+				this.titleEnglish.classList.add('lang--en')
+				this.titleEnglish.classList.add('box-decoration-clone')
+				this.titleEnglish.classList.add('px-2')
+				this.titleEnglish.classList.add('sm:leading-7')
+				this.titleEnglish.classList.add('text-white')
+				this.titleEnglish.classList.add('font-normal')
+				this.titleEnglish.classList.add('bg-black')
+				this.titleEnglish.classList.add('pt-0')
+				this.titleEnglish.classList.add('pointer-events-none')
+				this.titleEnglish.setAttribute('dir', 'ltr')
+			}
 
-			// Set Arabic title for the grid item
-			this.titleArabic.textContent = truncateWithEllipses(titles['ar'], 100)
+			if (lang === 'ar') {
+				// Set Arabic title for the grid item
+				this.titleArabic.textContent = truncateWithEllipses(titles['ar'], 100)
 
-			// Set title classes and add text for Arabic title
-			this.titleArabic.classList.add('story-item--title')
-			this.titleArabic.classList.add('lang--ar')
-			this.titleArabic.classList.add('box-decoration-clone')
-			this.titleArabic.classList.add('px-2')
-			this.titleArabic.classList.add('sm:leading-7')
-			this.titleArabic.classList.add('text-white')
-			this.titleArabic.classList.add('font-normal')
-			this.titleArabic.classList.add('bg-black')
-			this.titleArabic.classList.add('pt-0')
-			this.titleArabic.classList.add('pointer-events-none')
-			this.titleArabic.setAttribute('dir', 'rtl')
-			// this.titleArabic.classList.add('sm:pointer-events-auto')
-			// this.titleArabic.classList.add('inline')
+				// Set title classes and add text for Arabic title
+				this.titleArabic.classList.add('story-item--title')
+				this.titleArabic.classList.add('lang--ar')
+				this.titleArabic.classList.add('box-decoration-clone')
+				this.titleArabic.classList.add('px-2')
+				this.titleArabic.classList.add('sm:leading-7')
+				this.titleArabic.classList.add('text-white')
+				this.titleArabic.classList.add('font-normal')
+				this.titleArabic.classList.add('bg-black')
+				this.titleArabic.classList.add('pt-0')
+				this.titleArabic.classList.add('pointer-events-none')
+				this.titleArabic.setAttribute('dir', 'rtl')
+			}
 
 			// Add data-bg attribute to the element to load image later
 			this.item.setAttribute('data-bg', `${story.storyImage.main}`)
