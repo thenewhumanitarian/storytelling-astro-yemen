@@ -56,7 +56,6 @@ import MenuOverlay from './MenuOverlay.astro'
 	})
 
 	document.addEventListener('astro:before-swap', () => {
-		console.log('Event listener astro:before-swap fired')
 		const menuOverlay = document.getElementById('menu-overlay')
 		const menuButton = document.getElementById('menu-button')
 
@@ -66,7 +65,6 @@ import MenuOverlay from './MenuOverlay.astro'
 	})
 
 	document.addEventListener('astro:after-swap', () => {
-		console.log('Event listener astro:after-swap fired')
 		const menuOverlay = document.getElementById('menu-overlay')
 		const menuButton = document.getElementById('menu-button')
 

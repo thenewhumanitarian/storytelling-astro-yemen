@@ -1,7 +1,15 @@
 ---
 const { stories } = Astro.props
 
-const { lang } = Astro.params
+let { lang } = Astro.params
+
+if (!lang) {
+	// Read path parameters for language and slug
+	const { path } = Astro.params
+
+	const pathParams = path?.toString().split('/')
+	lang = pathParams?.[0] || 'en'
+}
 ---
 
 <div id='grid' class='grid bg-black'></div>

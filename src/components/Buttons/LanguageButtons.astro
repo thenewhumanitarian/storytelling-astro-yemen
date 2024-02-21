@@ -16,9 +16,10 @@ if (!lang) {
 import { translations } from '../../data/translations'
 ---
 
-<div class='isolate inline-flex rounded-xs shadow-sm' transition:persist>
+<div class='isolate inline-flex rounded-xs shadow-sm'>
 	<a
 		data-astro-reload
+		id='language-button--en'
 		href=`${links.en || '/en'}`
 		class=`transition-colors duration-150 relative -ml-px inline-flex items-center rounded-r-xs px-3 py-1 text-sm font-semibold text-white ring-1 ring-inset ring-gray-300 focus:z-10 ${lang === 'en' ? activeClasses : inactiveClasses }`
 	>
@@ -26,6 +27,7 @@ import { translations } from '../../data/translations'
 	</a>
 	<a
 		data-astro-reload
+		id='language-button--ar'
 		href=`${links.ar || '/ar'}`
 		class=`transition-colors duration-150 relative inline-flex items-center rounded-l-xs px-3 py-2 text-sm font-semibold text-white ring-1 ring-inset ring-gray-300 focus:z-10 ${lang === 'ar' ? activeClasses : inactiveClasses }`
 	>

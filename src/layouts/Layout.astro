@@ -1,5 +1,5 @@
 ---
-// import { ViewTransitions } from 'astro:transitions'
+import { ViewTransitions } from 'astro:transitions'
 
 import Header from '../components/Header.astro'
 
@@ -37,7 +37,7 @@ const { lang } = Astro.params
 		<title>{title || 'The New Humanitarian'}</title>
 		<!-- To do: Google Tag Manager -->
 		<!-- To do: Create SEO component for more meta tags -->
-		<!-- <ViewTransitions /> -->
+		<ViewTransitions />
 	</head>
 	<body class={`overflow-y-scroll`}>
 		<!-- Header  -->
@@ -51,11 +51,8 @@ const { lang } = Astro.params
 				/* Styles for left-to-right direction */
 			}
 
-			html[dir='rtl'] {
-				/* Styles for right-to-left direction */
-				* {
-					text-align: right;
-				}
+			html[dir='rtl'] * {
+				text-align: right;
 			}
 
 			body {

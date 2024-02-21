@@ -16,7 +16,11 @@ const { filterButtons, languageButtons, dark, switchViewButtons } = Astro.props 
 
 let { lang } = Astro.params
 if (!lang) {
-	lang = 'en'
+	// Read path parameters for language and slug
+	const { path } = Astro.params
+
+	const pathParams = path?.toString().split('/')
+	lang = pathParams?.[0] || 'en'
 }
 ---
 
@@ -31,7 +35,7 @@ if (!lang) {
 				<MenuIcon />
 			</div>
 			{switchViewButtons && <SwitchViewButtons />}
-      {filterButtons && <FilterButtons />}
+			{filterButtons && <FilterButtons />}
 		</div>
 		<div class='flex justify-center'>
 			<HeaderLogo dark={dark} />

@@ -69,7 +69,7 @@ const dir = lang === 'ar' ? 'rtl' : 'ltr'
 	overflow={'always'}
 	dir={dir}
 >
-	<ViewTransitions />
+	<!-- <ViewTransitions /> -->
 	<div class='fixed top-0 left-0 w-screen h-screen -z-1 pointer-events-none' id='stars'></div>
 	<div class='fixed top-0 left-0 w-screen h-screen -z-1 pointer-events-none' id='city'></div>
 	<div
@@ -78,7 +78,7 @@ const dir = lang === 'ar' ? 'rtl' : 'ltr'
 		id='story-wrapper'
 		dir={lang === 'ar' ? 'rtl' : 'ltr'}
 	>
-		<div class={`flex justify-center items-center ${lang === 'ar' ? 'flex-row-reverse' : 'flex-row'}`}>
+		<div class={`flex justify-center items-center ${lang === 'ar' ? 'flex-row-reverse' : 'flex-row'}`} class='nav-buttons'>
 			<NavButtons button='previous' lang={lang} href={`/stories/${lang}/${prevStorySlug}`} classNames='hover:text-white hover:bg-zinc-100' />
 			<NavButtons button='overview' href={`/${lang}`} lang={lang} classNames='text-white bg-burgundy hover:bg-zinc-100 hover:text-burgundy' />
 			<NavButtons button='next' lang={lang} href={`/stories/${lang}/${nextStorySlug}`} classNames='hover:text-white hover:bg-zinc-100' />
@@ -272,7 +272,7 @@ const dir = lang === 'ar' ? 'rtl' : 'ltr'
 	}
 </style>
 
-<script define:vars={{ lang: lang, slugEN: story.slugs.en, slugAR: story.slugs.ar }}>
+<script define:vars={{ lang: lang, slugEN: story.slugs.en, slugAR: story.slugs.ar }} is:inline>
 	// Retrieve the read articles array from localStorage or initialize a new one
 	let readArticles = JSON.parse(localStorage.getItem('readArticles')) || []
 
@@ -309,9 +309,9 @@ const dir = lang === 'ar' ? 'rtl' : 'ltr'
 	}
 
 	/* Adds twinkling stars */
-	var NUMBER_OF_STARS = 200
+	var NUMBER_OF_STARS = 100
 	if (window.innerWidth <= 500) {
-		NUMBER_OF_STARS = 50
+		NUMBER_OF_STARS = 25
 	}
 
 	var addPulse = function (element) {
@@ -343,24 +343,26 @@ const dir = lang === 'ar' ? 'rtl' : 'ltr'
 		}
 	}
 
-	// Deal with eventHandlers
-	// document.addEventListener('DOMContentLoaded', () => {
+	createStars()
+
+	// document.addEventListener('astro:before-swap', () => {
+	// 	// Remove all stars
+	// 	var starContainer = document.querySelector('#stars')
+	// 	starContainer.innerHTML = ''
+	// })
+
+	// document.addEventListener('astro:after-swap', () => {
+	// 	console.log('after swap')
+
 	// 	// Check if the stars are already created
+	// 	starContainer = document.querySelector('#stars')
+	// 	starContainer.innerHTML = ''
 	// 	if (starContainer.innerHTML === '') {
 	// 		createStars()
 	// 	}
 	// })
 
-	document.addEventListener('astro:before-swap', () => {
-		// Remove all stars
-		starContainer.innerHTML = ''
-	})
-
-	document.addEventListener('astro:after-swap', () => {
-		starContainer.innerHTML = ''
-		// Check if the stars are already created
-		if (starContainer.innerHTML === '') {
-			createStars()
-		}
+	window.addEventListener('popstate', function (event) {
+		console.log('popstate')
 	})
 </script>

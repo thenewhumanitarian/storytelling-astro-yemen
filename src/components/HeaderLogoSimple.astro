@@ -7,7 +7,11 @@ const { dark } = Astro.props as Props
 
 let { lang } = Astro.params
 if (!lang) {
-	lang = 'en'
+	// Read path parameters for language and slug
+	const { path } = Astro.params
+
+	const pathParams = path?.toString().split('/')
+	lang = pathParams?.[0] || 'en'
 }
 ---
 
