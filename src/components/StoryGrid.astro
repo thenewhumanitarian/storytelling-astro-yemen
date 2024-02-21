@@ -135,7 +135,10 @@ if (!lang) {
 <!-- Library to help moving around the grid -->
 <script src='https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.min.js' is:inline></script>
 
-<script async define:vars={{ stories, lang: 'en' }} is:inline>
+<script async define:vars={{ stories, lang }} is:inline>
+
+  console.log(lang)
+
 	// Initial check to filter grid if necessary, same for list
 	function filterGridBasedOnLocalStorage() {
 		if (localStorage.getItem('showAll') === 'false') {
