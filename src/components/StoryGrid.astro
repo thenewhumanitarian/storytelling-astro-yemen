@@ -12,7 +12,7 @@ if (!lang) {
 }
 ---
 
-<div id='grid' class='grid bg-black'></div>
+<div dir="ltr" id='grid' class='grid bg-black'></div>
 
 <style is:global>
 	body.is-dragging .story-item h2,
@@ -136,8 +136,7 @@ if (!lang) {
 <script src='https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.min.js' is:inline></script>
 
 <script async define:vars={{ stories, lang }} is:inline>
-
-  console.log(lang)
+	console.log(lang)
 
 	// Initial check to filter grid if necessary, same for list
 	function filterGridBasedOnLocalStorage() {
@@ -445,7 +444,7 @@ if (!lang) {
 
 			// Check duration and act accordingly
 			if (touchDuration < 100) {
-				// This checks if the touch lasted less than 8ms
+				// This checks if the touch lasted less than 100ms
 				// This was a short tap
 				if (ev.target.tagName.toLowerCase() === 'a') {
 					const href = ev.target.getAttribute('href')
