@@ -1,0 +1,46 @@
+---
+interface Props {
+	lang: string
+	story: object
+}
+
+import { translations } from '../data/translations'
+import { STORY_DATA } from '../data/story_data'
+
+import EmailIcon from '../components/icons/Icon-email.astro'
+import WhatsAppIcon from '../components/icons/Icon-whatsapp.astro'
+import XIcon from '../components/icons/Icon-x.astro'
+import FacebookIcon from '../components/icons/Icon-facebook.astro'
+
+const { lang, story } = Astro.props as Props
+
+/* Create all share links */
+
+// https://twitter.com/intent/tweet?text=Snapshots:%20Palestinian%20journalists%20capture%20life%20under%20bombardment%20in%20Gaza%20:%20https://www.thenewhumanitarian.org/video/2024/02/20/snapshots-palestinian-photographer-captures-life-under-bombardment-gaza%20(@newhumanitarian)
+// https://www.facebook.com/sharer/sharer.php?u=https://www.thenewhumanitarian.org/video/2024/02/20/snapshots-palestinian-photographer-captures-life-under-bombardment-gaza
+// whatsapp://send?text=https://www.thenewhumanitarian.org/video/2024/02/20/snapshots-palestinian-photographer-captures-life-under-bombardment-gaza
+// mailto:?subject=Snapshots: Palestinian journalists capture life under bombardment in Gaza &body=https://www.thenewhumanitarian.org/video/2024/02/20/snapshots-palestinian-photographer-captures-life-under-bombardment-gaza
+
+const storyUrl = `${STORY_DATA.baseUrl}stories/${lang}/${story.slugs[lang]}`
+
+const shareLinks = {
+	whatsapp: `https://api.whatsapp.com/send?text=${story.story[lang].title} – ${storyUrl}`,
+	facebook: `https://www.facebook.com/sharer/sharer.php?u=${storyUrl}`,
+	email: `mailto:?subject=${story.story[lang].title}&body=${storyUrl}`,
+	x: `https://twitter.com/intent/tweet?text=${story.story[lang].title}:%20${storyUrl}%20(@newhumanitarian)`,
+}
+---
+
+<aside class='prose-inverted sm:prose-xl flex gap-x-3 justify-center items-center mt-5'>
+	<span class='h-5'>{translations.shareThisStory[lang]}:</span>
+	<span class='transition-all hover:-translate-y-1 w-5 h-5 inline'
+		><a rel='noopener noreferrer' target='_blank' href={shareLinks.whatsapp}><WhatsAppIcon /></a></span
+	>
+	<span class='transition-all hover:-translate-y-1 w-5 h-5 inline'><a rel='noopener noreferrer' target='_blank' href={shareLinks.x}><XIcon /></a></span>
+	<span class='transition-all hover:-translate-y-1 w-5 h-5 inline'
+		><a rel='noopener noreferrer' target='_blank' href={shareLinks.facebook}><FacebookIcon /></a></span
+	>
+	<span class='transition-all hover:-translate-y-1 w-5 h-5 inline'
+		><a rel='noopener noreferrer' target='_blank' href={shareLinks.email}><EmailIcon /></a></span
+	>
+</aside>

@@ -55,4 +55,8 @@ export const translations = {
     ar: 'سنة',
     en: 'years old'
   },
+  shareThisStory: {
+    ar: 'شارك هذه القصة',
+    en: 'Share this story'
+  },
 }

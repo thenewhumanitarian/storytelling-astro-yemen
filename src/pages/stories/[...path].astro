@@ -9,6 +9,7 @@ import Title from '../../components/Title.astro'
 import AuthorSection from '../../components/AuthorSection.astro'
 import Attachments from '../../components/Attachments.astro'
 import Message from '../../components/Message.astro'
+import ShareStory from '../../components/ShareStory.astro'
 
 // Read path parameters for language and slug
 const { path } = Astro.params
@@ -64,8 +65,8 @@ const dir = lang === 'ar' ? 'rtl' : 'ltr'
 
 <Layout dark title='The Yemen Listening Project' header={true} switchViewButtons={false} overflow={'always'} dir={dir}>
 	<ViewTransitions />
-	<div class='fixed top-0 left-0 w-screen h-screen -z-1 pointer-events-none' id='stars' transition:persist></div>
-	<div class='fixed top-0 left-0 w-screen h-screen -z-1 pointer-events-none' id='city' transition:persist></div>
+	<div class='fixed top-0 left-0 w-screen h-screen -z-1 pointer-events-none' id='stars'></div>
+	<div class='fixed top-0 left-0 w-screen h-screen -z-1 pointer-events-none' id='city'></div>
 	<div
 		class='w-full max-w-5xl mx-auto mt-2 sm:mt-12 lg:mt-5 mb-8 sm:mb-24 px-4'
 		class='story-detail-page--wrapper'
@@ -78,8 +79,8 @@ const dir = lang === 'ar' ? 'rtl' : 'ltr'
 			<NavButtons button='next' lang={lang} href={`/stories/${lang}/${nextStorySlug}`} classNames='hover:text-white hover:bg-zinc-100' />
 		</div>
 		<Prose>
-			<div class='flex flex-col gap-10'>
-				<div class='flex flex-col lg:flex-row lg:gap-x-5'>
+			<div class='flex flex-col gap-3 sm:gap-5'>
+				<div class='flex flex-col lg:flex-row lg:gap-x-5 mb-6'>
 					{/* Header section */}
 					<div class='w-full flex flex-col items-center justify-center'>
 						<Title>
@@ -99,6 +100,8 @@ const dir = lang === 'ar' ? 'rtl' : 'ltr'
 				<Message contentArray={contentArray} lang={lang} />
 			</div>
 		</Prose>
+		{/* Share story section */}
+		<ShareStory story={story} lang={lang} />
 	</div>
 </Layout>
 
@@ -338,9 +341,12 @@ const dir = lang === 'ar' ? 'rtl' : 'ltr'
 	}
 
 	// Deal with eventHandlers
-	document.addEventListener('DOMContentLoaded', () => {
-		createStars()
-	})
+	// document.addEventListener('DOMContentLoaded', () => {
+	// 	// Check if the stars are already created
+	// 	if (starContainer.innerHTML === '') {
+	// 		createStars()
+	// 	}
+	// })
 
 	document.addEventListener('astro:before-swap', () => {
 		// Remove all stars
@@ -349,6 +355,9 @@ const dir = lang === 'ar' ? 'rtl' : 'ltr'
 
 	document.addEventListener('astro:after-swap', () => {
 		starContainer.innerHTML = ''
-		createStars()
+		// Check if the stars are already created
+		if (starContainer.innerHTML === '') {
+			createStars()
+		}
 	})
 </script>

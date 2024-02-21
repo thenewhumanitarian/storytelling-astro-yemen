@@ -11,7 +11,7 @@ const { contentArray, lang } = Astro.props as Props
 
 {
 	contentArray.length > 0 && (
-		<Pergament classNames={`px-5 py-1 ${lang === 'ar' ? 'text-right' : ''}`} lang={lang}>
+		<Pergament classNames={`px-3 sm:px-5 py-0 sm:py-1 ${lang === 'ar' ? 'text-right' : ''}`} lang={lang}>
 			{contentArray.map((line) => {
 				if (line !== '') {
 					return <p class='text-black' set:html={line} />
