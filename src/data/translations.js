@@ -75,4 +75,20 @@ export const translations = {
     ar: 'الإنجليزية',
     en: 'English'
   },
+  images: {
+    ar: 'صور',
+    en: 'Images'
+  },
+  videos: {
+    ar: 'فيديو',
+    en: 'Videos'
+  },
+  audios: {
+    ar: 'صوتيات',
+    en: 'Audios'
+  },
+  documents: {
+    ar: 'مستندات',
+    en: 'Documents'
+  },
 }

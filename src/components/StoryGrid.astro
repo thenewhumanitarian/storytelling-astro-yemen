@@ -401,7 +401,7 @@ const { lang } = Astro.params
 			let yDelta = ev.clientY - this.lastY
 			let vel = Math.abs(xDelta * yDelta)
 			if (vel > 50) {
-				// let v = { x: xDelta * 0.5, y: yDelta * 0.5 } // Make it more snappy
+				// let v = { x: xDelta * 0.5, y: yDelta * 1 } // Make it more snappy
 				let v = { x: xDelta * 0, y: yDelta * 0 }
 				if (this.anime) this.anime.pause()
 				this.anime = anime({
