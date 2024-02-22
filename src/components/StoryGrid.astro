@@ -12,7 +12,7 @@ if (!lang) {
 }
 ---
 
-<div dir="ltr" id='grid' class='grid bg-black'></div>
+<div dir='ltr' id='grid' class='grid bg-black'></div>
 
 <style is:global>
 	body.is-dragging .story-item h2,
@@ -115,6 +115,23 @@ if (!lang) {
 		line-height: 1.15;
 		cursor: pointer;
 		display: inline;
+	}
+
+	@media screen and (max-width: 500px) {
+		.story-item--title {
+			display: inline;
+			margin: 0;
+			top: 0;
+			text-align: left;
+			font-size: 1rem;
+			padding: 0.25rem;
+			/* Line clamp */
+			/* display: -webkit-box; */
+			-webkit-line-clamp: 4;
+			-webkit-box-orient: vertical;
+			overflow: hidden;
+			text-overflow: ellipsis;
+		}
 	}
 
 	.language--ar .story-item {
@@ -561,7 +578,7 @@ if (!lang) {
 		Infinite.setGrid(grid.cols, grid.rows)
 	})
 
-	function optimalGridDimensions(minSide = window.innerWidth > 500 ? 180 : 130) {
+	function optimalGridDimensions(minSide = window.innerWidth > 500 ? 180 : 118) {
 		const width = window.innerWidth
 		const height = window.innerHeight
 

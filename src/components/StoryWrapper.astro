@@ -5,10 +5,13 @@ import StoryList from '../components/StoryList.astro'
 const { stories } = Astro.props
 ---
 
+{/* Story grid view */}
 <div class={`stories-container--grid`} id='stories-container--grid'>
 	<StoryGrid stories={stories} />
 </div>
-<div class={`stories-container--list mt-36 lg:mt-20`} id='stories-container--list'>
+
+{/* Story list view */}
+<div class={`stories-container--list mt-[8.25rem] lg:mt-20`} id='stories-container--list'>
 	<StoryList stories={stories} />
 </div>
 

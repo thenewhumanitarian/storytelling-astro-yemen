@@ -73,7 +73,7 @@ const dir = lang === 'ar' ? 'rtl' : 'ltr'
 	<div class='fixed top-0 left-0 w-screen h-screen -z-1 pointer-events-none' id='stars'></div>
 	<div class='fixed top-0 left-0 w-screen h-screen -z-1 pointer-events-none' id='city'></div>
 	<div
-		class='w-full max-w-5xl mx-auto mt-2 sm:mt-12 lg:mt-5 mb-8 sm:mb-24 px-4'
+		class='w-full max-w-5xl mx-auto mt-2 sm:mt-5 mb-8 sm:mb-24 px-4'
 		class='story-detail-page--wrapper'
 		id='story-wrapper'
 		dir={lang === 'ar' ? 'rtl' : 'ltr'}
@@ -269,6 +269,12 @@ const dir = lang === 'ar' ? 'rtl' : 'ltr'
 		-webkit-animation: STAR 5s infinite;
 		animation: STAR 5s infinite;
 		-moz-animation: STAR 5s infinite;
+	}
+
+	@media screen and (max-width: 768px) {
+		#language-buttons {
+			display: none;
+		}
 	}
 </style>
 

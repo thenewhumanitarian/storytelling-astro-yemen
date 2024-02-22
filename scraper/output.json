@@ -6,8 +6,8 @@
       "ar": "ar-story-20"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-28.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-28.png"
+      "main": "/images/placeholder_images/puzzle-27.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-27.png"
     },
     "personalInfo": {
       "en": {
@@ -56,8 +56,8 @@
       "ar": ""
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-16.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-16.png"
+      "main": "/images/placeholder_images/puzzle-23.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-23.png"
     },
     "personalInfo": {
       "en": {
@@ -97,7 +97,7 @@
     "followUpRequired": false,
     "contacted": false,
     "contactedBeforePublication": false,
-    "englishEdited": false
+    "englishEdited": true
   },
   {
     "id": "27",
@@ -106,8 +106,8 @@
       "ar": "ar-story-27"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-18.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-18.png"
+      "main": "/images/placeholder_images/puzzle-17.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-17.png"
     },
     "personalInfo": {
       "en": {
@@ -156,8 +156,8 @@
       "ar": "ar-story-28"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-10.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-10.png"
+      "main": "/images/placeholder_images/puzzle-30.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-30.png"
     },
     "personalInfo": {
       "en": {
@@ -259,8 +259,8 @@
       "ar": "ar-story-36"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-09.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-09.png"
+      "main": "/images/placeholder_images/puzzle-20.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-20.png"
     },
     "personalInfo": {
       "en": {
@@ -309,8 +309,8 @@
       "ar": "ar-story-37"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-29.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-29.png"
+      "main": "/images/placeholder_images/puzzle-18.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-18.png"
     },
     "personalInfo": {
       "en": {
@@ -359,8 +359,8 @@
       "ar": "ar-story-38"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-11.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-11.png"
+      "main": "/images/placeholder_images/puzzle-03.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-03.png"
     },
     "personalInfo": {
       "en": {
@@ -409,8 +409,8 @@
       "ar": "ar-story-39"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-32.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-32.png"
+      "main": "/images/placeholder_images/puzzle-20.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-20.png"
     },
     "personalInfo": {
       "en": {
@@ -459,8 +459,8 @@
       "ar": "ar-story-40"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-24.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-24.png"
+      "main": "/images/placeholder_images/puzzle-23.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-23.png"
     },
     "personalInfo": {
       "en": {
@@ -509,8 +509,8 @@
       "ar": "ar-story-41"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-18.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-18.png"
+      "main": "/images/placeholder_images/puzzle-19.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-19.png"
     },
     "personalInfo": {
       "en": {
@@ -555,18 +555,18 @@
   {
     "id": "42",
     "slugs": {
-      "en": "en-story-42",
+      "en": "a-career-on-hold",
       "ar": "ar-story-42"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-01.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-01.png"
+      "main": "/images/placeholder_images/puzzle-26.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-26.png"
     },
     "personalInfo": {
       "en": {
         "name": "A.A",
         "surname": "",
-        "whereFrom": "sana'a",
+        "whereFrom": "Sana'a",
         "livingIn": "Sana'a"
       },
       "ar": {
@@ -583,7 +583,7 @@
     },
     "story": {
       "en": {
-        "title": "",
+        "title": "A career on hold",
         "content": "By the time the Saudi Arabia-led coalition began bombing in Yemen on 26 March 2015, I had already spent nine years working in the media, six as a journalist specialised in science. I didn’t realise that day was a turning point that threatened to undermine everything I had accomplished in my career.\nA year into the war, I lost my most important source of income. The place I worked was raided and closed. Soon after, government salaries were cut off, and I lost my other source of income.\nThrough these jobs I had carved out a space for myself in science journalism. I traveled, built a good name for myself, and saw success. \nBy 2017, I was desperately holding on to my only link with science media; keeping in touch with outlets outside Yemen, and working remotely as a freelancer. But with time, this space began to narrow. Science-focused publications filled up with the pain and suffering of the Yemeni people, and politics and war eventually dominated the media scene.\nI found myself inside the largest prison in the world: Yemen. Inside Yemen was another prison: The part of the country controlled by the Houthis. They imposed severe restrictions on my work as a correspondent for foreign media. I was accused of espionage, my phones and accounts were monitored, and I was prevented from receiving money transfers from abroad. I lose my only remaining source of income. \nI can’t communicate with sources or travel anymore. The internet is now my only link to my former colleagues.  \nOver the past two years, I have been pressured to work in political media for one side in the war. But I refused. Today, after more than eight years of war, I can say that I have been completely cut off as a science journalist. In order to provide my family with their basic needs, I’ve been working in calligraphy, drawing, and design.\nThe war destroyed everything I achieved, and there seems to be no end in sight. "
       },
       "ar": {
@@ -609,8 +609,8 @@
       "ar": "ar-story-43"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-23.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-23.png"
+      "main": "/images/placeholder_images/puzzle-30.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-30.png"
     },
     "personalInfo": {
       "en": {
@@ -661,8 +661,8 @@
       "ar": "ar-story-44"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-05.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-05.png"
+      "main": "/images/placeholder_images/puzzle-28.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-28.png"
     },
     "personalInfo": {
       "en": {
@@ -690,7 +690,7 @@
       },
       "ar": {
         "title": "",
-        "content": "مرحباً \nانا مواطن يمني لا اعيش في اليمن ولا اعيش مع عائلتي وكل هذا بسبب الحرب \nلقد صار لي سنه من دون عائلتي ومازال الوقت يمر ولم اراهم وغيري من اليمنيين صار له اكثر من خمس وست سنوات بدون رؤيه عائلاتهم \nفي الوضع الطبيعي الأهل والعائله يخافون على ابنهم المغترب في وطن الغربه ولكن في وضع اليمنيين المغترب والمهاجر هو من يخاف على عائلته واهله من الوطن\nالى متى سيظل هذ الوضع والى اين سندهب بهذا الوطن \nالى متى سنظل مغتربين ومهاجرين ومشردين عن وطننا \nالى متى سنظل نفكر ان من في اليمن ليس لديهم مستقبل الا القتل او الخطف او النهب \nمتى سيكون لنا بلد كبقيه البلدان الأخرى ونعيش بكل امن وسلام واستقرار\nكل الاعلام ترفرف بالفخر والعز الى الوطن الا اعلامنا ترفرف بالدم والقتل والعار والفساد كفساد حكامنا والسياسيين \nاسف ياوطني ولكن لم اجد منك او فيك شي يشعرني بالفخر ليس اجحاد فيك ولكن اجحاد ولعنه في السياسيين الذين أوصلوا بلدي الى هذا الحد"
+        "content": "انا مواطن يمني لا اعيش في اليمن ولا اعيش مع عائلتي وكل هذا بسبب الحرب \nلقد صار لي سنه من دون عائلتي ومازال الوقت يمر ولم اراهم وغيري من اليمنيين صار له اكثر من خمس وست سنوات بدون رؤيه عائلاتهم \nفي الوضع الطبيعي الأهل والعائله يخافون على ابنهم المغترب في وطن الغربه ولكن في وضع اليمنيين المغترب والمهاجر هو من يخاف على عائلته واهله من الوطن\nالى متى سيظل هذ الوضع والى اين سندهب بهذا الوطن \nالى متى سنظل مغتربين ومهاجرين ومشردين عن وطننا \nالى متى سنظل نفكر ان من في اليمن ليس لديهم مستقبل الا القتل او الخطف او النهب \nمتى سيكون لنا بلد كبقيه البلدان الأخرى ونعيش بكل امن وسلام واستقرار\nكل الاعلام ترفرف بالفخر والعز الى الوطن الا اعلامنا ترفرف بالدم والقتل والعار والفساد كفساد حكامنا والسياسيين \nاسف ياوطني ولكن لم اجد منك او فيك شي يشعرني بالفخر ليس اجحاد فيك ولكن اجحاد ولعنه في السياسيين الذين أوصلوا بلدي الى هذا الحد"
       }
     },
     "attachments": [],
@@ -711,8 +711,8 @@
       "ar": "ar-story-45"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-14.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-14.png"
+      "main": "/images/placeholder_images/puzzle-09.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-09.png"
     },
     "personalInfo": {
       "en": {
@@ -761,8 +761,8 @@
       "ar": "ar-story-46"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-22.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-22.png"
+      "main": "/images/placeholder_images/puzzle-29.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-29.png"
     },
     "personalInfo": {
       "en": {
@@ -811,8 +811,8 @@
       "ar": "ar-story-47"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-29.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-29.png"
+      "main": "/images/placeholder_images/puzzle-01.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-01.png"
     },
     "personalInfo": {
       "en": {
@@ -861,8 +861,8 @@
       "ar": "ar-story-48"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-17.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-17.png"
+      "main": "/images/placeholder_images/puzzle-31.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-31.png"
     },
     "personalInfo": {
       "en": {
@@ -890,7 +890,7 @@
       },
       "ar": {
         "title": "",
-        "content": ""
+        "content": "قصتي بدأت عندما كنت صغيرة. كان من المسموح لي بالذهاب إلى المدرسة، وهو أمر لايعطى لكل فتاة في اليمن. وبعد ذلك حصلت على منحة لدراسة الطب في إحدى أفضل الجامعات في الوطن العربي. كانت أول مرة أغادر فيها وطني، عندما صعدت الى الطائرة.\nتركت عائلتي وكل شيء ورائي، فقط مع أحلامي وطموحاتي. خططت دائمًا لرد الجميل الذي قدمته لي بلدي اليمن، من خلال العودة وتطبيق ما تعلمته. لكن قبل أن أتمكن من فعل ذلك، أخذت الحرب كل شيء جميل، حتى والدي. ومع ذلك، لم أتردد في العودة الى موطني.\nكانت هناك حاجة للأطباء أثناء الحرب أكثر من أي وقت مضى. أتذكر أنني شاهدت مناوشات في ليلة ما بين مجموعات مختلفة، وحرب شوارع. تم قطع كافة الطرق في مدينة الحديدة، حيث لا يستطيع أحد مغادرة منزله. لكنني شعرت بالمسؤولية تجاه مرضاي، فحاولت التسلل إلى المستشفى. لقد كان خطأ مني أن أفعل ذلك. ما رأيته كان أسوأ من أي شيء كنت أتخيله؛ مسلحون، رصاص يتطاير من السماء، دبابات. وصلت إلى المستشفى لكن ذلك لم ييجعل خوفي أقل مما كان عليه. في تلك الليلة، شعرت بالقلق من أنني لن أتمكن أبدًا من العودة إلى المنزل ورؤية عائلتي مرة أخرى.\nومع مرور الوقت واستمرار الصراع، أدركت أن معاناتي تنبع من أكثر من مجرد سماع القنابل وطلقات الرصاص أو رؤية الناس يموتون دون الحصول على العلاج الطبي الأساسي. كان ذلك من خلال مشاهدة الوفيات بسبب البرد أو الجوع، و مدى صعوبة الانفصال عن صديق أو قريب، وعدم معرفة ما سيكون مصيرنا ايضا. حاولت أن أتمسك بالأمل، وأن أؤمن بأن الغد سيكون أفضل.\nحاولت أن أنقذ نفسي، لكن كل يوم كان يحمل معه نوعًا جديدًا من الألم. كرؤية امرأة مع طفلها يبحثان عن الطعام عند صندوق القمامة، ورؤية طفل يبيع المياه على جانب الطريق بدلاً من الذهاب إلى المدرسة، ورؤية رجل يتسول لأن أولاده لم يأكلوا منذ أيام. لم يكن أحد منهم يهتم بالقتال، لأن الرصاص ربما يكون ألطف موت في هذه الحرب. بعدها جاء اليوم الذي قررت فيه مغادرة اليمن. حيث أنني أدركت أني بحاجة إلى تحسين نفسي ومواصلة تعليمي وصقل مهاراتي، إذا كنت حقا اريد مساعدة الآخرين."
       }
     },
     "attachments": [],
@@ -918,7 +918,7 @@
       "en": {
         "name": "Bushra",
         "surname": "",
-        "whereFrom": "Dhamar Governorate",
+        "whereFrom": "Dhamar",
         "livingIn": "Sana'a"
       },
       "ar": {
@@ -964,14 +964,14 @@
       "ar": "ar-story-50"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-22.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-22.png"
+      "main": "/images/placeholder_images/puzzle-12.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-12.png"
     },
     "personalInfo": {
       "en": {
         "name": "Abdullah",
         "surname": "Ali",
-        "whereFrom": "Ibb-Yemem",
+        "whereFrom": "Ibb",
         "livingIn": "Sana'a"
       },
       "ar": {
@@ -1014,14 +1014,14 @@
       "ar": "ar-story-51"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-04.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-04.png"
+      "main": "/images/placeholder_images/puzzle-09.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-09.png"
     },
     "personalInfo": {
       "en": {
         "name": "Amani",
         "surname": "Mutahar",
-        "whereFrom": "Ibb-Yemen",
+        "whereFrom": "Ibb",
         "livingIn": "Sana'a"
       },
       "ar": {
@@ -1064,14 +1064,14 @@
       "ar": "ar-story-52"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-14.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-14.png"
+      "main": "/images/placeholder_images/puzzle-16.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-16.png"
     },
     "personalInfo": {
       "en": {
         "name": "M.",
         "surname": "Al-Eryani",
-        "whereFrom": "Sanaa-Yemen",
+        "whereFrom": "Sana'a",
         "livingIn": "Sana'a"
       },
       "ar": {
@@ -1166,8 +1166,8 @@
       "ar": "ar-story-54"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-32.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-32.png"
+      "main": "/images/placeholder_images/puzzle-18.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-18.png"
     },
     "personalInfo": {
       "en": {
@@ -1191,11 +1191,11 @@
     "story": {
       "en": {
         "title": "Stolen dreams",
-        "content": "The war took away the dream I was working towards. My plan was to complete my master's degree, and then apply to work in the legal field. But the curse of war prevented me from returning home, leaving me to live in a nightmare."
+        "content": "The war took away the dream I was working towards. My plan was to complete my master's degree, and then apply to work in the legal field. But the curse of war prevented me from returning to my homeland, leaving me to live in a nightmare."
       },
       "ar": {
         "title": "",
-        "content": "الحرب نزعت مني حُلمي الذي كنُت اركض وراءه، كان هدفي انهاء الماجستير ومن ثم دخولي معهد العالي للقضاء إلا أن لعنة الحرب ابعدتني عن الوطن لاعيش مع كابوس الحلم!\nمالك"
+        "content": "الحرب نزعت مني حُلمي الذي كنُت اركض وراءه، كان هدفي انهاء الماجستير ومن ثم دخولي معهد العالي للقضاء إلا أن لعنة الحرب ابعدتني عن الوطن لاعيش مع كابوس الحلم!"
       }
     },
     "attachments": [],
@@ -1277,8 +1277,8 @@
       "ar": "ar-story-56"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-09.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-09.png"
+      "main": "/images/placeholder_images/puzzle-27.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-27.png"
     },
     "personalInfo": {
       "en": {
@@ -1327,8 +1327,8 @@
       "ar": "ar-story-57"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-07.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-07.png"
+      "main": "/images/placeholder_images/puzzle-23.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-23.png"
     },
     "personalInfo": {
       "en": {
@@ -1377,8 +1377,8 @@
       "ar": ""
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-32.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-32.png"
+      "main": "/images/placeholder_images/puzzle-22.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-22.png"
     },
     "personalInfo": {
       "en": {
@@ -1427,8 +1427,8 @@
       "ar": "ar-story-59"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-21.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-21.png"
+      "main": "/images/placeholder_images/puzzle-18.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-18.png"
     },
     "personalInfo": {
       "en": {
@@ -1477,8 +1477,8 @@
       "ar": "ar-story-60"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-14.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-14.png"
+      "main": "/images/placeholder_images/puzzle-16.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-16.png"
     },
     "personalInfo": {
       "en": {
@@ -1527,8 +1527,8 @@
       "ar": "ar-story-61"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-31.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-31.png"
+      "main": "/images/placeholder_images/puzzle-26.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-26.png"
     },
     "personalInfo": {
       "en": {
@@ -1577,8 +1577,8 @@
       "ar": ""
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-22.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-22.png"
+      "main": "/images/placeholder_images/puzzle-29.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-29.png"
     },
     "personalInfo": {
       "en": {
@@ -1681,8 +1681,8 @@
       "ar": "ar-story-64"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-06.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-06.png"
+      "main": "/images/placeholder_images/puzzle-21.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-21.png"
     },
     "personalInfo": {
       "en": {
@@ -1731,8 +1731,8 @@
       "ar": "ar-story-65"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-06.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-06.png"
+      "main": "/images/placeholder_images/puzzle-11.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-11.png"
     },
     "personalInfo": {
       "en": {
@@ -1781,8 +1781,8 @@
       "ar": "ar-story-66"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-09.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-09.png"
+      "main": "/images/placeholder_images/puzzle-22.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-22.png"
     },
     "personalInfo": {
       "en": {
@@ -1834,8 +1834,8 @@
       "ar": "ar-story-67"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-13.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-13.png"
+      "main": "/images/placeholder_images/puzzle-31.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-31.png"
     },
     "personalInfo": {
       "en": {
@@ -1880,12 +1880,12 @@
   {
     "id": "68",
     "slugs": {
-      "en": "en-story-68",
+      "en": "the-tragedies-of-a-country-and-of-a-family",
       "ar": "ar-story-68"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-32.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-32.png"
+      "main": "/images/placeholder_images/puzzle-26.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-26.png"
     },
     "personalInfo": {
       "en": {
@@ -1908,12 +1908,12 @@
     },
     "story": {
       "en": {
-        "title": "",
-        "content": "In the year 2019, I was very depressed, and the bombing in Sanaa was a terrifying thing and implied death at any moment. My sick brother was crippled. He was devastated by the disease, and we could not find a useful treatment. He had just completed operations to remove the clinical wounds from his body. It is not possible to escape to the village or anywhere. My second brother was psychologically tired. As for the rest of the family, they left for countries such as Egypt and Sudan, and the rest are in exile. A small number of family members stayed with me, and we continued to suffer from the bombing, the cutting off of electricity and water, and a little money. We continued to console each other and dream of peace and tranquility. Except for me, I was in a lot of pain over the situation in my country and what we had reached. I was crying alone.\nOn that day, I decided to write my first novel, which I promised my mother, that I would write. Indeed, in the light of fading candles and a burning heart, I wrote with my tears the novel (West of Al-Gash), which is a novel about the diaspora in which I was born and spent my childhood. The surprise was that I presented it to my colleagues in the story club. And the club president presented it to a printing office in London, and they immediately welcomed it and it was published on their account on August 2019. \nonly then the darkness inside me has dissipated, but the shadow of pain remained. I told to myself if death came after this achievement, atleast I will leave a good impact. I remained miserable like all Yemenis, and my heart dripped with blood for my brother Saleh, whom we were unable to treat. One day we took him to the Government Hospital because it is less expensive, and we have no salaries or any source to help us. That day coincided with the assassination of President Ali Abdullah Saleh. Everything stopped except fear and panic. All hope was dashed, but the pain remained. My brother died after drinking juice that I poured with my hand. The tragedies of my country, the tragedy of my brother, for whom I was unable to provide treatment."
+        "title": "The tragedies of a country, and of a family",
+        "content": "It was early in the war. The bombing in Sana’a was terrifying, and it felt like death could come at any moment. I was depressed. One of my brothers, who was sick before the war, had just had several operations but could not get all the treatment he needed. He was so sick. We couldn’t escape the city to our home village, or to anywhere. \nMy other brother was mentally exhausted, and the rest of our family had left for Egypt, Sudan, or other countries. A few relatives stayed behind with me, and we suffered through the bombing together. We were together when water was cut off, when the electricity went out, and when we had almost no money. Through all this, we consoled each other, dreaming of peace and quiet. I was not comforted, though. I was in a lot of pain at what had happened to my country. I felt alone in my tears. \nThat's when I decided to begin working on my first novel. I had promised my late mother I would write it, and under the light of fading candles and with a burning heart, I inked my novel with tears. “Gharb al-Gash” (West of the al-Gash River) is about the diaspora where I was born, and spent my childhood. I presented it to my friends at the Yemeni Story Club, a group of writers, novelists, and cultural enthusiasts. To my surprise, the club’s president brought it to a publishing house in London, and in August 2019 it was published. Only then did the darkness inside me begin to dissipate, although a shadow of pain remained. I told myself that if I die now, at least I have left something good behind me.\nBut like all Yemenis, I mostly remained miserable, and my heart hurt for my brother, who we still could not afford good medical care for. One day we took him to the government hospital, because treatment there costs less. That was 4 December 2017, the same day of the killing of [former] President Ali Abdullah Saleh. Everything stopped that day, everything but fear and panic. My hopes were dashed, only pain remained. My brother died after drinking juice I had poured with my own hand. These are the tragedies of my country, and the tragedy of my brother, for whom I could do nothing."
       },
       "ar": {
         "title": "",
-        "content": "فى العام 2019 كنت محبطة جدا والقصف فى صنعاء شىء مرعب ويوحى بالموت فى اى لحظة .. كان اخى المريض ( مقعد ) .. \nقد نهشه المرض ولم نجد علاجا نافعا وقد انهى لتوه عملياتازالة  ما تلف من جسده من الجروح السريرية \nليس بالامكان الهرب الى القرية او الى اى مكان اخى الثانى كان متعب نفسيا اما بقية الاسرة فقد غادروا الى دول كمصر والسودان والبقية هم بالمهجر \nعدد قليل من افراد الاسرة بقى معى وظللنا فى القصف وانقطاع الكهربا والماء ولا نملك من المال الا القليل ظللنا نواسى بعضنا ونحلم بالسلام والسكينة و\nالا انا كنت اتالم كثيرا على وضع بلدى وعلى ما وصلنا اليه كنت ابكى لوحدى \nيومها قررت ان اكتب روايتى الاولى التى وعدت امى الله يرحمها بكتابتها وبالفعل وعلى ضوء شموع ذابلات وحرقة قلب كتبت بدموعى رواية ( غرب القاش ) وهى رواية عن بلاد المهجر التى ولدت فيها وقضيت بها طفولتى .. والمفاجاءة اننى عرضتها \nعلى زملائى فى نادى القصة \nوعرضها رئيس النادى على دار فى لندن للطباعة ورحبوا على الفور بها ونشرت على حسابهم فى 8/2019م\nكم تبدد الظلام الذى بداخلى لكن ظل الالم هو الالم \nوقلت فى نفسى لو جاء الموت بعد هذا الانجاز \nساكون قد قلت للناس اننى تركت اثرا طيبا \nظللت على بؤسى ككل اليمنيين وقلبى يتقطر دما على شقيقى صالح الذى عجزنا عن علاجه  \nويوم حملناه الى المستشفى الجمهورى لانه حكومى واقل تكلفة لاننا بلا رواتب او اى مصدر يعيننا \nصادف ذلك اليوم يوم اغتيال الرئيس على عبدالله صالح \nتوقف كل شىء الا الخوف والهلع \nتبدد كل امل وبقى الالم \nتوفى شقيقى بعد ان شرب عصيرا اسقيته بيدى لعله \nيصحو .. ماساتى وطنى ماساتى اخى الذى عجزت عن عتوفير العلاج له \nمحاسن الحواتى"
+        "content": "كنت محبطة جدا والقصف فى صنعاء شىء مرعب ويوحى بالموت فى اى لحظة .. كان اخى المريض ( مقعد ) .. \nقد نهشه المرض ولم نجد علاجا نافعا وقد انهى لتوه عملياتازالة  ما تلف من جسده من الجروح السريرية \nليس بالامكان الهرب الى القرية او الى اى مكان اخى الثانى كان متعب نفسيا اما بقية الاسرة فقد غادروا الى دول كمصر والسودان والبقية هم بالمهجر \nعدد قليل من افراد الاسرة بقى معى وظللنا فى القصف وانقطاع الكهربا والماء ولا نملك من المال الا القليل ظللنا نواسى بعضنا ونحلم بالسلام والسكينة و\nالا انا كنت اتالم كثيرا على وضع بلدى وعلى ما وصلنا اليه كنت ابكى لوحدى \nيومها قررت ان اكتب روايتى الاولى التى وعدت امى الله يرحمها بكتابتها وبالفعل وعلى ضوء شموع ذابلات وحرقة قلب كتبت بدموعى رواية ( غرب القاش ) وهى رواية عن بلاد المهجر التى ولدت فيها وقضيت بها طفولتى .. والمفاجاءة اننى عرضتها \nعلى زملائى فى نادى القصة \nوعرضها رئيس النادى على دار فى لندن للطباعة ورحبوا على الفور بها ونشرت على حسابهم فى 8/2019م\nكم تبدد الظلام الذى بداخلى لكن ظل الالم هو الالم \nوقلت فى نفسى لو جاء الموت بعد هذا الانجاز \nساكون قد قلت للناس اننى تركت اثرا طيبا \nظللت على بؤسى ككل اليمنيين وقلبى يتقطر دما على شقيقى صالح الذى عجزنا عن علاجه  \nويوم حملناه الى المستشفى الجمهورى لانه حكومى واقل تكلفة لاننا بلا رواتب او اى مصدر يعيننا \nصادف ذلك اليوم يوم اغتيال الرئيس على عبدالله صالح \nتوقف كل شىء الا الخوف والهلع \nتبدد كل امل وبقى الالم \nتوفى شقيقى بعد ان شرب عصيرا اسقيته بيدى لعله \nيصحو .. ماساتى وطنى ماساتى اخى الذى عجزت عن عتوفير العلاج له "
       }
     },
     "attachments": [
@@ -1936,8 +1936,8 @@
       "ar": "ar-story-69"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-17.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-17.png"
+      "main": "/images/placeholder_images/puzzle-10.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-10.png"
     },
     "personalInfo": {
       "en": {
@@ -1986,8 +1986,8 @@
       "ar": "ar-story-70"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-03.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-03.png"
+      "main": "/images/placeholder_images/puzzle-05.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-05.png"
     },
     "personalInfo": {
       "en": {
@@ -2090,8 +2090,8 @@
       "ar": "ar-story-1002"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-25.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-25.png"
+      "main": "/images/placeholder_images/puzzle-21.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-21.png"
     },
     "personalInfo": {
       "en": {
@@ -2140,8 +2140,8 @@
       "ar": "ar-story-1003"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-09.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-09.png"
+      "main": "/images/placeholder_images/puzzle-06.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-06.png"
     },
     "personalInfo": {
       "en": {
@@ -2242,8 +2242,8 @@
       "ar": "ar-story-1005"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-03.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-03.png"
+      "main": "/images/placeholder_images/puzzle-32.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-32.png"
     },
     "personalInfo": {
       "en": {
@@ -2292,8 +2292,8 @@
       "ar": "ar-story-1006"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-12.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-12.png"
+      "main": "/images/placeholder_images/puzzle-04.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-04.png"
     },
     "personalInfo": {
       "en": {
@@ -2342,8 +2342,8 @@
       "ar": "ar-story-1007"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-22.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-22.png"
+      "main": "/images/placeholder_images/puzzle-02.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-02.png"
     },
     "personalInfo": {
       "en": {
@@ -2392,8 +2392,8 @@
       "ar": "ar-story-1008"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-14.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-14.png"
+      "main": "/images/placeholder_images/puzzle-27.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-27.png"
     },
     "personalInfo": {
       "en": {
@@ -2442,8 +2442,8 @@
       "ar": "ar-story-1009"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-05.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-05.png"
+      "main": "/images/placeholder_images/puzzle-08.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-08.png"
     },
     "personalInfo": {
       "en": {
@@ -2492,8 +2492,8 @@
       "ar": "ar-story-1010"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-08.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-08.png"
+      "main": "/images/placeholder_images/puzzle-16.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-16.png"
     },
     "personalInfo": {
       "en": {
@@ -2542,8 +2542,8 @@
       "ar": "ar-story-1011"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-21.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-21.png"
+      "main": "/images/placeholder_images/puzzle-16.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-16.png"
     },
     "personalInfo": {
       "en": {
@@ -2592,8 +2592,8 @@
       "ar": "ar-story-1012"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-29.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-29.png"
+      "main": "/images/placeholder_images/puzzle-10.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-10.png"
     },
     "personalInfo": {
       "en": {
@@ -2642,8 +2642,8 @@
       "ar": "ar-story-1013"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-15.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-15.png"
+      "main": "/images/placeholder_images/puzzle-24.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-24.png"
     },
     "personalInfo": {
       "en": {
@@ -2744,8 +2744,8 @@
       "ar": "ar-story-1015"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-09.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-09.png"
+      "main": "/images/placeholder_images/puzzle-03.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-03.png"
     },
     "personalInfo": {
       "en": {
@@ -2794,8 +2794,8 @@
       "ar": "ar-story-1016"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-05.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-05.png"
+      "main": "/images/placeholder_images/puzzle-19.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-19.png"
     },
     "personalInfo": {
       "en": {
@@ -2840,12 +2840,12 @@
   {
     "id": "1017",
     "slugs": {
-      "en": "en-story-1017",
+      "en": "a-journey-away-from-and-back-to-yemen",
       "ar": "ar-story-1017"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-21.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-21.png"
+      "main": "/images/placeholder_images/puzzle-11.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-11.png"
     },
     "personalInfo": {
       "en": {
@@ -2868,8 +2868,8 @@
     },
     "story": {
       "en": {
-        "title": "",
-        "content": "My story begins near the start of the war in Yemen. My wife was pregnant. After she gave birth to our child, I decided to leave the country to look for work. I left Taiz, which was under siege, and headed for Aden. I walked and walked to the Red Sea coastline, and waited there for a smugglers’ boat for two days. \nThe journey was risky, but I got to a refugee camp in Djibouti. I sat there for a month, with no way of communicating with my family back in Yemen. Life was hard there. One day, a woman from Poland came to the camp. I helped her with some translation, and she helped me register with the UN.\nEventually I was able to leave the camp, and went to look for work. I worked many jobs: constructions, selling clothes, helping with accounts. I wanted to travel to Canada or the UK, but the situation was just so bad. \nEventually I took a boat back to Yemen, and returned to my family. I am a doctor of pharmacy, and I looked for a job in medicine, but I haven’t been able to find one yet. Now I work as a wholesale salesman."
+        "title": "A journey away from and back to Yemen",
+        "content": "My story begins near the start of the war in Yemen. My wife was pregnant. After she gave birth to our child, I decided to leave the country to look for work. I left Taiz, which was under siege, and headed for Aden. I walked and walked to the Red Sea coastline, and waited there for a smugglers’ boat for two days. \nThe journey was risky, but I got to a refugee camp in Djibouti. I sat there for a month, with no way of communicating with my family back in Yemen. Life was hard there. One day, a woman from Poland came to the camp. I helped her with some translation, and she helped me register with the UN.\nIn time I was able to leave the camp, and went to look for work. I worked many jobs: constructions, selling clothes, helping with accounts. I wanted to travel to Canada or the UK, but the situation was just so bad. Eventually I took a boat back to Yemen, and returned to my family. I am a doctor of pharmacy, and I looked for a job in medicine, but I haven’t been able to find one yet. Now I work as a wholesale salesman."
       },
       "ar": {
         "title": "",
@@ -2885,7 +2885,7 @@
     "followUpRequired": false,
     "contacted": false,
     "contactedBeforePublication": false,
-    "englishEdited": false
+    "englishEdited": true
   },
   {
     "id": "1018",
@@ -2894,8 +2894,8 @@
       "ar": "ar-story-1018"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-31.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-31.png"
+      "main": "/images/placeholder_images/puzzle-13.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-13.png"
     },
     "personalInfo": {
       "en": {
@@ -2996,8 +2996,8 @@
       "ar": "ar-story-1020"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-19.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-19.png"
+      "main": "/images/placeholder_images/puzzle-11.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-11.png"
     },
     "personalInfo": {
       "en": {
@@ -3046,8 +3046,8 @@
       "ar": "ar-story-1021"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-16.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-16.png"
+      "main": "/images/placeholder_images/puzzle-22.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-22.png"
     },
     "personalInfo": {
       "en": {
@@ -3092,12 +3092,12 @@
   {
     "id": "1022",
     "slugs": {
-      "en": "en-story-1022",
+      "en": "vignettes-from-a-war",
       "ar": "ar-story-1022"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-05.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-05.png"
+      "main": "/images/placeholder_images/puzzle-16.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-16.png"
     },
     "personalInfo": {
       "en": {
@@ -3120,8 +3120,8 @@
     },
     "story": {
       "en": {
-        "title": "",
-        "content": "While Sharif expresses his son's pain in words; Amir falls asleep with an exhausting fever, while his father holding him in his arms.\nSaid the father: “ Amir remembers every moment after the bombing until his arrival to the hospital and says: this happened to my uncle, and that happened to cousin.” And he talks about the smoke and the blood he saw. And when he sees children playing, he becomes very annoyed and says: I don’t have a leg.”\nEvery house on this street carries its share of fear, but Monir's house carries more than the others. A father of four leads me through an alley to his family house, which is located directly on the contact line with the clashes, and says that Houthi militants are very close to his neighbours: between 20 and 30 metres.\n“There is a sniper in front of us,” says Monir, crouching on the floor next to the living room window. “I can see him now, If I open the window or go out into the garden, he will shoot.”\nHe adds, \"We live in fear here in Taiz. People don’t know when they might be hit by a missile or a sniper bullet. By God’s will, peace will prevail and Yemen will return to being great again.\"\nIn the living room, we meet his eldest son, Mohammed, an active 14-year-old boy who relies on a wheelchair. When his school was bombed, his classmates ran away and left him, and now he worries that if his house is bombed, his family members might be harmed trying to rescue him.\n"
+        "title": "Vignettes from a war",
+        "content": "While Sharif tries to describe his son’s pain in words, Amir falls asleep with a fever, in his father's arms. The father says: “Amir remembers every moment from the bombing through his arrival at the hospital. He tells people ‘this happened to my uncle, and that happened to my cousin.’ He talks about the smoke and the blood he saw. And when he sees other children playing, he become frustrated, and says ‘I don’t have a leg.’” \n\nEvery house on this street carries its share of fear, but Mounir’s house has more than others. The father of four leads me through an alleyway to his family home, which is right on the frontline. He says the Houthis are now very close to his neighbours, maybe only 20 or 30 metres away. “There’s a sniper in front of us,” says Mounir, crouching on the floor next to the living room window.” “I can see him now. If I open the window or go out into the garden, he’ll shoot.” “We live in fear here in Taiz,” he says. “People don’t know when they might be hit by a missile or a sniper’s bullet. By Allah’s will, peace will prevail and Yemen will be great again.” \n\nIn the living room, we meet his eldest son, Mohammed. An active 14-year-old boy who now relies on a wheelchair. When his school was bombed, his classmates ran away and left him there. Now he worries that if his house is bombed, his family members will stay this time, and be injured trying to rescue him."
       },
       "ar": {
         "title": "",
@@ -3137,7 +3137,7 @@
     "followUpRequired": false,
     "contacted": false,
     "contactedBeforePublication": false,
-    "englishEdited": false
+    "englishEdited": true
   },
   {
     "id": "1023",
@@ -3146,8 +3146,8 @@
       "ar": "ar-story-1023"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-12.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-12.png"
+      "main": "/images/placeholder_images/puzzle-27.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-27.png"
     },
     "personalInfo": {
       "en": {
@@ -3243,7 +3243,7 @@
     "followUpRequired": false,
     "contacted": false,
     "contactedBeforePublication": false,
-    "englishEdited": false
+    "englishEdited": true
   },
   {
     "id": "1025",
@@ -3252,8 +3252,8 @@
       "ar": "ar-story-1025"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-21.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-21.png"
+      "main": "/images/placeholder_images/puzzle-26.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-26.png"
     },
     "personalInfo": {
       "en": {
@@ -3302,8 +3302,8 @@
       "ar": "ar-story-1026"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-06.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-06.png"
+      "main": "/images/placeholder_images/puzzle-21.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-21.png"
     },
     "personalInfo": {
       "en": {
@@ -3345,7 +3345,7 @@
     "followUpRequired": false,
     "contacted": false,
     "contactedBeforePublication": false,
-    "englishEdited": false
+    "englishEdited": true
   },
   {
     "id": "1027",
@@ -3354,8 +3354,8 @@
       "ar": "ar-story-1027"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-04.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-04.png"
+      "main": "/images/placeholder_images/puzzle-21.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-21.png"
     },
     "personalInfo": {
       "en": {
@@ -3454,8 +3454,8 @@
       "ar": "ar-story-1029"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-10.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-10.png"
+      "main": "/images/placeholder_images/puzzle-28.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-28.png"
     },
     "personalInfo": {
       "en": {
@@ -3504,8 +3504,8 @@
       "ar": "ar-story-1030"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-27.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-27.png"
+      "main": "/images/placeholder_images/puzzle-17.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-17.png"
     },
     "personalInfo": {
       "en": {
@@ -3558,8 +3558,8 @@
       "ar": "ar-story-1031"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-07.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-07.png"
+      "main": "/images/placeholder_images/puzzle-04.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-04.png"
     },
     "personalInfo": {
       "en": {
@@ -3608,8 +3608,8 @@
       "ar": "ar-story-1032"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-20.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-20.png"
+      "main": "/images/placeholder_images/puzzle-06.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-06.png"
     },
     "personalInfo": {
       "en": {
@@ -3658,8 +3658,8 @@
       "ar": "ar-story-1033"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-20.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-20.png"
+      "main": "/images/placeholder_images/puzzle-22.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-22.png"
     },
     "personalInfo": {
       "en": {
@@ -3760,8 +3760,8 @@
       "ar": "ar-story-1035"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-31.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-31.png"
+      "main": "/images/placeholder_images/puzzle-27.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-27.png"
     },
     "personalInfo": {
       "en": {
@@ -3785,7 +3785,7 @@
     "story": {
       "en": {
         "title": "The bare necessities ",
-        "content": "The war means destruction of houses and displacement. We had to go through all that, and now we are suffering from expensive rent, living on the streets. Not to mention the fact that we lack basics of life like electricity and hygiene. There are piles of garbage in the streets, and the cost of living is so high. We no longer have even the bare necessities of life."
+        "content": "The war means destruction of houses and displacement. We went through so much already, and now we are suffering from expensive rent, living on the streets. Not to mention the fact that we lack basics of life like electricity and hygiene. There are piles of garbage in the streets, and the cost of living is so high. We no longer have even the bare necessities of life."
       },
       "ar": {
         "title": "",
@@ -3812,8 +3812,8 @@
       "ar": "ar-story-1036"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-19.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-19.png"
+      "main": "/images/placeholder_images/puzzle-15.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-15.png"
     },
     "personalInfo": {
       "en": {
@@ -3862,8 +3862,8 @@
       "ar": "ar-story-1037"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-20.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-20.png"
+      "main": "/images/placeholder_images/puzzle-15.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-15.png"
     },
     "personalInfo": {
       "en": {
@@ -3887,7 +3887,7 @@
     "story": {
       "en": {
         "title": "Every day I think of leaving",
-        "content": "The war meant that I was unable to finish my university education. Life is increasingly difficult in Taiz. I can’t find a job. I can’t pay my rent. There is no access to [less expensive or free] government hospitals, and water and electricity have been cut off. Every day I think of leaving my country, of escaping from the land I am supposed to belong to. For the past seven years, we have been fighting for a living like tomorrow will be our last day on earth. It is extremely difficult to survive in Yemen. \n"
+        "content": "The war meant that I could not finish my university education. Life is increasingly difficult in Taiz. I can’t find a job. I can’t pay my rent. There is no access to [less expensive or free] government hospitals, and water and electricity have been cut off. Every day I think of leaving my country, of escaping from the land I am supposed to belong to. For the past seven years, we have been fighting for a living like tomorrow will be our last day on earth. It is extremely difficult to survive in Yemen. \n"
       },
       "ar": {
         "title": "",
@@ -3908,12 +3908,12 @@
   {
     "id": "1038",
     "slugs": {
-      "en": "en-story-1038",
+      "en": "the-war-has-changed-people",
       "ar": "ar-story-1038"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-14.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-14.png"
+      "main": "/images/placeholder_images/puzzle-20.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-20.png"
     },
     "personalInfo": {
       "en": {
@@ -3936,8 +3936,8 @@
     },
     "story": {
       "en": {
-        "title": "",
-        "content": "My name is Badeer Mahmoud, and I am from Haifan, Taiz District. I am a displaced person in the city of Taiz. I was harassed many times by the Houthi group, even though I did not interfere with them at all. I also suffered from the fact that the distances are no longer the same as before. The distance that used to take us half an hour now takes a whole day, due to the interruption of roads. Living is no longer easy. The value of a bag of flour, which was previously five thousand riyals, is now forty-five thousand riyals. The situation is no longer bearable. The rent of the house is seventy to eighty thousand riyals, where it was previously thirty thousand riyals. Many are heading in directions they never imagined they would go. Some of them commit suicide or lose their minds, and others are turning into killers. It might be due to the fact that people cannot provide their families with the basic necessities. This war has changed people. Whoever wants to live must be dragged into the worst things. All those in power are gangs and oppressors. As for those who don’t join, they cannot live.\n"
+        "title": "\"The war has changed people.\"",
+        "content": "I am displaced person in Taiz. I have been harassed many times by the Houthis, even though I never bothered them. I struggle with the fact that [because of the siege on Taiz] getting places takes so much longer than it used to. Getting somewhere that used to be half an hour away now takes a whole day, because roads are blocked. \nLiving like this is not easy. A bag of flour used to cost 5,000 Riyals, now it is 45,000 Riyals. It’s unbearable. Rent on my house is 70-80,000 Riyals, it used to be 30,000. \nMany people end up going in directions they never imagined they would go. Some people commit suicide or lose their minds. Others have turned into killers. Maybe because they can no longer provide their families with what they need. The war has changed people. If you want to get by it is easy to be dragged into doing horrible things. Those with power are gangs, oppressors. Those who don’t join them, don’t survive."
       },
       "ar": {
         "title": "",
@@ -3955,7 +3955,7 @@
     "followUpRequired": false,
     "contacted": false,
     "contactedBeforePublication": false,
-    "englishEdited": false
+    "englishEdited": true
   },
   {
     "id": "1039",
@@ -3964,8 +3964,8 @@
       "ar": "ar-story-1039"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-07.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-07.png"
+      "main": "/images/placeholder_images/puzzle-19.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-19.png"
     },
     "personalInfo": {
       "en": {
@@ -4039,11 +4039,11 @@
     "story": {
       "en": {
         "title": "\"All this because of the war.\"",
-        "content": "I am a displaced woman from Taiz. My children and I live in a food shop, which at least provides us with shelter. We don’t have any of the essentials, like bedding, clothing, or food. All this because of the war."
+        "content": "I am a displaced woman from Taiz. I live with my children in a grocery shop, which at least provides us with shelter. We don’t have any of the essentials, like bedding, clothing, or food. All this because of the war."
       },
       "ar": {
         "title": "",
-        "content": "إسمي اسيا قائد حسن ، نازحة من تعز. اعيش مع اولادي في محل لبيع الادوات الغذائية في الحي، ل يأوينا. نعيش بدون اي مستلزمات اولوية، كالفراش والملابس والغذاء. وكل هذا بسبب الحرب. \n\n"
+        "content": "اعيش مع اولادي في محل لبيع الادوات الغذائية في الحي، ل يأوينا. نعيش بدون اي مستلزمات اولوية، كالفراش والملابس والغذاء. وكل هذا بسبب الحرب. \n\n"
       }
     },
     "attachments": [
@@ -4114,7 +4114,7 @@
   {
     "id": "1042",
     "slugs": {
-      "en": "en-story-1042",
+      "en": "hard-to-cope",
       "ar": "ar-story-1042"
     },
     "storyImage": {
@@ -4142,12 +4142,12 @@
     },
     "story": {
       "en": {
-        "title": "",
-        "content": "My name is Abdul Rahman Abdul Qawi, from Taiz. I was hit by an explosive device in the Al-Jumhuri neighborhood of Taiz. Which led to the amputation of my leg, and there is no possibility of setting an artificial leg because my injury is from above the knee and there is no bone to set it on it. With the difficult conditions, the siege, and the expensive living conditions in Taiz region, I find it difficult to live with my situation.\n"
+        "title": "Hard to cope",
+        "content": "I was hit by an explosive in the al-Jumhuri neighborhood of Taiz, and my leg had to be amputated. There is no way to give me an artificial limb because my amputation is above the knee, and there is no bone to attach it to [with the technology available here]. With the difficult conditions here, the siege, and the high cost of living in Taiz, I’m finding it hard to cope with my situation."
       },
       "ar": {
         "title": "",
-        "content": "اسمي عبدالرحمن عبدالقوي، من تعز. أصبت بعبوة ناسفة في حي الجمهوري في تعز. مما ادى الى بتر ساقي، وليس هناك احتمالية ان تتم تركيب ساق اصطناعية، لأن اصابتي من أعلى الركبة، ولايوجد عظم لتركيبها. مع الظروف الصعبة، والحصار والمعيشة الغالية، في منطقة تعز، اجد صعوبة في التعايش مع وضعي. "
+        "content": "أصبت بعبوة ناسفة في حي الجمهوري في تعز. مما ادى الى بتر ساقي، وليس هناك احتمالية ان تتم تركيب ساق اصطناعية، لأن اصابتي من أعلى الركبة، ولايوجد عظم لتركيبها. مع الظروف الصعبة، والحصار والمعيشة الغالية، في منطقة تعز، اجد صعوبة في التعايش مع وضعي. "
       }
     },
     "attachments": [
@@ -4161,17 +4161,17 @@
     "followUpRequired": false,
     "contacted": false,
     "contactedBeforePublication": false,
-    "englishEdited": false
+    "englishEdited": true
   },
   {
     "id": "1043",
     "slugs": {
-      "en": "en-story-1043",
+      "en": "economic-crisis",
       "ar": "ar-story-1043"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-17.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-17.png"
+      "main": "/images/placeholder_images/puzzle-24.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-24.png"
     },
     "personalInfo": {
       "en": {
@@ -4194,8 +4194,8 @@
     },
     "story": {
       "en": {
-        "title": "",
-        "content": "The war has impacted the entire community. Financially, mentally, morally. It affects work; most of the young people have left. It affects the education system, which has collapsed. Nobody can afford to educate their children anymore. The public schools are no good, and private school costs too much. I’m 63 years old, and retired from my career as a lawyer. I would like to keep working, but with this country’s economic crisis nobody can find work. Even the people who have jobs aren’t really doing anything. \n"
+        "title": "Economic crisis",
+        "content": "The war has impacted the entire community. Financially, mentally, morally. It affects work: most young people have left because there aren't jobs. It affects the education system, which has collapsed. Nobody can afford to educate their children anymore. The public schools are no good, and private school costs too much. I’m 63 years old, and retired from my career as a lawyer. I would like to keep working, but with this country’s economic crisis nobody can find work. Even the people who have jobs aren’t really doing anything."
       },
       "ar": {
         "title": "",
@@ -4213,7 +4213,7 @@
     "followUpRequired": false,
     "contacted": false,
     "contactedBeforePublication": false,
-    "englishEdited": false
+    "englishEdited": true
   },
   {
     "id": "1044",
@@ -4378,8 +4378,8 @@
       "ar": "ar-story-1047"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-23.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-23.png"
+      "main": "/images/placeholder_images/puzzle-27.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-27.png"
     },
     "personalInfo": {
       "en": {
@@ -4430,8 +4430,8 @@
       "ar": "ar-story-1048"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-31.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-31.png"
+      "main": "/images/placeholder_images/puzzle-09.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-09.png"
     },
     "personalInfo": {
       "en": {
@@ -4455,11 +4455,11 @@
     "story": {
       "en": {
         "title": "",
-        "content": "\nMy name is Gala Ali Qasim, and I am thirty-two years old. My life is tiring, and I don’t have a job to provide the basics for a living. The world is too dark for me.\n\n"
+        "content": "My life is exhausting, and I don’t have a job so I can't afford to buy life's basics. For me, the world is a dark place. \n\n"
       },
       "ar": {
         "title": "",
-        "content": "اسمي جلال علي قاسم، عمري ٣٢ سنة. حياتي متعبه، لايوجد لدي عمل، ولا استطيع ان اوفر قوت يومي. العالم مظلم بالنسبه لي. \n"
+        "content": "حياتي متعبه، لايوجد لدي عمل، ولا استطيع ان اوفر قوت يومي. العالم مظلم بالنسبه لي. \n"
       }
     },
     "attachments": [
@@ -4482,8 +4482,8 @@
       "ar": "ar-story-1049"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-21.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-21.png"
+      "main": "/images/placeholder_images/puzzle-23.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-23.png"
     },
     "personalInfo": {
       "en": {
@@ -4640,13 +4640,13 @@
       "ar": "ar-story-1052"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-29.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-29.png"
+      "main": "/images/placeholder_images/puzzle-22.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-22.png"
     },
     "personalInfo": {
       "en": {
         "name": "Doaa",
-        "surname": "Al-Areqi",
+        "surname": "al-Areqi",
         "whereFrom": "Taiz",
         "livingIn": "Sana'a"
       },
@@ -4688,7 +4688,7 @@
   {
     "id": "1053",
     "slugs": {
-      "en": "a-story-of-love-and-paperwork",
+      "en": "a-tale-of-love-war-and-paperwork",
       "ar": "ar-story-1053"
     },
     "storyImage": {
@@ -4698,7 +4698,7 @@
     "personalInfo": {
       "en": {
         "name": "Yaqoub",
-        "surname": "Almontasir",
+        "surname": "al-Montasir",
         "whereFrom": "Radaa",
         "livingIn": "USA"
       },
@@ -4716,7 +4716,7 @@
     },
     "story": {
       "en": {
-        "title": "A story of love and paperwork ",
+        "title": "A tale of love, war, and paperwork ",
         "content": "I am an American of Yemeni descent, and I live in New York City. Back in 2017, two years into the war, I got married to my beloved wife, who is a Yemeni citizen, in Yemen. At the time there was a land, air, and sea blockade in Yemen, and it made it extremely hard to get in or out of the country. It took, on average, two or three days. After the wedding, I went back to the US. But before I left, my wife told me that she was pregnant. I was so happy, I was overwhelmed with joy. Alhumdullah (Thanks be to God)! \nWe agreed that after my son's birth, we would meet in Egypt to register him for US citizenship and a passport, because the US Embassy in Sana’a was closed. In the spring of 2019 we met there, and got all the paperwork done. We enjoyed our time in Egypt; it is a beautiful country. But my wife and son had to go back to Yemen, as we waited for her appointment with US Citizenship and Immigration Services. In March 2020 we heard that we had an appointment, but then COVID-19 hit, and the pandemic delayed the process. \nAfter about a year of waiting I decided that I had to go and live with my family. In January 2021 I left for Yemen. I planned to stay until we got permission for my wife to go to the US, but within a month of my arrival, we finally got an appointment. We first traveled to Djibouti to get her papers, and then we went all together to the US. My wife has been here, and we have been together, ever since. I know I might be biased, but one thing I want to point out about Yemen, or Yemenis in general, is that in my experience they have big hearts. They are resilient and optimistic about the future. I ask Allah that things get better in Yemen, better even than they were before the war. And I hope to go back soon."
       },
       "ar": {
@@ -4800,17 +4800,17 @@
   {
     "id": "1055",
     "slugs": {
-      "en": "en-story-1055",
+      "en": "a-life-of-education-and-a-path-of-suffering",
       "ar": "ar-story-1055"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-18.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-18.png"
+      "main": "/images/placeholder_images/puzzle-05.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-05.png"
     },
     "personalInfo": {
       "en": {
         "name": "Abduljabar",
-        "surname": "Almujahed",
+        "surname": "al-Mujahed",
         "whereFrom": "Dhamar",
         "livingIn": "Dhamar"
       },
@@ -4828,8 +4828,8 @@
     },
     "story": {
       "en": {
-        "title": "",
-        "content": "I am Professor Abdul-Jabbar Al-Mujahid, born in 1968, from the city of Dhamar.\nI have loved science and education since I became aware of the world. The beginnings of my education were in bookshops. I knew the wooden board and wrote on it with a wooden sharpend pen, which was the beginning of learning to write the letters of the alphabet.\nI joined teaching in 1990 as a teacher for the primary grades, then specialised in the College of Education to study the Arabic language and literature, and graduated in 1993/94 as a teacher of the Arabic language for the sixth and ninth grades.\nThere were many students who have now become fathers and grandfathers, famous doctors, successful businessmen, academic university doctors, and those who held positions in the state in the judiciary, prosecution offices, ministries, etc.\nI was that struggling teacher with a limited income, struggling with poverty and the costs of life. I, my family, and my children were content with what God had given us. After the cutting off of the salary, we lived in the hope of its return within a few months.\nMonth after month, year after year, we spent all of our savings to provide only the essentials for living.\nThe children dropped out of schools and then left it completely to search for work that would provide us with only a living.\nTo this day, while we are in this miserable status, we suffer, and our children suffer. We get sick, and we do not have the cost of medicine. Our clothes wear out, and we can not replace them. We lack clean water, food, medicine, and a decent life."
+        "title": "A life of education and a path of suffering",
+        "content": "Ever since I became aware of the world around me, I have loved science and learning. I began my education in bookshops. I first learned to write the letters of the alphabet with a wood board and a pen made from reeds, dipped in water and plaster. \nI became a teacher myself in 1990, first at a primary school. Then I went back to a coleague of education to study Arabic language and literature, and qualified in 1993-1994 as an Arabic teacher for sixth through ninth grade. \nMany of my students have become fathers and grandfathers, famous doctors, successful businessmen, professors, judges, prosecutors, and held positions in government ministries. \nI remained a struggling teacher with a limited income, dealing with relative poverty and all the costs of life. But myself, my family, and my children, we were content with what God had given us. But when government salaries stopped, we hoped they would return within a few months.\nMonth after month, year after year, we spent all our savings, just to get by. My children dropped out of school because they had to look for work. \nNow we are in a miserable state. I am suffering, and my children are suffering. When we get sick, we can’t afford to buy medicine. When our clothes wear out, we can’t replace them. We don’t have clean water, food, medicine, or a decent life. \n"
       },
       "ar": {
         "title": "",
@@ -4854,13 +4854,13 @@
       "ar": "ar-story-1056"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-07.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-07.png"
+      "main": "/images/placeholder_images/puzzle-24.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-24.png"
     },
     "personalInfo": {
       "en": {
         "name": "Abdulsalam",
-        "surname": "Alsamawi",
+        "surname": "al-Samawi",
         "whereFrom": "Radaa",
         "livingIn": "al-Bayda"
       },
@@ -4904,8 +4904,8 @@
       "ar": "ar-story-1057"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-04.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-04.png"
+      "main": "/images/placeholder_images/puzzle-24.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-24.png"
     },
     "personalInfo": {
       "en": {
@@ -4954,12 +4954,12 @@
       "ar": "ar-story-1058"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-05.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-05.png"
+      "main": "/images/placeholder_images/puzzle-09.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-09.png"
     },
     "personalInfo": {
       "en": {
-        "name": "Om Tarek",
+        "name": "Umm Tarek",
         "surname": "",
         "whereFrom": "Aden",
         "livingIn": "Aden"
@@ -4979,7 +4979,7 @@
     "story": {
       "en": {
         "title": "\"I suffered so much, but I changed too.\"",
-        "content": "When the war began, I planned to remain in my Aden home. But my aunt convinced me to flee, for the sake of my children, who were in a state of constant fear from the fighting. I took a few belongings and left, while she stayed behind to watch over the house. \nI took my family to our home village, but my children had trouble adapting to life there. They were city kids. I suffered there, too. I had to provide for my children, so I earned money by carrying fruits and vegetables for girls who sold them at the market. They gave me some of the profit. I wasn’t used to this kind of work, and my legs would swell up from the labour. \nAfter a month or a month and a half of this, my husband decided it was time for us to return to Aden. On our way back, we saw dead bodies on the road. I fainted at the sight. \nBack in Aden, we had to find a way to make money. I borrowed some money from a friend and gave it to my husband so he could buy and sell various small things. Before the war he had worked in a bank, so this was new to him. Eventually I started selling water, juice, cigarettes, and bread. My efforts encouraged my husband, and we ended up working together, I suffered so much, but I changed too. I am stronger. I have five children, and I was able to take care of them. They are no longer young. For the moment, things are better."
+        "content": "When the war began, I planned to remain in my Aden home. I didn't want to leave. But my aunt convinced me to flee, for the sake of my children, who were in a state of constant fear from the fighting. I took a few belongings and left, while she stayed behind to watch over the house. \nI took my family to our home village, but my children had trouble adapting to life there. They were city kids. I suffered there, too. I had to provide for my children, so I earned money by carrying fruits and vegetables for girls who sold them at the market. They gave me some of the profit. I wasn’t used to this kind of work, and my legs would swell up from the labour. \nAfter a month or a month and a half of this, my husband decided it was time for us to return to Aden. On our way back, we saw dead bodies on the road. I fainted at the sight. \nBack in Aden, we had to find a way to make money. I borrowed some money from a friend and gave it to my husband so he could buy and sell various small things. Before the war he had worked in a bank, so this was new to him. Eventually I started selling water, juice, cigarettes, and bread. My efforts encouraged my husband, and we ended up working together, I suffered so much, but I changed too. I am stronger. I have five children, and I was able to take care of them. They are no longer young. For the moment, things are better."
       },
       "ar": {
         "title": "",
@@ -5004,8 +5004,8 @@
       "ar": "ar-story-1059"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-23.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-23.png"
+      "main": "/images/placeholder_images/puzzle-28.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-28.png"
     },
     "personalInfo": {
       "en": {
@@ -5054,8 +5054,8 @@
       "ar": "ar-story-1060"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-23.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-23.png"
+      "main": "/images/placeholder_images/puzzle-04.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-04.png"
     },
     "personalInfo": {
       "en": {
@@ -5104,15 +5104,15 @@
       "ar": "ar-story-1061"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-16.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-16.png"
+      "main": "/images/placeholder_images/puzzle-07.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-07.png"
     },
     "personalInfo": {
       "en": {
         "name": "Ahmed",
         "surname": "Khaled",
         "whereFrom": "Aden",
-        "livingIn": ""
+        "livingIn": "Aden"
       },
       "ar": {
         "name": "أحمد",
@@ -5154,15 +5154,15 @@
       "ar": "ar-story-1062"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-32.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-32.png"
+      "main": "/images/placeholder_images/puzzle-15.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-15.png"
     },
     "personalInfo": {
       "en": {
         "name": "Sahar",
-        "surname": "Alamoudi",
-        "whereFrom": "Hadramuat",
-        "livingIn": ""
+        "surname": "al-Amoudi",
+        "whereFrom": "Hadramuht",
+        "livingIn": "Hadramuht"
       },
       "ar": {
         "name": "سحر",
@@ -5204,8 +5204,8 @@
       "ar": "ar-story-1063"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-31.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-31.png"
+      "main": "/images/placeholder_images/puzzle-28.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-28.png"
     },
     "personalInfo": {
       "en": {
@@ -5254,15 +5254,15 @@
       "ar": "ar-story-1064"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-17.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-17.png"
+      "main": "/images/placeholder_images/puzzle-01.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-01.png"
     },
     "personalInfo": {
       "en": {
         "name": "Abu Ammar",
         "surname": "",
-        "whereFrom": "Sanaa",
-        "livingIn": "Sanaa"
+        "whereFrom": "Sana'a",
+        "livingIn": "Sana'a"
       },
       "ar": {
         "name": "ابو عمار",
@@ -5304,15 +5304,15 @@
       "ar": "ar-story-1065"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-21.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-21.png"
+      "main": "/images/placeholder_images/puzzle-12.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-12.png"
     },
     "personalInfo": {
       "en": {
         "name": "Nabeel",
         "surname": "Alawzari",
-        "whereFrom": "Sanaa",
-        "livingIn": "Mareeb"
+        "whereFrom": "Sana'a",
+        "livingIn": "Marib"
       },
       "ar": {
         "name": "نبيل",
