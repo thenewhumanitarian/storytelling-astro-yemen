@@ -91,4 +91,8 @@ export const translations = {
     ar: 'مستندات',
     en: 'Documents'
   },
+  open: {
+    ar: 'فتح',
+    en: 'Open'
+  },
 }

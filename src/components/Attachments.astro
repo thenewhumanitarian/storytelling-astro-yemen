@@ -2,6 +2,9 @@
 import AttachmentImage from './AttachmentImage.astro'
 import { translations } from '../data/translations'
 
+import IconPlay from './icons/Icon-play.astro'
+import IconDocument from './icons/Icon-document.astro'
+
 export interface Props {
 	attachments?: Array<String>
 }
@@ -90,44 +93,78 @@ if (categorisedAttachments.images.items.length === 1) {
 }
 
 console.log(flattenedAttachments)
+
+const attachmentItemClassName = `
+group 
+relative 
+w-full 
+h-full 
+aspect-square 
+border-white 
+border 
+hover:scale-105 
+transition-all 
+cursor-pointer 
+flex 
+flex-col gap-3
+items-center 
+justify-center 
+will-change-transform 
+bg-black
+`
+
+// Read path parameters for language and slug
+const { path } = Astro.params
+
+const pathParams = path?.toString().split('/')
+const lang = pathParams?.[0] || 'en'
 ---
 
 {
 	attachments.length > 0 && (
 		<>
-			<section class='flex flex-col w-full justify-center items-center'>
+			<section class=''>
 				{/* <h3>Gallery</h3> */}
-				<div class='grid gap-3 grid-cols-5'>
+				<div class='grid gap-1 sm:gap-3 grid-cols-4 sm:grid-cols-4 lg:grid-cols-6'>
 					{flattenedAttachments.map((attachment, index) => {
 						switch (attachment.category) {
 							case 'image':
 								return (
-									<div class='w-48 aspect-square border-white border hover:scale-105 transition-all cursor-pointer flex items-center justify-center'>
+									<div class={`${attachmentItemClassName}`}>
 										<AttachmentImage fileName={attachment.fileName} />
 									</div>
 								)
 							case 'video':
 								// Render video attachments
 								return (
-									<div class='w-48 aspect-square border-white border hover:scale-105 transition-all cursor-pointer flex items-center justify-center'>
-										<p class='m-0'>Video</p>
+									<div class={`${attachmentItemClassName}`}>
+										<video class='w-full h-full absolute' muted>
+											<source src={`/attachments/${attachment.fileName}`} type='video/mp4' />
+										</video>
+										<span class='m-0 z-30 w-8 h-8 group-hover:text-burgundy'>
+											<IconPlay />
+										</span>
 									</div>
 								)
 							case 'audio':
 								// Render audio attachments
 								return (
-									<div class='w-48 aspect-square border-white border hover:scale-105 transition-all cursor-pointer flex items-center justify-center'>
-										<p class='m-0'>Audio</p>
+									<div class={`${attachmentItemClassName}`}>
+										<audio class='w-full h-full absolute' muted src={`/attachments/${attachment.fileName}`} />
+										<span class='m-0 z-30 w-8 h-8 group-hover:text-burgundy'>
+											<IconPlay />
+										</span>
 									</div>
 								)
 							case 'document':
 								// Render document links
 								return (
-									<p>
-										<div class='w-48 aspect-square border-white border hover:scale-105 transition-all cursor-pointer flex items-center justify-center'>
-											<p class='m-0'>Document</p>
-										</div>
-									</p>
+									<div class={`${attachmentItemClassName}`}>
+										<span class='m-0 z-30 w-8 h-8 group-hover:text-burgundy'>
+											<IconDocument />
+										</span>
+										<span>{translations.open[lang]}</span>
+									</div>
 								)
 							default:
 								return null
