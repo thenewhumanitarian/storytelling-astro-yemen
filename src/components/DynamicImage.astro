@@ -31,7 +31,7 @@ const imageSlug = slugify(fileName.replace(/\.[^/.]+$/, '')) // Also remove the 
 
 <Image width='400' class='w-full h-full object-cover' src={images[imagePath]()} alt={altText} id={imageSlug} />
 
-<div id='lightbox' class='fixed flex items-center justify-center z-50 bg-black w-screen h-screen top-0 left-0 right-0 left-0' style='display: none;'>
+<div id='lightbox' class='fixed flex items-center justify-center z-50 bg-black w-screen h-screen top-0 right-0 left-0' style='display: none;'>
 	<span id='close-lightbox' class='absolute top-10 right-10 w-16 h-16 pointer-events-none'>
 		<svg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke-width='1.5' stroke='currentColor' class='w-full h-auto'>
 			<path stroke-linecap='round' stroke-linejoin='round' d='M6 18 18 6M6 6l12 12'></path>

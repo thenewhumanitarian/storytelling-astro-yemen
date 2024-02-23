@@ -12,7 +12,7 @@ if (!lang) {
 ---
 
 <a class='block' href={`/stories/${lang}/${story.slugs[lang]}`} id={`story-tile--${story.id}`}>
-	<div class={`flex border-zinc-600 border-t ${story.highlighted ? 'flex-row-reverse pt-5 pb-2' : 'flex-row pt-3 px-3'} w-full`}>
+	<div class={`flex border-zinc-600 border-t ${story.highlighted ? 'w-full flex-row-reverse pt-5 pb-2 lg:-mx-24' : 'flex-row pt-3 px-3'} w-full`}>
 		<div class={`relative aspect-square ${story.highlighted ? 'w-64' : 'w-24'} overflow-hidden`}>
 			<img src={`${story.storyImage.main}`} alt={story.story[lang].title} class='absolute top-0 left-0 w-full h-full object-cover' />
 		</div>

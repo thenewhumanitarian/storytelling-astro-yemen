@@ -69,7 +69,7 @@ const dir = lang === 'ar' ? 'rtl' : 'ltr'
 	overflow={'always'}
 	dir={dir}
 >
-	<!-- <ViewTransitions /> -->
+	<ViewTransitions />
 	<div class='fixed top-0 left-0 w-screen h-screen -z-1 pointer-events-none' id='stars'></div>
 	<div class='fixed top-0 left-0 w-screen h-screen -z-1 pointer-events-none' id='city'></div>
 	<div
@@ -350,25 +350,4 @@ const dir = lang === 'ar' ? 'rtl' : 'ltr'
 	}
 
 	createStars()
-
-	// document.addEventListener('astro:before-swap', () => {
-	// 	// Remove all stars
-	// 	var starContainer = document.querySelector('#stars')
-	// 	starContainer.innerHTML = ''
-	// })
-
-	// document.addEventListener('astro:after-swap', () => {
-	// 	console.log('after swap')
-
-	// 	// Check if the stars are already created
-	// 	starContainer = document.querySelector('#stars')
-	// 	starContainer.innerHTML = ''
-	// 	if (starContainer.innerHTML === '') {
-	// 		createStars()
-	// 	}
-	// })
-
-	window.addEventListener('popstate', function (event) {
-		console.log('popstate')
-	})
 </script>

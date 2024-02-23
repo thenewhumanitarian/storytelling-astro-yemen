@@ -55,7 +55,7 @@ function sortStoriesWithHighlights(stories) {
 const shuffledStories = sortStoriesWithHighlights(stories)
 ---
 
-<div class='flex flex-row gap-3' id='list'>
+<div class='flex flex-row gap-3 max-w-2xl mx-auto' id='list'>
 	{
 		shuffledStories.map((story) => {
 			return <StoryListItem story={story} />
@@ -64,10 +64,10 @@ const shuffledStories = sortStoriesWithHighlights(stories)
 </div>
 
 <style is:global>
-  #list {
-    display: flex !important;
-    flex-direction: column;
-  }
+	#list {
+		display: flex !important;
+		flex-direction: column;
+	}
 
 	#list.filter--read > a:not([data-lastread='never']) {
 		opacity: 0.2;
