@@ -22,8 +22,16 @@ function processWhatsAppAttachments(entryID, files, basePath) {
     if (extension === '.heic') {
       newFilename = `${entryID}-${index + 1}.jpg`;
       const jpgFilePath = path.join(basePath, '../src/assets/', newFilename);
+      const jpgPublicFilePath = path.join(basePath, '../public/attachments/', newFilename);
+      // src/assets
       try {
         fs.renameSync(sourceFilePath, jpgFilePath);
+      } catch (err) {
+        console.error('Error renaming HEIC to JPG:', err);
+      }
+      // public/attachments
+      try {
+        fs.renameSync(sourceFilePath, jpgPublicFilePath);
       } catch (err) {
         console.error('Error renaming HEIC to JPG:', err);
       }

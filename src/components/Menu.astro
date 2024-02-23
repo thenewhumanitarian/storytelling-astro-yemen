@@ -18,6 +18,12 @@ import MenuOverlay from './MenuOverlay.astro'
 		console.log('Open menu button clicked')
 		menuOverlay.style.opacity = '1'
 		menuOverlay.style.visibility = 'visible'
+
+		// Find all elements with "menu--hide" class and hide them
+		const menuHide = document.querySelectorAll('.menu--hide')
+		menuHide.forEach((el) => {
+			el.style.opacity = 0
+		})
 	}
 
 	function closeMenu(e) {
@@ -28,6 +34,12 @@ import MenuOverlay from './MenuOverlay.astro'
 			menuOverlay.style.visibility = 'hidden'
 			setShowIntroFalse() // Call this function when the menu is closed
 		}
+
+    // Find all elements with "menu--hide" class and hide them
+		const menuHide = document.querySelectorAll('.menu--hide')
+		menuHide.forEach((el) => {
+			el.style.opacity = 1
+		})
 	}
 
 	function checkIntroOverlay() {

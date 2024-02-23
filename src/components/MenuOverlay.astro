@@ -1,45 +1,68 @@
 ---
+import HeaderLogo from './HeaderLogoSimple.astro'
 import Pergament from './Pergament.astro'
+
+let { lang } = Astro.params
+
+if (!lang) {
+	// Read path parameters for language and slug
+	const { path } = Astro.params
+
+	const pathParams = path?.toString().split('/')
+	lang = pathParams?.[0] || 'en'
+}
 ---
 
 <div id='menu-overlay' class='flex top-0 left-0 w-full h-screen bg-black items-center justify-center cursor-pointer p-8 z-50' transition:persist>
-	<section class='flex flex-row gap-5 z-50 cursor-default'>
-		<div class='w-1/2'>
-			<Pergament lang='en' classNames='px-5 py-4 text-black h-full rounded-xs'>
+	<div class='fixed flex justify-center items-center top-10 left-0 w-full'>
+		<div class='flex flex-row gap-x-5'>
+      {lang === 'ar' ? (
+        <nav class='flex flex-row text-right items-center gap-x-5'>
+          <!-- <a href='/about' class='text-white text-lg sm:text-2xl hover:text-burgundy transition-colors'>حول هذا المشروع</a>
+          <a href='/feedback' class='text-white text-lg sm:text-2xl hover:text-burgundy transition-colors'>أخبرنا عن انطباعك</a>
+          <a href='/share' class='text-white text-lg sm:text-2xl hover:text-burgundy transition-colors'>رابط آخر</a> -->
+          <a href='/about' class='text-white text-lg sm:text-2xl hover:text-burgundy transition-colors'>AR About this project</a>
+          <a href='/feedback' class='text-white text-lg sm:text-2xl hover:text-burgundy transition-colors'>AR Give us feedback</a>
+          <a href='/share' class='text-white text-lg sm:text-2xl hover:text-burgundy transition-colors'>AR Another link</a>
+          <!-- Add more links as needed -->
+        </nav>
+
+      ) : (
+        <nav class='flex flex-row text-left items-center gap-x-5'>
+          <a href='/about' class='text-white text-lg sm:text-2xl hover:text-burgundy transition-colors'>About this project</a>
+          <a href='/feedback' class='text-white text-lg sm:text-2xl hover:text-burgundy transition-colors'>Give us feedback</a>
+          <a href='/share' class='text-white text-lg sm:text-2xl hover:text-burgundy transition-colors'>Another link</a>
+          <!-- Add more links as needed -->
+        </nav>
+      )}
+		</div>
+	</div>
+
+	<section class='flex flex-col gap-5 z-50 cursor-default'>
+		<div class='w-full'>
+			<Pergament lang='en' classNames='px-5 py-4 text-black h-full mt-10 rounded-xs min-h-[40vh] max-h-[60vh]'>
 				<div>
-					<h2 class='text-black'>Here's the intro</h2>
-					<p class='text-black'>I'm thinking about making this a slider to click through where people can read more about the Project.</p>
+					<h2 class='text-white font-sans font-bold tracking-tight text-3xl'>Where Yemenis talk, and the world listens</h2>
+          <p class="text-white">The story of Yemen’s long war has mostly been told by journalists, aid groups, and politicians. Until now.</p>
+          <p class="text-white">The Yemen Listening Project wants to hear what Yemenis have to say, and publish your stories, to share them with the world. In order to do this, we would like to hear your answer to this one question: How has the war in Yemen impacted your life?</p>
+          <p class="text-white">While we are asking about the war, your answer doesn’t have to be sad. You can tell a love story. A story of losing a home, or finding a new one. It’s your story, so it’s up to you what you choose to tell, and how you tell it.</p>
+          <p class="text-white">The New Humanitarian will publish and share your stories in English and Arabic. This is your chance to speak up and be heard. The world is listening.</p>
+          <p class="text-white">#yemenlisteningproject</p>
 				</div>
 			</Pergament>
 		</div>
-
-		<div class='w-1/2'>
-			<div class='flex flex-row gap-x-5'>
-				<nav class='space-y-4 flex flex-col text-right'>
-					<a href='/about' class='text-white text-lg sm:text-2xl hover:text-burgundy transition-colors'>حول هذا المشروع</a>
-					<a href='/feedback' class='text-white text-lg sm:text-2xl hover:text-burgundy transition-colors'>أخبرنا عن انطباعك</a>
-					<a href='/share' class='text-white text-lg sm:text-2xl hover:text-burgundy transition-colors'>رابط آخر</a>
-					<!-- Add more links as needed -->
-				</nav>
-				<nav class='space-y-4 flex flex-col text-left'>
-					<a href='/about' class='text-white text-lg sm:text-2xl hover:text-burgundy transition-colors'>About this project</a>
-					<a href='/feedback' class='text-white text-lg sm:text-2xl hover:text-burgundy transition-colors'>Give us feedback</a>
-					<a href='/share' class='text-white text-lg sm:text-2xl hover:text-burgundy transition-colors'>Another link</a>
-					<!-- Add more links as needed -->
-				</nav>
-			</div>
-			<div class='absolute -top-1 right-6 w-8 h-8 cursor-pointer hover:text-burgundy transition-colors' id='menu-close-button'>
-				<svg class='fill-current' width='100%' height='90' viewBox='0 0 90 90' fill='none' xmlns='http://www.w3.org/2000/svg'>
-					<path
-						class='fill-current'
-						fill-rule='evenodd'
-						clip-rule='evenodd'
-						d='M1.84937 1.84937C4.02123 -0.317302 7.53683 -0.317302 9.7087 1.84937L44.6674 36.8134L79.626 1.84937C81.7979 -0.317302 85.3135 -0.317302 87.4854 1.84937C89.652 4.02123 89.652 7.53683 87.4854 9.7087L52.5214 44.6674L87.4854 79.626C89.652 81.7979 89.652 85.3135 87.4854 87.4854C85.3135 89.652 81.7979 89.652 79.626 87.4854L44.6674 52.5214L9.7087 87.4854C7.53683 89.652 4.02123 89.652 1.84937 87.4854C-0.317302 85.3135 -0.317302 81.7979 1.84937 79.626L36.8134 44.6674L1.84937 9.7087C-0.317302 7.53683 -0.317302 4.02123 1.84937 1.84937Z'
-					></path>
-				</svg>
-			</div>
-		</div>
 	</section>
+
+	<div class='absolute -top-1 right-6 w-8 h-8 cursor-pointer hover:text-burgundy transition-colors' id='menu-close-button'>
+		<svg class='fill-current' width='100%' height='90' viewBox='0 0 90 90' fill='none' xmlns='http://www.w3.org/2000/svg'>
+			<path
+				class='fill-current'
+				fill-rule='evenodd'
+				clip-rule='evenodd'
+				d='M1.84937 1.84937C4.02123 -0.317302 7.53683 -0.317302 9.7087 1.84937L44.6674 36.8134L79.626 1.84937C81.7979 -0.317302 85.3135 -0.317302 87.4854 1.84937C89.652 4.02123 89.652 7.53683 87.4854 9.7087L52.5214 44.6674L87.4854 79.626C89.652 81.7979 89.652 85.3135 87.4854 87.4854C85.3135 89.652 81.7979 89.652 79.626 87.4854L44.6674 52.5214L9.7087 87.4854C7.53683 89.652 4.02123 89.652 1.84937 87.4854C-0.317302 85.3135 -0.317302 81.7979 1.84937 79.626L36.8134 44.6674L1.84937 9.7087C-0.317302 7.53683 -0.317302 4.02123 1.84937 1.84937Z'
+			></path>
+		</svg>
+	</div>
 </div>
 
 <style>

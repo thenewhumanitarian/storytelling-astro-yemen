@@ -4,18 +4,29 @@ export interface Props {
 	lang: string
 }
 
-const { classNames, lang } = Astro.props as Props
+const { classNames } = Astro.props as Props
+
+let { lang } = Astro.params
+
+if (!lang) {
+	// Read path parameters for language and slug
+	const { path } = Astro.params
+
+	const pathParams = path?.toString().split('/')
+	lang = pathParams?.[0] || 'en'
+}
+
+const direction = lang === 'en' ? 'ltr' : 'rtl'
 ---
 
-<div class={classNames} id='pergament' dir={`${lang === 'ar' ? 'rtl' : 'ltr'}`}>
+<div class={classNames} id='pergament'>
 	<slot />
 </div>
 
-<style>
+<style define:vars={{ direction }}>
 	#pergament {
-    border: 1px solid white;
-		/* background-color: rgba(255,255,255,0.9); */
-		/* background-color: rgba(0,0,0,0.9); */
-		/* background-image: url('https://www.transparenttextures.com/patterns/textured-paper.png'); */
+		border: 1px solid white;
+		background-color: rgba(0, 0, 0, 0.9);
+		direction: var(--direction);
 	}
 </style>

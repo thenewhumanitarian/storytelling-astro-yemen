@@ -12,7 +12,7 @@ const { extractFrame } = require('./modules/videoProcessor');
 // const createPixelatedImages = require('./modules/createPixelatedImages');
 
 // Set CSV URL
-const csvUrl = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSo1JkBPpgo-jq5HbgZhdrWZ8lDGI8vF0C30gHPweWebwoKJbsmuKtED07jLqSDz3zpZMAfBpFl_Khv/pub?output=csv'; // Replace with your published CSV URL
+const csvUrl = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSo1JkBPpgo-jq5HbgZhdrWZ8lDGI8vF0C30gHPweWebwoKJbsmuKtED07jLqSDz3zpZMAfBpFl_Khv/pub?output=csv';
 
 // Define the output directory for preview images and pixelated images, relative to the main script
 const placeholderImageOutputDirectory = path.join(__dirname, '../public/images/placeholder_images');
@@ -116,20 +116,31 @@ async function processData(data) {
 
       // Process all attachments for MachForm entry and name incrementally, starting at -1
       let attachmentCounter = 1;
+
+      // Save attachments in the src/assets folder
       machformAttachments = machformAttachments.map(file => {
         let extension = path.extname(file).toLowerCase();
         let newFilename = `${entry.ID}-${attachmentCounter}${extension}`;
         const sourceFilePath = path.join(__dirname, './assets/machform_assets/', file);
         const newFilePath = path.join(__dirname, '../src/assets/', newFilename);
+        const newPublicFilePath = path.join(__dirname, '../public/attachments/', newFilename);
 
         if (extension === '.heic') {
           // Rename .heic to .jpg
           newFilename = `${entry.ID}-${attachmentCounter}.jpg`;
           const jpgFilePath = path.join(__dirname, '../src/assets/', newFilename);
+          const jpgPublicFilePath = path.join(__dirname, '../public/attachments/', newFilename);
+          // src/assets
           try {
             fs.renameSync(sourceFilePath, jpgFilePath);
           } catch (err) {
             console.error('Error renaming HEIC to JPG:', err);
+          }
+          // public/attachments
+          try {
+            fs.copyFileSync(jpgFilePath, jpgPublicFilePath);
+          } catch (err) {
+            console.error('Error copying file:', err);
           }
         }
         // else if (extension === '.mp4') {
@@ -138,8 +149,15 @@ async function processData(data) {
         //   // TODO: leave open because no MachForm video files (so far)
         // }
         else {
+          // src/assets
           try {
             fs.copyFileSync(sourceFilePath, newFilePath);
+          } catch (err) {
+            console.error('Error copying file:', err);
+          }
+          // public/attachments
+          try {
+            fs.copyFileSync(sourceFilePath, newPublicFilePath);
           } catch (err) {
             console.error('Error copying file:', err);
           }
@@ -180,12 +198,12 @@ async function processData(data) {
             const thumbnailPath = path.join(__dirname, '../public/images/thumbnails/', `${entryID}-thumbnail.jpg`); // Thumbnail destination
 
             try {
-              // 1. Extract the first frame of the video
+              // Extract the first frame of the video
               await extractFrame(videoPath, framePath);
 
               try {
                 const thumbnailResult = await createThumbnail(framePath, thumbnailPath);
-                console.log(`📹🖼️ Thumbnail created for video: ${firstVideoFile}`);
+                console.log(`📹 🖼️ Thumbnail created for video: ${firstVideoFile}`);
                 storyImage = {
                   main: thumbnailResult.mainImage,
                   pixelated: thumbnailResult.pixelatedImage || thumbnailResult.mainImage
