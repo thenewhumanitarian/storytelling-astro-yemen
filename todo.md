@@ -66,7 +66,7 @@
 * Family names? Do we show them?
 
 ### The big and ugly to do list
-* Adjust scraper to only use entries that have 'x' in Published column
+* DONE Adjust scraper to only use entries that have 'x' in Published column
 * Adjust scraper to also get the tags from every entry
 * Stub article to be done
 * Categorising or tagging the entries? Using colour schemes for this?

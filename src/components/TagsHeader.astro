@@ -1,0 +1,80 @@
+---
+interface Props {
+	tags: string[]
+}
+
+// Read path parameters for language and slug
+const { path } = Astro.params
+
+const pathParams = path?.toString().split('/')
+const tag = pathParams?.[1] || 'en'
+
+const { tags } = Astro.props as Props
+
+// Find the tag in the list with matching spelling, ignoring case
+const matchingTag = tags.find((tagItem) => tagItem.toLowerCase() === tag)
+
+let { lang } = Astro.params
+
+if (!lang) {
+	// Read path parameters for language and slug
+	const { path } = Astro.params
+
+	const pathParams = path?.toString().split('/')
+	lang = pathParams?.[0] || 'en'
+}
+---
+
+<section class='text-center max-w-5xl mx-auto pb-5'>
+	<div class='text-white flex items-center justify-center gap-x-3'>
+		<span class='m-0 p-0'>Stories with the tag</span>
+		<div class='inline bg-white'>
+			<h2 class='font-sans text-black text-lg font-bold px-3 py-2 m-0'>
+				{matchingTag}
+			</h2>
+		</div>
+	</div>
+
+	<div class='py-5'>
+		<button type='button' class='collapsible px-3 py-2 cursor-pointer font-bold bg-transparent border-zinc-200 hover:bg-zinc-800 border text-zinc-200'>
+			All tags
+		</button>
+		<div class='content flex pt-3'>
+			{
+				tags.map((tag) => {
+					return (
+						<a href={`/tags/${lang}/${tag.toLowerCase()}`} class='inline-block px-3 py-2 m-0 cursor-pointer text-base'>
+							<span class='block font-bold bg-transparent border-transparent hover:underline text-zinc-200'>{tag}</span>
+						</a>
+					)
+				})
+			}
+		</div>
+	</div>
+</section>
+
+<style>
+	.content {
+		display: none;
+	}
+</style>
+
+<script>
+	var coll = document.getElementsByClassName('collapsible')
+	var i
+
+	for (i = 0; i < coll.length; i++) {
+		coll[i].addEventListener('click', function () {
+			this.classList.toggle('active')
+			var content = this.nextElementSibling
+			if (content.style.display === 'block') {
+				content.style.display = 'none'
+				// Change text of "More tags..." button to "Less tags..."
+				this.innerHTML = 'Show tags'
+			} else {
+				content.style.display = 'block'
+				this.innerHTML = 'Hide tags'
+			}
+		})
+	}
+</script>

@@ -20,8 +20,11 @@ const placeholderImageOutputDirectory = path.join(__dirname, '../public/images/p
 // Fetch data
 fetchAndParseCSV(csvUrl)
   .then(data => {
+    // Filter out unpublished stories
+    const filteredData = data.filter(item => item['Publish'] === 'x');
+
     // Process data once fetched
-    processData(data)
+    processData(filteredData)
   })
   .catch(error => {
     console.error('An error occurred:', error);
@@ -47,7 +50,7 @@ async function processAllPlaceholderImages() {
     try {
       const result = await createThumbnail(sourceImagePath, destinationPath);
       if (result) {
-        console.log(`Thumbnail and pixelated image created for: ${filename}`);
+        // console.log(`Thumbnail and pixelated image created for: ${filename}`);
       } else {
         console.log(`Failed to create thumbnail for: ${filename}`);
       }
@@ -190,7 +193,7 @@ async function processData(data) {
           // Find the first video file
           const firstVideoFile = files.find(file => file.toLowerCase().endsWith('.mp4'));
           if (firstVideoFile) {
-            console.log(`📹 First video file found for entry ${entryID}: ${firstVideoFile}`);
+            // console.log(`📹 First video file found for entry ${entryID}: ${firstVideoFile}`);
 
             // Define paths for the frame extraction and thumbnail creation
             const videoPath = path.join(whatsappAssetsDir, firstVideoFile);
@@ -292,6 +295,7 @@ async function processData(data) {
           content: entry['AR\nYour story']
         }
       },
+      tags: entry.Tags !== "" ? entry.Tags.split(',').map(tag => tag.trim()) : [],
       attachments: entry['Method of submission'] === 'MachForm' ? machformAttachments : whatsAppAttachments,
       notes: entry.Notes,
       highlighted: entry.Highlighted === 'x',

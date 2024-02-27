@@ -1,0 +1,76 @@
+---
+import Layout from '../../layouts/Layout.astro'
+import StoryWrapper from '../../components/StoryWrapper.astro'
+
+import stories from '../../data/all_stories.json'
+
+// Read path parameters for language and slug
+const { path } = Astro.params
+
+const pathParams = path?.toString().split('/')
+const lang = pathParams?.[0] || 'en'
+
+// Create all pages based on stories array, for both English and Arabic language
+export async function getStaticPaths() {
+	// Create a new array of tags that are found in the stories array
+	const tags = stories.map((story) => story.tags).flat()
+	const uniqueTags = [...new Set(tags)]
+
+	const allPathsEN = tags.map((tag) => ({
+		params: {
+			path: `en/${tag.toLocaleLowerCase()}`,
+		},
+		props: {
+			allStories: stories,
+		},
+	}))
+
+	const allPathsAR = tags.map((tag) => ({
+		params: {
+			path: `ar/${tag.toLocaleLowerCase()}`,
+		},
+		props: {
+			allStories: stories,
+		},
+	}))
+
+	const allPaths = [...allPathsEN, ...allPathsAR]
+
+	return allPaths
+}
+
+const tags = stories.map((story) => story.tags).flat()
+const uniqueTags = [...new Set(tags)]
+
+// Define props
+const { allStories } = Astro.props
+
+// Assuming the current tag is the second parameter in your URL structure (after language)
+const currentTag = pathParams?.[1]?.toLowerCase()
+
+// Filter stories that include the current tag (case-insensitive)
+const filteredStories = allStories.filter((story) => story.tags.some((tag) => tag.toLowerCase() === currentTag))
+---
+
+<div class='py-12'>
+	<Layout
+		dark
+		title='The Yemen Listening Project'
+		header={true}
+		filterButtons={false}
+		languageButtons={{ ar: `/tags/ar/${currentTag}`, en: `/tags/en/${currentTag}` }}
+		switchViewButtons={false}
+		dir={lang === 'ar' ? 'rtl' : 'ltr'}
+	>
+		<StoryWrapper stories={filteredStories} view='tags' tags={uniqueTags} />
+	</Layout>
+</div>
+
+<style>
+	body {
+		background: black;
+	}
+	#filter-button {
+		z-index: 9999;
+	}
+</style>

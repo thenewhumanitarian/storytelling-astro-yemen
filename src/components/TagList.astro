@@ -1,0 +1,39 @@
+---
+interface Props {
+	tags: string[]
+}
+
+const { tags } = Astro.props as Props
+
+// Read path parameters for language and slug
+const { path } = Astro.params
+
+const pathParams = path?.toString().split('/')
+let lang = pathParams?.[0] || 'en'
+
+if (!lang) {
+	// Read path parameters for language and slug
+	const { path } = Astro.params
+
+	const pathParams = path?.toString().split('/')
+	lang = pathParams?.[0] || 'en'
+}
+---
+
+{
+	tags.length > 0 && (
+		<>
+			<h3 class='font-sans font-bold py-3'>Tags</h3>
+			<div>
+				{tags.map((tag) => (
+					<a
+						href={`/tags/${lang}/${tag.toLowerCase()}`}
+						class='bg-zinc-800 px-3 py-2 font-bold text-base text-zinc-50 hover:bg-zinc-50 hover:text-black mr-2'
+					>
+						{tag}
+					</a>
+				))}
+			</div>
+		</>
+	)
+}

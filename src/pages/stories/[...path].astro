@@ -4,6 +4,7 @@ import NavButtons from '../../components/Buttons/NavButtons.astro'
 import Layout from '../../layouts/Layout.astro'
 import Title from '../../components/Title.astro'
 import AuthorSection from '../../components/AuthorSection.astro'
+import TagList from '../../components/TagList.astro'
 import Attachments from '../../components/Attachments.astro'
 import Message from '../../components/Message.astro'
 import ShareStory from '../../components/ShareStory.astro'
@@ -103,6 +104,8 @@ const dir = lang === 'ar' ? 'rtl' : 'ltr'
 			<Attachments attachments={story.attachments} />
 			<Message contentArray={contentArray} lang={lang} />
 		</div>
+		{/* Tag list */}
+		<TagList tags={story.tags} />
 		{/* Share story section */}
 		<ShareStory story={story} lang={lang} />
 	</div>

@@ -1,19 +1,38 @@
 ---
 import StoryGrid from '../components/StoryGrid.astro'
 import StoryList from '../components/StoryList.astro'
+import TagsHeader from '../components/TagsHeader.astro'
 
-const { stories } = Astro.props
+const { stories, tags, view } = Astro.props
 ---
 
-{/* Story grid view */}
-<div class={`stories-container--grid`} id='stories-container--grid'>
-	<StoryGrid stories={stories} />
-</div>
+{
+	!view && (
+		<>
+			{/* Story grid view */}
+			<div class={`stories-container--grid`} id='stories-container--grid'>
+				<StoryGrid stories={stories} />
+			</div>
 
-{/* Story list view */}
-<div class={`stories-container--list mt-[8.25rem] lg:mt-20`} id='stories-container--list'>
-	<StoryList stories={stories} />
-</div>
+			{/* Story list view */}
+			<div class={`stories-container--list mt-[8.25rem] lg:mt-20`} id='stories-container--list'>
+				<StoryList stories={stories} />
+			</div>
+		</>
+	)
+}
+
+{
+	view === 'tags' && (
+		<>
+			{/* Story list view */}
+			<div class={`stories-container--list mt-[8.25rem] lg:mt-20`} id='stories-container--list'>
+				<TagsHeader tags={tags} />
+				<StoryList stories={stories} />
+			</div>
+		</>
+	)
+}
 
 <style is:global>
 	header {
