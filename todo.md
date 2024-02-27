@@ -48,9 +48,33 @@
 * DONE Pergament doesn't look like part of identity, maybe change?
 ---
 * Grid and list views on desktop but only list view on mobile?
-* Infinite grid highlighted entries shouldn't touch each other
-* Creating 
-* Create embeddable for Spotlight on homepage?
-* Categorising or tagging the entries? Using colour schemes for this?
 
-## Call with Annie 
+
+
+
+## Call with Annie on 27 February 2024
+
+### Questions
+* What are we doing with "documents" such as Word/PDF attachments? Make them open in new tab/download them?
+* Audios will be videos so didn't build a view for them to play in lightbox
+* Content for intro slides and static pages
+* SEO for grid/list views but also detail views to be done
+* Optimise image sizes further (detail pages, list view)
+* Highlighted entries in the list view are now spread out
+* Infinite grid highlighted entries shouldn't touch each other
+* Who is going to do testing?
+* Family names? Do we show them?
+
+### The big and ugly to do list
+* Adjust scraper to only use entries that have 'x' in Published column
+* Adjust scraper to also get the tags from every entry
+* Stub article to be done
+* Categorising or tagging the entries? Using colour schemes for this?
+* Share/meta for SEO: Title is Yemen Listening Project (and Arabic) and description: Title of story
+* Detail page if 2 or fewer attachments then on left side of text, above each other
+* Detail page if 3 or more attachements then keep as is now with flowing left-to-right
+* Highlighted for the grid
+* Alternative for "All stories"?
+* Create embeddable for Spotlight on homepage? Or use Spotlight for individual stories?
+
+# Deadline is end of next week / 9 March 2024
