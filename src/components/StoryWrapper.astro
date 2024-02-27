@@ -2,6 +2,7 @@
 import StoryGrid from '../components/StoryGrid.astro'
 import StoryList from '../components/StoryList.astro'
 import TagsHeader from '../components/TagsHeader.astro'
+import TagsFooter from '../components/TagsFooter.astro'
 
 const { stories, tags, view } = Astro.props
 ---
@@ -29,6 +30,7 @@ const { stories, tags, view } = Astro.props
 			<div class={`stories-container--list mt-[8.25rem] lg:mt-20`} id='stories-container--list'>
 				<TagsHeader tags={tags} />
 				<StoryList stories={stories} />
+        <TagsFooter tags={tags} />
 			</div>
 		</>
 	)
