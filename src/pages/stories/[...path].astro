@@ -8,6 +8,8 @@ import TagList from '../../components/TagList.astro'
 import Attachments from '../../components/Attachments.astro'
 import Message from '../../components/Message.astro'
 import ShareStory from '../../components/ShareStory.astro'
+import Soundcite from '../../components/Soundcite.astro'
+
 import stories from '../../data/all_stories.json'
 
 // Read path parameters for language and slug
@@ -59,6 +61,27 @@ const prevStorySlug = stories[prevIndex].slugs[lang] // Adjust 'en' as needed fo
 const nextStorySlug = stories[nextIndex].slugs[lang] // Adjust 'en' as needed for language
 
 const dir = lang === 'ar' ? 'rtl' : 'ltr'
+
+function processAudioFiles(files) {
+	// Filter the array for audio files (.mp3 or .m4a extensions)
+	const audioFiles = files.filter((file) => file.endsWith('.mp3') || file.endsWith('.m4a'))
+
+	// In case you need the filtered list outside, you can also return it
+	return audioFiles
+}
+
+// Example of using the function
+const processedAudioFiles = processAudioFiles(story.attachments)
+const hasAudioFiles = processedAudioFiles.length > 0
+
+processedAudioFiles.forEach((file) => {
+	var audio = new Audio(file)
+	audio.addEventListener('loadedmetadata', () => {
+		console.log(`The duration of ${file} is: ${audio.duration} seconds`)
+	})
+})
+
+console.log(story.attachments)
 ---
 
 <Layout
@@ -102,7 +125,23 @@ const dir = lang === 'ar' ? 'rtl' : 'ltr'
 			</div>
 			{/* Attachments section */}
 			<Attachments attachments={story.attachments} />
-			<Message contentArray={contentArray} lang={lang} />
+			<Message contentArray={contentArray} lang={lang}>
+				{
+					hasAudioFiles &&
+						processedAudioFiles.map((file) => (
+							<div>
+								<Soundcite text={'"I can\'t breathe"'} src={`/attachments/${file}`} plays={1} start={175796} end={177000} />
+							</div>
+						))
+				}
+				{
+					contentArray.map((line) => {
+						if (line !== '') {
+							return <p class='text-white sm:text-lg' set:html={line} />
+						}
+					})
+				}
+			</Message>
 		</div>
 		{/* Tag list */}
 		<TagList tags={story.tags} />

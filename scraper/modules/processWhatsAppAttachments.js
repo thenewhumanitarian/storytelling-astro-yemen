@@ -1,6 +1,8 @@
 // processWhatsAppAttachments.js
 const fs = require('fs');
 const path = require('path');
+const { getAudioDuration } = require('./audioProcessor');
+
 
 /**
  * Processes WhatsApp attachments.
@@ -44,6 +46,8 @@ function processWhatsAppAttachments(entryID, files, basePath) {
         console.error('Error copying file:', err);
       }
     } else if (extension === '.m4a' || extension === '.opus' || extension === '.ogg' || extension === '.wav' || extension === '.mp3') {
+      // Get length of audio file
+
       newFilePath = path.join(basePath, '../public/attachments/', newFilename);
       try {
         fs.copyFileSync(sourceFilePath, newFilePath);

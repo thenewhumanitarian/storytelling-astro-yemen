@@ -56,7 +56,9 @@
 
 ### Questions
 * What are we doing with "documents" such as Word/PDF attachments? Make them open in new tab/download them?
+  * Annie is removing those and will eventually add photos for them by adding the new media file names to the spreadsheet and sending the files to Marc
 * Audios will be videos so didn't build a view for them to play in lightbox
+  * Some audios will be soundcites...
 * Content for intro slides and static pages
 * SEO for grid/list views but also detail views to be done
 * Optimise image sizes further (detail pages, list view)
@@ -76,5 +78,6 @@
 * Highlighted for the grid
 * Alternative for "All stories"?
 * Create embeddable for Spotlight on homepage? Or use Spotlight for individual stories?
+* Make a plan for the soundcite embeds
 
 # Deadline is end of next week / 9 March 2024

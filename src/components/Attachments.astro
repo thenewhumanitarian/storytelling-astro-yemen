@@ -1,10 +1,10 @@
 ---
 import AttachmentImage from './AttachmentImage.astro'
-import { translations } from '../data/translations'
+// import { translations } from '../data/translations'
 
 import IconPlay from './Icons/Icon-play.astro'
-import IconDocument from './Icons/Icon-document.astro'
-import IconAudio from './Icons/Icon-audio.astro'
+// import IconDocument from './Icons/Icon-document.astro'
+// import IconAudio from './Icons/Icon-audio.astro'
 
 export interface Props {
 	attachments?: Array<String>
@@ -93,8 +93,6 @@ if (categorisedAttachments.images.items.length === 1) {
 	imageGridClasses = `grid gap-2 sm:gap-5 sm:grid-cols-3 md:grid-cols-12`
 }
 
-console.log(flattenedAttachments)
-
 const attachmentItemClassName = `
 group 
 relative 
@@ -114,12 +112,6 @@ will-change-transform
 bg-black
 cursor-pointer
 `
-
-// Read path parameters for language and slug
-const { path } = Astro.params
-
-const pathParams = path?.toString().split('/')
-const lang = pathParams?.[0] || 'en'
 ---
 
 {
@@ -129,6 +121,7 @@ const lang = pathParams?.[0] || 'en'
 				<div class='grid gap-1 sm:gap-3 grid-cols-4 sm:grid-cols-4 lg:grid-cols-6'>
 					{flattenedAttachments.map((attachment) => {
 						switch (attachment.category) {
+							// Render image attachments
 							case 'image':
 								return (
 									<div data-lightbox={attachment.fileName} data-type='image' class={`${attachmentItemClassName}`}>
@@ -147,27 +140,27 @@ const lang = pathParams?.[0] || 'en'
 										</div>
 									</div>
 								)
-							case 'audio':
-								// Render audio attachments
-								return (
-									// <div class={`${attachmentItemClassName}`} data-lightbox={attachment.fileName} data-type='audio'>
-									<div class={`${attachmentItemClassName}`}>
-										<audio class='w-full h-full absolute' controls src={`/attachments/${attachment.fileName}`} />
-										<div class='group m-0 z-30 w-8 h-8 flex items-center justify-center'>
-											<IconAudio />
-										</div>
-									</div>
-								)
-							case 'document':
-								// Render document links
-								return (
-									<div class={`${attachmentItemClassName}`}>
-										<span class='m-0 z-30 w-8 h-8 group-hover:text-burgundy'>
-											<IconDocument />
-										</span>
-										<span>{translations.open[lang]}</span>
-									</div>
-								)
+							// case 'audio':
+							// // Render audio attachments
+							// return (
+							// 	// <div class={`${attachmentItemClassName}`} data-lightbox={attachment.fileName} data-type='audio'>
+							// 	<div class={`${attachmentItemClassName}`}>
+							// 		<audio class='w-full h-full absolute' controls src={`/attachments/${attachment.fileName}`} />
+							// 		<div class='group m-0 z-30 w-8 h-8 flex items-center justify-center'>
+							// 			<IconAudio />
+							// 		</div>
+							// 	</div>
+							// )
+							// case 'document':
+							// 	// Render document links
+							// 	return (
+							// 		<div class={`${attachmentItemClassName}`}>
+							// 			<span class='m-0 z-30 w-8 h-8 group-hover:text-burgundy'>
+							// 				<IconDocument />
+							// 			</span>
+							// 			<span>{translations.open[lang]}</span>
+							// 		</div>
+							// 	)
 							default:
 								return null
 						}
