@@ -147,10 +147,16 @@ async function processData(data) {
           }
         }
         // else if (extension === '.mp4') {
-        //   console.log('MachForm video file:', newFilename);
-        //   // Create thumbnails for these video files
-        //   // TODO: leave open because no MachForm video files (so far)
+        // console.log('MachForm video file:', newFilename);
+        // Create thumbnails for these video files
+        // TODO: leave open because no MachForm video files (so far)
         // }
+        // Handle audio files differently to include duration in the filename
+        // Handle audio files differently to include duration in the filename
+        if (['.m4a', '.opus', '.ogg', '.wav', '.mp3'].includes(extension)) {
+          // Implement audioProcessor functions here
+          // TODO: leave open because no MachForm audio files (so far)
+        }
         else {
           // src/assets
           try {
@@ -186,9 +192,16 @@ async function processData(data) {
         // If successful, files array is now populated with filenames
         if (files.length > 0) {
           // Proceed to process these files
-          const processedFiles = processWhatsAppAttachments(entryID, files, __dirname);
-          // console.log(`Processed files for entry ${entryID}:`, processedFiles);
-          whatsAppAttachments = processedFiles;
+          try {
+            files = fs.readdirSync(whatsappAssetsDir);
+            if (files.length > 0) {
+              // Correctly await the processing of WhatsApp attachments
+              whatsAppAttachments = await processWhatsAppAttachments(entryID, files, __dirname);
+              console.log(`Processed files for entry ${entryID}:`, whatsAppAttachments);
+            }
+          } catch (error) {
+            console.error('Error processing WhatsApp attachments:', error);
+          }
 
           // Find the first video file
           const firstVideoFile = files.find(file => file.toLowerCase().endsWith('.mp4'));
@@ -206,7 +219,7 @@ async function processData(data) {
 
               try {
                 const thumbnailResult = await createThumbnail(framePath, thumbnailPath);
-                console.log(`📹 🖼️ Thumbnail created for video: ${firstVideoFile}`);
+                // console.log(`📹 🖼️ Thumbnail created for video: ${firstVideoFile}`);
                 storyImage = {
                   main: thumbnailResult.mainImage,
                   pixelated: thumbnailResult.pixelatedImage || thumbnailResult.mainImage
@@ -233,7 +246,7 @@ async function processData(data) {
             // Create a thumbnail for the first image file found in the entry's assets folder
             try {
               const thumbnailResult = await createThumbnail(sourceFilePath, thumbnailPath);
-              console.log(`🖼️ Thumbnail created for entry ${entryID}:`, thumbnailResult);
+              // console.log(`🖼️ Thumbnail created for entry ${entryID}:`, thumbnailResult);
               // Use the WhatsApp image as thumbnail
               storyImage = {
                 main: thumbnailResult.mainImage,

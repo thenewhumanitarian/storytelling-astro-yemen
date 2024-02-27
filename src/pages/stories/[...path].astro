@@ -74,13 +74,6 @@ function processAudioFiles(files) {
 const processedAudioFiles = processAudioFiles(story.attachments)
 const hasAudioFiles = processedAudioFiles.length > 0
 
-processedAudioFiles.forEach((file) => {
-	var audio = new Audio(file)
-	audio.addEventListener('loadedmetadata', () => {
-		console.log(`The duration of ${file} is: ${audio.duration} seconds`)
-	})
-})
-
 console.log(story.attachments)
 ---
 
@@ -130,7 +123,13 @@ console.log(story.attachments)
 					hasAudioFiles &&
 						processedAudioFiles.map((file) => (
 							<div>
-								<Soundcite text={'"I can\'t breathe"'} src={`/attachments/${file}`} plays={1} start={175796} end={177000} />
+								<Soundcite
+									text={'"I can\'t breathe"'}
+									src={`/attachments/${file}`}
+									plays={1}
+									start={0}
+									end={parseInt(file.match(/(\d+)s\.[a-zA-Z0-9]+$/)[1], 10) * 1000}
+								/>
 							</div>
 						))
 				}
