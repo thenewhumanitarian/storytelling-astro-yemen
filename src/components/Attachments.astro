@@ -125,7 +125,7 @@ const lang = pathParams?.[0] || 'en'
 {
 	attachments.length > 0 && (
 		<>
-			<section class="menu--hide">
+			<section class='menu--hide'>
 				<div class='grid gap-1 sm:gap-3 grid-cols-4 sm:grid-cols-4 lg:grid-cols-6'>
 					{flattenedAttachments.map((attachment) => {
 						switch (attachment.category) {
@@ -203,7 +203,7 @@ const lang = pathParams?.[0] || 'en'
 			// Create close button using SVG
 			const closeButton = document.createElement('div')
 			closeButton.innerHTML = `
-        <div class='absolute top-1 right-6 w-8 h-8 cursor-pointer hover:text-burgundy transition-colors' id='menu-close-button'>
+        <div class='absolute top-1 right-10 w-8 h-8 cursor-pointer hover:text-burgundy transition-colors' id='menu-close-button'>
           <svg class='fill-current' width='100%' height='90' viewBox='0 0 90 90' fill='none' xmlns='http://www.w3.org/2000/svg'>
             <path class='fill-current' fill-rule='evenodd' clip-rule='evenodd' d='M1.84937 1.84937C4.02123 -0.317302 7.53683 -0.317302 9.7087 1.84937L44.6674 36.8134L79.626 1.84937C81.7979 -0.317302 85.3135 -0.317302 87.4854 1.84937C89.652 4.02123 89.652 7.53683 87.4854 9.7087L52.5214 44.6674L87.4854 79.626C89.652 81.7979 89.652 85.3135 87.4854 87.4854C85.3135 89.652 81.7979 89.652 79.626 87.4854L44.6674 52.5214L9.7087 87.4854C7.53683 89.652 4.02123 89.652 1.84937 87.4854C-0.317302 85.3135 -0.317302 81.7979 1.84937 79.626L36.8134 44.6674L1.84937 9.7087C-0.317302 7.53683 -0.317302 4.02123 1.84937 1.84937Z'></path>
           </svg>
