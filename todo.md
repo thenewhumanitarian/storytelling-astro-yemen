@@ -35,20 +35,22 @@
 * Once videos ready pls to Google Drive structure with ID folders
 * The static pages need to be designed (Marc) and written (Annie)
 ---
-* Infinite grid highlighted entries shouldn't touch each other
 * DONE White border under header
-* Intro modal inside hamburger menu and remove (i) icon
-* Button to change language on the detail page
-* Send UI translations to Annie
-* "Share this story" buttons on detail pages with social media card
-* Grid and list views on desktop but only list view on mobile?
-* Tidy up header make sure it's looking good everywhere
-* Check titles and encoding etc. in scraper
-* Icons such as "world" and "filter" can go?
-* Detail page title big  then name age and location
-* Make a cooler grid for the Attachments component with lightbox
-* Pergament doesn't look like part of identity, maybe change?
-* Creating 
+* DONE Intro modal inside hamburger menu and remove (i) icon
+* DONE Button to change language on the detail page
+* DONE Send UI translations to Annie
+* DONE "Share this story" buttons on detail pages with social media card
+* DONE Tidy up header make sure it's looking good everywhere
+* DONE Check titles and encoding etc. in scraper
+* DONE Icons such as "world" and "filter" can go?
+* DONE Detail page title big  then name age and location
+* DONE Make a cooler grid for the Attachments component with lightbox
+* DONE Pergament doesn't look like part of identity, maybe change?
 ---
+* Grid and list views on desktop but only list view on mobile?
+* Infinite grid highlighted entries shouldn't touch each other
+* Creating 
 * Create embeddable for Spotlight on homepage?
 * Categorising or tagging the entries? Using colour schemes for this?
+
+## Call with Annie 
