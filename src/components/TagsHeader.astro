@@ -25,9 +25,9 @@ if (!lang) {
 }
 ---
 
-<section class='text-center max-w-5xl mx-auto pb-5'>
+<section class='text-center max-w-5xl mx-auto pb-8'>
 	<div class='text-white flex items-center justify-center gap-x-3'>
-		<span class='m-0 p-0'>Stories with the tag</span>
+		<!-- <span class='m-0 p-0'>Stories with the tag</span> -->
 		<div class='inline bg-white'>
 			<h2 class='font-sans text-black text-lg font-bold px-3 py-2 m-0'>
 				{matchingTag}
@@ -35,9 +35,12 @@ if (!lang) {
 		</div>
 	</div>
 
-	<div class='py-5'>
-		<button type='button' class='collapsible px-3 py-2 cursor-pointer font-bold bg-transparent border-zinc-200 hover:bg-zinc-800 border text-zinc-200'>
-			All tags
+	<div class='pb-5 pt-6'>
+		<button
+			type='button'
+			class='text-sm collapsible px-3 py-2 cursor-pointer font-bold bg-transparent border-zinc-200 hover:bg-zinc-800 border text-zinc-200'
+		>
+			More stories about...
 		</button>
 		<div class='content flex pt-3'>
 			{
@@ -70,10 +73,10 @@ if (!lang) {
 			if (content.style.display === 'block') {
 				content.style.display = 'none'
 				// Change text of "More tags..." button to "Less tags..."
-				this.innerHTML = 'Show tags'
+				this.innerHTML = 'More stories about'
 			} else {
 				content.style.display = 'block'
-				this.innerHTML = 'Hide tags'
+				this.innerHTML = 'Hide list'
 			}
 		})
 	}

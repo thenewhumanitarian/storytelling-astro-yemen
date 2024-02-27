@@ -62,7 +62,12 @@ if (!lang) {
 		transform: scale(1);
 		padding-top: 0.1rem;
 		border: 0.5px solid #fff;
-		/* transition: transform 0.25s ease-in-out; */
+	}
+
+	#grid .story-item:hover {
+		scale: 1.2;
+		z-index: 9999;
+		border-width: 6px;
 	}
 
 	#grid .story-item img {
@@ -102,9 +107,9 @@ if (!lang) {
 
 	#grid .story-item.highlighted {
 		border: 8px solid #9f3e52;
-		/* border-style: dashed; */
+		border-style: dashed;
 		z-index: 999;
-		transform: scale(1.01);
+		transform: scale(1.025);
 		box-shadow: 0 0 15px black;
 	}
 
@@ -248,6 +253,7 @@ if (!lang) {
 			this.item.style.backgroundImage = `url('${pixelatedImageUrl}')`
 			this.item.style.backgroundSize = 'cover'
 			this.item.style.backgroundPosition = 'center'
+			this.item.classList.add('group')
 			this.item.style.width = '100%'
 			this.item.style.height = '100%'
 
@@ -286,6 +292,7 @@ if (!lang) {
 				this.titleEnglish.classList.add('text-white')
 				this.titleEnglish.classList.add('font-normal')
 				this.titleEnglish.classList.add('bg-black')
+				this.titleEnglish.classList.add('group-hover:bg-transparent')
 				this.titleEnglish.classList.add('pt-0')
 				this.titleEnglish.classList.add('pointer-events-none')
 				this.titleEnglish.setAttribute('dir', 'ltr')
@@ -304,6 +311,7 @@ if (!lang) {
 				this.titleArabic.classList.add('text-white')
 				this.titleArabic.classList.add('font-normal')
 				this.titleArabic.classList.add('bg-black')
+				this.titleArabic.classList.add('group-hover:bg-transparent')
 				this.titleArabic.classList.add('pt-0')
 				this.titleArabic.classList.add('pointer-events-none')
 				this.titleArabic.setAttribute('dir', 'rtl')
