@@ -7,6 +7,7 @@ export function getStaticPaths() {
 
 import Layout from '../layouts/Layout.astro'
 import StoryWrapper from '../components/StoryWrapper.astro'
+import SEO from '../components/SEO.astro'
 
 import stories from '../data/all_stories.json'
 
@@ -21,8 +22,15 @@ function shuffleArray(array) {
 }
 // Todo: Can this be done "once" per session perhaps? // Testing pipeline
 shuffleArray(stories)
+
+let { lang } = Astro.params
 ---
 
 <Layout dark title='The Yemen Listening Project' header={true} filterButtons={true} languageButtons={{ ar: '/ar', en: '/en' }} switchViewButtons={true}>
+	<SEO
+		slot='seo'
+		title={`The Yemen Listening Project`}
+		description={lang === 'ar' ? '.حيثُ يتحدّث اليَمنيّون ويستمع العالمُ إليهم' : 'Where Yemenis talk, and the world listens.'}
+	/>
 	<StoryWrapper stories={stories} />
 </Layout>

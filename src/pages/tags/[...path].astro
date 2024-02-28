@@ -1,6 +1,7 @@
 ---
 import Layout from '../../layouts/Layout.astro'
 import StoryWrapper from '../../components/StoryWrapper.astro'
+import SEO from '../../components/SEO.astro'
 
 import stories from '../../data/all_stories.json'
 
@@ -46,22 +47,27 @@ const uniqueTags = [...new Set(tags)]
 const { allStories } = Astro.props
 
 // Assuming the current tag is the second parameter in your URL structure (after language)
-const currentTag = pathParams?.[1]?.toLowerCase()
+const currentTag = pathParams?.[1]
 
 // Filter stories that include the current tag (case-insensitive)
-const filteredStories = allStories.filter((story) => story.tags.some((tag) => tag.toLowerCase() === currentTag))
+const filteredStories = allStories.filter((story) => story.tags.some((tag) => tag.toLowerCase() === currentTag.toLowerCase()))
 ---
 
-<div class='py-12'>
+<div class='pt-12'>
 	<Layout
 		dark
 		title='The Yemen Listening Project'
 		header={true}
 		filterButtons={false}
-		languageButtons={{ ar: `/tags/ar/${currentTag}`, en: `/tags/en/${currentTag}` }}
+		languageButtons={{ ar: `/tags/ar/${currentTag.toLowerCase()}`, en: `/tags/en/${currentTag.toLowerCase()}` }}
 		switchViewButtons={false}
 		dir={lang === 'ar' ? 'rtl' : 'ltr'}
 	>
+		<SEO
+			slot='seo'
+			title={`The Yemen Listening Project | ${currentTag}`}
+			description={lang === 'ar' ? '.حيثُ يتحدّث اليَمنيّون ويستمع العالمُ إليهم' : 'Where Yemenis talk, and the world listens.'}
+		/>
 		<StoryWrapper stories={filteredStories} view='tags' tags={uniqueTags} />
 	</Layout>
 </div>

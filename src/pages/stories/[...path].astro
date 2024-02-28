@@ -9,6 +9,7 @@ import Attachments from '../../components/Attachments.astro'
 import Message from '../../components/Message.astro'
 import ShareStory from '../../components/ShareStory.astro'
 import Soundcite from '../../components/Soundcite.astro'
+import SEO from '../../components/SEO.astro'
 
 import stories from '../../data/all_stories.json'
 
@@ -73,8 +74,6 @@ function processAudioFiles(files) {
 // Example of using the function
 const processedAudioFiles = processAudioFiles(story.attachments)
 const hasAudioFiles = processedAudioFiles.length > 0
-
-console.log(story.attachments)
 ---
 
 <Layout
@@ -86,6 +85,7 @@ console.log(story.attachments)
 	overflow={'always'}
 	dir={dir}
 >
+	<SEO slot='seo' title={`The Yemen Listening Project | ${story.story[lang].title}`} description={story.story[lang].title} />
 	<ViewTransitions />
 	<div class='fixed top-0 left-0 w-screen h-screen -z-1 pointer-events-none' id='stars'></div>
 	<div class='fixed top-0 left-0 w-screen h-screen -z-1 pointer-events-none' id='city'></div>

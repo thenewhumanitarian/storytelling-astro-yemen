@@ -32,20 +32,10 @@ if (!lang) {
 <!doctype html>
 <html lang='en' dir={lang === 'ar' ? 'rtl' : 'ltr'}>
 	<head>
-		<!-- Todo: Change before publication  -->
-		<meta name='robots' content='noindex' />
-		<meta name='googlebot' content='noindex' />
-		<meta name='googlebot-news' content='nosnippet' />
-		<meta charset='iso-8859-1' />
-		<meta http-equiv='X-UA-Compatible' content='IE=edge' />
-		<meta name='viewport' content='width=device-width, initial-scale=1.0' />
-		<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1' />
-		<link rel='shortcut icon' href='/favicon.ico' />
-		<link rel='icon' type='image/x-icon' href='/favicon.ico' />
-		<title>{title || 'The New Humanitarian'}</title>
+		<!-- Todo: Change meta tags using Drupal tags before publication  -->
 		<!-- To do: Google Tag Manager -->
 		<!-- To do: Create SEO component for more meta tags -->
-		<!-- <ViewTransitions /> -->
+		<slot name='seo' />
 	</head>
 	<body class={`overflow-y-scroll`}>
 		<!-- Header  -->

@@ -1,0 +1,99 @@
+---
+interface Props {
+	title: string
+	description: string
+	charset?: string
+	keywords?: string
+	imageUrl?: string
+	url?: string
+	type?: string
+	siteName?: string
+	email?: string
+	latitude?: string
+	longitude?: string
+	streetAddress?: string
+	locality?: string
+	region?: string
+	postalCode?: string
+	countryName?: string
+}
+
+const { title, description, charset, keywords, imageUrl, url, siteName, email, latitude, longitude, streetAddress, locality, region, postalCode, countryName } =
+	Astro.props as Props
+
+let { lang } = Astro.params
+
+if (!lang) {
+	// Read path parameters for language and slug
+	const { path } = Astro.params
+
+	const pathParams = path?.toString().split('/')
+	lang = pathParams?.[0] || 'en'
+}
+
+const { href } = Astro.url
+---
+
+<!-- TITLE -->
+<title>{title || 'The New Humanitarian'}</title>
+
+<!-- CANONICAL URL -->
+<link rel='canonical' href={url || href || 'https://yemenlisteningproject.thenewhumanitarian.org/en'} />
+
+<!-- ALTERNATIVE LANGUAGES -->
+<link rel='alternate' hreflang='en' href='https://yemenlisteningproject.thenewhumanitarian.org/en' />
+<link rel='alternate' hreflang='ar' href='https://yemenlisteningproject.thenewhumanitarian.org/ar' />
+
+<!-- GENERAL META TAGS -->
+<link rel='icon' type='image/x-icon' href='/favicon.ico' />
+<link rel='shortcut icon' href='/favicon.ico' />
+<meta name='viewport' content='width=device-width, initial-scale=1.0' />
+<meta charset={charset || 'iso-8859-1' || 'utf-8'} />
+<meta http-equiv='X-UA-Compatible' content='IE=edge' />
+<meta http-equiv='Content-Language' content={lang || 'en'} />
+<meta name='description' content={description} />
+<meta name='abstract' content={description} />
+<meta name='summary' content={description} />
+
+<!-- MORE META TAGS -->
+<meta name='robots' content='index,follow' />
+<meta name='language' content={lang || 'en'} />
+<meta name='Classification' content='Journalism' />
+<meta name='copyright' content='The New Humanitarian' />
+<meta name='author' content='The New Humanitarian' />
+<meta name='owner' content='The New Humanitarian' />
+<meta name='designer' content='Marc Fehr, The New Humanitarian' />
+<meta name='reply-to' content={email || 'marc@thenewhumanitarian.org'} />
+<meta name='url' content={url || href || 'https://yemenlisteningproject.thenewhumanitarian.org/en'} />
+<meta name='identifier-URL' content={url || href || 'https://yemenlisteningproject.thenewhumanitarian.org/en'} />
+<meta name='category' content='Journalism' />
+<meta name='coverage' content='Worldwide' />
+<meta name='distribution' content='Global' />
+<meta name='medium' content='article' />
+<meta http-equiv='Cache-Control' content='no-cache' />
+{keywords && <meta name='keywords' content={keywords} />}
+{siteName && <meta name='pagename' content={siteName} />}
+
+<!-- MAIN GRAPH TAGS -->
+<meta property='og:title' content={title || 'TNH| Yemen Listening Project'} />
+<meta property='og:type' content='website' />
+<meta property='og:url' content={url || href || 'https://yemenlisteningproject.thenewhumanitarian.org/en'} />
+<meta property='og:image' content={imageUrl || 'https://yemenlisteningproject.thenewhumanitarian.org/teaser.jpg'} />
+<meta property='og:site_name' content={title || 'TNH| Yemen Listening Project'} />
+<meta property='og:description' content={description} />
+
+<!-- OPTIONAL OPEN GRAPH TAGS -->
+{latitude && <meta property='og:latitude' content={latitude} />}
+{longitude && <meta property='og:longitude' content={longitude} />}
+{streetAddress && <meta property='og:street-address' content={streetAddress} />}
+{locality && <meta property='og:locality' content={locality} />}
+{region && <meta property='og:region' content={region} />}
+{postalCode && <meta property='og:postal-code' content={postalCode} />}
+{countryName && <meta property='og:country-name' content={countryName} />}
+
+<!-- TWITTER CARD TAGS -->
+<meta name='twitter:card' content='summary_large_image' />
+<meta name='twitter:site' content='@newhumanitarian' />
+<meta name='twitter:title' content={title || 'TNH| Yemen Listening Project'} />
+<meta name='twitter:description' content={description} />
+<meta name='twitter:image' content={imageUrl || 'https://yemenlisteningproject.thenewhumanitarian.org/teaser.jpg'} />
