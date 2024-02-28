@@ -11,7 +11,7 @@ const { contentArray, lang } = Astro.props as Props
 
 {
 	contentArray.length > 0 && (
-		<Pergament classNames={`px-3 sm:px-5 py-0 sm:py-1 bg-zinc-950 ${lang === 'ar' ? 'text-right' : ''}`} lang={lang}>
+		<Pergament classNames={`px-3 sm:px-5 py-0 sm:py-1 bg-zinc-950 col-span-5 md:col-span-4`} lang={lang}>
 			<slot />
 		</Pergament>
 	)

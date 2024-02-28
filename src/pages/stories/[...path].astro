@@ -5,7 +5,7 @@ import Layout from '../../layouts/Layout.astro'
 import Title from '../../components/Title.astro'
 import AuthorSection from '../../components/AuthorSection.astro'
 import TagList from '../../components/TagList.astro'
-import Attachments from '../../components/Attachments.astro'
+import BodySection from '../../components/BodySection.astro'
 import Message from '../../components/Message.astro'
 import ShareStory from '../../components/ShareStory.astro'
 import Soundcite from '../../components/Soundcite.astro'
@@ -116,31 +116,32 @@ const hasAudioFiles = processedAudioFiles.length > 0
 					/>
 				</div>
 			</div>
-			{/* Attachments section */}
-			<Attachments attachments={story.attachments} />
-			<Message contentArray={contentArray} lang={lang}>
-				{
-					hasAudioFiles &&
-						processedAudioFiles.map((file) => (
-							<div>
-								<Soundcite
-									text={`${story.audioReadouts[lang] || `Audio readout text for ${lang.toUpperCase()} is missing in Google Spreadsheet...`}`}
-									src={`/attachments/${file}`}
-									plays={1}
-									start={0}
-									end={parseInt(file.match(/(\d+)s\.[a-zA-Z0-9]+$/)[1], 10) * 1000}
-								/>
-							</div>
-						))
-				}
-				{
-					contentArray.map((line) => {
-						if (line !== '') {
-							return <p class='text-white sm:text-lg' set:html={line} />
-						}
-					})
-				}
-			</Message>
+			{/* Body section */}
+			<BodySection attachments={story.attachments}>
+				<Message contentArray={contentArray} lang={lang} slot='message'>
+					{
+						hasAudioFiles &&
+							processedAudioFiles.map((file) => (
+								<div>
+									<Soundcite
+										text={`${story.audioReadouts[lang] || `Audio readout text for ${lang.toUpperCase()} is missing in Google Spreadsheet...`}`}
+										src={`/attachments/${file}`}
+										plays={1}
+										start={0}
+										end={parseInt(file.match(/(\d+)s\.[a-zA-Z0-9]+$/)[1], 10) * 1000}
+									/>
+								</div>
+							))
+					}
+					{
+						contentArray.map((line) => {
+							if (line !== '') {
+								return <p class='text-white sm:text-lg' set:html={line} />
+							}
+						})
+					}
+				</Message>
+			</BodySection>
 		</div>
 		{/* Tag list */}
 		<TagList tags={story.tags} />

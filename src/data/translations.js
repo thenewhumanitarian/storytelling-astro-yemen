@@ -15,26 +15,6 @@ export const translations = {
     ar: 'نظرة عامة',
     en: 'Overview'
   },
-  images: {
-    ar: 'صور',
-    en: 'Images'
-  },
-  videos: {
-    ar: 'فيديو',
-    en: 'Videos'
-  },
-  documents: {
-    ar: 'مستندات',
-    en: 'Documents'
-  },
-  name: {
-    ar: 'الاسم',
-    en: 'Name'
-  },
-  age: {
-    ar: 'العمر',
-    en: 'Age'
-  },
   from: {
     ar: 'من',
     en: 'From'
@@ -47,7 +27,7 @@ export const translations = {
     ar: 'كل القصص',
     en: 'All Stories'
   },
-  nameUnknown: { 
+  nameUnknown: {
     ar: 'اسم غير معروف',
     en: 'Name unknown'
   },
@@ -75,8 +55,8 @@ export const translations = {
     ar: 'الإنجليزية',
     en: 'English'
   },
-  open: {
-    ar: 'فتح',
-    en: 'Open'
+  readMoreAbout: {
+    ar: 'اقرأ المزيد عن',
+    en: 'Read more about'
   },
 }
