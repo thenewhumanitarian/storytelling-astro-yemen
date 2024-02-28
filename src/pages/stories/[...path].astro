@@ -124,7 +124,7 @@ console.log(story.attachments)
 						processedAudioFiles.map((file) => (
 							<div>
 								<Soundcite
-									text={'"I can\'t breathe"'}
+									text={`${story.audioReadouts[lang] || `Audio readout text for ${lang.toUpperCase()} is missing in Google Spreadsheet...`}`}
 									src={`/attachments/${file}`}
 									plays={1}
 									start={0}

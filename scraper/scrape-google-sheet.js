@@ -310,6 +310,10 @@ async function processData(data) {
       },
       tags: entry.Tags !== "" ? entry.Tags.split(',').map(tag => tag.trim()) : [],
       attachments: entry['Method of submission'] === 'MachForm' ? machformAttachments : whatsAppAttachments,
+      audioReadouts: {
+        en: entry['AudioEN'] || null,
+        ar: entry['AudioAR'] || null
+      },
       notes: entry.Notes,
       highlighted: entry.Highlighted === 'x',
       languageOfSubmission: entry['Language of submission'],

@@ -21,26 +21,33 @@ const { lang, story } = Astro.props as Props
 // whatsapp://send?text=https://www.thenewhumanitarian.org/video/2024/02/20/snapshots-palestinian-photographer-captures-life-under-bombardment-gaza
 // mailto:?subject=Snapshots: Palestinian journalists capture life under bombardment in Gaza &body=https://www.thenewhumanitarian.org/video/2024/02/20/snapshots-palestinian-photographer-captures-life-under-bombardment-gaza
 
+// @ts-ignore
 const storyUrl = `${STORY_DATA.baseUrl}stories/${lang}/${story.slugs[lang]}`
 
 const shareLinks = {
+	// @ts-ignore
 	whatsapp: `https://api.whatsapp.com/send?text=${story.story[lang].title} – ${storyUrl}`,
+	// @ts-ignore
 	facebook: `https://www.facebook.com/sharer/sharer.php?u=${storyUrl}`,
+	// @ts-ignore
 	email: `mailto:?subject=${story.story[lang].title}&body=${storyUrl}`,
+	// @ts-ignoreƒ
 	x: `https://twitter.com/intent/tweet?text=${story.story[lang].title}:%20${storyUrl}%20(@newhumanitarian)`,
 }
 ---
 
 <aside class='prose-inverted sm:prose-xl flex gap-x-3 justify-center items-center mt-8'>
-	<span class='h-5'>{translations.shareThisStory[lang]}:</span>
-	<span class='transition-all hover:-translate-y-1 w-5 h-5 inline'
-		><a rel='noopener noreferrer' target='_blank' href={shareLinks.whatsapp}><WhatsAppIcon /></a></span
-	>
-	<span class='transition-all hover:-translate-y-1 w-5 h-5 inline'><a rel='noopener noreferrer' target='_blank' href={shareLinks.x}><XIcon /></a></span>
-	<span class='transition-all hover:-translate-y-1 w-5 h-5 inline'
-		><a rel='noopener noreferrer' target='_blank' href={shareLinks.facebook}><FacebookIcon /></a></span
-	>
-	<span class='transition-all hover:-translate-y-1 w-5 h-5 inline'
-		><a rel='noopener noreferrer' target='_blank' href={shareLinks.email}><EmailIcon /></a></span
-	>
+	<span class='font-bold text-base'>{translations.shareThisStory[lang]}</span>
+	<span class='group transition-all w-5 h-5 inline'>
+		<a class='group-hover:-translate-y-1 block -mt-3' rel='noopener noreferrer' target='_blank' href={shareLinks.whatsapp}><WhatsAppIcon /></a>
+	</span>
+	<span class='group transition-all w-5 h-5 inline'>
+		<a class='group-hover:-translate-y-1 block -mt-3' rel='noopener noreferrer' target='_blank' href={shareLinks.x}><XIcon /></a>
+	</span>
+	<span class='group transition-all w-5 h-5 inline'>
+		<a class='group-hover:-translate-y-1 block -mt-3' rel='noopener noreferrer' target='_blank' href={shareLinks.facebook}><FacebookIcon /></a>
+	</span>
+	<span class='group transition-all w-5 h-5 inline'>
+		<a class='group-hover:-translate-y-1 block -mt-3' rel='noopener noreferrer' target='_blank' href={shareLinks.email}><EmailIcon /></a>
+	</span>
 </aside>

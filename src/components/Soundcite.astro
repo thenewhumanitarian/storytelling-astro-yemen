@@ -11,10 +11,19 @@ const { src, start, end, plays, text } = Astro.props as Props
 ---
 
 <section class='pt-4'>
-	<span class='soundcite text-white sm:text-lg font-bold' data-url={src} data-start={start} data-end={end} data-plays={plays}>{text}</span>
+	<div class='soundcite' data-url={src} data-start={start} data-end={end} data-plays={plays}>
+		<span class='text-white sm:text-lg' set:html={text} />
+	</div>
 </section>
 
-<style></style>
+<style>
+	strong {
+		font-weight: bold;
+	}
+	em {
+		font-style: italic;
+	}
+</style>
 
 {/* Load Soundcite script */}
 <!-- <script is:inline type='text/javascript' src='https://cdn.knightlab.com/libs/soundcite/latest/js/soundcite.min.js'></script> -->
@@ -118,7 +127,7 @@ const { src, start, end, plays, text } = Astro.props as Props
 		}
 		var style = document.createElement('style')
 		style.type = 'text/css'
-		style.innerHTML = '.soundcite-loaded { background-color: rgba(' + SOUNDCITE_CONFIG.background_color + ',.15) }'
+		style.innerHTML = '.soundcite-loaded { background-color: rgba(' + SOUNDCITE_CONFIG.background_color + ',.35) }'
 		document.getElementsByTagName('head')[0].appendChild(style)
 		var bind = function (func, context) {
 			var slice = Array.prototype.slice
@@ -189,7 +198,7 @@ const { src, start, end, plays, text } = Astro.props as Props
 				'%);' +
 				'background: linear-gradient(to right, rgba(' +
 				color +
-				',.7)' +
+				',.8)' +
 				percentage +
 				'%, rgba(' +
 				color +
@@ -565,7 +574,7 @@ const { src, start, end, plays, text } = Astro.props as Props
 		position: relative;
 		top: -0.05em;
 		border: 0.5em solid transparent;
-		border-left: 0.75em solid black;
+		border-left: 0.75em solid white;
 	}
 
 	.soundcite-pause:before {
@@ -573,7 +582,7 @@ const { src, start, end, plays, text } = Astro.props as Props
 		position: relative;
 		top: -0.05em;
 		height: 1em;
-		border-left: 0.75em double black;
+		border-left: 0.75em double white;
 		border-right: 0.5em solid transparent;
 	}
 </style>
