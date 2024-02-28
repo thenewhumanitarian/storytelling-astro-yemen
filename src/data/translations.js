@@ -47,7 +47,7 @@ export const translations = {
     ar: 'كل القصص',
     en: 'All Stories'
   },
-  nameUnknown: {
+  nameUnknown: { 
     ar: 'اسم غير معروف',
     en: 'Name unknown'
   },
@@ -74,22 +74,6 @@ export const translations = {
   english: {
     ar: 'الإنجليزية',
     en: 'English'
-  },
-  images: {
-    ar: 'صور',
-    en: 'Images'
-  },
-  videos: {
-    ar: 'فيديو',
-    en: 'Videos'
-  },
-  audios: {
-    ar: 'صوتيات',
-    en: 'Audios'
-  },
-  documents: {
-    ar: 'مستندات',
-    en: 'Documents'
   },
   open: {
     ar: 'فتح',

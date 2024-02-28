@@ -31,14 +31,16 @@ if (!lang) {
 	lang = pathParams?.[0] || 'en'
 }
 
-const { href } = Astro.url
+const { pathname } = Astro.url
+const baseUrl = 'https://yemenlisteningproject.thenewhumanitarian.org'
+const fullUrl = `${baseUrl}${pathname}`
 ---
 
 <!-- TITLE -->
 <title>{title || 'The New Humanitarian'}</title>
 
 <!-- CANONICAL URL -->
-<link rel='canonical' href={url || href || 'https://yemenlisteningproject.thenewhumanitarian.org/en'} />
+<link rel='canonical' href={url || fullUrl || 'https://yemenlisteningproject.thenewhumanitarian.org/en'} />
 
 <!-- ALTERNATIVE LANGUAGES -->
 <link rel='alternate' hreflang='en' href='https://yemenlisteningproject.thenewhumanitarian.org/en' />
@@ -64,8 +66,8 @@ const { href } = Astro.url
 <meta name='owner' content='The New Humanitarian' />
 <meta name='designer' content='Marc Fehr, The New Humanitarian' />
 <meta name='reply-to' content={email || 'marc@thenewhumanitarian.org'} />
-<meta name='url' content={url || href || 'https://yemenlisteningproject.thenewhumanitarian.org/en'} />
-<meta name='identifier-URL' content={url || href || 'https://yemenlisteningproject.thenewhumanitarian.org/en'} />
+<meta name='url' content={url || fullUrl || 'https://yemenlisteningproject.thenewhumanitarian.org/en'} />
+<meta name='identifier-URL' content={url || fullUrl || 'https://yemenlisteningproject.thenewhumanitarian.org/en'} />
 <meta name='category' content='Journalism' />
 <meta name='coverage' content='Worldwide' />
 <meta name='distribution' content='Global' />
@@ -77,8 +79,8 @@ const { href } = Astro.url
 <!-- MAIN GRAPH TAGS -->
 <meta property='og:title' content={title || 'TNH| Yemen Listening Project'} />
 <meta property='og:type' content='website' />
-<meta property='og:url' content={url || href || 'https://yemenlisteningproject.thenewhumanitarian.org/en'} />
-<meta property='og:image' content={imageUrl || 'https://yemenlisteningproject.thenewhumanitarian.org/teaser.jpg'} />
+<meta property='og:url' content={url || fullUrl || 'https://yemenlisteningproject.thenewhumanitarian.org/en'} />
+<meta property='og:image' content={imageUrl || 'https://yemenlisteningproject.thenewhumanitarian.org/images/teaser.jpg'} />
 <meta property='og:site_name' content={title || 'TNH| Yemen Listening Project'} />
 <meta property='og:description' content={description} />
 
@@ -96,4 +98,4 @@ const { href } = Astro.url
 <meta name='twitter:site' content='@newhumanitarian' />
 <meta name='twitter:title' content={title || 'TNH| Yemen Listening Project'} />
 <meta name='twitter:description' content={description} />
-<meta name='twitter:image' content={imageUrl || 'https://yemenlisteningproject.thenewhumanitarian.org/teaser.jpg'} />
+<meta name='twitter:image' content={imageUrl || 'https://yemenlisteningproject.thenewhumanitarian.org/images/teaser.jpg'} />
