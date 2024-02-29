@@ -15,7 +15,7 @@ if (!lang) {
 
 const navWrapperClasses = 'flex flex-row items-center justify-center gap-x-2 sm:gap-x-5 w-full z-50'
 const navContainerClasses = 'flex flex-row text-right items-center sm:items-center gap-x-5'
-const navButtonClasses = 'text-white font-bold text-base sm:text-xl hover:text-white transition-colors cursor-pointer hover:underline'
+const navButtonClasses = 'text-white font-bold text-base sm:text-xl lg:text-2xl xl:text-3xl hover:text-white transition-colors cursor-pointer hover:underline'
 ---
 
 <div
@@ -26,7 +26,7 @@ const navButtonClasses = 'text-white font-bold text-base sm:text-xl hover:text-w
 	<div class='flex mt-5 sm:mt-0 justify-center sm:justify-center items-center sm:top-5 left-0 w-full'>
 		<div class='flex flex-col gap-5 sm:gap-8 items-center justify-center'>
 			<div class='w-56 sm:w-80 md:w-96 h-auto'><Logo /></div>
-
+      absolute -top-1
 			<div class={navWrapperClasses}>
 				{
 					lang === 'ar' ? (
@@ -63,7 +63,7 @@ const navButtonClasses = 'text-white font-bold text-base sm:text-xl hover:text-w
 		<div class='w-full'>
 			{
 				lang === 'ar' ? (
-					<Pergament lang='en' classNames='p-4 text-black h-full rounded-xs min-h-[40vh] max-h-[60vh]' overflowY={'auto'}>
+					<Pergament lang='ar' classNames='p-4 text-black h-full rounded-xs min-h-[40vh] max-h-[60vh] sm:min-h-[25vh] sm:max-h-[80vh]' overflowY={'auto'}>
 						<div>
 							<h2 class='text-white font-sans font-bold tracking-tight text-3xl text-left'>AR Where Yemenis talk, and the world listens</h2>
 							<p class='text-white'>
@@ -99,7 +99,7 @@ const navButtonClasses = 'text-white font-bold text-base sm:text-xl hover:text-w
 						</div>
 					</Pergament>
 				) : (
-					<Pergament lang='en' classNames='p-4 text-black h-full rounded-xs min-h-[40vh] max-h-[60vh]' overflowY={'auto'}>
+					<Pergament lang='en' classNames='p-4 text-black h-full rounded-xs min-h-[40vh] max-h-[60vh] sm:max-h-[80vh]' overflowY={'auto'}>
 						<div>
 							<h2 class='text-white font-sans font-bold tracking-tight text-3xl text-left'>Where Yemenis talk, and the world listens</h2>
 							<p class='text-white'>
@@ -141,7 +141,7 @@ const navButtonClasses = 'text-white font-bold text-base sm:text-xl hover:text-w
 
 	{
 		lang === 'ar' ? (
-			<div class='absolute -top-1 left-6 w-8 h-8 cursor-pointer hover:text-burgundy transition-colors menu-close-button z-50'>
+			<div class='absolute top-1 left-7 w-8 h-8 cursor-pointer text-white hover:text-burgundy transition-colors menu-close-button z-50'>
 				<svg class='fill-current' width='100%' height='90' viewBox='0 0 90 90' fill='none' xmlns='http://www.w3.org/2000/svg'>
 					<path
 						class='fill-current'
@@ -152,7 +152,7 @@ const navButtonClasses = 'text-white font-bold text-base sm:text-xl hover:text-w
 				</svg>
 			</div>
 		) : (
-			<div class='absolute -top-1 right-6 w-8 h-8 cursor-pointer hover:text-burgundy transition-colors menu-close-button z-50'>
+			<div class='absolute top-1 right-7 w-8 h-8 cursor-pointer text-white hover:text-burgundy transition-colors menu-close-button z-50'>
 				<svg class='fill-current' width='100%' height='90' viewBox='0 0 90 90' fill='none' xmlns='http://www.w3.org/2000/svg'>
 					<path
 						class='fill-current'
@@ -165,7 +165,7 @@ const navButtonClasses = 'text-white font-bold text-base sm:text-xl hover:text-w
 		)
 	}
 
-	<div class='hover:underline cursor-pointer font-bold menu-close-button hover:text-burgundy'>Close</div>
+	<div class='hover:underline cursor-pointer font-bold text-white menu-close-button hover:text-burgundy'>Close</div>
 </div>
 
 <style is:global>

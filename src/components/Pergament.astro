@@ -20,7 +20,7 @@ if (!lang) {
 const direction = lang === 'en' ? 'ltr' : 'rtl'
 ---
 
-<div class={classNames} id='pergament' dir={direction}>
+<div class={`${classNames} max-w-7xl`} id='pergament' dir={direction}>
 	<slot />
 </div>
 
@@ -29,6 +29,6 @@ const direction = lang === 'en' ? 'ltr' : 'rtl'
 		border: 2px solid white;
 		background-color: rgba(0, 0, 0, 0.85);
 		direction: var(--direction);
-    overflow-y: var(--overflowY);
+		overflow-y: var(--overflowY);
 	}
 </style>

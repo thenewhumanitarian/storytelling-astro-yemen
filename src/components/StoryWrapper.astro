@@ -27,9 +27,12 @@ const { stories, tags, view } = Astro.props
 	view === 'tags' && (
 		<>
 			{/* Story list view */}
-			<div class={`stories-container--list mt-16 sm:mt-20`} id='stories-container--list'>
+			<div class={`stories-container--tags mt-16 sm:mt-20`} id='stories-container--tags'>
+				<div class='w-full text-center'>
+					<slot name='top' />
+				</div>
 				<TagsHeader tags={tags} />
-				<StoryList stories={stories} />
+				<StoryList stories={stories} id='tags' />
 				<TagsFooter tags={tags} />
 			</div>
 		</>

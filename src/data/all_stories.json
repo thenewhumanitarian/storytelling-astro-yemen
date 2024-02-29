@@ -6,15 +6,15 @@
       "ar": ""
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-13.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-13.jpg"
+      "main": "/images/placeholder_images/puzzle-14.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-14.jpg"
     },
     "personalInfo": {
       "en": {
         "name": "Riad",
         "surname": "Dahboul",
         "whereFrom": "Yemen",
-        "livingIn": "Sanaa"
+        "livingIn": "Sana'a"
       },
       "ar": {
         "name": "رائد",
@@ -60,8 +60,8 @@
       "ar": ""
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-08.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-08.png"
+      "main": "/images/placeholder_images/puzzle-09.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-09.jpg"
     },
     "personalInfo": {
       "en": {
@@ -110,14 +110,74 @@
     "englishEdited": true
   },
   {
+    "id": "35",
+    "slugs": {
+      "en": "hard-work-and-fate-had-done-their-jobs",
+      "ar": "ar-story-35"
+    },
+    "storyImage": {
+      "main": "/images/thumbnails/thumbnail-35.jpg",
+      "pixelated": "/images/thumbnails/pixelated/thumbnail-35.jpg"
+    },
+    "personalInfo": {
+      "en": {
+        "name": "Zaid",
+        "surname": "Rafiqallah",
+        "whereFrom": "Yemen",
+        "livingIn": "Sana'a"
+      },
+      "ar": {
+        "name": "زيد",
+        "surname": "رفيق الله",
+        "whereFrom": "اليمن",
+        "livingIn": "صنعاء"
+      }
+    },
+    "contact": {
+      "email": "zaidrafiqallah@gmail.com",
+      "phone": "967775810606",
+      "age": "37"
+    },
+    "story": {
+      "en": {
+        "title": "\"Hard work and fate had done their jobs.\"",
+        "content": "It took a few years of war, after the government stopped paying salaries to public employees, before I realised that life and work were not going to return to normal. I set off to work on developing new skills in languages, communication, and negotiation. This took me two years, while I worked to cover the costs. I went to work from ten at night until seven in the morning, and then studied during the day. \nWhen I finished, I couldn’t find a job. I worked for a time as an English teacher, but it didn't feel like the right place for me. So I went on to study accounting, again working at the same time, while also trying to support my family. But I still couldn’t find a job. \nDespair was beginning to knock me down, and I considered going to the frontlines of the war to fight. I didn’t really want to fight, but I did want to die. I felt like I was a burden to my family. I figured that if I were killed, other people would step in to help my family get by.\nOne day my phone rang, I answered, and the caller said that I had an interview. I got dressed quickly, and looked at myself in the mirror. “Is this finally the job?” I wondered. \nI waited for weeks, everyday wishing that it would all end, because of the anxiety, stress, and fear that I had missed my once chance. Finally, there was an offer and a contract. \nI finally found myself with a job, in the humanitarian field, trying to ease the burden of the war on other people. I felt hard work and fate had done their jobs, leading me to a place where I can help others. \n"
+      },
+      "ar": {
+        "title": "",
+        "content": "بدأت الحرب وانقطعت الرواتب صبرت سنه وسنتي وقررت ان الوضع لان يعود مثل ما كان فتوجهت نحو تنميه مهاراتي في اللغه والتواصل والتفاوض استمريت لسنتين للانتهاء خلالها كنت اعمل ب الاجر اليومي لتوفير مصاريف تعليم كنت اذهب للعمل من الساعه ١٠ ليلا الى السابعه صباح ثم اتوجهه الى معهد تعليم اللغه تخرجت ولم اجد عمل عملت ك استاذ لتعليم اللغه الانجليزيه ولكن شعرت ان هذا ليس انا توجهت لدراسه المحاسبه وخضت الغمار في التوازي معا العمل بالاجر اليومي ومتحمل عبى بيتي واطفالي مرت بعده سته اشهر ولم القاء اي وظيفه بداء اليأس يطرق نفسي وكنت افكر بذهاب لجبهات القتال ليس للقتال مثل ماهو رغبه في انهاء الحياه وكنت اقول وجودي لا ينفع اهلي اذا قتلت سوف يلتفت ل اهلي الكثيرين وفي يوم رن هاتفي اجبت اذا بالمتصل يقول زيد تعالى الى منظمه كذا لديك مقابله عمل نهضت مسرعا ارتدي ثياب ملائمه واشهد نفسي في المرايه واتسال هل اخير سوف اتوظف في ظل هذا الوضع الرهن ذهبت واستمرت المعامله والاجراءات اكثر من ٢١ يوم كنت ارجع الى بيتي كل يوم واتمنى الموت لان كنت متوتر وخائف من ضياع الفرصه اخيرا تم توقيع العرض والعقد وتوجهت للمحافظه التي فيها عملي وفجاءه اصبحت عامل في المجال الانساني اسعى الى تخفيف وطئت الحرب عن كثيرين كنت استشعر الفعل والاداء الانساني وكنت اقول لقد عمل القدر عمله لكي يكون لي يد في مساعده المتضررين من الحرب."
+      }
+    },
+    "tags": [
+      "Education",
+      "Jobs"
+    ],
+    "attachments": [
+      "35-1.png",
+      "35-2.jpg"
+    ],
+    "audioReadouts": {
+      "en": null,
+      "ar": null
+    },
+    "highlighted": true,
+    "languageOfSubmission": "Arabic",
+    "location": "",
+    "methodOfSubmission": "MachForm",
+    "followUpRequired": false,
+    "contacted": false,
+    "contactedBeforePublication": false,
+    "englishEdited": true
+  },
+  {
     "id": "36",
     "slugs": {
       "en": "hope-is-keeping-me-alive",
       "ar": ""
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-15.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-15.jpg"
+      "main": "/images/placeholder_images/puzzle-03.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-03.jpg"
     },
     "personalInfo": {
       "en": {
@@ -173,8 +233,8 @@
       "ar": ""
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-24.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-24.jpg"
+      "main": "/images/placeholder_images/puzzle-09.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-09.jpg"
     },
     "personalInfo": {
       "en": {
@@ -230,8 +290,8 @@
       "ar": "ar-story-38"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-30.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-30.jpg"
+      "main": "/images/placeholder_images/puzzle-32.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-32.jpg"
     },
     "personalInfo": {
       "en": {
@@ -284,8 +344,8 @@
       "ar": "ar-story-39"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-02.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-02.png"
+      "main": "/images/placeholder_images/puzzle-32.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-32.png"
     },
     "personalInfo": {
       "en": {
@@ -338,8 +398,8 @@
       "ar": ""
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-13.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-13.png"
+      "main": "/images/placeholder_images/puzzle-29.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-29.png"
     },
     "personalInfo": {
       "en": {
@@ -396,8 +456,8 @@
       "ar": "ar-story-41"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-10.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-10.png"
+      "main": "/images/placeholder_images/puzzle-01.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-01.png"
     },
     "personalInfo": {
       "en": {
@@ -452,8 +512,8 @@
       "ar": "ar-story-42"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-16.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-16.png"
+      "main": "/images/placeholder_images/puzzle-22.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-22.png"
     },
     "personalInfo": {
       "en": {
@@ -509,8 +569,8 @@
       "ar": "ar-story-43"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-10.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-10.jpg"
+      "main": "/images/placeholder_images/puzzle-14.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-14.jpg"
     },
     "personalInfo": {
       "en": {
@@ -566,14 +626,14 @@
       "ar": "ar-story-44"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-25.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-25.jpg"
+      "main": "/images/placeholder_images/puzzle-24.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-24.png"
     },
     "personalInfo": {
       "en": {
-        "name": "S.A",
+        "name": "S.A.",
         "surname": "",
-        "whereFrom": "Yemen - Sanaa",
+        "whereFrom": "Sana'a",
         "livingIn": "Netherlands"
       },
       "ar": {
@@ -622,8 +682,8 @@
       "ar": "ar-story-45"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-02.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-02.jpg"
+      "main": "/images/placeholder_images/puzzle-11.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-11.png"
     },
     "personalInfo": {
       "en": {
@@ -679,8 +739,8 @@
       "ar": "ar-story-46"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-11.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-11.jpg"
+      "main": "/images/placeholder_images/puzzle-14.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-14.jpg"
     },
     "personalInfo": {
       "en": {
@@ -737,8 +797,8 @@
       "ar": "ar-story-47"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-11.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-11.jpg"
+      "main": "/images/placeholder_images/puzzle-23.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-23.png"
     },
     "personalInfo": {
       "en": {
@@ -791,8 +851,8 @@
       "ar": "ar-story-48"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-26.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-26.jpg"
+      "main": "/images/placeholder_images/puzzle-22.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-22.jpg"
     },
     "personalInfo": {
       "en": {
@@ -905,12 +965,12 @@
   {
     "id": "50",
     "slugs": {
-      "en": "salaries",
+      "en": "salaries-and-warring-sides",
       "ar": "ar-story-50"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-27.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-27.png"
+      "main": "/images/placeholder_images/puzzle-20.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-20.png"
     },
     "personalInfo": {
       "en": {
@@ -933,7 +993,7 @@
     },
     "story": {
       "en": {
-        "title": "Salaries",
+        "title": "Salaries and warring sides",
         "content": "I used to work as an officer in the military police, and have remained neutral since the start of the war. I didn’t join any side. That meant I lost my income, which I needed to support my children. Life became very difficult; basic expenses and education require a lot of money, and that is almost non-existent since public employees stopped being paid. Salaries are most people’s only hope. We dont care anymore about the warring parties or who wins, so much as who will pay our salaries. \n\n"
       },
       "ar": {
@@ -967,8 +1027,8 @@
       "ar": "ar-story-51"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-21.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-21.jpg"
+      "main": "/images/placeholder_images/puzzle-11.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-11.png"
     },
     "personalInfo": {
       "en": {
@@ -992,7 +1052,7 @@
     "story": {
       "en": {
         "title": "\"I hope the fighting ends.\"",
-        "content": "I'm a married women, and a mother of four. The war has made living conditions difficult in Yemen, but my situation might be not as bad as it is for many others. I did not finish elementary school, but I married a decent man who stood up for me and our kids, even though I was just 14 years old when we married. I hope that the fighting ends, and that the restoration of salaries to public employees will be a high priority in any peace deal.\n"
+        "content": "I'm a married woman, a mother of four. The war has made living conditions difficult in Yemen, but my situation might be not as bad as it is for many others. I did not finish elementary school, but I married a decent man who stood up for me and our kids, even though I was just 14 years old when we married. I hope that the fighting ends, and that the restoration of salaries to public employees will be a high priority in any peace deal.\n"
       },
       "ar": {
         "title": "",
@@ -1024,8 +1084,8 @@
       "ar": "ar-story-52"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-32.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-32.png"
+      "main": "/images/placeholder_images/puzzle-32.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-32.jpg"
     },
     "personalInfo": {
       "en": {
@@ -1049,7 +1109,7 @@
     "story": {
       "en": {
         "title": "Meaningless aid numbers",
-        "content": "My story may not be as miserable as the the majority of the Yemeni people. Mine is just a story of a lost future, which fades in comparison the horrors of war that Yemenis have witnessed since 2015. \nLike many others, I lost my job after the war started. It was a lucrative private-sector job that I never imagined would come to such an abrupt ending. I was in my late twenties when the war started, hopeful for a secure future for myself and the family I once had. Now I am in my late thirties, feeling like I have lost the better years of my life waiting for the war to end and for the light at the end of what I thought was a tunnel. Now it just feels like an endless abyss of darkness, and I no longer hope for more than just a painless fall to the ground. \nI consider myself lucky. I found a job at an organisation with access to so much information on humanitarian response in Yemen. Numbers of billions of dollars in foreign aid and millions of people reached with food baskets lasting them a few days became meaningless as I worked on these figures almost weekly for five years. Later, I went on a mission to a relatively poor yet stable country in Africa to do similar work, on the response to a natural disaster. I got to witness how our horrors of war go beyond any imaginable impact of floods, droughts, and storms. Liberty, security, and hope for a better future keep people and communities strong and hopeful together, despite nature’s fury. \nThrough it all, nothing compares to that dark feeling when my neighbor, who once owned fancy cars and gadgets, asks me for bread money when he sees me walking back to my empty home."
+        "content": "My story may not be as miserable as the majority of the Yemeni people. Mine is just a story of a lost future, which fades in comparison the horrors of war that Yemenis have witnessed since 2015. \nLike many others, I lost my job after the war started. It was a lucrative private-sector job that I never imagined would come to such an abrupt ending. I was in my late twenties when the war started, hopeful for a secure future for myself and the family I once had. Now I am in my late thirties, feeling like I have lost the better years of my life waiting for the war to end and for the light at the end of what I thought was a tunnel. Now it just feels like an endless abyss of darkness, and I no longer hope for more than just a painless fall to the ground. \nI consider myself lucky. I found a job at an organisation with access to so much information on humanitarian response in Yemen. Numbers of billions of dollars in foreign aid and millions of people reached with food baskets lasting them a few days became meaningless as I worked on these figures almost weekly for five years. Later, I went on a mission to a relatively poor yet stable country in Africa to do similar work, on the response to a natural disaster. I got to witness how our horrors of war go beyond any imaginable impact of floods, droughts, and storms. Liberty, security, and hope for a better future keep people and communities strong and hopeful together, despite nature’s fury. \nThrough it all, nothing compares to that dark feeling when my neighbor, who once owned fancy cars and gadgets, asks me for bread money when he sees me walking back to my empty home."
       },
       "ar": {
         "title": "",
@@ -1136,8 +1196,8 @@
       "ar": "ar-story-54"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-13.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-13.jpg"
+      "main": "/images/placeholder_images/puzzle-15.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-15.jpg"
     },
     "personalInfo": {
       "en": {
@@ -1186,7 +1246,7 @@
   {
     "id": "55",
     "slugs": {
-      "en": "a-life-lived-far-away",
+      "en": "childhood-memories-of-sanaa",
       "ar": "ar-story-55"
     },
     "storyImage": {
@@ -1214,7 +1274,7 @@
     },
     "story": {
       "en": {
-        "title": "A life lived far away",
+        "title": "Childhood memories of Sana'a",
         "content": "Born and raised in France, Yemen is the country of my father. \nEvery summer, my family and I traveled all over Yemen. We stayed in Aden, Ibb, Taiz, Bab al-Mandeb, Mokha, Hodeidah... My parents used to take the three of us hiking in the Yemeni mountains, swimming in waterfalls, visiting lush green wadis. The memories my brother, sister and I share of our visits are indelible.\nOf all these memories, those spent in the family home in Sana'a are undeniably the sweetest. The hours spent in my grandmother's orchard could have lasted forever, and we would never have tired of it. It was a veritable Garden of Eden. \nA native of the Yemeni mountains and a lover of nature, my grandmother looked after her vines, pomegranate and fig trees like the apple of her eye. In the shade of the vineyard, two turtles made their home, much to our delight. The climate is mild but dry in Sana'a, the Yemeni capital lies at an altitude of 2,250 metres, with temperature in the summer between 25 and 30 degrees, ideal for our children's games. Summer is also the season of monsoon rains, and not a summer went by without us witnessing downpours of water pouring down on the city. Sanaa gives off a soul-soothing smell of wet earth. We also often lost ourselves in the old town, one of the most beautiful in the Arab world, dotted with gardens and tower-houses elegantly decorated with stucco and a thousand-colored stained-glass windows.\nAfter a visit in 2013, the last for many years to come, I went back to Sana'a in 2021. Despite the war and its scars I was finally able to reconnect with my family and my second country, just to realise how much I had lost."
       },
       "ar": {
@@ -1257,8 +1317,8 @@
       "ar": "ar-story-56"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-06.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-06.jpg"
+      "main": "/images/placeholder_images/puzzle-08.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-08.png"
     },
     "personalInfo": {
       "en": {
@@ -1314,8 +1374,8 @@
       "ar": "ar-story-57"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-30.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-30.png"
+      "main": "/images/placeholder_images/puzzle-08.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-08.jpg"
     },
     "personalInfo": {
       "en": {
@@ -1368,8 +1428,8 @@
       "ar": ""
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-31.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-31.png"
+      "main": "/images/placeholder_images/puzzle-09.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-09.jpg"
     },
     "personalInfo": {
       "en": {
@@ -1425,8 +1485,8 @@
       "ar": "ar-story-59"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-15.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-15.jpg"
+      "main": "/images/placeholder_images/puzzle-28.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-28.png"
     },
     "personalInfo": {
       "en": {
@@ -1479,8 +1539,8 @@
       "ar": "ar-story-60"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-27.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-27.png"
+      "main": "/images/placeholder_images/puzzle-08.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-08.jpg"
     },
     "personalInfo": {
       "en": {
@@ -1533,8 +1593,8 @@
       "ar": "ar-story-61"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-23.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-23.jpg"
+      "main": "/images/placeholder_images/puzzle-28.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-28.jpg"
     },
     "personalInfo": {
       "en": {
@@ -1587,8 +1647,8 @@
       "ar": ""
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-16.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-16.jpg"
+      "main": "/images/placeholder_images/puzzle-18.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-18.jpg"
     },
     "personalInfo": {
       "en": {
@@ -1701,8 +1761,8 @@
       "ar": "ar-story-64"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-25.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-25.jpg"
+      "main": "/images/placeholder_images/puzzle-32.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-32.png"
     },
     "personalInfo": {
       "en": {
@@ -1755,8 +1815,8 @@
       "ar": "ar-story-65"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-21.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-21.png"
+      "main": "/images/placeholder_images/puzzle-29.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-29.png"
     },
     "personalInfo": {
       "en": {
@@ -1811,8 +1871,8 @@
       "ar": "ar-story-66"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-10.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-10.jpg"
+      "main": "/images/placeholder_images/puzzle-02.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-02.png"
     },
     "personalInfo": {
       "en": {
@@ -1870,8 +1930,8 @@
       "ar": "ar-story-67"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-30.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-30.png"
+      "main": "/images/placeholder_images/puzzle-11.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-11.jpg"
     },
     "personalInfo": {
       "en": {
@@ -1924,8 +1984,8 @@
       "ar": "ar-story-68"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-16.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-16.jpg"
+      "main": "/images/placeholder_images/puzzle-12.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-12.png"
     },
     "personalInfo": {
       "en": {
@@ -1984,8 +2044,8 @@
       "ar": "ar-story-69"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-25.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-25.png"
+      "main": "/images/placeholder_images/puzzle-21.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-21.png"
     },
     "personalInfo": {
       "en": {
@@ -2038,8 +2098,8 @@
       "ar": "ar-story-70"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-04.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-04.png"
+      "main": "/images/placeholder_images/puzzle-10.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-10.jpg"
     },
     "personalInfo": {
       "en": {
@@ -2155,8 +2215,8 @@
       "ar": "ar-story-1002"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-18.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-18.jpg"
+      "main": "/images/placeholder_images/puzzle-15.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-15.png"
     },
     "personalInfo": {
       "en": {
@@ -2211,8 +2271,8 @@
       "ar": "ar-story-1003"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-25.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-25.jpg"
+      "main": "/images/placeholder_images/puzzle-28.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-28.png"
     },
     "personalInfo": {
       "en": {
@@ -2321,8 +2381,8 @@
       "ar": "ar-story-1005"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-21.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-21.png"
+      "main": "/images/placeholder_images/puzzle-14.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-14.png"
     },
     "personalInfo": {
       "en": {
@@ -2375,8 +2435,8 @@
       "ar": "ar-story-1006"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-32.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-32.png"
+      "main": "/images/placeholder_images/puzzle-28.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-28.png"
     },
     "personalInfo": {
       "en": {
@@ -2429,8 +2489,8 @@
       "ar": "ar-story-1007"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-16.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-16.jpg"
+      "main": "/images/placeholder_images/puzzle-09.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-09.png"
     },
     "personalInfo": {
       "en": {
@@ -2483,8 +2543,8 @@
       "ar": "ar-story-1008"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-24.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-24.png"
+      "main": "/images/placeholder_images/puzzle-25.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-25.jpg"
     },
     "personalInfo": {
       "en": {
@@ -2537,8 +2597,8 @@
       "ar": "ar-story-1009"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-19.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-19.jpg"
+      "main": "/images/placeholder_images/puzzle-03.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-03.png"
     },
     "personalInfo": {
       "en": {
@@ -2591,8 +2651,8 @@
       "ar": "ar-story-1010"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-25.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-25.jpg"
+      "main": "/images/placeholder_images/puzzle-02.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-02.jpg"
     },
     "personalInfo": {
       "en": {
@@ -2645,8 +2705,8 @@
       "ar": "ar-story-1011"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-01.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-01.png"
+      "main": "/images/placeholder_images/puzzle-13.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-13.jpg"
     },
     "personalInfo": {
       "en": {
@@ -2699,8 +2759,8 @@
       "ar": "ar-story-1012"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-10.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-10.jpg"
+      "main": "/images/placeholder_images/puzzle-27.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-27.png"
     },
     "personalInfo": {
       "en": {
@@ -2753,8 +2813,8 @@
       "ar": "ar-story-1013"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-07.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-07.jpg"
+      "main": "/images/placeholder_images/puzzle-02.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-02.jpg"
     },
     "personalInfo": {
       "en": {
@@ -2863,8 +2923,8 @@
       "ar": "ar-story-1015"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-10.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-10.png"
+      "main": "/images/placeholder_images/puzzle-08.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-08.jpg"
     },
     "personalInfo": {
       "en": {
@@ -2917,8 +2977,8 @@
       "ar": "ar-story-1016"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-09.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-09.png"
+      "main": "/images/placeholder_images/puzzle-23.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-23.png"
     },
     "personalInfo": {
       "en": {
@@ -2971,8 +3031,8 @@
       "ar": "ar-story-1017"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-04.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-04.jpg"
+      "main": "/images/placeholder_images/puzzle-28.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-28.jpg"
     },
     "personalInfo": {
       "en": {
@@ -3028,8 +3088,8 @@
       "ar": "ar-story-1018"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-08.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-08.jpg"
+      "main": "/images/placeholder_images/puzzle-25.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-25.png"
     },
     "personalInfo": {
       "en": {
@@ -3142,8 +3202,8 @@
       "ar": "ar-story-1020"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-04.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-04.png"
+      "main": "/images/placeholder_images/puzzle-10.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-10.png"
     },
     "personalInfo": {
       "en": {
@@ -3196,8 +3256,8 @@
       "ar": "ar-story-1021"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-27.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-27.png"
+      "main": "/images/placeholder_images/puzzle-29.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-29.png"
     },
     "personalInfo": {
       "en": {
@@ -3250,8 +3310,8 @@
       "ar": "ar-story-1022"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-03.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-03.jpg"
+      "main": "/images/placeholder_images/puzzle-31.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-31.jpg"
     },
     "personalInfo": {
       "en": {
@@ -3307,8 +3367,8 @@
       "ar": "ar-story-1023"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-12.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-12.jpg"
+      "main": "/images/placeholder_images/puzzle-16.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-16.jpg"
     },
     "personalInfo": {
       "en": {
@@ -3428,8 +3488,8 @@
       "ar": "ar-story-1025"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-25.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-25.png"
+      "main": "/images/placeholder_images/puzzle-08.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-08.jpg"
     },
     "personalInfo": {
       "en": {
@@ -3484,8 +3544,8 @@
       "ar": "ar-story-1026"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-26.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-26.jpg"
+      "main": "/images/placeholder_images/puzzle-31.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-31.png"
     },
     "personalInfo": {
       "en": {
@@ -3543,8 +3603,8 @@
       "ar": "ar-story-1027"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-28.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-28.jpg"
+      "main": "/images/placeholder_images/puzzle-22.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-22.png"
     },
     "personalInfo": {
       "en": {
@@ -3597,8 +3657,8 @@
       "ar": "ar-story-1028"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-30.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-30.jpg"
+      "main": "/images/placeholder_images/puzzle-10.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-10.jpg"
     },
     "personalInfo": {
       "en": {
@@ -3651,8 +3711,8 @@
       "ar": "ar-story-1029"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-11.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-11.png"
+      "main": "/images/placeholder_images/puzzle-04.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-04.jpg"
     },
     "personalInfo": {
       "en": {
@@ -3705,8 +3765,8 @@
       "ar": "ar-story-1030"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-03.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-03.jpg"
+      "main": "/images/placeholder_images/puzzle-09.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-09.png"
     },
     "personalInfo": {
       "en": {
@@ -3763,8 +3823,8 @@
       "ar": "ar-story-1031"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-06.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-06.jpg"
+      "main": "/images/placeholder_images/puzzle-24.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-24.jpg"
     },
     "personalInfo": {
       "en": {
@@ -3817,8 +3877,8 @@
       "ar": "ar-story-1032"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-04.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-04.png"
+      "main": "/images/placeholder_images/puzzle-08.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-08.png"
     },
     "personalInfo": {
       "en": {
@@ -3874,8 +3934,8 @@
       "ar": "ar-story-1033"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-09.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-09.jpg"
+      "main": "/images/placeholder_images/puzzle-22.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-22.jpg"
     },
     "personalInfo": {
       "en": {
@@ -3930,8 +3990,8 @@
       "ar": "ar-story-1034"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-24.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-24.png"
+      "main": "/images/placeholder_images/puzzle-03.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-03.png"
     },
     "personalInfo": {
       "en": {
@@ -3986,8 +4046,8 @@
       "ar": "ar-story-1035"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-22.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-22.jpg"
+      "main": "/images/placeholder_images/puzzle-21.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-21.png"
     },
     "personalInfo": {
       "en": {
@@ -4044,8 +4104,8 @@
       "ar": "ar-story-1036"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-19.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-19.jpg"
+      "main": "/images/placeholder_images/puzzle-14.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-14.jpg"
     },
     "personalInfo": {
       "en": {
@@ -4098,8 +4158,8 @@
       "ar": "ar-story-1037"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-16.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-16.png"
+      "main": "/images/placeholder_images/puzzle-08.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-08.jpg"
     },
     "personalInfo": {
       "en": {
@@ -4154,8 +4214,8 @@
       "ar": "ar-story-1038"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-08.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-08.jpg"
+      "main": "/images/placeholder_images/puzzle-10.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-10.jpg"
     },
     "personalInfo": {
       "en": {
@@ -4214,8 +4274,8 @@
       "ar": "ar-story-1039"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-02.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-02.jpg"
+      "main": "/images/placeholder_images/puzzle-20.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-20.png"
     },
     "personalInfo": {
       "en": {
@@ -4444,8 +4504,8 @@
       "ar": "ar-story-1043"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-30.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-30.png"
+      "main": "/images/placeholder_images/puzzle-32.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-32.png"
     },
     "personalInfo": {
       "en": {
@@ -4671,8 +4731,8 @@
       "ar": "ar-story-1047"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-03.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-03.png"
+      "main": "/images/placeholder_images/puzzle-05.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-05.jpg"
     },
     "personalInfo": {
       "en": {
@@ -4727,8 +4787,8 @@
       "ar": "ar-story-1048"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-32.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-32.jpg"
+      "main": "/images/placeholder_images/puzzle-03.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-03.png"
     },
     "personalInfo": {
       "en": {
@@ -4785,8 +4845,8 @@
       "ar": "ar-story-1049"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-09.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-09.jpg"
+      "main": "/images/placeholder_images/puzzle-26.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-26.jpg"
     },
     "personalInfo": {
       "en": {
@@ -4957,8 +5017,8 @@
       "ar": "ar-story-1052"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-10.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-10.jpg"
+      "main": "/images/placeholder_images/puzzle-14.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-14.jpg"
     },
     "personalInfo": {
       "en": {
@@ -5137,8 +5197,8 @@
       "ar": "ar-story-1055"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-01.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-01.png"
+      "main": "/images/placeholder_images/puzzle-25.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-25.jpg"
     },
     "personalInfo": {
       "en": {
@@ -5195,8 +5255,8 @@
       "ar": ""
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-22.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-22.png"
+      "main": "/images/placeholder_images/puzzle-29.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-29.png"
     },
     "personalInfo": {
       "en": {
@@ -5253,8 +5313,8 @@
       "ar": "ar-story-1057"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-05.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-05.png"
+      "main": "/images/placeholder_images/puzzle-31.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-31.jpg"
     },
     "personalInfo": {
       "en": {
@@ -5309,8 +5369,8 @@
       "ar": ""
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-14.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-14.png"
+      "main": "/images/placeholder_images/puzzle-03.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-03.jpg"
     },
     "personalInfo": {
       "en": {
@@ -5367,8 +5427,8 @@
       "ar": "ar-story-1059"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-16.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-16.png"
+      "main": "/images/placeholder_images/puzzle-29.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-29.png"
     },
     "personalInfo": {
       "en": {
@@ -5423,8 +5483,8 @@
       "ar": ""
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-25.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-25.png"
+      "main": "/images/placeholder_images/puzzle-14.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-14.jpg"
     },
     "personalInfo": {
       "en": {
@@ -5480,8 +5540,8 @@
       "ar": "ar-story-1061"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-19.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-19.jpg"
+      "main": "/images/placeholder_images/puzzle-15.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-15.jpg"
     },
     "personalInfo": {
       "en": {
@@ -5537,8 +5597,8 @@
       "ar": ""
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-14.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-14.jpg"
+      "main": "/images/placeholder_images/puzzle-15.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-15.png"
     },
     "personalInfo": {
       "en": {
@@ -5594,8 +5654,8 @@
       "ar": ""
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-30.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-30.png"
+      "main": "/images/placeholder_images/puzzle-11.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-11.jpg"
     },
     "personalInfo": {
       "en": {
@@ -5652,8 +5712,8 @@
       "ar": ""
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-18.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-18.jpg"
+      "main": "/images/placeholder_images/puzzle-21.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-21.png"
     },
     "personalInfo": {
       "en": {
@@ -5709,8 +5769,8 @@
       "ar": ""
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-12.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-12.jpg"
+      "main": "/images/placeholder_images/puzzle-23.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-23.jpg"
     },
     "personalInfo": {
       "en": {

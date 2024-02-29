@@ -43,6 +43,14 @@
 </div>
 
 <script>
+	// Add event listener DOMContentLoaded to show the correct view on load
+	document.addEventListener('DOMContentLoaded', () => {
+		buttonHandler(null)
+	})
+	document.addEventListener('astro:page-load', () => {
+		buttonHandler(null)
+	})
+
 	// Logic for changing the view from grid to list
 	const buttonGrid = document.querySelector('#view-button--grid')
 	const buttonList = document.querySelector('#view-button--list')
@@ -72,7 +80,7 @@
 			gridElement.style.pointerEvents = 'auto'
 		}
 		const listElement = document.querySelector('#list') as HTMLElement
-    console.log(listElement)
+		console.log(listElement)
 		if (listElement) {
 			listElement.style.display = 'none'
 			listElement.style.opacity = '0'

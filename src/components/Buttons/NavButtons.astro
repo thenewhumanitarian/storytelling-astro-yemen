@@ -6,9 +6,10 @@ interface Props {
 	button: string
 	href?: string
 	classNames?: string
+  prefix?: string
 }
 
-const { button, lang, href, classNames } = Astro.props as Props
+const { button, lang, href, classNames, prefix } = Astro.props as Props
 
 const className = `transition-colors duration-150 relative inline-flex gap-x-2 items-center px-3 py-2 text-sm font-semibold ring-1 ring-inset ring-zinc-300 group focus:z-10 my-4 sm:mb-6 ${classNames}`
 ---
@@ -31,8 +32,8 @@ const className = `transition-colors duration-150 relative inline-flex gap-x-2 i
 		<a href={`${href || '/'}`} target='_self' data-astro-prefetch>
 			<button class={className} id='next-button'>
 				<>
-					{/* <span class='group-hover:text-burgundy inline text-xs sm:text-sm'>{translations.next[lang]}</span> */}
 					<span class='group-hover:text-burgundy text-xs sm:text-sm'>→</span>
+					{/* <span class='group-hover:text-burgundy inline text-xs sm:text-sm'>{translations.next[lang]}</span> */}
 				</>
 			</button>
 		</a>
@@ -41,10 +42,10 @@ const className = `transition-colors duration-150 relative inline-flex gap-x-2 i
 
 {
 	button === 'overview' && (
-		<a href={`${href || '/'}`} target='_self' data-astro-prefetch data-astro-reload>
+		<a href={`${href || lang === 'ar' ? '/ar' : '/en'}`} target='_self' data-astro-prefetch data-astro-reload>
 			<button class={className} id='overview-button'>
 				<>
-					<span class='group-hover:text-burgundy inline text-xs sm:text-sm'>{translations.allStories[lang]}</span>
+					<span class='group-hover:text-burgundy inline text-xs sm:text-sm'>{prefix}{translations.allStories[lang]}</span>
 					{/* <span class='group-hover:text-burgundy text-xs sm:text-sm'>↑</span> */}
 				</>
 			</button>

@@ -24,11 +24,11 @@ if (!lang) {
 	tags.length > 0 && (
 		<div class='text-center w-full max-w-5xl pt-8'>
 			<h3 class='font-sans pb-3 text-base font-bold'>Read more about...</h3>
-			<div class='pt-3 tag-wrapper'>
+			<div class='tag-wrapper'>
 				{tags.map((tag) => {
 					return (
-						<a href={`/tags/${lang}/${tag.toLowerCase()}`} class='inline-block px-3 py-2 m-0 cursor-pointer text-base'>
-							<span class='block sm:font-bold bg-transparent border-transparent hover:underline text-zinc-200 text-shadow-xl shadow-white'>{tag}</span>
+						<a href={`/tags/${lang}/${tag.toLowerCase()}`} class='inline-block px-3 pb-2 m-0 cursor-pointer text-base'>
+							<span class='block sm:font-bold bg-transparent border-transparent hover:underline text-zinc-200 text-shadow-xl shadow-black'>{tag}</span>
 						</a>
 					)
 				})}

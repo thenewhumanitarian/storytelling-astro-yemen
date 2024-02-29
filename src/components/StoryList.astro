@@ -1,5 +1,5 @@
 ---
-const { stories } = Astro.props
+const { stories, id } = Astro.props
 
 import StoryListItem from './StoryListItem.astro'
 
@@ -55,7 +55,7 @@ function sortStoriesWithHighlights(stories) {
 const shuffledStories = sortStoriesWithHighlights(stories)
 ---
 
-<div class='flex flex-row gap-3 max-w-2xl lg:max-w-5xl mx-auto' id='list'>
+<div class='flex flex-row gap-3 max-w-2xl lg:max-w-5xl mx-auto' id={id || 'list'}>
 	{
 		shuffledStories.map((story) => {
 			return <StoryListItem story={story} />
@@ -64,11 +64,13 @@ const shuffledStories = sortStoriesWithHighlights(stories)
 </div>
 
 <style is:global>
+	#tags,
 	#list {
 		display: flex !important;
 		flex-direction: column;
 	}
 
+	#tags.filter--read > a:not([data-lastread='never']),
 	#list.filter--read > a:not([data-lastread='never']) {
 		opacity: 0.2;
 	}
