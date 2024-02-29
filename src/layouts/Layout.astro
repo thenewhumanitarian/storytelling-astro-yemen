@@ -1,7 +1,6 @@
 ---
-// import { ViewTransitions } from 'astro:transitions'
-
 import Header from '../components/Header.astro'
+import MenuOverlay from '../components/MenuOverlay.astro'
 
 import '../styles/tailwind.css'
 import '../styles/global.css'
@@ -42,6 +41,7 @@ if (!lang) {
 		{header && <Header dark={dark} filterButtons={filterButtons} languageButtons={languageButtons} switchViewButtons={switchViewButtons} />}
 		<!-- Main content -->
 		<slot />
+    <MenuOverlay />
 		<!-- Footer  -->
 		<!-- No footer set -->
 		<style is:global>

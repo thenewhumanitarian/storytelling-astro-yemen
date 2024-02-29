@@ -71,7 +71,7 @@ relative
 w-full 
 h-full 
 border-white 
-border 
+border-2 
 hover:scale-105 
 transition-all 
 cursor-pointer 
@@ -103,7 +103,7 @@ if (visibleAttachments.length > 0 && visibleAttachments.length < 4) {
 }
 ---
 
-<section class='grid grid-cols-5 gap-3'>
+<section class='grid grid-cols-5 gap-3 menu--hide'>
 	{
 		visibleAttachments.length > 0 && (
 			<div class={`${attachmentContainerClasses}`}>
@@ -339,7 +339,7 @@ if (visibleAttachments.length > 0 && visibleAttachments.length < 4) {
 	})
 </script>
 
-<style is:global>
+<style>
 	.button--next,
 	.button--prev {
 		font-size: 2rem;

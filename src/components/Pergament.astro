@@ -2,9 +2,10 @@
 export interface Props {
 	classNames: string
 	lang: string
+	overflowY?: string
 }
 
-const { classNames } = Astro.props as Props
+const { classNames, overflowY } = Astro.props as Props
 
 let { lang } = Astro.params
 
@@ -23,10 +24,11 @@ const direction = lang === 'en' ? 'ltr' : 'rtl'
 	<slot />
 </div>
 
-<style define:vars={{ direction }}>
+<style define:vars={{ direction, overflowY }}>
 	#pergament {
-		border: 1px solid white;
+		border: 2px solid white;
 		background-color: rgba(0, 0, 0, 0.85);
 		direction: var(--direction);
+    overflow-y: var(--overflowY);
 	}
 </style>
