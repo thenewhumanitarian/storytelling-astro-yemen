@@ -14,7 +14,7 @@ if (!lang) {
 }
 
 const navWrapperClasses = 'flex flex-row items-center justify-center gap-x-2 sm:gap-x-5 w-full z-50'
-const navContainerClasses = 'flex flex-col text-right items-center sm:items-center gap-x-5'
+const navContainerClasses = 'flex flex-row text-right items-center sm:items-center gap-x-5'
 const navButtonClasses = 'text-white font-bold text-base sm:text-xl hover:text-white transition-colors cursor-pointer hover:underline'
 ---
 
@@ -32,25 +32,25 @@ const navButtonClasses = 'text-white font-bold text-base sm:text-xl hover:text-w
 					lang === 'ar' ? (
 						<nav class={navContainerClasses}>
 							<a href='/about' class={navButtonClasses}>
-								AR About this project
+								AR About
 							</a>
 							<a href='/feedback' class={navButtonClasses}>
-								AR Give us feedback
+								AR Share
 							</a>
 							<a href='/share' class={navButtonClasses}>
-								AR Another link
+								AR AR Another link
 							</a>
 						</nav>
 					) : (
 						<nav class={navContainerClasses}>
 							<a href='/about' class={navButtonClasses}>
-								About this project
+								About
 							</a>
 							<a href='/feedback' class={navButtonClasses}>
-								Give us feedback
+								Feedback
 							</a>
 							<a href='/share' class={navButtonClasses}>
-								Another link
+								Share
 							</a>
 						</nav>
 					)
@@ -168,7 +168,7 @@ const navButtonClasses = 'text-white font-bold text-base sm:text-xl hover:text-w
 	<div class='hover:underline cursor-pointer font-bold menu-close-button hover:text-burgundy'>Close</div>
 </div>
 
-<style>
+<style is:global>
 	#menu-overlay {
 		position: fixed;
 		top: 0;
@@ -188,4 +188,8 @@ const navButtonClasses = 'text-white font-bold text-base sm:text-xl hover:text-w
 	.menu-close-button:active {
 		pointer-events: none;
 	}
+
+  #menu-overlay {
+    z-index: 9999;
+  }
 </style>
