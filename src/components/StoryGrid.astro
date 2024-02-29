@@ -47,7 +47,7 @@ if (!lang) {
 		gap: 1rem;
 
 		@media screen and (max-width: 500px) {
-			gap: 0.5rem;
+			gap: 1rem;
 		}
 	}
 
@@ -94,9 +94,9 @@ if (!lang) {
 			// justify-items: end;
 			// display: flex;
 
-      @media screen and (max-width: 500px) {
-        display: unset;
-      }
+			@media screen and (max-width: 500px) {
+				display: unset;
+			}
 
 			h2 {
 				font-weight: 500;
@@ -104,15 +104,14 @@ if (!lang) {
 				padding: 0.25rem 0.5rem;
 				// border: solid 2px white;
 
-        @media screen and (max-width: 500px) {
-          margin-left: 1px;
-          font-weight: normal;
-        }
+				@media screen and (max-width: 500px) {
+					margin-left: 1px;
+					font-weight: normal;
+				}
 			}
 
 			&:hover {
 				border-color: white;
-
 			}
 
 			// &::after {
@@ -152,11 +151,11 @@ if (!lang) {
 	}
 
 	.story-item--title {
+		display: inline;
 		margin: 0;
 		box-decoration-break: clone;
 		font-size: 1.2rem;
 		line-height: 1.15;
-		display: inline;
 		top: 0;
 
 		@media screen and (max-width: 500px) {
@@ -164,14 +163,14 @@ if (!lang) {
 			margin: 0;
 			top: 0;
 			text-align: left;
-			font-size: 0.9rem;
+			font-size: 1rem;
 			padding: 0.25rem;
 			/* Line clamp */
 			/* display: -webkit-box; */
-			-webkit-line-clamp: 2;
-			-webkit-box-orient: vertical;
-			overflow: hidden;
-			text-overflow: ellipsis;
+			// -webkit-line-clamp: 2;
+			// -webkit-box-orient: vertical;
+			// overflow: hidden;
+			// text-overflow: ellipsis;
 		}
 	}
 
@@ -622,7 +621,7 @@ if (!lang) {
 		Infinite.setGrid(grid.cols, grid.rows)
 	})
 
-	function optimalGridDimensions(minSide = window.innerWidth > 500 ? 200 : 150) {
+	function optimalGridDimensions(minSide = window.innerWidth > 500 ? 200 : 140) {
 		const width = window.innerWidth
 		const height = window.innerHeight
 
