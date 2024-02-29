@@ -32,5 +32,22 @@ let { lang } = Astro.params
 		title={`The Yemen Listening Project`}
 		description={lang === 'ar' ? '.حيثُ يتحدّث اليَمنيّون ويستمع العالمُ إليهم' : 'Where Yemenis talk, and the world listens.'}
 	/>
+	<div class='fixed top-0 left-0 w-screen h-screen -z-1 pointer-events-none' id='city'></div>
 	<StoryWrapper stories={stories} />
 </Layout>
+
+<style>
+	#city {
+		z-index: -1;
+		background-image: url('https://assets.thenewhumanitarian.org/s3fs-public/styles/responsive_large/public/2023-06/night-sky-overlay_0.png.webp');
+		background-size: 100%;
+		background-position: center;
+		background-repeat: no-repeat;
+	}
+
+	@media screen and (max-width: 500px) {
+		#city {
+			background-position: bottom center;
+		}
+	}
+</style>

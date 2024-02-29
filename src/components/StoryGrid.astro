@@ -20,12 +20,6 @@ if (!lang) {
 		cursor: move;
 	}
 
-	#grid .story-item h2 {
-		font-family: 'Roboto', sans-serif;
-		font-weight: 500;
-		line-height: 1;
-	}
-
 	/* Hide images when dragging */
 	#grid.hide-images .story-item img {
 		opacity: 0;
@@ -33,6 +27,7 @@ if (!lang) {
 
 	/* Grid view styles */
 	.stories-container--grid span {
+		display: grid;
 		position: fixed;
 		z-index: 5000;
 		top: 0;
@@ -48,6 +43,12 @@ if (!lang) {
 		height: 100%;
 		gap: 0;
 		overflow: hidden;
+
+		gap: 1rem;
+
+		@media screen and (max-width: 500px) {
+			gap: 0.5rem;
+		}
 	}
 
 	#grid .story-item {
@@ -61,67 +62,69 @@ if (!lang) {
 		will-change: auto;
 		transform: scale(1);
 		padding-top: 0.1rem;
-		border: 4px solid #fff;
-	}
 
-	.grid {
-		display: grid;
-		// grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); /* Adjust based on your design */
-		gap: 12px; /* Adjust based on your design */
-	}
+		h2 {
+			font-family: 'Roboto', sans-serif;
+			line-height: 1.15;
+			// text-shadow: 2px 2px 15px rgba(0, 0, 0, 1);
+		}
 
-	/* Style for highlighted items */
-	#grid .story-item.highlighted {
-		position: relative;
-		display: grid;
-		align-items: start;
-		scale: 1.025;
-		// grid-column: span 2; /* Make the item span two columns */
-		// grid-template-columns: 1fr 1fr; /* Divide the item into two equal parts */
-	}
+		img {
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: -1;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			pointer-events: none;
+		}
 
-	#grid .story-item.highlighted::after {
-		content: '';
-		position: absolute;
-		bottom: 0;
-		right: 0;
-		top: 10%;
-		left: 90%;
-		width: 10%;
-		height: 10%;
-		-webkit-transform: rotate(45deg);
-		background: green;
-	}
+		&:hover {
+			border-color: #9f3e52;
+			z-index: 9999;
+		}
 
-	#grid .story-item.highlighted:hover {
-		border-color: white;
-	}
+		&.highlighted {
+			scale: 1.05;
+			align-items: end;
+			justify-items: end;
+			border: 0.5rem solid #9f3e52;
+			z-index: 999;
+			box-shadow: 0 0 15px black;
+			display: flex;
 
-	#grid .story-item:hover {
-		// scale: 1.2;
-		// border-width: 6px;
-		border-color: #9f3e52;
-		z-index: 9999;
-	}
+			h2 {
+				font-weight: 500;
+				border: solid 2px sadd;
+				align-self: end;
+				padding: 0.25rem 0.5rem;
+				// text-shadow: 2px 2px 15px rgba(0, 0, 0, 1);
+			}
 
-	#grid .story-item img {
-		position: absolute;
-		top: 0;
-		left: 0;
-		z-index: -1;
-		width: 100%;
-		height: 100%;
-		object-fit: cover;
-		pointer-events: none;
+			&:hover {
+				border-color: white;
+			}
+
+			// &::after {
+			// 	content: '';
+			// 	position: absolute;
+			// 	bottom: -1.5rem;
+			// 	right: -1.5rem;
+			// 	width: 3rem;
+			// 	height: 3rem;
+			// 	background: #9f3e52;
+			// 	-webkit-transform: rotate(45deg);
+			// }
+		}
 	}
 
 	.full-image {
 		opacity: 0;
-		/* transition: opacity 0.5s ease; */
-	}
 
-	.full-image.loaded {
-		opacity: 1;
+		&.loaded {
+			opacity: 1;
+		}
 	}
 
 	#grid.filter--read .story-item:not([data-lastread='never']) {
@@ -139,61 +142,35 @@ if (!lang) {
 		cursor: move;
 	}
 
-	#grid .story-item.highlighted {
-		display: flex;
-		justify-items: end;
-		border: 10px solid #9f3e52;
-		z-index: 999;
-		box-shadow: 0 0 15px black;
-		transform: scale(1.025);
-		// border-style: dashed;
-	}
-
 	.story-item--title {
 		margin: 0;
 		box-decoration-break: clone;
-		font-size: 1.4rem;
+		font-size: 1.2rem;
 		line-height: 1.15;
 		display: inline;
-		// cursor: pointer;
+		top: 0;
 	}
 
-	@media screen and (max-width: 500px) {
-		.story-item--title {
-			display: inline;
-			margin: 0;
-			top: 0;
-			text-align: left;
-			font-size: 1rem;
-			padding: 0.25rem;
-			/* Line clamp */
-			/* display: -webkit-box; */
-			-webkit-line-clamp: 4;
-			-webkit-box-orient: vertical;
-			overflow: hidden;
-			text-overflow: ellipsis;
-		}
-	}
+	// @media screen and (max-width: 500px) {
+	// 	.story-item--title {
+	// 		display: inline;
+	// 		margin: 0;
+	// 		top: 0;
+	// 		text-align: left;
+	// 		font-size: 1rem;
+	// 		padding: 0.25rem;
+	// 		/* Line clamp */
+	// 		/* display: -webkit-box; */
+	// 		-webkit-line-clamp: 4;
+	// 		-webkit-box-orient: vertical;
+	// 		overflow: hidden;
+	// 		text-overflow: ellipsis;
+	// 	}
+	// }
 
 	.language--ar .story-item {
 		direction: rtl;
 		text-align: right;
-	}
-
-	/* Show/hide titles based on current language */
-	.language--en .story-item h2.lang--ar {
-		display: none;
-	}
-
-	.language--ar .story-item h2.lang--en {
-		display: none;
-	}
-
-	.rainbow {
-		position: relative;
-		z-index: 0;
-		overflow: hidden;
-		padding: 2rem;
 	}
 
 	@keyframes opacityChange {
@@ -342,13 +319,14 @@ if (!lang) {
 				this.titleEnglish.classList.add('story-item--title')
 				this.titleEnglish.classList.add('lang--en')
 				this.titleEnglish.classList.add('box-decoration-clone')
-				this.titleEnglish.classList.add('p-1')
-				this.titleEnglish.classList.add('sm:leading-7')
-				this.titleEnglish.classList.add('text-white')
-				this.titleEnglish.classList.add('font-normal')
-				this.titleEnglish.classList.add('bg-transparent')
-				this.titleEnglish.classList.add('group-hover:bg-black')
-				this.titleEnglish.classList.add('pt-0')
+				this.titleEnglish.classList.add('px-2')
+				this.titleEnglish.classList.add('tracking-tight')
+				this.titleEnglish.classList.add('text-black')
+				this.titleEnglish.classList.add('bg-white')
+				this.titleEnglish.classList.add('group-hover:text-shadow-lg')
+				this.titleEnglish.classList.add('shadow-black')
+				this.titleEnglish.classList.add('group-hover:text-white')
+				this.titleEnglish.classList.add('group-hover:bg-transparent')
 				this.titleEnglish.classList.add('pointer-events-none')
 				this.titleEnglish.setAttribute('dir', 'ltr')
 			}
@@ -361,13 +339,14 @@ if (!lang) {
 				this.titleArabic.classList.add('story-item--title')
 				this.titleArabic.classList.add('lang--ar')
 				this.titleArabic.classList.add('box-decoration-clone')
-				this.titleArabic.classList.add('p-1')
-				this.titleArabic.classList.add('sm:leading-7')
-				this.titleArabic.classList.add('text-white')
-				this.titleArabic.classList.add('font-normal')
-				this.titleArabic.classList.add('bg-transparent')
-				this.titleArabic.classList.add('group-hover:bg-black')
-				this.titleArabic.classList.add('pt-0')
+				this.titleArabic.classList.add('px-2')
+				this.titleArabic.classList.add('tracking-tight')
+				this.titleArabic.classList.add('text-black')
+				this.titleArabic.classList.add('bg-white')
+				this.titleArabic.classList.add('group-hover:text-shadow-lg')
+				this.titleArabic.classList.add('shadow-black')
+				this.titleArabic.classList.add('group-hover:text-white')
+				this.titleArabic.classList.add('group-hover:bg-transparent')
 				this.titleArabic.classList.add('pointer-events-none')
 				this.titleArabic.setAttribute('dir', 'rtl')
 			}
