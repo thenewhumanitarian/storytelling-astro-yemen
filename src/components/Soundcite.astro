@@ -453,21 +453,21 @@ const { src, start, end, plays, text } = Astro.props as Props
 	document.addEventListener('DOMContentLoaded', function () {
 		// @ts-ignore
 		if (soundCite) {
-      // @ts-ignore
+			// @ts-ignore
 			soundCite.init()
 		}
 	})
 	document.addEventListener('astro:after-swap', () => {
-    // @ts-ignore
-    if (soundCite) {
-      // @ts-ignore
+		// @ts-ignore
+		if (soundCite) {
+			// @ts-ignore
 			soundCite.init()
 		}
 	})
-  document.addEventListener('astro:page-load', () => {
-    // @ts-ignore
-    if (soundCite) {
-      // @ts-ignore
+	document.addEventListener('astro:page-load', () => {
+		// @ts-ignore
+		if (soundCite) {
+			// @ts-ignore
 			soundCite.init()
 		}
 	})

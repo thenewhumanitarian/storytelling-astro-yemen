@@ -16,7 +16,7 @@ const { stories, tags, view } = Astro.props
 			</div>
 
 			{/* Story list view */}
-			<div class={`stories-container--list mt-[8rem] lg:mt-20 pt-0 sm:py-12`} id='stories-container--list'>
+			<div class={`stories-container--list mt-[8rem] lg:mt-20 pt-0 sm:py-12`} id='stories-container--list bg-black'>
 				<StoryList stories={stories} />
 			</div>
 		</>
@@ -37,6 +37,20 @@ const { stories, tags, view } = Astro.props
 }
 
 <style is:global>
+	#city {
+		z-index: -1;
+		background-image: url('https://assets.thenewhumanitarian.org/s3fs-public/styles/responsive_large/public/2023-06/night-sky-overlay_0.png.webp');
+		background-size: 100%;
+		background-position: center;
+		background-repeat: no-repeat;
+	}
+
+	@media screen and (max-width: 500px) {
+		#city {
+			background-position: bottom center;
+		}
+	}
+
 	header {
 		position: fixed;
 		z-index: 9999 !important;
