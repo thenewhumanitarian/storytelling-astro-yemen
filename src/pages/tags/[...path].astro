@@ -62,7 +62,13 @@ const filteredStories = allStories.filter((story) => story.tags.some((tag) => ta
 			description={lang === 'ar' ? '.حيثُ يتحدّث اليَمنيّون ويستمع العالمُ إليهم' : 'Where Yemenis talk, and the world listens.'}
 		/>
 		<StoryWrapper stories={filteredStories} view='tags' tags={uniqueTags}>
-			<NavButtons button='overview' slot='top' lang={lang} classNames='-mt-4 text-white bg-burgundy hover:bg-zinc-100 hover:text-burgundy' prefix={'←'} />
+			<NavButtons
+				button='overview'
+				slot='top'
+				lang={lang}
+				classNames='-mt-4 text-white bg-transparent hover:bg-zinc-100 hover:text-burgundy'
+				prefix={'←'}
+			/>
 		</StoryWrapper>
 	</Layout>
 </div>

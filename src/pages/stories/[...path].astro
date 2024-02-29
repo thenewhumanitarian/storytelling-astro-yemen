@@ -97,7 +97,7 @@ const hasAudioFiles = processedAudioFiles.length > 0
 	>
 		<div class={`flex justify-center items-center ${lang === 'ar' ? 'flex-row-reverse' : 'flex-row'} nav-buttons menu--hide`}>
 			<NavButtons button='previous' lang={lang} href={`/stories/${lang}/${prevStorySlug}`} classNames='hover:text-white hover:bg-zinc-100' />
-			<NavButtons button='overview' href={`/${lang}`} lang={lang} classNames='text-white bg-burgundy hover:bg-zinc-100 hover:text-burgundy' />
+			<NavButtons button='overview' lang={lang} classNames='text-white bg-burgundy hover:bg-zinc-100 hover:text-burgundy' />
 			<NavButtons button='next' lang={lang} href={`/stories/${lang}/${nextStorySlug}`} classNames='hover:text-white hover:bg-zinc-100' />
 		</div>
 		<div class='flex flex-col gap-3 sm:gap-5'>
