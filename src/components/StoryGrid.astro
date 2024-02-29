@@ -20,6 +20,14 @@ if (!lang) {
 		cursor: move;
 	}
 
+	body {
+		background-image: url('https://assets.thenewhumanitarian.org/s3fs-public/styles/responsive_large/public/2023-06/night-sky-overlay_0.png.webp');
+		background-size: 100%;
+		background-position: center;
+		background-repeat: no-repeat;
+    z-index: -1;
+	}
+
 	/* Hide images when dragging */
 	#grid.hide-images .story-item img {
 		opacity: 0;
@@ -64,7 +72,7 @@ if (!lang) {
 
 		h2 {
 			font-family: 'Roboto', sans-serif;
-      font-weight: 500;
+			font-weight: 500;
 			line-height: 1.15;
 			// text-shadow: 2px 2px 15px rgba(0, 0, 0, 1);
 		}
@@ -112,9 +120,9 @@ if (!lang) {
 			&:hover {
 				border-color: white;
 
-        h2 {
-          background: transparent;
-        }
+				h2 {
+					background: transparent;
+				}
 			}
 		}
 	}
