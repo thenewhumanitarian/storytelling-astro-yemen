@@ -61,7 +61,7 @@ if (!lang) {
 		will-change: auto;
 		transform: scale(1);
 		padding-top: 0.1rem;
-		border: 2px solid #fff;
+		border: 4px solid #fff;
 	}
 
 	.grid {
@@ -72,30 +72,36 @@ if (!lang) {
 
 	/* Style for highlighted items */
 	#grid .story-item.highlighted {
-		grid-column: span 2; /* Make the item span two columns */
+		position: relative;
 		display: grid;
-		grid-template-columns: 1fr 1fr; /* Divide the item into two equal parts */
 		align-items: start;
+		scale: 1.025;
+		// grid-column: span 2; /* Make the item span two columns */
+		// grid-template-columns: 1fr 1fr; /* Divide the item into two equal parts */
 	}
 
-	/* Adjustments for image and text within a highlighted item */
-	#grid .story-item.highlighted img {
-		grid-column: 1;
-		width: 50%;
-		object-fit: cover;
+	#grid .story-item.highlighted::after {
+		content: '';
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		top: 10%;
+		left: 90%;
+		width: 10%;
+		height: 10%;
+		-webkit-transform: rotate(45deg);
+		background: green;
 	}
 
-	#grid .story-item.highlighted .text-content {
-		grid-column: 2;
-		display: flex;
-		align-items: center;
-		justify-content: center;
+	#grid .story-item.highlighted:hover {
+		border-color: white;
 	}
 
 	#grid .story-item:hover {
-		scale: 1.2;
+		// scale: 1.2;
+		// border-width: 6px;
+		border-color: #9f3e52;
 		z-index: 9999;
-		border-width: 6px;
 	}
 
 	#grid .story-item img {
@@ -139,7 +145,7 @@ if (!lang) {
 		border: 10px solid #9f3e52;
 		z-index: 999;
 		box-shadow: 0 0 15px black;
-		// transform: scale(1.025);
+		transform: scale(1.025);
 		// border-style: dashed;
 	}
 
@@ -336,12 +342,12 @@ if (!lang) {
 				this.titleEnglish.classList.add('story-item--title')
 				this.titleEnglish.classList.add('lang--en')
 				this.titleEnglish.classList.add('box-decoration-clone')
-				this.titleEnglish.classList.add('px-2')
+				this.titleEnglish.classList.add('p-1')
 				this.titleEnglish.classList.add('sm:leading-7')
 				this.titleEnglish.classList.add('text-white')
 				this.titleEnglish.classList.add('font-normal')
-				this.titleEnglish.classList.add('bg-black')
-				this.titleEnglish.classList.add('group-hover:bg-transparent')
+				this.titleEnglish.classList.add('bg-transparent')
+				this.titleEnglish.classList.add('group-hover:bg-black')
 				this.titleEnglish.classList.add('pt-0')
 				this.titleEnglish.classList.add('pointer-events-none')
 				this.titleEnglish.setAttribute('dir', 'ltr')
@@ -355,12 +361,12 @@ if (!lang) {
 				this.titleArabic.classList.add('story-item--title')
 				this.titleArabic.classList.add('lang--ar')
 				this.titleArabic.classList.add('box-decoration-clone')
-				this.titleArabic.classList.add('px-2')
+				this.titleArabic.classList.add('p-1')
 				this.titleArabic.classList.add('sm:leading-7')
 				this.titleArabic.classList.add('text-white')
 				this.titleArabic.classList.add('font-normal')
-				this.titleArabic.classList.add('bg-black')
-				this.titleArabic.classList.add('group-hover:bg-transparent')
+				this.titleArabic.classList.add('bg-transparent')
+				this.titleArabic.classList.add('group-hover:bg-black')
 				this.titleArabic.classList.add('pt-0')
 				this.titleArabic.classList.add('pointer-events-none')
 				this.titleArabic.setAttribute('dir', 'rtl')
@@ -566,14 +572,8 @@ if (!lang) {
 
 			if (jumpX || jumpY) {
 				this.items.forEach((item) => {
-					if (jumpX) {
-						console.log(jumpX)
-						item.setIndex(this.shiftIndex(item.index + jumpX))
-					}
-					if (jumpY) {
-						console.log(jumpY)
-						item.setIndex(this.shiftIndex(item.index + jumpY))
-					}
+					if (jumpX) item.setIndex(this.shiftIndex(item.index + jumpX))
+					if (jumpY) item.setIndex(this.shiftIndex(item.index + jumpY * (this.cols + 2)))
 				})
 			}
 
