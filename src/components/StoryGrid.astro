@@ -25,12 +25,19 @@ if (!lang) {
 		background-size: 100%;
 		background-position: center;
 		background-repeat: no-repeat;
-    z-index: -1;
+		z-index: -1;
 	}
 
 	/* Hide images when dragging */
-	#grid.hide-images .story-item img {
-		opacity: 0;
+	#grid.hide-images {
+		.story-item img {
+			opacity: 0;
+		}
+
+    .story-item h2 {
+      background: white;
+      color: black;
+    }
 	}
 
 	/* Grid view styles */
@@ -113,7 +120,7 @@ if (!lang) {
 
 				@media screen and (max-width: 500px) {
 					margin-left: 1px;
-					font-weight: 500;
+					font-weight: bold;
 				}
 			}
 
@@ -162,9 +169,11 @@ if (!lang) {
 			display: inline;
 			margin: 0;
 			top: 0;
+			position: absolute;
 			text-align: left;
-			font-size: 1rem;
-			padding: 0.25rem;
+			font-size: 1.15rem;
+			padding: 0.55rem;
+			font-weight: bold;
 			/* Line clamp */
 			/* display: -webkit-box; */
 			// -webkit-line-clamp: 2;
@@ -327,12 +336,14 @@ if (!lang) {
 				this.titleEnglish.classList.add('box-decoration-clone')
 				this.titleEnglish.classList.add('px-2')
 				this.titleEnglish.classList.add('tracking-tight')
-				this.titleEnglish.classList.add('text-black')
-				this.titleEnglish.classList.add('bg-white')
-				this.titleEnglish.classList.add('group-hover:text-shadow-lg')
+				this.titleEnglish.classList.add('text-white')
+				this.titleEnglish.classList.add('sm:text-black')
+				this.titleEnglish.classList.add('bg-transparent')
+				this.titleEnglish.classList.add('sm:bg-white')
+				this.titleEnglish.classList.add('sm:group-hover:text-shadow-lg')
 				this.titleEnglish.classList.add('shadow-black')
-				this.titleEnglish.classList.add('group-hover:text-white')
-				this.titleEnglish.classList.add('group-hover:bg-transparent')
+				this.titleEnglish.classList.add('sm:group-hover:text-white')
+				this.titleEnglish.classList.add('sm:group-hover:bg-transparent')
 				this.titleEnglish.classList.add('pointer-events-none')
 				this.titleEnglish.setAttribute('dir', 'ltr')
 			}
@@ -347,12 +358,14 @@ if (!lang) {
 				this.titleArabic.classList.add('box-decoration-clone')
 				this.titleArabic.classList.add('px-2')
 				this.titleArabic.classList.add('tracking-tight')
-				this.titleArabic.classList.add('text-black')
-				this.titleArabic.classList.add('bg-white')
-				this.titleArabic.classList.add('group-hover:text-shadow-lg')
+				this.titleArabic.classList.add('text-white')
+				this.titleArabic.classList.add('sm:text-black')
+				this.titleArabic.classList.add('bg-transparent')
+				this.titleEnglish.classList.add('sm:bg-white')
+				this.titleArabic.classList.add('sm:group-hover:text-shadow-lg')
 				this.titleArabic.classList.add('shadow-black')
-				this.titleArabic.classList.add('group-hover:text-white')
-				this.titleArabic.classList.add('group-hover:bg-transparent')
+				this.titleArabic.classList.add('sm:group-hover:text-white')
+				this.titleArabic.classList.add('sm:group-hover:bg-transparent')
 				this.titleArabic.classList.add('pointer-events-none')
 				this.titleArabic.setAttribute('dir', 'rtl')
 			}
