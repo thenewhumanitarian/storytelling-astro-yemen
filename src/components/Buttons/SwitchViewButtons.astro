@@ -49,6 +49,7 @@
 
 	function onButtonGridHandler() {
 		localStorage.setItem('currentView', 'grid')
+
 		// Adjust buttons' state
 		if (buttonGrid) {
 			buttonGrid.classList.remove('bg-black')
@@ -59,7 +60,7 @@
 			buttonList.classList.remove('bg-burgundy')
 		}
 		// Activate pointer events for #stories-container--grid
-		const gridWrapper = document.querySelector('#stories-container--grid') as HTMLElement
+		const gridWrapper = document.querySelector('.stories-container--grid') as HTMLElement
 		if (gridWrapper) {
 			gridWrapper.style.pointerEvents = 'auto'
 		}
@@ -71,13 +72,16 @@
 			gridElement.style.pointerEvents = 'auto'
 		}
 		const listElement = document.querySelector('#list') as HTMLElement
+    console.log(listElement)
 		if (listElement) {
 			listElement.style.display = 'none'
+			listElement.style.opacity = '0'
 		}
 	}
 
 	function onButtonListHandler() {
 		localStorage.setItem('currentView', 'list')
+
 		// Adjust buttons' state
 		if (buttonGrid) {
 			buttonGrid.classList.remove('bg-burgundy')
@@ -88,10 +92,12 @@
 			buttonList.classList.remove('bg-black')
 		}
 		// Deactivate pointer events for #stories-container--grid
-		const gridWrapper = document.querySelector('#stories-container--grid') as HTMLElement
+		const gridWrapper = document.querySelector('.stories-container--grid') as HTMLElement
+		console.log(gridWrapper)
 		if (gridWrapper) {
 			gridWrapper.style.pointerEvents = 'none'
 		}
+
 		// Show the list view, hide the grid view
 		const gridElement = document.querySelector('#grid') as HTMLElement
 		if (gridElement) {
@@ -102,6 +108,7 @@
 		const listElement = document.querySelector('#list') as HTMLElement
 		if (listElement) {
 			listElement.style.display = 'block'
+			listElement.style.opacity = '1'
 		}
 	}
 
@@ -147,6 +154,7 @@
 	buttonHandler(null)
 
 	const buttons = document.querySelectorAll('.view-button')
+
 	for (let button of buttons) {
 		button.addEventListener('click', buttonHandler)
 	}

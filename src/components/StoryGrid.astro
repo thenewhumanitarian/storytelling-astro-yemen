@@ -12,20 +12,12 @@ if (!lang) {
 }
 ---
 
-<div dir='ltr' id='grid' class='grid bg-black'></div>
+<div dir='ltr' id='grid' class='grid'></div>
 
 <style is:global lang='scss'>
 	body.is-dragging .story-item h2,
 	body.is-dragging .story-item {
 		cursor: move;
-	}
-
-	body {
-		background-image: url('https://assets.thenewhumanitarian.org/s3fs-public/styles/responsive_large/public/2023-06/night-sky-overlay_0.png.webp');
-		background-size: 100%;
-		background-position: center;
-		background-repeat: no-repeat;
-		z-index: -1;
 	}
 
 	/* Hide images when dragging */
@@ -218,7 +210,10 @@ if (!lang) {
 		filterGridBasedOnLocalStorage()
 
 		const grid = optimalGridDimensions()
-		Infinite.setGrid(grid.cols, grid.rows)
+		Infinite.setGrid(grid.cols, grid.rows).then(() => {
+			console.log('Grid loaded')
+			Infinite.updateGridBackground('black') // Add this line
+		})
 	})
 
 	function truncateWithEllipses(text, maxLength) {
@@ -545,6 +540,10 @@ if (!lang) {
 			this.setGrid(nCol, nRow)
 		}
 
+		updateGridBackground(color) {
+			this.grid.style.backgroundColor = color
+		}
+
 		onDrag(xDelta, yDelta) {
 			this.offsetX += xDelta
 			this.offsetY += yDelta
@@ -631,7 +630,10 @@ if (!lang) {
 	// Re-calculate when user resizes browser
 	window.addEventListener('resize', () => {
 		const grid = optimalGridDimensions()
-		Infinite.setGrid(grid.cols, grid.rows)
+		Infinite.setGrid(grid.cols, grid.rows).then(() => {
+			console.log('Grid loaded')
+			Infinite.updateGridBackground('black') // Add this line
+		})
 	})
 
 	function optimalGridDimensions(minSide = window.innerWidth > 500 ? 200 : 140) {
