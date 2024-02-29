@@ -14,7 +14,7 @@ if (!lang) {
 
 <div dir='ltr' id='grid' class='grid bg-black'></div>
 
-<style is:global>
+<style is:global lang='scss'>
 	body.is-dragging .story-item h2,
 	body.is-dragging .story-item {
 		cursor: move;
@@ -61,7 +61,35 @@ if (!lang) {
 		will-change: auto;
 		transform: scale(1);
 		padding-top: 0.1rem;
-		border: 0.5px solid #fff;
+		border: 2px solid #fff;
+	}
+
+	.grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); /* Adjust based on your design */
+		gap: 12px; /* Adjust based on your design */
+	}
+
+	/* Style for highlighted items */
+	#grid .story-item.highlighted {
+		grid-column: span 2; /* Make the item span two columns */
+		display: grid;
+		grid-template-columns: 1fr 1fr; /* Divide the item into two equal parts */
+		align-items: start;
+	}
+
+	/* Adjustments for image and text within a highlighted item */
+	#grid .story-item.highlighted img {
+		grid-column: 1;
+		width: 50%;
+		object-fit: cover;
+	}
+
+	#grid .story-item.highlighted .text-content {
+		grid-column: 2;
+		display: flex;
+		align-items: center;
+		justify-content: center;
 	}
 
 	#grid .story-item:hover {
@@ -106,11 +134,13 @@ if (!lang) {
 	}
 
 	#grid .story-item.highlighted {
-		border: 8px solid #9f3e52;
-		border-style: dashed;
+		display: flex;
+		justify-items: end;
+		border: 10px solid #9f3e52;
 		z-index: 999;
-		transform: scale(1.025);
 		box-shadow: 0 0 15px black;
+		// transform: scale(1.025);
+		// border-style: dashed;
 	}
 
 	.story-item--title {
@@ -118,8 +148,8 @@ if (!lang) {
 		box-decoration-break: clone;
 		font-size: 1.4rem;
 		line-height: 1.15;
-		cursor: pointer;
 		display: inline;
+		// cursor: pointer;
 	}
 
 	@media screen and (max-width: 500px) {
@@ -151,6 +181,22 @@ if (!lang) {
 
 	.language--ar .story-item h2.lang--en {
 		display: none;
+	}
+
+	.rainbow {
+		position: relative;
+		z-index: 0;
+		overflow: hidden;
+		padding: 2rem;
+	}
+
+	@keyframes opacityChange {
+		50% {
+			opacity: 1;
+		}
+		100% {
+			opacity: 0.5;
+		}
 	}
 </style>
 
@@ -214,6 +260,12 @@ if (!lang) {
 			this.setNewCard()
 		}
 
+		// Method to check if this item is highlighted
+		isHighlighted() {
+			// Check if the item's element has the 'highlighted' class
+			return this.item.classList.contains('highlighted')
+		}
+
 		setIndex(index) {
 			this.index = index
 			this.setNewCard()
@@ -224,9 +276,6 @@ if (!lang) {
 		}
 
 		setNewCard() {
-			// Get language from localStorage value 'lang'
-			// const lang = localStorage.getItem('lang') || 'en'
-
 			// Define vars to be used later
 			let story = stories[this.index % stories.length]
 
@@ -463,7 +512,6 @@ if (!lang) {
 
 			// Calculate the duration of the tap
 			const touchDuration = Date.now() - this.touchStartTime
-			// console.log(touchDuration)
 
 			// Check duration and act accordingly
 			if (touchDuration < 100) {
@@ -518,8 +566,14 @@ if (!lang) {
 
 			if (jumpX || jumpY) {
 				this.items.forEach((item) => {
-					if (jumpX) item.setIndex(this.shiftIndex(item.index + jumpX))
-					if (jumpY) item.setIndex(this.shiftIndex(item.index + jumpY * (this.cols + 2)))
+					if (jumpX) {
+						console.log(jumpX)
+						item.setIndex(this.shiftIndex(item.index + jumpX))
+					}
+					if (jumpY) {
+						console.log(jumpY)
+						item.setIndex(this.shiftIndex(item.index + jumpY))
+					}
 				})
 			}
 
@@ -530,9 +584,7 @@ if (!lang) {
 			if (index < 0) {
 				index = this.items.length + index
 			}
-
 			index = index % this.items.length
-
 			return index
 		}
 
