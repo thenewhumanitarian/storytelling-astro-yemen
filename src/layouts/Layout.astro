@@ -41,21 +41,24 @@ if (!lang) {
 		{header && <Header dark={dark} filterButtons={filterButtons} languageButtons={languageButtons} switchViewButtons={switchViewButtons} />}
 		<!-- Main content -->
 		<slot />
-    <MenuOverlay />
+		<MenuOverlay />
 		<!-- Footer  -->
 		<!-- No footer set -->
-		<style is:global>
-			html[dir='ltr'] {
-				/* Styles for left-to-right direction */
-			}
-
-			html[dir='rtl'] * {
-				text-align: right;
-			}
-
-			body {
-				background: black;
-			}
-		</style>
 	</body>
 </html>
+
+<style is:global lang={'scss'}>
+  html[dir='ltr'] {
+    /* Styles for left-to-right direction */
+  }
+
+  html[dir='rtl'] * {
+    text-align: right;
+
+
+  }
+
+  body {
+    background: black;
+  }
+</style>

@@ -26,7 +26,7 @@ if (!lang) {
 ---
 
 <section class='w-full max-w-5xl text-center mx-auto pb-5 pt-6 border-t-2 border-zinc-500 mt-12 tag-wrapper'>
-	<button type='button' class='text-base collapsible px-3 py-2 cursor-pointer font-sans bg-transparent border-zinc-200 text-zinc-200'>
+	<button type='button' class='text-base text-center collapsible px-3 py-2 cursor-pointer font-sans bg-transparent border-zinc-200 text-zinc-200'>
 		Read more about...
 	</button>
 	<div class='pt-3 tag-wrapper'>
@@ -34,7 +34,7 @@ if (!lang) {
 			tags.map((tag) => {
 				return (
 					<a href={`/tags/${lang}/${tag.toLowerCase()}`} class='inline-block px-3 py-2 m-0 cursor-pointer text-base'>
-						<span class='block font-bold bg-transparent border-transparent hover:underline text-zinc-200'>{tag}</span>
+						<span class='block sm:font-bold bg-transparent border-transparent hover:underline text-zinc-200'>{tag}</span>
 					</a>
 				)
 			})
@@ -44,6 +44,9 @@ if (!lang) {
 
 <style>
   .tag-wrapper {
+    text-align: center;
+  }
+  button {
     text-align: center;
   }
 </style>

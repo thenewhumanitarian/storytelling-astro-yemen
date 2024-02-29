@@ -24,16 +24,24 @@ if (!lang) {
 	tags.length > 0 && (
 		<div class='text-center w-full max-w-5xl pt-8'>
 			<h3 class='font-sans pb-3 text-base font-bold'>Read more about...</h3>
-			<div class='flex gap-x-3 items-center justify-center'>
-				{tags.map((tag) => (
-					<a
-						href={`/tags/${lang}/${tag.toLowerCase()}`}
-						class='bg-zinc-50 px-3 py-2 font-bold text-base text-black hover:bg-zinc-600 hover:text-zinc-50 transition-all'
-					>
-						{tag}
-					</a>
-				))}
+			<div class='pt-3 tag-wrapper'>
+				{tags.map((tag) => {
+					return (
+						<a href={`/tags/${lang}/${tag.toLowerCase()}`} class='inline-block px-3 py-2 m-0 cursor-pointer text-base'>
+							<span class='block sm:font-bold bg-transparent border-transparent hover:underline text-zinc-200 text-shadow-xl shadow-white'>{tag}</span>
+						</a>
+					)
+				})}
 			</div>
 		</div>
 	)
 }
+
+<style>
+	.tag-wrapper {
+		text-align: center;
+	}
+	button {
+		text-align: center;
+	}
+</style>

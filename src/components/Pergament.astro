@@ -20,7 +20,7 @@ if (!lang) {
 const direction = lang === 'en' ? 'ltr' : 'rtl'
 ---
 
-<div class={classNames} id='pergament'>
+<div class={classNames} id='pergament' dir={direction}>
 	<slot />
 </div>
 

@@ -59,7 +59,6 @@ const filteredStories = allStories.filter((story) => story.tags.some((tag) => ta
 		title='The Yemen Listening Project'
 		header={true}
 		filterButtons={false}
-		languageButtons={{ ar: `/tags/ar/${currentTag.toLowerCase()}`, en: `/tags/en/${currentTag.toLowerCase()}` }}
 		switchViewButtons={false}
 		dir={lang === 'ar' ? 'rtl' : 'ltr'}
 	>
