@@ -1,0 +1,19 @@
+---
+import StaticPageWrapper from '@components/StaticPageWrapper.astro'
+import Title from '@components/Title.astro'
+import Subtitle from '@components/Subtitle.astro'
+
+const lang = 'en'
+---
+
+<StaticPageWrapper lang={lang}>
+	<div slot='header'>
+		<Title>How to use this</Title>
+		<Subtitle>A quick explainer.</Subtitle>
+	</div>
+
+	<div slot='body'>
+		<p class='text-white font-bold text-xl'>The "Infinite Grid"</p>
+		<p class='text-white'>Coming soon...</p>
+	</div>
+</StaticPageWrapper>

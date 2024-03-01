@@ -10,12 +10,6 @@
 
 	/* OPEN MENU */
 	function openMenu() {
-		// Find all elements with "menu--hide" class and hide them
-		// const menuHide = document.querySelectorAll('.menu--hide')
-		// menuHide.forEach((el) => {
-		// 	el.style.opacity = 0
-		// })
-
 		// Block body scroll when menu is open
 		document.body.style.overflow = 'hidden'
 
@@ -39,12 +33,6 @@
 			menuOverlay.style.display = 'none'
 			menuOverlay.style.visibility = 'hidden'
 			menuOverlay.style.opacity = 0
-
-			// // Find all elements with "menu--hide" class and show them
-			// const menuHide = document.querySelectorAll('.menu--hide')
-			// menuHide.forEach((el) => {
-			// 	el.style.opacity = 1
-			// })
 
 			setShowIntroFalse()
 		}
@@ -89,15 +77,6 @@
 		menuButton.removeEventListener('click', openMenu)
 		menuOverlay.removeEventListener('click', closeMenu)
 	})
-
-	// document.addEventListener('astro:after-swap', () => {
-	// 	const menuOverlay = document.getElementById('menu-overlay')
-	// 	const menuButton = document.getElementById('menu-button')
-
-	// 	// Add event listeners
-	// 	menuButton.addEventListener('click', openMenu)
-	// 	menuOverlay.addEventListener('click', closeMenu)
-	// })
 
 	document.addEventListener('astro:page-load', () => {
 		const menuOverlay = document.getElementById('menu-overlay')

@@ -1,5 +1,5 @@
 import { useStore } from '@nanostores/react';
-import { isMenuOverlayVisible, firstTimeVisitor } from '../../stores/globalState';
+import { isMenuOverlayVisible, firstTimeVisitor } from '@stores/globalState';
 
 const ReactMenuOverlay = () => {
   const $showOverlay = useStore(isMenuOverlayVisible);

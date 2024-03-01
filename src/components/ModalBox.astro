@@ -3,11 +3,11 @@ const { activeId } = Astro.props
 ---
 
 <div id='lightbox' class={`transition-all fixed top-0 left-0 w-full h-screen h-screen-ios bg-black bg-opacity-80 z-50 ${activeId > -1 ? 'flex' : 'hidden'}`}>
-  <div class="max-w-xl flex justify-center items-center mx-auto">
-    <h1>
-      {activeId}
-    </h1>
-  </div>
+	<div class='max-w-xl flex justify-center items-center mx-auto'>
+		<h1>
+			{activeId}
+		</h1>
+	</div>
 </div>
 
 <style>

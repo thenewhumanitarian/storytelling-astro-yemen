@@ -1,10 +1,6 @@
 ---
-import AttachmentImage from './AttachmentImage.astro'
-// import { translations } from '../data/translations'
-
-import IconPlay from './Icons/Icon-play.astro'
-// import IconDocument from './Icons/Icon-document.astro'
-// import IconAudio from './Icons/Icon-audio.astro'
+import AttachmentImage from '@components/AttachmentImage.astro'
+import IconPlay from '@components/icons/Icon-play.astro'
 
 export interface Props {
 	attachments?: string[]
@@ -100,7 +96,7 @@ if (visibleAttachments.length > 0 && visibleAttachments.length < 4) {
 	messageContainerClasses = 'col-span-5'
 	attachmentContainerClasses = 'grid grid-cols-9 col-span-5 gap-3'
 } else if (visibleAttachments.length === 0) {
-  attachmentContainerClasses = 'hidden'
+	attachmentContainerClasses = 'hidden'
 }
 ---
 
@@ -143,7 +139,8 @@ if (visibleAttachments.length > 0 && visibleAttachments.length < 4) {
 </section>
 
 <script>
-	document.addEventListener('astro:after-swap', () => {
+	// Lightbox functionality
+	document.addEventListener('astro:page-load', () => {
 		let currentIndex = 0 // Track the index of the currently displayed media
 
 		// Function to create and show the lightbox
@@ -153,21 +150,23 @@ if (visibleAttachments.length > 0 && visibleAttachments.length < 4) {
 			const source = `/attachments/${mediaElements[index].getAttribute('data-lightbox')}`
 
 			const lightbox = document.createElement('div')
-			lightbox.style.position = 'fixed'
-			lightbox.style.top = '0'
-			lightbox.style.left = '0'
-			lightbox.style.width = '100vw'
-			lightbox.style.height = '100vh'
-			lightbox.style.backgroundColor = 'rgba(0, 0, 0, 0.8)'
-			lightbox.style.display = 'flex'
-			lightbox.style.justifyContent = 'center'
-			lightbox.style.alignItems = 'center'
-			lightbox.style.zIndex = '1000'
+			lightbox.classList.add('fixed')
+			lightbox.classList.add('top-0')
+			lightbox.classList.add('left-0')
+			lightbox.classList.add('w-screen')
+			lightbox.classList.add('h-screen')
+			lightbox.classList.add('h-screen-ios')
+			lightbox.classList.add('bg-black')
+			lightbox.classList.add('bg-opacity-80')
+			lightbox.classList.add('flex')
+			lightbox.classList.add('justify-center')
+			lightbox.classList.add('items-center')
+			lightbox.classList.add('z-[1000]')
 
 			// Create close button using SVG
 			const closeButton = document.createElement('div')
 			closeButton.innerHTML = `
-        <div class='absolute top-1 right-10 w-8 h-8 cursor-pointer hover:text-burgundy transition-colors' id='menu-close-button'>
+        <div class='absolute top-0 right-10 w-8 h-8 cursor-pointer hover:text-burgundy transition-colors z-50' id='menu-close-button'>
           <svg class='fill-current' width='100%' height='90' viewBox='0 0 90 90' fill='none' xmlns='http://www.w3.org/2000/svg'>
             <path class='fill-current' fill-rule='evenodd' clip-rule='evenodd' d='M1.84937 1.84937C4.02123 -0.317302 7.53683 -0.317302 9.7087 1.84937L44.6674 36.8134L79.626 1.84937C81.7979 -0.317302 85.3135 -0.317302 87.4854 1.84937C89.652 4.02123 89.652 7.53683 87.4854 9.7087L52.5214 44.6674L87.4854 79.626C89.652 81.7979 89.652 85.3135 87.4854 87.4854C85.3135 89.652 81.7979 89.652 79.626 87.4854L44.6674 52.5214L9.7087 87.4854C7.53683 89.652 4.02123 89.652 1.84937 87.4854C-0.317302 85.3135 -0.317302 81.7979 1.84937 79.626L36.8134 44.6674L1.84937 9.7087C-0.317302 7.53683 -0.317302 4.02123 1.84937 1.84937Z'></path>
           </svg>
@@ -178,101 +177,7 @@ if (visibleAttachments.length > 0 && visibleAttachments.length < 4) {
 			closeButton.style.right = '0'
 			closeButton.style.zIndex = '1010'
 			closeButton.addEventListener('click', () => lightbox.remove())
-
-			// Append the correct media type to the lightbox
-			let media
-			if (mediaType === 'image') {
-				media = document.createElement('img')
-				media.src = source
-			} else if (mediaType === 'video') {
-				media = document.createElement('video')
-				media.src = source
-				media.controls = true
-				media.autoplay = true
-			}
-			media.style.maxWidth = '90%'
-			media.style.maxHeight = '90%'
-
-			if (mediaElements.length > 1) {
-				// Navigation buttons
-				const prevButton = document.createElement('button')
-				prevButton.innerText = '←'
-				prevButton.classList.add('button--prev')
-				prevButton.style.position = 'absolute'
-				prevButton.style.left = '20px'
-				prevButton.style.top = '50%'
-				prevButton.style.zIndex = '1010'
-
-				const nextButton = document.createElement('button')
-				nextButton.innerText = '→'
-				nextButton.classList.add('button--next')
-
-				prevButton.addEventListener('click', (e) => {
-					e.stopPropagation() // Prevent lightbox from closing
-					const prevIndex = (index - 1 + mediaElements.length) % mediaElements.length
-					lightbox.remove()
-					showLightbox(prevIndex)
-				})
-
-				nextButton.addEventListener('click', (e) => {
-					e.stopPropagation() // Prevent lightbox from closing
-					const nextIndex = (index + 1) % mediaElements.length
-					lightbox.remove()
-					showLightbox(nextIndex)
-				})
-
-				lightbox.appendChild(prevButton)
-				lightbox.appendChild(nextButton)
-			}
-
-			lightbox.appendChild(media)
-			lightbox.appendChild(closeButton)
-
-			document.body.appendChild(lightbox)
-		}
-		mediaElements.forEach((el, index) => {
-			el.addEventListener('click', () => {
-				currentIndex = index // Update the current index
-				showLightbox(currentIndex)
-			})
-		})
-	})
-
-	document.addEventListener('DOMContentLoaded', () => {
-		let currentIndex = 0 // Track the index of the currently displayed media
-
-		// Function to create and show the lightbox
-		const mediaElements = document.querySelectorAll('[data-lightbox]')
-		function showLightbox(index) {
-			const mediaType = mediaElements[index].getAttribute('data-type') // 'image' or 'video'
-			const source = `/attachments/${mediaElements[index].getAttribute('data-lightbox')}`
-
-			const lightbox = document.createElement('div')
-			lightbox.style.position = 'fixed'
-			lightbox.style.top = '0'
-			lightbox.style.left = '0'
-			lightbox.style.width = '100vw'
-			lightbox.style.height = '100vh'
-			lightbox.style.backgroundColor = 'rgba(0, 0, 0, 0.8)'
-			lightbox.style.display = 'flex'
-			lightbox.style.justifyContent = 'center'
-			lightbox.style.alignItems = 'center'
-			lightbox.style.zIndex = '1000'
-
-			// Create close button using SVG
-			const closeButton = document.createElement('div')
-			closeButton.innerHTML = `
-        <div class='absolute top-0 right-10 w-8 h-8 cursor-pointer hover:text-burgundy transition-colors' id='menu-close-button'>
-          <svg class='fill-current' width='100%' height='90' viewBox='0 0 90 90' fill='none' xmlns='http://www.w3.org/2000/svg'>
-            <path class='fill-current' fill-rule='evenodd' clip-rule='evenodd' d='M1.84937 1.84937C4.02123 -0.317302 7.53683 -0.317302 9.7087 1.84937L44.6674 36.8134L79.626 1.84937C81.7979 -0.317302 85.3135 -0.317302 87.4854 1.84937C89.652 4.02123 89.652 7.53683 87.4854 9.7087L52.5214 44.6674L87.4854 79.626C89.652 81.7979 89.652 85.3135 87.4854 87.4854C85.3135 89.652 81.7979 89.652 79.626 87.4854L44.6674 52.5214L9.7087 87.4854C7.53683 89.652 4.02123 89.652 1.84937 87.4854C-0.317302 85.3135 -0.317302 81.7979 1.84937 79.626L36.8134 44.6674L1.84937 9.7087C-0.317302 7.53683 -0.317302 4.02123 1.84937 1.84937Z'></path>
-          </svg>
-        </div>
-      `
-			closeButton.style.position = 'absolute'
-			closeButton.style.top = '0'
-			closeButton.style.right = '0'
-			closeButton.style.zIndex = '1010'
-			closeButton.addEventListener('click', () => lightbox.remove())
+			lightbox.addEventListener('click', () => lightbox.remove())
 
 			// Also close if pushing the escape key
 			document.addEventListener('keydown', (e) => {
@@ -299,14 +204,14 @@ if (visibleAttachments.length > 0 && visibleAttachments.length < 4) {
 				const prevButton = document.createElement('button')
 				prevButton.innerText = '←'
 				prevButton.classList.add('button--prev')
-				prevButton.style.position = 'absolute'
-				prevButton.style.left = '20px'
-				prevButton.style.top = '50%'
-				prevButton.style.zIndex = '1010'
+				prevButton.classList.add('text-3xl')
+				prevButton.classList.add('p-5')
 
 				const nextButton = document.createElement('button')
 				nextButton.innerText = '→'
 				nextButton.classList.add('button--next')
+				nextButton.classList.add('text-3xl')
+				nextButton.classList.add('p-5')
 
 				prevButton.addEventListener('click', (e) => {
 					e.stopPropagation() // Prevent lightbox from closing
@@ -323,12 +228,13 @@ if (visibleAttachments.length > 0 && visibleAttachments.length < 4) {
 				})
 
 				lightbox.appendChild(prevButton)
+				lightbox.appendChild(media)
 				lightbox.appendChild(nextButton)
+			} else {
+				lightbox.appendChild(media)
 			}
 
-			lightbox.appendChild(media)
 			lightbox.appendChild(closeButton)
-
 			document.body.appendChild(lightbox)
 		}
 		mediaElements.forEach((el, index) => {
@@ -340,18 +246,4 @@ if (visibleAttachments.length > 0 && visibleAttachments.length < 4) {
 	})
 </script>
 
-<style>
-	.button--next,
-	.button--prev {
-		font-size: 2rem;
-		position: absolute;
-		top: calc(50% - 1rem);
-		z-index: 1010;
-	}
-	.button--prev {
-		left: 15px;
-	}
-	.button--next {
-		right: 35px;
-	}
-</style>
+<style></style>

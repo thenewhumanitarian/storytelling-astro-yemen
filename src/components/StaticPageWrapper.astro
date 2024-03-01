@@ -1,0 +1,232 @@
+---
+import { ViewTransitions } from 'astro:transitions'
+import Layout from '@layouts/Layout.astro'
+import Pergament from '@components/Pergament.astro'
+// import SEO from '@components/SEO.astro'
+// import BodySection from '@components/BodySection.astro'
+// import Message from '@components/Message.astro'
+
+const { lang } = Astro.props
+const dir = lang === 'ar' ? 'rtl' : 'ltr'
+---
+
+<Layout dark title='The Yemen Listening Project' header={true} switchViewButtons={false} overflow={'always'} dir={dir}>
+	<ViewTransitions />
+	<div class='fixed top-0 left-0 w-screen h-screen -z-1 pointer-events-none' id='stars'></div>
+	<div class='fixed top-0 left-0 w-screen h-screen -z-1 pointer-events-none' id='city'></div>
+	<section id='static-page-content' class='w-full max-w-5xl mx-auto py-6 sm:py-12 mb-8 sm:mb-24 px-4' dir={dir}>
+		<slot name='header' />
+		<Pergament classNames={`mt-12 px-3 sm:px-5 pb-0 sm:pb-3 sm:pt-2 bg-zinc-950 bg-opacity-90 max-w-3xl mx-auto`} lang={lang}>
+			<slot name='body' />
+		</Pergament>
+	</section>
+</Layout>
+
+<style is:global>
+	body * {
+		color: white;
+	}
+
+	#stars {
+		z-index: -1;
+		background: black;
+	}
+
+	#city {
+		z-index: -1;
+		background-image: url('https://assets.thenewhumanitarian.org/s3fs-public/styles/responsive_large/public/2023-06/night-sky-overlay_0.png.webp');
+		background-size: 100%;
+		background-position: center;
+		background-repeat: no-repeat;
+	}
+
+	@media screen and (max-width: 500px) {
+		#city {
+			background-position: bottom center;
+		}
+	}
+
+	.story-w a {
+		color: white;
+	}
+
+	#story-wrapper.en * {
+		text-align: left;
+	}
+
+	#story-wrapper.ar * {
+		text-align: right;
+	}
+
+	#story-wrapper code {
+		display: none;
+	}
+
+	/* Classes and keyframe animations for stars */
+	@keyframes STAR {
+		0% {
+			background: powderblue;
+			height: 1px;
+			width: 1px;
+			box-shadow: 0px 0px 10px white;
+		}
+
+		10% {
+			background: #b0e5de;
+		}
+
+		20% {
+			background: #b0e5cc;
+		}
+
+		30% {
+			background: #cce5b0;
+		}
+
+		40% {
+			background: #dae5b0;
+		}
+
+		50% {
+			background: #e5ddb0;
+			width: 4px;
+			height: 4px;
+			box-shadow: 0px 0px 10px #d3bd3d;
+		}
+
+		100% {
+			width: 1px;
+			height: 1px;
+			background: powderblue;
+			box-shadow: 0px 0px 10px white;
+		}
+	}
+
+	@keyframes pulse {
+		0% {
+			background: powderblue;
+			height: 1px;
+			width: 1px;
+			box-shadow: 0px 0px 10px white;
+		}
+
+		10% {
+			background: #b0e5de;
+		}
+
+		20% {
+			background: #b0e5cc;
+		}
+
+		30% {
+			background: #cce5b0;
+		}
+
+		40% {
+			background: #dae5b0;
+		}
+
+		50% {
+			background: #e5ddb0;
+			width: 4px;
+			height: 4px;
+			box-shadow: 0px 0px 10px #d3bd3d;
+		}
+
+		100% {
+			width: 1px;
+			height: 1px;
+			background: powderblue;
+			box-shadow: 0px 0px 10px white;
+		}
+	}
+
+	.star {
+		z-index: -1;
+		height: 1px;
+		width: 1px;
+		border-radius: 5px;
+		box-shadow: 0px 0px 10px white;
+		background: powderblue;
+		position: absolute;
+	}
+
+	.star.pulse {
+		z-index: 10;
+	}
+
+	.star.pulse.one {
+		-webkit-animation: STAR 1s infinite;
+		animation: STAR 1s infinite;
+		-moz-animation: STAR 1s infinite;
+	}
+
+	.star.pulse.two {
+		-webkit-animation: STAR 2s infinite;
+		animation: STAR 2s infinite;
+		-moz-animation: STAR 2s infinite;
+	}
+
+	.star.pulse.three {
+		-webkit-animation: STAR 3s infinite;
+		animation: STAR 3s infinite;
+		-moz-animation: STAR 3s infinite;
+	}
+
+	.star.pulse.four {
+		-webkit-animation: STAR 4s infinite;
+		animation: STAR 4s infinite;
+		-moz-animation: STAR 4s infinite;
+	}
+
+	.star.pulse.five {
+		-webkit-animation: STAR 5s infinite;
+		animation: STAR 5s infinite;
+		-moz-animation: STAR 5s infinite;
+	}
+
+	@media screen and (max-width: 768px) {
+		#language-buttons {
+			display: none;
+		}
+	}
+</style>
+
+<script define:vars={{ lang: lang }} is:inline>
+	/* Adds twinkling stars */
+	var NUMBER_OF_STARS = 100
+	if (window.innerWidth <= 500) {
+		NUMBER_OF_STARS = 25
+	}
+
+	var addPulse = function (element) {
+		var pulseTime = Math.random() * 10000
+		setTimeout(function () {
+			// console.log('asdf')
+			element.className += ' pulse'
+		}, pulseTime)
+	}
+
+	var starContainer = document.querySelector('#stars')
+	var starAnimationClassesArray = ['one', 'two', 'three', 'four', 'five']
+
+	function createStars() {
+		for (var jess = 0; jess < NUMBER_OF_STARS; jess++) {
+			setTimeout(() => {
+				var aStar = document.createElement('div')
+				var randomDuration = starAnimationClassesArray[Math.floor(Math.random() * starAnimationClassesArray.length)]
+				aStar.className = 'star ' + randomDuration
+				var windowWidth = window.innerWidth
+				var windowHeight = window.innerHeight - 90
+				var x = Math.random() * windowWidth
+				aStar.style.left = x + 'px'
+				starContainer.appendChild(aStar)
+				var y = Math.random() * windowHeight
+				aStar.style.top = y + 'px'
+				addPulse(aStar)
+			}, jess * 100)
+		}
+	}
+
+	createStars()
+</script>

@@ -1,0 +1,124 @@
+---
+import AttachmentImage from '@components/AttachmentImage.astro'
+import IconPlay from '@components/icons/Icon-play.astro'
+
+function categoriseAttachments(attachments) {
+	const categories = {
+		images: { items: [] },
+		videos: { items: [] },
+		documents: { items: [] },
+		audios: { items: [] },
+	}
+
+	if (attachments.length > 0) {
+		attachments.forEach((attachment) => {
+			const extension = attachment.split('.').pop().toLowerCase()
+
+			const attachmentObject = {
+				fileName: attachment,
+				type: extension,
+			}
+
+			switch (extension) {
+				case 'jpg':
+				case 'png':
+				case 'heic':
+					categories.images.items.push(attachmentObject)
+					break
+				case 'mp4':
+					categories.videos.items.push(attachmentObject)
+					break
+				case 'pdf':
+				case 'doc':
+				case 'docx':
+					categories.documents.items.push(attachmentObject)
+					break
+				case 'm4a':
+				case 'wav':
+				case 'mp3':
+					categories.audios.items.push(attachmentObject)
+					break
+			}
+		})
+	}
+
+	return categories
+}
+
+const categorisedAttachments = categoriseAttachments(attachments)
+
+// Flatten the categorisedAttachments for rendering
+const flattenedAttachments = [
+	...categorisedAttachments.images.items.map((item) => ({ ...item, category: 'image' })),
+	...categorisedAttachments.videos.items.map((item) => ({ ...item, category: 'video' })),
+	...categorisedAttachments.documents.items.map((item) => ({ ...item, category: 'document' })),
+	...categorisedAttachments.audios.items.map((item) => ({ ...item, category: 'audio' })),
+]
+
+const attachmentItemClassName = `
+group 
+relative 
+w-full 
+h-full 
+border-white 
+border-2 
+hover:scale-105 
+transition-all 
+cursor-pointer 
+flex 
+flex-col 
+gap-3
+items-center 
+justify-center 
+will-change-transform 
+bg-black
+cursor-pointer
+`
+
+// Variable with all the attachments of category image and video
+const visibleAttachments = [...categorisedAttachments.images.items, ...categorisedAttachments.videos.items]
+
+let attachmentContainerClasses = 'grid grid-cols-5 col-span-5 gap-3'
+
+if (visibleAttachments.length > 0 && visibleAttachments.length < 4) {
+	messageContainerClasses = 'col-span-5 md:col-span-4'
+	attachmentContainerClasses = 'grid md:flex grid-cols-3 md:flex-col col-span-5 md:col-span-1 gap-3'
+} else if (visibleAttachments.length === 10) {
+	messageContainerClasses = 'col-span-5'
+} else if (visibleAttachments.length === 9) {
+	messageContainerClasses = 'col-span-5'
+	attachmentContainerClasses = 'grid grid-cols-9 col-span-5 gap-3'
+} else if (visibleAttachments.length === 0) {
+	attachmentContainerClasses = 'hidden'
+}
+---
+
+<div class={`${attachmentContainerClasses}`}>
+	{
+		flattenedAttachments.map((attachment) => {
+			switch (attachment.category) {
+				// Render image attachments
+				case 'image':
+					return (
+						<div data-lightbox={attachment.fileName} data-type='image' class={`${attachmentItemClassName} basis-0`}>
+							<AttachmentImage fileName={attachment.fileName} />
+						</div>
+					)
+				case 'video':
+					// Render video attachments
+					return (
+						<div class={`${attachmentItemClassName} basis-0`} data-lightbox={attachment.fileName} data-type='video'>
+							<video class='w-full h-full' muted>
+								<source src={`/attachments/${attachment.fileName}`} type='video/mp4' />
+							</video>
+							<div class='group m-0 z-30 w-8 h-8 flex items-center justify-center absolute'>
+								<IconPlay />
+							</div>
+						</div>
+					)
+				default:
+					return null
+			}
+		})
+	}
+</div>

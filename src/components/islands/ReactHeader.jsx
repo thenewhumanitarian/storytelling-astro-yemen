@@ -1,5 +1,5 @@
 import { useStore } from '@nanostores/react';
-import { isMenuOverlayVisible } from '../../stores/globalState';
+import { isMenuOverlayVisible } from '@stores/globalState';
 
 const ReactHeader = () => {
   const $showOverlay = useStore(isMenuOverlayVisible);

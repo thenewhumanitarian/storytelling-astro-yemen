@@ -4,13 +4,13 @@ interface Props {
 	story: object
 }
 
-import { translations } from '../data/translations'
-import { STORY_DATA } from '../data/story_data'
+import { translations } from '@data/translations'
+import { STORY_DATA } from '@data/story_data'
 
-import EmailIcon from '../components/Icons/Icon-email.astro'
-import WhatsAppIcon from '../components/Icons/Icon-whatsapp.astro'
-import XIcon from '../components/Icons/Icon-x.astro'
-import FacebookIcon from '../components/Icons/Icon-facebook.astro'
+import EmailIcon from '@components/icons/Icon-email.astro'
+import WhatsAppIcon from '@components/icons/Icon-whatsapp.astro'
+import XIcon from '@components/icons/Icon-x.astro'
+import FacebookIcon from '@components/icons/Icon-facebook.astro'
 
 const { lang, story } = Astro.props as Props
 
@@ -31,7 +31,7 @@ const shareLinks = {
 	facebook: `https://www.facebook.com/sharer/sharer.php?u=${storyUrl}`,
 	// @ts-ignore
 	email: `mailto:?subject=${story.story[lang].title}&body=${storyUrl}`,
-	// @ts-ignoreƒ
+	// @ts-ignore
 	x: `https://twitter.com/intent/tweet?text=${story.story[lang].title}:%20${storyUrl}%20(@newhumanitarian)`,
 }
 ---

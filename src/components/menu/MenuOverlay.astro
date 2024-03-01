@@ -1,7 +1,9 @@
 ---
 // import HeaderLogo from './HeaderLogoSimple.astro'
-import Pergament from './Pergament.astro'
-import Logo from './Logo.astro'
+import Pergament from '@components/Pergament.astro'
+import Logo from '@components/header/Logo.astro'
+
+import static_pages from '@data/static_pages.json'
 
 let { lang } = Astro.params
 
@@ -24,37 +26,21 @@ const navButtonClasses = 'text-white font-bold text-base sm:text-xl lg:text-2xl 
 	transition:persist
 >
 	<div class='flex mt-5 sm:mt-0 justify-center sm:justify-center items-center sm:top-5 left-0 w-full'>
-		<div class='flex flex-col gap-5 sm:gap-8 items-center justify-center'>
+		<div class='flex flex-col gap-0 sm:gap-8 items-center justify-center'>
 			<div class='w-56 sm:w-80 md:w-96 h-auto'><Logo /></div>
-			absolute -top-1
 			<div class={navWrapperClasses}>
-				{
-					lang === 'ar' ? (
-						<nav class={navContainerClasses}>
-							<a href='/about' class={navButtonClasses}>
-								AR About
-							</a>
-							<a href='/feedback' class={navButtonClasses}>
-								AR Share
-							</a>
-							<a href='/share' class={navButtonClasses}>
-								AR AR Another link
-							</a>
-						</nav>
-					) : (
-						<nav class={navContainerClasses}>
-							<a href='/about' class={navButtonClasses}>
-								About
-							</a>
-							<a href='/feedback' class={navButtonClasses}>
-								Feedback
-							</a>
-							<a href='/share' class={navButtonClasses}>
-								Share
-							</a>
-						</nav>
-					)
-				}
+				<nav class={navContainerClasses}>
+					{
+						static_pages.links[lang].map((page) => {
+							const { className, href, text } = page
+							return (
+								<a href={`${href}`} class={`${navButtonClasses} ${className}`} data-astro-reload>
+									{text}
+								</a>
+							)
+						})
+					}
+				</nav>
 			</div>
 		</div>
 	</div>

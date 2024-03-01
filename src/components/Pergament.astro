@@ -14,7 +14,7 @@ if (!lang) {
 	const { path } = Astro.params
 
 	const pathParams = path?.toString().split('/')
-	lang = pathParams?.[0] || 'en'
+	lang = pathParams?.[0] || Astro.props.lang
 }
 
 const direction = lang === 'en' ? 'ltr' : 'rtl'
