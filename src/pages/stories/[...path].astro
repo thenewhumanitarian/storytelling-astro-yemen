@@ -1,17 +1,16 @@
 ---
 import { ViewTransitions } from 'astro:transitions'
-import NavButtons from '../../components/buttons/NavButtons.astro'
-import Layout from '../../layouts/Layout.astro'
-import Title from '../../components/Title.astro'
-import AuthorSection from '../../components/AuthorSection.astro'
-import TagList from '../../components/tags/TagList.astro'
-import BodySection from '../../components/BodySection.astro'
-import Message from '../../components/Message.astro'
-import ShareStory from '../../components/ShareStory.astro'
-import Soundcite from '../../components/Soundcite.astro'
-import SEO from '../../components/SEO.astro'
-
-import stories from '../../data/all_stories.json'
+import NavButtons from '@components/buttons/NavButtons.astro'
+import Layout from '@layouts/Layout.astro'
+import Title from '@components/Title.astro'
+import AuthorSection from '@components/AuthorSection.astro'
+import TagList from '@components/tags/TagList.astro'
+import BodySection from '@components/BodySection.astro'
+import Message from '@components/Message.astro'
+import ShareStory from '@components/ShareStory.astro'
+import Soundcite from '@components/Soundcite.astro'
+import SEO from '@components/SEO.astro'
+import stories from '@data/all_stories.json'
 
 // Read path parameters for language and slug
 const { path } = Astro.params
