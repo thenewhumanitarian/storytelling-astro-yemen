@@ -1,9 +1,11 @@
 ---
-import MenuIcon from './Menu.astro'
+// import MenuIcon from './Menu.astro'
 import HeaderLogo from './HeaderLogoSimple.astro'
-import FilterButtons from './Buttons/FilterButtons.astro'
-import SwitchViewButtons from './Buttons/SwitchViewButtons.astro'
-import LanguageButtons from './Buttons/LanguageButtons.astro'
+import FilterButtons from './buttons/FilterButtons.astro'
+import SwitchViewButtons from './buttons/SwitchViewButtons.astro'
+import LanguageButtons from './buttons/LanguageButtons.astro'
+
+import ReactHeader from '../components/islands/ReactHeader'
 
 export interface Props {
 	filterButtons?: boolean
@@ -31,9 +33,10 @@ if (!lang) {
 >
 	<div class='grid grid-cols-3 items-center px-6 w-full'>
 		<div class='flex justify-start gap-x-2 sm:gap-x-3 items-center'>
-			<div class={`${dark ? 'text-white' : 'text-black'} fill-current flex gap-3 items-center justify-start`}>
+			<ReactHeader client:load />
+			<!-- <div class={`${dark ? 'text-white' : 'text-black'} fill-current flex gap-3 items-center justify-start`}>
 				<MenuIcon />
-			</div>
+			</div> -->
 			{switchViewButtons && <SwitchViewButtons />}
 			{filterButtons && <FilterButtons />}
 		</div>
