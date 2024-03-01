@@ -5,11 +5,11 @@ export function getStaticPaths() {
 	return [{ params: { lang: 'en' } }, { params: { lang: 'ar' } }]
 }
 
-import Layout from '../layouts/Layout.astro'
-import StoryWrapper from '../components/StoryWrapper.astro'
-import SEO from '../components/SEO.astro'
+import Layout from '@layouts/Layout.astro'
+import StoryWrapper from '@components/StoryWrapper.astro'
+import SEO from '@components/SEO.astro'
 
-import stories from '../data/all_stories.json'
+import stories from '@data/all_stories.json'
 
 function shuffleArray(array) {
 	for (let i = array.length - 1; i > 0; i--) {

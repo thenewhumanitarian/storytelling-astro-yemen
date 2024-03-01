@@ -2,9 +2,12 @@
 import StaticPageWrapper from '@components/StaticPageWrapper.astro'
 import Title from '@components/Title.astro'
 import Subtitle from '@components/Subtitle.astro'
+import SEO from '@components/SEO.astro'
 
 const lang = 'ar'
 ---
+
+<SEO slot='seo' title={`The Yemen Listening Project`} description={'.حيثُ يتحدّث اليَمنيّون ويستمع العالمُ إليهم'} />
 
 <StaticPageWrapper lang={lang}>
 	<div slot='header'>

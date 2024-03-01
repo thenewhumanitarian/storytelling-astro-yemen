@@ -25,6 +25,9 @@
       ],
       "@content/*": [
         "src/content/*"
+      ],
+      "@styles/*": [
+        "src/styles/*"
       ]
     }
   }
