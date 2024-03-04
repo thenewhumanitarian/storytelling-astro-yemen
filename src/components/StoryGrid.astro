@@ -671,6 +671,8 @@ if (!lang) {
 			this.items.forEach((item, index) => {
 				item.setIndex(index)
 			})
+
+      Infinite.updateGridBackground('black')
 		}
 	}
 
@@ -682,7 +684,7 @@ if (!lang) {
 		const grid = optimalGridDimensions()
 		Infinite.setGrid(grid.cols, grid.rows).then(() => {
 			console.log('Grid loaded')
-			Infinite.updateGridBackground('black') // Add this line
+			Infinite.updateGridBackground('black')
 		})
 	})
 
