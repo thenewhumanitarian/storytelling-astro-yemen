@@ -210,8 +210,8 @@ if (!lang) {
 		filterGridBasedOnLocalStorage()
 
 		const grid = optimalGridDimensions()
+
 		Infinite.setGrid(grid.cols, grid.rows).then(() => {
-			console.log('Grid loaded')
 			Infinite.updateGridBackground('black') // Add this line
 		})
 	})
@@ -223,9 +223,11 @@ if (!lang) {
 		return text.substr(0, maxLength - 3) + '...' // Subtract 3 for the length of the ellipses
 	}
 
+	let allStories = []
+
 	/* Grid magic */
 	class GridItem {
-		constructor(index = 0) {
+		constructor(index) {
 			// Create anchor element for grid item as a container
 			this.item = document.createElement('a')
 
@@ -247,10 +249,13 @@ if (!lang) {
 				this.item.append(this.titleArabic)
 			}
 
+			this.visibleBeforeDrag = true
+
 			// Set index and add classes
-			this.index = index
+			// this.index = index)
+
 			this.item.classList.add('story-item')
-			this.setNewCard()
+			// this.setNewCard()
 		}
 
 		// Method to check if this item is highlighted
@@ -268,9 +273,41 @@ if (!lang) {
 			return this.item.querySelector('img') !== null
 		}
 
+		// Method to check if this item is within the viewport (or visible area)
+		checkVisibility() {
+			const rect = this.item.getBoundingClientRect()
+			const isVisible = (rect.top * 0.75) < window.innerHeight && rect.bottom > window.innerHeight * 0.25 // Simple visibility check
+
+			return isVisible
+		}
+
 		setNewCard() {
 			// Define vars to be used later
 			let story = stories[this.index % stories.length]
+
+			const visibleBeforeDrag = this.visibleBeforeDrag
+			const currentlyVisible = this.checkVisibility()
+
+			if (visibleBeforeDrag && currentlyVisible) {
+				// Keep story
+			} else if (visibleBeforeDrag && !currentlyVisible) {
+				// Keep story
+			} else {
+				// Select random story from stories array and store in story variable
+				story = stories[Math.floor(Math.random() * stories.length)]
+				// Add to allStories array if not already there
+				if (!allStories.includes(story.id)) {
+					allStories.push(story.id)
+				} else {
+					// If story is already in allStories array, select another random story
+					story = stories[Math.floor(Math.random() * stories.length)]
+				}
+				console.log('Number of loaded stories: ', allStories.length)
+        if (allStories.length === stories.length) {
+          console.log('All stories loaded')
+          console.log(allStories)
+        }
+			}
 
 			// Add both language titles
 			const titles = {
@@ -379,6 +416,9 @@ if (!lang) {
 			if (!this.isImageLoaded()) {
 				this.lazyLoadImage(story.storyImage.main, story.story[lang].title)
 			}
+
+			// Set to currently visible state for next drag
+			this.visibleBeforeDrag = this.checkVisibility()
 
 			// Add href to this grid item using slug
 			this.item.setAttribute('href', `/stories/${lang}/${story.slugs[lang]}`)
@@ -513,10 +553,10 @@ if (!lang) {
 			const touchDuration = Date.now() - this.touchStartTime
 
 			// Check duration and act accordingly
-			if (touchDuration < 100) {
+			if (touchDuration < 50) {
 				// This checks if the touch lasted less than 100ms
 				// This was a short tap
-				if (ev.target.tagName.toLowerCase() === 'a') {
+				if (ev.target.tagName.toLowerCase() === 'a' && touchDuration) {
 					const href = ev.target.getAttribute('href')
 					if (href) {
 						window.location = href
@@ -598,6 +638,11 @@ if (!lang) {
 			this.offsetX += xDelta
 			this.offsetY += yDelta
 
+			// Loop through all this.items elements and run checkVisibility method and then story this.isVisible in every item
+			this.items.forEach((item) => {
+				item.visibleBeforeDrag = item.checkVisibility()
+			})
+
 			// Move the grid back by 1 item whenever it goes over 1/2 of an item
 			// Making the movement invisible
 			const itemWidth = 100 / this.cols
@@ -672,21 +717,12 @@ if (!lang) {
 				item.setIndex(index)
 			})
 
-      Infinite.updateGridBackground('black')
+			// Infinite.updateGridBackground('black')
 		}
 	}
 
 	const grid = optimalGridDimensions()
 	const Infinite = new InfiniteGrid(grid.cols, grid.rows)
-
-	// Re-calculate when user resizes browser
-	window.addEventListener('resize', () => {
-		const grid = optimalGridDimensions()
-		Infinite.setGrid(grid.cols, grid.rows).then(() => {
-			console.log('Grid loaded')
-			Infinite.updateGridBackground('black')
-		})
-	})
 
 	function optimalGridDimensions(minSide = window.innerWidth > 640 ? 220 : 140) {
 		const width = window.innerWidth
@@ -719,4 +755,13 @@ if (!lang) {
 			rows: bestRows,
 		}
 	}
+
+	// Re-calculate when user resizes browser
+	window.addEventListener('resize', () => {
+		const grid = optimalGridDimensions()
+		Infinite.setGrid(grid.cols, grid.rows).then(() => {
+			console.log('Grid loaded')
+			Infinite.updateGridBackground('black')
+		})
+	})
 </script>
