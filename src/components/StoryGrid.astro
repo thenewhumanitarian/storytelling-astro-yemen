@@ -557,7 +557,7 @@ if (!lang) {
 			this.setGrid(nCol, nRow)
 
 			// Scroll wheel event listener
-			const SCROLL_DEBOUNCE = 50
+			const SCROLL_DEBOUNCE = 0
 			window.addEventListener('wheel', debounce(this.onScroll.bind(this), SCROLL_DEBOUNCE)) // Adjust debounce delay as needed
 		}
 
@@ -569,7 +569,7 @@ if (!lang) {
 			if (document.getElementById('grid').style.display === 'none') return
 
 			// Set scroll wheel threshold
-			const SCROLL_Y_THRESHOLD = 100
+			const SCROLL_Y_THRESHOLD = 0
 
 			const yDelta = deltaY
 			this.offsetY += yDelta
