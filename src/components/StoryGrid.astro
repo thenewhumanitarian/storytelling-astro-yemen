@@ -527,6 +527,23 @@ if (!lang) {
 			}
 		}
 	}
+
+	function debounce(func, wait, immediate) {
+		var timeout
+		return function () {
+			var context = this,
+				args = arguments
+			var later = function () {
+				timeout = null
+				if (!immediate) func.apply(context, args)
+			}
+			var callNow = immediate && !timeout
+			clearTimeout(timeout)
+			timeout = setTimeout(later, wait)
+			if (callNow) func.apply(context, args)
+		}
+	}
+
 	class InfiniteGrid {
 		constructor(nCol = 2, nRow = 2) {
 			this.grid = document.getElementById('grid')
@@ -538,10 +555,47 @@ if (!lang) {
 			// Overshoot items
 			this.items = []
 			this.setGrid(nCol, nRow)
+
+			// Scroll wheel event listener
+			const SCROLL_DEBOUNCE = 50
+			window.addEventListener('wheel', debounce(this.onScroll.bind(this), SCROLL_DEBOUNCE)) // Adjust debounce delay as needed
 		}
 
 		updateGridBackground(color) {
 			this.grid.style.backgroundColor = color
+		}
+
+		onScroll({ deltaY }) {
+			// Set scroll wheel threshold
+			const SCROLL_Y_THRESHOLD = 100
+
+			const yDelta = deltaY
+			this.offsetY += yDelta
+
+			const absoluteScrollY = Math.abs(deltaY)
+
+			console.log(SCROLL_Y_THRESHOLD, absoluteScrollY)
+			if (absoluteScrollY < SCROLL_Y_THRESHOLD) return
+
+			const itemHeight = 100 / this.rows
+			const pixelHeight = (itemHeight * window.innerHeight) / 100
+
+			let jumpY = null
+
+			if (Math.abs(this.offsetY) > pixelHeight / 2) {
+				this.offsetY -= pixelHeight * Math.sign(this.offsetY)
+				jumpY = Math.sign(this.offsetY)
+			}
+
+			if (jumpY) {
+				this.items.forEach((item) => {
+					if (jumpY) item.setIndex(this.shiftIndex(item.index + jumpY * (this.cols + 2)))
+				})
+				this.offsetY = 0
+			}
+
+			// Move grid by deltaY
+			this.grid.style.transform = `translate3d(${0}px,${deltaY}px,0)`
 		}
 
 		onDrag(xDelta, yDelta) {
