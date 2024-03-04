@@ -13,7 +13,7 @@ if (!lang) {
 
 <a class='block' href={`/stories/${lang}/${story.slugs[lang]}`} id={`story-tile--${story.id}`}>
 	<div
-		class={`flex group border-t sm:border-2 border-zinc-600 ${story.highlighted ? 'w-full pt-6 pb-3 sm:py-0 bg-black gap-x-2' : 'bg-black flex-row-reverse pb-0 pt-3 lg:max-w-3xl mx-auto'} px-3 sm:pt-3 w-full hover:bg-zinc-600 hover:border-white`}
+		class={`flex group border-t sm:border-2 border-zinc-400 ${story.highlighted ? 'w-full pt-6 pb-3 sm:py-0 bg-black gap-x-2' : 'bg-black flex-row-reverse pb-0 pt-3 lg:max-w-3xl mx-auto'} px-3 sm:pt-3 w-full hover:bg-zinc-600 hover:border-white`}
 	>
 		<div class={`relative mb-3 aspect-square ${story.highlighted ? 'w-64 lg:w-96' : 'w-32 lg:w-56'} overflow-hidden self-center`}>
 			<img src={`${story.storyImage.main}`} alt={story.story[lang].title} class='absolute top-0 left-0 w-full h-full object-cover aspect-square' />
