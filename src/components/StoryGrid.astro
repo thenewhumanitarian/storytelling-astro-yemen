@@ -302,11 +302,11 @@ if (!lang) {
 					// If story is already in allStories array, select another random story
 					story = stories[Math.floor(Math.random() * stories.length)]
 				}
-				console.log('Number of loaded stories: ', allStories.length)
-				if (allStories.length === stories.length) {
-					console.log('All stories loaded')
-					console.log(allStories)
-				}
+				// console.log('Number of loaded stories: ', allStories.length)
+				// if (allStories.length === stories.length) {
+				// 	console.log('All stories loaded')
+				// 	console.log(allStories)
+				// }
 			}
 
 			// Add both language titles
@@ -760,7 +760,7 @@ if (!lang) {
 	window.addEventListener('resize', () => {
 		const grid = optimalGridDimensions()
 		Infinite.setGrid(grid.cols, grid.rows).then(() => {
-			console.log('Grid loaded')
+			// console.log('Grid loaded')
 			Infinite.updateGridBackground('black')
 		})
 	})
