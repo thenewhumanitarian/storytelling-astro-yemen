@@ -276,7 +276,7 @@ if (!lang) {
 		// Method to check if this item is within the viewport (or visible area)
 		checkVisibility() {
 			const rect = this.item.getBoundingClientRect()
-			const isVisible = (rect.top * 0.75) < window.innerHeight && rect.bottom > window.innerHeight * 0.25 // Simple visibility check
+			const isVisible = rect.top * 0.75 < window.innerHeight && rect.bottom > window.innerHeight * 0.25 // Simple visibility check
 
 			return isVisible
 		}
@@ -303,10 +303,10 @@ if (!lang) {
 					story = stories[Math.floor(Math.random() * stories.length)]
 				}
 				console.log('Number of loaded stories: ', allStories.length)
-        if (allStories.length === stories.length) {
-          console.log('All stories loaded')
-          console.log(allStories)
-        }
+				if (allStories.length === stories.length) {
+					console.log('All stories loaded')
+					console.log(allStories)
+				}
 			}
 
 			// Add both language titles
