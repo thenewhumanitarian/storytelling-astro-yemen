@@ -63,8 +63,23 @@ if (!lang) {
   body {
     background: black;
 		background-image: url('https://assets.thenewhumanitarian.org/s3fs-public/styles/responsive_large/public/2023-06/night-sky-overlay_0.png.webp');
-		background-size: 100%;
+		background-size: cover;
+    background-position: center;
 		background-repeat: no-repeat;
     background-attachment: fixed;
   }
+
+  #city {
+		z-index: -1;
+		background-image: url('https://assets.thenewhumanitarian.org/s3fs-public/styles/responsive_large/public/2023-06/night-sky-overlay_0.png.webp');
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+	}
+
+	@media screen and (max-width: 500px) {
+		#city {
+			background-position: bottom center;
+		}
+	}
 </style>
