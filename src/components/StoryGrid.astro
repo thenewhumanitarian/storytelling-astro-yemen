@@ -566,6 +566,8 @@ if (!lang) {
 		}
 
 		onScroll({ deltaY }) {
+			if (document.getElementById('grid').style.display === 'none') return
+
 			// Set scroll wheel threshold
 			const SCROLL_Y_THRESHOLD = 100
 
