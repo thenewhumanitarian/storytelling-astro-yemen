@@ -551,14 +551,14 @@ if (!lang) {
 			this.Drag = new Drag(this.container, this.onDrag.bind(this))
 			this.offsetX = 0
 			this.offsetY = 0
+			this.SCROLL_DEBOUNCE = 0
 
 			// Overshoot items
 			this.items = []
 			this.setGrid(nCol, nRow)
 
 			// Scroll wheel event listener
-			const SCROLL_DEBOUNCE = 0
-			window.addEventListener('wheel', debounce(this.onScroll.bind(this), SCROLL_DEBOUNCE)) // Adjust debounce delay as needed
+			window.addEventListener('wheel', debounce(this.onScroll.bind(this), this.SCROLL_DEBOUNCE)) // Adjust debounce delay as needed
 		}
 
 		updateGridBackground(color) {
@@ -568,36 +568,30 @@ if (!lang) {
 		onScroll({ deltaY }) {
 			if (document.getElementById('grid').style.display === 'none') return
 
-			// Set scroll wheel threshold
-			const SCROLL_Y_THRESHOLD = 0
+			const SCROLL_Y_THRESHOLD = 25
 
 			const yDelta = deltaY
 			this.offsetY += yDelta
 
-			const absoluteScrollY = Math.abs(deltaY)
+			if (Math.abs(yDelta) < SCROLL_Y_THRESHOLD) return
 
-			console.log(SCROLL_Y_THRESHOLD, absoluteScrollY)
-			if (absoluteScrollY < SCROLL_Y_THRESHOLD) return
+			// Determine the scroll direction
+			const direction = deltaY > 0 ? 1 : -1
 
-			const itemHeight = 100 / this.rows
-			const pixelHeight = (itemHeight * window.innerHeight) / 100
+			// Calculate the jump based on the direction of the scroll
+			let jumpY = direction * Math.floor(Math.abs(Math.abs(yDelta)) / (100 / this.rows)) // Adjust the divisor based on your item height
 
-			let jumpY = null
-
-			if (Math.abs(this.offsetY) > pixelHeight / 2) {
-				this.offsetY -= pixelHeight * Math.sign(this.offsetY)
-				jumpY = Math.sign(this.offsetY)
-			}
-
-			if (jumpY) {
+			if (jumpY !== 0) {
 				this.items.forEach((item) => {
-					if (jumpY) item.setIndex(this.shiftIndex(item.index + jumpY * (this.cols + 2)))
+					item.setIndex(this.shiftIndex(item.index + jumpY * this.cols))
 				})
+
+				// Reset offsetY after recalculating the indexes to avoid infinite growth
 				this.offsetY = 0
 			}
 
-			// Move grid by deltaY
-			this.grid.style.transform = `translate3d(${0}px,${deltaY}px,0)`
+			// Update the grid position to reflect the new content
+			this.grid.style.transform = `translate3d(0px, ${this.offsetY}px, 0)`
 		}
 
 		onDrag(xDelta, yDelta) {
