@@ -1,0 +1,27 @@
+<script type='module'>
+	document.addEventListener('DOMContentLoaded', () => {
+		const lang = localStorage.getItem('lang')
+		let view = localStorage.getItem('currentView')
+
+		if (!view || view === '') {
+			if (window.innerWidth < 500) {
+				view = 'list'
+			}
+			view = 'grid'
+		}
+
+		const preferredLang = lang || navigator.language || navigator.userLanguage
+		let redirectPath = `/en/${view}` // Default to English
+
+		// Example logic to determine redirection path
+		if (preferredLang.startsWith('ar')) {
+			redirectPath = `/ar/${view}` // Default to English
+		}
+		// More conditions can be added here for other languages
+
+		// Redirect if not already on the preferred language path
+		if (!window.location.pathname.startsWith(redirectPath)) {
+			window.location.pathname = redirectPath
+		}
+	})
+</script>

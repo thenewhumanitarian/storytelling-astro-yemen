@@ -5,13 +5,19 @@ const inactiveClasses = 'bg-black text-white hover:bg-white hover:text-burgundy'
 const { links } = Astro.props
 
 let { lang } = Astro.params
+
+const { path } = Astro.params
+const pathParams = path?.toString().split('/')
+
 if (!lang) {
 	// Read path parameters for language and slug
-	const { path } = Astro.params
-
 	const pathParams = path?.toString().split('/')
 	lang = pathParams?.[0] || 'en'
 }
+
+const view = path?.toString().split('/')?.[1] || 'grid'
+
+// console.log(view)
 
 import { translations } from '@data/translations'
 ---
@@ -20,7 +26,7 @@ import { translations } from '@data/translations'
 	<a
 		data-astro-reload
 		id='language-button--en'
-		href=`${links.en || '/en'}`
+		href=`${links.en || '/en/' + view}`
 		class=`transition-colors duration-150 relative -ml-px inline-flex items-center rounded-r-xs px-3 py-1 text-xs sm:text-sm font-semibold text-white ring-1 ring-inset ring-gray-300 focus:z-10 ${lang === 'en' ? activeClasses : inactiveClasses }`
 	>
 		{translations.english['en']}
@@ -28,7 +34,7 @@ import { translations } from '@data/translations'
 	<a
 		data-astro-reload
 		id='language-button--ar'
-		href=`${links.ar || '/ar'}`
+		href=`${links.ar || '/ar/' + view}`
 		class=`transition-colors duration-150 relative inline-flex items-center rounded-l-xs px-3 py-2 text-xs sm:text-sm font-semibold text-white ring-1 ring-inset ring-gray-300 focus:z-10 ${lang === 'ar' ? activeClasses : inactiveClasses }`
 	>
 		{translations.arabic['ar']}

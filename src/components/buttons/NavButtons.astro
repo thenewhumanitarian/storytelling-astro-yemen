@@ -42,7 +42,7 @@ const className = `transition-colors duration-150 relative inline-flex gap-x-2 i
 
 {
 	button === 'overview' && (
-		<a href={`${href || lang === 'ar' ? '/ar' : '/en'}`} target='_self' data-astro-prefetch data-astro-reload>
+		<a href={`${href || lang === 'ar' ? '/ar' : '/en'}`} target='_self' data-astro-prefetch data-astro-reload id='overview-button'>
 			<button class={className} id='overview-button'>
 				<>
 					<span class='group-hover:text-burgundy inline text-xs sm:text-sm'>
@@ -74,3 +74,26 @@ const className = `transition-colors duration-150 relative inline-flex gap-x-2 i
 		z-index: 0;
 	}
 </style>
+
+<script define:vars={{ lang }}>
+	document.addEventListener('DOMContentLoaded', () => {
+		// Read localStorage.getItem('currentView') and adjust the overview button accordingly, if it exists
+		const currentView = localStorage.getItem('currentView')
+		const overviewButton = document.getElementById('overview-button')
+		if (currentView === 'list' && overviewButton) {
+			overviewButton.setAttribute('href', `/${lang}/list`)
+		} else {
+			overviewButton.setAttribute('href', `/${lang}/grid`)
+		}
+	})
+	document.addEventListener('astro:page-load', () => {
+		// Read localStorage.getItem('currentView') and adjust the overview button accordingly, if it exists
+		const currentView = localStorage.getItem('currentView')
+		const overviewButton = document.getElementById('overview-button')
+		if (currentView === 'list' && overviewButton) {
+			overviewButton.setAttribute('href', `/${lang}/list`)
+		} else {
+			overviewButton.setAttribute('href', `/${lang}/grid`)
+		}
+	})
+</script>

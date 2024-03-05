@@ -25,6 +25,29 @@ const { stories, tags, view } = Astro.props
 }
 
 {
+	view === 'grid' && (
+		<>
+			{/* Story grid view */}
+			<div class={`stories-container--grid`} id='stories-container--grid'>
+				<StoryGrid stories={stories} />
+			</div>
+		</>
+	)
+}
+
+{
+	view === 'list' && (
+		<>
+			{/* Story list view */}
+			<div class={`stories-container--list mt-[8rem] lg:mt-20 pt-0 sm:py-12`} id='stories-container--list bg-black'>
+				<div id='city' class='top-0 left-0 fixed w-full h-full -z-1' />
+				<StoryList stories={stories} />
+			</div>
+		</>
+	)
+}
+
+{
 	view === 'tags' && (
 		<>
 			{/* Story list view */}

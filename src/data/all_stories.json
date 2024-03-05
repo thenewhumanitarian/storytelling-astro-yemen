@@ -6,8 +6,8 @@
       "ar": ""
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-31.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-31.png"
+      "main": "/images/placeholder_images/puzzle-14.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-14.png"
     },
     "personalInfo": {
       "en": {
@@ -51,7 +51,7 @@
     "followUpRequired": false,
     "contacted": false,
     "contactedBeforePublication": false,
-    "englishEdited": true
+    "englishEdited": false
   },
   {
     "id": "27",
@@ -60,8 +60,8 @@
       "ar": ""
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-02.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-02.png"
+      "main": "/images/placeholder_images/puzzle-08.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-08.jpg"
     },
     "personalInfo": {
       "en": {
@@ -107,7 +107,7 @@
     "followUpRequired": false,
     "contacted": false,
     "contactedBeforePublication": false,
-    "englishEdited": true
+    "englishEdited": false
   },
   {
     "id": "35",
@@ -150,7 +150,8 @@
     },
     "tags": [
       "Education",
-      "Jobs"
+      "Jobs",
+      "salaries"
     ],
     "attachments": [
       "35-1.png",
@@ -167,7 +168,7 @@
     "followUpRequired": false,
     "contacted": false,
     "contactedBeforePublication": false,
-    "englishEdited": true
+    "englishEdited": false
   },
   {
     "id": "36",
@@ -176,8 +177,8 @@
       "ar": ""
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-09.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-09.jpg"
+      "main": "/images/placeholder_images/puzzle-06.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-06.jpg"
     },
     "personalInfo": {
       "en": {
@@ -224,7 +225,7 @@
     "followUpRequired": false,
     "contacted": false,
     "contactedBeforePublication": false,
-    "englishEdited": true
+    "englishEdited": false
   },
   {
     "id": "37",
@@ -233,8 +234,8 @@
       "ar": ""
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-16.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-16.png"
+      "main": "/images/placeholder_images/puzzle-25.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-25.jpg"
     },
     "personalInfo": {
       "en": {
@@ -281,60 +282,6 @@
     "followUpRequired": false,
     "contacted": false,
     "contactedBeforePublication": false,
-    "englishEdited": true
-  },
-  {
-    "id": "38",
-    "slugs": {
-      "en": "en-story-38",
-      "ar": "ar-story-38"
-    },
-    "storyImage": {
-      "main": "/images/placeholder_images/puzzle-05.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-05.png"
-    },
-    "personalInfo": {
-      "en": {
-        "name": "",
-        "surname": "",
-        "whereFrom": "",
-        "livingIn": ""
-      },
-      "ar": {
-        "name": "عبدربه حسين صالح العباسي",
-        "surname": "ابوغسان العباسي",
-        "whereFrom": "اليمن. محافظة البيضاء. رداع . عزلة آل عباس",
-        "livingIn": "اليمن. محافظة البيضاء. رداع . عزلة آل عباسفي"
-      }
-    },
-    "contact": {
-      "email": "abbasiyemen@gmail.com",
-      "phone": "967734390590",
-      "age": "51"
-    },
-    "story": {
-      "en": {
-        "title": "",
-        "content": "English text"
-      },
-      "ar": {
-        "title": "",
-        "content": "في٢٠١٤ كنا ننتظر تنفيذ مخرجات الحوار الوطني الشامل .والاستفتاء على الدستور الجديد وانتخاب ممثلي سلطات الدولة وقيام دولتنا المدنية الحديثة ودخول المستقبل والعيش بكرامة. \nوفجأة يتحالف النظام السابق مع جماعة الحوثي المتعاونة مع ايران وإسقاط العاصمة والسيطرة على مفاصل الدولة واحتجاز الممثلي الدولة من الئيس حتى النواب والسيطرة على البلاد ودخولنا حرب اهلية بسبب النظام السابق وجماعة الحوثي ودخول التحالف بعد ذلك ودخلنا في حرب اطرافها الحوثي والرئيس السابق ضد الشعب اليمني والدولة الشرعية والتحالف..\nواصبحنا افقردولة في العالم ونهب الحوثيون كل شيء. \nعارضنا الانقلاب واعتقلوا اقاربنا وقطعوا المرتب واصبحنا في إقامة جبرية داخل بيتنا منذ ٢٠١٥حتى الان. صرفنا مدخراتنا وفقدنا مركزنا الوظيفي وبعنا كل شيء حتى وصلنا الى حافة المجاعة.\nتوقف تعليم اطفالي ٤بنات وولد . وتوقفت ٣مدارسنا وتحاصرنا خوف اعتقالي بسبب مناهضتي لهذه الجماعة الارهابية الارهابية الحوثية الايرانية واشتغل ابني الصغير السن ١٥عاما في العمر لتوفير قليل من المصاريف. والمساعدات والديون وفرت قليل أيضا. \nفقدت حريتي ومعاشي ووظيفتي ومنصبي ومدخراتي وتعليم اولادي وتعرضنا للخوف والمعاناة طوال ٨سنوات ونحن  نتوقع هجوم الحوثيين على البيت لاعتقالي . ولكن الوساطات منعت الاعتقال وانا رفضت التوقف عبر حساباتي على الفيس بوك\nhttps://www.facebook.com/abbasiyemen?mibextid=ZbWKwL\n\nhttps://www.facebook.com/profile.php?id=100063987854965&mibextid=ZbWKwL\nوستجدون كل التفاصيل فيهما وحساب تويتر تم اغلاقه بسبب بلاغات الفاسدين الحوثيين وانصار النظام السابق..\nوتم القضاء على بلادنا بالحوثيين وانصار النظام السابق وبسبب إنحراف التحالف عن اهدف مجيئة واصبح له اطماع قريبة من العدو الحقيقي الحوثي الايراني الارهابي ..\nتم تدمير حياتنا وبلدنا واطفالنا وكل مقومات حياتنا."
-      }
-    },
-    "tags": [],
-    "attachments": [],
-    "audioReadouts": {
-      "en": null,
-      "ar": null
-    },
-    "highlighted": false,
-    "languageOfSubmission": "Arabic",
-    "location": "",
-    "methodOfSubmission": "MachForm",
-    "followUpRequired": false,
-    "contacted": false,
-    "contactedBeforePublication": false,
     "englishEdited": false
   },
   {
@@ -344,8 +291,8 @@
       "ar": "ar-story-39"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-24.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-24.png"
+      "main": "/images/placeholder_images/puzzle-12.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-12.png"
     },
     "personalInfo": {
       "en": {
@@ -398,8 +345,8 @@
       "ar": ""
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-13.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-13.jpg"
+      "main": "/images/placeholder_images/puzzle-02.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-02.png"
     },
     "personalInfo": {
       "en": {
@@ -433,7 +380,9 @@
     "tags": [
       "Jobs",
       "Exile",
-      "Mental Health"
+      "Mental Health",
+      "bombing",
+      "violence"
     ],
     "attachments": [],
     "audioReadouts": {
@@ -447,7 +396,7 @@
     "followUpRequired": false,
     "contacted": false,
     "contactedBeforePublication": false,
-    "englishEdited": true
+    "englishEdited": false
   },
   {
     "id": "41",
@@ -456,8 +405,8 @@
       "ar": "ar-story-41"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-14.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-14.png"
+      "main": "/images/placeholder_images/puzzle-14.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-14.jpg"
     },
     "personalInfo": {
       "en": {
@@ -489,7 +438,8 @@
       }
     },
     "tags": [
-      "Exile"
+      "exile",
+      "family"
     ],
     "attachments": [],
     "audioReadouts": {
@@ -503,7 +453,7 @@
     "followUpRequired": false,
     "contacted": false,
     "contactedBeforePublication": false,
-    "englishEdited": true
+    "englishEdited": false
   },
   {
     "id": "42",
@@ -512,8 +462,8 @@
       "ar": "ar-story-42"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-12.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-12.jpg"
+      "main": "/images/placeholder_images/puzzle-01.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-01.png"
     },
     "personalInfo": {
       "en": {
@@ -560,7 +510,7 @@
     "followUpRequired": false,
     "contacted": false,
     "contactedBeforePublication": false,
-    "englishEdited": true
+    "englishEdited": false
   },
   {
     "id": "43",
@@ -569,8 +519,8 @@
       "ar": "ar-story-43"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-03.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-03.png"
+      "main": "/images/placeholder_images/puzzle-11.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-11.png"
     },
     "personalInfo": {
       "en": {
@@ -602,8 +552,7 @@
       }
     },
     "tags": [
-      "Education",
-      "Exile"
+      "education"
     ],
     "attachments": [],
     "audioReadouts": {
@@ -617,7 +566,7 @@
     "followUpRequired": false,
     "contacted": false,
     "contactedBeforePublication": false,
-    "englishEdited": true
+    "englishEdited": false
   },
   {
     "id": "44",
@@ -626,8 +575,8 @@
       "ar": "ar-story-44"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-10.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-10.png"
+      "main": "/images/placeholder_images/puzzle-11.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-11.jpg"
     },
     "personalInfo": {
       "en": {
@@ -639,7 +588,7 @@
       "ar": {
         "name": "س.أ.",
         "surname": "",
-        "whereFrom": "صنعاء-اليمن",
+        "whereFrom": "صنعاء",
         "livingIn": "هولندا"
       }
     },
@@ -659,7 +608,8 @@
       }
     },
     "tags": [
-      "Exile"
+      "exile",
+      "family"
     ],
     "attachments": [],
     "audioReadouts": {
@@ -673,7 +623,7 @@
     "followUpRequired": false,
     "contacted": false,
     "contactedBeforePublication": false,
-    "englishEdited": true
+    "englishEdited": false
   },
   {
     "id": "45",
@@ -682,20 +632,20 @@
       "ar": "ar-story-45"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-14.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-14.png"
+      "main": "/images/placeholder_images/puzzle-31.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-31.jpg"
     },
     "personalInfo": {
       "en": {
         "name": "Ali",
         "surname": "Mansour al-Khayat",
-        "whereFrom": "Almahwit-Yemen",
+        "whereFrom": "al-Mahwit",
         "livingIn": "Saudi Arabia"
       },
       "ar": {
         "name": "علي",
         "surname": "منصور الخياطي",
-        "whereFrom": "اليمن محافظة المحويت",
+        "whereFrom": "المحويت",
         "livingIn": "المملكة العربية السعودية"
       }
     },
@@ -715,8 +665,7 @@
       }
     },
     "tags": [
-      "Job",
-      "Family"
+      "jobs"
     ],
     "attachments": [],
     "audioReadouts": {
@@ -730,7 +679,7 @@
     "followUpRequired": false,
     "contacted": false,
     "contactedBeforePublication": false,
-    "englishEdited": true
+    "englishEdited": false
   },
   {
     "id": "46",
@@ -739,8 +688,8 @@
       "ar": "ar-story-46"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-22.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-22.png"
+      "main": "/images/placeholder_images/puzzle-28.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-28.jpg"
     },
     "personalInfo": {
       "en": {
@@ -772,9 +721,9 @@
       }
     },
     "tags": [
-      "Exile",
-      "Displacement",
-      "Family"
+      "jobs",
+      "displacement",
+      "family"
     ],
     "attachments": [],
     "audioReadouts": {
@@ -783,60 +732,6 @@
     },
     "highlighted": false,
     "languageOfSubmission": "English",
-    "location": "",
-    "methodOfSubmission": "MachForm",
-    "followUpRequired": false,
-    "contacted": false,
-    "contactedBeforePublication": false,
-    "englishEdited": true
-  },
-  {
-    "id": "47",
-    "slugs": {
-      "en": "en-story-47",
-      "ar": "ar-story-47"
-    },
-    "storyImage": {
-      "main": "/images/placeholder_images/puzzle-16.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-16.jpg"
-    },
-    "personalInfo": {
-      "en": {
-        "name": "علي عبدالرحمن علي الحمادي",
-        "surname": "الحمادي",
-        "whereFrom": "",
-        "livingIn": ""
-      },
-      "ar": {
-        "name": "",
-        "surname": "",
-        "whereFrom": "صنعاء",
-        "livingIn": "صنعاء"
-      }
-    },
-    "contact": {
-      "email": "alialhammadi2015@gmail.com",
-      "phone": "775100219",
-      "age": "26"
-    },
-    "story": {
-      "en": {
-        "title": "",
-        "content": "English text"
-      },
-      "ar": {
-        "title": "",
-        "content": "لا تعليق"
-      }
-    },
-    "tags": [],
-    "attachments": [],
-    "audioReadouts": {
-      "en": null,
-      "ar": null
-    },
-    "highlighted": false,
-    "languageOfSubmission": "Arabic",
     "location": "",
     "methodOfSubmission": "MachForm",
     "followUpRequired": false,
@@ -851,8 +746,8 @@
       "ar": "ar-story-48"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-22.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-22.jpg"
+      "main": "/images/placeholder_images/puzzle-04.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-04.jpg"
     },
     "personalInfo": {
       "en": {
@@ -884,16 +779,15 @@
       }
     },
     "tags": [
-      "Jobs",
-      "Education",
-      "Violence"
+      "education",
+      "violence"
     ],
     "attachments": [],
     "audioReadouts": {
       "en": null,
       "ar": null
     },
-    "highlighted": false,
+    "highlighted": true,
     "languageOfSubmission": "English",
     "location": "",
     "methodOfSubmission": "MachForm",
@@ -960,7 +854,7 @@
     "followUpRequired": false,
     "contacted": false,
     "contactedBeforePublication": false,
-    "englishEdited": true
+    "englishEdited": false
   },
   {
     "id": "50",
@@ -969,8 +863,8 @@
       "ar": "ar-story-50"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-21.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-21.jpg"
+      "main": "/images/placeholder_images/puzzle-20.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-20.jpg"
     },
     "personalInfo": {
       "en": {
@@ -982,7 +876,7 @@
       "ar": {
         "name": "عبدالله",
         "surname": "علي",
-        "whereFrom": "اليمن، محافظة إب",
+        "whereFrom": "إب",
         "livingIn": "صنعاء"
       }
     },
@@ -1002,9 +896,8 @@
       }
     },
     "tags": [
-      "Jobs",
-      "Economy",
-      "Salaries"
+      "salaries",
+      "economy"
     ],
     "attachments": [],
     "audioReadouts": {
@@ -1018,7 +911,7 @@
     "followUpRequired": false,
     "contacted": false,
     "contactedBeforePublication": false,
-    "englishEdited": true
+    "englishEdited": false
   },
   {
     "id": "51",
@@ -1040,7 +933,7 @@
       "ar": {
         "name": "اماني مطهر",
         "surname": "",
-        "whereFrom": "اليمن اب",
+        "whereFrom": "اب",
         "livingIn": "صنعاء"
       }
     },
@@ -1060,8 +953,8 @@
       }
     },
     "tags": [
-      "Jobs",
-      "Salaries"
+      "family",
+      "salaries"
     ],
     "attachments": [],
     "audioReadouts": {
@@ -1075,7 +968,7 @@
     "followUpRequired": false,
     "contacted": false,
     "contactedBeforePublication": false,
-    "englishEdited": true
+    "englishEdited": false
   },
   {
     "id": "52",
@@ -1084,13 +977,13 @@
       "ar": "ar-story-52"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-19.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-19.png"
+      "main": "/images/placeholder_images/puzzle-06.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-06.jpg"
     },
     "personalInfo": {
       "en": {
         "name": "M.",
-        "surname": "Al-Eryani",
+        "surname": "al-Eryani",
         "whereFrom": "Sana'a",
         "livingIn": "Sana'a"
       },
@@ -1098,7 +991,7 @@
         "name": "م",
         "surname": "الارياني",
         "whereFrom": "صنعاء، اليمن",
-        "livingIn": "صنعاء، اليمن"
+        "livingIn": "صنعاء"
       }
     },
     "contact": {
@@ -1117,7 +1010,8 @@
       }
     },
     "tags": [
-      "Jobs"
+      "jobs",
+      "economy"
     ],
     "attachments": [],
     "audioReadouts": {
@@ -1131,7 +1025,7 @@
     "followUpRequired": false,
     "contacted": false,
     "contactedBeforePublication": false,
-    "englishEdited": true
+    "englishEdited": false
   },
   {
     "id": "53",
@@ -1196,8 +1090,8 @@
       "ar": "ar-story-54"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-17.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-17.jpg"
+      "main": "/images/placeholder_images/puzzle-02.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-02.jpg"
     },
     "personalInfo": {
       "en": {
@@ -1210,7 +1104,7 @@
         "name": "مالك",
         "surname": "لوكه",
         "whereFrom": "إب",
-        "livingIn": "بلد آخر غير اليمن"
+        "livingIn": "خارج اليمن"
       }
     },
     "contact": {
@@ -1228,7 +1122,10 @@
         "content": "الحرب نزعت مني حُلمي الذي كنُت اركض وراءه، كان هدفي انهاء الماجستير ومن ثم دخولي معهد العالي للقضاء إلا أن لعنة الحرب ابعدتني عن الوطن لاعيش مع كابوس الحلم!"
       }
     },
-    "tags": [],
+    "tags": [
+      "education",
+      "exile"
+    ],
     "attachments": [],
     "audioReadouts": {
       "en": null,
@@ -1317,18 +1214,18 @@
       "ar": "ar-story-56"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-22.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-22.png"
+      "main": "/images/placeholder_images/puzzle-15.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-15.jpg"
     },
     "personalInfo": {
       "en": {
-        "name": "SA",
+        "name": "S.A.",
         "surname": "Yafia",
         "whereFrom": "Yafa Yemen",
         "livingIn": "Birmingham, UK"
       },
       "ar": {
-        "name": "س. ا",
+        "name": "س. ا.",
         "surname": "يافعي",
         "whereFrom": "يافع-اليمن",
         "livingIn": "برمنجهام -الولايات المتحدة البريطانية"
@@ -1365,7 +1262,7 @@
     "followUpRequired": false,
     "contacted": false,
     "contactedBeforePublication": false,
-    "englishEdited": true
+    "englishEdited": false
   },
   {
     "id": "57",
@@ -1374,8 +1271,8 @@
       "ar": "ar-story-57"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-02.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-02.jpg"
+      "main": "/images/placeholder_images/puzzle-01.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-01.png"
     },
     "personalInfo": {
       "en": {
@@ -1428,20 +1325,20 @@
       "ar": ""
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-13.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-13.png"
+      "main": "/images/placeholder_images/puzzle-22.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-22.png"
     },
     "personalInfo": {
       "en": {
         "name": "Hanan",
         "surname": "Hussein",
-        "whereFrom": "Aden-Yemen",
+        "whereFrom": "Aden",
         "livingIn": "Aden"
       },
       "ar": {
         "name": "حنان",
         "surname": "حسين",
-        "whereFrom": "عدن/ اليمن",
+        "whereFrom": "عدن",
         "livingIn": "عدن"
       }
     },
@@ -1476,7 +1373,7 @@
     "followUpRequired": false,
     "contacted": false,
     "contactedBeforePublication": false,
-    "englishEdited": true
+    "englishEdited": false
   },
   {
     "id": "59",
@@ -1485,18 +1382,18 @@
       "ar": "ar-story-59"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-17.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-17.jpg"
+      "main": "/images/placeholder_images/puzzle-21.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-21.jpg"
     },
     "personalInfo": {
       "en": {
-        "name": "S",
+        "name": "S.",
         "surname": "Sala",
         "whereFrom": "Taiz",
         "livingIn": "Sana'a"
       },
       "ar": {
-        "name": "س",
+        "name": "س.",
         "surname": "سلا",
         "whereFrom": "تعز",
         "livingIn": "صنعاء"
@@ -1517,7 +1414,10 @@
         "content": "لقد غيرت الحرب الجميع وكل شيء. لقد غيرت حياتي كلها. لقد غيرت الطريقة التي أرى بها الأشياء. لقد تعلمت ألا أعتبر الأشياء اليومية أمرا مفروغا منه، مثل الماء والكهرباء والغذاء والمال والسلام. لقد تعلمت أيضًا أن أعيش مع الخوف وأقبله. كلما سمعنا الطائرات، كنا ننتظر القنابل. فخلال العام بعد مغادرتي من اليمن، أتذكر أنه في كل مرة سمعت صوت طائرات، اعتقدت أن قنبلة قد تكون على وشك الوصول. \nكوني امرأة، جلبت الحرب المزيد من القيود والتحديات إلى حياتي. إن العيش في مكان لا توجد فيه قوانين أو أنظمة لحماية شعبه أمر لا يطاق. وكذلك عدم القدرة على الحلم بأيام جيدة لأن كل يوم يصبح أكثر صعوبة وتعقيدًا. لا تشعر أبدًا بالأمن والأمان.\nلقد كانت الحرب قاسية بشكل خاص على الأطفال. يضطرون إلى قضاء فترة الصباح في جمع المياه، وغالبًا ما لا يحصلون إلا على قدر ضئيل للغاية أو لا يحصلون على أي شيء، مثل الغذاء أو الدواء أو الذهاب الى المدرسة. من المحزن أن نرى الأطفال يتسولون لأنهم يحاولون مساعدة أسرهم في الحصول على الطعام. بالنسبة لي، كان الشعور بعدم القدرة على المساعدة يعني الحزن المستمر والإحباط.\nلا ينبغي لأحد أن يتحمل هذه الظروف، ومع ذلك، للأسف، لا يزال العديد من اليمنيين يتحملون هذه الظروف. والأمر الأكثر إحباطًا هو السفر إلى الخارج وإدراك أن معظم الناس لم يسمعوا حتى عن اليمن، ناهيك عن الصراع والظروف الصعبة التي يعيشها الناس. إنه أمر محبط للغاية.\n"
       }
     },
-    "tags": [],
+    "tags": [
+      "bombing",
+      "economy"
+    ],
     "attachments": [],
     "audioReadouts": {
       "en": null,
@@ -1530,7 +1430,7 @@
     "followUpRequired": false,
     "contacted": false,
     "contactedBeforePublication": false,
-    "englishEdited": true
+    "englishEdited": false
   },
   {
     "id": "60",
@@ -1539,8 +1439,8 @@
       "ar": "ar-story-60"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-09.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-09.png"
+      "main": "/images/placeholder_images/puzzle-06.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-06.jpg"
     },
     "personalInfo": {
       "en": {
@@ -1593,8 +1493,8 @@
       "ar": "ar-story-61"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-17.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-17.png"
+      "main": "/images/placeholder_images/puzzle-05.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-05.png"
     },
     "personalInfo": {
       "en": {
@@ -1638,7 +1538,7 @@
     "followUpRequired": false,
     "contacted": false,
     "contactedBeforePublication": false,
-    "englishEdited": true
+    "englishEdited": false
   },
   {
     "id": "62",
@@ -1647,12 +1547,12 @@
       "ar": ""
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-08.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-08.png"
+      "main": "/images/placeholder_images/puzzle-31.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-31.png"
     },
     "personalInfo": {
       "en": {
-        "name": "Elham Hassan",
+        "name": "Elham",
         "surname": "Hassan",
         "whereFrom": "Sana'a",
         "livingIn": "Sana'a"
@@ -1660,7 +1560,7 @@
       "ar": {
         "name": "إلهام",
         "surname": "حسان",
-        "whereFrom": "اليمن صنعاء",
+        "whereFrom": "صنعاء",
         "livingIn": "صنعاء"
       }
     },
@@ -1694,7 +1594,7 @@
     "followUpRequired": false,
     "contacted": false,
     "contactedBeforePublication": false,
-    "englishEdited": true
+    "englishEdited": false
   },
   {
     "id": "63",
@@ -1750,7 +1650,7 @@
     "followUpRequired": false,
     "contacted": false,
     "contactedBeforePublication": false,
-    "englishEdited": true
+    "englishEdited": false
   },
   {
     "id": "64",
@@ -1759,8 +1659,8 @@
       "ar": "ar-story-64"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-14.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-14.jpg"
+      "main": "/images/placeholder_images/puzzle-27.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-27.png"
     },
     "personalInfo": {
       "en": {
@@ -1813,8 +1713,8 @@
       "ar": "ar-story-65"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-03.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-03.jpg"
+      "main": "/images/placeholder_images/puzzle-11.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-11.jpg"
     },
     "personalInfo": {
       "en": {
@@ -1860,7 +1760,7 @@
     "followUpRequired": false,
     "contacted": false,
     "contactedBeforePublication": false,
-    "englishEdited": true
+    "englishEdited": false
   },
   {
     "id": "66",
@@ -1869,8 +1769,8 @@
       "ar": "ar-story-66"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-32.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-32.png"
+      "main": "/images/placeholder_images/puzzle-24.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-24.png"
     },
     "personalInfo": {
       "en": {
@@ -1928,8 +1828,8 @@
       "ar": "ar-story-67"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-01.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-01.png"
+      "main": "/images/placeholder_images/puzzle-19.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-19.jpg"
     },
     "personalInfo": {
       "en": {
@@ -1982,8 +1882,8 @@
       "ar": "ar-story-68"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-04.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-04.jpg"
+      "main": "/images/placeholder_images/puzzle-05.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-05.png"
     },
     "personalInfo": {
       "en": {
@@ -2042,8 +1942,8 @@
       "ar": "ar-story-69"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-01.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-01.jpg"
+      "main": "/images/placeholder_images/puzzle-22.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-22.png"
     },
     "personalInfo": {
       "en": {
@@ -2087,7 +1987,7 @@
     "followUpRequired": false,
     "contacted": false,
     "contactedBeforePublication": false,
-    "englishEdited": true
+    "englishEdited": false
   },
   {
     "id": "70",
@@ -2096,8 +1996,8 @@
       "ar": "ar-story-70"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-28.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-28.png"
+      "main": "/images/placeholder_images/puzzle-25.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-25.jpg"
     },
     "personalInfo": {
       "en": {
@@ -2204,7 +2104,7 @@
     "followUpRequired": false,
     "contacted": false,
     "contactedBeforePublication": false,
-    "englishEdited": true
+    "englishEdited": false
   },
   {
     "id": "1002",
@@ -2213,8 +2113,8 @@
       "ar": "ar-story-1002"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-18.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-18.jpg"
+      "main": "/images/placeholder_images/puzzle-21.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-21.jpg"
     },
     "personalInfo": {
       "en": {
@@ -2260,7 +2160,7 @@
     "followUpRequired": false,
     "contacted": false,
     "contactedBeforePublication": false,
-    "englishEdited": true
+    "englishEdited": false
   },
   {
     "id": "1003",
@@ -2269,8 +2169,8 @@
       "ar": "ar-story-1003"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-18.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-18.jpg"
+      "main": "/images/placeholder_images/puzzle-09.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-09.png"
     },
     "personalInfo": {
       "en": {
@@ -2379,8 +2279,8 @@
       "ar": "ar-story-1005"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-06.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-06.png"
+      "main": "/images/placeholder_images/puzzle-23.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-23.jpg"
     },
     "personalInfo": {
       "en": {
@@ -2433,8 +2333,8 @@
       "ar": "ar-story-1006"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-32.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-32.png"
+      "main": "/images/placeholder_images/puzzle-15.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-15.png"
     },
     "personalInfo": {
       "en": {
@@ -2478,7 +2378,7 @@
     "followUpRequired": false,
     "contacted": false,
     "contactedBeforePublication": false,
-    "englishEdited": true
+    "englishEdited": false
   },
   {
     "id": "1007",
@@ -2487,8 +2387,8 @@
       "ar": "ar-story-1007"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-07.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-07.jpg"
+      "main": "/images/placeholder_images/puzzle-23.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-23.jpg"
     },
     "personalInfo": {
       "en": {
@@ -2532,7 +2432,7 @@
     "followUpRequired": false,
     "contacted": false,
     "contactedBeforePublication": false,
-    "englishEdited": true
+    "englishEdited": false
   },
   {
     "id": "1008",
@@ -2541,8 +2441,8 @@
       "ar": "ar-story-1008"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-10.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-10.png"
+      "main": "/images/placeholder_images/puzzle-24.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-24.png"
     },
     "personalInfo": {
       "en": {
@@ -2595,8 +2495,8 @@
       "ar": "ar-story-1009"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-02.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-02.jpg"
+      "main": "/images/placeholder_images/puzzle-05.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-05.jpg"
     },
     "personalInfo": {
       "en": {
@@ -2649,8 +2549,8 @@
       "ar": "ar-story-1010"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-08.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-08.png"
+      "main": "/images/placeholder_images/puzzle-07.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-07.png"
     },
     "personalInfo": {
       "en": {
@@ -2694,7 +2594,7 @@
     "followUpRequired": false,
     "contacted": false,
     "contactedBeforePublication": false,
-    "englishEdited": true
+    "englishEdited": false
   },
   {
     "id": "1011",
@@ -2703,8 +2603,8 @@
       "ar": "ar-story-1011"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-06.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-06.jpg"
+      "main": "/images/placeholder_images/puzzle-26.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-26.png"
     },
     "personalInfo": {
       "en": {
@@ -2757,8 +2657,8 @@
       "ar": "ar-story-1012"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-17.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-17.png"
+      "main": "/images/placeholder_images/puzzle-03.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-03.png"
     },
     "personalInfo": {
       "en": {
@@ -2811,8 +2711,8 @@
       "ar": "ar-story-1013"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-07.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-07.png"
+      "main": "/images/placeholder_images/puzzle-10.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-10.png"
     },
     "personalInfo": {
       "en": {
@@ -2921,8 +2821,8 @@
       "ar": "ar-story-1015"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-24.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-24.png"
+      "main": "/images/placeholder_images/puzzle-04.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-04.jpg"
     },
     "personalInfo": {
       "en": {
@@ -2975,8 +2875,8 @@
       "ar": "ar-story-1016"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-06.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-06.jpg"
+      "main": "/images/placeholder_images/puzzle-17.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-17.png"
     },
     "personalInfo": {
       "en": {
@@ -3020,7 +2920,7 @@
     "followUpRequired": false,
     "contacted": false,
     "contactedBeforePublication": false,
-    "englishEdited": true
+    "englishEdited": false
   },
   {
     "id": "1017",
@@ -3029,8 +2929,8 @@
       "ar": "ar-story-1017"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-26.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-26.png"
+      "main": "/images/placeholder_images/puzzle-06.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-06.png"
     },
     "personalInfo": {
       "en": {
@@ -3077,7 +2977,7 @@
     "followUpRequired": false,
     "contacted": false,
     "contactedBeforePublication": false,
-    "englishEdited": true
+    "englishEdited": false
   },
   {
     "id": "1018",
@@ -3086,8 +2986,8 @@
       "ar": "ar-story-1018"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-06.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-06.png"
+      "main": "/images/placeholder_images/puzzle-21.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-21.png"
     },
     "personalInfo": {
       "en": {
@@ -3135,7 +3035,7 @@
     "followUpRequired": false,
     "contacted": false,
     "contactedBeforePublication": false,
-    "englishEdited": true
+    "englishEdited": false
   },
   {
     "id": "1019",
@@ -3200,8 +3100,8 @@
       "ar": "ar-story-1020"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-16.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-16.png"
+      "main": "/images/placeholder_images/puzzle-05.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-05.jpg"
     },
     "personalInfo": {
       "en": {
@@ -3254,8 +3154,8 @@
       "ar": "ar-story-1021"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-12.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-12.jpg"
+      "main": "/images/placeholder_images/puzzle-28.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-28.png"
     },
     "personalInfo": {
       "en": {
@@ -3299,7 +3199,7 @@
     "followUpRequired": false,
     "contacted": false,
     "contactedBeforePublication": false,
-    "englishEdited": true
+    "englishEdited": false
   },
   {
     "id": "1022",
@@ -3308,8 +3208,8 @@
       "ar": "ar-story-1022"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-21.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-21.png"
+      "main": "/images/placeholder_images/puzzle-20.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-20.png"
     },
     "personalInfo": {
       "en": {
@@ -3356,7 +3256,7 @@
     "followUpRequired": false,
     "contacted": false,
     "contactedBeforePublication": false,
-    "englishEdited": true
+    "englishEdited": false
   },
   {
     "id": "1023",
@@ -3365,8 +3265,8 @@
       "ar": "ar-story-1023"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-09.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-09.jpg"
+      "main": "/images/placeholder_images/puzzle-02.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-02.png"
     },
     "personalInfo": {
       "en": {
@@ -3414,7 +3314,7 @@
     "followUpRequired": false,
     "contacted": false,
     "contactedBeforePublication": false,
-    "englishEdited": true
+    "englishEdited": false
   },
   {
     "id": "1024",
@@ -3477,7 +3377,7 @@
     "followUpRequired": false,
     "contacted": false,
     "contactedBeforePublication": false,
-    "englishEdited": true
+    "englishEdited": false
   },
   {
     "id": "1025",
@@ -3486,8 +3386,8 @@
       "ar": "ar-story-1025"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-23.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-23.png"
+      "main": "/images/placeholder_images/puzzle-25.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-25.jpg"
     },
     "personalInfo": {
       "en": {
@@ -3542,8 +3442,8 @@
       "ar": "ar-story-1026"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-22.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-22.png"
+      "main": "/images/placeholder_images/puzzle-11.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-11.png"
     },
     "personalInfo": {
       "en": {
@@ -3592,7 +3492,7 @@
     "followUpRequired": false,
     "contacted": false,
     "contactedBeforePublication": false,
-    "englishEdited": true
+    "englishEdited": false
   },
   {
     "id": "1027",
@@ -3601,8 +3501,8 @@
       "ar": "ar-story-1027"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-17.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-17.png"
+      "main": "/images/placeholder_images/puzzle-11.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-11.png"
     },
     "personalInfo": {
       "en": {
@@ -3655,8 +3555,8 @@
       "ar": "ar-story-1028"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-31.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-31.jpg"
+      "main": "/images/placeholder_images/puzzle-08.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-08.jpg"
     },
     "personalInfo": {
       "en": {
@@ -3709,8 +3609,8 @@
       "ar": "ar-story-1029"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-19.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-19.png"
+      "main": "/images/placeholder_images/puzzle-16.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-16.png"
     },
     "personalInfo": {
       "en": {
@@ -3763,8 +3663,8 @@
       "ar": "ar-story-1030"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-24.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-24.png"
+      "main": "/images/placeholder_images/puzzle-22.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-22.png"
     },
     "personalInfo": {
       "en": {
@@ -3812,7 +3712,7 @@
     "followUpRequired": false,
     "contacted": false,
     "contactedBeforePublication": false,
-    "englishEdited": true
+    "englishEdited": false
   },
   {
     "id": "1031",
@@ -3821,8 +3721,8 @@
       "ar": "ar-story-1031"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-18.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-18.png"
+      "main": "/images/placeholder_images/puzzle-14.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-14.jpg"
     },
     "personalInfo": {
       "en": {
@@ -3866,7 +3766,7 @@
     "followUpRequired": false,
     "contacted": false,
     "contactedBeforePublication": false,
-    "englishEdited": true
+    "englishEdited": false
   },
   {
     "id": "1032",
@@ -3875,8 +3775,8 @@
       "ar": "ar-story-1032"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-09.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-09.jpg"
+      "main": "/images/placeholder_images/puzzle-21.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-21.jpg"
     },
     "personalInfo": {
       "en": {
@@ -3923,7 +3823,7 @@
     "followUpRequired": false,
     "contacted": false,
     "contactedBeforePublication": false,
-    "englishEdited": true
+    "englishEdited": false
   },
   {
     "id": "1033",
@@ -3932,8 +3832,8 @@
       "ar": "ar-story-1033"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-02.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-02.png"
+      "main": "/images/placeholder_images/puzzle-29.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-29.png"
     },
     "personalInfo": {
       "en": {
@@ -3979,7 +3879,7 @@
     "followUpRequired": false,
     "contacted": false,
     "contactedBeforePublication": false,
-    "englishEdited": true
+    "englishEdited": false
   },
   {
     "id": "1034",
@@ -3988,8 +3888,8 @@
       "ar": "ar-story-1034"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-22.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-22.png"
+      "main": "/images/placeholder_images/puzzle-29.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-29.jpg"
     },
     "personalInfo": {
       "en": {
@@ -4035,7 +3935,7 @@
     "followUpRequired": false,
     "contacted": false,
     "contactedBeforePublication": false,
-    "englishEdited": true
+    "englishEdited": false
   },
   {
     "id": "1035",
@@ -4044,8 +3944,8 @@
       "ar": "ar-story-1035"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-19.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-19.png"
+      "main": "/images/placeholder_images/puzzle-28.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-28.jpg"
     },
     "personalInfo": {
       "en": {
@@ -4093,7 +3993,7 @@
     "followUpRequired": false,
     "contacted": false,
     "contactedBeforePublication": false,
-    "englishEdited": true
+    "englishEdited": false
   },
   {
     "id": "1036",
@@ -4102,8 +4002,8 @@
       "ar": "ar-story-1036"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-21.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-21.png"
+      "main": "/images/placeholder_images/puzzle-18.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-18.jpg"
     },
     "personalInfo": {
       "en": {
@@ -4156,8 +4056,8 @@
       "ar": "ar-story-1037"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-06.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-06.jpg"
+      "main": "/images/placeholder_images/puzzle-05.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-05.jpg"
     },
     "personalInfo": {
       "en": {
@@ -4212,8 +4112,8 @@
       "ar": "ar-story-1038"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-11.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-11.png"
+      "main": "/images/placeholder_images/puzzle-31.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-31.jpg"
     },
     "personalInfo": {
       "en": {
@@ -4263,7 +4163,7 @@
     "followUpRequired": false,
     "contacted": false,
     "contactedBeforePublication": false,
-    "englishEdited": true
+    "englishEdited": false
   },
   {
     "id": "1039",
@@ -4272,8 +4172,8 @@
       "ar": "ar-story-1039"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-03.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-03.jpg"
+      "main": "/images/placeholder_images/puzzle-14.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-14.jpg"
     },
     "personalInfo": {
       "en": {
@@ -4379,7 +4279,7 @@
     "followUpRequired": false,
     "contacted": false,
     "contactedBeforePublication": false,
-    "englishEdited": true
+    "englishEdited": false
   },
   {
     "id": "1041",
@@ -4493,7 +4393,7 @@
     "followUpRequired": false,
     "contacted": false,
     "contactedBeforePublication": false,
-    "englishEdited": true
+    "englishEdited": false
   },
   {
     "id": "1043",
@@ -4502,8 +4402,8 @@
       "ar": "ar-story-1043"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-09.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-09.png"
+      "main": "/images/placeholder_images/puzzle-05.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-05.jpg"
     },
     "personalInfo": {
       "en": {
@@ -4552,7 +4452,7 @@
     "followUpRequired": false,
     "contacted": false,
     "contactedBeforePublication": false,
-    "englishEdited": true
+    "englishEdited": false
   },
   {
     "id": "1044",
@@ -4729,8 +4629,8 @@
       "ar": "ar-story-1047"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-31.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-31.png"
+      "main": "/images/placeholder_images/puzzle-24.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-24.jpg"
     },
     "personalInfo": {
       "en": {
@@ -4785,8 +4685,8 @@
       "ar": "ar-story-1048"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-13.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-13.jpg"
+      "main": "/images/placeholder_images/puzzle-16.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-16.jpg"
     },
     "personalInfo": {
       "en": {
@@ -4843,8 +4743,8 @@
       "ar": "ar-story-1049"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-20.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-20.jpg"
+      "main": "/images/placeholder_images/puzzle-32.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-32.png"
     },
     "personalInfo": {
       "en": {
@@ -5015,8 +4915,8 @@
       "ar": "ar-story-1052"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-16.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-16.jpg"
+      "main": "/images/placeholder_images/puzzle-19.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-19.jpg"
     },
     "personalInfo": {
       "en": {
@@ -5120,7 +5020,7 @@
     "followUpRequired": false,
     "contacted": false,
     "contactedBeforePublication": false,
-    "englishEdited": true
+    "englishEdited": false
   },
   {
     "id": "1054",
@@ -5186,7 +5086,7 @@
     "followUpRequired": false,
     "contacted": false,
     "contactedBeforePublication": false,
-    "englishEdited": true
+    "englishEdited": false
   },
   {
     "id": "1055",
@@ -5195,8 +5095,8 @@
       "ar": "ar-story-1055"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-21.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-21.jpg"
+      "main": "/images/placeholder_images/puzzle-15.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-15.jpg"
     },
     "personalInfo": {
       "en": {
@@ -5244,7 +5144,7 @@
     "followUpRequired": false,
     "contacted": false,
     "contactedBeforePublication": false,
-    "englishEdited": true
+    "englishEdited": false
   },
   {
     "id": "1056",
@@ -5253,8 +5153,8 @@
       "ar": ""
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-02.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-02.jpg"
+      "main": "/images/placeholder_images/puzzle-24.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-24.png"
     },
     "personalInfo": {
       "en": {
@@ -5302,7 +5202,7 @@
     "followUpRequired": false,
     "contacted": false,
     "contactedBeforePublication": false,
-    "englishEdited": true
+    "englishEdited": false
   },
   {
     "id": "1057",
@@ -5311,8 +5211,8 @@
       "ar": "ar-story-1057"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-31.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-31.png"
+      "main": "/images/placeholder_images/puzzle-03.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-03.png"
     },
     "personalInfo": {
       "en": {
@@ -5358,7 +5258,7 @@
     "followUpRequired": false,
     "contacted": false,
     "contactedBeforePublication": false,
-    "englishEdited": true
+    "englishEdited": false
   },
   {
     "id": "1058",
@@ -5367,8 +5267,8 @@
       "ar": ""
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-20.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-20.jpg"
+      "main": "/images/placeholder_images/puzzle-21.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-21.png"
     },
     "personalInfo": {
       "en": {
@@ -5416,7 +5316,7 @@
     "followUpRequired": false,
     "contacted": false,
     "contactedBeforePublication": false,
-    "englishEdited": true
+    "englishEdited": false
   },
   {
     "id": "1059",
@@ -5425,8 +5325,8 @@
       "ar": "ar-story-1059"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-19.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-19.jpg"
+      "main": "/images/placeholder_images/puzzle-16.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-16.png"
     },
     "personalInfo": {
       "en": {
@@ -5472,7 +5372,7 @@
     "followUpRequired": false,
     "contacted": false,
     "contactedBeforePublication": false,
-    "englishEdited": true
+    "englishEdited": false
   },
   {
     "id": "1060",
@@ -5481,8 +5381,8 @@
       "ar": ""
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-15.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-15.jpg"
+      "main": "/images/placeholder_images/puzzle-07.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-07.png"
     },
     "personalInfo": {
       "en": {
@@ -5529,7 +5429,7 @@
     "followUpRequired": false,
     "contacted": false,
     "contactedBeforePublication": false,
-    "englishEdited": true
+    "englishEdited": false
   },
   {
     "id": "1061",
@@ -5538,8 +5438,8 @@
       "ar": "ar-story-1061"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-09.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-09.png"
+      "main": "/images/placeholder_images/puzzle-28.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-28.jpg"
     },
     "personalInfo": {
       "en": {
@@ -5586,7 +5486,7 @@
     "followUpRequired": false,
     "contacted": false,
     "contactedBeforePublication": false,
-    "englishEdited": true
+    "englishEdited": false
   },
   {
     "id": "1062",
@@ -5595,8 +5495,8 @@
       "ar": ""
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-20.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-20.png"
+      "main": "/images/placeholder_images/puzzle-25.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-25.jpg"
     },
     "personalInfo": {
       "en": {
@@ -5643,7 +5543,7 @@
     "followUpRequired": false,
     "contacted": false,
     "contactedBeforePublication": false,
-    "englishEdited": true
+    "englishEdited": false
   },
   {
     "id": "1063",
@@ -5652,8 +5552,8 @@
       "ar": ""
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-04.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-04.jpg"
+      "main": "/images/placeholder_images/puzzle-29.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-29.jpg"
     },
     "personalInfo": {
       "en": {
@@ -5701,7 +5601,7 @@
     "followUpRequired": false,
     "contacted": false,
     "contactedBeforePublication": false,
-    "englishEdited": true
+    "englishEdited": false
   },
   {
     "id": "1064",
@@ -5710,8 +5610,8 @@
       "ar": ""
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-26.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-26.jpg"
+      "main": "/images/placeholder_images/puzzle-11.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-11.jpg"
     },
     "personalInfo": {
       "en": {
@@ -5758,7 +5658,7 @@
     "followUpRequired": false,
     "contacted": false,
     "contactedBeforePublication": false,
-    "englishEdited": true
+    "englishEdited": false
   },
   {
     "id": "1065",
@@ -5767,8 +5667,8 @@
       "ar": ""
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-25.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-25.jpg"
+      "main": "/images/placeholder_images/puzzle-05.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-05.png"
     },
     "personalInfo": {
       "en": {
@@ -5814,6 +5714,6 @@
     "followUpRequired": false,
     "contacted": false,
     "contactedBeforePublication": false,
-    "englishEdited": true
+    "englishEdited": false
   }
 ]

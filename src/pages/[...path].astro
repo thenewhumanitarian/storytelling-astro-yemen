@@ -1,0 +1,78 @@
+---
+const { path } = Astro.params
+const pathParams = path?.toString().split('/')
+const lang = pathParams?.[0] || 'en' // Get language from path
+const view = pathParams?.[1] || 'grid' // Get grid or list from path
+
+export async function getStaticPaths() {
+	// const gridPath = pathParams?.[1] || 'grid' // Get grid or list from path
+	// const listPath = pathParams?.[1] || 'list'
+
+	const allPaths = [
+		{
+			params: {
+				path: `/`,
+			},
+		},
+		{
+			params: {
+				path: `en`,
+			},
+		},
+		{
+			params: {
+				path: `en/list`,
+			},
+		},
+		{
+			params: {
+				path: `en/grid`,
+			},
+		},
+    {
+			params: {
+				path: `ar`,
+			},
+		},
+		{
+			params: {
+				path: `ar/list`,
+			},
+		},
+		{
+			params: {
+				path: `ar/grid`,
+			},
+		},
+	]
+
+	return allPaths
+}
+
+import Layout from '@layouts/Layout.astro'
+import StoryWrapper from '@components/StoryWrapper.astro'
+import SEO from '@components/SEO.astro'
+import stories from '@data/all_stories.json'
+
+function shuffleArray(array) {
+	for (let i = array.length - 1; i > 0; i--) {
+		// Generate a random index
+		const j = Math.floor(Math.random() * (i + 1))
+
+		// Swap elements at indices i and j
+		;[array[i], array[j]] = [array[j], array[i]]
+	}
+}
+// Todo: Can this be done "once" per session perhaps? // Testing pipeline
+shuffleArray(stories)
+---
+
+<Layout dark title='The Yemen Listening Project' header={true} filterButtons={true} languageButtons={true} switchViewButtons={true}>
+	<SEO
+		slot='seo'
+		title={`The Yemen Listening Project`}
+		description={lang === 'ar' ? '.حيثُ يتحدّث اليَمنيّون ويستمع العالمُ إليهم' : 'Where Yemenis talk, and the world listens.'}
+	/>
+	<!-- <div class='fixed top-0 left-0 w-screen h-screen -z-1 pointer-events-none' id='city'></div> -->
+	<StoryWrapper stories={stories} view={view} />
+</Layout>
