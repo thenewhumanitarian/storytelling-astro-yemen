@@ -252,7 +252,10 @@ if (!lang) {
 			this.visibleBeforeDrag = true
 
 			// Set index and add classes
-			// this.index = index
+			this.index = index
+
+			// Set story index
+			this.storyIndex = index % stories.length
 
 			this.item.classList.add('story-item')
 			// this.setNewCard()
@@ -283,7 +286,7 @@ if (!lang) {
 
 		setNewCard() {
 			// Define vars to be used later
-			let story = stories[this.index % stories.length]
+			let story = stories[this.index]
 
 			const visibleBeforeDrag = this.visibleBeforeDrag
 			const currentlyVisible = this.checkVisibility()
@@ -303,13 +306,13 @@ if (!lang) {
 					story = stories[Math.floor(Math.random() * stories.length)]
 				}
 				console.log('Number of loaded stories: ', allStories.length)
-				this.index = 5
 			}
 
 			// Add both language titles
 			const titles = {
 				ar: story.story['ar'].title || `Arabic title for story with ID ${story.id} is missing.`,
-				en: story.story['en'].title || `English title for story with ID ${story.id} is missing`,
+				// en: story.story['en'].title || `English title for story with ID ${story.id} is missing`,
+				en: `Idx: ${this.index.toString()}, StoryID: ${story.id.toString()}`,
 			}
 
 			// Determine the new image URL
