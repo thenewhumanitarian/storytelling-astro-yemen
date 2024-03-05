@@ -252,7 +252,7 @@ if (!lang) {
 			this.visibleBeforeDrag = true
 
 			// Set index and add classes
-			// this.index = index)
+			// this.index = index
 
 			this.item.classList.add('story-item')
 			// this.setNewCard()
@@ -276,7 +276,7 @@ if (!lang) {
 		// Method to check if this item is within the viewport (or visible area)
 		checkVisibility() {
 			const rect = this.item.getBoundingClientRect()
-			const isVisible = rect.top * 0.75 < window.innerHeight && rect.bottom > 0 // Simple visibility check
+			const isVisible = rect.top < window.innerHeight && rect.bottom > 0 // Simple visibility check
 
 			return isVisible
 		}
@@ -303,10 +303,7 @@ if (!lang) {
 					story = stories[Math.floor(Math.random() * stories.length)]
 				}
 				console.log('Number of loaded stories: ', allStories.length)
-				if (allStories.length === stories.length) {
-					console.log('All stories loaded')
-					// console.log(allStories)
-				}
+				this.index = 5
 			}
 
 			// Add both language titles

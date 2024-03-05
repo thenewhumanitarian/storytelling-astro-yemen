@@ -1,27 +1,22 @@
-<script type='module'>
-	document.addEventListener('DOMContentLoaded', () => {
-		const lang = localStorage.getItem('lang')
-		let view = localStorage.getItem('currentView')
+---
+import StaticPageWrapper from '@layouts/StaticPageWrapper.astro'
+import Title from '@components/Title.astro'
+import Subtitle from '@components/Subtitle.astro'
+import SEO from '@components/SEO.astro'
 
-		if (!view || view === '') {
-			if (window.innerWidth < 500) {
-				view = 'list'
-			}
-			view = 'grid'
-		}
+const lang = 'en'
+---
 
-		const preferredLang = lang || navigator.language || navigator.userLanguage
-		let redirectPath = `/en/${view}` // Default to English
+<SEO slot='seo' title={`The Yemen Listening Project`} description={'Where Yemenis talk, and the world listens.'} />
 
-		// Example logic to determine redirection path
-		if (preferredLang.startsWith('ar')) {
-			redirectPath = `/ar/${view}` // Default to English
-		}
-		// More conditions can be added here for other languages
+<StaticPageWrapper lang={lang}>
+	<div slot='header'>
+		<Title>About</Title>
+		<Subtitle>Read more about the Yemen Listening Project.</Subtitle>
+	</div>
 
-		// Redirect if not already on the preferred language path
-		if (!window.location.pathname.startsWith(redirectPath)) {
-			window.location.pathname = redirectPath
-		}
-	})
-</script>
+	<div slot='body'>
+		<p>Go to English version</p>
+		<p>Go to Arabic vesion</p>
+	</div>
+</StaticPageWrapper>

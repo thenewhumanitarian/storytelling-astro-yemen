@@ -1,6 +1,7 @@
 import { defineConfig } from 'astro/config';
 import tailwind from '@astrojs/tailwind';
-
+import sitemap from '@astrojs/sitemap';
+import partytown from '@astrojs/partytown'
 import react from "@astrojs/react";
 
 // https://astro.build/config
@@ -12,5 +13,12 @@ export default defineConfig({
     tailwind({
       applyBaseStyles: false
     }),
-    react()]
+    sitemap(),
+    partytown({
+      config: {
+        forward: ["dataLayer.push"],
+      },
+    }),
+    react()
+  ]
 });
