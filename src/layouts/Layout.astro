@@ -49,8 +49,9 @@ const isProduction = import.meta.env.MODE === 'production'
     }
 	</head>
 	<body class={`overflow-y-scroll`}>
-		<!-- Google Tag Manager (noscript) -->
-		<iframe src='https://www.googletagmanager.com/ns.html?id=GTM-T5C2M82' height='0' width='0' style='display:none;visibility:hidden'></iframe>
+    <!-- {isProduction &&
+		  <iframe src='https://www.googletagmanager.com/ns.html?id=GTM-T5C2M82' height='0' width='0' style='display:none;visibility:hidden'></iframe>
+    } -->
 		<!-- End Google Tag Manager (noscript) -->
 		<!-- Header  -->
 		{header && <Header dark={dark} filterButtons={filterButtons} languageButtons={languageButtons} switchViewButtons={switchViewButtons} />}
