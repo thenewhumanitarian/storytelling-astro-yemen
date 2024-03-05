@@ -1,13 +1,15 @@
 ---
+import Layout from '@layouts/Layout.astro'
+import StoryWrapper from '@components/StoryWrapper.astro'
+import SEO from '@components/SEO.astro'
+import stories from '@data/all_stories.json'
+
 const { path } = Astro.params
 const pathParams = path?.toString().split('/')
 const lang = pathParams?.[0] || 'en' // Get language from path
 const view = pathParams?.[1] || 'grid' // Get grid or list from path
 
 export async function getStaticPaths() {
-	// const gridPath = pathParams?.[1] || 'grid' // Get grid or list from path
-	// const listPath = pathParams?.[1] || 'list'
-
 	const allPaths = [
 		{
 			params: {
@@ -44,11 +46,6 @@ export async function getStaticPaths() {
 	return allPaths
 }
 
-import Layout from '@layouts/Layout.astro'
-import StoryWrapper from '@components/StoryWrapper.astro'
-import SEO from '@components/SEO.astro'
-import stories from '@data/all_stories.json'
-
 function shuffleArray(array) {
 	for (let i = array.length - 1; i > 0; i--) {
 		// Generate a random index
@@ -58,6 +55,7 @@ function shuffleArray(array) {
 		;[array[i], array[j]] = [array[j], array[i]]
 	}
 }
+
 // Todo: Can this be done "once" per session perhaps? // Testing pipeline
 shuffleArray(stories)
 ---

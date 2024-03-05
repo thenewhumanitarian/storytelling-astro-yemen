@@ -197,17 +197,27 @@ if (!lang) {
 	// Initial check to filter grid if necessary, same for list
 	function filterGridBasedOnLocalStorage() {
 		if (localStorage.getItem('showAll') === 'false') {
-			document.getElementById('grid').classList.add('filter--read')
-			document.getElementById('list').classList.add('filter--read')
+			if (document.getElementById('grid')) {
+				document.getElementById('grid').classList.add('filter--read')
+			}
+			if (document.getElementById('list')) {
+				document.getElementById('list').classList.add('filter--read')
+			}
 		} else {
-			document.getElementById('grid').classList.remove('filter--read')
-			document.getElementById('list').classList.remove('filter--read')
+			if (document.getElementById('grid')) {
+				document.getElementById('grid').classList.remove('filter--read')
+			}
+			if (document.getElementById('list')) {
+				document.getElementById('list').classList.remove('filter--read')
+			}
 		}
 	}
 
 	// Window load event
 	window.addEventListener('DOMContentLoaded', function () {
 		filterGridBasedOnLocalStorage()
+
+		console.log(stories)
 
 		const grid = optimalGridDimensions()
 
@@ -250,6 +260,7 @@ if (!lang) {
 			}
 
 			this.visibleBeforeDrag = true
+			this.timesVisible = this.timesVisible || 0
 
 			// Set index and add classes
 			this.index = index
@@ -276,37 +287,47 @@ if (!lang) {
 			return this.item.querySelector('img') !== null
 		}
 
-		// Method to check if this item is within the viewport (or visible area)
 		checkVisibility() {
 			const rect = this.item.getBoundingClientRect()
-			const isVisible = rect.top < window.innerHeight && rect.bottom > 0 // Simple visibility check
+			const xThreshold = rect.height * 0.25 // Calculate 25% of the item's height
+			const yThreshold = rect.height * 1.25 // Calculate 25% of the item's height
+
+      console.log(rect.height)
+
+			// Correct the condition for visibility towards the bottom:
+			// The item is considered to have disappeared towards the bottom if its top edge is more than 25% of its height below the bottom of the viewport.
+			// Note: This condition was corrected to ensure it accurately represents the requirement.
+			const isVisible = rect.bottom > -xThreshold && rect.top < window.innerHeight + yThreshold
 
 			return isVisible
 		}
 
 		setNewCard() {
-			// Define vars to be used later
-			let story = stories[this.index]
-
+			// Re-calculate which story to show based on visibility
 			const visibleBeforeDrag = this.visibleBeforeDrag
 			const currentlyVisible = this.checkVisibility()
 
+			if (this.index === 5) {
+				console.log('+++++')
+				console.log('Index: ' + this.index)
+				console.log('Times visible: ' + tracker.getItemByIndex(this.index).timesRefreshed)
+				console.log('Visible before drag: ' + visibleBeforeDrag)
+				console.log('Currently visible: ' + currentlyVisible)
+			}
+
 			if (visibleBeforeDrag && currentlyVisible) {
 				// Keep story
-			} else if (visibleBeforeDrag && !currentlyVisible) {
-				// Keep story
+				// } else if (visibleBeforeDrag && !currentlyVisible) {
 			} else {
-				// Select random story from stories array and store in story variable
-				story = stories[Math.floor(Math.random() * stories.length)]
-				// Add to allStories array if not already there
-				if (!allStories.includes(story.id)) {
-					allStories.push(story.id)
-				} else {
-					// If story is already in allStories array, select another random story
-					story = stories[Math.floor(Math.random() * stories.length)]
-				}
-				console.log('Number of loaded stories: ', allStories.length)
+				// Increase this.visibleBeforeDrag by one as it's currently not visible
+				tracker.trackItemByIndex(this.index)
+				// Set to currently visible state for next drag
+				this.visibleBeforeDrag = this.checkVisibility()
 			}
+
+			this.visibleBeforeDrag = currentlyVisible
+
+			let story = stories[(this.index + tracker.getItemByIndex(this.index).timesRefreshed) % stories.length]
 
 			// Add both language titles
 			const titles = {
@@ -416,9 +437,6 @@ if (!lang) {
 			if (!this.isImageLoaded()) {
 				this.lazyLoadImage(story.storyImage.main, story.story[lang].title)
 			}
-
-			// Set to currently visible state for next drag
-			this.visibleBeforeDrag = this.checkVisibility()
 
 			// Add href to this grid item using slug
 			this.item.setAttribute('href', `/stories/${lang}/${story.slugs[lang]}`)
@@ -584,6 +602,47 @@ if (!lang) {
 		}
 	}
 
+	class GridTracker {
+		constructor() {
+			// Example item should be like this:
+			// { id: 1, timesRefreshed: 0 }
+
+			this.items = []
+		}
+
+		addItem(item) {
+			this.items.push(item)
+		}
+
+		removeItem(item) {
+			this.items = this.items.filter((i) => i !== item)
+		}
+
+		getItemByIndex(index) {
+			return this.items.find((i) => i.index === index)
+		}
+
+		trackItemByIndex(index) {
+			// Find the item in the array
+			const foundItem = this.items.find((i) => i.index === index)
+			if (foundItem) {
+				// Only increment if index plus timesRefreshed is less than the length of the stories array
+				if (index + foundItem.timesRefreshed < stories.length) {
+					// If found, increment the timesRefreshed property
+					foundItem.timesRefreshed += 1
+				} else {
+					foundItem.timesRefreshed = 0
+				}
+			} else {
+				// Optionally, handle the case where the item doesn't exist
+				console.log('Item not found')
+			}
+		}
+	}
+
+	const tracker = new GridTracker()
+	console.log(tracker)
+
 	class InfiniteGrid {
 		constructor(nCol = 2, nRow = 2) {
 			this.grid = document.getElementById('grid')
@@ -610,7 +669,7 @@ if (!lang) {
 
 			const SCROLL_Y_THRESHOLD = 25
 
-			const yDelta = deltaY
+			const yDelta = deltaY / 2
 			this.offsetY += yDelta
 
 			if (Math.abs(yDelta) < SCROLL_Y_THRESHOLD) return
@@ -637,11 +696,6 @@ if (!lang) {
 		onDrag(xDelta, yDelta) {
 			this.offsetX += xDelta
 			this.offsetY += yDelta
-
-			// Loop through all this.items elements and run checkVisibility method and then story this.isVisible in every item
-			this.items.forEach((item) => {
-				item.visibleBeforeDrag = item.checkVisibility()
-			})
 
 			// Move the grid back by 1 item whenever it goes over 1/2 of an item
 			// Making the movement invisible
@@ -714,10 +768,13 @@ if (!lang) {
 			}
 
 			this.items.forEach((item, index) => {
+				// Add new items to the tracker
+				tracker.addItem({
+					index: index,
+					timesRefreshed: 0,
+				})
 				item.setIndex(index)
 			})
-
-			// Infinite.updateGridBackground('black')
 		}
 	}
 
