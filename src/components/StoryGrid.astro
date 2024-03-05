@@ -609,6 +609,7 @@ if (!lang) {
 			return this.items.find((i) => i.index === index)
 		}
 
+    // Keep track of how many times a grid item has been reloaded and assign random storyIndeces
 		trackItemByIndex(index) {
 			// Find the item in the array
 			const foundItem = this.items.find((i) => i.index === index)
