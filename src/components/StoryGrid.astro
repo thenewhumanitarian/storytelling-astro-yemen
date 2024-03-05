@@ -217,8 +217,6 @@ if (!lang) {
 	window.addEventListener('DOMContentLoaded', function () {
 		filterGridBasedOnLocalStorage()
 
-		console.log(stories)
-
 		const grid = optimalGridDimensions()
 
 		Infinite.setGrid(grid.cols, grid.rows).then(() => {
@@ -232,8 +230,6 @@ if (!lang) {
 		}
 		return text.substr(0, maxLength - 3) + '...' // Subtract 3 for the length of the ellipses
 	}
-
-	let allStories = []
 
 	/* Grid magic */
 	class GridItem {
@@ -292,11 +288,7 @@ if (!lang) {
 			const xThreshold = rect.height * 0.25 // Calculate 25% of the item's height
 			const yThreshold = rect.height * 1.25 // Calculate 25% of the item's height
 
-      console.log(rect.height)
-
-			// Correct the condition for visibility towards the bottom:
-			// The item is considered to have disappeared towards the bottom if its top edge is more than 25% of its height below the bottom of the viewport.
-			// Note: This condition was corrected to ensure it accurately represents the requirement.
+			// Evaluate if the item is visible
 			const isVisible = rect.bottom > -xThreshold && rect.top < window.innerHeight + yThreshold
 
 			return isVisible
@@ -306,14 +298,6 @@ if (!lang) {
 			// Re-calculate which story to show based on visibility
 			const visibleBeforeDrag = this.visibleBeforeDrag
 			const currentlyVisible = this.checkVisibility()
-
-			if (this.index === 5) {
-				console.log('+++++')
-				console.log('Index: ' + this.index)
-				console.log('Times visible: ' + tracker.getItemByIndex(this.index).timesRefreshed)
-				console.log('Visible before drag: ' + visibleBeforeDrag)
-				console.log('Currently visible: ' + currentlyVisible)
-			}
 
 			if (visibleBeforeDrag && currentlyVisible) {
 				// Keep story
@@ -327,13 +311,18 @@ if (!lang) {
 
 			this.visibleBeforeDrag = currentlyVisible
 
+			// This next line works:
 			let story = stories[(this.index + tracker.getItemByIndex(this.index).timesRefreshed) % stories.length]
+
+			if (tracker.getItemByIndex(this.index).timesRefreshed > 0) {
+				story = stories[tracker.getItemByIndex(this.index).storyIndex % stories.length]
+			}
 
 			// Add both language titles
 			const titles = {
 				ar: story.story['ar'].title || `Arabic title for story with ID ${story.id} is missing.`,
-				// en: story.story['en'].title || `English title for story with ID ${story.id} is missing`,
-				en: `Idx: ${this.index.toString()}, StoryID: ${story.id.toString()}`,
+				en: story.story['en'].title || `English title for story with ID ${story.id} is missing`,
+				// en: `Idx: ${this.index.toString()}, StoryID: ${story.id.toString()}`,
 			}
 
 			// Determine the new image URL
@@ -604,9 +593,7 @@ if (!lang) {
 
 	class GridTracker {
 		constructor() {
-			// Example item should be like this:
-			// { id: 1, timesRefreshed: 0 }
-
+			// Start with empty array
 			this.items = []
 		}
 
@@ -633,6 +620,8 @@ if (!lang) {
 				} else {
 					foundItem.timesRefreshed = 0
 				}
+				// Assign a random index from the stories array to the storyIndex property
+				foundItem.storyIndex = Math.floor(Math.random() * stories.length)
 			} else {
 				// Optionally, handle the case where the item doesn't exist
 				console.log('Item not found')
@@ -641,7 +630,7 @@ if (!lang) {
 	}
 
 	const tracker = new GridTracker()
-	console.log(tracker)
+	// console.log(tracker)
 
 	class InfiniteGrid {
 		constructor(nCol = 2, nRow = 2) {
@@ -772,6 +761,7 @@ if (!lang) {
 				tracker.addItem({
 					index: index,
 					timesRefreshed: 0,
+					storyIndex: 0,
 				})
 				item.setIndex(index)
 			})
