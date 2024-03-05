@@ -26,6 +26,8 @@ if (!lang) {
 	const pathParams = path?.toString().split('/')
 	lang = pathParams?.[0] || 'en'
 }
+
+const isProduction = import.meta.env.MODE === 'production'
 ---
 
 <!doctype html>
@@ -35,26 +37,20 @@ if (!lang) {
 		<!-- To do: Google Tag Manager -->
 		<!-- To do: Create SEO component for more meta tags -->
 		<slot name='seo' />
+    {isProduction && 
+      <script type="text/partytown" async src="https://www.googletagmanager.com/gtag/js?id=GTM-T5C2M82"></script>
+      <script type="text/partytown">
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
 
-		<!-- Google Tag Manager -->
-		<script>
-			;(function (w, d, s, l, i) {
-				w[l] = w[l] || []
-				w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' })
-				var f = d.getElementsByTagName(s)[0],
-					j = d.createElement(s),
-					dl = l != 'dataLayer' ? '&l=' + l : ''
-				j.async = true
-				j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl
-				f.parentNode.insertBefore(j, f)
-			})(window, document, 'script', 'dataLayer', 'GTM-T5C2M82')
-		</script>
-		<!-- End Google Tag Manager -->
+        gtag('config', 'GTM-T5C2M82');
+      </script>
+    }
 	</head>
 	<body class={`overflow-y-scroll`}>
 		<!-- Google Tag Manager (noscript) -->
 		<iframe src='https://www.googletagmanager.com/ns.html?id=GTM-T5C2M82' height='0' width='0' style='display:none;visibility:hidden'></iframe>
-
 		<!-- End Google Tag Manager (noscript) -->
 		<!-- Header  -->
 		{header && <Header dark={dark} filterButtons={filterButtons} languageButtons={languageButtons} switchViewButtons={switchViewButtons} />}
