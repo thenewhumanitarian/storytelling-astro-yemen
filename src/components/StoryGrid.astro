@@ -491,6 +491,8 @@ if (!lang) {
 		}
 
 		onClick(ev) {
+			ev.preventDefault()
+
 			// Check if #grid is hidden and if yes return
 			if (document.getElementById('grid').style.display === 'none') return
 			ev = ev.type == 'touchstart' ? ev.touches[0] : ev
@@ -503,6 +505,8 @@ if (!lang) {
 		onStart(ev) {
 			if (document.getElementById('grid').style.display === 'none') return
 			this.touchStartTime = Date.now()
+
+			console.log('Touch started: ', this.touchStartTime)
 
 			ev.preventDefault()
 
@@ -550,6 +554,9 @@ if (!lang) {
 		onEnd(ev) {
 			this.dragging = false
 
+			// Remove default event handling
+			ev.preventDefault()
+
 			// Remove 'is-dragging' class from body
 			document.body.classList.remove('is-dragging')
 
@@ -559,10 +566,12 @@ if (!lang) {
 			// Calculate the duration of the tap
 			const touchDuration = Date.now() - this.touchStartTime
 
+			console.log(touchDuration)
+
 			// Check duration and act accordingly
 			if (touchDuration < 50) {
 				// This checks if the touch lasted less than 100ms
-				// This was a short tap
+				// This was a short tap:
 				if (ev.target.tagName.toLowerCase() === 'a' && touchDuration) {
 					const href = ev.target.getAttribute('href')
 					if (href) {
@@ -609,7 +618,7 @@ if (!lang) {
 			return this.items.find((i) => i.index === index)
 		}
 
-    // Keep track of how many times a grid item has been reloaded and assign random storyIndeces
+		// Keep track of how many times a grid item has been reloaded and assign random storyIndeces
 		trackItemByIndex(index) {
 			// Find the item in the array
 			const foundItem = this.items.find((i) => i.index === index)
