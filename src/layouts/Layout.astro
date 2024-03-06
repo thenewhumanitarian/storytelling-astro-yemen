@@ -1,7 +1,7 @@
 ---
 import Header from '@components/header/Header.astro'
 import MenuOverlay from '@components/menu/MenuOverlay.astro'
-import ReplacementSwap from 'astro-vtbot/components/ReplacementSwap.astro';
+import ReplacementSwap from 'astro-vtbot/components/ReplacementSwap.astro'
 import GoogleAnalytics from '@components/GoogleAnalytics.astro'
 
 import '@styles/tailwind.css'
@@ -36,18 +36,13 @@ const isProduction = import.meta.env.MODE === 'production'
 <html lang='en' dir={lang === 'ar' ? 'rtl' : 'ltr'}>
 	<head>
 		<!-- Todo: Change meta tags using Drupal tags before publication  -->
-		<!-- To do: Google Tag Manager -->
-		<!-- To do: Create SEO component for more meta tags -->
 		<slot name='seo' />
-    {isProduction && 
-      <GoogleAnalytics />
-    }
-    <ReplacementSwap />
+		<!-- GOOGLE TAG MANAGERr -->
+		<GoogleAnalytics />
+		<ReplacementSwap />
 	</head>
 	<body class={`overflow-y-scroll`}>
-    {isProduction &&
-		  <iframe src='https://www.googletagmanager.com/ns.html?id=GTM-T5C2M82' height='0' width='0' style='display:none;visibility:hidden'></iframe>
-    }
+		<iframe src='https://www.googletagmanager.com/ns.html?id=GTM-T5C2M82' height='0' width='0' style='display:none;visibility:hidden'></iframe>
 		<!-- End Google Tag Manager (noscript) -->
 		<!-- Header  -->
 		{header && <Header dark={dark} filterButtons={filterButtons} languageButtons={languageButtons} switchViewButtons={switchViewButtons} />}
@@ -57,10 +52,7 @@ const isProduction = import.meta.env.MODE === 'production'
 		<MenuOverlay />
 		<!-- Footer  -->
 		<!-- No footer set -->
-	</body>
-</html>
-
-<style is:global lang={'scss'}>
+	</body><style is:global lang={'scss'}>
   html[dir='ltr'] {
     /* Styles for left-to-right direction */
   }
@@ -96,3 +88,4 @@ const isProduction = import.meta.env.MODE === 'production'
 		}
 	}
 </style>
+</html>
