@@ -961,6 +961,11 @@ array-iterate@^2.0.0:
   resolved "https://registry.npmjs.org/array-iterate/-/array-iterate-2.0.1.tgz"
   integrity sha512-I1jXZMjAgCMmxT4qxXfPXa6SthSoE8h6gkSI9BGGNv8mP8G/v0blc+qFnZu6K42vTOiuME596QaLO0TP3Lk0xg==
 
+astro-vtbot@^1.6.0:
+  version "1.6.0"
+  resolved "https://registry.yarnpkg.com/astro-vtbot/-/astro-vtbot-1.6.0.tgz#43f928713a64ca48a910d0ee06956911d9b5b616"
+  integrity sha512-H1616q4x1Bc1V23JX69gKZyiQjbJ7KhPYkyP/jhU0jvWTZAXEA6QU6FQMmgut7sosuV5td2S0Su+SxPHhgXURQ==
+
 astro@^3.0.9:
   version "3.6.0"
   resolved "https://registry.npmjs.org/astro/-/astro-3.6.0.tgz"
