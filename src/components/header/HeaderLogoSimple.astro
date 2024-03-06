@@ -17,7 +17,7 @@ if (!lang) {
 
 <!-- Logo of The New Humanitarian -->
 <div class='h-10 sm:h-12'>
-	<a href=`/${lang}` data-astro-prefetch data-astro-reload>
+	<a href=`/${lang}` data-astro-prefetch data-astro-reload id='header-button'>
 		<svg
 			width='881'
 			height='162'
@@ -193,4 +193,17 @@ if (!lang) {
 			clearInterval(blinkInterval) // Stop the interval after 10 blinks
 		}
 	}, 500)
+</script>
+
+<script define:vars={{ lang }}>
+	document.addEventListener('astro:page-load', () => {
+		// Read localStorage.getItem('currentView') and adjust the overview button accordingly, if it exists
+		const currentView = localStorage.getItem('currentView')
+		const headerLogoButton = document.getElementById('header-button')
+		if (currentView === 'list' && headerLogoButton) {
+			headerLogoButton.setAttribute('href', `/${lang}/list`)
+		} else {
+			headerLogoButton.setAttribute('href', `/${lang}/grid`)
+		}
+	})
 </script>

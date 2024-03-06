@@ -1,13 +1,16 @@
 ---
 let { lang } = Astro.params
 
-if (!lang) {
-	// Read path parameters for language and slug
-	const { path } = Astro.params
+// Read path parameters for language and slug
+const { path } = Astro.params
 
-	const pathParams = path?.toString().split('/')
+const pathParams = path?.toString().split('/')
+
+if (!lang) {
 	lang = pathParams?.[0] || Astro.props.lang
 }
+
+const view = pathParams?.[1]
 ---
 
 <div
@@ -50,7 +53,7 @@ if (!lang) {
 	</div>
 </div>
 
-<script>
+<script define:vars={{ lang, view }}>
 	// Add event listener DOMContentLoaded to show the correct view on load
 	document.addEventListener('DOMContentLoaded', () => {
 		buttonHandler(null)
@@ -76,22 +79,28 @@ if (!lang) {
 			buttonList.classList.remove('bg-burgundy')
 		}
 		// Activate pointer events for #stories-container--grid
-		const gridWrapper = document.querySelector('.stories-container--grid') as HTMLElement
+		const gridWrapper = document.querySelector('.stories-container--grid')
 		if (gridWrapper) {
 			gridWrapper.style.pointerEvents = 'auto'
 		}
 
 		// Show the grid view, hide the list view
-		const gridElement = document.querySelector('#grid') as HTMLElement
+		const gridElement = document.querySelector('.grid--shared')
 		if (gridElement) {
 			gridElement.style.display = 'grid'
 			// Set pointer events of the grid to auto
 			gridElement.style.pointerEvents = 'auto'
 		}
-		const listElement = document.querySelector('#list') as HTMLElement
+		const listElement = document.querySelector('.list--shared')
 		if (listElement) {
 			listElement.style.display = 'none'
 			listElement.style.opacity = '0'
+		}
+
+		// Change header logo button URL
+		const headerLogoButton = document.getElementById('header-button')
+		if (headerLogoButton) {
+			headerLogoButton.setAttribute('href', `/${lang}/grid`)
 		}
 	}
 
@@ -109,23 +118,29 @@ if (!lang) {
 		}
 
 		// Deactivate pointer events for #stories-container--grid
-		const gridWrapper = document.querySelector('.stories-container--grid') as HTMLElement
+		const gridWrapper = document.querySelector('.stories-container--grid')
 		if (gridWrapper) {
 			gridWrapper.style.pointerEvents = 'none'
 		}
 
 		// Show the list view, hide the grid view
-		const gridElement = document.querySelector('#grid') as HTMLElement
+		const gridElement = document.querySelector('.grid--shared')
 		if (gridElement) {
 			gridElement.style.display = 'none'
 			// Set pointer events of the grid to none
 			gridElement.style.pointerEvents = 'none'
 		}
 
-		const listElement = document.querySelector('#list') as HTMLElement
+		const listElement = document.querySelector('.list--shared')
 		if (listElement) {
 			listElement.style.display = 'block'
 			listElement.style.opacity = '1'
+		}
+
+		// Change header logo button URL
+		const headerLogoButton = document.getElementById('header-button')
+		if (headerLogoButton) {
+			headerLogoButton.setAttribute('href', `/${lang}/list`)
 		}
 	}
 
@@ -134,17 +149,12 @@ if (!lang) {
 		if (!event) {
 			// If the user has not set a view yet, set the default view
 			if (!localStorage.getItem('currentView')) {
-				// If user loads the site on mobile for the first time, show the list view, not the grid
-				// if (window.innerWidth < 640) {
-				// 	onButtonListHandler()
-				// 	return
-				// } else {
-				// 	onButtonGridHandler()
-				// 	return
-				// }
+				// onButtonListHandler()
 			} else if (localStorage.getItem('currentView') === 'list') {
+        // localStorage.setItem('currentView', 'list')
 				onButtonListHandler()
 			} else if (localStorage.getItem('currentView') === 'grid') {
+        // localStorage.setItem('currentView', 'grid')
 				onButtonGridHandler()
 			}
 		} else {
@@ -168,7 +178,11 @@ if (!lang) {
 	}
 
 	// Trigger without event for initial load
-	buttonHandler(null)
+	// buttonHandler(null)
+
+  if (view) {
+    localStorage.setItem('currentView', view)
+  }
 
 	const buttons = document.querySelectorAll('.view-button')
 
