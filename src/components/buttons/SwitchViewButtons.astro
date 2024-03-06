@@ -80,6 +80,19 @@ if (!lang) {
 		if (gridWrapper) {
 			gridWrapper.style.pointerEvents = 'auto'
 		}
+
+		// Show the grid view, hide the list view
+		const gridElement = document.querySelector('#grid') as HTMLElement
+		if (gridElement) {
+			gridElement.style.display = 'grid'
+			// Set pointer events of the grid to auto
+			gridElement.style.pointerEvents = 'auto'
+		}
+		const listElement = document.querySelector('#list') as HTMLElement
+		if (listElement) {
+			listElement.style.display = 'none'
+			listElement.style.opacity = '0'
+		}
 	}
 
 	function onButtonListHandler() {
@@ -94,10 +107,25 @@ if (!lang) {
 			buttonList.classList.add('bg-burgundy')
 			buttonList.classList.remove('bg-black')
 		}
+
 		// Deactivate pointer events for #stories-container--grid
 		const gridWrapper = document.querySelector('.stories-container--grid') as HTMLElement
 		if (gridWrapper) {
 			gridWrapper.style.pointerEvents = 'none'
+		}
+
+		// Show the list view, hide the grid view
+		const gridElement = document.querySelector('#grid') as HTMLElement
+		if (gridElement) {
+			gridElement.style.display = 'none'
+			// Set pointer events of the grid to none
+			gridElement.style.pointerEvents = 'none'
+		}
+
+		const listElement = document.querySelector('#list') as HTMLElement
+		if (listElement) {
+			listElement.style.display = 'block'
+			listElement.style.opacity = '1'
 		}
 	}
 

@@ -7,7 +7,7 @@ import stories from '@data/all_stories.json'
 const { path } = Astro.params
 const pathParams = path?.toString().split('/')
 const lang = pathParams?.[0] || 'en' // Get language from path
-const view = pathParams?.[1] || 'grid' // Get grid or list from path
+const view = pathParams?.[1] || undefined // Get grid or list from path
 
 export async function getStaticPaths() {
 	const allPaths = [
