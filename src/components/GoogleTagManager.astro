@@ -1,16 +1,20 @@
 ---
-type Props = { measurementId: string }
+type Props = { measurementId?: string }
 const props = Astro.props as Props
 const measurementId = props.measurementId
 ---
 
-<script type='text/partytown' src={`https://www.googletagmanager.com/gtag/js?id=${measurementId}`}></script>
-<script type='text/partytown' data-ga-measurement-id={measurementId} id='ga-init'>
-	const measurementId = document.getElementById('ga-init').getAttribute('data-ga-measurement-id')
-	window.dataLayer = window.dataLayer || []
-	function gtag() {
-		dataLayer.push(arguments) // eslint-disable-line
-	}
-	gtag('js', new Date())
-	gtag('config', measurementId)
+<!-- Google Tag Manager -->
+<script>
+	;(function (w, d, s, l, i) {
+		w[l] = w[l] || []
+		w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' })
+		var f = d.getElementsByTagName(s)[0],
+			j = d.createElement(s),
+			dl = l != 'dataLayer' ? '&l=' + l : ''
+		j.async = true
+		j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl
+		f.parentNode.insertBefore(j, f)
+	})(window, document, 'script', 'dataLayer', 'GTM-T5C2M82')
 </script>
+<!-- End Google Tag Manager -->
