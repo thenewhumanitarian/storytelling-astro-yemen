@@ -33,10 +33,25 @@ if (!lang) {
 <!doctype html>
 <html lang='en' dir={lang === 'ar' ? 'rtl' : 'ltr'}>
 	<head>
+		<!-- GA4 -->
+		<script async src='https://www.googletagmanager.com/gtag/js?id=G-CN7NT4K7P4'></script>
+		<script is:inline>
+			window.dataLayer = window.dataLayer || []
+			function gtag() {
+				dataLayer.push(arguments)
+			}
+			gtag('js', new Date())
+
+			gtag('config', 'G-CN7NT4K7P4')
+		</script>
+		<!-- End GA4 -->
+
 		<!-- Todo: Change meta tags using Drupal tags before publication  -->
 		<slot name='seo' />
-		<!-- GOOGLE TAG MANAGERr -->
-		<GoogleTagManager measurementId='GTM-T5C2M82' />
+		<!-- GOOGLE TAG MANAGER -->
+		<!-- <GoogleTagManager measurementId='GTM-T5C2M82' /> -->
+		<!-- END GTM -->
+
 		<ReplacementSwap />
 	</head>
 	<body class={`overflow-y-scroll`}>
