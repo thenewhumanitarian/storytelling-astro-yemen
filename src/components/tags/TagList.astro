@@ -3,6 +3,8 @@ interface Props {
 	tags: string[]
 }
 
+import Tag from '@components/tags/Tag.astro'
+
 const { tags } = Astro.props as Props
 
 // Read path parameters for language and slug
@@ -23,13 +25,11 @@ if (!lang) {
 {
 	tags.length > 0 && (
 		<div class='text-center w-full max-w-5xl pt-8'>
-			<h3 class='font-sans pb-3 text-base font-bold'>Read more about...</h3>
-			<div class='tag-wrapper'>
+			<h3 class='font-sans pb-3 text-base font-bold text-center'>Read more about...</h3>
+			<div class='text-center flex gap-2 items-center justify-center'>
 				{tags.map((tag) => {
 					return (
-						<a href={`/tags/${lang}/${tag.toLowerCase()}`} class='inline-block px-3 pb-2 m-0 cursor-pointer text-base'>
-							<span class='block sm:font-bold bg-transparent border-transparent hover:underline text-zinc-200 text-shadow-xl shadow-black'>{tag}</span>
-						</a>
+						<Tag tag={tag} />
 					)
 				})}
 			</div>

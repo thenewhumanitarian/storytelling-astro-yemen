@@ -36,18 +36,18 @@ const shareLinks = {
 }
 ---
 
-<aside class='prose-inverted sm:prose-xl flex gap-x-3 justify-center items-center mt-8'>
-	<span class='font-bold text-base'>{translations.shareThisStory[lang]}</span>
-	<span class='group transition-all w-5 h-5 inline'>
+<aside class='prose-xl flex gap-x-3 justify-center items-center mt-8'>
+	<span class='block font-normal text-base'>{translations.shareThisStory[lang]}</span>
+	<span class='group transition-all w-5 h-5 block'>
 		<a class='group-hover:-translate-y-1 block -mt-3' rel='noopener noreferrer' target='_blank' href={shareLinks.whatsapp}><WhatsAppIcon /></a>
 	</span>
-	<span class='group transition-all w-5 h-5 inline'>
+	<span class='group transition-all w-5 h-5 block'>
 		<a class='group-hover:-translate-y-1 block -mt-3' rel='noopener noreferrer' target='_blank' href={shareLinks.x}><XIcon /></a>
 	</span>
-	<span class='group transition-all w-5 h-5 inline'>
+	<span class='group transition-all w-5 h-5 block'>
 		<a class='group-hover:-translate-y-1 block -mt-3' rel='noopener noreferrer' target='_blank' href={shareLinks.facebook}><FacebookIcon /></a>
 	</span>
-	<span class='group transition-all w-5 h-5 inline'>
+	<span class='group transition-all w-5 h-5 block'>
 		<a class='group-hover:-translate-y-1 block -mt-3' rel='noopener noreferrer' target='_blank' href={shareLinks.email}><EmailIcon /></a>
 	</span>
 </aside>

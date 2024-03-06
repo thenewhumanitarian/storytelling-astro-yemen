@@ -146,6 +146,11 @@ const hasAudioFiles = processedAudioFiles.length > 0
 		<TagList tags={story.tags} />
 		{/* Share story section */}
 		<ShareStory story={story} lang={lang} />
+		<div class={`flex justify-center items-center ${lang === 'ar' ? 'flex-row-reverse sm:hidden' : 'flex-row sm:hidden'} nav-buttons menu--hide mt-5`}>
+			<NavButtons button='previous' lang={lang} href={`/stories/${lang}/${prevStorySlug}`} classNames='hover:text-white hover:bg-zinc-100' />
+			<NavButtons button='overview' lang={lang} classNames='text-white bg-burgundy hover:bg-zinc-100 hover:text-burgundy' />
+			<NavButtons button='next' lang={lang} href={`/stories/${lang}/${nextStorySlug}`} classNames='hover:text-white hover:bg-zinc-100' />
+		</div>
 	</div>
 </Layout>
 

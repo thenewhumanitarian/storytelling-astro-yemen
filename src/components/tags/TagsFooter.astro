@@ -3,6 +3,8 @@ interface Props {
 	tags: string[]
 }
 
+import Tag from '@components/tags/Tag.astro'
+
 // Read path parameters for language and slug
 const { path } = Astro.params
 
@@ -33,9 +35,7 @@ if (!lang) {
 		{
 			tags.map((tag) => {
 				return (
-					<a href={`/tags/${lang}/${tag.toLowerCase()}`} class='inline-block px-3 py-2 m-0 cursor-pointer text-base'>
-						<span class='block sm:font-bold bg-transparent border-transparent hover:underline text-zinc-200'>{tag}</span>
-					</a>
+					<Tag tag={tag} />
 				)
 			})
 		}

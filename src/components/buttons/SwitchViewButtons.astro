@@ -14,15 +14,6 @@ if (!lang) {
 	class='fixed bottom-4 left-4 -mt-2 sm:-mt-0 sm:top-0 sm:left-0 shadow-lg sm:shadow-none sm:relative flex items-center gap-3 z-20'
 	transition:persist={true}
 >
-	<!-- <div class='gap-2 ml-4 hidden xl:flex'> -->
-	<!-- View icon (grid) -->
-	<!-- <svg width='14' height='14' viewBox='0 0 112 111' fill='none' xmlns='http://www.w3.org/2000/svg'>
-			<path
-				d='M51.6773 51.948H0.109344V0.379997H51.6773V51.948ZM111.224 0.379997H59.656V51.948H111.224V0.379997ZM51.6773 59.3853H0.109344V110.953H51.6773V59.3853ZM111.224 59.3853H59.656V110.953H111.224V59.3853Z'
-				fill='white'></path>
-		</svg> -->
-	<!-- </div> -->
-	<!-- View change buttons -->
 	<div class='isolate inline-flex rounded-xs shadow-sm'>
 		<a
 			type='button'
@@ -89,18 +80,6 @@ if (!lang) {
 		if (gridWrapper) {
 			gridWrapper.style.pointerEvents = 'auto'
 		}
-		// Show the grid view, hide the list view
-		// const gridElement = document.querySelector('#grid') as HTMLElement
-		// if (gridElement) {
-		// 	gridElement.style.display = 'grid'
-		// 	// Set pointer events of the grid to auto
-		// 	gridElement.style.pointerEvents = 'auto'
-		// }
-		// const listElement = document.querySelector('#list') as HTMLElement
-		// if (listElement) {
-		// 	listElement.style.display = 'none'
-		// 	listElement.style.opacity = '0'
-		// }
 	}
 
 	function onButtonListHandler() {
@@ -120,19 +99,6 @@ if (!lang) {
 		if (gridWrapper) {
 			gridWrapper.style.pointerEvents = 'none'
 		}
-
-		// Show the list view, hide the grid view
-		// const gridElement = document.querySelector('#grid') as HTMLElement
-		// if (gridElement) {
-		// 	gridElement.style.display = 'none'
-		// 	// Set pointer events of the grid to none
-		// 	gridElement.style.pointerEvents = 'none'
-		// }
-		// const listElement = document.querySelector('#list') as HTMLElement
-		// if (listElement) {
-		// 	listElement.style.display = 'block'
-		// 	listElement.style.opacity = '1'
-		// }
 	}
 
 	// Named function for the event listener
@@ -141,13 +107,13 @@ if (!lang) {
 			// If the user has not set a view yet, set the default view
 			if (!localStorage.getItem('currentView')) {
 				// If user loads the site on mobile for the first time, show the list view, not the grid
-				if (window.innerWidth < 640) {
-					onButtonListHandler()
-					return
-				} else {
-					onButtonGridHandler()
-					return
-				}
+				// if (window.innerWidth < 640) {
+				// 	onButtonListHandler()
+				// 	return
+				// } else {
+				// 	onButtonGridHandler()
+				// 	return
+				// }
 			} else if (localStorage.getItem('currentView') === 'list') {
 				onButtonListHandler()
 			} else if (localStorage.getItem('currentView') === 'grid') {

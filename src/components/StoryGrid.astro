@@ -24,10 +24,11 @@ if (!lang) {
 	#grid.hide-images {
 		.story-item img {
 			opacity: 0;
+			will-change: opacity;
 		}
 
 		.story-item h2 {
-			background: white;
+			background: rgba(255, 255, 255, 0.5);
 			color: black;
 		}
 	}
@@ -39,9 +40,9 @@ if (!lang) {
 		z-index: 5000;
 		top: 0;
 		left: 0;
-		width: 50px;
-		height: 50px;
 		background: white;
+		// width: 50px;
+		// height: 50px;
 	}
 
 	.grid {
@@ -53,7 +54,7 @@ if (!lang) {
 
 		gap: 1rem;
 
-		@media screen and (max-width: 500px) {
+		@media screen and (max-width: 640px) {
 			gap: 1rem;
 		}
 	}
@@ -65,15 +66,25 @@ if (!lang) {
 		background-position: center center;
 		user-select: none;
 		overflow: hidden;
-		will-change: auto;
+		will-change: all;
 		transform: scale(1);
-		padding-top: 0.1rem;
+		padding-top: 0;
 
 		h2 {
 			font-family: 'Roboto', sans-serif;
-			font-weight: 500;
+			font-weight: 400;
 			line-height: 1.15;
-			// text-shadow: 2px 2px 15px rgba(0, 0, 0, 1);
+			will-change: opacity;
+			// Line clamp 3 lines
+			display: -webkit-box;
+			-webkit-line-clamp: 5;
+			-webkit-box-orient: vertical;
+			overflow: hidden;
+			text-overflow: ellipsis;
+
+			@media screen and (max-width: 640px) {
+				font-size: 1rem;
+			}
 		}
 
 		img {
@@ -92,12 +103,10 @@ if (!lang) {
 			z-index: 999;
 			border: 0.5rem solid #9f3e52;
 			box-shadow: 0 0 15px black;
-			// align-items: end;
-			// justify-items: end;
-			// display: flex;
 
-			@media screen and (max-width: 500px) {
+			@media screen and (max-width: 640px) {
 				display: unset;
+				border-width: 0.25rem;
 			}
 
 			h2 {
@@ -110,8 +119,11 @@ if (!lang) {
 				margin-left: -1px;
 				margin-top: -1px;
 
-				@media screen and (max-width: 500px) {
+				@media screen and (max-width: 640px) {
 					margin-left: 1px;
+					padding-top: 10px;
+					font-size: 1rem;
+					background: transparent;
 					font-weight: bold;
 				}
 			}
@@ -121,6 +133,10 @@ if (!lang) {
 
 				h2 {
 					background: transparent;
+				}
+
+				@media screen and (max-width: 640px) {
+					border-color: #9f3e52;
 				}
 			}
 		}
@@ -157,7 +173,7 @@ if (!lang) {
 		line-height: 1.15;
 		top: 0;
 
-		@media screen and (max-width: 500px) {
+		@media screen and (max-width: 640px) {
 			display: inline;
 			margin: 0;
 			top: 0;
@@ -339,9 +355,15 @@ if (!lang) {
 			}
 
 			// Set the background to the placeholder
-			this.item.style.backgroundImage = `url('${pixelatedImageUrl}')`
+			if (window.innerWidth < 500) {
+				this.item.style.backgroundColor = `#282828`
+				this.item.style.backgroundImage = `none`
+			} else {
+				this.item.style.backgroundImage = `url('${pixelatedImageUrl}')`
+			}
 			this.item.style.backgroundSize = 'cover'
 			this.item.style.backgroundPosition = 'center'
+			this.item.classList.add('bg-black')
 			this.item.classList.add('group')
 			this.item.style.width = '100%'
 			this.item.style.height = '100%'
@@ -382,8 +404,10 @@ if (!lang) {
 				this.titleEnglish.classList.add('sm:text-black')
 				this.titleEnglish.classList.add('bg-transparent')
 				this.titleEnglish.classList.add('sm:bg-white')
-				this.titleEnglish.classList.add('sm:group-hover:text-shadow-lg')
-				this.titleEnglish.classList.add('shadow-black')
+				if (window.innerWidth < 500) {
+					this.titleEnglish.classList.add('sm:group-hover:text-shadow-lg')
+					this.titleEnglish.classList.add('sm:shadow-black')
+				}
 				this.titleEnglish.classList.add('sm:group-hover:text-white')
 				this.titleEnglish.classList.add('sm:group-hover:bg-transparent')
 				this.titleEnglish.classList.add('pointer-events-none')
@@ -404,8 +428,10 @@ if (!lang) {
 				this.titleArabic.classList.add('sm:text-black')
 				this.titleArabic.classList.add('bg-transparent')
 				this.titleArabic.classList.add('sm:bg-white')
-				this.titleArabic.classList.add('sm:group-hover:text-shadow-lg')
-				this.titleArabic.classList.add('shadow-black')
+				if (window.innerWidth < 500) {
+					this.titleArabic.classList.add('sm:group-hover:text-shadow-lg')
+					this.titleArabic.classList.add('sm:shadow-black')
+				}
 				this.titleArabic.classList.add('sm:group-hover:text-white')
 				this.titleArabic.classList.add('sm:group-hover:bg-transparent')
 				this.titleArabic.classList.add('pointer-events-none')
@@ -506,13 +532,13 @@ if (!lang) {
 			if (document.getElementById('grid').style.display === 'none') return
 			this.touchStartTime = Date.now()
 
-			console.log('Touch started: ', this.touchStartTime)
-
+			// Remove default event handling
 			ev.preventDefault()
 
 			// Add 'is-dragging' class to body to disable hover effects
 			document.body.classList.add('is-dragging')
 
+			// If multiple touch points, take first
 			ev = ev.type == 'touchstart' ? ev.touches[0] : ev
 
 			this.dragging = true
@@ -525,16 +551,19 @@ if (!lang) {
 
 		onMove(ev) {
 			if (!this.dragging) return
-
 			if (document.getElementById('grid').style.display === 'none') return
+
 			ev = ev.type == 'touchmove' ? ev.touches[0] : ev
 
 			let xDelta = ev.clientX - this.lastX
 			let yDelta = ev.clientY - this.lastY
+
 			let vel = Math.abs(xDelta * yDelta)
 			if (vel > 50) {
-				// let v = { x: xDelta * 0.5, y: yDelta * 1 } // Make it more snappy
 				let v = { x: xDelta * 0, y: yDelta * 0 }
+				// if (window.innerWidth < 500) {
+				// 	v = { x: xDelta * 0.75, y: yDelta * 0.75 } // Make it snappier on mobile
+				// }
 				if (this.anime) this.anime.pause()
 				this.anime = anime({
 					targets: v,
@@ -546,7 +575,12 @@ if (!lang) {
 				})
 			}
 
-			this.handleDrag(xDelta, yDelta)
+			requestAnimationFrame(() => {
+				this.handleDrag(xDelta, yDelta)
+			})
+
+			// this.handleDrag(xDelta, yDelta)
+
 			this.lastX = ev.clientX
 			this.lastY = ev.clientY
 		}
@@ -566,10 +600,10 @@ if (!lang) {
 			// Calculate the duration of the tap
 			const touchDuration = Date.now() - this.touchStartTime
 
-			console.log(touchDuration)
+			// console.log(touchDuration)
 
 			// Check duration and act accordingly
-			if (touchDuration < 50) {
+			if (touchDuration < 100) {
 				// This checks if the touch lasted less than 100ms
 				// This was a short tap:
 				if (ev.target.tagName.toLowerCase() === 'a' && touchDuration) {
@@ -666,9 +700,12 @@ if (!lang) {
 		onScroll({ deltaY }) {
 			if (document.getElementById('grid').style.display === 'none') return
 
-			const SCROLL_Y_THRESHOLD = 25
+			// If mobile device return early
+			if (window.innerWidth < 640) return
 
-			const yDelta = deltaY / 2
+			const SCROLL_Y_THRESHOLD = 0
+
+			const yDelta = deltaY / 4
 			this.offsetY += yDelta
 
 			if (Math.abs(yDelta) < SCROLL_Y_THRESHOLD) return
@@ -700,8 +737,10 @@ if (!lang) {
 			// Making the movement invisible
 			const itemWidth = 100 / this.cols
 			const itemHeight = 100 / this.rows
+
 			const pixelWidth = (itemWidth * window.innerWidth) / 100
 			const pixelHeight = (itemHeight * window.innerHeight) / 100
+
 			let jumpX = null
 			let jumpY = null
 
@@ -781,9 +820,33 @@ if (!lang) {
 	const grid = optimalGridDimensions()
 	const Infinite = new InfiniteGrid(grid.cols, grid.rows)
 
-	function optimalGridDimensions(minSide = window.innerWidth > 640 ? 220 : 140) {
+	function getMinSide() {
+		const windowWidth = window.innerWidth
+
+		if (windowWidth > 1280) {
+			return 220
+		} else if (windowWidth > 1024) {
+			return 200
+		} else if (windowWidth > 640) {
+			return 180
+		} else if (windowWidth > 500) {
+			return 150
+		} else if (windowWidth > 340) {
+			return 340 / 3
+		} else if (windowWidth > 320) {
+			return 320 / 3
+		} else if (windowWidth > 240) {
+			return 80
+		} else {
+			return 140
+		}
+	}
+
+	// Function to calculate optimal grid dimensions
+	function optimalGridDimensions() {
 		const width = window.innerWidth
 		const height = window.innerHeight
+		const minSide = getMinSide()
 
 		const maxCols = Math.floor(width / minSide)
 		const maxRows = Math.floor(height / minSide)
@@ -817,7 +880,6 @@ if (!lang) {
 	window.addEventListener('resize', () => {
 		const grid = optimalGridDimensions()
 		Infinite.setGrid(grid.cols, grid.rows).then(() => {
-			// console.log('Grid loaded')
 			Infinite.updateGridBackground('black')
 		})
 	})
