@@ -2,7 +2,7 @@
 import Header from '@components/header/Header.astro'
 import MenuOverlay from '@components/menu/MenuOverlay.astro'
 import ReplacementSwap from 'astro-vtbot/components/ReplacementSwap.astro'
-import GoogleAnalytics from '@components/GoogleAnalytics.astro'
+import GoogleTagManager from '@components/GoogleTagManager.astro'
 
 import '@styles/tailwind.css'
 import '@styles/global.css'
@@ -28,8 +28,6 @@ if (!lang) {
 	const pathParams = path?.toString().split('/')
 	lang = pathParams?.[0] || 'en'
 }
-
-const isProduction = import.meta.env.MODE === 'production'
 ---
 
 <!doctype html>
@@ -38,7 +36,7 @@ const isProduction = import.meta.env.MODE === 'production'
 		<!-- Todo: Change meta tags using Drupal tags before publication  -->
 		<slot name='seo' />
 		<!-- GOOGLE TAG MANAGERr -->
-		<GoogleAnalytics />
+		<GoogleTagManager />
 		<ReplacementSwap />
 	</head>
 	<body class={`overflow-y-scroll`}>
@@ -52,7 +50,7 @@ const isProduction = import.meta.env.MODE === 'production'
 		<MenuOverlay />
 		<!-- Footer  -->
 		<!-- No footer set -->
-	</body><style is:global lang={'scss'}>
+		<style is:global lang={'scss'}>
   html[dir='ltr'] {
     /* Styles for left-to-right direction */
   }
@@ -88,4 +86,5 @@ const isProduction = import.meta.env.MODE === 'production'
 		}
 	}
 </style>
+	</body>
 </html>
