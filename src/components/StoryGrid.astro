@@ -555,11 +555,11 @@ if (!lang) {
 			let yDelta = ev.clientY - this.lastY
 
 			let vel = Math.abs(xDelta * yDelta)
-			if (vel > 50) {
+			if (vel > 20) {
 				let v = { x: xDelta * 0, y: yDelta * 0 }
-				if (window.innerWidth < 500 || isMobileDevice()) {
-					v = { x: xDelta * 1, y: yDelta * 1 } // Make it snappier on mobile
-				}
+				// if (window.innerWidth < 500 || isMobileDevice()) {
+				// 	v = { x: xDelta * 1, y: yDelta * 1 } // Make it snappier on mobile
+				// }
 				if (this.anime) this.anime.pause()
 				this.anime = anime({
 					targets: v,
@@ -575,7 +575,7 @@ if (!lang) {
 				this.handleDrag(xDelta, yDelta)
 			})
 
-			// this.handleDrag(xDelta, yDelta)
+			this.handleDrag(xDelta, yDelta)
 
 			this.lastX = ev.clientX
 			this.lastY = ev.clientY
@@ -730,7 +730,7 @@ if (!lang) {
 		}
 
 		onDrag(xDelta, yDelta) {
-			this.offsetX += isMobileDevice() ? 0 : xDelta
+			this.offsetX += xDelta
 			this.offsetY += yDelta
 
 			// Move the grid back by 1 item whenever it goes over 1/2 of an item
