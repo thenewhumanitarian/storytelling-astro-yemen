@@ -491,12 +491,13 @@ if (!lang) {
 	}
 
 	class Drag {
-		constructor(ele, handleDrag) {
+		constructor(ele, handleDrag, tileHeight = 200) {
 			this.dragging = false
 			this.lastX = null
 			this.lastY = null
 			this.handleDrag = handleDrag
 			this.touchStartTime = 0
+			this.tileHeight = tileHeight
 
 			ele.addEventListener('click', this.onClick.bind(this), false)
 
@@ -549,15 +550,16 @@ if (!lang) {
 
 			ev = ev.type == 'touchmove' ? ev.touches[0] : ev
 
-			let xDelta = ev.clientX - this.lastX
+      // Ignore x delta for mobile (touch) devices
+			let xDelta = isMobileDevice() ? 0 : ev.clientX - this.lastX
 			let yDelta = ev.clientY - this.lastY
 
 			let vel = Math.abs(xDelta * yDelta)
 			if (vel > 50) {
 				let v = { x: xDelta * 0, y: yDelta * 0 }
-				// if (window.innerWidth < 500) {
-				// 	v = { x: xDelta * 0.75, y: yDelta * 0.75 } // Make it snappier on mobile
-				// }
+				if (window.innerWidth < 500 || isMobileDevice()) {
+					v = { x: xDelta * 1, y: yDelta * 1 } // Make it snappier on mobile
+				}
 				if (this.anime) this.anime.pause()
 				this.anime = anime({
 					targets: v,
@@ -667,6 +669,11 @@ if (!lang) {
 		}
 	}
 
+	// Global function to detect if mobile device using navigator.userAgent
+	function isMobileDevice() {
+		return /Mobi|Android/i.test(navigator.userAgent)
+	}
+
 	const tracker = new GridTracker()
 
 	class InfiniteGrid {
@@ -723,7 +730,7 @@ if (!lang) {
 		}
 
 		onDrag(xDelta, yDelta) {
-			this.offsetX += xDelta
+			this.offsetX += isMobileDevice() ? 0 : xDelta
 			this.offsetY += yDelta
 
 			// Move the grid back by 1 item whenever it goes over 1/2 of an item
