@@ -58,7 +58,7 @@ if (!lang) {
 		if (window.innerWidth < 640) {
 			rows = 5
 			cols = 5
-			targetSize = window.innerWidth / 2.6
+			targetSize = window.innerWidth / 2
 		}
 
 		const FIXED_ROWS = rows
@@ -206,14 +206,14 @@ if (!lang) {
 			if (touchDuration < 150) {
 				// This checks if the touch lasted less than 100ms
 				// This was a short tap:
-				if (e.target.tagName.toLowerCase() === 'div') {
-					const href = e.target.getAttribute('data-href')
-					if (href) {
-						window.location = href
-					}
-				} else {
-					return
+				// if (e.target.tagName.toLowerCase() === 'div') {
+				const href = e.target.getAttribute('data-href')
+				if (href) {
+					window.location = href
 				}
+				// } else {
+				// 	return
+				// }
 			}
 		}
 
@@ -342,7 +342,7 @@ if (!lang) {
 
 			let cssBatch = ''
 			cssBatch += `transform: translate3d(${this.x}px, ${this.y}px, 0);`
-			cssBatch += `width: ${adjustCardSize().cardSize - 12}px;`
+			cssBatch += `width: ${adjustCardSize().cardSize - 8}px;`
 			cssBatch += `background-image: url(${this.descriptor.storyImage.pixelated})`
 			// cssBatch += 'display:' + ( this._visible ? 'block;' : 'none;' );
 
@@ -556,6 +556,7 @@ if (!lang) {
 	}
 
 	.card {
+    position: relative;
 		background-size: cover;
 		background-position: center;
 		border-radius: 1px;
@@ -566,7 +567,7 @@ if (!lang) {
 		overflow: hidden;
 		position: absolute;
 		aspect-ratio: 1/1;
-		border: 5px solid transparent;
+		border: 4px solid black;
 		will-change: transform;
 
 		&.highlighted {
@@ -588,7 +589,7 @@ if (!lang) {
 
 				h2 {
 					text-shadow: inherit;
-					background: transparent;
+					background: black;
 				}
 			}
 		}
@@ -611,7 +612,7 @@ if (!lang) {
 
 	.card:hover {
 		opacity: 1;
-		border: 5px solid white;
+		border: 4px solid white;
 
 		.shader {
 			opacity: 0.6;
@@ -632,13 +633,21 @@ if (!lang) {
 		opacity: 0;
 	}
 
+  .card img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
 	.card h2 {
 		font-weight: bold;
 		color: white;
 		position: absolute;
 		top: 0;
 		margin: 0;
-		padding: 0.5rem;
+		padding: 0.25rem;
 		font-size: 1.4rem;
 
 		@media screen and (max-width: 640px) {
