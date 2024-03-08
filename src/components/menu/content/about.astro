@@ -1,56 +1,91 @@
 ---
-import Title from '@components/Title.astro'
-import Subtitle from '@components/Subtitle.astro'
-
 const { lang } = Astro.props
 ---
 
-<div slot='header'>
-	<Title>About</Title>
-	<Subtitle>Read more about the Yemen Listening Project.</Subtitle>
-</div>
-
-<div slot='body'>
-	<p class='text-white font-bold text-xl'>How did The Yemen Listening Project collect stories?</p>
-	We asked people to submit their stories, in Arabic or English, on an online form, via email, Facebook, or a dedicated WhatsApp number. Once the submissions came
-	in, we asked local journalists to gather stories from some parts of Yemen that were not yet well represented in the submissions.
-
-	<p class='text-white font-bold text-xl'>Why wasn’t every story published?</p>
-	Unfortunately, we did not have the space to publish every story, but we did read every entry.
-
-	<p class='text-white font-bold text-xl'>Were the stories edited?</p>
-	Stories were edited for style, length, and clarity. We did add a little context to some stories to help readers who are not familiar with Yemen’s war. Translations
-	between languages are not always word for word.
-
-	<p class='text-white font-bold text-xl'>What’s next for The Yemen Listening Project?</p>
-	The Yemen Listening Project will be hosting online and in-person events about the project, about Yemen, and about inclusive journalism. Click here to receive
-	updates.
-
-	<p class='text-white font-bold text-xl'>I have an idea for my own listening project. Who should I contact?</p>
-	Email <a
-		class='text-white font-bold hover:underline'
-		href='mailto:yemenlistening@thenewhumanitarian.org?subject=Listening project idea'
-		target='_blank'
-		rel='noopener noreferrer'>yemenlistening@thenewhumanitarian.org</a
-	> with the subject line “listening project idea”. If we have enough takers, we will invite you to future workshops about what we have learned in the process
-	of making The Yemen Listening Project, and help connect you with other people who are interested in the same things.
-
-	<p class='text-white font-bold text-xl'>Where can I learn more about Yemen?</p>
-	Houthi rebels, officially called Ansar Allah, took over Yemen’s capital city of Sana’a in late 2014. In March 2015, a Saudi Arabia and United Arab Emirates-led
-	coalition began bombing Houthi-controlled parts of the country, as part of a military campaign to support Yemen’s internationally recognised government.
-
-	<p class='text-white font-bold text-xl'>You can find all of The New Humanitarian’s coverage of Yemen’s war and humanitarian crisis here.</p>
-
-	<p class='text-white font-bold text-xl'>What is The New Humanitarian?</p>
-	<p class='text-white'>
-		The New Humanitarian is a nonprofit newsroom that puts quality, independent journalism at the service of the millions of people affected by humanitarian
-		crises around the world. We report from the heart of conflicts and disasters to inform prevention and response.
-	</p>
-
-	<p class='text-white font-bold text-xl'>Credits</p>
-
-	<p class='italic'>
-		Direction and editing: Annie Slemrod Project coordination: Nuha al-Junaid Translation: Suha al-Junaid and Natakallam Web development: Marc Fehr Audience
-		production: Whitney Patterson Events: Matt Crook
-	</p>
-</div>
+{
+	lang === 'en' ? (
+		<div class='text-white'>
+			<h2 class='text-white font-sans font-bold tracking-tight text-3xl text-left'>About</h2>
+			<p class='text-white font-bold text-xl'>How did The Yemen Listening Project collect stories?</p>
+			We asked people to submit their stories, in Arabic or English, on an online form, via email, Facebook, or a dedicated WhatsApp number. Once the
+			submissions came in, we asked local journalists to gather stories from some parts of Yemen that were not yet well represented in the submissions.
+			<p class='text-white font-bold text-xl'>Why wasn’t every story published?</p>
+			Unfortunately, we did not have the space to publish every story, but we did read every entry.
+			<p class='text-white font-bold text-xl'>Were the stories edited?</p>
+			Stories were edited for style, length, and clarity. We did add a little context to some stories to help readers who are not familiar with Yemen’s
+			war. Translations between languages are not always word for word.
+			<p class='text-white font-bold text-xl'>What’s next for The Yemen Listening Project?</p>
+			The Yemen Listening Project will be hosting online and in-person events about the project, about Yemen, and about inclusive journalism. Click here
+			to receive updates.
+			<p class='text-white font-bold text-xl'>I have an idea for my own listening project. Who should I contact?</p>
+			Email{' '}
+			<a
+				class='text-white font-bold hover:underline'
+				href='mailto:yemenlistening@thenewhumanitarian.org?subject=Listening project idea'
+				target='_blank'
+				rel='noopener noreferrer'
+			>
+				yemenlistening@thenewhumanitarian.org
+			</a>{' '}
+			with the subject line “listening project idea”. If we have enough takers, we will invite you to future workshops about what we have learned in the
+			process of making The Yemen Listening Project, and help connect you with other people who are interested in the same things.
+			<p class='text-white font-bold text-xl'>Where can I learn more about Yemen?</p>
+			Houthi rebels, officially called Ansar Allah, took over Yemen’s capital city of Sana’a in late 2014. In March 2015, a Saudi Arabia and United Arab
+			Emirates-led coalition began bombing Houthi-controlled parts of the country, as part of a military campaign to support Yemen’s internationally
+			recognised government.
+			<p class='text-white font-bold text-xl'>You can find all of The New Humanitarian’s coverage of Yemen’s war and humanitarian crisis here.</p>
+			<p class='text-white font-bold text-xl'>What is The New Humanitarian?</p>
+			<p class='text-white'>
+				The New Humanitarian is a nonprofit newsroom that puts quality, independent journalism at the service of the millions of people affected by
+				humanitarian crises around the world. We report from the heart of conflicts and disasters to inform prevention and response.
+			</p>
+			<p class='text-white font-bold text-xl'>Credits</p>
+			<p class='italic'>
+				Direction and editing: Annie Slemrod Project coordination: Nuha al-Junaid Translation: Suha al-Junaid and Natakallam Web development: Marc Fehr
+				Audience production: Whitney Patterson Events: Matt Crook
+			</p>
+		</div>
+	) : (
+		<div class='text-white'>
+			<h2 class='text-white font-sans font-bold tracking-tight text-3xl text-left'>About</h2>
+			<p class='text-white font-bold text-xl'>How did The Yemen Listening Project collect stories?</p>
+			We asked people to submit their stories, in Arabic or English, on an online form, via email, Facebook, or a dedicated WhatsApp number. Once the
+			submissions came in, we asked local journalists to gather stories from some parts of Yemen that were not yet well represented in the submissions.
+			<p class='text-white font-bold text-xl'>Why wasn’t every story published?</p>
+			Unfortunately, we did not have the space to publish every story, but we did read every entry.
+			<p class='text-white font-bold text-xl'>Were the stories edited?</p>
+			Stories were edited for style, length, and clarity. We did add a little context to some stories to help readers who are not familiar with Yemen’s
+			war. Translations between languages are not always word for word.
+			<p class='text-white font-bold text-xl'>What’s next for The Yemen Listening Project?</p>
+			The Yemen Listening Project will be hosting online and in-person events about the project, about Yemen, and about inclusive journalism. Click here
+			to receive updates.
+			<p class='text-white font-bold text-xl'>I have an idea for my own listening project. Who should I contact?</p>
+			Email{' '}
+			<a
+				class='text-white font-bold hover:underline'
+				href='mailto:yemenlistening@thenewhumanitarian.org?subject=Listening project idea'
+				target='_blank'
+				rel='noopener noreferrer'
+			>
+				yemenlistening@thenewhumanitarian.org
+			</a>{' '}
+			with the subject line “listening project idea”. If we have enough takers, we will invite you to future workshops about what we have learned in the
+			process of making The Yemen Listening Project, and help connect you with other people who are interested in the same things.
+			<p class='text-white font-bold text-xl'>Where can I learn more about Yemen?</p>
+			Houthi rebels, officially called Ansar Allah, took over Yemen’s capital city of Sana’a in late 2014. In March 2015, a Saudi Arabia and United Arab
+			Emirates-led coalition began bombing Houthi-controlled parts of the country, as part of a military campaign to support Yemen’s internationally
+			recognised government.
+			<p class='text-white font-bold text-xl'>You can find all of The New Humanitarian’s coverage of Yemen’s war and humanitarian crisis here.</p>
+			<p class='text-white font-bold text-xl'>What is The New Humanitarian?</p>
+			<p class='text-white'>
+				The New Humanitarian is a nonprofit newsroom that puts quality, independent journalism at the service of the millions of people affected by
+				humanitarian crises around the world. We report from the heart of conflicts and disasters to inform prevention and response.
+			</p>
+			<p class='text-white font-bold text-xl'>Credits</p>
+			<p class='italic'>
+				Direction and editing: Annie Slemrod Project coordination: Nuha al-Junaid Translation: Suha al-Junaid and Natakallam Web development: Marc Fehr
+				Audience production: Whitney Patterson Events: Matt Crook
+			</p>
+		</div>
+	)
+}

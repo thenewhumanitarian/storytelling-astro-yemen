@@ -53,8 +53,16 @@ const navButtonClasses =
 
 	<section class='flex flex-col z-50 cursor-default'>
 		<div class='w-full'>
-			<Pergament lang={lang || 'en'} classNames='p-4 text-black h-full rounded-xs min-h-[20vh] max-h-[40vh] sm:max-h-[50vh]' overflowY={'auto'}>
-				<Intro lang={lang} />
+			<Pergament lang={lang || 'en'} classNames='p-4 text-black h-full rounded-xs min-h-[20vh] max-h-[45vh] sm:max-h-[50vh]' overflowY={'auto'}>
+				<div class='content-container' id='intro'>
+					<Intro lang={lang} />
+				</div>
+				<div class='content-container' id='about'>
+					<About lang={lang} />
+				</div>
+				<div class='content-container' id='credits'>
+					<Credits lang={lang} />
+				</div>
 			</Pergament>
 		</div>
 	</section>
@@ -128,7 +136,7 @@ const navButtonClasses =
 </style>
 
 <script>
-	document.addEventListener('DOMContentLoaded', (event) => {
+	document.addEventListener('astro:page-load', (event) => {
 		// Select all elements with the class 'nav-button'
 		const navButtons = document.querySelectorAll('.nav-button')
 
@@ -136,6 +144,14 @@ const navButtonClasses =
 		function removeAllActiveClasses() {
 			navButtons.forEach((button) => {
 				button.classList.remove('active')
+			})
+		}
+
+		function hideAllContainers() {
+			// Select all .content-container elements and hide them
+			const contentContainers = document.querySelectorAll('.content-container')
+			contentContainers.forEach((container) => {
+				container.style.display = 'none'
 			})
 		}
 
@@ -158,6 +174,11 @@ const navButtonClasses =
 
 			// Optionally, log the saved value to confirm it's working
 			console.log('Active Intro Slide set to:', content)
+
+			// Select element with id === content and show it
+			hideAllContainers()
+			const contentContainer = document.getElementById(content)
+			contentContainer.style.display = 'block'
 		}
 
 		// Function to activate the nav button based on localStorage or default to first button
@@ -190,5 +211,21 @@ const navButtonClasses =
 
 		// Check and activate the nav button as per localStorage when the page loads
 		activateStoredNavButton()
+
+		// Select all .content-container elements and hide them
+		hideAllContainers()
+
+		// Check activeIntroSlide and show the corresponding content or if nothing found show the one with id === 'intro'
+		const activeIntroSlide = localStorage.getItem('activeIntroSlide')
+		if (activeIntroSlide) {
+			const contentContainer = document.getElementById(activeIntroSlide)
+			if (contentContainer) {
+				contentContainer.style.display = 'block'
+			} else {
+				document.getElementById('intro').style.display = 'block'
+			}
+		} else {
+			document.getElementById('intro').style.display = 'block'
+		}
 	})
 </script>

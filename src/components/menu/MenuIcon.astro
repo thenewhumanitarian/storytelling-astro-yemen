@@ -19,6 +19,9 @@
 			menuOverlay.style.visibility = 'visible'
 			menuOverlay.style.opacity = 1
 		}, 100)
+
+		// Block scrolling on body when menu is open
+		document.body.style.overflow = 'hidden'
 	}
 
 	/* CLOSE MENU */
@@ -35,12 +38,15 @@
 			menuOverlay.style.opacity = 0
 
 			setShowIntroFalse()
+
+			// Block scrolling on body when menu is open
+			document.body.style.overflow = 'auto'
 		}
 	}
 
 	function checkIntroOverlay() {
 		// Check if 'showIntro' is not set to 'false'
-		if (localStorage.getItem('showIntro') !== 'false') {
+		if (localStorage.getItem('showIntro') !== 'true') {
 			openMenu() // Automatically open the menu if condition is met
 		}
 	}
