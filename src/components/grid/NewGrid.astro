@@ -19,6 +19,7 @@ if (!lang) {
 <script is:inline src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js'></script>
 
 <script is:inline define:vars={{ lang, stories }}>
+	// Debounce function
 	function debounce(func, wait, immediate) {
 		var timeout
 		return function () {
@@ -35,8 +36,9 @@ if (!lang) {
 		}
 	}
 
+	// Apply card size function
 	function adjustAndApplyCardSize() {
-		const newSize = adjustCardSize() // Recalculate sizes
+		const newSize = calculateGridDimensions() // Recalculate sizes
 		// Apply new sizes to all cards
 		document.querySelectorAll('.card').forEach((card) => {
 			card.style.width = `${newSize.cardSize}px`
@@ -45,7 +47,8 @@ if (!lang) {
 		// Here, also handle the grid layout adjustments if necessary
 	}
 
-	function adjustCardSize() {
+	// Adjust card size function
+	function calculateGridDimensions() {
 		let rows = 5
 		let cols = 5
 		let targetSize = 256
@@ -89,10 +92,10 @@ if (!lang) {
 		return { cardSize, targetColumns, targetRows }
 	}
 
-	const CARD_WIDTH = adjustCardSize().cardSize
-	const CARD_HEIGHT = adjustCardSize().cardSize
-	const FIXED_ROWS = adjustCardSize().targetRows
-	const FIXED_COLS = adjustCardSize().targetColumns
+	const CARD_WIDTH = calculateGridDimensions().cardSize
+	const CARD_HEIGHT = calculateGridDimensions().cardSize
+	const FIXED_ROWS = calculateGridDimensions().targetRows
+	const FIXED_COLS = calculateGridDimensions().targetColumns
 
 	const NEIGHBOURS = [
 		// Directly four tiles away
@@ -179,7 +182,7 @@ if (!lang) {
 
 			// Record touch start time
 			this.touchStartTime = Date.now()
-			console.log('Touch start time: ', this.touchStartTime)
+			// console.log('Touch start time: ', this.touchStartTime)
 
 			// Add .is-dragging to body to prevent text selection
 			document.body.classList.add('is-dragging')
@@ -236,16 +239,19 @@ if (!lang) {
 	}
 
 	class Card {
-		constructor(descriptor) {
+		constructor(descriptor, lastRead) {
 			this.descriptor = descriptor
 			this.createDOMElement()
 			this.x = 0
 			this.y = 0
+			this.lastRead = lastRead || 'never'
 			// this.touchStartTime = 0
 		}
 
 		createDOMElement() {
 			this.rootElement = document.createElement('div')
+			this.rootElement.setAttribute('backgroundImage', `url(${this.descriptor.storyImage.pixelated})`)
+			this.rootElement.classList.add('bg-zinc-950')
 
 			// Set href for the card
 			this.rootElement.setAttribute('data-href', `/stories/${lang}/${this.descriptor.slugs[lang]}`)
@@ -294,15 +300,15 @@ if (!lang) {
 			this.rootElement.appendChild(title)
 
 			// Check if article was read before and write date of last read if that's the case
-			let readArticles = JSON.parse(localStorage.getItem('readArticles')) || []
-			let readArticle = readArticles.find((article) => article.slug === this.descriptor.slugs[lang])
-			if (readArticle) {
-				// If the current article has been read before, set the data-lastread attribute with the timestamp
-				debounce(this.rootElement.setAttribute('data-lastread', readArticle.timestamp), 50)
-			} else {
-				// If the current article has not been read, set data-lastread to a default value or omit this part altogether
-				debounce(this.rootElement.setAttribute('data-lastread', 'never'), 50)
-			}
+			// let readArticles = JSON.parse(localStorage.getItem('readArticles')) || []
+			// let readArticle = readArticles.find((article) => article.slug === this.descriptor.slugs[lang])
+			// if (readArticle) {
+			// 	// If the current article has been read before, set the data-lastread attribute with the timestamp
+			// 	debounce(this.rootElement.setAttribute('data-lastread', readArticle.timestamp), 50)
+			// } else {
+			// 	// If the current article has not been read, set data-lastread to a default value or omit this part altogether
+			// 	debounce(this.rootElement.setAttribute('data-lastread', 'never'), 50)
+			// }
 
 			// Adding click event listener
 			// this.rootElement.addEventListener('click', this.onClick.bind(this))
@@ -311,8 +317,6 @@ if (!lang) {
 		load() {
 			let { imgElement } = this
 			if (imgElement.src !== this.descriptor.storyImage.main) {
-				// this.rootElement.setAttribute('backgroundImage', `url(${this.descriptor.storyImage.pixelated})`)
-
 				imgElement.src = this.descriptor.storyImage.main
 				imgElement.onload = () => {
 					this.update()
@@ -338,11 +342,17 @@ if (!lang) {
 		}
 
 		update() {
-			// console.log(adjustCardSize().cardSize)
+			// console.log(calculateGridDimensions().cardSize)
+
+			if (!this.lastRead) {
+				debounce(this.rootElement.setAttribute('data-lastread', 'never'), 250)
+			} else {
+				debounce(this.rootElement.setAttribute('data-lastread', this.lastRead), 250)
+			}
 
 			let cssBatch = ''
 			cssBatch += `transform: translate3d(${this.x}px, ${this.y}px, 0);`
-			cssBatch += `width: ${adjustCardSize().cardSize - 8}px;`
+			cssBatch += `width: ${calculateGridDimensions().cardSize - 8}px;`
 			cssBatch += `background-image: url(${this.descriptor.storyImage.pixelated})`
 			// cssBatch += 'display:' + ( this._visible ? 'block;' : 'none;' );
 
@@ -366,6 +376,7 @@ if (!lang) {
 			this.viewRows = 0
 			this.viewWidth = 0
 			this.viewHeight = 0
+			this.readArticles = JSON.parse(localStorage.getItem('readArticles')) || []
 		}
 
 		init() {
@@ -401,12 +412,19 @@ if (!lang) {
 		}
 
 		updateViewColRows() {
-			this.viewCols = Math.ceil(this.viewWidth / CARD_WIDTH) + 2
-			this.viewRows = Math.ceil(this.viewHeight / CARD_HEIGHT) + 2
+			this.viewCols = Math.ceil(this.viewWidth / calculateGridDimensions().cardSize) + 2
+			this.viewRows = Math.ceil(this.viewHeight / calculateGridDimensions().cardSize) + 2
 		}
 
 		isVisible(x, y) {
-			return x + CARD_WIDTH > 0 && y + CARD_HEIGHT > 0 && x < this.viewWidth && y < this.viewHeight
+			// return x + CARD_WIDTH > 0 && y + CARD_HEIGHT > 0 && x < this.viewWidth && y < this.viewHeight
+
+			return (
+				x + calculateGridDimensions().cardSize > -calculateGridDimensions().cardSize &&
+				y + calculateGridDimensions().cardSize > 0 &&
+				x < this.viewWidth + calculateGridDimensions().cardSize &&
+				y < this.viewHeight + calculateGridDimensions().cardSize
+			)
 		}
 
 		getRandomSafe(col, row) {
@@ -507,7 +525,10 @@ if (!lang) {
 				card.descriptor = descriptor
 				return card
 			} else {
-				return new Card(descriptor)
+				// Find out if descriptor is in readArticles
+				let readArticle = this.readArticles.find((article) => article.slug === descriptor.slugs[lang])
+				// console.log(readArticle)
+				return new Card(descriptor, readArticle?.timestamp)
 			}
 		}
 	}
@@ -556,7 +577,8 @@ if (!lang) {
 	}
 
 	.card {
-    position: relative;
+		background-color: #292929;
+		position: relative;
 		background-size: cover;
 		background-position: center;
 		border-radius: 1px;
@@ -633,13 +655,13 @@ if (!lang) {
 		opacity: 0;
 	}
 
-  .card img {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
+	.card img {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
 
 	.card h2 {
 		font-weight: bold;
