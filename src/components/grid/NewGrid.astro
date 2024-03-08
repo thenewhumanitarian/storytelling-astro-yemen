@@ -1,0 +1,607 @@
+---
+const { stories } = Astro.props
+
+let { lang } = Astro.params
+
+if (!lang) {
+	// Read path parameters for language and slug
+	const { path } = Astro.params
+
+	const pathParams = path?.toString().split('/')
+	lang = pathParams?.[0] || 'en'
+}
+---
+
+<div class='grid-container' id='js-grid'></div>
+
+<script is:inline src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/204379/hammer.min.js'></script>
+
+<script is:inline src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js'></script>
+
+<script is:inline define:vars={{ lang, stories }}>
+	// Use JSON from the /public dir
+	const STORIES_JSON = '/data/stories.json'
+
+	function debounce(func, wait, immediate) {
+		var timeout
+		return function () {
+			var context = this,
+				args = arguments
+			var later = function () {
+				timeout = null
+				if (!immediate) func.apply(context, args)
+			}
+			var callNow = immediate && !timeout
+			clearTimeout(timeout)
+			timeout = setTimeout(later, wait)
+			if (callNow) func.apply(context, args)
+		}
+	}
+
+	function adjustCardSize() {
+		let rows = 5
+		let cols = 5
+		let targetSize = 256
+
+		if (window.innerWidth < 1280) {
+			rows = 4
+			cols = 4
+		}
+
+		if (window.innerWidth < 640) {
+			rows = 5
+			cols = 5
+			targetSize = window.innerWidth / 2.6
+		}
+
+		const FIXED_ROWS = rows
+		const FIXED_COLS = cols
+		const TARGET_SIZE = targetSize
+
+		const viewportWidth = window.innerWidth
+		const viewportHeight = window.innerHeight
+
+		// Assuming you have a dynamic way to set these based on the viewport or a fixed value
+		const targetColumns = Math.min(Math.floor(viewportWidth / TARGET_SIZE), FIXED_COLS) // e.g., 5 or less
+		const targetRows = Math.min(Math.floor(viewportHeight / TARGET_SIZE), FIXED_ROWS) // e.g., 5 or less
+
+		// Calculate available space taking into account some margin/padding if necessary
+		const margin = 10 // Adjust based on your actual margin/padding
+		const totalMarginWidth = margin * (targetColumns + 1)
+		const totalMarginHeight = margin * (targetRows + 1)
+
+		const availableWidth = viewportWidth - totalMarginWidth
+		const availableHeight = viewportHeight - totalMarginHeight
+
+		// Calculate the max card size that can fit the current viewport
+		const maxCardWidth = availableWidth / targetColumns
+		const maxCardHeight = availableHeight / targetRows
+
+		const cardSize = Math.min(maxCardWidth, maxCardHeight) // Ensure 1:1 aspect ratio
+
+		return { cardSize, targetColumns, targetRows }
+	}
+
+	const CARD_WIDTH = adjustCardSize().cardSize
+	const CARD_HEIGHT = adjustCardSize().cardSize
+	const FIXED_ROWS = adjustCardSize().targetRows
+	const FIXED_COLS = adjustCardSize().targetColumns
+
+	const NEIGHBOURS = [
+		// Directly four tiles away
+		[0, -4], // 4 up
+		[0, 4], // 4 down
+		[4, 0], // 4 right
+		[-4, 0], // 4 left
+
+		// Diagonally four tiles away
+		[4, 4], // bottom right
+		[-4, 4], // bottom left
+		[-4, -4], // upper left
+		[4, -4], // upper right
+
+		// Additional positions to ensure no tile is closer than four tiles
+		// These include positions that are "knight moves" away in chess,
+		// as well as some additional spots to ensure a full coverage.
+		// Knight moves (L-shape patterns)
+		[2, -3],
+		[2, 3],
+		[-2, -3],
+		[-2, 3],
+		[3, -2],
+		[3, 2],
+		[-3, -2],
+		[-3, 2],
+
+		// Ensuring that the spacing criteria are met in a broadened context
+		[4, -1],
+		[4, 1],
+		[-4, -1],
+		[-4, 1], // Horizontal edges near the 4-tile-away row
+		[1, 4],
+		[-1, 4],
+		[1, -4],
+		[-1, -4], // Vertical edges near the 4-tile-away column
+	]
+
+	function LoadJSON(url, callback) {
+		let req = new XMLHttpRequest()
+		req.overrideMimeType('application/json')
+		req.open('GET', url, true)
+		req.onreadystatechange = () => {
+			if (req.readyState === 4 && req.status === 200) {
+				callback(JSON.parse(req.responseText))
+			}
+		}
+		req.send(null)
+	}
+
+	class SimpleDrag {
+		constructor(DOMElement, onDrag) {
+			this.useTouch = this.isTouch()
+			this.dragging = false
+			this.lastX = 0
+			this.lastY = 0
+			this.tween = undefined
+			this.prevVelocity = 0
+			this.DOMElement = DOMElement
+			this.onDragCallback = onDrag
+			this.bind()
+			this.touchStartTime = 0
+		}
+
+		onMove(e) {
+			if (this.dragging) {
+				e = e.type == 'touchmove' ? e.touches[0] : e
+				let xDelta = e.clientX - this.lastX
+				let yDelta = e.clientY - this.lastY
+				let velocity = Math.abs(xDelta * yDelta)
+
+				if (velocity > 50) {
+					//this.dragging = false;
+					let v = { x: xDelta * 0.5, y: yDelta * 0.5 }
+					if (this.tween) this.tween.kill()
+					this.tween = TweenMax.to(v, 0.5, {
+						x: 0,
+						y: 0,
+						onUpdate: () => {
+							this.onDragCallback(v.x, v.y)
+						},
+					})
+				}
+
+				this.onDragCallback(xDelta, yDelta)
+				this.lastX = e.clientX
+				this.lastY = e.clientY
+			}
+		}
+
+		onStart(e) {
+			e = e.type == 'touchstart' ? e.touches[0] : e
+			this.lastX = e.clientX
+			this.lastY = e.clientY
+			this.dragging = true
+
+			// Record touch start time
+			this.touchStartTime = Date.now()
+			console.log('Touch start time: ', this.touchStartTime)
+
+			// Add .is-dragging to body to prevent text selection
+			document.body.classList.add('is-dragging')
+		}
+
+		onEnd(e) {
+			e.preventDefault()
+
+			this.dragging = false
+			// Remove is-dragging from body
+			document.body.classList.remove('is-dragging')
+
+			// Calculate the duration of the tap
+			const touchDuration = Date.now() - this.touchStartTime
+
+			console.log('Touch start: ', this.touchStartTime)
+			console.log('Now: ', Date.now())
+			console.log('Touch duration: ', touchDuration)
+
+			// Check duration and act accordingly
+			if (touchDuration < 150) {
+				// This checks if the touch lasted less than 100ms
+				// This was a short tap:
+				if (e.target.tagName.toLowerCase() === 'div') {
+					const href = e.target.getAttribute('data-href')
+					if (href) {
+						window.location = href
+					}
+				} else {
+					return
+				}
+			}
+		}
+
+		isTouch() {
+			return 'ontouchstart' in window || navigator.maxTouchPoints > 0 || navigator.msMaxTouchPoints > 0
+		}
+
+		bind() {
+			let el = this.DOMElement
+			if (this.useTouch) {
+				el.addEventListener('touchstart', this.onStart.bind(this), false)
+				el.addEventListener('touchmove', this.onMove.bind(this), false)
+				el.addEventListener('touchend', this.onEnd.bind(this), false)
+			} else {
+				el.addEventListener('mousedown', this.onStart.bind(this), false)
+				el.addEventListener('mousemove', this.onMove.bind(this), false)
+				el.addEventListener('mouseup', this.onEnd.bind(this), false)
+			}
+		}
+	}
+
+	class Card {
+		constructor(descriptor) {
+			this.descriptor = descriptor
+			this.createDOMElement()
+			this.x = 0
+			this.y = 0
+			// this.touchStartTime = 0
+		}
+
+		createDOMElement() {
+			this.rootElement = document.createElement('div')
+
+			// Set href for the card
+			this.rootElement.setAttribute('data-href', `/stories/${lang}/${this.descriptor.slugs[lang]}`)
+
+			this.imgElement = document.createElement('img')
+			this.rootElement.className = 'card'
+			this.rootElement.appendChild(this.imgElement)
+
+			// Log all the data for debugging
+			// console.log(this.descriptor.id)
+
+			// Create h2 title and append to rootElement
+			const titleText = this.descriptor.story[lang].title
+			let title = document.createElement('h2')
+			title.textContent = titleText
+			title.classList.add('grid-tile--title')
+			title.classList.add('shadow-black')
+			title.classList.add('text-shadow-xl')
+			this.rootElement.appendChild(title)
+
+			// Check if article was read before and write date of last read if that's the case
+			let readArticles = JSON.parse(localStorage.getItem('readArticles')) || []
+			let readArticle = readArticles.find((article) => article.slug === this.descriptor.slugs[lang])
+			if (readArticle) {
+				// If the current article has been read before, set the data-lastread attribute with the timestamp
+				this.rootElement.setAttribute('data-lastread', readArticle.timestamp)
+			} else {
+				// If the current article has not been read, set data-lastread to a default value or omit this part altogether
+				this.rootElement.setAttribute('data-lastread', 'never')
+			}
+
+			// Adding click event listener
+			// this.rootElement.addEventListener('click', this.onClick.bind(this))
+		}
+
+		// onClick(ev) {
+		// 	ev.preventDefault()
+		// 	// console.log('Card clicked:', this.descriptor)
+
+		// 	// Calculate the duration of the tap
+		// 	const touchDuration = Date.now() - this.touchStartTime
+		// 	console.log('Touch start: ', this.touchStartTime)
+		// 	console.log('Now: ', Date.now())
+		// 	console.log('Touch duration: ', touchDuration)
+
+		// 	// Check duration and act accordingly
+		// 	if (touchDuration < 500) {
+		// 	// This checks if the touch lasted less than 100ms
+		// 	// This was a short tap:
+		// 	if (ev.target.tagName.toLowerCase() === 'div') {
+		// 		const href = ev.target.getAttribute('data-href')
+		// 		if (href) {
+		// 			window.location = href
+		// 		}
+		// 	} else {
+		// 		return
+		// 	}
+		// 	}
+		// }
+
+		load() {
+			let { imgElement } = this
+			if (imgElement.src !== this.descriptor.storyImage.main) {
+				imgElement.src = this.descriptor.storyImage.main
+				imgElement.onload = () => {
+					this.update()
+					this.rootElement.classList.toggle('hidden', false)
+				}
+			}
+		}
+
+		appendTo(el) {
+			if (this.rootElement.parentElement !== el) {
+				//console.log('append');
+				el.appendChild(this.rootElement)
+				this.load()
+			}
+		}
+
+		removeSelf() {
+			if (this.rootElement.parentElement) {
+				this.rootElement.classList.toggle('hidden', true)
+				this.imgElement.src = ''
+				this.rootElement.parentElement.removeChild(this.rootElement)
+			}
+		}
+
+		update() {
+			// console.log(adjustCardSize().cardSize)
+
+			let cssBatch = ''
+			cssBatch += `transform: translate3d(${this.x}px, ${this.y}px, 0);`
+			cssBatch += `width: ${adjustCardSize().cardSize}px;`
+			// cssBatch += 'display:' + ( this._visible ? 'block;' : 'none;' );
+
+			this.rootElement.setAttribute('style', cssBatch)
+		}
+	}
+
+	class Grid {
+		constructor(DOMElement, STORIES) {
+			this.descriptors = STORIES
+			this.DOMElement = DOMElement
+			// Dict to save previous assignations by col and row
+			this.picks = {}
+			// Current visible cards
+			this.cards = {}
+			// All elements are cached and reused
+			this.cardsPool = []
+			this.offsetX = 0
+			this.offsetY = 0
+			this.viewCols = 0
+			this.viewRows = 0
+			this.viewWidth = 0
+			this.viewHeight = 0
+		}
+
+		init() {
+			window.addEventListener('resize', this.onResize.bind(this))
+			this.onResize()
+			let d = new SimpleDrag(this.DOMElement, this.onDrag.bind(this))
+		}
+
+		getGalleryDescriptor(index) {
+			// console.log(this.descriptors.length)
+			return this.descriptors[index % this.descriptors.length]
+		}
+
+		onDragEnd() {
+			// this.DOMElement.classList.remove( "hover-enabled" );
+			this.DOMElement.classList.add('hover-enabled')
+		}
+
+		onDrag(deltaX, deltaY) {
+			//this.DOMElement.classList.remove( "hover-enabled" );
+			//console.log( e );
+			this.offsetX += deltaX
+			this.offsetY += deltaY
+			this.updateGrid()
+		}
+
+		onResize() {
+			this.viewHeight = this.DOMElement.offsetHeight
+			this.viewWidth = this.DOMElement.offsetWidth
+			this.updateViewColRows()
+			this.updateGrid()
+		}
+
+		updateViewColRows() {
+			this.viewCols = Math.ceil(this.viewWidth / CARD_WIDTH) + 2
+			this.viewRows = Math.ceil(this.viewHeight / CARD_HEIGHT) + 2
+		}
+
+		isVisible(x, y) {
+			return x + CARD_WIDTH > 0 && y + CARD_HEIGHT > 0 && x < this.viewWidth && y < this.viewHeight
+		}
+
+		getRandomSafe(col, row) {
+			let pick
+			let tries = 0
+			let i = 0
+
+			while (pick === undefined) {
+				let rnd = ~~(Math.random() * 10000)
+				let item = this.getGalleryDescriptor(rnd)
+
+				// Check if the item is not already assigned to a neighbour
+				for (i = 0; i < NEIGHBOURS.length; i++) {
+					let offsets = NEIGHBOURS[i]
+					let key = `${col + offsets[0]}:${row + offsets[1]}`
+					if (this.picks[key] === item) {
+						break
+					}
+				}
+
+				if (tries++ > 20 || i === NEIGHBOURS.length) {
+					pick = item
+				}
+			}
+
+			return pick
+		}
+
+		getRandomDescriptor(col, row) {
+			let key = `${col}:${row}`
+
+			// Check if the item is already assigned
+			if (!this.picks[key]) {
+				let item = this.getRandomSafe(col, row)
+				this.picks[key] = item
+			}
+			return this.picks[key]
+		}
+
+		getCardPos(col, row) {
+			// Calculate the position of the card
+			let offsetX = this.offsetX % CARD_WIDTH
+			let offsetY = this.offsetY % CARD_HEIGHT
+			let x = col * CARD_WIDTH + offsetX - CARD_WIDTH
+			let y = row * CARD_HEIGHT + offsetY - CARD_HEIGHT
+			return [Math.round(x), Math.round(y)]
+		}
+
+		updateGrid() {
+			let newCards = {}
+			let colOffset = ~~(this.offsetX / CARD_WIDTH) * -1
+			let rowOffset = ~~(this.offsetY / CARD_HEIGHT) * -1
+
+			// Loop through the visible cards
+			for (let row = -1; row < this.viewRows; row++) {
+				for (let col = -1; col < this.viewCols; col++) {
+					let desc = undefined
+					let tCol = colOffset + col
+					let tRow = rowOffset + row
+					if (tCol > 0 && tRow > 0 && tCol < FIXED_COLS && tRow < FIXED_ROWS) {
+						let index = tRow * FIXED_COLS + tCol
+						desc = this.getGalleryDescriptor(index)
+					} else {
+						desc = this.getRandomDescriptor(tCol, tRow)
+					}
+
+					let [x, y] = this.getCardPos(col, row)
+
+					if (this.isVisible(x, y)) {
+						let index = tCol + '' + tRow
+						let card = this.cards[index] || this.getCard(desc)
+						delete this.cards[index]
+						card.x = x
+						card.y = y
+						card.appendTo(this.DOMElement)
+						card.update()
+						newCards[index] = card
+					}
+				}
+			}
+			this.cleanupCards()
+			this.cards = newCards
+		}
+
+		cleanupCards() {
+			let keys = Object.keys(this.cards)
+			for (let i = 0; i < keys.length; i++) {
+				let card = this.cards[keys[i]]
+				card.removeSelf()
+				this.cardsPool.push(card)
+			}
+			this.cards = null
+		}
+
+		getCard(descriptor) {
+			if (this.cardsPool.length > 0) {
+				let card = this.cardsPool.pop()
+				card.descriptor = descriptor
+				return card
+			} else {
+				return new Card(descriptor)
+			}
+		}
+	}
+
+	LoadJSON(STORIES_JSON, (gallery) => {
+		let grid = new Grid(document.getElementById('js-grid'), gallery)
+		grid.init()
+	})
+</script>
+
+<style is:global lang='scss'>
+	body {
+		background: black;
+		margin: 0;
+	}
+
+	.grid-container {
+		user-select: none;
+		width: 100vw;
+		height: 100vh;
+		/* Add iOS screen height fix */
+		height: -webkit-fill-available;
+		position: fixed;
+		z-index: -1;
+		cursor: grab;
+		cursor: -moz-grab;
+		cursor: -webkit-grab;
+	}
+
+	.grid-container:active {
+		cursor: grabbing;
+		cursor: -moz-grabbing;
+		cursor: -webkit-grabbing;
+	}
+
+	.card img {
+		position: absolute;
+		pointer-events: none;
+		user-select: none;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+
+	.card {
+		transition: opacity 0.5s;
+		opacity: 1;
+		overflow: hidden;
+		position: absolute;
+		width: 240px;
+		aspect-ratio: 1/1;
+		border: 4px solid transparent;
+		will-change: all;
+	}
+
+	#js-grid.filter--read .card:not([data-lastread='never']) {
+		opacity: 0.2;
+		/* transition: opacity 0.1s ease-out 1; */
+	}
+
+	#js-grid.filter--read .card:not([data-lastread='never']),
+	#js-grid.filter--read .card:not([data-lastread='never']) * {
+		/* pointer-events: none; */
+	}
+
+	#js-grid.filter--read .card:not([data-lastread='never']):hover,
+	#js-grid.filter--read .card:not([data-lastread='never']):hover * {
+		cursor: move;
+	}
+
+	.card:hover {
+		opacity: 1;
+		border: 4px solid white;
+		/* transform: scale(1.05); */
+		/* transition:
+			transform 0.3s ease,
+			opacity 0.3s ease; */
+		@media screen and (max-width: 640px) {
+			border-color: transparent;
+		}
+	}
+
+	.card.hidden {
+		opacity: 0;
+	}
+
+	.card h2 {
+		color: white;
+		position: absolute;
+		top: 0;
+		margin: 0;
+		padding: 1rem;
+		text-align: left;
+
+		@media screen and (max-width: 640px) {
+			font-size: 1rem;
+		}
+	}
+</style>

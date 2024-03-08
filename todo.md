@@ -55,29 +55,44 @@
 ## Call with Annie on 27 February 2024
 
 ### Questions
-* What are we doing with "documents" such as Word/PDF attachments? Make them open in new tab/download them?
+* DONE What are we doing with "documents" such as Word/PDF attachments? Make them open in new tab/download them?
   * Annie is removing those and will eventually add photos for them by adding the new media file names to the spreadsheet and sending the files to Marc
-* Audios will be videos so didn't build a view for them to play in lightbox
+* DONE Audios will be videos so didn't build a view for them to play in lightbox
   * Some audios will be soundcites...
-* Content for intro slides and static pages
-* SEO for grid/list views but also detail views to be done
+* DONE SEO for grid/list views but also detail views to be done
 * Optimise image sizes further (detail pages, list view)
-* Highlighted entries in the list view are now spread out
-* Infinite grid highlighted entries shouldn't touch each other
+* DONE Highlighted entries in the list view are now spread out
+* DONE Family names? Do we show them?
 * Who is going to do testing?
-* Family names? Do we show them?
+* Content for intro slides and static pages
+* Infinite grid highlighted entries shouldn't touch each other
 
 ### The big and ugly to do list
 * DONE Adjust scraper to only use entries that have 'x' in Published column
-* Adjust scraper to also get the tags from every entry
-* Stub article to be done
-* Categorising or tagging the entries? Using colour schemes for this?
-* Share/meta for SEO: Title is Yemen Listening Project (and Arabic) and description: Title of story
-* Detail page if 2 or fewer attachments then on left side of text, above each other
-* Detail page if 3 or more attachements then keep as is now with flowing left-to-right
+* DONE Adjust scraper to also get the tags from every entry
+* DONE Categorising or tagging the entries? Using colour schemes for this?
+* DONE Share/meta for SEO: Title is Yemen Listening Project (and Arabic) and description: Title of story
+* DONE Detail page if 2 or fewer attachments then on left side of text, above each other
+* DONE Detail page if 3 or more attachements then keep as is now with flowing left-to-right
 * Highlighted for the grid
 * Alternative for "All stories"?
+* DONE Make a plan for the soundcite embeds
 * Create embeddable for Spotlight on homepage? Or use Spotlight for individual stories?
-* Make a plan for the soundcite embeds
+* Stub article to be done
 
 # Deadline is end of next week / 9 March 2024
+
+
+* Here? @annie 
+* Intro page
+    * YEMEN LISTENING PROJECT with the tagline, in same font as logo, at the top of the intro page
+    * Three sections for hamburger menu are Introduction, About, and Credits
+    * Add Arabic 
+    * Add links (Annie to provide, waiting for Matt)
+* Story pages
+    * Delete “years old”. It will just read as Hisham, 38, from Taiz
+    * Delete “name unknown.” we have pseudonyms or initials for everyone 
+        * Will only show if there is no name set. By setting all names in the Google Master sheet, it won’t ever show.
+    * Add translations for all terms and tags (see uploads) 
+    * Update the language for some of the terms (I changed it in the spreadsheet you shared)
+

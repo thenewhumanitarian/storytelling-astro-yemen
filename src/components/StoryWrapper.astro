@@ -1,5 +1,6 @@
 ---
 import StoryGrid from '@components/StoryGrid.astro'
+import NewGrid from '@components/grid/NewGrid.astro'
 import StoryList from '@components/StoryList.astro'
 import TagsHeader from '@components/tags/TagsHeader.astro'
 import TagsFooter from '@components/tags/TagsFooter.astro'
@@ -12,7 +13,7 @@ const { stories, tags, view } = Astro.props
 		<>
 			{/* Story grid view */}
 			<div class={`stories-container--grid grid--shared`} id='stories-container--grid'>
-				<StoryGrid stories={stories} />
+				<NewGrid stories={stories} />
 			</div>
 
 			{/* Story list view */}
@@ -29,7 +30,7 @@ const { stories, tags, view } = Astro.props
 		<>
 			{/* Story grid view */}
 			<div class={`stories-container--grid`} id='stories-container--grid'>
-				<StoryGrid stories={stories} />
+				<NewGrid stories={stories} />
 			</div>
 		</>
 	)
