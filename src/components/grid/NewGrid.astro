@@ -20,7 +20,7 @@ if (!lang) {
 
 <script is:inline define:vars={{ lang, stories }}>
 	// Use JSON from the /public dir
-	const STORIES_JSON = '/data/stories.json'
+	// const STORIES_JSON = '/data/stories.json'
 
 	function debounce(func, wait, immediate) {
 		var timeout
@@ -44,8 +44,8 @@ if (!lang) {
 		let targetSize = 256
 
 		if (window.innerWidth < 1280) {
-			rows = 4
-			cols = 4
+			rows = 5
+			cols = 5
 		}
 
 		if (window.innerWidth < 640) {
@@ -77,7 +77,7 @@ if (!lang) {
 		const maxCardWidth = availableWidth / targetColumns
 		const maxCardHeight = availableHeight / targetRows
 
-		const cardSize = Math.min(maxCardWidth, maxCardHeight) // Ensure 1:1 aspect ratio
+		const cardSize = Math.min(maxCardWidth, maxCardHeight) - 20 // Ensure 1:1 aspect ratio
 
 		return { cardSize, targetColumns, targetRows }
 	}
@@ -124,17 +124,17 @@ if (!lang) {
 		[-1, -4], // Vertical edges near the 4-tile-away column
 	]
 
-	function LoadJSON(url, callback) {
-		let req = new XMLHttpRequest()
-		req.overrideMimeType('application/json')
-		req.open('GET', url, true)
-		req.onreadystatechange = () => {
-			if (req.readyState === 4 && req.status === 200) {
-				callback(JSON.parse(req.responseText))
-			}
-		}
-		req.send(null)
-	}
+	// function LoadJSON(url, callback) {
+	// 	let req = new XMLHttpRequest()
+	// 	req.overrideMimeType('application/json')
+	// 	req.open('GET', url, true)
+	// 	req.onreadystatechange = () => {
+	// 		if (req.readyState === 4 && req.status === 200) {
+	// 			callback(JSON.parse(req.responseText))
+	// 		}
+	// 	}
+	// 	req.send(null)
+	// }
 
 	class SimpleDrag {
 		constructor(DOMElement, onDrag) {
@@ -188,24 +188,27 @@ if (!lang) {
 
 			// Add .is-dragging to body to prevent text selection
 			document.body.classList.add('is-dragging')
+
+			// Set setting overscroll-behavior: none; to html
+			document.documentElement.style.overscrollBehavior = 'none'
 		}
 
 		onEnd(e) {
 			e.preventDefault()
 
 			this.dragging = false
+
 			// Remove is-dragging from body
 			document.body.classList.remove('is-dragging')
 
-			// Calculate the duration of the tap
+			// Set setting overscroll-behavior: unset;
+			document.documentElement.style.overscrollBehavior = 'unset'
+
+			// // Calculate the duration of the tap
 			const touchDuration = Date.now() - this.touchStartTime
 
-			console.log('Touch start: ', this.touchStartTime)
-			console.log('Now: ', Date.now())
-			console.log('Touch duration: ', touchDuration)
-
-			// Check duration and act accordingly
-			if (touchDuration < 150) {
+			// // Check duration and act accordingly
+			if (touchDuration < 200) {
 				// This checks if the touch lasted less than 100ms
 				// This was a short tap:
 				if (e.target.tagName.toLowerCase() === 'div') {
@@ -254,18 +257,31 @@ if (!lang) {
 
 			this.imgElement = document.createElement('img')
 			this.rootElement.className = 'card'
+			if (this.descriptor.highlighted) {
+				this.rootElement.classList.add('highlighted')
+			}
 			this.rootElement.appendChild(this.imgElement)
 
-			// Log all the data for debugging
-			// console.log(this.descriptor.id)
-
 			// Create h2 title and append to rootElement
-			const titleText = this.descriptor.story[lang].title
+			const titleText =
+				!this.descriptor.story[lang].title || this.descriptor.story[lang].title === ''
+					? 'NO TITLE FOR ID ' + this.descriptor.id
+					: this.descriptor.story[lang].title
 			let title = document.createElement('h2')
 			title.textContent = titleText
 			title.classList.add('grid-tile--title')
 			title.classList.add('shadow-black')
 			title.classList.add('text-shadow-xl')
+			title.classList.add('w-full')
+
+			if (lang === 'ar') {
+				title.classList.add('text-right')
+				title.setAttribute('dir', 'rtl')
+			} else {
+				title.classList.add('text-left')
+				title.setAttribute('dir', 'ltr')
+			}
+
 			this.rootElement.appendChild(title)
 
 			// Check if article was read before and write date of last read if that's the case
@@ -273,40 +289,15 @@ if (!lang) {
 			let readArticle = readArticles.find((article) => article.slug === this.descriptor.slugs[lang])
 			if (readArticle) {
 				// If the current article has been read before, set the data-lastread attribute with the timestamp
-				this.rootElement.setAttribute('data-lastread', readArticle.timestamp)
+				debounce(this.rootElement.setAttribute('data-lastread', readArticle.timestamp), 50)
 			} else {
 				// If the current article has not been read, set data-lastread to a default value or omit this part altogether
-				this.rootElement.setAttribute('data-lastread', 'never')
+				debounce(this.rootElement.setAttribute('data-lastread', 'never'), 50)
 			}
 
 			// Adding click event listener
 			// this.rootElement.addEventListener('click', this.onClick.bind(this))
 		}
-
-		// onClick(ev) {
-		// 	ev.preventDefault()
-		// 	// console.log('Card clicked:', this.descriptor)
-
-		// 	// Calculate the duration of the tap
-		// 	const touchDuration = Date.now() - this.touchStartTime
-		// 	console.log('Touch start: ', this.touchStartTime)
-		// 	console.log('Now: ', Date.now())
-		// 	console.log('Touch duration: ', touchDuration)
-
-		// 	// Check duration and act accordingly
-		// 	if (touchDuration < 500) {
-		// 	// This checks if the touch lasted less than 100ms
-		// 	// This was a short tap:
-		// 	if (ev.target.tagName.toLowerCase() === 'div') {
-		// 		const href = ev.target.getAttribute('data-href')
-		// 		if (href) {
-		// 			window.location = href
-		// 		}
-		// 	} else {
-		// 		return
-		// 	}
-		// 	}
-		// }
 
 		load() {
 			let { imgElement } = this
@@ -336,11 +327,11 @@ if (!lang) {
 		}
 
 		update() {
-			// console.log(adjustCardSize().cardSize)
+			console.log(adjustCardSize().cardSize)
 
 			let cssBatch = ''
 			cssBatch += `transform: translate3d(${this.x}px, ${this.y}px, 0);`
-			cssBatch += `width: ${adjustCardSize().cardSize}px;`
+			cssBatch += `width: ${adjustCardSize().cardSize - 12}px;`
 			// cssBatch += 'display:' + ( this._visible ? 'block;' : 'none;' );
 
 			this.rootElement.setAttribute('style', cssBatch)
@@ -508,10 +499,13 @@ if (!lang) {
 		}
 	}
 
-	LoadJSON(STORIES_JSON, (gallery) => {
-		let grid = new Grid(document.getElementById('js-grid'), gallery)
-		grid.init()
-	})
+	// LoadJSON(STORIES_JSON, (gallery) => {
+	// 	let grid = new Grid(document.getElementById('js-grid'), gallery)
+	// 	grid.init()
+	// })
+
+	let grid = new Grid(document.getElementById('js-grid'), stories)
+	grid.init()
 </script>
 
 <style is:global lang='scss'>
@@ -521,6 +515,7 @@ if (!lang) {
 	}
 
 	.grid-container {
+		direction: ltr !important;
 		user-select: none;
 		width: 100vw;
 		height: 100vh;
@@ -551,14 +546,40 @@ if (!lang) {
 	}
 
 	.card {
+		border-radius: 1px;
+		direction: rtl;
+		text-align: right;
 		transition: opacity 0.5s;
 		opacity: 1;
 		overflow: hidden;
 		position: absolute;
-		width: 240px;
 		aspect-ratio: 1/1;
-		border: 4px solid transparent;
-		will-change: all;
+		border: 5px solid transparent;
+		will-change: transform;
+
+		&.highlighted {
+			&:not(:hover) {
+				border-color: #9f3e52;
+			}
+
+			h2 {
+				background: #9f3e52;
+				background-transparency: 0.5;
+				display: inline-block;
+				text-shadow: none;
+				box-decoration-break: clone;
+				padding: 0.3rem 0.5rem 0.6rem 0.5rem;
+			}
+
+			&:hover {
+				// border-color: #9f3e52;
+
+				h2 {
+					text-shadow: inherit;
+					background: transparent;
+				}
+			}
+		}
 	}
 
 	#js-grid.filter--read .card:not([data-lastread='never']) {
@@ -578,8 +599,8 @@ if (!lang) {
 
 	.card:hover {
 		opacity: 1;
-		border: 4px solid white;
-		/* transform: scale(1.05); */
+		border: 5px solid white;
+		// transform: scale(1.5);
 		/* transition:
 			transform 0.3s ease,
 			opacity 0.3s ease; */
@@ -593,12 +614,13 @@ if (!lang) {
 	}
 
 	.card h2 {
+		font-weight: bold;
 		color: white;
 		position: absolute;
 		top: 0;
 		margin: 0;
-		padding: 1rem;
-		text-align: left;
+		padding: 0.5rem;
+		font-size: 1.6rem;
 
 		@media screen and (max-width: 640px) {
 			font-size: 1rem;
