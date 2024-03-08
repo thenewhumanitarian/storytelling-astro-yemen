@@ -31,8 +31,11 @@ async function createThumbnail(sourcePath, destinationPath, width = 400, height 
     // console.log(`Pixelated thumbnail created: ${pixelatedPath}`);
 
     // Adjust the paths to be relative if needed
-    const relativeMainPath = destinationPath.replace('/Users/marcfehr/Sites/tnh-storytelling-astro-yemen/public', '');
-    const relativePixelatedPath = pixelatedPath.replace('/Users/marcfehr/Sites/tnh-storytelling-astro-yemen/public', '');
+    let relativeMainPath = destinationPath.replace('/Users/marcfehr/Sites/tnh-storytelling-astro-yemen/public', '');
+    let relativePixelatedPath = pixelatedPath.replace('/Users/marcfehr/Sites/tnh-storytelling-astro-yemen/public', '');
+
+    // relativeMainPath = destinationPath.replace('/Users/marcfehr/Sites/tnh-storytelling-astro-yemen/src/assets', '');
+    // relativePixelatedPath = pixelatedPath.replace('/Users/marcfehr/Sites/tnh-storytelling-astro-yemen/src/assets', '');
 
     // Return both paths in an object
     return {

@@ -16,10 +16,12 @@ async function processWhatsAppAttachments(entryID, files, basePath) {
   const processedFilesPromises = filteredFiles.map(async (file, index) => {
     const extension = path.extname(file).toLowerCase();
     const sourceFilePath = path.join(basePath, `./assets/whatsapp_assets/${entryID}`, file);
+    let newFilename;
+    let newFilePath;
 
     let durationSuffix = '';
-    let newFilename = `${entryID}-${index + 1}${extension}`;
-    let newFilePath = path.join(basePath, '../src/assets/', newFilename);
+    newFilename = `${entryID}-${index + 1}${extension}`;
+    newFilePath = path.join(basePath, '../src/assets/', newFilename);
 
     if (extension === '.heic') {
       // Convert to JPG or handle HEIC files here

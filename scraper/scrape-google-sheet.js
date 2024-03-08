@@ -257,6 +257,49 @@ async function processData(data) {
             }
           }
 
+          // Find the specific thumbnail file
+          const thumbnailFile = files.find(file => file.toLowerCase().includes('thumbnail'));
+
+          if (thumbnailFile) {
+            const framePath = path.join(whatsappAssetsDir, thumbnailFile);
+            const thumbnailPath = path.join(__dirname, '../public/images/thumbnails/', `thumbnail-${entryID}.jpg`);
+
+            try {
+              // Use createThumbnail for the found thumbnail file
+              const thumbnailResult = await createThumbnail(framePath, thumbnailPath);
+
+
+              console.log(`Thumbnail processed for entry ${entryID}:`, thumbnailFile);
+            } catch (error) {
+              console.error(`Error creating thumbnail for ${thumbnailFile}:`, error);
+            }
+
+            const assetFilesPath = path.join(__dirname, '../src/assets/', `thumbnail-${entryID}.jpg`);
+
+            try {
+              // Use createThumbnail for the found thumbnail file
+              const thumbnailResult = await createThumbnail(framePath, assetFilesPath);
+              console.log(`Thumbnail processed for entry ${entryID}:`, `thumbnail-${entryID}.jpg`);
+
+              console.log('See here: ', thumbnailResult.mainImage)
+
+              // Replace strings in the thumbnail path
+              thumbnailResult.mainImage = thumbnailResult.mainImage.replace('/images/thumbnail/Users/marcfehr/Sites/tnh-storytelling-astro-yemen/src/assets', '/images');
+              thumbnailResult.pixelated = thumbnailResult.pixelated.replace('/images/thumbnail/Users/marcfehr/Sites/tnh-storytelling-astro-yemen/src/assets', '/images');
+
+              // Update storyImage with the result
+              storyImage = {
+                main: thumbnailResult.mainImage,
+                pixelated: thumbnailResult.pixelated || thumbnailResult.mainImage
+              };
+            } catch (error) {
+              console.error(`Error creating thumbnail for ${thumbnailFile}:`, error);
+            }
+          } else {
+            console.log("No specific thumbnail file found for entry", entryID);
+            // Optionally, fallback to another thumbnail creation logic if no specific thumbnail file is found
+          }
+
         } else {
           // No image files or directory is empty
           console.log(`No image files found for WhatsApp entry ${entryID}`);

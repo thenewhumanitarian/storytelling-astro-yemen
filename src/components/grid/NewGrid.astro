@@ -4,7 +4,7 @@ const { stories } = Astro.props
 let { lang } = Astro.params
 
 if (!lang) {
-	// Read path parameters for language and slug
+	// Read path parameters for language and slug on server side
 	const { path } = Astro.params
 
 	const pathParams = path?.toString().split('/')
@@ -19,9 +19,6 @@ if (!lang) {
 <script is:inline src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js'></script>
 
 <script is:inline define:vars={{ lang, stories }}>
-	// Use JSON from the /public dir
-	// const STORIES_JSON = '/data/stories.json'
-
 	function debounce(func, wait, immediate) {
 		var timeout
 		return function () {
@@ -36,6 +33,16 @@ if (!lang) {
 			timeout = setTimeout(later, wait)
 			if (callNow) func.apply(context, args)
 		}
+	}
+
+	function adjustAndApplyCardSize() {
+		const newSize = adjustCardSize() // Recalculate sizes
+		// Apply new sizes to all cards
+		document.querySelectorAll('.card').forEach((card) => {
+			card.style.width = `${newSize.cardSize}px`
+			card.style.height = `${newSize.cardSize}px`
+		})
+		// Here, also handle the grid layout adjustments if necessary
 	}
 
 	function adjustCardSize() {
@@ -124,18 +131,6 @@ if (!lang) {
 		[-1, -4], // Vertical edges near the 4-tile-away column
 	]
 
-	// function LoadJSON(url, callback) {
-	// 	let req = new XMLHttpRequest()
-	// 	req.overrideMimeType('application/json')
-	// 	req.open('GET', url, true)
-	// 	req.onreadystatechange = () => {
-	// 		if (req.readyState === 4 && req.status === 200) {
-	// 			callback(JSON.parse(req.responseText))
-	// 		}
-	// 	}
-	// 	req.send(null)
-	// }
-
 	class SimpleDrag {
 		constructor(DOMElement, onDrag) {
 			this.useTouch = this.isTouch()
@@ -208,7 +203,7 @@ if (!lang) {
 			const touchDuration = Date.now() - this.touchStartTime
 
 			// // Check duration and act accordingly
-			if (touchDuration < 200) {
+			if (touchDuration < 150) {
 				// This checks if the touch lasted less than 100ms
 				// This was a short tap:
 				if (e.target.tagName.toLowerCase() === 'div') {
@@ -316,7 +311,7 @@ if (!lang) {
 		load() {
 			let { imgElement } = this
 			if (imgElement.src !== this.descriptor.storyImage.main) {
-				this.rootElement.setAttribute('background', `url(${this.descriptor.storyImage.pixelated})`)
+				// this.rootElement.setAttribute('backgroundImage', `url(${this.descriptor.storyImage.pixelated})`)
 
 				imgElement.src = this.descriptor.storyImage.main
 				imgElement.onload = () => {
@@ -343,11 +338,12 @@ if (!lang) {
 		}
 
 		update() {
-			console.log(adjustCardSize().cardSize)
+			// console.log(adjustCardSize().cardSize)
 
 			let cssBatch = ''
 			cssBatch += `transform: translate3d(${this.x}px, ${this.y}px, 0);`
 			cssBatch += `width: ${adjustCardSize().cardSize - 12}px;`
+			cssBatch += `background-image: url(${this.descriptor.storyImage.pixelated})`
 			// cssBatch += 'display:' + ( this._visible ? 'block;' : 'none;' );
 
 			this.rootElement.setAttribute('style', cssBatch)
@@ -374,6 +370,7 @@ if (!lang) {
 
 		init() {
 			window.addEventListener('resize', this.onResize.bind(this))
+			window.addEventListener('resize', debounce(adjustAndApplyCardSize, 250))
 			this.onResize()
 			let d = new SimpleDrag(this.DOMElement, this.onDrag.bind(this))
 		}
@@ -515,13 +512,10 @@ if (!lang) {
 		}
 	}
 
-	// LoadJSON(STORIES_JSON, (gallery) => {
-	// 	let grid = new Grid(document.getElementById('js-grid'), gallery)
-	// 	grid.init()
-	// })
-
 	let grid = new Grid(document.getElementById('js-grid'), stories)
 	grid.init()
+
+	window.addEventListener('resize', debounce(adjustAndApplyCardSize, 250))
 </script>
 
 <style is:global lang='scss'>
@@ -562,6 +556,8 @@ if (!lang) {
 	}
 
 	.card {
+		background-size: cover;
+		background-position: center;
 		border-radius: 1px;
 		direction: rtl;
 		text-align: right;
@@ -616,16 +612,16 @@ if (!lang) {
 	.card:hover {
 		opacity: 1;
 		border: 5px solid white;
-		
-    .shader {
-      opacity: 0.6;
-      transition: opacity 0.35s;
-      will-change: opacity;
 
-      @media screen and (max-width: 640px) {
-        // opacity: 0;
-      }
-    }
+		.shader {
+			opacity: 0.6;
+			transition: opacity 0.35s;
+			will-change: opacity;
+
+			@media screen and (max-width: 640px) {
+				// opacity: 0;
+			}
+		}
 
 		@media screen and (max-width: 640px) {
 			border-color: transparent;
@@ -647,7 +643,7 @@ if (!lang) {
 
 		@media screen and (max-width: 640px) {
 			font-size: 1rem;
-      font-weight: normal;
+			font-weight: normal;
 		}
 	}
 </style>
