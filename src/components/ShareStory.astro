@@ -26,7 +26,7 @@ const storyUrl = `${STORY_DATA.baseUrl}stories/${lang}/${story.slugs[lang]}`
 
 const shareLinks = {
 	// @ts-ignore
-	whatsapp: `https://api.whatsapp.com/send?text=${story.story[lang].title} – ${storyUrl}`,
+	whatsapp: `https://api.whatsapp.com/send?text=${story.story[lang].title}: ${storyUrl}`,
 	// @ts-ignore
 	facebook: `https://www.facebook.com/sharer/sharer.php?u=${storyUrl}`,
 	// @ts-ignore
