@@ -1,10 +1,20 @@
 ---
+import Layout from '@layouts/Layout.astro'
+import SEO from '@components/SEO.astro'
+
 import stories from '@data/all_stories.json'
 
 const lang = 'en'
 ---
 
-<div class='grid-container' id='js-grid'></div>
+<Layout dark title='The Yemen Listening Project' header={true} filterButtons={true} languageButtons={true} switchViewButtons={true}>
+	<SEO
+		slot='seo'
+		title={`The Yemen Listening Project`}
+		description={lang === 'ar' ? '.حيثُ يتحدّث اليَمنيّون ويستمع العالمُ إليهم' : 'Where Yemenis talk, and the world listens.'}
+	/>
+	<div class='grid-container' id='js-grid'></div>
+</Layout>
 
 <style is:global>
 	body {
@@ -17,7 +27,8 @@ const lang = 'en'
 		user-select: none;
 		width: 100vw;
 		height: 100vh;
-		position: absolute;
+		position: fixed;
+		z-index: -1;
 		cursor: grab;
 		cursor: -moz-grab;
 		cursor: -webkit-grab;
