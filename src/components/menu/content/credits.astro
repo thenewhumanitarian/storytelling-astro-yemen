@@ -1,0 +1,33 @@
+---
+import Title from '@components/Title.astro'
+
+const { lang } = Astro.props
+---
+
+{
+	lang === 'en' ? (
+		<div>
+			<Title>Credits</Title>
+			<ul class='w-full text-white'>
+				<li>Direction and editing: Annie Slemrod</li>
+				<li>Project coordination: Nuha al-Junaid</li>
+				<li>Translation: Suha al-Junaid and Natakallam</li>
+				<li>Design and web development: Marc Fehr</li>
+				<li>Audience production: Whitney Patterson</li>
+				<li>Events: Matt Crook</li>
+			</ul>
+		</div>
+	) : (
+		<div>
+			<Title>AR Credits</Title>
+			<ul class='w-full text-white'>
+				<li>Direction and editing: Annie Slemrod</li>
+				<li>Project coordination: Nuha al-Junaid</li>
+				<li>Translation: Suha al-Junaid and Natakallam</li>
+				<li>Design and web development: Marc Fehr</li>
+				<li>Audience production: Whitney Patterson</li>
+				<li>Events: Matt Crook</li>
+			</ul>
+		</div>
+	)
+}

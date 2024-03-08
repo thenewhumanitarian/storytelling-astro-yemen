@@ -3,6 +3,8 @@ interface Props {
 	tags: string[]
 }
 
+import { translations } from '@data/translations'
+
 import Tag from '@components/tags/Tag.astro'
 
 // Read path parameters for language and slug
@@ -28,9 +30,9 @@ if (!lang) {
 ---
 
 <section class='w-full max-w-5xl text-center mx-auto pb-5 pt-6 border-t-2 border-zinc-500 mt-12 tag-wrapper'>
-	<button type='button' class='text-base text-center collapsible px-3 py-2 cursor-pointer font-sans bg-transparent border-zinc-200 text-zinc-200'>
-		Read more about...
-	</button>
+	<span class='text-base text-center collapsible px-3 py-2 font-sans bg-transparent border-zinc-200 text-zinc-200'>
+		{translations.moreStoriesAbout[lang]}
+  </span>
 	<div class='text-center flex flex-row gap-2 items-center justify-center pt-3 max-w-2xl mx-auto flex-wrap'>
 		{
 			tags.map((tag) => {

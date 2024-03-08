@@ -8,11 +8,11 @@ export const translations = {
     en: 'Next'
   },
   previous: {
-    ar: 'السابق',
+    ar: 'رجوع',
     en: 'Previous'
   },
   overview: {
-    ar: 'نظرة عامة',
+    ar: '"لمحة عامة "',
     en: 'Overview'
   },
   from: {
@@ -23,8 +23,12 @@ export const translations = {
     ar: 'يعيش في',
     en: 'Living in'
   },
+  livesIn: {
+    ar: 'يعيش في',
+    en: 'lives in'
+  },
   allStories: {
-    ar: 'كل القصص',
+    ar: 'جميع القصص',
     en: 'All Stories'
   },
   nameUnknown: {
@@ -36,7 +40,7 @@ export const translations = {
     en: 'years old'
   },
   shareThisStory: {
-    ar: 'شارك هذه القصة',
+    ar: 'مشاركة هذه القصة',
     en: 'Share this story'
   },
   all: {
@@ -44,7 +48,7 @@ export const translations = {
     en: 'All'
   },
   unread: {
-    ar: 'غير مقروء',
+    ar: 'غير مقروءة',
     en: 'Unread'
   },
   arabic: {
@@ -56,7 +60,101 @@ export const translations = {
     en: 'English'
   },
   readMoreAbout: {
-    ar: 'اقرأ المزيد عن',
-    en: 'Read more about'
+    ar: 'قراءة المزيد حول...',
+    en: 'Read more about...'
   },
+  enter: {
+    ar: 'إدخال',
+    en: 'Enter'
+  },
+  grid: {
+    ar: 'عرض شبكي',
+    en: 'Grid'
+  },
+  list: {
+    ar: 'عرض على شكل قائمة',
+    en: 'List'
+  },
+  close: {
+    ar: 'إغلاق',
+    en: 'Close'
+  },
+  open: {
+    ar: 'فتح',
+    en: 'Open'
+  },
+  clickToListen: {
+    ar: 'اضغط للاستماع',
+    en: 'Click to listen'
+  },
+  moreStoriesAbout: {
+    ar: 'المزيد من القصص حول...',
+    en: 'More stories about...'
+  },
+  about: {
+    ar: 'حول',
+    en: 'About'
+  },
+  credits: {
+    ar: 'الاعتمادات',
+    en: 'Credits'
+  },
+  tags: {
+    poetry: {
+      ar: 'الشِعر',
+      en: 'Poetry'
+    },
+    displacement: {
+      ar: 'النزوح',
+      en: 'Displacement'
+    },
+    education: {
+      ar: 'التعليم',
+      en: 'Education'
+    },
+    exile: {
+      ar: 'المنفى',
+      en: 'Exile'
+    },
+    destruction: {
+      ar: 'تدمير',
+      en: 'Destruction'
+    },
+    health: {
+      ar: 'الصحة',
+      en: 'Health'
+    },
+    economy: {
+      ar: 'الاقتصاد',
+      en: 'Economy'
+    },
+    family: {
+      ar: 'الأسرة',
+      en: 'Family'
+    },
+    jobs: {
+      ar: 'الوظائف',
+      en: 'Jobs'
+    },
+    salaries: {
+      ar: 'الرواتب',
+      en: 'Salaries'
+    },
+    violence: {
+      ar: 'العنف',
+      en: 'Violence'
+    },
+    roads: {
+      ar: 'الطرق',
+      en: 'Roads'
+    },
+    bombing: {
+      ar: 'القصف',
+      en: 'Bombing'
+    },
+    mentalHealth: {
+      ar: 'الصحة النفسية والعقلية',
+      en: 'Mental Health'
+    }
+  }
 }

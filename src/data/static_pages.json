@@ -2,35 +2,41 @@
   "links": {
     "ar": [
       {
+        "href": "/info/ar/intro",
+        "id": "intro",
+        "text": "حول",
+        "className": "navButtonClasses"
+      },
+      {
         "href": "/info/ar/about",
-        "text": "AR About",
+        "id": "about",
+        "text": "حول",
         "className": "navButtonClasses"
       },
       {
-        "href": "/info/ar/how-to",
-        "text": "AR How this works",
-        "className": "navButtonClasses"
-      },
-      {
-        "href": "/info/ar/share",
-        "text": "AR Another link",
+        "href": "/info/ar/credits",
+        "id": "credits",
+        "text": "الشكر والتقدير",
         "className": "navButtonClasses"
       }
     ],
     "en": [
       {
+        "href": "/info/en/intro",
+        "id": "intro",
+        "text": "Intro",
+        "className": "navButtonClasses"
+      },
+      {
         "href": "/info/en/about",
+        "id": "about",
         "text": "About",
         "className": "navButtonClasses"
       },
       {
-        "href": "/info/en/how-to",
+        "href": "/info/en/credits",
+        "id": "credits",
         "text": "Credits",
-        "className": "navButtonClasses"
-      },
-      {
-        "href": "/info/en/share",
-        "text": "Share",
         "className": "navButtonClasses"
       }
     ]

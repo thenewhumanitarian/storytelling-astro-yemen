@@ -3,6 +3,8 @@ interface Props {
 	tags: string[]
 }
 
+import { translations } from '@data/translations'
+
 // Read path parameters for language and slug
 const { path } = Astro.params
 
@@ -23,6 +25,28 @@ if (!lang) {
 	const pathParams = path?.toString().split('/')
 	lang = pathParams?.[0] || 'en'
 }
+
+// Function to format tag names
+function formatTagName(tagName) {
+	// Split the tag name into words
+	const words = tagName.split(' ')
+
+	// If there's only one word, return it in lowercase
+	if (words.length === 1) {
+		return tagName.toLowerCase()
+	}
+
+	// If there are two words, return in camelCase
+	if (words.length === 2) {
+		return words[0].toLowerCase() + words[1].charAt(0).toUpperCase() + words[1].slice(1).toLowerCase()
+	}
+
+	// Fallback for other cases (not covered by your current requirement)
+	return tagName.toLowerCase()
+}
+
+// Example usage
+const formattedTag = formatTagName(matchingTag) || 'NOT FOUND'
 ---
 
 <section class='text-center max-w-5xl mx-auto pb-6 sm:pb-12'>
@@ -30,7 +54,7 @@ if (!lang) {
 		<!-- <span class='m-0 p-0'>Stories with the tag</span> -->
 		<div class='inline'>
 			<h2 class='font-sans text-white text-lg sm:text-3xl font-bold m-0'>
-				{matchingTag}
+				{translations.tags[formattedTag][lang]}
 			</h2>
 		</div>
 	</div>

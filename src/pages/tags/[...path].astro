@@ -17,6 +17,13 @@ export async function getStaticPaths() {
 	const tags = stories.map((story) => story.tags).flat()
 	const uniqueTags = [...new Set(tags)]
 
+	// Loop through uniqueTags and check if the tag has multiple words, if so, replace the space with a hyphen
+	uniqueTags.forEach((tag, index) => {
+		if (tag.includes(' ')) {
+			uniqueTags[index] = tag.replace(' ', '-')
+		}
+	})
+
 	const allPathsEN = tags.map((tag) => ({
 		params: {
 			path: `en/${tag.toLocaleLowerCase()}`,

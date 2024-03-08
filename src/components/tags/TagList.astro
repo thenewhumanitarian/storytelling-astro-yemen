@@ -3,6 +3,8 @@ interface Props {
 	tags: string[]
 }
 
+import { translations } from '@data/translations'
+
 import Tag from '@components/tags/Tag.astro'
 
 const { tags } = Astro.props as Props
@@ -25,7 +27,7 @@ if (!lang) {
 {
 	tags.length > 0 && (
 		<div class='text-center w-full max-w-5xl pt-8'>
-      <h3 class='font-sans pb-3 text-base font-bold text-center'>Read more about...</h3>
+      <h3 class='font-sans pb-3 text-base font-bold text-center'>{translations.moreStoriesAbout[lang]}.</h3>
 			<div class='text-center flex gap-2 items-center justify-center'>
 				{tags.map((tag) => {
 					return <Tag tag={tag} />

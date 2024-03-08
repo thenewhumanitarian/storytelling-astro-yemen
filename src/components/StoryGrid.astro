@@ -51,8 +51,12 @@ if (!lang) {
 		height: 100%;
 		gap: 0;
 		overflow: hidden;
+		will-change: transform;
+		-webkit-backface-visibility: hidden;
+		-webkit-perspective: 1000;
+		// transition: transform 0.1s ease-out;
 
-		gap: 1rem;
+		gap: 1.25rem;
 
 		@media screen and (max-width: 640px) {
 			gap: 1rem;
@@ -66,7 +70,7 @@ if (!lang) {
 		background-position: center center;
 		user-select: none;
 		overflow: hidden;
-		will-change: all;
+		// will-change: all;
 		transform: scale(1);
 		padding-top: 0;
 
@@ -202,6 +206,9 @@ if (!lang) {
 
 <!-- Library to help moving around the grid -->
 <script src='https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.min.js' is:inline></script>
+
+<!-- GSAP library for more performant DOM animation -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
 
 <script async define:vars={{ stories, lang }} is:inline>
 	// Initial check to filter grid if necessary, same for list
@@ -350,7 +357,7 @@ if (!lang) {
 
 			// Set the background to the placeholder
 			if (window.innerWidth < 500) {
-				this.item.style.backgroundColor = `#282828`
+				this.item.style.backgroundColor = `rgba(255,255,255,0.15)`
 				this.item.style.backgroundImage = `none`
 			} else {
 				this.item.style.backgroundImage = `url('${pixelatedImageUrl}')`
@@ -361,6 +368,7 @@ if (!lang) {
 			this.item.classList.add('group')
 			this.item.style.width = '100%'
 			this.item.style.height = '100%'
+			// this.item.style.backgroundImage = `none`
 
 			// Check for initial load to decide between lazy loading or direct image set
 			if (this.initialLoad) {
@@ -550,7 +558,7 @@ if (!lang) {
 
 			ev = ev.type == 'touchmove' ? ev.touches[0] : ev
 
-      // Ignore x delta for mobile (touch) devices
+			// Ignore x delta for mobile (touch) devices
 			let xDelta = isMobileDevice() ? 0 : ev.clientX - this.lastX
 			let yDelta = ev.clientY - this.lastY
 
@@ -575,7 +583,7 @@ if (!lang) {
 				this.handleDrag(xDelta, yDelta)
 			})
 
-			this.handleDrag(xDelta, yDelta)
+			// this.handleDrag(xDelta, yDelta)
 
 			this.lastX = ev.clientX
 			this.lastY = ev.clientY
@@ -697,6 +705,10 @@ if (!lang) {
 			this.grid.style.backgroundColor = color
 		}
 
+		updateTransform(x, y, z) {
+			this.grid.style.transform = `translate3d(${this.offsetX}px,${this.offsetY}px,0) translateZ(0)`
+		}
+
 		onScroll({ deltaY }) {
 			if (document.getElementById('grid').style.display === 'none') return
 
@@ -726,7 +738,11 @@ if (!lang) {
 			}
 
 			// Update the grid position to reflect the new content
-			this.grid.style.transform = `translate3d(0px, ${this.offsetY}px, 0)`
+			// this.grid.style.transform = `translate3d(0px, ${this.offsetY}px, 0)`
+
+			requestAnimationFrame(() => {
+				this.updateTransform()
+			})
 		}
 
 		onDrag(xDelta, yDelta) {
@@ -762,12 +778,17 @@ if (!lang) {
 			}
 
 			this.grid.style.transform = `translate3d(${this.offsetX}px,${this.offsetY}px,0)`
+
+			// requestAnimationFrame(() => {
+			// 	this.updateTransform()
+			// })
 		}
 
 		shiftIndex(index) {
 			if (index < 0) {
 				index = this.items.length + index
 			}
+
 			index = index % this.items.length
 			return index
 		}

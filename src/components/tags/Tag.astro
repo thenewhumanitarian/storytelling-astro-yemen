@@ -14,8 +14,38 @@ if (!lang) {
 	const pathParams = path?.toString().split('/')
 	lang = pathParams?.[0] || 'en'
 }
+
+import { translations } from '@data/translations'
+
+// Function to format tag names
+function formatTagName(tagName) {
+	// Split the tag name into words
+	const words = tagName.split(' ')
+
+	// If there's only one word, return it in lowercase
+	if (words.length === 1) {
+		return tagName.toLowerCase()
+	}
+
+	// If there are two words, return in camelCase
+	if (words.length === 2) {
+		return words[0].toLowerCase() + words[1].charAt(0).toUpperCase() + words[1].slice(1).toLowerCase()
+	}
+
+	// Fallback for other cases (not covered by your current requirement)
+	return tagName.toLowerCase()
+}
+
+// Example usage
+const formattedTag = formatTagName(tag) || 'NOT FOUND'
 ---
 
 <a href={`/tags/${lang}/${tag.toLowerCase()}`} class='inline-block px-3 py-2 m-0 cursor-pointer text-base bg-black'>
-	<span class='block sm:font-bold bg-transparent border-transparent hover:underline text-zinc-200'>{tag}</span>
+	{
+		translations.tags[formattedTag] ? (
+			<span class='block sm:font-bold bg-transparent border-transparent hover:underline text-zinc-200'>{translations.tags[formattedTag][lang]}</span>
+		) : (
+			<span class='block sm:font-bold bg-transparent border-transparent hover:underline text-zinc-200'>{formattedTag} ERROR</span>
+		)
+	}
 </a>

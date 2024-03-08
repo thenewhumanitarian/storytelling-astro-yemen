@@ -9,6 +9,10 @@ export default defineConfig({
   prefetch: {
     prefetchAll: true
   },
+  redirects: {
+    '/en': '/en/grid',
+    '/ar': '/ar/grid',
+  },
   integrations: [
     tailwind({
       applyBaseStyles: false
