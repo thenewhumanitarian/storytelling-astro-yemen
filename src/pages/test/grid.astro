@@ -1,3 +1,9 @@
+---
+import stories from '@data/all_stories.json'
+
+const lang = 'en'
+---
+
 <div class='grid-container' id='js-grid'></div>
 
 <style is:global>
@@ -58,28 +64,63 @@
 	.card.hidden {
 		opacity: 0;
 	}
+
+	.card h2 {
+		color: white;
+		position: absolute;
+		top: 0;
+		margin: 0;
+		padding: 1rem;
+	}
 </style>
 
 <script is:inline src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/204379/hammer.min.js'></script>
 
 <script is:inline src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js'></script>
 
-<script is:inline>
+<script is:inline define:vars={{ lang, stories }}>
 	const GALLERY_JSON = 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/204379/gallery.json'
+	const STORIES_JSON = '/data/stories.json'
 	const CARD_WIDTH = 256
 	const CARD_HEIGHT = 256
 	const FIXED_ROWS = 5
 	const FIXED_COLS = 5
 
 	const NEIGHBOURS = [
-		[0, -1], // up
-		[0, 1], // down
-		[1, 0], // right
-		[-1, 0], // left
-		[1, 1], // bottom right
-		[-1, 1], // bottom left
-		[-1, -1], // upper left
-		[1, -1], // upper right
+		// Directly four tiles away
+		[0, -4], // 4 up
+		[0, 4], // 4 down
+		[4, 0], // 4 right
+		[-4, 0], // 4 left
+
+		// Diagonally four tiles away
+		[4, 4], // bottom right
+		[-4, 4], // bottom left
+		[-4, -4], // upper left
+		[4, -4], // upper right
+
+		// Additional positions to ensure no tile is closer than four tiles
+		// These include positions that are "knight moves" away in chess,
+		// as well as some additional spots to ensure a full coverage.
+		// Knight moves (L-shape patterns)
+		[2, -3],
+		[2, 3],
+		[-2, -3],
+		[-2, 3],
+		[3, -2],
+		[3, 2],
+		[-3, -2],
+		[-3, 2],
+
+		// Ensuring that the spacing criteria are met in a broadened context
+		[4, -1],
+		[4, 1],
+		[-4, -1],
+		[-4, 1], // Horizontal edges near the 4-tile-away row
+		[1, 4],
+		[-1, 4],
+		[1, -4],
+		[-1, -4], // Vertical edges near the 4-tile-away column
 	]
 
 	function LoadJSON(url, callback) {
@@ -170,10 +211,20 @@
 		}
 
 		createDOMElement() {
-			this.rootElement = document.createElement('div')
+			this.rootElement = document.createElement('a')
 			this.imgElement = document.createElement('img')
 			this.rootElement.className = 'card'
 			this.rootElement.appendChild(this.imgElement)
+
+			console.log(this.descriptor.id)
+
+			// Create h2 title and append to rootElement
+			const titleText =
+				this.descriptor.story[lang].title && this.descriptor.story[lang].title !== '' ? this.descriptor.story[lang].title : this.descriptor.story.id
+			let title = document.createElement('h2')
+			title.textContent = titleText
+			title.classList.add('grid-tile--title')
+			this.rootElement.appendChild(title)
 
 			// Adding click event listener
 			this.rootElement.addEventListener('click', this.onClick.bind(this))
@@ -186,8 +237,8 @@
 
 		load() {
 			let { imgElement } = this
-			if (imgElement.src !== this.descriptor.thumb_src) {
-				imgElement.src = this.descriptor.thumb_src
+			if (imgElement.src !== this.descriptor.storyImage.main) {
+				imgElement.src = this.descriptor.storyImage.main
 				imgElement.onload = () => {
 					this.update()
 					this.rootElement.classList.toggle('hidden', false)
@@ -221,14 +272,14 @@
 	}
 
 	class Grid {
-		constructor(DOMElement, JSONGallery) {
-			this.descriptors = JSONGallery.images
+		constructor(DOMElement, STORIES) {
+			this.descriptors = STORIES
 			this.DOMElement = DOMElement
-			// dict to save previous assignations by col and row
+			// Dict to save previous assignations by col and row
 			this.picks = {}
-			// current visible cards
+			// Current visible cards
 			this.cards = {}
-			// all elements are cached and reused
+			// All elements are cached and reused
 			this.cardsPool = []
 			this.offsetX = 0
 			this.offsetY = 0
@@ -245,6 +296,7 @@
 		}
 
 		getGalleryDescriptor(index) {
+			console.log(this.descriptors.length)
 			return this.descriptors[index % this.descriptors.length]
 		}
 
@@ -285,6 +337,8 @@
 			while (pick === undefined) {
 				let rnd = ~~(Math.random() * 10000)
 				let item = this.getGalleryDescriptor(rnd)
+
+				// Check if the item is not already assigned to a neighbour
 				for (i = 0; i < NEIGHBOURS.length; i++) {
 					let offsets = NEIGHBOURS[i]
 					let key = `${col + offsets[0]}:${row + offsets[1]}`
@@ -303,6 +357,8 @@
 
 		getRandomDescriptor(col, row) {
 			let key = `${col}:${row}`
+
+			// Check if the item is already assigned
 			if (!this.picks[key]) {
 				let item = this.getRandomSafe(col, row)
 				this.picks[key] = item
@@ -311,6 +367,7 @@
 		}
 
 		getCardPos(col, row) {
+			// Calculate the position of the card
 			let offsetX = this.offsetX % CARD_WIDTH
 			let offsetY = this.offsetY % CARD_HEIGHT
 			let x = col * CARD_WIDTH + offsetX - CARD_WIDTH
@@ -322,6 +379,8 @@
 			let newCards = {}
 			let colOffset = ~~(this.offsetX / CARD_WIDTH) * -1
 			let rowOffset = ~~(this.offsetY / CARD_HEIGHT) * -1
+
+			// Loop through the visible cards
 			for (let row = -1; row < this.viewRows; row++) {
 				for (let col = -1; col < this.viewCols; col++) {
 					let desc = undefined
@@ -373,7 +432,7 @@
 		}
 	}
 
-	LoadJSON(GALLERY_JSON, (gallery) => {
+	LoadJSON(STORIES_JSON, (gallery) => {
 		let grid = new Grid(document.getElementById('js-grid'), gallery)
 		grid.init()
 	})
