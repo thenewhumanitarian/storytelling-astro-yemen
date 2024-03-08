@@ -16,7 +16,7 @@ const lang = 'en'
 	<div class='grid-container' id='js-grid'></div>
 </Layout>
 
-<style is:global>
+<style is:global lang="scss">
 	body {
 		background: black;
 		overflow: hidden !important;
@@ -27,8 +27,8 @@ const lang = 'en'
 		user-select: none;
 		width: 100vw;
 		height: 100vh;
-    /* Add iOS screen height fix */
-    height: -webkit-fill-available;
+		/* Add iOS screen height fix */
+		height: -webkit-fill-available;
 		position: fixed;
 		z-index: -1;
 		cursor: grab;
@@ -84,6 +84,11 @@ const lang = 'en'
 		top: 0;
 		margin: 0;
 		padding: 1rem;
+    text-align: left;
+
+    @media screen and (max-width: 640px) {
+      font-size: 1rem;
+    }
 	}
 </style>
 
@@ -92,12 +97,57 @@ const lang = 'en'
 <script is:inline src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js'></script>
 
 <script is:inline define:vars={{ lang, stories }}>
-	const GALLERY_JSON = 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/204379/gallery.json'
+	// Use JSON from the /public dir
 	const STORIES_JSON = '/data/stories.json'
-	const CARD_WIDTH = 256
-	const CARD_HEIGHT = 256
-	const FIXED_ROWS = 5
-	const FIXED_COLS = 5
+
+	function adjustCardSize() {
+		let rows = 5
+		let cols = 5
+    let targetSize = 256
+
+		if (window.innerWidth < 1280) {
+			rows = 4
+			cols = 4
+		}
+
+    if (window.innerWidth < 640) {
+			rows = 5
+			cols = 5
+      targetSize = window.innerWidth / 2.6
+		}
+
+		const FIXED_ROWS = rows
+		const FIXED_COLS = cols
+    const TARGET_SIZE = targetSize
+
+		const viewportWidth = window.innerWidth
+		const viewportHeight = window.innerHeight
+
+		// Assuming you have a dynamic way to set these based on the viewport or a fixed value
+		const targetColumns = Math.min(Math.floor(viewportWidth / TARGET_SIZE), FIXED_COLS) // e.g., 5 or less
+		const targetRows = Math.min(Math.floor(viewportHeight / TARGET_SIZE), FIXED_ROWS) // e.g., 5 or less
+
+		// Calculate available space taking into account some margin/padding if necessary
+		const margin = 10 // Adjust based on your actual margin/padding
+		const totalMarginWidth = margin * (targetColumns + 1)
+		const totalMarginHeight = margin * (targetRows + 1)
+
+		const availableWidth = viewportWidth - totalMarginWidth
+		const availableHeight = viewportHeight - totalMarginHeight
+
+		// Calculate the max card size that can fit the current viewport
+		const maxCardWidth = availableWidth / targetColumns
+		const maxCardHeight = availableHeight / targetRows
+
+		const cardSize = Math.min(maxCardWidth, maxCardHeight) // Ensure 1:1 aspect ratio
+
+		return { cardSize, targetColumns, targetRows }
+	}
+
+	const CARD_WIDTH = adjustCardSize().cardSize
+	const CARD_HEIGHT = adjustCardSize().cardSize
+	const FIXED_ROWS = adjustCardSize().targetRows
+	const FIXED_COLS = adjustCardSize().targetColumns
 
 	const NEIGHBOURS = [
 		// Directly four tiles away
@@ -237,6 +287,8 @@ const lang = 'en'
 			let title = document.createElement('h2')
 			title.textContent = titleText
 			title.classList.add('grid-tile--title')
+			title.classList.add('shadow-black')
+			title.classList.add('text-shadow-xl')
 			this.rootElement.appendChild(title)
 
 			// Adding click event listener
@@ -276,9 +328,12 @@ const lang = 'en'
 		}
 
 		update() {
+      console.log(adjustCardSize().cardSize)
+
 			let cssBatch = ''
 			cssBatch += `transform: translate3d(${this.x}px, ${this.y}px, 0);`
-			//cssBatch += 'display:' + ( this._visible ? 'block;' : 'none;' );
+			cssBatch += `width: ${adjustCardSize().cardSize}px;`
+			// cssBatch += 'display:' + ( this._visible ? 'block;' : 'none;' );
 
 			this.rootElement.setAttribute('style', cssBatch)
 		}
