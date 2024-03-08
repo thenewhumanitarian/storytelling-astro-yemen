@@ -202,7 +202,7 @@ if (!lang) {
 			document.body.classList.remove('is-dragging')
 
 			// Set setting overscroll-behavior: unset;
-			document.documentElement.style.overscrollBehavior = 'unset'
+			document.documentElement.style.overscrollBehavior = 'auto'
 
 			// // Calculate the duration of the tap
 			const touchDuration = Date.now() - this.touchStartTime
@@ -265,6 +265,7 @@ if (!lang) {
 			// Append empty and transparent div to rootElement to paint it later
 			const emptyDiv = document.createElement('div')
 			emptyDiv.classList.add('shader')
+			emptyDiv.classList.add('pointer-events-none')
 			emptyDiv.classList.add('w-full')
 			emptyDiv.classList.add('h-full')
 			emptyDiv.classList.add('absolute')
@@ -288,7 +289,6 @@ if (!lang) {
 			title.classList.add('shadow-black')
 			title.classList.add('text-shadow-xl')
 			title.classList.add('w-full')
-
 			if (lang === 'ar') {
 				title.classList.add('text-right')
 				title.setAttribute('dir', 'rtl')
@@ -296,7 +296,6 @@ if (!lang) {
 				title.classList.add('text-left')
 				title.setAttribute('dir', 'ltr')
 			}
-
 			this.rootElement.appendChild(title)
 
 			// Check if article was read before and write date of last read if that's the case
@@ -620,7 +619,8 @@ if (!lang) {
 		
     .shader {
       opacity: 0.6;
-      transition: opacity 0.5s;
+      transition: opacity 0.35s;
+      will-change: opacity;
 
       @media screen and (max-width: 640px) {
         // opacity: 0;
