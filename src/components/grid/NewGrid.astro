@@ -99,11 +99,6 @@ if (!lang) {
 		return { cardSize, targetColumns, targetRows }
 	}
 
-	const CARD_WIDTH = calculateGridDimensions().cardSize
-	const CARD_HEIGHT = calculateGridDimensions().cardSize
-	const FIXED_ROWS = calculateGridDimensions().targetRows
-	const FIXED_COLS = calculateGridDimensions().targetColumns
-
 	const NEIGHBOURS = [
 		// Directly four tiles away
 		[0, -4], // 4 up
@@ -189,7 +184,6 @@ if (!lang) {
 
 			// Record touch start time
 			this.touchStartTime = Date.now()
-			// console.log('Touch start time: ', this.touchStartTime)
 
 			// Add .is-dragging to body to prevent text selection
 			document.body.classList.add('is-dragging')
@@ -209,21 +203,17 @@ if (!lang) {
 			// Set setting overscroll-behavior: unset;
 			document.documentElement.style.overscrollBehavior = 'auto'
 
-			// // Calculate the duration of the tap
+			// Calculate the duration of the tap
 			const touchDuration = Date.now() - this.touchStartTime
 
-			// // Check duration and act accordingly
+			// Check duration and act accordingly
 			if (touchDuration < 150) {
 				// This checks if the touch lasted less than 100ms
 				// This was a short tap:
-				// if (e.target.tagName.toLowerCase() === 'div') {
 				const href = e.target.getAttribute('data-href')
 				if (href) {
 					window.location = href
 				}
-				// } else {
-				// 	return
-				// }
 			}
 		}
 
@@ -304,7 +294,7 @@ if (!lang) {
 				title.classList.add('text-left')
 				title.setAttribute('dir', 'ltr')
 			}
-      this.titleElement = title
+			this.titleElement = title
 			this.rootElement.appendChild(title)
 
 			// Check if article was read before and write date of last read if that's the case
@@ -367,7 +357,7 @@ if (!lang) {
 				!this.descriptor.story[lang].title || this.descriptor.story[lang].title === ''
 					? 'NO TITLE FOR ID ' + this.descriptor.id
 					: this.descriptor.story[lang].title
-      // Find h2 element and replace its text content
+			// Find h2 element and replace its text content
 			this.titleElement.textContent = titleText
 
 			let cssBatch = ''
@@ -400,7 +390,7 @@ if (!lang) {
 
 		init() {
 			window.addEventListener('resize', this.onResize.bind(this))
-			window.addEventListener('resize', debounce(adjustAndApplyCardSize, 250))
+			// window.addEventListener('resize', debounce(adjustAndApplyCardSize, 250))
 			this.onResize()
 			let d = new SimpleDrag(this.DOMElement, this.onDrag.bind(this))
 		}
@@ -485,17 +475,17 @@ if (!lang) {
 
 		getCardPos(col, row) {
 			// Calculate the position of the card
-			let offsetX = this.offsetX % CARD_WIDTH
-			let offsetY = this.offsetY % CARD_HEIGHT
-			let x = col * CARD_WIDTH + offsetX - CARD_WIDTH
-			let y = row * CARD_HEIGHT + offsetY - CARD_HEIGHT
+			let offsetX = this.offsetX % calculateGridDimensions().cardSize
+			let offsetY = this.offsetY % calculateGridDimensions().cardSize
+			let x = col * calculateGridDimensions().cardSize + offsetX - calculateGridDimensions().cardSize
+			let y = row * calculateGridDimensions().cardSize + offsetY - calculateGridDimensions().cardSize
 			return [Math.round(x), Math.round(y)]
 		}
 
 		updateGrid() {
 			let newCards = {}
-			let colOffset = ~~(this.offsetX / CARD_WIDTH) * -1
-			let rowOffset = ~~(this.offsetY / CARD_HEIGHT) * -1
+			let colOffset = ~~(this.offsetX / calculateGridDimensions().cardSize) * -1
+			let rowOffset = ~~(this.offsetY / calculateGridDimensions().cardSize) * -1
 
 			// Loop through the visible cards
 			for (let row = -1; row < this.viewRows; row++) {
@@ -503,8 +493,8 @@ if (!lang) {
 					let desc = undefined
 					let tCol = colOffset + col
 					let tRow = rowOffset + row
-					if (tCol > 0 && tRow > 0 && tCol < FIXED_COLS && tRow < FIXED_ROWS) {
-						let index = tRow * FIXED_COLS + tCol
+					if (tCol > 0 && tRow > 0 && tCol < calculateGridDimensions().cols && tRow < calculateGridDimensions().rows) {
+						let index = tRow * calculateGridDimensions().cols + tCol
 						desc = this.getGalleryDescriptor(index)
 					} else {
 						desc = this.getRandomDescriptor(tCol, tRow)
@@ -524,6 +514,7 @@ if (!lang) {
 					}
 				}
 			}
+
 			this.cleanupCards()
 			this.cards = newCards
 		}
