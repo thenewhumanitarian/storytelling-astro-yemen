@@ -304,6 +304,7 @@ if (!lang) {
 				title.classList.add('text-left')
 				title.setAttribute('dir', 'ltr')
 			}
+      this.titleElement = title
 			this.rootElement.appendChild(title)
 
 			// Check if article was read before and write date of last read if that's the case
@@ -324,6 +325,7 @@ if (!lang) {
 		load() {
 			let { imgElement } = this
 			if (imgElement.src !== this.descriptor.storyImage.main) {
+				console.log('Changed image: ', this.descriptor.storyImage.main)
 				imgElement.src = this.descriptor.storyImage.main
 				imgElement.onload = () => {
 					this.update()
@@ -357,11 +359,21 @@ if (!lang) {
 				debounce(this.rootElement.setAttribute('data-lastread', this.lastRead), 250)
 			}
 
+			// Replace link data attribute
+			this.rootElement.setAttribute('data-href', `/stories/${lang}/${this.descriptor.slugs[lang]}`)
+
+			// Create h2 title and append to rootElement
+			const titleText =
+				!this.descriptor.story[lang].title || this.descriptor.story[lang].title === ''
+					? 'NO TITLE FOR ID ' + this.descriptor.id
+					: this.descriptor.story[lang].title
+      // Find h2 element and replace its text content
+			this.titleElement.textContent = titleText
+
 			let cssBatch = ''
 			cssBatch += `transform: translate3d(${this.x}px, ${this.y}px, 0);`
 			cssBatch += `width: ${calculateGridDimensions().cardSize - 8}px;`
 			cssBatch += `background-image: url(${this.descriptor.storyImage.pixelated})`
-			// cssBatch += 'display:' + ( this._visible ? 'block;' : 'none;' );
 
 			this.rootElement.setAttribute('style', cssBatch)
 		}
@@ -611,14 +623,9 @@ if (!lang) {
 				text-shadow: none;
 				box-decoration-break: clone;
 				padding: 0.3rem 0.5rem 0.6rem 0.5rem;
-			}
 
-			&:hover {
-				// border-color: #9f3e52;
-
-				h2 {
-					text-shadow: inherit;
-					background: black;
+				@media screen and (max-width: 640px) {
+					border-color: #9f3e52;
 				}
 			}
 		}
@@ -643,6 +650,11 @@ if (!lang) {
 		opacity: 1;
 		border: 4px solid white;
 
+		h2 {
+			text-shadow: inherit;
+			// background: black;
+		}
+
 		.shader {
 			opacity: 0.6;
 			transition: opacity 0.35s;
@@ -654,7 +666,7 @@ if (!lang) {
 		}
 
 		@media screen and (max-width: 640px) {
-			border-color: transparent;
+			border-color: black;
 		}
 	}
 
