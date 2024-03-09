@@ -23,12 +23,6 @@ async function processWhatsAppAttachments(entryID, files, basePath) {
     newFilename = `${entryID}-${index + 1}${extension}`;
     newFilePath = path.join(basePath, '../src/assets/', newFilename);
 
-    // Skip current file if filename contains thumbnail
-    if (file.toLowerCase().includes('thumbnail')) {
-      console.log(`Skipping thumbnail: ${file}`);
-      return file;
-    }
-
     if (extension === '.heic') {
       // Convert to JPG or handle HEIC files here
       // The conversion logic is omitted for simplicity
