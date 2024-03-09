@@ -293,17 +293,20 @@ if (!lang) {
 			starDiv.classList.add('p-2')
 			starDiv.classList.add('rounded-full')
 			starDiv.classList.add('bg-burgundy')
+      starDiv.classList.add('pointer-events-none')
+      starDiv.classList.add('shadow-lg')
+      starDiv.classList.add('shadow-black')
 			starDiv.classList.add(this.descriptor.highlighted ? 'opacity-100' : 'opacity-0')
 
 			const highlightedText = document.createElement('span')
-			highlightedText.textContent = '⭐️'
+			highlightedText.textContent = '★'
 			highlightedText.classList.add('text-white')
-			highlightedText.classList.add('text-shadow-xl')
-			highlightedText.classList.add('text-2xl')
-			highlightedText.classList.add('shadow-black')
-			highlightedText.classList.add('font-serif')
+			highlightedText.classList.add('text-base')
+			// highlightedText.classList.add('text-shadow-xl')
+			// highlightedText.classList.add('shadow-black')
 			highlightedText.classList.add('p-0')
 			highlightedText.classList.add('m-0')
+			highlightedText.classList.add('font-serif')
 
 			starDiv.appendChild(highlightedText)
 			this.rootElement.appendChild(starDiv)
