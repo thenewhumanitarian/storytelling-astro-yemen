@@ -10,7 +10,7 @@ const fs = require('fs');
  * @param {number} [height=400] - Optional height for the main thumbnail.
  * @returns {Promise<Object>} A promise that resolves with the paths of the created thumbnails, or null if an error occurred.
  */
-async function createThumbnail(sourcePath, destinationPath, width = 400, height = 400) {
+async function createThumbnail(sourcePath, destinationPath, width = 240, height = 240) {
   try {
     // Main thumbnail creation
     await sharp(sourcePath, { failOnError: false })

@@ -196,6 +196,10 @@ async function processData(data) {
             files = fs.readdirSync(whatsappAssetsDir);
             if (files.length > 0) {
               // Correctly await the processing of WhatsApp attachments
+
+              // Filter files to exclude any files with word thumbnail in filename
+              files = files.filter(file => !file.toLowerCase().includes('thumbnail'));
+
               whatsAppAttachments = await processWhatsAppAttachments(entryID, files, __dirname);
               console.log(`Processed files for entry ${entryID}:`, whatsAppAttachments);
             }
