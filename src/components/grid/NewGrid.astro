@@ -49,18 +49,25 @@ if (!lang) {
 
 	// Adjust card size function
 	function calculateGridDimensions() {
-		let rows = 5
-		let cols = 5
-		let targetSize = 256
+		let rows = 10
+		let cols = 10
+		let targetSize = 260
+
+		if (window.innerWidth < 1400) {
+			rows = 10
+			cols = 10
+			targetSize = 260
+		}
 
 		if (window.innerWidth < 1280) {
-			rows = 5
-			cols = 5
+			rows = 10
+			cols = 10
+			targetSize = 240
 		}
 
 		if (window.innerWidth < 640) {
-			rows = 5
-			cols = 5
+			rows = 8
+			cols = 8
 			targetSize = window.innerWidth / 2
 		}
 

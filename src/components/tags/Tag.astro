@@ -37,15 +37,15 @@ function formatTagName(tagName) {
 }
 
 // Example usage
-const formattedTag = formatTagName(tag) || 'NOT FOUND'
+const formattedTag = formatTagName(tag) || tag + '(NOT FOUND)'
 ---
 
-<a href={`/tags/${lang}/${tag.toLowerCase()}`} class='group inline-block px-3 py-2 m-0 cursor-pointer text-base bg-black border-2 border-white hover:bg-white hover:text-black'>
+<a href={`/tags/${lang}/${tag.toLowerCase()}`} class='group inline-block px-2 py-1 sm:px-3 sm:py-2 m-0 cursor-pointer text-base bg-black border-2 border-white hover:bg-white hover:text-black'>
 	{
 		translations.tags[formattedTag] ? (
-			<span class='block sm:font-bold bg-transparent group-hover:text-black border-transparent text-zinc-200'>{translations.tags[formattedTag][lang]}</span>
+			<span class='block text-sm sm:text-base sm:font-bold bg-transparent group-hover:text-black border-transparent text-zinc-200'>{translations.tags[formattedTag][lang]}</span>
 		) : (
-			<span class='block sm:font-bold bg-transparent group-hover:text-black border-transparent text-zinc-200'>{formattedTag} ERROR</span>
+			<span class='block text-sm sm:text-base sm:font-bold bg-transparent group-hover:text-black border-transparent text-zinc-200'>{formattedTag} ERROR</span>
 		)
 	}
 </a>
