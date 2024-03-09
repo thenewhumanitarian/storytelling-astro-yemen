@@ -249,6 +249,7 @@ if (!lang) {
 			this.rootElement = document.createElement('div')
 			this.rootElement.setAttribute('backgroundImage', `url(${this.descriptor.storyImage.pixelated})`)
 			this.rootElement.classList.add('bg-zinc-950')
+			this.rootElement.classList.add('opacity-0')
 
 			// Set href for the card
 			this.rootElement.setAttribute('data-href', `/stories/${lang}/${this.descriptor.slugs[lang]}`)
@@ -276,6 +277,37 @@ if (!lang) {
 			emptyDiv.classList.add('opacity-0')
 			this.rootElement.appendChild(emptyDiv)
 
+			// Create div element as a wrapper for the highlighted text
+
+			// Create a h3 element and append to rootElement
+			const starDiv = document.createElement('div')
+			starDiv.classList.add('flex')
+			starDiv.classList.add('items-center')
+			starDiv.classList.add('justify-center')
+			starDiv.classList.add('absolute')
+			starDiv.classList.add('bottom-3')
+			starDiv.classList.add('right-3')
+			starDiv.classList.add('w-8')
+			starDiv.classList.add('h-8')
+			starDiv.classList.add('m-0')
+			starDiv.classList.add('p-2')
+			starDiv.classList.add('rounded-full')
+			starDiv.classList.add('bg-burgundy')
+			starDiv.classList.add(this.descriptor.highlighted ? 'opacity-100' : 'opacity-0')
+
+			const highlightedText = document.createElement('span')
+			highlightedText.textContent = '⭐️'
+			highlightedText.classList.add('text-white')
+			highlightedText.classList.add('text-shadow-xl')
+			highlightedText.classList.add('text-2xl')
+			highlightedText.classList.add('shadow-black')
+			highlightedText.classList.add('font-serif')
+			highlightedText.classList.add('p-0')
+			highlightedText.classList.add('m-0')
+
+			starDiv.appendChild(highlightedText)
+			this.rootElement.appendChild(starDiv)
+
 			// Create h2 title and append to rootElement
 			const titleText =
 				!this.descriptor.story[lang].title || this.descriptor.story[lang].title === ''
@@ -296,26 +328,12 @@ if (!lang) {
 			}
 			this.titleElement = title
 			this.rootElement.appendChild(title)
-
-			// Check if article was read before and write date of last read if that's the case
-			// let readArticles = JSON.parse(localStorage.getItem('readArticles')) || []
-			// let readArticle = readArticles.find((article) => article.slug === this.descriptor.slugs[lang])
-			// if (readArticle) {
-			// 	// If the current article has been read before, set the data-lastread attribute with the timestamp
-			// 	debounce(this.rootElement.setAttribute('data-lastread', readArticle.timestamp), 50)
-			// } else {
-			// 	// If the current article has not been read, set data-lastread to a default value or omit this part altogether
-			// 	debounce(this.rootElement.setAttribute('data-lastread', 'never'), 50)
-			// }
-
-			// Adding click event listener
-			// this.rootElement.addEventListener('click', this.onClick.bind(this))
 		}
 
 		load() {
 			let { imgElement } = this
 			if (imgElement.src !== this.descriptor.storyImage.main) {
-				console.log('Changed image: ', this.descriptor.storyImage.main)
+				// console.log('Changed image: ', this.descriptor.storyImage.main)
 				imgElement.src = this.descriptor.storyImage.main
 				imgElement.onload = () => {
 					this.update()
@@ -594,13 +612,14 @@ if (!lang) {
 		border-radius: 1px;
 		direction: rtl;
 		text-align: right;
-		transition: opacity 0.5s;
 		opacity: 1;
 		overflow: hidden;
 		position: absolute;
 		aspect-ratio: 1/1;
 		border: 4px solid black;
-		will-change: transform;
+    opacity: 1;
+		transition: opacity 0.5s;
+		will-change: transform, opacity;
 
 		&.highlighted {
 			&:not(:hover) {
@@ -609,11 +628,17 @@ if (!lang) {
 
 			h2 {
 				background: #9f3e52;
-				background-transparency: 0.5;
-				display: inline-block;
+				display: inline;
+				width: auto;
 				text-shadow: none;
 				box-decoration-break: clone;
 				padding: 0.3rem 0.5rem 0.6rem 0.5rem;
+				left: 0;
+
+				&[dir='rtl'] {
+					right: 0;
+          left: unset;
+				}
 
 				@media screen and (max-width: 640px) {
 					border-color: #9f3e52;
@@ -643,12 +668,12 @@ if (!lang) {
 
 		h2 {
 			text-shadow: inherit;
-			// background: black;
+			background: transparent;
 		}
 
 		.shader {
 			opacity: 0.6;
-			transition: opacity 0.35s;
+			transition: opacity 0.5s;
 			will-change: opacity;
 
 			@media screen and (max-width: 640px) {
