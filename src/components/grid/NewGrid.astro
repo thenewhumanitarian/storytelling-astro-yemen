@@ -389,7 +389,7 @@ if (!lang) {
 		}
 
 		init() {
-			window.addEventListener('resize', this.onResize.bind(this))
+			window.addEventListener('resize', debounce(this.onResize.bind(this)), 250)
 			// window.addEventListener('resize', debounce(adjustAndApplyCardSize, 250))
 			this.onResize()
 			let d = new SimpleDrag(this.DOMElement, this.onDrag.bind(this))
