@@ -241,7 +241,7 @@ if (!lang) {
 			this.createDOMElement()
 			this.x = 0
 			this.y = 0
-			this.lastRead = lastRead || 'never'
+			this.lastRead = lastRead
 			// this.touchStartTime = 0
 		}
 
@@ -365,7 +365,7 @@ if (!lang) {
 			// console.log(calculateGridDimensions().cardSize)
 
 			if (!this.lastRead) {
-				debounce(this.rootElement.setAttribute('data-lastread', 'never'), 250)
+				// Don't bother with this if it's not on "unread only" filter
 			} else {
 				debounce(this.rootElement.setAttribute('data-lastread', this.lastRead), 250)
 			}
@@ -557,9 +557,9 @@ if (!lang) {
 				return card
 			} else {
 				// Find out if descriptor is in readArticles
-				let readArticle = this.readArticles.find((article) => article.slug === descriptor.slugs[lang])
+				const readArticle = this.readArticles.find((article) => article.slug === descriptor.slugs[lang])
 				// console.log(readArticle)
-				return new Card(descriptor, readArticle?.timestamp)
+				return new Card(descriptor, readArticle?.timestamp || 'never')
 			}
 		}
 	}
