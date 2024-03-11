@@ -1,31 +1,22 @@
 ---
-type Props = { measurementId?: string }
-const props = Astro.props as Props
-const measurementId = props.measurementId
+export interface Props {
+	measurementId: string
+	partytown?: boolean
+}
+
+const { measurementId = 'GA_MEASUREMENT_ID', partytown = false } = Astro.props
+
+const attrs = partytown ? { type: 'text/partytown' } : {}
 ---
 
-<!-- OneTrust cookie banner -->
-<script type='text/partytown' src='https://cdn.cookielaw.org/consent/bb450c21-2aaa-4447-93bb-24f0c732a71c/OtAutoBlock.js'></script>
-<script
-	src='https://cdn.cookielaw.org/consent/bb450c21-2aaa-4447-93bb-24f0c732a71c/otSDKStub.js'
-	data-document-language='true'
-	type='text/partytown'
-	charset='UTF-8'
-	data-domain-script='bb450c21-2aaa-4447-93bb-24f0c732a71c'></script>
-<script type='text/partytown'>
-	function OptanonWrapper() {}
+{/* <ShowIf id={id}> */}
+<script is:inline async src={`https://www.googletagmanager.com/gtag/js?id=${measurementId}`} {...attrs}></script>
+
+<script is:inline define:vars={{ measurementId }} {...attrs}>
+	window.dataLayer = window.dataLayer || []
+	function gtag() {
+		window.dataLayer.push(arguments)
+	}
+	gtag('js', new Date())
+	gtag('config', measurementId)
 </script>
-<!-- OptanonConsentNoticeEnd --><!-- Google Tag Manager -->
-<script type='text/partytown'>
-	;(function (w, d, s, l, i) {
-		w[l] = w[l] || []
-		w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' })
-		var f = d.getElementsByTagName(s)[0],
-			j = d.createElement(s),
-			dl = l != 'dataLayer' ? '&l=' + l : ''
-		j.async = true
-		j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl
-		f.parentNode.insertBefore(j, f)
-	})(window, document, 'script', 'dataLayer', 'GTM-T5C2M82')
-</script>
-End Google Tag Manager
