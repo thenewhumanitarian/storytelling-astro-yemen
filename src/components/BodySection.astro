@@ -143,6 +143,8 @@ if (visibleAttachments.length > 0 && visibleAttachments.length < 4) {
 	document.addEventListener('astro:page-load', () => {
 		let currentIndex = 0 // Track the index of the currently displayed media
 
+    console.log('astro:page-load triggered within BodySection')
+
 		// Function to create and show the lightbox
 		const mediaElements = document.querySelectorAll('[data-lightbox]')
 		function showLightbox(index) {
