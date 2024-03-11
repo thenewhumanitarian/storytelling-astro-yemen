@@ -36,17 +36,17 @@ const isProd = import.meta.env.PROD
 <html lang='en' dir={lang === 'ar' ? 'rtl' : 'ltr'}>
 	<head>
 		<!-- GA4 -->
-		{
-			isProd && (
-				<>
-					<script async src='https://www.googletagmanager.com/gtag/js?id=G-CN7NT4K7P4' />
-					<script is:inline>
-						window.dataLayer = window.dataLayer || [] function gtag() {dataLayer.push(arguments)}
-						gtag('js', new Date()) gtag('config', 'G-CN7NT4K7P4')
-					</script>
-				</>
-			)
-		}
+    {isProd && (
+      <>
+        <script type="text/partytown" src="https://www.googletagmanager.com/gtag/js?id=G-CN7NT4K7P4"></script>
+        <script type="text/partytown">
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-CN7NT4K7P4');
+        </script>
+      </>
+    )}
 		<!-- End GA4 -->
 
 		<!-- Todo: Change meta tags using Drupal tags before publication  -->
