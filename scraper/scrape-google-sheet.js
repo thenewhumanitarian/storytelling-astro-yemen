@@ -323,7 +323,7 @@ async function processData(data) {
       id: entry.ID,
       slugs: {
         en: enSlug,
-        ar: arSlug
+        ar: enSlug // Changed to enSlug because arSlug doesn't always work
       },
       storyImage: storyImage,
       personalInfo: {
