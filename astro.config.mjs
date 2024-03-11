@@ -18,12 +18,12 @@ export default defineConfig({
       applyBaseStyles: false
     }),
     sitemap(),
-    partytown({
-      config: {
-        forward: ["dataLayer.push"],
-        debug: true
-      },
-    }),
+    // partytown({
+    //   config: {
+    //     forward: ["dataLayer.push"],
+    //     debug: true
+    //   },
+    // }),
     react()
   ]
 });
