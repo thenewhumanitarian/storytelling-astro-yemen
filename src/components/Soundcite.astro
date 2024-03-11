@@ -27,7 +27,7 @@ const { src, start, end, plays, text } = Astro.props as Props
 
 {/* Add Soundcite to the page */}
 <script is:inline>
-  console.log('astro:page-load from Soundcite')
+	console.log('astro:page-load from Soundcite')
 
 	document.addEventListener('astro:page-load', () => {
 		/* soundcite - v0.5.1 - 2017-07-10
@@ -447,7 +447,7 @@ const { src, start, end, plays, text } = Astro.props as Props
 			soundcite.pause_all_clips = pause_all_clips
 			soundcite.normalize_background_color = normalize_background_color
 		})
-    soundsite.init()
+		soundsite.init()
 	})
 </script>
 

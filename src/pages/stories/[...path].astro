@@ -86,7 +86,7 @@ const hasAudioFiles = processedAudioFiles.length > 0
 >
 	<SEO slot='seo' title={`The Yemen Listening Project`} description={story.story[lang].title} />
 	<ViewTransitions />
-	<div class='fixed top-0 left-0 w-screen h-screen -z-1 pointer-events-none' id='stars'></div>
+	<div class='fixed top-0 left-0 w-screen h-screen -z-1 pointer-events-none' id='stars' transition:persist></div>
 	<div class='fixed top-0 left-0 w-screen h-screen -z-1 pointer-events-none' id='city'></div>
 	<div
 		class='w-full max-w-5xl mx-auto mt-2 sm:mt-5 mb-8 sm:mb-24 px-4'
@@ -352,7 +352,10 @@ const hasAudioFiles = processedAudioFiles.length > 0
 	}
 
 	/* Adds twinkling stars */
-	var NUMBER_OF_STARS = 50
+	var NUMBER_OF_STARS = 75
+	if (window.innerWidth <= 1024) {
+		NUMBER_OF_STARS = 50
+	}
 	if (window.innerWidth <= 500) {
 		NUMBER_OF_STARS = 15
 	}
@@ -369,6 +372,8 @@ const hasAudioFiles = processedAudioFiles.length > 0
 	var starAnimationClassesArray = ['one', 'two', 'three', 'four', 'five']
 
 	function createStars() {
+		console.log(`adding ${NUMBER_OF_STARS} stars`)
+
 		for (var jess = 0; jess < NUMBER_OF_STARS; jess++) {
 			setTimeout(() => {
 				var aStar = document.createElement('div')
@@ -386,5 +391,8 @@ const hasAudioFiles = processedAudioFiles.length > 0
 		}
 	}
 
-	createStars()
+	// Only create stars if the #stars container is empty
+	if (starContainer.innerHTML === '') {
+		createStars()
+	}
 </script>
