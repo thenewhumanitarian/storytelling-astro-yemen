@@ -94,63 +94,66 @@ const hasAudioFiles = processedAudioFiles.length > 0
 		id='story-wrapper'
 		dir={lang === 'ar' ? 'rtl' : 'ltr'}
 	>
-		<div class={`flex justify-center items-center ${lang === 'ar' ? 'flex-row-reverse' : 'flex-row'} nav-buttons menu--hide`}>
-			<NavButtons button='previous' lang={lang} href={`/stories/${lang}/${prevStorySlug}`} classNames='hover:text-white hover:bg-zinc-100' />
-			<NavButtons button='overview' lang={lang} classNames='text-white bg-burgundy hover:bg-zinc-100 hover:text-burgundy' />
-			<NavButtons button='next' lang={lang} href={`/stories/${lang}/${nextStorySlug}`} classNames='hover:text-white hover:bg-zinc-100' />
-		</div>
-		<div class='flex flex-col gap-3 sm:gap-5'>
-			<div class='flex flex-col lg:flex-row lg:gap-x-5 mb-6'>
-				{/* Header section */}
-				<div class='w-full flex flex-col items-center justify-center'>
-					<Title>
-						{story.story[lang].title || `${lang.toUpperCase()} title for story ID #${story.id} is missing`}
-					</Title>
-					<AuthorSection
-						lang={lang}
-						name={`${story.personalInfo[lang].name} ${story.personalInfo[lang].surname}`}
-						from={story.personalInfo[lang].whereFrom}
-						livingIn={story.personalInfo[lang].livingIn}
-						age={story.contact.age}
-					/>
-				</div>
+	</div>
+
+	<div class={`flex justify-center items-center ${lang === 'ar' ? 'flex-row-reverse' : 'flex-row'} nav-buttons menu--hide z-10`}>
+		<a href='http://localhost:4321/stories/ar/my-children-had-ambitions'><button class="p-5"></button>A</a>
+		<a href='http://localhost:4321/stories/ar/en-story-1048'><button class="p-5"></button>B</a>
+		<NavButtons button='previous' lang={lang} href={`/stories/${lang}/${prevStorySlug}`} classNames='hover:text-white hover:bg-zinc-100' />
+		<NavButtons button='overview' lang={lang} classNames='text-white bg-burgundy hover:bg-zinc-100 hover:text-burgundy' />
+		<NavButtons button='next' lang={lang} href={`/stories/${lang}/${nextStorySlug}`} classNames='hover:text-white hover:bg-zinc-100' />
+	</div>
+	<div class='flex flex-col gap-3 sm:gap-5 z-10'>
+		<div class='flex flex-col lg:flex-row lg:gap-x-5 mb-6'>
+			{/* Header section */}
+			<div class='w-full flex flex-col items-center justify-center'>
+				<Title>
+					{story.story[lang].title || `${lang.toUpperCase()} title for story ID #${story.id} is missing`}
+				</Title>
+				<AuthorSection
+					lang={lang}
+					name={`${story.personalInfo[lang].name} ${story.personalInfo[lang].surname}`}
+					from={story.personalInfo[lang].whereFrom}
+					livingIn={story.personalInfo[lang].livingIn}
+					age={story.contact.age}
+				/>
 			</div>
-			{/* Body section */}
-			<BodySection attachments={story.attachments}>
-				<Message contentArray={contentArray} lang={lang} slot='message'>
-					{
-						hasAudioFiles &&
-							processedAudioFiles.map((file) => (
-								<div>
-									<Soundcite
-										text={`${story.audioReadouts[lang] || `Audio readout text for ${lang.toUpperCase()} is missing in Google Spreadsheet...`}`}
-										src={`/attachments/${file}`}
-										plays={1}
-										start={0}
-										end={parseInt(file.match(/(\d+)s\.[a-zA-Z0-9]+$/)[1], 10) * 1000}
-									/>
-								</div>
-							))
-					}
-					{
-						contentArray.map((line) => {
-							if (line !== '') {
-								return <p class='text-white sm:text-lg' set:html={line} />
-							}
-						})
-					}
-				</Message>
-			</BodySection>
 		</div>
-		{/* Tag list */}
-		<TagList tags={story.tags} />
-		{/* Share story section */}
-		<ShareStory story={story} lang={lang} />
-		<div class={`flex justify-center items-center ${lang === 'ar' ? 'flex-row-reverse sm:hidden' : 'flex-row sm:hidden'} nav-buttons menu--hide mt-5`}>
-			<NavButtons button='previous' lang={lang} href={`/stories/${lang}/${prevStorySlug}`} classNames='hover:text-white hover:bg-zinc-100' />
-			<NavButtons button='overview' lang={lang} classNames='text-white bg-burgundy hover:bg-zinc-100 hover:text-burgundy' />
-			<NavButtons button='next' lang={lang} href={`/stories/${lang}/${nextStorySlug}`} classNames='hover:text-white hover:bg-zinc-100' />
-		</div>
+		{/* Body section */}
+		<BodySection attachments={story.attachments}>
+			<Message contentArray={contentArray} lang={lang} slot='message'>
+				{
+					hasAudioFiles &&
+						processedAudioFiles.map((file) => (
+							<div>
+								<Soundcite
+									text={`${story.audioReadouts[lang] || `Audio readout text for ${lang.toUpperCase()} is missing in Google Spreadsheet...`}`}
+									src={`/attachments/${file}`}
+									plays={1}
+									start={0}
+									end={parseInt(file.match(/(\d+)s\.[a-zA-Z0-9]+$/)[1], 10) * 1000}
+								/>
+							</div>
+						))
+				}
+				{
+					contentArray.map((line) => {
+						if (line !== '') {
+							return <p class='text-white sm:text-lg' set:html={line} />
+						}
+					})
+				}
+			</Message>
+		</BodySection>
+	</div>
+	{/* Tag list */}
+	<TagList tags={story.tags} />
+	{/* Share story section */}
+	<ShareStory story={story} lang={lang} />
+	<div class={`flex justify-center items-center ${lang === 'ar' ? 'flex-row-reverse sm:hidden' : 'flex-row sm:hidden'} nav-buttons menu--hide mt-5`}>
+		<NavButtons button='previous' lang={lang} href={`/stories/${lang}/${prevStorySlug}`} classNames='hover:text-white hover:bg-zinc-100' />
+		<NavButtons button='overview' lang={lang} classNames='text-white bg-burgundy hover:bg-zinc-100 hover:text-burgundy' />
+		<NavButtons button='next' lang={lang} href={`/stories/${lang}/${nextStorySlug}`} classNames='hover:text-white hover:bg-zinc-100' />
 	</div>
 </Layout>
 
@@ -162,6 +165,9 @@ const hasAudioFiles = processedAudioFiles.length > 0
 	#stars {
 		z-index: -1;
 		background: black;
+		/* Add the blur effect */
+		filter: blur(3px);
+		-webkit-filter: blur(3px);
 	}
 
 	.story-w a {
@@ -347,9 +353,9 @@ const hasAudioFiles = processedAudioFiles.length > 0
 	}
 
 	/* Adds twinkling stars */
-	var NUMBER_OF_STARS = 100
+	var NUMBER_OF_STARS = 50
 	if (window.innerWidth <= 500) {
-		NUMBER_OF_STARS = 25
+		NUMBER_OF_STARS = 15
 	}
 
 	var addPulse = function (element) {
