@@ -2,12 +2,11 @@
 const activeClasses = 'bg-burgundy text-white hover:bg-white hover:text-burgundy'
 const inactiveClasses = 'bg-black text-white hover:bg-white hover:text-burgundy'
 
-const { links } = Astro.props
+const { classNames, links } = Astro.props
 
 let { lang } = Astro.params
 
 const { path } = Astro.params
-const pathParams = path?.toString().split('/')
 
 if (!lang) {
 	// Read path parameters for language and slug
@@ -17,8 +16,6 @@ if (!lang) {
 
 const view = path?.toString().split('/')?.[1] || 'grid'
 
-// console.log(view)
-
 import { translations } from '@data/translations'
 ---
 
@@ -27,7 +24,7 @@ import { translations } from '@data/translations'
 		data-astro-reload
 		id='language-button--en'
 		href=`${links.en || '/en/' + view}`
-		class=`language--button transition-colors duration-150 relative -ml-px inline-flex items-center rounded-r-xs px-3 py-1 text-xs sm:text-sm font-semibold text-white ring-1 ring-inset ring-gray-300 focus:z-10 ${lang === 'en' ? activeClasses : inactiveClasses }`
+		class=`${classNames} language--button transition-colors duration-150 relative -ml-px inline-flex items-center rounded-r-xs px-3 py-1 text-xs sm:text-sm font-semibold text-white ring-1 ring-inset ring-gray-300 focus:z-10 ${lang === 'en' ? activeClasses : inactiveClasses }`
 	>
 		{translations.english['en']}
 	</a>
@@ -35,7 +32,7 @@ import { translations } from '@data/translations'
 		data-astro-reload
 		id='language-button--ar'
 		href=`${links.ar || '/ar/' + view}`
-		class=`language--button transition-colors duration-150 relative inline-flex items-center rounded-l-xs px-3 py-2 text-xs sm:text-sm font-semibold text-white ring-1 ring-inset ring-gray-300 focus:z-10 ${lang === 'ar' ? activeClasses : inactiveClasses }`
+		class=`${classNames} language--button transition-colors duration-150 relative inline-flex items-center rounded-l-xs px-3 py-2 text-xs sm:text-sm font-semibold text-white ring-1 ring-inset ring-gray-300 focus:z-10 ${lang === 'ar' ? activeClasses : inactiveClasses }`
 	>
 		{translations.arabic['ar']}
 	</a>
