@@ -39,8 +39,8 @@ const isProd = import.meta.env.PROD
 		{
 			isProd && (
 				<>
-					<script type="text/partytown" is:inline src='https://www.googletagmanager.com/gtag/js?id=G-CN7NT4K7P4' />
-					<script type="text/partytown" is:inline>
+					<script type="text/partytown" async src='https://www.googletagmanager.com/gtag/js?id=G-CN7NT4K7P4' />
+					<script type="text/partytown">
 						window.dataLayer = window.dataLayer || []; 
             function gtag() { dataLayer.push(arguments); }
             gtag('js', new Date()); 
