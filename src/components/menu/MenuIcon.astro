@@ -6,6 +6,8 @@
 </div>
 
 <script is:inline>
+	const DEBUG_MODE = false
+
 	// Define functions
 
 	/* OPEN MENU */
@@ -45,15 +47,15 @@
 	}
 
 	function checkIntroOverlay() {
-		// Check if 'showIntro' is not set to 'false'
-		if (localStorage.getItem('showIntro') !== 'true') {
+		// Check if 'hideIntro' is not set to 'false'
+		if (localStorage.getItem('hideIntro') !== 'true' || DEBUG_MODE) {
 			openMenu() // Automatically open the menu if condition is met
 		}
 	}
 
 	function setShowIntroFalse() {
-		localStorage.setItem('showIntro', 'true') // Set 'showIntro' to 'false' in localStorage
-		console.log('showIntro set to false in localStorage')
+		localStorage.setItem('hideIntro', 'true') // Set 'hideIntro' to 'false' in localStorage
+		console.log('hideIntro set to false in localStorage')
 	}
 
 	// Deal with eventHandlers

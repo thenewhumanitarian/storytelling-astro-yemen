@@ -2,6 +2,7 @@
 // import HeaderLogo from './HeaderLogoSimple.astro'
 import Pergament from '@components/Pergament.astro'
 import Logo from '@components/header/Logo.astro'
+import LanguageButtons from '@components/buttons/LanguageButtons.astro'
 import { translations } from '@data/translations'
 
 import Intro from './content/intro.astro'
@@ -48,6 +49,7 @@ const navButtonClasses =
 					}
 				</nav>
 			</div>
+			<LanguageButtons links={{ en: '/en/grid', ar: '/ar/grid' }} />
 		</div>
 	</div>
 
@@ -214,6 +216,14 @@ const navButtonClasses =
 
 		// Select all .content-container elements and hide them
 		hideAllContainers()
+
+		// Find all buttons with .language--button class and add event listener to each
+		const languageButtons = document.querySelectorAll('.language--button')
+		languageButtons.forEach((button) => {
+			button.addEventListener('click', (event) => {
+				localStorage.setItem('hideIntro', 'false')
+			})
+		})
 
 		// Check activeIntroSlide and show the corresponding content or if nothing found show the one with id === 'intro'
 		const activeIntroSlide = localStorage.getItem('activeIntroSlide')
