@@ -27,8 +27,13 @@ const { src, start, end, plays, text } = Astro.props as Props
 
 {/* Add Soundcite to the page */}
 <script is:inline>
+	document.addEventListener('astro:before-swap', () => {
+		console.log('astro:before-swap from Soundcite.astro')
+		window.soundcite = null
+	})
+
 	document.addEventListener('astro:page-load', () => {
-		console.log('astro:page-load from Soundcite')
+		console.log('astro:page-load from Soundcite.astro')
 
 		/* soundcite - v0.5.1 - 2017-07-10
 		 * Copyright (c) 2017 Tyler J. Fisher and Northwestern University Knight Lab
@@ -446,7 +451,7 @@ const { src, start, end, plays, text } = Astro.props as Props
 			soundcite.clips = clips
 			soundcite.pause_all_clips = pause_all_clips
 			soundcite.normalize_background_color = normalize_background_color
-      console.log(soundcite)
+			console.log(soundcite)
 		})
 	})
 </script>
