@@ -16,6 +16,7 @@
     "@astrojs/sitemap": "^3.1.1",
     "@astrojs/tailwind": "^5.0.0",
     "@astrojs/vercel": "^5.0.0",
+    "@kaitos/audioquote": "^0.0.1",
     "@nanostores/persistent": "^0.10.1",
     "@nanostores/react": "^0.7.2",
     "@rvxlab/tailwind-plugin-ios-full-height": "^1.1.0",

@@ -615,6 +615,11 @@
     "@jridgewell/resolve-uri" "^3.1.0"
     "@jridgewell/sourcemap-codec" "^1.4.14"
 
+"@kaitos/audioquote@^0.0.1":
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/@kaitos/audioquote/-/audioquote-0.0.1.tgz#8009ffffaf202f5eaaffb8271edc58350ee94fe0"
+  integrity sha512-EM4C/5PnE1/Zk6rNZtCvVPUgGg8WjDMsTZ0HATo9ft2MMcVYLw/w2d6z7vysWdZsliRvbbJ1aQJnkKuc1gzsmA==
+
 "@mapbox/node-pre-gyp@^1.0.5":
   version "1.0.11"
   resolved "https://registry.yarnpkg.com/@mapbox/node-pre-gyp/-/node-pre-gyp-1.0.11.tgz#417db42b7f5323d79e93b34a6d7a2a12c0df43fa"

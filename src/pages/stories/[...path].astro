@@ -89,7 +89,7 @@ const hasAudioFiles = processedAudioFiles.length > 0
 	dir={dir}
 >
 	<SEO slot='seo' title={`The Yemen Listening Project`} description={story.story[lang].title} />
-	<ViewTransitions />
+	<!-- <ViewTransitions /> -->
 	<!-- <VtBotDebug />
 	<Linter />
 	<ReplacementSwap /> -->
@@ -128,7 +128,7 @@ const hasAudioFiles = processedAudioFiles.length > 0
 					{
 						hasAudioFiles &&
 							processedAudioFiles.map((file) => (
-								<div data-vtbot-replace='main'>
+								<div>
 									<Soundcite
 										data-vtbot-replace='main'
 										text={`${story.audioReadouts[lang] || `Audio readout text for ${lang.toUpperCase()} is missing in Google Spreadsheet...`}`}
