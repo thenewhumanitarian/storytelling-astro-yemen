@@ -1,8 +1,8 @@
 ---
 import { ViewTransitions } from 'astro:transitions'
-import ReplacementSwap from 'astro-vtbot/components/ReplacementSwap.astro'
-import VtBotDebug from 'astro-vtbot/components/VtBotDebug.astro'
-import Linter from 'astro-vtbot/components/Linter.astro'
+// import ReplacementSwap from 'astro-vtbot/components/ReplacementSwap.astro'
+// import VtBotDebug from 'astro-vtbot/components/VtBotDebug.astro'
+// import Linter from 'astro-vtbot/components/Linter.astro'
 
 import NavButtons from '@components/buttons/NavButtons.astro'
 import Layout from '@layouts/Layout.astro'
@@ -90,10 +90,9 @@ const hasAudioFiles = processedAudioFiles.length > 0
 >
 	<SEO slot='seo' title={`The Yemen Listening Project`} description={story.story[lang].title} />
 	<ViewTransitions />
-	<VtBotDebug />
+	<!-- <VtBotDebug />
 	<Linter />
-
-	<ReplacementSwap />
+	<ReplacementSwap /> -->
 	<div class='fixed top-0 left-0 w-screen h-screen -z-1 pointer-events-none' id='stars' transition:persist></div>
 	<div class='fixed top-0 left-0 w-screen h-screen -z-1 pointer-events-none' id='city'></div>
 	<div
