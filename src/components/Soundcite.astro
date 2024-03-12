@@ -27,9 +27,13 @@ const { src, start, end, plays, text } = Astro.props as Props
 
 {/* Add Soundcite to the page */}
 <script is:inline>
-	document.addEventListener('astro:before-swap', () => {
-		console.log('astro:before-swap from Soundcite.astro')
-		window.soundcite = null
+	document.addEventListener('astro:after-swap', () => {
+		console.log('astro:after-swap from Soundcite.astro')
+
+		// Delete window.soundcite to avoid conflicts
+		delete window.soundcite
+
+		console.log(window.soundcite)
 	})
 
 	document.addEventListener('astro:page-load', () => {
@@ -451,7 +455,13 @@ const { src, start, end, plays, text } = Astro.props as Props
 			soundcite.clips = clips
 			soundcite.pause_all_clips = pause_all_clips
 			soundcite.normalize_background_color = normalize_background_color
-			console.log(soundcite)
+
+			if (soundcite.clips.length === 0) {
+				soundcite = undefined
+        window.soundcite = undefined
+			} else {
+        console.log(`${soundcite.clips.length} ${soundcite.clips.length === 1 ? 'clip' : 'clips'} found`)
+      }
 		})
 	})
 </script>
