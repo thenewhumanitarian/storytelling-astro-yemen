@@ -80,10 +80,57 @@ const filteredStories = allStories.filter((story) => story.tags.some((tag) => ta
 </div>
 
 <style>
-	body {
-		background: black;
-	}
 	#filter-button {
 		z-index: 9999;
 	}
 </style>
+
+<script is:inline>
+	function createStars(NUMBER_OF_STARS) {
+		console.log(`Adding ${NUMBER_OF_STARS} stars`)
+
+		const starContainer = document.querySelector('#stars')
+		const starAnimationClassesArray = ['one', 'two', 'three', 'four', 'five']
+
+		for (let jess = 0; jess < NUMBER_OF_STARS; jess++) {
+			setTimeout(() => {
+				const aStar = document.createElement('div')
+				const randomDuration = starAnimationClassesArray[Math.floor(Math.random() * starAnimationClassesArray.length)]
+				aStar.className = 'star ' + randomDuration
+				const windowWidth = window.innerWidth
+				const windowHeight = window.innerHeight - 90
+				const x = Math.random() * windowWidth
+				aStar.style.left = x + 'px'
+				const y = Math.random() * windowHeight
+				aStar.style.top = y + 'px'
+				addPulse(aStar)
+				starContainer.appendChild(aStar)
+			}, jess * 100)
+		}
+	}
+
+	function addPulse(element) {
+		const pulseTime = Math.random() * 10000
+
+		setTimeout(function () {
+			element.classList.add('pulse')
+		}, pulseTime)
+	}
+
+	window.addEventListener('DOMContentLoaded', () => {
+		let NUMBER_OF_STARS = 75
+		if (window.innerWidth <= 1024) {
+			NUMBER_OF_STARS = 50
+		}
+		if (window.innerWidth <= 500) {
+			NUMBER_OF_STARS = 15
+		}
+
+		const starContainer = document.querySelector('#stars')
+
+		// Only create stars if the #stars container is empty
+		if (!starContainer.hasChildNodes()) {
+			createStars(NUMBER_OF_STARS)
+		}
+	})
+</script>

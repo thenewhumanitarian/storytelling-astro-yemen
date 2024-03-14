@@ -53,6 +53,7 @@ const { stories, tags, view } = Astro.props
 		<>
 			{/* Story list view */}
 			<div class={`stories-container--tags mt-16 sm:mt-20`} id='stories-container--tags'>
+        <div class='fixed top-0 left-0 w-screen h-screen -z-1 pointer-events-none' id='stars' transition:persist />
 				<div id='city' class='top-0 left-0 fixed w-full h-full -z-1' />
 				<div class='w-full text-center'>
 					<slot name='top' />
@@ -79,6 +80,137 @@ const { stories, tags, view } = Astro.props
 		height: 100vh;
 		z-index: 5555;
 		overflow: hidden;
+	}
+
+	#stars {
+		/* z-index: 1; */
+		background: transparent;
+		/* Add the blur effect */
+		filter: blur(3px);
+		-webkit-filter: blur(3px);
+	}
+
+	/* Classes and keyframe animations for stars */
+	@keyframes STAR {
+		0% {
+			background: powderblue;
+			height: 1px;
+			width: 1px;
+			box-shadow: 0px 0px 10px white;
+		}
+
+		10% {
+			background: #b0e5de;
+		}
+
+		20% {
+			background: #b0e5cc;
+		}
+
+		30% {
+			background: #cce5b0;
+		}
+
+		40% {
+			background: #dae5b0;
+		}
+
+		50% {
+			background: #e5ddb0;
+			width: 4px;
+			height: 4px;
+			box-shadow: 0px 0px 10px #d3bd3d;
+		}
+
+		100% {
+			width: 1px;
+			height: 1px;
+			background: powderblue;
+			box-shadow: 0px 0px 10px white;
+		}
+	}
+
+	@keyframes pulse {
+		0% {
+			background: powderblue;
+			height: 1px;
+			width: 1px;
+			box-shadow: 0px 0px 10px white;
+		}
+
+		10% {
+			background: #b0e5de;
+		}
+
+		20% {
+			background: #b0e5cc;
+		}
+
+		30% {
+			background: #cce5b0;
+		}
+
+		40% {
+			background: #dae5b0;
+		}
+
+		50% {
+			background: #e5ddb0;
+			width: 4px;
+			height: 4px;
+			box-shadow: 0px 0px 10px #d3bd3d;
+		}
+
+		100% {
+			width: 1px;
+			height: 1px;
+			background: powderblue;
+			box-shadow: 0px 0px 10px white;
+		}
+	}
+
+	.star {
+		z-index: -1;
+		height: 1px;
+		width: 1px;
+		border-radius: 5px;
+		box-shadow: 0px 0px 10px white;
+		background: powderblue;
+		position: absolute;
+	}
+
+	.star.pulse {
+		z-index: 10;
+	}
+
+	.star.pulse.one {
+		-webkit-animation: STAR 1s infinite;
+		animation: STAR 1s infinite;
+		-moz-animation: STAR 1s infinite;
+	}
+
+	.star.pulse.two {
+		-webkit-animation: STAR 2s infinite;
+		animation: STAR 2s infinite;
+		-moz-animation: STAR 2s infinite;
+	}
+
+	.star.pulse.three {
+		-webkit-animation: STAR 3s infinite;
+		animation: STAR 3s infinite;
+		-moz-animation: STAR 3s infinite;
+	}
+
+	.star.pulse.four {
+		-webkit-animation: STAR 4s infinite;
+		animation: STAR 4s infinite;
+		-moz-animation: STAR 4s infinite;
+	}
+
+	.star.pulse.five {
+		-webkit-animation: STAR 5s infinite;
+		animation: STAR 5s infinite;
+		-moz-animation: STAR 5s infinite;
 	}
 </style>
 
