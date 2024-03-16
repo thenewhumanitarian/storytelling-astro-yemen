@@ -161,7 +161,7 @@ if (!lang) {
 					//this.dragging = false;
 					let v = { x: xDelta * 0.5, y: yDelta * 0.5 }
 					if (this.tween) this.tween.kill()
-					this.tween = TweenMax.to(v, window.innerWidth < 500 ? 0 : 0.5, {
+					this.tween = TweenMax.to(v, window.innerWidth < 500 ? 0 : 0.25, {
 						x: 0,
 						y: 0,
 						onUpdate: () => {
@@ -231,6 +231,7 @@ if (!lang) {
 				el.addEventListener('mousedown', this.onStart.bind(this), false)
 				el.addEventListener('mousemove', this.onMove.bind(this), false)
 				el.addEventListener('mouseup', this.onEnd.bind(this), false)
+				el.addEventListener('scroll', this.onMove.bind(this), false)
 			}
 		}
 	}
