@@ -342,3 +342,106 @@ const navButtonClasses =
 		}
 	})
 </script>
+
+<script>
+	document.addEventListener('DOMContentLoaded', (event) => {
+		// Select all elements with the class 'nav-button'
+		const navButtons = document.querySelectorAll('.nav-button')
+
+		// Function to remove 'active' class from all nav buttons
+		function removeAllActiveClasses() {
+			navButtons.forEach((button) => {
+				button.classList.remove('active')
+			})
+		}
+
+		function hideAllContainers() {
+			// Select all .content-container elements and hide them
+			const contentContainers = document.querySelectorAll('.content-container')
+			contentContainers.forEach((container) => {
+				container.style.display = 'none'
+			})
+		}
+
+		// Function to handle click events on nav buttons
+		function handleNavButtonClick(event) {
+			// Prevent default action
+			event.preventDefault()
+
+			// Remove 'active' class from all nav buttons first
+			removeAllActiveClasses()
+
+			// Add 'active' class to the clicked nav button
+			event.currentTarget.classList.add('active')
+
+			// Get the 'data-content' attribute of the clicked element
+			const content = event.currentTarget.getAttribute('data-content')
+
+			// Save the 'content' value to localStorage
+			localStorage.setItem('activeIntroSlide', content)
+
+			// Optionally, log the saved value to confirm it's working
+			console.log('Active Intro Slide set to:', content)
+
+			// Select element with id === content and show it
+			hideAllContainers()
+			const contentContainer = document.getElementById(content)
+			contentContainer.style.display = 'block'
+		}
+
+		// Function to activate the nav button based on localStorage or default to first button
+		function activateStoredNavButton() {
+			const activeIntroSlide = localStorage.getItem('activeIntroSlide')
+			if (activeIntroSlide) {
+				let found = false
+				navButtons.forEach((button) => {
+					if (button.getAttribute('data-content') === activeIntroSlide) {
+						button.classList.add('active')
+						found = true
+					}
+				})
+				// If no matching button is found, activate the first button
+				if (!found && navButtons.length > 0) {
+					navButtons[0].classList.add('active')
+				}
+			} else {
+				// If no value is set in localStorage, apply the 'active' class to the first button
+				if (navButtons.length > 0) {
+					navButtons[0].classList.add('active')
+				}
+			}
+		}
+
+		// Attach the event listener to each nav button and activate the stored nav button
+		navButtons.forEach((button) => {
+			button.addEventListener('click', handleNavButtonClick)
+		})
+
+		// Check and activate the nav button as per localStorage when the page loads
+		activateStoredNavButton()
+
+		// Select all .content-container elements and hide them
+		hideAllContainers()
+
+		// Find all buttons with .language--button class and add event listener to each
+		const languageButtons = document.querySelectorAll('.intro__language--button')
+		languageButtons.forEach((button) => {
+			button.addEventListener('click', (event) => {
+				localStorage.setItem('hideIntro', 'false')
+			})
+		})
+
+		// Check activeIntroSlide and show the corresponding content or if nothing found show the one with id === 'intro'
+		const activeIntroSlide = localStorage.getItem('activeIntroSlide')
+		if (activeIntroSlide) {
+			const contentContainer = document.getElementById(activeIntroSlide)
+			if (contentContainer) {
+				contentContainer.style.display = 'block'
+			} else {
+				document.getElementById('intro').style.display = 'block'
+			}
+		} else {
+			document.getElementById('intro').style.display = 'block'
+		}
+	})
+</script>
