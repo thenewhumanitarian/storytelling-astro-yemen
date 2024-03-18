@@ -358,8 +358,8 @@ async function processData(data) {
       tags: entry.Tags !== "" ? entry.Tags.split(',').map(tag => tag.trim()) : [],
       attachments: entry['Method of submission'] === 'MachForm' ? machformAttachments : whatsAppAttachments,
       audioReadouts: {
-        en: entry['AudioEN'].replace('\n', '<br/><br/>') || null,
-        ar: entry['AudioAR'].replace('\n', '<br/><br/>') || null
+        en: entry['AudioEN'].replaceAll('\n', '<br/><br/>') || null,
+        ar: entry['AudioAR'].replaceAll('\n', '<br/><br/>') || null
       },
       notes: entry.Notes,
       highlighted: entry.Highlighted === 'x',
