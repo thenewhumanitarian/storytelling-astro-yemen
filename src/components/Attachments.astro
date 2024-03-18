@@ -81,11 +81,14 @@ const visibleAttachments = [...categorisedAttachments.images.items, ...categoris
 let attachmentContainerClasses = 'grid grid-cols-5 col-span-5 gap-3'
 
 if (visibleAttachments.length > 0 && visibleAttachments.length < 4) {
+	// @ts-ignore
 	messageContainerClasses = 'col-span-5 md:col-span-4'
 	attachmentContainerClasses = 'grid md:flex grid-cols-3 md:flex-col col-span-5 md:col-span-1 gap-3'
 } else if (visibleAttachments.length === 10) {
+	// @ts-ignore
 	messageContainerClasses = 'col-span-5'
 } else if (visibleAttachments.length === 9) {
+	// @ts-ignore
 	messageContainerClasses = 'col-span-5'
 	attachmentContainerClasses = 'grid grid-cols-9 col-span-5 gap-3'
 } else if (visibleAttachments.length === 0) {
