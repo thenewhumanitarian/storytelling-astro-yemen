@@ -14,8 +14,10 @@ if (!lang) {
 
 <div class='grid-container' id='js-grid'></div>
 
+<!-- HammerJS -->
 <script is:inline src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/204379/hammer.min.js'></script>
 
+<!-- GSAP -->
 <script is:inline src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js'></script>
 
 <script is:inline define:vars={{ lang, stories }}>
@@ -150,42 +152,6 @@ if (!lang) {
 			this.touchStartTime = 0
 		}
 
-		onScroll({ deltaY }) {
-			if (document.getElementById('grid').style.display === 'none') return
-
-			// If mobile device return early
-			if (window.innerWidth < 640) return
-
-			const SCROLL_Y_THRESHOLD = 0
-
-			const yDelta = deltaY / 4
-			this.offsetY += yDelta
-
-			if (Math.abs(yDelta) < SCROLL_Y_THRESHOLD) return
-
-			// Determine the scroll direction
-			const direction = deltaY > 0 ? 1 : -1
-
-			// Calculate the jump based on the direction of the scroll
-			let jumpY = direction * Math.floor(Math.abs(Math.abs(yDelta)) / (100 / this.rows)) // Adjust the divisor based on your item height
-
-			if (jumpY !== 0) {
-				this.items.forEach((item) => {
-					item.setIndex(this.shiftIndex(item.index + jumpY * this.cols))
-				})
-
-				// Reset offsetY after recalculating the indexes to avoid infinite growth
-				this.offsetY = 0
-			}
-
-			// Update the grid position to reflect the new content
-			// this.grid.style.transform = `translate3d(0px, ${this.offsetY}px, 0)`
-
-			requestAnimationFrame(() => {
-				this.updateTransform()
-			})
-		}
-
 		onMove(e) {
 			if (this.dragging) {
 				e = e.type == 'touchmove' ? e.touches[0] : e
@@ -259,6 +225,7 @@ if (!lang) {
 
 		bind() {
 			let el = this.DOMElement
+
 			if (this.useTouch) {
 				el.addEventListener('touchstart', this.onStart.bind(this), false)
 				el.addEventListener('touchmove', this.onMove.bind(this), false)
@@ -267,7 +234,6 @@ if (!lang) {
 				el.addEventListener('mousedown', this.onStart.bind(this), false)
 				el.addEventListener('mousemove', this.onMove.bind(this), false)
 				el.addEventListener('mouseup', this.onEnd.bind(this), false)
-				el.addEventListener('scroll', this.onScroll.bind(this), false)
 			}
 		}
 	}
@@ -448,9 +414,14 @@ if (!lang) {
 
 		init() {
 			window.addEventListener('resize', debounce(this.onResize.bind(this)), 250)
-			// window.addEventListener('resize', debounce(adjustAndApplyCardSize, 250))
 			this.onResize()
 			let d = new SimpleDrag(this.DOMElement, this.onDrag.bind(this))
+
+			// Add functionality for arrow keys
+			window.addEventListener('keydown', this.onKeyDown.bind(this))
+
+			// Add functionality for mouse wheel scrolling
+			window.addEventListener('wheel', this.onMouseWheel.bind(this))
 		}
 
 		getGalleryDescriptor(index) {
@@ -476,6 +447,45 @@ if (!lang) {
 			this.viewWidth = this.DOMElement.offsetWidth
 			this.updateViewColRows()
 			this.updateGrid()
+		}
+
+		// Handle keyboard arrow key presses
+		onKeyDown(event) {
+			const { keyCode } = event
+
+			switch (keyCode) {
+				case 37: // Left arrow key
+					this.offsetX += calculateGridDimensions().cardSize
+					break
+				case 38: // Up arrow key
+					this.offsetY += calculateGridDimensions().cardSize
+					break
+				case 39: // Right arrow key
+					this.offsetX -= calculateGridDimensions().cardSize
+					break
+				case 40: // Down arrow key
+					this.offsetY -= calculateGridDimensions().cardSize
+					break
+				default:
+					return // Exit function for other keys
+			}
+
+			// Update the grid position based on arrow key inputs
+			this.updateGrid()
+		}
+
+		// Handle mouse wheel event
+		onMouseWheel(event) {
+			const deltaY = event.deltaY
+
+			// Update the grid position based on the direction of the mouse wheel scroll
+			this.offsetY += deltaY > 0 ? calculateGridDimensions().cardSize / 4 : -calculateGridDimensions().cardSize / 4
+
+			// Update the grid
+			this.updateGrid()
+
+			// Prevent default scrolling behavior of the page
+			// event.preventDefault()
 		}
 
 		updateViewColRows() {
@@ -601,9 +611,11 @@ if (!lang) {
 		}
 	}
 
+	// Create grid and initialize it
 	let grid = new Grid(document.getElementById('js-grid'), stories)
 	grid.init()
 
+	// Adjust card size on resize
 	window.addEventListener('resize', debounce(adjustAndApplyCardSize, 250))
 </script>
 
