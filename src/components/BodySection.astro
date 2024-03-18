@@ -4,9 +4,10 @@ import IconPlay from '@components/icons/Icon-play.astro'
 
 export interface Props {
 	attachments?: string[]
+  lang: string
 }
 
-const { attachments } = Astro.props as Props
+const { attachments, lang } = Astro.props as Props
 
 function categoriseAttachments(attachments) {
 	const categories = {
@@ -138,7 +139,7 @@ if (visibleAttachments.length > 0 && visibleAttachments.length < 4) {
 	</div>
 </section>
 
-<script>
+<script define:vars={{ lang }}>
 	// Lightbox functionality
 	document.addEventListener('DOMContentLoaded', () => {
 		let currentIndex = 0 // Track the index of the currently displayed media
@@ -162,6 +163,9 @@ if (visibleAttachments.length > 0 && visibleAttachments.length < 4) {
 			lightbox.classList.add('justify-center')
 			lightbox.classList.add('items-center')
 			lightbox.classList.add('z-[1000]')
+			if (lang === 'ar') {
+				lightbox.classList.add('flex-row-reverse')
+			}
 
 			// Create close button using SVG
 			const closeButton = document.createElement('div')
@@ -189,7 +193,7 @@ if (visibleAttachments.length > 0 && visibleAttachments.length < 4) {
 
 			// Function to show the next media
 			function showNextMedia(e) {
-        console.log(index)
+				console.log(index)
 				e.stopPropagation() // Prevent lightbox from closing
 				const nextIndex = (index + 1) % mediaElements.length
 				lightbox.remove()
@@ -262,7 +266,7 @@ if (visibleAttachments.length > 0 && visibleAttachments.length < 4) {
 	})
 </script>
 
-<script>
+<script define:vars={{ lang }}>
 	// Lightbox functionality
 	document.addEventListener('astro:after-swap', () => {
 		let currentIndex = 0 // Track the index of the currently displayed media
@@ -286,6 +290,9 @@ if (visibleAttachments.length > 0 && visibleAttachments.length < 4) {
 			lightbox.classList.add('justify-center')
 			lightbox.classList.add('items-center')
 			lightbox.classList.add('z-[1000]')
+			if (lang === 'ar') {
+				lightbox.classList.add('flex-row-reverse')
+			}
 
 			// Create close button using SVG
 			const closeButton = document.createElement('div')

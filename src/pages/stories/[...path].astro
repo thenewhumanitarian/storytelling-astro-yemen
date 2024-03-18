@@ -124,7 +124,7 @@ const hasAudioFiles = processedAudioFiles.length > 0
 				</div>
 			</div>
 			{/* Body section */}
-			<BodySection attachments={story.attachments}>
+			<BodySection attachments={story.attachments} lang={lang}>
 				<Message contentArray={contentArray} lang={lang} slot='message'>
 					{
 						hasAudioFiles &&
