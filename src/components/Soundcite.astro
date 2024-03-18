@@ -458,14 +458,14 @@ const { src, start, end, plays, text } = Astro.props as Props
 
 			if (soundcite.clips.length === 0) {
 				soundcite = undefined
-        window.soundcite = undefined
+				window.soundcite = undefined
 			} else {
-        console.log(`${soundcite.clips.length} ${soundcite.clips.length === 1 ? 'clip' : 'clips'} found`)
-      }
+				console.log(`${soundcite.clips.length} ${soundcite.clips.length === 1 ? 'clip' : 'clips'} found`)
+			}
 		})
 	})
 
-  document.addEventListener('astro:page-load', () => {
+	document.addEventListener('astro:page-load', () => {
 		console.log('astro:page-load from Soundcite.astro')
 
 		/* soundcite - v0.5.1 - 2017-07-10
@@ -887,10 +887,10 @@ const { src, start, end, plays, text } = Astro.props as Props
 
 			if (soundcite.clips.length === 0) {
 				soundcite = undefined
-        window.soundcite = undefined
+				window.soundcite = undefined
 			} else {
-        console.log(`${soundcite.clips.length} ${soundcite.clips.length === 1 ? 'clip' : 'clips'} found`)
-      }
+				console.log(`${soundcite.clips.length} ${soundcite.clips.length === 1 ? 'clip' : 'clips'} found`)
+			}
 		})
 	})
 </script>
