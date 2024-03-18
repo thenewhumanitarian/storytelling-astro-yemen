@@ -13,11 +13,7 @@ const { lang, name, age, from, livingIn } = Astro.props as Props
 ---
 
 <div class='mt-0 text-center sm:text-base lg:text-lg xl:text-xl' dir={`${lang === 'ar' ? 'rtl' : 'ltr'}`}>
-	<span class='font-normal inline-block pt-2'></span>
-	{name && name !== '' ? name.trim() : translations.nameUnknown[lang]}
-	{age ? `, ${age.trim()}` : ``}
-	{from ? `, ${translations.from[lang].toLowerCase()} ${from}` : ``}
-	{livingIn && livingIn !== from ? `, ${translations.livesIn[lang].toLowerCase()} ${livingIn}` : ``}
+	<span class='font-normal inline-block pt-2'></span>{name && name !== '' ? name.trim() : translations.nameUnknown[lang]}{age ? `, ${age.trim()}` : ``}{from ? `, ${translations.from[lang].toLowerCase()} ${from}` : ``}{livingIn && livingIn !== from ? `, ${translations.livesIn[lang].toLowerCase()} ${livingIn}` : ``}
 </div>
 
 <style>

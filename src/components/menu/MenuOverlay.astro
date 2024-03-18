@@ -12,12 +12,12 @@ import Credits from './content/credits.astro'
 import static_pages from '@data/static_pages.json'
 
 let { lang } = Astro.params
+const { path } = Astro.params
+
+const pathParams = path?.toString().split('/')
 
 if (!lang) {
 	// Read path parameters for language and slug
-	const { path } = Astro.params
-
-	const pathParams = path?.toString().split('/')
 	lang = pathParams?.[0] || 'en'
 }
 
@@ -49,7 +49,7 @@ const navButtonClasses =
 					}
 				</nav>
 			</div>
-			<LanguageButtons classNames='intro__language--button' links={{ en: '/en/grid', ar: '/ar/grid' }} />
+			<LanguageButtons classNames='intro__language--button' links={{ en: '/en/', ar: '/ar/' }} />
 		</div>
 	</div>
 

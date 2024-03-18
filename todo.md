@@ -114,10 +114,11 @@
 * DONE In Arabic, it needs to be cut after this:
 * DONE لا تستطيع وكالة «ذا نيو هيومانيترين» التحقق بشكلٍ مستقل من تفاصيل كل قصة على حدة، وقد تم تحرير الأسلوب والطول ومستوى الوضوح في تلك القصص.
 * DONE When I try to click on the about or credits in Arabic, I cannot. I am just stuck on the Arabic introduction. Same problem in English. I can only get to about or credits from the hamburger.
-* The about and credits page will need to be checked for links and everything, but I can’t get to them
-* Clicking on Arabic button from the English introduction does not switch to the Arabic introduction, but just to the grid
+* DONE The about and credits page will need to be checked for links and everything, but I can’t get to them
+* DONE Clicking on Arabic button from the English introduction does not switch to the Arabic introduction, but just to the grid
 * “About” in Arabic seem to be a mix of Arabic and English, and it includes start of English credits at the bottom
 * Block body scroll when static pages visible
+* Links and logo should not move!
 
 ## Detail pages
 
