@@ -7,9 +7,10 @@ interface Props {
 	href?: string
 	classNames?: string
 	prefix?: string
+	id?: string
 }
 
-const { button, lang, href, classNames, prefix } = Astro.props as Props
+const { button, id, lang, href, classNames, prefix } = Astro.props as Props
 
 const className = `transition-colors duration-150 relative inline-flex gap-x-2 items-center px-3 py-2 text-sm font-semibold ring-1 ring-inset ring-zinc-300 group focus:z-10 my-4 sm:mb-6 ${classNames}`
 ---
@@ -42,8 +43,8 @@ const className = `transition-colors duration-150 relative inline-flex gap-x-2 i
 
 {
 	button === 'overview' && (
-		<a href={`${href || lang === 'ar' ? '/ar' : '/en'}`} target='_self' data-astro-prefetch data-astro-reload id='overview-button'>
-			<button class={className} id='overview-button'>
+		<a href={`${href || lang === 'ar' ? '/ar' : '/en'}`} target='_self' data-astro-prefetch data-astro-reload id={`${id || 'overview-button'}`}>
+			<button class={className}>
 				<>
 					<span class='group-hover:text-burgundy inline text-xs sm:text-sm'>
 						{prefix}

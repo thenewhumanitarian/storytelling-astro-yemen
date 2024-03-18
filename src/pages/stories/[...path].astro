@@ -104,7 +104,7 @@ const hasAudioFiles = processedAudioFiles.length > 0
 	>
 		<div class={`flex justify-center items-center ${lang === 'ar' ? 'flex-row-reverse' : 'flex-row'} nav-buttons menu--hide z-10`}>
 			<NavButtons button='previous' lang={lang} href={`/stories/${lang}/${prevStorySlug}`} classNames='hover:text-white hover:bg-zinc-100' />
-			<NavButtons button='overview' lang={lang} classNames='text-white bg-burgundy hover:bg-zinc-100 hover:text-burgundy' />
+			<NavButtons id='overview--button--top' button='overview' lang={lang} classNames='text-white bg-burgundy hover:bg-zinc-100 hover:text-burgundy' />
 			<NavButtons button='next' lang={lang} href={`/stories/${lang}/${nextStorySlug}`} classNames='hover:text-white hover:bg-zinc-100' />
 		</div>
 		<div class='flex flex-col gap-3 sm:gap-5 z-10'>
@@ -158,7 +158,7 @@ const hasAudioFiles = processedAudioFiles.length > 0
 		<ShareStory story={story} lang={lang} />
 		<div class={`flex justify-center items-center ${lang === 'ar' ? 'flex-row-reverse sm:hidden' : 'flex-row sm:hidden'} nav-buttons menu--hide mt-5`}>
 			<NavButtons button='previous' lang={lang} href={`/stories/${lang}/${prevStorySlug}`} classNames='hover:text-white hover:bg-zinc-100' />
-			<NavButtons button='overview' lang={lang} classNames='text-white bg-burgundy hover:bg-zinc-100 hover:text-burgundy' />
+			<NavButtons id='overview--button--bottom' button='overview' lang={lang} classNames='text-white bg-burgundy hover:bg-zinc-100 hover:text-burgundy' />
 			<NavButtons button='next' lang={lang} href={`/stories/${lang}/${nextStorySlug}`} classNames='hover:text-white hover:bg-zinc-100' />
 		</div>
 	</div>
@@ -360,6 +360,19 @@ const hasAudioFiles = processedAudioFiles.length > 0
 			localStorage.setItem('readArticles', JSON.stringify(readArticles))
 		}
 	}
+
+	// Function to change href attribute of button id="overview--button--top" and button id="overview--button--bottom" depending on lang and currentView from localStorage
+	function changeOverviewButtonHref() {
+		const overviewButtonTop = document.getElementById('overview--button--top')
+		const overviewButtonBottom = document.getElementById('overview--button--bottom')
+		const currentView = localStorage.getItem('currentView')
+
+		overviewButtonTop.href = `/${lang}/${currentView}`
+		overviewButtonBottom.href = `/${lang}/${currentView}`
+	}
+
+	document.addEventListener('DOMContentLoaded', changeOverviewButtonHref)
+	document.addEventListener('astro:after-swap', changeOverviewButtonHref)
 
 	/* Adds twinkling stars */
 	var NUMBER_OF_STARS = 75
