@@ -179,11 +179,33 @@ if (visibleAttachments.length > 0 && visibleAttachments.length < 4) {
 			closeButton.addEventListener('click', () => lightbox.remove())
 			lightbox.addEventListener('click', () => lightbox.remove())
 
+			// Function to show the previous media
+			function showPreviousMedia(e) {
+				e.stopPropagation() // Prevent lightbox from closing
+				const prevIndex = (index - 1 + mediaElements.length) % mediaElements.length
+				lightbox.remove()
+				showLightbox(prevIndex)
+			}
+
+			// Function to show the next media
+			function showNextMedia(e) {
+        console.log(index)
+				e.stopPropagation() // Prevent lightbox from closing
+				const nextIndex = (index + 1) % mediaElements.length
+				lightbox.remove()
+				showLightbox(nextIndex)
+			}
+
 			// Also close if pushing the escape key
 			document.addEventListener('keydown', (e) => {
 				if (e.key === 'Escape') {
 					lightbox.remove()
 				}
+				// if (e.key === 'ArrowLeft') {
+				// 	showPreviousMedia(e)
+				// } else if (e.key === 'ArrowRight') {
+				// 	showNextMedia(e)
+				// }
 			})
 
 			// Append the correct media type to the lightbox
@@ -214,17 +236,11 @@ if (visibleAttachments.length > 0 && visibleAttachments.length < 4) {
 				nextButton.classList.add('p-5')
 
 				prevButton.addEventListener('click', (e) => {
-					e.stopPropagation() // Prevent lightbox from closing
-					const prevIndex = (index - 1 + mediaElements.length) % mediaElements.length
-					lightbox.remove()
-					showLightbox(prevIndex)
+					showPreviousMedia(e)
 				})
 
 				nextButton.addEventListener('click', (e) => {
-					e.stopPropagation() // Prevent lightbox from closing
-					const nextIndex = (index + 1) % mediaElements.length
-					lightbox.remove()
-					showLightbox(nextIndex)
+					showNextMedia(e)
 				})
 
 				lightbox.appendChild(prevButton)
