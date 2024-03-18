@@ -5,9 +5,10 @@ interface Props {
 	end: number
 	plays: number
 	text: string
+	lang: string
 }
 
-const { src, start, end, plays, text } = Astro.props as Props
+const { src, start, end, plays, text, lang } = Astro.props as Props
 ---
 
 <section class='pt-4'>
@@ -26,7 +27,7 @@ const { src, start, end, plays, text } = Astro.props as Props
 </style>
 
 {/* Add Soundcite to the page */}
-<script is:inline>
+<script is:inline define:vars={{ lang }}>
 	document.addEventListener('astro:before-swap', () => {
 		console.log('astro:after-swap from Soundcite.astro')
 
@@ -196,26 +197,12 @@ const { src, start, end, plays, text } = Astro.props as Props
 			}
 			var update_playing_element = function (el, percentage) {
 				var color = SOUNDCITE_CONFIG.background_color || '0,0,0'
-				el.style.cssText =
-					'background: -webkit-linear-gradient(left, rgba(' +
-					color +
-					',.0)' +
-					percentage +
-					'%, rgba(' +
-					color +
-					',.9)' +
-					(percentage + 1) +
-					'%);' +
-					'background: linear-gradient(to right, rgba(' +
-					color +
-					',.8)' +
-					percentage +
-					'%, rgba(' +
-					color +
-					',.5)' +
-					(percentage + 1) +
-					'%);'
+				el.style.cssText = `
+          background: -webkit-linear-gradient(left, rgba(${color},.0) ${percentage}%, rgba(${color},.9) ${percentage + 1}%);
+          background: linear-gradient(to right, rgba(${color},.8) ${percentage}%, rgba(${color},.5) ${percentage + 1}%);
+        `
 			}
+
 			window.soundcite = {}
 			if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
 				soundcite.mobile = true
@@ -625,26 +612,22 @@ const { src, start, end, plays, text } = Astro.props as Props
 			}
 			var update_playing_element = function (el, percentage) {
 				var color = SOUNDCITE_CONFIG.background_color || '0,0,0'
-				el.style.cssText =
-					'background: -webkit-linear-gradient(left, rgba(' +
-					color +
-					',.0)' +
-					percentage +
-					'%, rgba(' +
-					color +
-					',.9)' +
-					(percentage + 1) +
-					'%);' +
-					'background: linear-gradient(to right, rgba(' +
-					color +
-					',.8)' +
-					percentage +
-					'%, rgba(' +
-					color +
-					',.5)' +
-					(percentage + 1) +
-					'%);'
+
+				if (lang === 'ar') {
+					percentage = 100 - percentage
+
+					el.style.cssText = `
+            background: -webkit-linear-gradient(right, rgba(${color},.0) ${100 - percentage}%, rgba(${color},.9) ${100 - (percentage + 1)}%);
+            background: linear-gradient(to left, rgba(${color},.7) ${100 - percentage}%, rgba(${color},.4) ${100 - (percentage + 1)}%);
+          `
+				} else {
+					el.style.cssText = `
+            background: -webkit-linear-gradient(left, rgba(${color},.0) ${percentage}%, rgba(${color},.9) ${percentage + 1}%);
+            background: linear-gradient(to right, rgba(${color},.7) ${percentage}%, rgba(${color},.4) ${percentage + 1}%);
+          `
+				}
 			}
+
 			window.soundcite = {}
 			if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
 				soundcite.mobile = true
