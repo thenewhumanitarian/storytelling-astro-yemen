@@ -326,7 +326,7 @@ async function processData(data) {
         ar: enSlug // Changed to enSlug because arSlug doesn't always work
       },
       storyImage: storyImage,
-      personalInfo: {
+      personalInfo: { 
         en: {
           name: entry['EN\nName'].trim(),
           surname: entry['EN\nSurname'].trim(),
