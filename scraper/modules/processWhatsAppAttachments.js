@@ -21,7 +21,7 @@ async function processWhatsAppAttachments(entryID, files, basePath) {
 
     let durationSuffix = '';
     newFilename = `${entryID}-${index + 1}${extension}`;
-    newFilePath = path.join(basePath, '../src/assets/', newFilename);
+    newFilePath = path.join(basePath, '../public/attachments/', newFilename);
 
     if (extension === '.heic') {
       // Convert to JPG or handle HEIC files here

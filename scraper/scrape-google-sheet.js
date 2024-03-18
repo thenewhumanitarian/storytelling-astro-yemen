@@ -189,6 +189,10 @@ async function processData(data) {
         // Attempt to read the directory contents for every WhatsApp-submitted entry
         files = fs.readdirSync(whatsappAssetsDir);
 
+        if (entryID === '1057') {
+          console.log('Entry 1057 files: ' + files)
+        }
+
         // If successful, files array is now populated with filenames
         if (files.length > 0) {
           // Proceed to process these files

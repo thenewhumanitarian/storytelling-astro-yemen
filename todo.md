@@ -106,6 +106,8 @@
 * DONE Is it possible to move around the grid with keyboard arrows?
 * Try to not have too many highlighted items next to each other in the grid view
 * At the moment there seem to be a lot of duplicates, often right next to each other?
+* Debounce scroll on Grid, reduce speed
+* Not all stories loading?
 
 ## Static content / introduction slides
 
