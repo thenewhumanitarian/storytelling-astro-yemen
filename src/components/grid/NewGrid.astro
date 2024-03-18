@@ -163,7 +163,7 @@ if (!lang) {
 					//this.dragging = false;
 					let v = { x: xDelta * 0.5, y: yDelta * 0.5 }
 					if (this.tween) this.tween.kill()
-					this.tween = TweenMax.to(v, window.innerWidth < 500 ? 0 : 0.25, {
+					this.tween = TweenMax.to(v, window.innerWidth < 500 ? 0 : 0, {
 						x: 0,
 						y: 0,
 						onUpdate: () => {
