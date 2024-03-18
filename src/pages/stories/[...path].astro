@@ -128,8 +128,8 @@ const hasAudioFiles = processedAudioFiles.length > 0
 				<Message contentArray={contentArray} lang={lang} slot='message'>
 					{
 						hasAudioFiles &&
-							processedAudioFiles.map((file) => (
-								<div>
+							processedAudioFiles.map((file, i) => (
+								<div class={`${i === 0 ? '' : 'hidden'}`}>
 									<Soundcite
 										data-vtbot-replace='main'
 										text={`${story.audioReadouts[lang] || `Audio readout text for ${lang.toUpperCase()} is missing in Google Spreadsheet...`}`}
