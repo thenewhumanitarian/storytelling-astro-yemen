@@ -101,27 +101,27 @@
 
 ## Grid
 
+* DONE Grid with scroll?
+* DONE What are the red stars for?
+* DONE Is it possible to move around the grid with keyboard arrows?
 * Try to not have too many highlighted items next to each other in the grid view
-* Is it possible to move around the grid with keyboard arrows?
-* Grid with scroll?
-* What are the red stars for?
-    * Want to remove them it was a test to add a “highlight/favourite” icon to the highlighted ones in case we feel like the red accent border doesn’t suffice. I do not like the stars it’s just a placeholder for whatever you could see being of use in such a round 
 * At the moment there seem to be a lot of duplicates, often right next to each other?
 
 ## Static content / introduction slides
 
-* In English, “introduction text” needs to be cut after this:
-* The New Humanitarian cannot independently verify the details of each individual story. They have been edited for style, length, and clarity.
-* In Arabic, it needs to be cut after this:
-* لا تستطيع وكالة «ذا نيو هيومانيترين» التحقق بشكلٍ مستقل من تفاصيل كل قصة على حدة، وقد تم تحرير الأسلوب والطول ومستوى الوضوح في تلك القصص.
-* When I try to click on the about or credits in Arabic, I cannot. I am just stuck on the Arabic introduction. Same problem in English. I can only get to about or credits from the hamburger.
+* DONE In English, “introduction text” needs to be cut after this:
+* DONE The New Humanitarian cannot independently verify the details of each individual story. They have been edited for style, length, and clarity.
+* DONE In Arabic, it needs to be cut after this:
+* DONE لا تستطيع وكالة «ذا نيو هيومانيترين» التحقق بشكلٍ مستقل من تفاصيل كل قصة على حدة، وقد تم تحرير الأسلوب والطول ومستوى الوضوح في تلك القصص.
+* DONE When I try to click on the about or credits in Arabic, I cannot. I am just stuck on the Arabic introduction. Same problem in English. I can only get to about or credits from the hamburger.
 * The about and credits page will need to be checked for links and everything, but I can’t get to them
 * Clicking on Arabic button from the English introduction does not switch to the Arabic introduction, but just to the grid
 * “About” in Arabic seem to be a mix of Arabic and English, and it includes start of English credits at the bottom
+* Block body scroll when static pages visible
 
 ## Detail pages
 
-* Can we put in from and lives in? Right now I just see “from.” I may need to delete in spreadsheet they are the same. 
+* Can we put in from and lives in? Right now I just see “from.” I may need to delete in spreadsheet they are the same.
 * Some photos are not showing up? Not sure if that is because you have not taken latest from WhatsApp folder (noticed this on 1064)
 * The Soundcite works in English but seems to be only for the first paragraph? Looking at 1038 as an example
 * Soundcite in Arabic works too, same issue. is it possible for the movement to be right to left on Arabic? That would make more logical sense
@@ -129,3 +129,7 @@
 ## Scraper
 
 * Check if those with bespoke teaser/preview images do actually work when scraping the data
+
+## Social share
+
+* Meta data in Arabic showing weird characters in description...
