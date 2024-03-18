@@ -31,8 +31,10 @@ const { src, start, end, plays, text, lang } = Astro.props as Props
 	document.addEventListener('astro:before-swap', () => {
 		console.log('astro:after-swap from Soundcite.astro')
 
-		// Delete window.soundcite to avoid conflicts
-		delete window.soundcite
+		if (window.soundcite) {
+			// Delete window.soundcite to avoid conflicts
+			delete window.soundcite
+		}
 
 		console.log(window.soundcite)
 	})
@@ -618,12 +620,12 @@ const { src, start, end, plays, text, lang } = Astro.props as Props
 
 					el.style.cssText = `
             background: -webkit-linear-gradient(right, rgba(${color},.0) ${100 - percentage}%, rgba(${color},.9) ${100 - (percentage + 1)}%);
-            background: linear-gradient(to left, rgba(${color},.7) ${100 - percentage}%, rgba(${color},.4) ${100 - (percentage + 1)}%);
+            background: linear-gradient(to left, rgba(${color},.5) ${100 - percentage}%, rgba(${color},.4) ${100 - (percentage + 1)}%);
           `
 				} else {
 					el.style.cssText = `
             background: -webkit-linear-gradient(left, rgba(${color},.0) ${percentage}%, rgba(${color},.9) ${percentage + 1}%);
-            background: linear-gradient(to right, rgba(${color},.7) ${percentage}%, rgba(${color},.4) ${percentage + 1}%);
+            background: linear-gradient(to right, rgba(${color},.5) ${percentage}%, rgba(${color},.4) ${percentage + 1}%);
           `
 				}
 			}
