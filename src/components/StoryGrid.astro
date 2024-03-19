@@ -723,7 +723,7 @@ if (!lang) {
 			if (Math.abs(yDelta) < SCROLL_Y_THRESHOLD) return
 
 			// Determine the scroll direction
-			const direction = deltaY > 0 ? 1 : -1
+			const direction = deltaY > 0 ? -1 : 1
 
 			// Calculate the jump based on the direction of the scroll
 			let jumpY = direction * Math.floor(Math.abs(Math.abs(yDelta)) / (100 / this.rows)) // Adjust the divisor based on your item height

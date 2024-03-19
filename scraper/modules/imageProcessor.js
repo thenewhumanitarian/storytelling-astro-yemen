@@ -10,11 +10,11 @@ const fs = require('fs');
  * @param {number} [height=400] - Optional height for the main thumbnail.
  * @returns {Promise<Object>} A promise that resolves with the paths of the created thumbnails, or null if an error occurred.
  */
-async function createThumbnail(sourcePath, destinationPath, width = 240, height = 240) {
+async function createThumbnail(sourcePath, destinationPath, width = 240, height = 240, fit = 'contain', position = 'center') {
   try {
     // Main thumbnail creation
     await sharp(sourcePath, { failOnError: false })
-      .resize(width, height, { fit: 'cover', position: 'attention' })
+      .resize(width, height, { fit: fit, position: position }) // Changed fit to 'contain' and position to 'center'
       .toFile(destinationPath);
     // console.log(`Main thumbnail created: ${destinationPath}`);
 
@@ -26,7 +26,7 @@ async function createThumbnail(sourcePath, destinationPath, width = 240, height 
     const pixelatedFilename = path.basename(destinationPath);
     const pixelatedPath = path.join(pixelatedDir, pixelatedFilename);
     await sharp(sourcePath, { failOnError: false })
-      .resize(25, 25, { fit: 'cover', position: 'attention' })
+      .resize(25, 25, { fit: fit, position: position })
       .toFile(pixelatedPath);
     // console.log(`Pixelated thumbnail created: ${pixelatedPath}`);
 

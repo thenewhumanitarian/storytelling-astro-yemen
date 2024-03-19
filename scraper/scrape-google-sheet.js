@@ -220,7 +220,7 @@ async function processData(data) {
               await extractFrame(videoPath, framePath);
 
               try {
-                const thumbnailResult = await createThumbnail(framePath, thumbnailPath);
+                const thumbnailResult = await createThumbnail(framePath, thumbnailPath, 400, 400, 'cover', 'attention');
                 // console.log(`📹 🖼️ Thumbnail created for video: ${firstVideoFile}`);
                 storyImage = {
                   main: thumbnailResult.mainImage,
