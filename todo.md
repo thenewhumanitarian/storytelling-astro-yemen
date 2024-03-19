@@ -104,17 +104,18 @@
 * DONE The about and credits page will need to be checked for links and everything, but I can’t get to them
 * DONE Clicking on Arabic button from the English introduction does not switch to the Arabic introduction, but just to the grid
 * DONE “About” in Arabic seem to be a mix of Arabic and English, and it includes start of English credits at the bottom
-* Block body scroll when static pages visible
+* DONE Block body scroll when static pages visible
 * Links should not always go to /lang/grid instead stay on same side when changing language inside of overlay
-* Links and logo should not move!
+* DONE Links and logo should not move!
+* Redesign the Wisepops section
 
 ## Detail pages
 
 * DONE Can we put in from and lives in? Right now I just see “from.” I may need to delete in spreadsheet they are the same.
 * DONE Some photos are not showing up? Not sure if that is because you have not taken latest from WhatsApp folder (noticed this on 1064)
-* Check if all videos and photos are loading...
-* The Soundcite works in English but seems to be only for the first paragraph? Looking at 1038 as an example
-* Soundcite in Arabic works too, same issue. is it possible for the movement to be right to left on Arabic? That would make more logical sense
+* DONE Check if all videos and photos are loading...
+* DONE The Soundcite works in English but seems to be only for the first paragraph? Looking at 1038 as an example
+* DONE Soundcite in Arabic works too, same issue. is it possible for the movement to be right to left on Arabic? That would make more logical sense
 
 ## Scraper
 
