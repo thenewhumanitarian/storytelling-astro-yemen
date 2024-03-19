@@ -196,7 +196,7 @@ if (!lang) {
 
 		onEnd(e) {
 			e.preventDefault()
- 
+
 			this.dragging = false
 
 			// Remove is-dragging from body
@@ -422,7 +422,7 @@ if (!lang) {
 			window.addEventListener('keydown', this.onKeyDown.bind(this))
 
 			// Add functionality for mouse wheel scrolling
-			window.addEventListener('wheel', this.onMouseWheel.bind(this))
+			window.addEventListener('wheel', debounce(this.onMouseWheel.bind(this)), 50)
 		}
 
 		getGalleryDescriptor(index) {
@@ -480,7 +480,7 @@ if (!lang) {
 			const deltaY = event.deltaY
 
 			// Update the grid position based on the direction of the mouse wheel scroll
-			this.offsetY += deltaY > 0 ? calculateGridDimensions().cardSize / 4 : -calculateGridDimensions().cardSize / 4
+			this.offsetY += deltaY > 0 ? -calculateGridDimensions().cardSize / 3 : calculateGridDimensions().cardSize / 3
 
 			// Update the grid
 			this.updateGrid()
