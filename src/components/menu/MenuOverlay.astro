@@ -27,11 +27,12 @@ const navButtonClasses =
 ---
 
 <div id='menu-overlay' class='flex flex-col min-h-screen bg-black p-5 sm:p-8 gap-y-5 sm:gap-y-8' transition:persist>
+  <div class='fixed top-0 left-0 w-screen h-screen -z-1 pointer-events-none' id='stars' transition:persist></div>
 	<div id='city' class='top-0 left-0 fixed w-full h-full -z-1'></div>
 	<!-- Menu section -->
 	<div class='flex flex-col items-center justify-center gap-y-5' id='menu-overlay--nav-wrapper'>
 		<!-- Menu content here -->
-		<div class='w-56 sm:w-80 md:w-96 h-auto'><Logo /></div>
+		<div class='w-56 sm:w-80 md:w-96 h-auto'><Logo id="overlay-logo" /></div>
 		<div class='flex flex-col items-center justify-center gap-x-2 sm:gap-x-5 gap-y-5 w-full z-50' id='menu-overlay--nav'>
 			<nav class='flex flex-row text-right items-center sm:items-center gap-x-5'>
 				{
@@ -176,9 +177,6 @@ const navButtonClasses =
 			// Get the 'data-content' attribute of the clicked element
 			const content = event.currentTarget.getAttribute('data-content')
 
-			// Save the 'content' value to localStorage
-			localStorage.setItem('activeIntroSlide', content)
-
 			// Optionally, log the saved value to confirm it's working
 			console.log('Active Intro Slide set to:', content)
 
@@ -190,7 +188,8 @@ const navButtonClasses =
 
 		// Function to activate the nav button based on localStorage or default to first button
 		function activateStoredNavButton() {
-			const activeIntroSlide = localStorage.getItem('activeIntroSlide')
+			// const activeIntroSlide = localStorage.getItem('activeIntroSlide')
+			const activeIntroSlide = 'intro'
 			if (activeIntroSlide) {
 				let found = false
 				navButtons.forEach((button) => {
@@ -230,18 +229,7 @@ const navButtonClasses =
 			})
 		})
 
-		// Check activeIntroSlide and show the corresponding content or if nothing found show the one with id === 'intro'
-		const activeIntroSlide = localStorage.getItem('activeIntroSlide')
-		if (activeIntroSlide) {
-			const contentContainer = document.getElementById(activeIntroSlide)
-			if (contentContainer) {
-				contentContainer.style.display = 'block'
-			} else {
-				document.getElementById('intro').style.display = 'block'
-			}
-		} else {
-			document.getElementById('intro').style.display = 'block'
-		}
+		document.getElementById('intro').style.display = 'block'
 	}
 
 	document.addEventListener('astro:page-load', (event) => {
