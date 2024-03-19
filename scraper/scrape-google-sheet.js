@@ -9,8 +9,6 @@ const saveToJson = require('./modules/saveToJson');
 const processWhatsAppAttachments = require('./modules/processWhatsAppAttachments');
 const { extractFrame } = require('./modules/videoProcessor');
 
-// const createPixelatedImages = require('./modules/createPixelatedImages');
-
 // Set CSV URL
 const csvUrl = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSo1JkBPpgo-jq5HbgZhdrWZ8lDGI8vF0C30gHPweWebwoKJbsmuKtED07jLqSDz3zpZMAfBpFl_Khv/pub?output=csv';
 
@@ -189,10 +187,6 @@ async function processData(data) {
         // Attempt to read the directory contents for every WhatsApp-submitted entry
         files = fs.readdirSync(whatsappAssetsDir);
 
-        if (entryID === '1057') {
-          console.log('Entry 1057 files: ' + files)
-        }
-
         // If successful, files array is now populated with filenames
         if (files.length > 0) {
           // Proceed to process these files
@@ -330,7 +324,7 @@ async function processData(data) {
         ar: enSlug // Changed to enSlug because arSlug doesn't always work
       },
       storyImage: storyImage,
-      personalInfo: { 
+      personalInfo: {
         en: {
           name: entry['EN\nName'].trim(),
           surname: entry['EN\nSurname'].trim(),
