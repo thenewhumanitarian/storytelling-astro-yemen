@@ -559,7 +559,7 @@ if (!lang) {
 			let availableStories
 
 			// Determine if we should allow a highlighted story based on the counter
-			if (this.highlightedCounter < 9) {
+			if (this.highlightedCounter < 20) {
 				// Exclude highlighted stories if the counter is less than 9
 				availableStories = shuffledStories.filter((story) => !recentIDs.has(story.id) && story.highlighted !== true)
 			} else {

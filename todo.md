@@ -82,21 +82,6 @@
 
 # Deadline is end of next week / 9 March 2024
 
-
-* Here? @annie 
-* Intro page
-    * YEMEN LISTENING PROJECT with the tagline, in same font as logo, at the top of the intro page
-    * Three sections for hamburger menu are Introduction, About, and Credits
-    * Add Arabic 
-    * Add links (Annie to provide, waiting for Matt)
-* Story pages
-    * Delete “years old”. It will just read as Hisham, 38, from Taiz
-    * Delete “name unknown.” we have pseudonyms or initials for everyone 
-        * Will only show if there is no name set. By setting all names in the Google Master sheet, it won’t ever show.
-    * Add translations for all terms and tags (see uploads) 
-    * Update the language for some of the terms (I changed it in the spreadsheet you shared)
-
-
 # Last week to do list
 
 ## Grid
@@ -104,10 +89,10 @@
 * DONE Grid with scroll?
 * DONE What are the red stars for?
 * DONE Is it possible to move around the grid with keyboard arrows?
-* Try to not have too many highlighted items next to each other in the grid view
-* At the moment there seem to be a lot of duplicates, often right next to each other?
-* Debounce scroll on Grid, reduce speed
-* Not all stories loading?
+* DONE Try to not have too many highlighted items next to each other in the grid view
+* DONE At the moment there seem to be a lot of duplicates, often right next to each other?
+* DONE Debounce scroll on Grid, reduce speed
+* DONE Not all stories loading?
 
 ## Static content / introduction slides
 
@@ -126,13 +111,14 @@
 ## Detail pages
 
 * DONE Can we put in from and lives in? Right now I just see “from.” I may need to delete in spreadsheet they are the same.
-* Some photos are not showing up? Not sure if that is because you have not taken latest from WhatsApp folder (noticed this on 1064)
+* DONE Some photos are not showing up? Not sure if that is because you have not taken latest from WhatsApp folder (noticed this on 1064)
+* Check if all videos and photos are loading...
 * The Soundcite works in English but seems to be only for the first paragraph? Looking at 1038 as an example
 * Soundcite in Arabic works too, same issue. is it possible for the movement to be right to left on Arabic? That would make more logical sense
 
 ## Scraper
 
-* Check if those with bespoke teaser/preview images do actually work when scraping the data
+* DONE Check if those with bespoke teaser/preview images do actually work when scraping the data
 
 ## Social share
 
