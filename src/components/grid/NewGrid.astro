@@ -36,8 +36,6 @@ if (!lang) {
 	let shuffledStories = [...stories] // Clone and shuffle the stories array
 	shuffleArray(shuffledStories)
 
-	let recentIDs = new Set() // Track recently shown stories to avoid immediate repeats
-
 	// Debounce function
 	function debounce(func, wait, immediate) {
 		var timeout
@@ -70,13 +68,13 @@ if (!lang) {
 	function calculateGridDimensions() {
 		let rows = 10
 		let cols = 10
-		let targetSize = 400
+		let targetSize = 320
     let margin = 20
 
 		if (window.innerWidth < 1400) {
 			rows = 10
 			cols = 10
-			targetSize = 360
+			targetSize = 280
       margin = 15
 		}
 
@@ -88,9 +86,10 @@ if (!lang) {
 		}
 
 		if (window.innerWidth < 640) {
-			rows = 8
-			cols = 8
-			targetSize = 240
+			rows = 5
+			cols = 5
+			targetSize = 180
+      margin = 10
 		}
 
 		const FIXED_ROWS = rows
@@ -425,6 +424,7 @@ if (!lang) {
 			this.cards = {}
 			// All elements are cached and reused
 			this.cardsPool = []
+      this.recentIDs = new Set()
 			this.offsetX = 0
 			this.offsetY = 0
 			this.viewCols = 0
@@ -561,22 +561,22 @@ if (!lang) {
 			// Determine if we should allow a highlighted story based on the counter
 			if (this.highlightedCounter < 20) {
 				// Exclude highlighted stories if the counter is less than 9
-				availableStories = shuffledStories.filter((story) => !recentIDs.has(story.id) && story.highlighted !== true)
+				availableStories = shuffledStories.filter((story) => !this.recentIDs.has(story.id) && story.highlighted !== true)
 			} else {
 				// Allow all stories, including highlighted ones
-				availableStories = shuffledStories.filter((story) => !recentIDs.has(story.id))
+				availableStories = shuffledStories.filter((story) => !this.recentIDs.has(story.id))
 			}
 
 			if (availableStories.length === 0) {
 				// If no suitable stories are available (or all have been used), reset the tracking and reshuffle
-				recentIDs.clear()
+				this.recentIDs.clear()
 				shuffleArray(shuffledStories)
 				this.highlightedCounter = 0 // Reset the highlighted counter as well
 				// Repeat the filter process after reshuffling
-				return getRandomSafe()
+				return this.getRandomSafe()
 			} else {
 				const selectedStory = availableStories[0] // Pick the first available story
-				recentIDs.add(selectedStory.id)
+				this.recentIDs.add(selectedStory.id)
 
 				// Update the highlighted counter based on the selected story
 				if (selectedStory.highlighted === true) {
@@ -586,13 +586,12 @@ if (!lang) {
 				}
 
 				// Optionally, limit the size of recentIDs to manage memory and ensure variety
-				if (recentIDs.size > 50) {
+				if (this.recentIDs.size > stories.length) {
 					const oldestId = Array.from(recentIDs)[0]
-					recentIDs.delete(oldestId)
+					this.recentIDs.delete(oldestId)
 				}
 
-				setOfIDs.add(selectedStory.id)
-				console.log(setOfIDs.size)
+				console.log(this.recentIDs.size)
 
 				return selectedStory
 			}

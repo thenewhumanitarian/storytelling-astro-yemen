@@ -4,7 +4,7 @@ function extractFrame(videoPath, framePath) {
   return new Promise((resolve, reject) => {
     const ffmpegProcess = spawn('ffmpeg', [
       '-i', videoPath,
-      '-ss', '00:00:01.000',
+      '-ss', '00:00:08.000',
       '-vframes', '1',
       '-vf', 'scale=640:360:force_original_aspect_ratio=decrease,pad=640:360:-1:-1:color=black',
       '-y', // Overwrite output files without asking
