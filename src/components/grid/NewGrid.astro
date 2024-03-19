@@ -21,6 +21,23 @@ if (!lang) {
 <script is:inline src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js'></script>
 
 <script is:inline define:vars={{ lang, stories }}>
+	// Set to identify the stories that have been picked
+	let setOfIDs = new Set()
+
+	// Utility function to shuffle an array (e.g., Fisher-Yates shuffle algorithm)
+	function shuffleArray(array) {
+		for (let i = array.length - 1; i > 0; i--) {
+			const j = Math.floor(Math.random() * (i + 1))
+			;[array[i], array[j]] = [array[j], array[i]] // swap elements
+		}
+	}
+
+	// Assuming stories is an array of story objects
+	let shuffledStories = [...stories] // Clone and shuffle the stories array
+	shuffleArray(shuffledStories)
+
+	let recentIDs = new Set() // Track recently shown stories to avoid immediate repeats
+
 	// Debounce function
 	function debounce(func, wait, immediate) {
 		var timeout
@@ -53,24 +70,27 @@ if (!lang) {
 	function calculateGridDimensions() {
 		let rows = 10
 		let cols = 10
-		let targetSize = 260
+		let targetSize = 400
+    let margin = 20
 
 		if (window.innerWidth < 1400) {
 			rows = 10
 			cols = 10
-			targetSize = 260
+			targetSize = 360
+      margin = 15
 		}
 
 		if (window.innerWidth < 1280) {
 			rows = 10
 			cols = 10
-			targetSize = 240
+			targetSize = 280
+      margin = 10
 		}
 
 		if (window.innerWidth < 640) {
 			rows = 8
 			cols = 8
-			targetSize = window.innerWidth / 1.8
+			targetSize = 240
 		}
 
 		const FIXED_ROWS = rows
@@ -85,7 +105,6 @@ if (!lang) {
 		const targetRows = Math.min(Math.floor(viewportHeight / TARGET_SIZE), FIXED_ROWS) // e.g., 5 or less
 
 		// Calculate available space taking into account some margin/padding if necessary
-		const margin = 10 // Adjust based on your actual margin/padding
 		const totalMarginWidth = margin * (targetColumns + 1)
 		const totalMarginHeight = margin * (targetRows + 1)
 
@@ -400,6 +419,8 @@ if (!lang) {
 			this.DOMElement = DOMElement
 			// Dict to save previous assignations by col and row
 			this.picks = {}
+			// Counter to track the selection of highlighted stories
+			this.highlightedCounter = 0
 			// Current visible cards
 			this.cards = {}
 			// All elements are cached and reused
@@ -505,30 +526,76 @@ if (!lang) {
 			)
 		}
 
-		getRandomSafe(col, row) {
-			let pick
-			let tries = 0
-			let i = 0
+		// getRandomSafe(col, row) {
+		// 	let pick
+		// 	let tries = 0
+		// 	let i = 0
 
-			while (pick === undefined) {
-				let rnd = ~~(Math.random() * 10000)
-				let item = this.getGalleryDescriptor(rnd)
+		// 	while (pick === undefined) {
+		// 		let rnd = ~~(Math.random() * 10000)
+		// 		let item = this.getGalleryDescriptor(rnd)
 
-				// Check if the item is not already assigned to a neighbour
-				for (i = 0; i < NEIGHBOURS.length; i++) {
-					let offsets = NEIGHBOURS[i]
-					let key = `${col + offsets[0]}:${row + offsets[1]}`
-					if (this.picks[key] === item) {
-						break
-					}
-				}
+		// 		// Check if the item is not already assigned to a neighbour
+		// 		for (i = 0; i < NEIGHBOURS.length; i++) {
+		// 			let offsets = NEIGHBOURS[i]
+		// 			let key = `${col + offsets[0]}:${row + offsets[1]}`
+		// 			if (this.picks[key] === item) {
+		// 				break
+		// 			}
+		// 		}
 
-				if (tries++ > 20 || i === NEIGHBOURS.length) {
-					pick = item
-				}
+		// 		if (tries++ > 20 || i === NEIGHBOURS.length) {
+		// 			pick = item
+		// 		}
+		// 	}
+
+		// 	setOfIDs.add(pick.id)
+		// 	console.log(setOfIDs.size)
+
+		// 	return pick
+		// }
+
+		getRandomSafe() {
+			let availableStories
+
+			// Determine if we should allow a highlighted story based on the counter
+			if (this.highlightedCounter < 9) {
+				// Exclude highlighted stories if the counter is less than 9
+				availableStories = shuffledStories.filter((story) => !recentIDs.has(story.id) && story.highlighted !== true)
+			} else {
+				// Allow all stories, including highlighted ones
+				availableStories = shuffledStories.filter((story) => !recentIDs.has(story.id))
 			}
 
-			return pick
+			if (availableStories.length === 0) {
+				// If no suitable stories are available (or all have been used), reset the tracking and reshuffle
+				recentIDs.clear()
+				shuffleArray(shuffledStories)
+				this.highlightedCounter = 0 // Reset the highlighted counter as well
+				// Repeat the filter process after reshuffling
+				return getRandomSafe()
+			} else {
+				const selectedStory = availableStories[0] // Pick the first available story
+				recentIDs.add(selectedStory.id)
+
+				// Update the highlighted counter based on the selected story
+				if (selectedStory.highlighted === true) {
+					this.highlightedCounter = 0 // Reset counter if a highlighted story is selected
+				} else {
+					this.highlightedCounter++ // Increment counter for a non-highlighted story
+				}
+
+				// Optionally, limit the size of recentIDs to manage memory and ensure variety
+				if (recentIDs.size > 50) {
+					const oldestId = Array.from(recentIDs)[0]
+					recentIDs.delete(oldestId)
+				}
+
+				setOfIDs.add(selectedStory.id)
+				console.log(setOfIDs.size)
+
+				return selectedStory
+			}
 		}
 
 		getRandomDescriptor(col, row) {
@@ -669,7 +736,7 @@ if (!lang) {
 		overflow: hidden;
 		position: absolute;
 		aspect-ratio: 1/1;
-		border: 4px solid black;
+		border: 6px solid black;
 		opacity: 1;
 		transition: opacity 0.5s;
 		will-change: transform, opacity;
@@ -717,7 +784,7 @@ if (!lang) {
 
 	.card:hover {
 		opacity: 1;
-		border: 4px solid white;
+		border: 6px solid white;
 
 		h2 {
 			text-shadow: inherit;
