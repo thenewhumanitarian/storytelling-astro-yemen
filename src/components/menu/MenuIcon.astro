@@ -1,7 +1,26 @@
 <!-- Menu icon -->
 <div title='Open menu'>
-	<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' class='fill-current text-white cursor-pointer' id='menu-button'>
+	<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' class='fill-current text-white cursor-pointer' id='menu-button--open'>
 		<path d='M0 2v2h24V2Zm0 9v2h24v-2Zm0 9v2h24v-2Z'></path>
+	</svg>
+	<svg
+		width='24'
+		height='24'
+		viewBox='0 0 24 24'
+		fill='none'
+		xmlns='http://www.w3.org/2000/svg'
+		id='menu-button--close'
+		class='fill-current text-white cursor-pointer'
+	>
+		<g clip-path='url(#clip0_306_4)'>
+			<rect width='30' height='2' transform='matrix(-0.707107 0.707107 0.707107 0.707107 22 1)' fill='current'></rect>
+			<rect width='30' height='2' transform='matrix(0.707107 0.707107 0.707107 -0.707107 1 2)' fill='current'></rect>
+		</g>
+		<defs>
+			<clipPath id='clip0_306_4'>
+				<rect width='24' height='24' fill='white'></rect>
+			</clipPath>
+		</defs>
 	</svg>
 </div>
 
@@ -14,6 +33,14 @@
 	function openMenu() {
 		// Block body scroll when menu is open
 		document.body.style.overflow = 'hidden'
+
+    // Hide menu-button--open
+    const menuButtonOpen = document.getElementById('menu-button--open')
+    menuButtonOpen.style.display = 'none'
+
+    // Show menu-button--close
+    const menuButtonClose = document.getElementById('menu-button--close')
+    menuButtonClose.style.display = 'block'
 
 		const menuOverlay = document.getElementById('menu-overlay')
 		setTimeout(() => {
@@ -33,6 +60,14 @@
 		// Unblock body scroll when menu is closed
 		document.body.style.overflow = 'auto'
 
+    // Hide menu-button--open
+    const menuButtonOpen = document.getElementById('menu-button--open')
+    menuButtonOpen.style.display = 'block'
+
+    // Show menu-button--close
+    const menuButtonClose = document.getElementById('menu-button--close')
+    menuButtonClose.style.display = 'none'
+
 		if (e.target === menuOverlay) {
 			// Hide menu overlay
 			menuOverlay.style.display = 'none'
@@ -44,6 +79,26 @@
 			// Block scrolling on body when menu is open
 			document.body.style.overflow = 'auto'
 		}
+	}
+
+	function initMenuOverlay() {
+		const menuOverlay = document.getElementById('menu-overlay')
+		const menuButton = document.getElementById('menu-button--open')
+
+		const closeButtons = document.querySelectorAll('.menu-close-button')
+
+		localStorage.setItem('activeIntroSlide', 'intro')
+
+		// Add event listeners
+		closeButtons.forEach((el) => {
+			el.addEventListener('click', closeMenu)
+		})
+
+		// Add event listeners
+		menuButton.addEventListener('click', openMenu)
+		menuOverlay.addEventListener('click', closeMenu)
+
+		checkIntroOverlay()
 	}
 
 	function checkIntroOverlay() {
@@ -58,22 +113,21 @@
 		console.log('hideIntro set to false in localStorage')
 	}
 
-	// Deal with eventHandlers
 	document.addEventListener('DOMContentLoaded', () => {
-		const menuOverlay = document.getElementById('menu-overlay')
-		const menuButton = document.getElementById('menu-button')
+		initMenuOverlay()
+	})
 
-		// Add event listeners
-		menuButton.addEventListener('click', openMenu)
-		menuOverlay.addEventListener('click', closeMenu)
+	document.addEventListener('astro:after-swap', () => {
+		initMenuOverlay()
+	})
 
-		// Show once
-		checkIntroOverlay() // Check and potentially show the intro overlay
+	document.addEventListener('astro:page-load', () => {
+		initMenuOverlay()
 	})
 
 	document.addEventListener('astro:before-swap', () => {
 		const menuOverlay = document.getElementById('menu-overlay')
-		const menuButton = document.getElementById('menu-button')
+		const menuButton = document.getElementById('menu-button--open')
 		const closeButtons = document.querySelectorAll('.menu-close-button')
 
 		// Remove event listeners
@@ -84,21 +138,5 @@
 		// Correctly remove event listeners using the named functions
 		menuButton.removeEventListener('click', openMenu)
 		menuOverlay.removeEventListener('click', closeMenu)
-	})
-
-	document.addEventListener('astro:page-load', () => {
-		const menuOverlay = document.getElementById('menu-overlay')
-		const menuButton = document.getElementById('menu-button')
-
-		const closeButtons = document.querySelectorAll('.menu-close-button')
-
-		// Add event listeners
-		closeButtons.forEach((el) => {
-			el.addEventListener('click', closeMenu)
-		})
-
-		// Add event listeners
-		menuButton.addEventListener('click', openMenu)
-		menuOverlay.addEventListener('click', closeMenu)
 	})
 </script>

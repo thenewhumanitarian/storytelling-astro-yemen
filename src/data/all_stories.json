@@ -6,8 +6,8 @@
       "ar": "the-war-destroyed-my-life"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-13.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-13.jpg"
+      "main": "/images/placeholder_images/puzzle-03.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-03.jpg"
     },
     "personalInfo": {
       "en": {
@@ -60,8 +60,8 @@
       "ar": "striving-for-an-education"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-31.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-31.png"
+      "main": "/images/placeholder_images/puzzle-04.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-04.png"
     },
     "personalInfo": {
       "en": {
@@ -177,8 +177,8 @@
       "ar": "hope-is-keeping-me-alive"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-25.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-25.jpg"
+      "main": "/images/placeholder_images/puzzle-04.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-04.png"
     },
     "personalInfo": {
       "en": {
@@ -234,8 +234,8 @@
       "ar": "life-doesnt-stop"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-30.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-30.png"
+      "main": "/images/placeholder_images/puzzle-04.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-04.png"
     },
     "personalInfo": {
       "en": {
@@ -291,8 +291,8 @@
       "ar": "i-hoped-it-was-a-cruel-joke"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-26.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-26.jpg"
+      "main": "/images/placeholder_images/puzzle-12.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-12.jpg"
     },
     "personalInfo": {
       "en": {
@@ -345,8 +345,8 @@
       "ar": "we-want-this-war-to-end-and-we-want-a-country"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-17.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-17.jpg"
+      "main": "/images/placeholder_images/puzzle-24.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-24.png"
     },
     "personalInfo": {
       "en": {
@@ -405,8 +405,8 @@
       "ar": "our-lives-are-suspended"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-03.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-03.png"
+      "main": "/images/placeholder_images/puzzle-15.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-15.png"
     },
     "personalInfo": {
       "en": {
@@ -462,8 +462,8 @@
       "ar": "no-end-in-sight"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-11.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-11.png"
+      "main": "/images/placeholder_images/puzzle-25.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-25.jpg"
     },
     "personalInfo": {
       "en": {
@@ -519,8 +519,8 @@
       "ar": "dashed-dreams-steadfast-determination"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-28.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-28.png"
+      "main": "/images/placeholder_images/puzzle-04.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-04.png"
     },
     "personalInfo": {
       "en": {
@@ -575,8 +575,8 @@
       "ar": "how-long"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-09.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-09.jpg"
+      "main": "/images/placeholder_images/puzzle-14.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-14.png"
     },
     "personalInfo": {
       "en": {
@@ -632,8 +632,8 @@
       "ar": "the-kindness-of-strangers"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-16.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-16.jpg"
+      "main": "/images/placeholder_images/puzzle-27.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-27.jpg"
     },
     "personalInfo": {
       "en": {
@@ -688,8 +688,8 @@
       "ar": "shocking-news"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-15.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-15.png"
+      "main": "/images/placeholder_images/puzzle-12.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-12.png"
     },
     "personalInfo": {
       "en": {
@@ -746,8 +746,8 @@
       "ar": "every-day-brought-a-new-kind-of-pain"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-08.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-08.jpg"
+      "main": "/images/placeholder_images/puzzle-32.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-32.png"
     },
     "personalInfo": {
       "en": {
@@ -787,7 +787,7 @@
       "en": null,
       "ar": null
     },
-    "highlighted": true,
+    "highlighted": false,
     "languageOfSubmission": "English",
     "location": "",
     "methodOfSubmission": "MachForm",
@@ -863,8 +863,8 @@
       "ar": "salaries-and-warring-sides"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-15.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-15.jpg"
+      "main": "/images/placeholder_images/puzzle-27.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-27.jpg"
     },
     "personalInfo": {
       "en": {
@@ -920,8 +920,8 @@
       "ar": "i-hope-the-fighting-ends"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-02.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-02.jpg"
+      "main": "/images/placeholder_images/puzzle-05.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-05.png"
     },
     "personalInfo": {
       "en": {
@@ -977,8 +977,8 @@
       "ar": "meaningless-aid-numbers"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-10.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-10.jpg"
+      "main": "/images/placeholder_images/puzzle-32.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-32.jpg"
     },
     "personalInfo": {
       "en": {
@@ -1018,7 +1018,7 @@
       "en": null,
       "ar": null
     },
-    "highlighted": false,
+    "highlighted": true,
     "languageOfSubmission": "English",
     "location": "",
     "methodOfSubmission": "MachForm",
@@ -1034,8 +1034,8 @@
       "ar": "stolen-dreams"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-20.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-20.png"
+      "main": "/images/placeholder_images/puzzle-22.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-22.png"
     },
     "personalInfo": {
       "en": {
@@ -1158,8 +1158,8 @@
       "ar": "longing-from-afar"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-05.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-05.jpg"
+      "main": "/images/placeholder_images/puzzle-14.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-14.png"
     },
     "personalInfo": {
       "en": {
@@ -1215,8 +1215,8 @@
       "ar": "the-city-of-stars-and-dreams"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-26.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-26.png"
+      "main": "/images/placeholder_images/puzzle-10.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-10.jpg"
     },
     "personalInfo": {
       "en": {
@@ -1272,8 +1272,8 @@
       "ar": "nothing-for-granted"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-23.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-23.png"
+      "main": "/images/placeholder_images/puzzle-19.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-19.jpg"
     },
     "personalInfo": {
       "en": {
@@ -1329,8 +1329,8 @@
       "ar": "i-was-strong-enough"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-10.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-10.jpg"
+      "main": "/images/placeholder_images/puzzle-06.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-06.png"
     },
     "personalInfo": {
       "en": {
@@ -1383,8 +1383,8 @@
       "ar": "a-letter-to-the-next-generation"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-12.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-12.png"
+      "main": "/images/placeholder_images/puzzle-18.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-18.jpg"
     },
     "personalInfo": {
       "en": {
@@ -1498,8 +1498,8 @@
       "ar": "i-worry-all-the-time-about-their-future"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-25.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-25.jpg"
+      "main": "/images/placeholder_images/puzzle-14.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-14.png"
     },
     "personalInfo": {
       "en": {
@@ -1555,8 +1555,8 @@
       "ar": "the-tragedies-of-a-country-and-a-family"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-15.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-15.jpg"
+      "main": "/images/placeholder_images/puzzle-24.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-24.png"
     },
     "personalInfo": {
       "en": {
@@ -1615,8 +1615,8 @@
       "ar": "we-have-lost-people-we-love-and-so-much-more"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-13.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-13.jpg"
+      "main": "/images/placeholder_images/puzzle-24.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-24.jpg"
     },
     "personalInfo": {
       "en": {
@@ -1697,11 +1697,11 @@
     "story": {
       "en": {
         "title": "\"I don't think about going back to Yemen anymore.\"",
-        "content": "The war had a major impact on us in Yemen. I am from the coastal city of Hodeidah. Government-provided electricity stopped early in the war, which turned our lives into hell. Then, in 2018, the fighting got worse in Hodeidah. My family and I had to move to the Taiz countryside. But we suffered there too, We could not get regular aid in Taiz, despite being displaced. There were not enough international organisations helping displaced people with food and money. Aid was manipulated, diverted. \nBefore the war, I graduated with a journalism degree from Hodeidah University. After I was displaced, I joined several press and media organisations. I worked with some TV channels, did some reporting. I struggled, but others were much worse off.\nEventually I got a scholarship to do my masters degree in Türkiye. I also work in fact-checking, looking into fake news about Yemen. To keep myself safe, I don't use my real name. The assassination of a fellow journalist in Aden had a serious psychological impact on me. That’s why I don’t think about going back to Yemen anymore.\n\n"
+        "content": ""
       },
       "ar": {
         "title": "\"لم أعد افكر في العودة إلى اليمن.\"",
-        "content": "أثرت الحرب علينا بشكل كبير في اليمن. أنا من مدينة الحديدة الساحلية. منذ بداية الحرب توقفت الكهرباء الحكومية، مما حول حياتنا إلى جحيم. وبعد ذلك في عام ٢٠١٨ تفاقم الوضع. اضطررت أن أنزح إلى ريف تعز. بدأت معاناتنا أنا وأسرتي هناك أيضًا. حيث لم نستطع الحصول على مساعدات مستمرة، على الرغم من كوننا من النازحين، من المنظمات. هناك خلل متواجد في المنظمات الدولية بالنسبة لحصول النازحين على احتياجاتهم من المساعدات الغذائية والمالية. هناك تلاعب من قبل المنظمات المجتمعية والذين لهم علاقة. أنا خريج صحافة من جامعة الحديدة. من بعد النزوح التحقت بمنظمات صحفية وإعلام. تعاونت مع بعض المنصات والقنوات التلفزيونية، وأنتجت تقارير إعلامية. أحاول وأكافح، ولكن هناك أسر تضررت بشكل أكبر. حصلت على منحة إلى تركيا، ودرست الماجستير هناك. حاليًا أعمل في تدقيق المعلومات والأخبار الكاذبة في اليمن. من أجل سلامتي أستخدم اسمًا وهميًا. من بعد اغتيال زميلتي الصحفية في عدن، تأثرت نفسيًا للغاية، وبنفس الوقت لم أعد افكر في العودة إلى اليمن لهذا السبب."
+        "content": ""
       }
     },
     "tags": [
@@ -1735,8 +1735,8 @@
       "ar": "the-worst-luck-of-all"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-30.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-30.png"
+      "main": "/images/placeholder_images/puzzle-31.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-31.jpg"
     },
     "personalInfo": {
       "en": {
@@ -1791,8 +1791,8 @@
       "ar": "so-much-loss"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-26.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-26.jpg"
+      "main": "/images/placeholder_images/puzzle-13.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-13.jpg"
     },
     "personalInfo": {
       "en": {
@@ -1849,8 +1849,8 @@
       "ar": "all-that-we-ask"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-32.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-32.png"
+      "main": "/images/placeholder_images/puzzle-15.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-15.png"
     },
     "personalInfo": {
       "en": {
@@ -1905,8 +1905,8 @@
       "ar": "the-strong-eat-the-weak"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-32.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-32.png"
+      "main": "/images/placeholder_images/puzzle-29.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-29.png"
     },
     "personalInfo": {
       "en": {
@@ -1966,8 +1966,8 @@
       "ar": "the-edge-of-an-abyss"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-01.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-01.png"
+      "main": "/images/placeholder_images/puzzle-08.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-08.jpg"
     },
     "personalInfo": {
       "en": {
@@ -2024,8 +2024,8 @@
       "ar": "nothing-but-bread-and-water"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-05.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-05.png"
+      "main": "/images/placeholder_images/puzzle-26.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-26.jpg"
     },
     "personalInfo": {
       "en": {
@@ -2081,8 +2081,8 @@
       "ar": "cut-roads-and-lost-touch"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-21.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-21.jpg"
+      "main": "/images/placeholder_images/puzzle-01.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-01.png"
     },
     "personalInfo": {
       "en": {
@@ -2140,8 +2140,8 @@
       "ar": "yemens-people-are-exhausted"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-08.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-08.png"
+      "main": "/images/placeholder_images/puzzle-15.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-15.jpg"
     },
     "personalInfo": {
       "en": {
@@ -2258,8 +2258,8 @@
       "ar": "the-deep-scars-of-war"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-04.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-04.jpg"
+      "main": "/images/placeholder_images/puzzle-31.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-31.jpg"
     },
     "personalInfo": {
       "en": {
@@ -2316,8 +2316,8 @@
       "ar": "what-the-war-took"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-26.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-26.jpg"
+      "main": "/images/placeholder_images/puzzle-15.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-15.png"
     },
     "personalInfo": {
       "en": {
@@ -2375,8 +2375,8 @@
       "ar": "away-from-home-and-back-again"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-07.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-07.png"
+      "main": "/images/placeholder_images/puzzle-20.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-20.png"
     },
     "personalInfo": {
       "en": {
@@ -2433,8 +2433,8 @@
       "ar": "economic-changes"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-24.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-24.png"
+      "main": "/images/placeholder_images/puzzle-14.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-14.jpg"
     },
     "personalInfo": {
       "en": {
@@ -2553,8 +2553,8 @@
       "ar": "our-hearts-are-broken"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-29.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-29.png"
+      "main": "/images/placeholder_images/puzzle-05.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-05.jpg"
     },
     "personalInfo": {
       "en": {
@@ -2610,8 +2610,8 @@
       "ar": "vignettes-from-a-war"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-19.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-19.png"
+      "main": "/images/placeholder_images/puzzle-11.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-11.jpg"
     },
     "personalInfo": {
       "en": {
@@ -2668,8 +2668,8 @@
       "ar": "dreams-on-hold"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-07.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-07.png"
+      "main": "/images/placeholder_images/puzzle-09.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-09.png"
     },
     "personalInfo": {
       "en": {
@@ -2791,8 +2791,8 @@
       "ar": "what-was-it-for"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-26.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-26.jpg"
+      "main": "/images/placeholder_images/puzzle-02.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-02.jpg"
     },
     "personalInfo": {
       "en": {
@@ -2850,8 +2850,8 @@
       "ar": "our-lives-completely-changed"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-11.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-11.png"
+      "main": "/images/placeholder_images/puzzle-14.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-14.jpg"
     },
     "personalInfo": {
       "en": {
@@ -2875,11 +2875,11 @@
     "story": {
       "en": {
         "title": "\"Our lives completely changed\"",
-        "content": "I am a Yemeni artist and writer, originally from Aden. A long time ago, I married a man from Sana’a, and spent many years living there. I gave birth to six children there: four daughters and two sons. My husband worked for a well-known company, and I stayed at home. His monthly income covered all of our needs, and we were even able to help out other people. But when the Houthis took control over the capital city of Sana’a, they classified my husband as a member of the former regime, and suspended him from work.\nFrom that moment on, our lives completely changed. As my husband stayed home unemployed, his mentality changed. He became a different person, and we were fed up with life in Yemen. Then my husband decided to join the Houthis, and we were on the verge of separating.\nAt the same time, my children missed a full year of school, because of the general impact of the war, and their father’s recklessness. My husband took my nine-year-old son to military training, expecting him to join the fight.\nThat’s when I fled with my children to Aden. I stayed for four months, but I feared that my husband would follow us, and I fled again to Cairo, where I had a job opportunity as a singer. I took four of my children, but I had to leave two of my daughters behind. They were forcibly married when they were minors. I published the story of what happened to my daughters on social media, because I thought everyone should know. \nHere in Cairo my children and I are still suffering, it’s hard to get enough work and to send them to school. The war affected us in an unimaginable way. \n"
+        "content": ""
       },
       "ar": {
         "title": "\"تبدلت حياتنا وانقلبت تمامًا.\"",
-        "content": "مساء الخير، أنا إيمان ابراهيم، فنانة وكاتبة يمنية من عدن. قضيت سنوات عديدة في صنعاء، عندما تزوجت من رجل من صنعاء، وأنجبت منه ستة أبناء، أربعة بنات وولدين. كان زوجي يعمل في إحدى الشركات المعروفة في اليمن. كان دخله الشهري يغطي احتياجاتنا، بل ونساعد الآخرين منه أيضًا. ولكن عندما تمكن الحوثي من العاصمة صنعاء، تم تصنيف زوجي كنظام سابق وإيقافه من عمله. ومن هنا تبدلت حياتنا وانقلبت تمامًا. بالنسبة لي بسبب الظروف الأسرية والزواج، لم أعد أعمل منذ زواجي. بعد أن ظل زوجي بالمنزل من دون أي عمل، تبدلت نفسيته وتحول إلى شخص آخر. وضاقت بنا العيشة داخل اليمن. منها اضطر زوجي للانضمام الى جماعات الحوثي، وبدأت بيننا مشاكل كثيرة وأصبحنا على وشك الانفصال. وبعدها أخذ ابني ذا التسع سنوات لتدريبه في جبهات القتال لأجل أن ينضم أيضًا إليهم بعد ذلك. وأيضًا توقف أبنائي من الدراسة لمدة عام كامل بسبب استهتار الأب وما أثرته الحرب على نفسيته وعلينا جميعًا بشكل عام. من بعدها اضطررت أن أهرب بأبنائي إلى عدن. ثم استقريت في عدن لأربعة أشهر، وجدت بعدها فرصة للغناء في القاهرة. أخذت أبنائي الأربعة وهربت مرة أخرى خوفًا من ملاحقة الأب لنا. فقد قام بتزويج ابنتاي وهن قاصرات وإحداهن قصتها نشرت على مواقع التواصل الاجتماعي، قد كنت أثرتها على الأب من هنا من القاهرة كقضية رأي عام. طبعًا نحن هنا في القاهرة لا زلنا نعاني الكثير أنا والأربعة الأبناء، من الظروف المعيشية. وأجد صعوبة في تدريسهم الأربعة. الحرب أثرت علينا بشكل لا أحد يتخيله، أسرتي تشردت بسببها، وبسبب نقص الوعي"
+        "content": ""
       }
     },
     "tags": [
@@ -2911,8 +2911,8 @@
       "ar": "stop-this-senseless-war"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-01.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-01.jpg"
+      "main": "/images/placeholder_images/puzzle-25.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-25.jpg"
     },
     "personalInfo": {
       "en": {
@@ -2970,8 +2970,8 @@
       "ar": "my-story-told-two-ways"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-22.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-22.png"
+      "main": "/images/placeholder_images/puzzle-05.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-05.png"
     },
     "personalInfo": {
       "en": {
@@ -3024,8 +3024,8 @@
       "ar": "so-much-suffering"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-05.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-05.jpg"
+      "main": "/images/placeholder_images/puzzle-23.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-23.png"
     },
     "personalInfo": {
       "en": {
@@ -3049,11 +3049,11 @@
     "story": {
       "en": {
         "title": "So much suffering",
-        "content": "\nI am suffering so much because of this war. I lost my husband and my son in this war. I am a woman on my own, exhausted from working, but I have keep going in order to provide for my four children. I am trying to do what I can for them, as much as I can. "
+        "content": ""
       },
       "ar": {
         "title": "\"أعاني من الحرب كثيرًا.\"",
-        "content": "أعاني من الحرب كثيرًا، فقد فقدت كلا من زوجي وابني في الحرب. أنا امرأه وحيدة، متعبة من العمل، لكنني مضطرة للعمل كي أوفر لبقية أبنائي الأربعة لقمة عيش. أوفر لهم بقدر استطاعتي."
+        "content": ""
       }
     },
     "tags": [
@@ -3083,8 +3083,8 @@
       "ar": "the-war-destroyed-everything-beautiful"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-32.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-32.jpg"
+      "main": "/images/placeholder_images/puzzle-07.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-07.jpg"
     },
     "personalInfo": {
       "en": {
@@ -3140,8 +3140,8 @@
       "ar": "my-daughter-refuses-to-give-up"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-11.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-11.jpg"
+      "main": "/images/placeholder_images/puzzle-16.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-16.png"
     },
     "personalInfo": {
       "en": {
@@ -3200,8 +3200,8 @@
       "ar": "shared-moments"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-16.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-16.png"
+      "main": "/images/placeholder_images/puzzle-09.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-09.jpg"
     },
     "personalInfo": {
       "en": {
@@ -3257,8 +3257,8 @@
       "ar": "my-children-had-ambitions"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-11.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-11.png"
+      "main": "/images/placeholder_images/puzzle-02.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-02.png"
     },
     "personalInfo": {
       "en": {
@@ -3282,11 +3282,11 @@
     "story": {
       "en": {
         "title": "My children had ambitions",
-        "content": "I am a fifty-year-old teacher from Taiz. Before the war began, I lived with my husband and children. My husband died early in the war from a stroke, and two years later one of my sons was shot by a sniper in the street, while he was on the way to his final high school exams. My other son fell into a dark mental place. He hated life and became severely depressed. He turned to a group of friends who had a bad impact on him. Later he had two strokes, which affected his speech and vision. If it were not here, we would not be here. My children had other ambitions, not this. \n\n\n"
+        "content": ""
       },
       "ar": {
         "title": "\"طموحات أبنائي كانت مختلفة.\"",
-        "content": "أنا مدرسة من تعز، عمري خمسون عامًا. كنت أعيش أنا وزوجي وأبنائي. توفى زوجي في بداية الحرب بسبب جلطة. بعدها بعامين تم قنص ابني في الشارع، أثناء ما كان يستعد لاختبارات الثانوية. ابني الثاني دخل في حالة نفسية، كره الحياة وأصيب بحالة اكتئاب شديد، ما جعله يتجه إلى أن يصادق جماعة من الجماعات السيئة. وبنهاية المطاف أصيب ابني بجلطتين دماغيتين، فقد إثرهما النطق والنظر. الحمد لله. لولا الحرب لما كنا وصلنا إلى هنا. طموحات أبنائي كانت مختلفة."
+        "content": ""
       }
     },
     "tags": [
@@ -3299,7 +3299,7 @@
       "1034-1-77s.m4a"
     ],
     "audioReadouts": {
-      "en": "I am a fifty-year-old teacher from Taiz. Before the war began, I lived with my husband and children. My husband died early in the war from a stroke, and two years later one of my sons was shot by a sniper in the street, while he was on the way to his final high school exams. My other son fell into a dark mental place. He hated life and became severely depressed. He turned to a group of friends who had a bad impact on him. Later he had two strokes, which affected his speech and vision. If it were not here, we would not be here. My children had other ambitions, not this.",
+      "en": "I am a 50-year-old teacher from Taiz. Before the war began, I lived with my husband and children. My husband died early in the war from a stroke, and two years later one of my sons was shot by a sniper in the street, while he was on the way to his final high school exams. My other son fell into a dark mental place. He hated life and became severely depressed. He turned to a group of friends who had a bad impact on him. Later he had two strokes, which affected his speech and vision. If it were not here, we would not be here. My children had other ambitions, not this.",
       "ar": "أنا مدرسة من تعز، عمري خمسون عامًا. كنت أعيش أنا وزوجي وأبنائي. توفى زوجي في بداية الحرب بسبب جلطة. بعدها بعامين تم قنص ابني في الشارع، أثناء ما كان يستعد لاختبارات الثانوية. ابني الثاني دخل في حالة نفسية، كره الحياة وأصيب بحالة اكتئاب شديد، ما جعله يتجه إلى أن يصادق جماعة من الجماعات السيئة. وبنهاية المطاف أصيب ابني بجلطتين دماغيتين، فقد إثرهما النطق والنظر. الحمد لله. لولا الحرب لما كنا وصلنا إلى هنا. طموحات أبنائي كانت مختلفة. "
     },
     "highlighted": false,
@@ -3318,8 +3318,8 @@
       "ar": "the-bare-necessities"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-08.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-08.jpg"
+      "main": "/images/placeholder_images/puzzle-05.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-05.png"
     },
     "personalInfo": {
       "en": {
@@ -3343,11 +3343,11 @@
     "story": {
       "en": {
         "title": "The bare necessities ",
-        "content": "The war means destruction of houses and displacement. We have been through so much already, and now we are suffering from expensive rent, living on the streets. Not to mention the fact that we lack basics of life like electricity and hygiene. There are piles of garbage in the streets, and the cost of living is so high. We no longer have even the bare necessities of life."
+        "content": ""
       },
       "ar": {
         "title": "\"كل مقومات الحياة لم تعد تتواجد لدينا.\"",
-        "content": "معنى الحرب هو تدمير البيوت والنزوح. وهذا ما مررنا به، والآن نعاني من الإيجار والسكن في الشوارع، ناهيك عن عدم وجود أي أساسيات للحياة، مثل الكهرباء، والنظافة، وتكديس القامات في الشوارع، وغلاء المعيشة. كل مقومات الحياة لم تعد تتواجد لدينا."
+        "content": ""
       }
     },
     "tags": [
@@ -3378,8 +3378,8 @@
       "ar": "a-future-for-our-children"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-09.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-09.png"
+      "main": "/images/placeholder_images/puzzle-07.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-07.png"
     },
     "personalInfo": {
       "en": {
@@ -3436,8 +3436,8 @@
       "ar": "every-day-i-think-of-leaving"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-02.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-02.png"
+      "main": "/images/placeholder_images/puzzle-07.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-07.jpg"
     },
     "personalInfo": {
       "en": {
@@ -3494,8 +3494,8 @@
       "ar": "the-war-has-changed-people"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-25.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-25.jpg"
+      "main": "/images/placeholder_images/puzzle-16.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-16.jpg"
     },
     "personalInfo": {
       "en": {
@@ -3519,11 +3519,11 @@
     "story": {
       "en": {
         "title": "\"The war has changed people.\"",
-        "content": "I am displaced person in Taiz. I have been harassed many times by the Houthis, even though I never bothered them. I struggle with the fact that [because of the siege on Taiz] getting places takes so much longer than it used to. Getting somewhere that used to be half an hour away now takes a whole day, because roads are blocked. \nLiving like this is not easy. A bag of flour used to cost 5,000 Riyals, now it is 45,000 Riyals. It’s unbearable. Rent on my house is 70-80,000 Riyals, it used to be 30,000. \nMany people end up going in directions they never imagined they would go. Some people commit suicide or lose their minds. Others have turned into killers. This is all because people overthink their situation. Some people can no longer provide their families with what they need. The war has changed people. If you want to get by it is easy to be dragged into doing horrible things. Those with power are gangs, oppressors. Those who don’t join them, don’t survive."
+        "content": ""
       },
       "ar": {
         "title": "\"الحرب هذه حولت الناس.\"",
-        "content": "اسمي بدير السيد محمود من مديرية حيفان تعز، نازح في مدينة تعز. تعرضت للمضايقة من مجموعة الحوثيين، رغم كوني لا أتدخل بشيء. أيضًا عانيت في كون المسافات لم تعد كالسابق. فالمسافة التي كانت تأخذ منا نصف ساعة، الآن تأخذ يومًا كاملًا، بسبب انقطاع الطرق. لم تعد المعيشة سهلة. قيمة كيس البر الذي كان بالسابق بخمسة آلاف ريال، أصبح الآن بخمسة وأربعين ألف ريال. الوضع لم يعد يطاق. مستأجر في منزل للإيجار، بإيجار سبعين إلى ثمانين ألف ريال، وكان سابقًا بثلاثين ألف ريال. الكثير يتجه إلى اتجاهات لم يكن يتخيل أن يتوجه إليها، فمنهم من ينتحر أو يفقد عقله، والآخر يقتل. كل هذا بسبب الوضع الذي يعيشه الشخص من كثر التفكير. منهم من لديه أسرة لا يستطيع أن يوفر لها لقمة العيش. الحرب هذه حولت الناس. فمن يريد أن يعيش، لا بد أن ينجر إلى أسوأ الأمور. فكل من هم في الدولة عصابات وظلمة. أما الذين هم عزيزي النفس لا يستطيعون أن يعيشوا."
+        "content": ""
       }
     },
     "tags": [
@@ -3556,8 +3556,8 @@
       "ar": "debts-piling-up"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-12.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-12.jpg"
+      "main": "/images/placeholder_images/puzzle-04.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-04.jpg"
     },
     "personalInfo": {
       "en": {
@@ -3732,8 +3732,8 @@
       "ar": "a-wide-ranging-economic-crisis"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-08.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-08.jpg"
+      "main": "/images/placeholder_images/puzzle-06.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-06.jpg"
     },
     "personalInfo": {
       "en": {
@@ -3757,11 +3757,11 @@
     "story": {
       "en": {
         "title": "A wide-ranging economic crisis",
-        "content": "The war has impacted the entire community. Financially, mentally, morally. It affects work: most young people have left because there aren't jobs. It affects the education system, which has collapsed. Nobody can afford to educate their children anymore. The public schools are no good, and private school costs too much. I’m 63 years old, and retired from my career as a lawyer. I would like to keep working, but with this country’s economic crisis nobody can find work. Even the people who have jobs aren’t really doing anything."
+        "content": ""
       },
       "ar": {
         "title": "\"يعملون ولكن لا ينتجون.\"",
-        "content": "الحرب أثرت على المجتمع ككل، ماديًا، نفسيًا، أخلاقيًا، ومعنويًا.\nكما أثرت على عملنا كذلك. وتأثر معظم الشباب. وقد أثر ذلك أيضًا على التعليم، الذي انهار أثناء الحرب. لم نستطع مواصلة تعليم أطفالنا، وإرسالهم إلى المدارس الحكومية بسبب سوء التعليم هناك، والتعليم الخاص يتطلب مبالغ كبيرة.\nعمري 63 عامًا، وأنا متقاعد من عملي كمحامي. كان من الممكن أن أحصل على وظيفة أخرى، لكن الأزمة الاقتصادية التي تمر بها البلاد، لا تسمح للشخص بالعمل أو حتى العثور على عمل. لا يستطيع الناس العثور على وظائف، وهم عاطلون عن العمل. بل إن الذين يعملون، يعملون ولكن لا ينتجون.\n"
+        "content": ""
       }
     },
     "tags": [
@@ -3851,8 +3851,8 @@
       "ar": "life-is-knowledge"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-25.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-25.png"
+      "main": "/images/placeholder_images/puzzle-04.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-04.png"
     },
     "personalInfo": {
       "en": {
@@ -3876,11 +3876,11 @@
     "story": {
       "en": {
         "title": "\"Life is knowledge.\"",
-        "content": "The impact of the war on Yemen is mostly mental and scientific. Because life is knowledge. If minds are destroyed, there is no meaning to the possessions and the money we have. In Yemen, neither international resolutions nor even Gulf money were unable to solve anything. That’s because the Yemenis’ minds have been destroyed and they don’t control their own decisions anymore. The rug has been pulled out from under us."
+        "content": ""
       },
       "ar": {
         "title": "\"الحياة هي العلم.\"",
-        "content": "تأثير الحرب على اليمن هو تأثير عقلي وعلمي. فالحياة هي العلم، وإذا خربت العقول، فلا معنى للمال أو الممتلكات. في اليمن، سواء القرارات الدولية أو حتى أموال الخليج، لم تستطع أن تفعل شيئًا، لأن اليمنيين تم خراب عقولهم وسحب قراراتهم من تحت بساط أيديهم."
+        "content": ""
       }
     },
     "tags": [
@@ -3909,8 +3909,8 @@
       "ar": "a-dark-place"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-25.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-25.png"
+      "main": "/images/placeholder_images/puzzle-29.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-29.png"
     },
     "personalInfo": {
       "en": {
@@ -3934,11 +3934,11 @@
     "story": {
       "en": {
         "title": "A dark place",
-        "content": "My life is exhausting, and I don’t have a job so I can't afford to buy life's basics. For me, the world is a dark place. \n\n"
+        "content": ""
       },
       "ar": {
         "title": "\"العالم مظلم بالنسبة لي.\"",
-        "content": "حياتي متعبة، لا يوجد لدي عمل، ولا أستطيع أن أوفر قوت يومي. العالم مظلم بالنسبة لي."
+        "content": ""
       }
     },
     "tags": [
@@ -3968,8 +3968,8 @@
       "ar": "we-are-all-in-this-hole-together"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-20.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-20.jpg"
+      "main": "/images/placeholder_images/puzzle-13.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-13.png"
     },
     "personalInfo": {
       "en": {
@@ -4268,8 +4268,8 @@
       "ar": "i-am-suffering-and-my-children-are-suffering"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-24.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-24.png"
+      "main": "/images/placeholder_images/puzzle-12.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-12.jpg"
     },
     "personalInfo": {
       "en": {
@@ -4327,8 +4327,8 @@
       "ar": "economic-war"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-05.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-05.jpg"
+      "main": "/images/placeholder_images/puzzle-16.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-16.jpg"
     },
     "personalInfo": {
       "en": {
@@ -4410,11 +4410,11 @@
     "story": {
       "en": {
         "title": "Seeing the positives",
-        "content": "I am a government employee, a social worker. The war has had many negative consequences on society as a whole, including mass displacement and social fragmentation. But the impacts on individuals can sometimes be positive, too. \nI used to work for the government in Sana’a, but I had personal and family problems. I wanted to go back to Aden, where I am originally from. But this wasn’t an option for me, because my job was in Sana’a. \nBut after the [internationally recognised government] moved to Aden [after the Houthis took over Sana’a], and began to operate there, I had the opportunity to return to Aden and take up my job there. It was difficult for me at first, but on the whole the move turned out to be a good thing. I settled down, and dealt with the issues that had been bothering me. I found mental and professional stability. So not everything that comes out of war is bad, some good things can happen too.\n\n"
+        "content": ""
       },
       "ar": {
         "title": "\"ليست كل نتائج الحروب سلبية.\"",
-        "content": "أنا موظفة حكومية، أعمل في العمل الاجتماعي. بالنسبة لنتائج الحرب، من المعروف أن من نتائجها الكثير من المساوئ، والكثير من التفكك والنزوح. ولكن هناك جزئية من ضمن التأثيرات التي تخص الفرد من مخرجات الحرب أو نتائج الحروب أحيانًا تكون إيجابية.\n فبالنسبة لي، أعمل في صنعاء ضمن العمل الحكومي، ولكن كانت هناك في حياتي الشخصية الكثير من المشاكل الأسرية، وكنت أريد الذهاب إلى عدن، ولكن كان سيؤثر هذا على عملي في صنعاء، مع وجود الحكومة فيها. ولكن بعد انتقال الحكومة إلى عدن، وبعد أن بدأت تمارس نشاطها وتواجدها هناك كحكومة شرعية، كانت هذه فرصة لي للعودة إلى عدن، لأكمل حياتي العملية فيها. والحمد لله، رغم أنها كانت في البداية صعبة بالنسبة لي، لكنها كانت مثمرة ونتائج إيجابية. حيث أنني استقريت واحتويت كل ما حدث لي في السابق من مشاكل، وبدأت أستقر نفسيًا ومهنيًا.\nفليست كل نتائج الحروب سلبية. أحيانًا تكون إيجابية لبعض من الأفراد."
+        "content": ""
       }
     },
     "tags": [
@@ -4444,8 +4444,8 @@
       "ar": "i-suffered-so-much-but-i-changed-too"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-10.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-10.jpg"
+      "main": "/images/placeholder_images/puzzle-22.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-22.jpg"
     },
     "personalInfo": {
       "en": {
@@ -4528,11 +4528,11 @@
     "story": {
       "en": {
         "title": "\"My experience inspired me to help others.\"",
-        "content": "I lost many people to the war, friends and loved ones. Early on, the fighting in Aden was so bad that I feared for my life. My family was forced to flee to Hadramuht province. When I arrived in Hadramuht, I was impressed by the way the people there received displaced people like me and my family, by the warm reception they gave us. \nI saw in this something positive I could do in Aden, and after the fighting calmed down, I returned to the city and got involved with civil society organisations that help others, especially families that don’t have anyone to provide for them. I’ve worked on many projects, and helped many people. I also established a youth organisation that helped improve the lives of many people, especially young people dealing with mental health issues. \nMy experience with displacement in Hadramuht inspired me to help others. Since 2015, when I returned to Aden, we have accomplished a lot. And we are still going. \n"
+        "content": ""
       },
       "ar": {
         "title": "\"تجربتي ألهمتني لمساعدة الآخرين.\"",
-        "content": "الكثير من الأشخاص فقدناهم بسبب الحرب، منهم أعزاء، وزملاء.\nاضطررت أنا وعائلتي للانتقال من عدن إلى حضرموت، نتيجة للوضع المأساوي الذي عشناه في عدن، وخوفًا من الموت. رغم ذلك، لاحظنا تكاتف الكثير من الأهالي، والكثير من المبادرات من الناشطين وغيرهم أيضًا، إضافة الى الأشخاص التي بكت، دفاعًا عن الأرض. عندما انتقلت إلى حضرموت، رأيت هناك حفاوة الاستقبال، وكيف الأهالي تستقبل النازحين. هذا كان بالنسبة لي شيئًا إيجابيًا، لتطبيقه في عدن.\nبعد ما هدأ الوضع، عدت إلى عدن، وانضممت إلى مؤسسات ومنظمات المجتمع المدني، لمساعدة الأسر، وخاصة التي هي بدون عائل أسرة. لقد عملنا في مشاريع كثيرة، وساعدنا الكثير من الأسر. حاولت أيضًا من خلال تأسيس مبادرة شبابية، ساهمت في تحسين وضع الكثير من الأفراد، خاصة الفئات الأكثر تضررًا، بما فيهم الشباب ونفسياتهم المدمرة.\nتجربتي في حضرموت ألهمتني لمساعدة الآخرين. والحمد لله، منذ ٢٠١٥ إلى الآن، أنجزنا الكثير، وما زلنا مستمرين."
+        "content": ""
       }
     },
     "tags": [
@@ -4564,8 +4564,8 @@
       "ar": "the-war-made-me-stronger"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-02.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-02.png"
+      "main": "/images/placeholder_images/puzzle-04.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-04.jpg"
     },
     "personalInfo": {
       "en": {
@@ -4589,11 +4589,11 @@
     "story": {
       "en": {
         "title": "\"The war made me stronger.\"",
-        "content": "When the fighting began in 2015 in Aden, it was a shock. I am a teenager with dreams that extend beyond war, and it was my first time experiencing anything like this.\nMy family’s house was built during the time when Aden was a British colony, and like many houses from that era it is mostly made of wood. That made it easy for bullets to go right through the walls, and we live in an area that was close to the fighting [between government forces and the Houthis], much of which was controlled by the Houthis. \nWe had to flee to al-Buraiqeh, another neighbourhood in Aden. We stayed in a house with all of my extended family. Around then, my father’s salary stopped coming. \nStill, we were better off than many other people. My father had worked in the oil industry, and before the war we were middle class. We had valuables we could sell and draw on to live a decent life under difficult circumstances.\nBut later, after the fighting ended in Aden, our standard of living deteriorated because of the falling currency. We were no longer middle class. At first I collapsed. I felt like we were starting from scratch, that everything had been destroyed, and that there was no light at the end of the tunnel. \nWhen we were able to return home from displacement, my father suggested I volunteer in a military hospital. I saw the horrors of the war there, the war-wounded, amputees. It made me count my blessings, which had been easy to forget.\nThe truth is that nothing will go back to how it was before the war. But I – like many others – have learned to rely on myself, to work, and to prepare for the worst. I learned about currencies and finances. The war made me stronger. In the end, every hard experience makes us stronger. Hope is born from the womb of suffering; I think that’s a fact. The suffering I experienced and witnessed made me believe that at the end of the day, there is still hope.\n\n"
+        "content": ""
       },
       "ar": {
         "title": "\"جعلتني الحرب أقوى.\"",
-        "content": "كنت متواجدة في حرب ٢٠١٥، في عدن. كانت صدمة عارمة بالنسبة لي، لأنها كانت أول مرة أعيش فيها تجربة حرب. بالنسبة لمراهقة ترسم أحلامها، وتخط آمالها في الحرب.\nمنزل أهلي من الخشب، من البيوت التي بناها الاستعمار البريطاني سابقًا، فكان الرصاص يخترق المنزل بسهولة أيام حرب ٢٠١٥. حيث كنا نسكن في منطقة قريبة جدًا من أماكن الاشتباكات. جزء كبير من المنطقة كان تحت سيطرة الحوثي، مما أدى إلى نزوحنا إلى منطقة البريقة أو عدن الصغرى. سكنا في جزء من بيت العائلة، فكانت هناك مضايقات. أيضًا، راتب والدي توقف.\nرغم ذلك لم تؤثر علينا الحرب بشكل عالي، لأننا كنا نعتبر من العائلات متوسطة الدخل، بحكم أن والدي كان يعمل في قطاع النفط. كنا نمتلك ممتلكات ثمينة، تجعلنا نعيش حياة كريمة في ظل الظروف الصعبة.\nلكن بعد الحرب وبسبب فارق العملة، عشنا حياة صعبة، بالنسبة للمستوى المعيشي الذي كنا عليه. لم نعد من متوسطي الدخل، نعيش حياة مرفهة، بل نعيش فقط حياة كريمة، لم نكن نطمح لها.\nلكن الحرب قوت من شخصيتي، لأني انهرت بعد الحرب، وشعرت أننا نبدأ من الصفر، أنه تدمر كل شيء، ولا توجد أي ملامح المستقبل. لكن والدي نصحني أن أتطوع في مستشفى عسكري، بعد عودتنا إلى منزلنا بعد النزوح. كان منزلنا آمنًا. فعندما رأيت هول حال الناس، المصابين، والمبتورة أطرافهم، تذكرت النعم التي لدي، لكنها كانت نعمًا منسية. رغم ذلك، جديًا لا يمكن أن تكون الحال بعد الحرب كسابقها، من حيث المستويات المادية، والفكرية. بعد الحرب، لي أنا وغيري كذلك، تعلمنا أن نعتمد على أنفسنا، ونعمل على قوت يومنا، ونستعد لأسوأ الظروف، ونفكر بالعملات والماديات. جعلتني الحرب أقوى. في النهاية كل تجربة صعبة تجعل منا أقوى.\nمن رحم المعاناة دائمًا ما يولد الأمل. وهذه حقيقة الأمر. المعاناة التي واجهتها والمحيط الذي حولي، جعلاني أثق أن في النهاية هناك أمل.\n\n"
+        "content": ""
       }
     },
     "tags": [
@@ -4651,11 +4651,11 @@
     "story": {
       "en": {
         "title": "Lost opportunities",
-        "content": "I am blind and a person with disabilities. I am from Aden, I live in the al-Tawahi part of the city. I have my high school studies and I have a bachelor’s degree.  \nWhat really impacted me about the war – and this doesn’t just affect just me, but extends to every blind person with a university education – is how hard it has become for us to get jobs. \nLike anyone else, I planned to get a job after graduation. But what is unique about my situation as a blind person is that Yemen’s labour law sets aside 5% of jobs for people with disabilities. So I had high hopes of finding a job. \nBut unfortunately, rights for people with disabilities have turned into empty promises. I don’t know who has the power to change this, because I have approached many people about it, to no avail. Now, years into the war, exchange rates are bad and money is worth less, plus I am married, so I am responsible for my family’s income. But I am unemployed. This fact constantly runs through my heart and mind, and hurts deep in my soul.\n"
+        "content": ""
       },
       "ar": {
         "title": "\"كانت جميعها وعودًا فارغة.\"",
-        "content": "اأنا كفيف، من الأشخاص ذوي الإعاقة، من محافظة عدن، وأسكن في مديرية التواهي. الحمد لله، أكملت دراستي الثانوية، والبكالوريوس. النقطة المؤثرة علي من الحرب، هي أيضًا لا تشملني فقط، بل تشمل كل كفيف أكمل دراسته الجامعية، وهي عدم القدرة على الحصول على وظيفة. كنت كأي شخص لديه الطموح بعد التخرج بالوظيفة، لكن ما كان يميزني ككفيف أن لدي نسبة خمسة بالمائة من الوظائف، فكان طموحي وأملي أكبر.\nلكن للأسف، كانت جميعها وعودًا فارغة. لا أعلم من هم أصحاب القرار، لأني قد قدمت على الأكثر لكن بدون جدوى. والآن الوضع تغير، من أسعار صرف عملة. وأنا متزوج، ما يجعلني مسؤولًا عن دخل أسرة، لكن الوضع محطم. وهذا ما يجول في القلب والخاطر ويحز بالنفس. والحمد لله."
+        "content": ""
       }
     },
     "tags": [
@@ -4668,7 +4668,7 @@
       "1061-2.jpg"
     ],
     "audioReadouts": {
-      "en": "I am blind and a person with disabilities. I am from Aden, I live in the al-Tawahi part of the city. I have my high school studies and I have a bachelor’s degree.<br/><br/>\nWhat really impacted me about the war – and this doesn’t just affect just me, but extends to every blind person with a university education – is how hard it has become for us to get jobs. \nLike anyone else, I planned to get a job after graduation. But what is unique about my situation as a blind person is that Yemen’s labour law sets aside 5% of jobs for people with disabilities. So I had high hopes of finding a job. \n\nBut unfortunately, rights for people with disabilities have turned into empty promises. I don’t know who has the power to change this, because I have approached many people about it, to no avail. Now, years into the war, exchange rates are bad and money is worth less, plus I am married, so I am responsible for my family’s income. But I am unemployed. This fact constantly runs through my heart and mind, and hurts deep in my soul.",
+      "en": "I am blind, a person with disabilities. I am from Aden, I live in the al-Tawahi part of the city. I have my high school studies and I have a bachelor’s degree.<br/><br/>\nWhat really impacted me about the war – and this doesn’t just affect just me, but extends to every blind person with a university education – is how hard it has become for us to get jobs. \nLike anyone else, I planned to get a job after graduation. But what is unique about my situation as a blind person is that Yemen’s labour law sets aside 5% of jobs for people with disabilities. So I had high hopes of finding a job. \n\nBut unfortunately, rights for people with disabilities have turned into empty promises. I don’t know who has the power to change this, because I have approached many people about it, to no avail. Now, years into the war, exchange rates are bad and money is worth less, plus I am married, so I am responsible for my family’s income. But I am unemployed. This fact constantly runs through my heart and mind, and hurts deep in my soul.",
       "ar": "اأنا كفيف، من الأشخاص ذوي الإعاقة، من محافظة عدن، وأسكن في مديرية التواهي. الحمد لله، أكملت دراستي الثانوية، والبكالوريوس. النقطة المؤثرة علي من الحرب، هي أيضًا لا تشملني فقط، بل تشمل كل كفيف أكمل دراسته الجامعية، وهي عدم القدرة على الحصول على وظيفة. كنت كأي شخص لديه الطموح بعد التخرج بالوظيفة، لكن ما كان يميزني ككفيف أن لدي نسبة خمسة بالمائة من الوظائف، فكان طموحي وأملي أكبر.<br/><br/>لكن للأسف، كانت جميعها وعودًا فارغة. لا أعلم من هم أصحاب القرار، لأني قد قدمت على الأكثر لكن بدون جدوى. والآن الوضع تغير، من أسعار صرف عملة. وأنا متزوج، ما يجعلني مسؤولًا عن دخل أسرة، لكن الوضع محطم. وهذا ما يجول في القلب والخاطر ويحز بالنفس. والحمد لله. "
     },
     "highlighted": false,
@@ -4687,8 +4687,8 @@
       "ar": "we-are-doing-our-best-all-by-ourselves"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-22.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-22.jpg"
+      "main": "/images/placeholder_images/puzzle-24.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-24.png"
     },
     "personalInfo": {
       "en": {
@@ -4712,11 +4712,11 @@
     "story": {
       "en": {
         "title": "\"We are doing our best, all by ourselves.\"",
-        "content": "Before the war began in 2015, my mother was in good health. After the war started, she developed various illnesses, including diabetes, high blood pressure, and high cholesterol. My father, too, is now bedridden. The war not only caused their health to deteriorate, but it also caused our family to disintegrate. I lost contact with one of my brothers. He doesn’t have any contact with us or know what’s going on with the family. The extremely high cost of living here forced my other brothers to emigrate to Jordan, where they work as day labourers. I stayed behind, with my parents and little sister. My sister and I are doing our best to take care of our parents, all by ourselves. "
+        "content": ""
       },
       "ar": {
         "title": "\" نحاول سويًا بمفردنا.\"",
-        "content": "قبل حرب ٢٠١٥، والدتي كانت بصحة جيدة، لكن بعد الحرب، أصيبت بأمراض عديدة، منها السكر والضغط والكولسترول، ومشاكل أخرى. والدي أيضًا أصبح مقعد الفراش. أثرت الحرب بشكل سلبي من نواحي كثيرة، منها مرض والدتي، وأيضًا التفكك الأسري الذي نتج عنه. فلدي أخ، لم يعد يسأل ولا يعرف عنا شيئًا، منذ أن بدأت الحرب. ومن تأثيرات الحرب إضافة على ذلك، غلاء الأسعار الشديد، مما اضطر بقية إخواني للهجرة إلى الأردن للشغل بالأجر اليومي هناك. حاليًا، أعيش مع والدي المريض، وأختي الصغيرة. نحاول سويًا أن نعيلهم، أنا وأختي بمفردنا."
+        "content": ""
       }
     },
     "tags": [
@@ -4771,11 +4771,11 @@
     "story": {
       "en": {
         "title": "\"I started from scratch.\"",
-        "content": "I am a journalist and activist in the fields of human rights, climate change, and peace. The 2015 war has had negatives and positives for me. One of the negatives is that my family and I had to leave all our things behind and leave our hometown for another part of the country, to Aden. Aden took in so many displaced people, including us.\nI had to start from scratch in Aden. I searched for work for a long time. I need a permanent job to provide for my family, and we had even more expenses than before because of the ongoing war and our displacement. \nI managed to pass some tests and got a job as a programmer and presenter at a community radio station. Out of nothing, I started drawing the outlines of a new future. I began to make a name for myself in Aden media circles.\nMy family and I still lived in difficult circumstances, really rough conditions. We lost my brother to the war. We don’t know what happened to him. This greatly impacted my entire family, and me in particular, as a journalist. \nDespite this, I didn’t give up. I was motivated to move forward, and to be strong so I could improve my family’s lives. It’s true that war is devastating, but it has some positives: It can make you a stronger person. It can force you to look for new opportunities, and to better yourself. \n"
+        "content": ""
       },
       "ar": {
         "title": "\"بدأت من الصفر.\"",
-        "content": "أنا صحفية، وناشطة في مجال حقوق الإنسان، وفي التغيير المناخي، والسلام. حرب ٢٠١٥ لها إيجابيات وسلبيات. من التأثيرات السلبية، أننا تركنا كل ممتلكاتنا، وانتقلنا إلى محافظة أخرى، وهي عدن. عدن استقبلت العديد من النازحين، ونحن كنا منهم.\nبدأت في عدن من الصفر، حيث أني بحثت عن عمل لفترة طويلة. كنت أحتاج لعمل دائم لأجل توفير المصاريف لعائلتي، وما نحتاجه أيضًا في ظل استمرارية الحرب والنزوح. تمكنت من اجتياز الكثير من الاختبارات، لأجل أن أحصل على وظيفة معدة ومقدمة برامج في إذاعة مجتمعية. بدأت أرسم خطوط جديدة لمستقبل جديد، من الصفر. وبدأت أجعل اسمي يبرز ضمن الإعلاميين المتواجدين في عدن. رغم الظروف، والأوضاع التي عشناها، وفقدان أخي الذي لم نعد نعلم أين هو، فقد كان هذا من أكثر الأشياء التي أثرت على حياتنا بشكل كبير، وعلي أنا بشكل خاص كإعلامية.\nرغم ذلك، لم يجعلني هذا الشيء أستسلم، لكنه جعلني دائمًا أتقدم للأمام، وجعلني قوية من أجل أن أجعل وضع أهلي أفضل مما هو عليه. صحيح أن الحرب مدمرة، لكن لديها إيجابياتها أيضًا، منها أن تجعل منك شخصًا أقوى، وأن تبحث عن فرص أفضل، وتطور من نفسك أكثر."
+        "content": ""
       }
     },
     "tags": [
@@ -5076,7 +5076,7 @@
       "en": null,
       "ar": null
     },
-    "highlighted": false,
+    "highlighted": true,
     "languageOfSubmission": "",
     "location": "",
     "methodOfSubmission": "WhatsApp",

@@ -36,6 +36,20 @@ if (!lang) {
 	let shuffledStories = [...stories] // Clone and shuffle the stories array
 	shuffleArray(shuffledStories)
 
+	// Throttle function
+	function throttle(func, limit) {
+		let inThrottle
+		return function () {
+			const args = arguments
+			const context = this
+			if (!inThrottle) {
+				func.apply(context, args)
+				inThrottle = true
+				setTimeout(() => (inThrottle = false), limit)
+			}
+		}
+	}
+
 	// Debounce function
 	function debounce(func, wait, immediate) {
 		var timeout
@@ -69,27 +83,27 @@ if (!lang) {
 		let rows = 10
 		let cols = 10
 		let targetSize = 320
-    let margin = 20
+		let margin = 20
 
 		if (window.innerWidth < 1400) {
 			rows = 10
 			cols = 10
 			targetSize = 280
-      margin = 15
+			margin = 15
 		}
 
 		if (window.innerWidth < 1280) {
 			rows = 10
 			cols = 10
 			targetSize = 280
-      margin = 10
+			margin = 10
 		}
 
 		if (window.innerWidth < 640) {
 			rows = 5
 			cols = 5
 			targetSize = 180
-      margin = 10
+			margin = 10
 		}
 
 		const FIXED_ROWS = rows
@@ -424,7 +438,7 @@ if (!lang) {
 			this.cards = {}
 			// All elements are cached and reused
 			this.cardsPool = []
-      this.recentIDs = new Set()
+			this.recentIDs = new Set()
 			this.offsetX = 0
 			this.offsetY = 0
 			this.viewCols = 0
@@ -442,8 +456,15 @@ if (!lang) {
 			// Add functionality for arrow keys
 			window.addEventListener('keydown', this.onKeyDown.bind(this))
 
-			// Add functionality for mouse wheel scrolling
-			window.addEventListener('wheel', debounce(this.onMouseWheel.bind(this)), 50)
+			window.addEventListener(
+				'wheel',
+				throttle(
+					function (event) {
+						this.onMouseWheel(event)
+					}.bind(this),
+					50,
+				),
+			)
 		}
 
 		getGalleryDescriptor(index) {
