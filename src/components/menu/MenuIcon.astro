@@ -1,26 +1,7 @@
-<!-- Menu icon -->
-<div title='Open menu'>
-	<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' class='fill-current text-white cursor-pointer' id='menu-button--open'>
+<!-- Open menu icon -->
+<div title='Read more' id='menu-button--open'>
+	<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' class='fill-current text-white cursor-pointer'>
 		<path d='M0 2v2h24V2Zm0 9v2h24v-2Zm0 9v2h24v-2Z'></path>
-	</svg>
-	<svg
-		width='24'
-		height='24'
-		viewBox='0 0 24 24'
-		fill='none'
-		xmlns='http://www.w3.org/2000/svg'
-		id='menu-button--close'
-		class='fill-current text-white cursor-pointer'
-	>
-		<g clip-path='url(#clip0_306_4)'>
-			<rect width='30' height='2' transform='matrix(-0.707107 0.707107 0.707107 0.707107 22 1)' fill='current'></rect>
-			<rect width='30' height='2' transform='matrix(0.707107 0.707107 0.707107 -0.707107 1 2)' fill='current'></rect>
-		</g>
-		<defs>
-			<clipPath id='clip0_306_4'>
-				<rect width='24' height='24' fill='white'></rect>
-			</clipPath>
-		</defs>
 	</svg>
 </div>
 
@@ -31,17 +12,6 @@
 
 	/* OPEN MENU */
 	function openMenu() {
-		// Block body scroll when menu is open
-		document.body.style.overflow = 'hidden'
-
-    // Hide menu-button--open
-    const menuButtonOpen = document.getElementById('menu-button--open')
-    menuButtonOpen.style.display = 'none'
-
-    // Show menu-button--close
-    const menuButtonClose = document.getElementById('menu-button--close')
-    menuButtonClose.style.display = 'block'
-
 		const menuOverlay = document.getElementById('menu-overlay')
 		setTimeout(() => {
 			menuOverlay.style.display = 'flex'
@@ -51,24 +21,25 @@
 
 		// Block scrolling on body when menu is open
 		document.body.style.overflow = 'hidden'
+
+		localStorage.setItem('menuOpen', 'true')
 	}
 
 	/* CLOSE MENU */
 	function closeMenu(e) {
 		const menuOverlay = document.getElementById('menu-overlay')
+		const closeButtonText = document.getElementById('close-button--text')
+		const menuOverlayNav = document.getElementById('menu-overlay--nav')
+		const menuOverlayNavWrapper = document.getElementById('menu-overlay--nav-wrapper')
 
-		// Unblock body scroll when menu is closed
-		document.body.style.overflow = 'auto'
+		console.log(e.target)
 
-    // Hide menu-button--open
-    const menuButtonOpen = document.getElementById('menu-button--open')
-    menuButtonOpen.style.display = 'block'
-
-    // Show menu-button--close
-    const menuButtonClose = document.getElementById('menu-button--close')
-    menuButtonClose.style.display = 'none'
-
-		if (e.target === menuOverlay) {
+		if (
+      e.target === menuOverlay || 
+      e.target === closeButtonText || 
+      e.target === menuOverlayNav ||
+      e.target === menuOverlayNavWrapper
+      ) {
 			// Hide menu overlay
 			menuOverlay.style.display = 'none'
 			menuOverlay.style.visibility = 'hidden'
@@ -79,24 +50,19 @@
 			// Block scrolling on body when menu is open
 			document.body.style.overflow = 'auto'
 		}
+
+		localStorage.setItem('menuOpen', 'false')
 	}
 
 	function initMenuOverlay() {
 		const menuOverlay = document.getElementById('menu-overlay')
-		const menuButton = document.getElementById('menu-button--open')
-
-		const closeButtons = document.querySelectorAll('.menu-close-button')
+		const menuButtonOpen = document.getElementById('menu-button--open')
 
 		localStorage.setItem('activeIntroSlide', 'intro')
 
 		// Add event listeners
-		closeButtons.forEach((el) => {
-			el.addEventListener('click', closeMenu)
-		})
-
-		// Add event listeners
-		menuButton.addEventListener('click', openMenu)
 		menuOverlay.addEventListener('click', closeMenu)
+		menuButtonOpen.addEventListener('click', openMenu)
 
 		checkIntroOverlay()
 	}
@@ -110,7 +76,6 @@
 
 	function setShowIntroFalse() {
 		localStorage.setItem('hideIntro', 'true') // Set 'hideIntro' to 'false' in localStorage
-		console.log('hideIntro set to false in localStorage')
 	}
 
 	document.addEventListener('DOMContentLoaded', () => {

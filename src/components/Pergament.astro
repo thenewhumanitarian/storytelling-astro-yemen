@@ -20,14 +20,13 @@ if (!lang) {
 const direction = lang === 'en' ? 'ltr' : 'rtl'
 ---
 
-<div class={`${classNames} max-w-7xl`} id='pergament' dir={direction}>
+<div class={`border-2 max-w-7xl bg-zinc-950 ${classNames}`} id='pergament' dir={direction}>
 	<slot />
 </div>
 
 <style define:vars={{ direction, overflowY }}>
 	#pergament {
-		border: 2px solid white;
-		background-color: rgba(0, 0, 0, 0.85);
+		/* background-color: rgba(0, 0, 0, 0.85); */
 		direction: var(--direction);
 		overflow-y: var(--overflowY);
 	}

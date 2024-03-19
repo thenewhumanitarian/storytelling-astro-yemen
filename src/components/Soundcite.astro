@@ -11,7 +11,7 @@ interface Props {
 const { src, start, end, plays, text, lang } = Astro.props as Props
 ---
 
-<section class='pt-4'>
+<section class='py-4'>
 	<div class='soundcite' id=`soundcite-${end}` data-url={src} data-start={start} data-end={end} data-plays={plays}>
 		<span class='text-white sm:text-lg' set:html={text} />
 	</div>

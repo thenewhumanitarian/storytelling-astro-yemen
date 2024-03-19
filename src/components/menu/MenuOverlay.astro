@@ -21,43 +21,41 @@ if (!lang) {
 	lang = pathParams?.[0] || 'en'
 }
 
-const navWrapperClasses = 'flex flex-row items-center justify-center gap-x-2 sm:gap-x-5 w-full z-50 fixed top-24'
-const navContainerClasses = 'flex flex-row text-right items-center sm:items-center gap-x-5'
 const navButtonClasses =
-	'text-white bg-black px-3 py-2 border-white border-2 font-bold text-base sm:text-xl lg:text-xl xl:text-2xl hover:text-black transition-colors cursor-pointer hover:bg-white'
+	'text-white bg-black px-3 py-1 border-white border-2 font-bold text-base hover:text-black transition-colors cursor-pointer hover:bg-white'
+  // hover:bg-white hover:text-black font-bold border-2 cursor-pointer font-normal px-3 py-1 text-white menu-close-button menu-close-button--text transition-colors
 ---
 
-<div
-	id='menu-overlay'
-	class='flex flex-col top-0 left-0 w-full h-screen h-screen-ios bg-black items-center justify-center cursor-pointer p-5 sm:p-8 gap-y-5 sm:gap-y-8'
-	transition:persist
->
-	<div class='flex pt-0 sm:mt-0 justify-center sm:justify-center items-center sm:top-5 left-0 w-full'>
-		<div class='flex flex-col gap-0 gap-y-5 sm:gap-8 items-center justify-center'>
-			<!-- <div class='w-56 sm:w-80 md:w-96 h-auto'><Logo /></div> -->
-			<div class={navWrapperClasses}>
-				<nav class={navContainerClasses}>
-					{
-						static_pages.links[lang].map((page, i) => {
-							const { className, href, text } = page
-							return (
-								<span data-content={page.id} class={`nav-button ${navButtonClasses} ${className}`} data-astro-reload>
-									{text}
-								</span>
-							)
-						})
-					}
-				</nav>
+<div id='menu-overlay' class='flex flex-col min-h-screen bg-black p-5 sm:p-8 gap-y-5 sm:gap-y-8' transition:persist>
+	<div id='city' class='top-0 left-0 fixed w-full h-full -z-1'></div>
+	<!-- Menu section -->
+	<div class='flex flex-col items-center justify-center gap-y-5' id='menu-overlay--nav-wrapper'>
+		<!-- Menu content here -->
+		<div class='w-56 sm:w-80 md:w-96 h-auto'><Logo /></div>
+		<div class='flex flex-col items-center justify-center gap-x-2 sm:gap-x-5 gap-y-5 w-full z-50' id='menu-overlay--nav'>
+			<nav class='flex flex-row text-right items-center sm:items-center gap-x-5'>
+				{
+					static_pages.links[lang].map((page, i) => {
+						const { className, href, text } = page
+						return (
+							<span data-content={page.id} class={`nav-button ${navButtonClasses} ${className}`} data-astro-reload>
+								{text}
+							</span>
+						)
+					})
+				}
+			</nav>
+			<div class='pb-5 text-center'>
+				<LanguageButtons classNames='intro__language--button' links={{ en: '/en/grid', ar: '/ar/grid' }} />
 			</div>
 		</div>
 	</div>
 
-	<section class='flex flex-col z-50 cursor-default'>
-		<div class='w-full'>
-      <div class='block sm:hidden pb-5 text-center'>
-        <LanguageButtons classNames='intro__language--button' links={{ en: '/en/grid', ar: '/ar/grid' }} />
-      </div>
-			<Pergament lang={lang || 'en'} classNames='p-4 text-black h-full rounded-xs min-h-[25vh] max-h-[50vh] sm:max-h-[60vh]' overflowY={'auto'}>
+	<!-- Body content -->
+	<div class='flex-grow overflow-auto border-2 bg-zinc-950'>
+		<section class='flex flex-col cursor-default items-center justify-center'>
+			<!-- Body content here -->
+			<Pergament lang={lang || 'en'} classNames='p-4 text-black h-full rounded-xs overflow-y-auto border-none w-full'>
 				<div class='content-container' id='intro'>
 					<Intro lang={lang} />
 				</div>
@@ -68,10 +66,19 @@ const navButtonClasses =
 					<Credits lang={lang} />
 				</div>
 			</Pergament>
-		</div>
-	</section>
+		</section>
+	</div>
 
-	<!-- {
+	<!-- Close button -->
+	<div class='self-center' id='close-button--text'>
+		<div
+			class='hover:bg-white hover:text-black font-bold border-2 cursor-pointer font-normal px-3 py-1 text-white menu-close-button menu-close-button--text transition-colors'
+		>
+			{translations.close[lang]}
+		</div>
+	</div>
+
+	{
 		lang === 'ar' ? (
 			<div class='absolute top-1 left-7 w-8 h-8 cursor-pointer text-white hover:text-burgundy transition-colors menu-close-button z-50'>
 				<svg class='fill-current' width='100%' height='90' viewBox='0 0 90 90' fill='none' xmlns='http://www.w3.org/2000/svg'>
@@ -84,7 +91,7 @@ const navButtonClasses =
 				</svg>
 			</div>
 		) : (
-			<div class='absolute top-1 right-7 w-8 h-8 cursor-pointer text-white hover:text-burgundy transition-colors menu-close-button z-50'>
+			<div class='absolute top-1 right-7 w-8 h-8 cursor-pointer text-white hover:text-burgundy transition-colors menu-close-button z-[9999]'>
 				<svg class='fill-current' width='100%' height='90' viewBox='0 0 90 90' fill='none' xmlns='http://www.w3.org/2000/svg'>
 					<path
 						class='fill-current'
@@ -95,28 +102,22 @@ const navButtonClasses =
 				</svg>
 			</div>
 		)
-	} -->
-
-	<div
-		class='hover:bg-white hover:text-black font-bold border-2 cursor-pointer font-normal px-3 py-1 text-white menu-close-button menu-close-button--text transition-colors'
-	>
-		{translations.close[lang]}
-	</div>
+	}
 </div>
 
-<style is:global>
+<style>
 	#menu-overlay {
 		position: fixed;
-		top: 5rem;
+		top: 0;
 		left: 0;
 		width: 100%;
-		height: calc(100vh - 5rem);
+		height: 100vh;
 		background-color: rgba(0, 0, 0, 0.9);
-		/* background-color: lightsalmon; */
-		transition: opacity 0.5s;
 		visibility: hidden;
-		opacity: 0;
 		z-index: 8888;
+		transition: opacity 0.5s;
+		opacity: 0;
+		/* background-color: lightsalmon; */
 	}
 	.menu-close-button {
 		pointer-events: auto;
@@ -141,313 +142,117 @@ const navButtonClasses =
 </style>
 
 <script>
+	function initOverlay(event) {
+		// Select all elements with the class 'nav-button'
+		const navButtons = document.querySelectorAll('.nav-button')
+
+		// Function to remove 'active' class from all nav buttons
+		function removeAllActiveClasses() {
+			navButtons.forEach((button) => {
+				button.classList.remove('active')
+			})
+		}
+
+		function hideAllContainers() {
+			// Select all .content-container elements and hide them
+			const contentContainers = document.querySelectorAll('.content-container')
+			contentContainers.forEach((container) => {
+				// @ts-ignore
+				container.style.display = 'none'
+			})
+		}
+
+		// Function to handle click events on nav buttons
+		function handleNavButtonClick(event) {
+			// Prevent default action
+			event.preventDefault()
+
+			// Remove 'active' class from all nav buttons first
+			removeAllActiveClasses()
+
+			// Add 'active' class to the clicked nav button
+			event.currentTarget.classList.add('active')
+
+			// Get the 'data-content' attribute of the clicked element
+			const content = event.currentTarget.getAttribute('data-content')
+
+			// Save the 'content' value to localStorage
+			localStorage.setItem('activeIntroSlide', content)
+
+			// Optionally, log the saved value to confirm it's working
+			console.log('Active Intro Slide set to:', content)
+
+			// Select element with id === content and show it
+			hideAllContainers()
+			const contentContainer = document.getElementById(content)
+			contentContainer.style.display = 'block'
+		}
+
+		// Function to activate the nav button based on localStorage or default to first button
+		function activateStoredNavButton() {
+			const activeIntroSlide = localStorage.getItem('activeIntroSlide')
+			if (activeIntroSlide) {
+				let found = false
+				navButtons.forEach((button) => {
+					if (button.getAttribute('data-content') === activeIntroSlide) {
+						button.classList.add('active')
+						found = true
+					}
+				})
+				// If no matching button is found, activate the first button
+				if (!found && navButtons.length > 0) {
+					navButtons[0].classList.add('active')
+				}
+			} else {
+				// If no value is set in localStorage, apply the 'active' class to the first button
+				if (navButtons.length > 0) {
+					navButtons[0].classList.add('active')
+				}
+			}
+		}
+
+		// Attach the event listener to each nav button and activate the stored nav button
+		navButtons.forEach((button) => {
+			button.addEventListener('click', handleNavButtonClick)
+		})
+
+		// Check and activate the nav button as per localStorage when the page loads
+		activateStoredNavButton()
+
+		// Select all .content-container elements and hide them
+		hideAllContainers()
+
+		// Find all buttons with .language--button class and add event listener to each
+		const languageButtons = document.querySelectorAll('.intro__language--button')
+		languageButtons.forEach((button) => {
+			button.addEventListener('click', (event) => {
+				localStorage.setItem('hideIntro', 'false')
+			})
+		})
+
+		// Check activeIntroSlide and show the corresponding content or if nothing found show the one with id === 'intro'
+		const activeIntroSlide = localStorage.getItem('activeIntroSlide')
+		if (activeIntroSlide) {
+			const contentContainer = document.getElementById(activeIntroSlide)
+			if (contentContainer) {
+				contentContainer.style.display = 'block'
+			} else {
+				document.getElementById('intro').style.display = 'block'
+			}
+		} else {
+			document.getElementById('intro').style.display = 'block'
+		}
+	}
+
 	document.addEventListener('astro:page-load', (event) => {
-		// Select all elements with the class 'nav-button'
-		const navButtons = document.querySelectorAll('.nav-button')
-
-		// Function to remove 'active' class from all nav buttons
-		function removeAllActiveClasses() {
-			navButtons.forEach((button) => {
-				button.classList.remove('active')
-			})
-		}
-
-		function hideAllContainers() {
-			// Select all .content-container elements and hide them
-			const contentContainers = document.querySelectorAll('.content-container')
-			contentContainers.forEach((container) => {
-				// @ts-ignore
-				container.style.display = 'none'
-			})
-		}
-
-		// Function to handle click events on nav buttons
-		function handleNavButtonClick(event) {
-			// Prevent default action
-			event.preventDefault()
-
-			// Remove 'active' class from all nav buttons first
-			removeAllActiveClasses()
-
-			// Add 'active' class to the clicked nav button
-			event.currentTarget.classList.add('active')
-
-			// Get the 'data-content' attribute of the clicked element
-			const content = event.currentTarget.getAttribute('data-content')
-
-			// Save the 'content' value to localStorage
-			localStorage.setItem('activeIntroSlide', content)
-
-			// Optionally, log the saved value to confirm it's working
-			console.log('Active Intro Slide set to:', content)
-
-			// Select element with id === content and show it
-			hideAllContainers()
-			const contentContainer = document.getElementById(content)
-			contentContainer.style.display = 'block'
-		}
-
-		// Function to activate the nav button based on localStorage or default to first button
-		function activateStoredNavButton() {
-			const activeIntroSlide = localStorage.getItem('activeIntroSlide')
-			if (activeIntroSlide) {
-				let found = false
-				navButtons.forEach((button) => {
-					if (button.getAttribute('data-content') === activeIntroSlide) {
-						button.classList.add('active')
-						found = true
-					}
-				})
-				// If no matching button is found, activate the first button
-				if (!found && navButtons.length > 0) {
-					navButtons[0].classList.add('active')
-				}
-			} else {
-				// If no value is set in localStorage, apply the 'active' class to the first button
-				if (navButtons.length > 0) {
-					navButtons[0].classList.add('active')
-				}
-			}
-		}
-
-		// Attach the event listener to each nav button and activate the stored nav button
-		navButtons.forEach((button) => {
-			button.addEventListener('click', handleNavButtonClick)
-		})
-
-		// Check and activate the nav button as per localStorage when the page loads
-		activateStoredNavButton()
-
-		// Select all .content-container elements and hide them
-		hideAllContainers()
-
-		// Find all buttons with .language--button class and add event listener to each
-		const languageButtons = document.querySelectorAll('.intro__language--button')
-		languageButtons.forEach((button) => {
-			button.addEventListener('click', (event) => {
-				localStorage.setItem('hideIntro', 'false')
-			})
-		})
-
-		// Check activeIntroSlide and show the corresponding content or if nothing found show the one with id === 'intro'
-		const activeIntroSlide = localStorage.getItem('activeIntroSlide')
-		if (activeIntroSlide) {
-			const contentContainer = document.getElementById(activeIntroSlide)
-			if (contentContainer) {
-				contentContainer.style.display = 'block'
-			} else {
-				document.getElementById('intro').style.display = 'block'
-			}
-		} else {
-			document.getElementById('intro').style.display = 'block'
-		}
+		initOverlay(event)
 	})
-</script>
 
-<script>
 	document.addEventListener('astro:after-swap', (event) => {
-		// Select all elements with the class 'nav-button'
-		const navButtons = document.querySelectorAll('.nav-button')
-
-		// Function to remove 'active' class from all nav buttons
-		function removeAllActiveClasses() {
-			navButtons.forEach((button) => {
-				button.classList.remove('active')
-			})
-		}
-
-		function hideAllContainers() {
-			// Select all .content-container elements and hide them
-			const contentContainers = document.querySelectorAll('.content-container')
-			contentContainers.forEach((container) => {
-				// @ts-ignore
-				container.style.display = 'none'
-			})
-		}
-
-		// Function to handle click events on nav buttons
-		function handleNavButtonClick(event) {
-			// Prevent default action
-			event.preventDefault()
-
-			// Remove 'active' class from all nav buttons first
-			removeAllActiveClasses()
-
-			// Add 'active' class to the clicked nav button
-			event.currentTarget.classList.add('active')
-
-			// Get the 'data-content' attribute of the clicked element
-			const content = event.currentTarget.getAttribute('data-content')
-
-			// Save the 'content' value to localStorage
-			localStorage.setItem('activeIntroSlide', content)
-
-			// Optionally, log the saved value to confirm it's working
-			console.log('Active Intro Slide set to:', content)
-
-			// Select element with id === content and show it
-			hideAllContainers()
-			const contentContainer = document.getElementById(content)
-			contentContainer.style.display = 'block'
-		}
-
-		// Function to activate the nav button based on localStorage or default to first button
-		function activateStoredNavButton() {
-			const activeIntroSlide = localStorage.getItem('activeIntroSlide')
-			if (activeIntroSlide) {
-				let found = false
-				navButtons.forEach((button) => {
-					if (button.getAttribute('data-content') === activeIntroSlide) {
-						button.classList.add('active')
-						found = true
-					}
-				})
-				// If no matching button is found, activate the first button
-				if (!found && navButtons.length > 0) {
-					navButtons[0].classList.add('active')
-				}
-			} else {
-				// If no value is set in localStorage, apply the 'active' class to the first button
-				if (navButtons.length > 0) {
-					navButtons[0].classList.add('active')
-				}
-			}
-		}
-
-		// Attach the event listener to each nav button and activate the stored nav button
-		navButtons.forEach((button) => {
-			button.addEventListener('click', handleNavButtonClick)
-		})
-
-		// Check and activate the nav button as per localStorage when the page loads
-		activateStoredNavButton()
-
-		// Select all .content-container elements and hide them
-		hideAllContainers()
-
-		// Find all buttons with .language--button class and add event listener to each
-		const languageButtons = document.querySelectorAll('.intro__language--button')
-		languageButtons.forEach((button) => {
-			button.addEventListener('click', (event) => {
-				localStorage.setItem('hideIntro', 'false')
-			})
-		})
-
-		// Check activeIntroSlide and show the corresponding content or if nothing found show the one with id === 'intro'
-		const activeIntroSlide = localStorage.getItem('activeIntroSlide')
-		if (activeIntroSlide) {
-			const contentContainer = document.getElementById(activeIntroSlide)
-			if (contentContainer) {
-				contentContainer.style.display = 'block'
-			} else {
-				document.getElementById('intro').style.display = 'block'
-			}
-		} else {
-			document.getElementById('intro').style.display = 'block'
-		}
+		initOverlay(event)
 	})
-</script>
 
-<script>
 	document.addEventListener('DOMContentLoaded', (event) => {
-		// Select all elements with the class 'nav-button'
-		const navButtons = document.querySelectorAll('.nav-button')
-
-		// Function to remove 'active' class from all nav buttons
-		function removeAllActiveClasses() {
-			navButtons.forEach((button) => {
-				button.classList.remove('active')
-			})
-		}
-
-		function hideAllContainers() {
-			// Select all .content-container elements and hide them
-			const contentContainers = document.querySelectorAll('.content-container')
-			contentContainers.forEach((container) => {
-				// @ts-ignore
-				container.style.display = 'none'
-			})
-		}
-
-		// Function to handle click events on nav buttons
-		function handleNavButtonClick(event) {
-			// Prevent default action
-			event.preventDefault()
-
-			// Remove 'active' class from all nav buttons first
-			removeAllActiveClasses()
-
-			// Add 'active' class to the clicked nav button
-			event.currentTarget.classList.add('active')
-
-			// Get the 'data-content' attribute of the clicked element
-			const content = event.currentTarget.getAttribute('data-content')
-
-			// Save the 'content' value to localStorage
-			localStorage.setItem('activeIntroSlide', content)
-
-			// Optionally, log the saved value to confirm it's working
-			console.log('Active Intro Slide set to:', content)
-
-			// Select element with id === content and show it
-			hideAllContainers()
-			const contentContainer = document.getElementById(content)
-			contentContainer.style.display = 'block'
-		}
-
-		// Function to activate the nav button based on localStorage or default to first button
-		function activateStoredNavButton() {
-			const activeIntroSlide = localStorage.getItem('activeIntroSlide')
-			if (activeIntroSlide) {
-				let found = false
-				navButtons.forEach((button) => {
-					if (button.getAttribute('data-content') === activeIntroSlide) {
-						button.classList.add('active')
-						found = true
-					}
-				})
-				// If no matching button is found, activate the first button
-				if (!found && navButtons.length > 0) {
-					navButtons[0].classList.add('active')
-				}
-			} else {
-				// If no value is set in localStorage, apply the 'active' class to the first button
-				if (navButtons.length > 0) {
-					navButtons[0].classList.add('active')
-				}
-			}
-		}
-
-		// Attach the event listener to each nav button and activate the stored nav button
-		navButtons.forEach((button) => {
-			button.addEventListener('click', handleNavButtonClick)
-		})
-
-		// Check and activate the nav button as per localStorage when the page loads
-		activateStoredNavButton()
-
-		// Select all .content-container elements and hide them
-		hideAllContainers()
-
-		// Find all buttons with .language--button class and add event listener to each
-		const languageButtons = document.querySelectorAll('.intro__language--button')
-		languageButtons.forEach((button) => {
-			button.addEventListener('click', (event) => {
-				localStorage.setItem('hideIntro', 'false')
-			})
-		})
-
-		// Check activeIntroSlide and show the corresponding content or if nothing found show the one with id === 'intro'
-		const activeIntroSlide = localStorage.getItem('activeIntroSlide')
-		if (activeIntroSlide) {
-			const contentContainer = document.getElementById(activeIntroSlide)
-			if (contentContainer) {
-				contentContainer.style.display = 'block'
-			} else {
-				document.getElementById('intro').style.display = 'block'
-			}
-		} else {
-			document.getElementById('intro').style.display = 'block'
-		}
+		initOverlay(event)
 	})
 </script>

@@ -6,16 +6,36 @@ const { lang } = Astro.props
 	lang === 'en' ? (
 		<div class='w-full'>
 			<h2 class='text-white font-sans font-bold tracking-tight text-xl sm:text-2xl text-left'>Credits</h2>
-			<ul class='w-full text-white'>
-				<li>Direction and editing: Annie Slemrod</li>
-				<li>Project coordination: Nuha al-Junaid</li>
-				<li>
-					Translation: Suha al-Junaid and <a href='https://natakallam.com/'>Natakallam</a>
-				</li>
-				<li>Design and web development: Marc Fehr</li>
-				<li>Audience production: Whitney Patterson</li>
-				<li>Events: Matt Crook</li>
-			</ul>
+			<table class='min-w-full divide-y divide-gray-300 text-white'>
+				<tbody class='divide-y divide-gray-200'>
+					<tr>
+						<td class='whitespace-nowrap py-4 pl-4 pr-3 text-base text-zinc-100 sm:pl-0'>Direction and editing:</td>
+						<td class='whitespace-nowrap px-3 py-4 text-base text-white font-bold'>Annie Slemrod</td>
+					</tr>
+					<tr>
+						<td class='whitespace-nowrap py-4 pl-4 pr-3 text-base text-zinc-100 sm:pl-0'>Project coordination:</td>
+						<td class='whitespace-nowrap px-3 py-4 text-base text-white font-bold'>Nuha al-Junaid</td>
+					</tr>
+					<tr>
+						<td class='whitespace-nowrap py-4 pl-4 pr-3 text-base text-zinc-100 sm:pl-0'>Translation:</td>
+						<td class='whitespace-nowrap px-3 py-4 text-base text-white font-bold'>
+							Suha al-Junaid and <a href='https://natakallam.com/'>Natakallam</a>
+						</td>
+						<tr>
+							<td class='whitespace-nowrap py-4 pl-4 pr-3 text-base text-zinc-100 sm:pl-0'>Design and web development:</td>
+							<td class='whitespace-nowrap px-3 py-4 text-base text-white font-bold'>Marc Fehr</td>
+						</tr>
+						<tr>
+							<td class='whitespace-nowrap py-4 pl-4 pr-3 text-base text-zinc-100 sm:pl-0'>Audience production:</td>
+							<td class='whitespace-nowrap px-3 py-4 text-base text-white font-bold'>Whitney Patterson</td>
+						</tr>
+						<tr>
+							<td class='whitespace-nowrap py-4 pl-4 pr-3 text-base text-zinc-100 sm:pl-0'>Events:</td>
+							<td class='whitespace-nowrap px-3 py-4 text-base text-white font-bold'>Matt Crook</td>
+						</tr>
+					</tr>
+				</tbody>
+			</table>
 		</div>
 	) : (
 		<div class='w-full'>
@@ -30,6 +50,36 @@ const { lang } = Astro.props
 				<li>إنتاج محتوى الجمهور: ويتني باترسن</li>
 				<li>الفعاليات: مات كروك</li>
 			</ul>
+      <table class='min-w-full divide-y divide-gray-300 text-white' dir="rtl">
+				<tbody class='divide-y divide-gray-200'>
+					<tr>
+						<td class='whitespace-nowrap py-4 pl-4 pr-3 text-base text-zinc-100 sm:pl-0'>الإخراج والمونتاج:</td>
+						<td class='whitespace-nowrap px-3 py-4 text-base text-white font-bold'>آني سليمرود</td>
+					</tr>
+					<tr>
+						<td class='whitespace-nowrap py-4 pl-4 pr-3 text-base text-zinc-100 sm:pl-0'>تنسيق المشروع:</td>
+						<td class='whitespace-nowrap px-3 py-4 text-base text-white font-bold'>نهى الجنيد</td>
+					</tr>
+					<tr>
+						<td class='whitespace-nowrap py-4 pl-4 pr-3 text-base text-zinc-100 sm:pl-0'>الترجمة:</td>
+						<td class='whitespace-nowrap px-3 py-4 text-base text-white font-bold'>
+							الترجمة: سهى الجنيد ومؤسسة <a href="https://natakallam.com/">«نـتكلّم»</a>
+						</td>
+						<tr>
+							<td class='whitespace-nowrap py-4 pl-4 pr-3 text-base text-zinc-100 sm:pl-0'>إنشاء الموقع الإلكتروني:</td>
+							<td class='whitespace-nowrap px-3 py-4 text-base text-white font-bold'>مارك فير</td>
+						</tr>
+						<tr>
+							<td class='whitespace-nowrap py-4 pl-4 pr-3 text-base text-zinc-100 sm:pl-0'>إنتاج محتوى الجمهور:</td>
+							<td class='whitespace-nowrap px-3 py-4 text-base text-white font-bold'>ويتني باترسن</td>
+						</tr>
+						<tr>
+							<td class='whitespace-nowrap py-4 pl-4 pr-3 text-base text-zinc-100 sm:pl-0'>الفعاليات:</td>
+							<td class='whitespace-nowrap px-3 py-4 text-base text-white font-bold'>مات كروك</td>
+						</tr>
+					</tr>
+				</tbody>
+			</table>
 		</div>
 	)
 }

@@ -519,6 +519,8 @@ if (!lang) {
 
 		// Handle mouse wheel event
 		onMouseWheel(event) {
+      if (localStorage.getItem('menuOpen') === 'true') return
+
 			const deltaY = event.deltaY
 
 			// Update the grid position based on the direction of the mouse wheel scroll
@@ -612,7 +614,7 @@ if (!lang) {
 					this.recentIDs.delete(oldestId)
 				}
 
-				console.log(this.recentIDs.size)
+				// console.log(this.recentIDs.size)
 
 				return selectedStory
 			}
