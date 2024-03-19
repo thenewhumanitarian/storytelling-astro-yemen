@@ -47,8 +47,8 @@ async function processWhatsAppAttachments(entryID, files, basePath) {
 
       // Example usage
       const outputFilePath = newFilePath
-      const maxWidth = 640; // For example, 800 pixels in width
-      const quality = 25; // CRF value, where a lower number means better quality
+      const maxWidth = 800; // For example, 800 pixels in width
+      const quality = 23; // CRF value, where a lower number means better quality
 
       await resizeVideo(sourceFilePath, outputFilePath, maxWidth, quality)
         .then(resizedFilePath => console.log(`Resized video saved to: ${resizedFilePath}`))
