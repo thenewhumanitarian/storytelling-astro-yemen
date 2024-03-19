@@ -45,14 +45,14 @@ const navButtonClasses =
 					})
 				}
 			</nav>
-			<div class='pb-5 text-center'>
+			<div class='text-center'>
 				<LanguageButtons classNames='intro__language--button' links={{ en: '/en/grid', ar: '/ar/grid' }} />
 			</div>
 		</div>
 	</div>
 
 	<!-- Body content -->
-	<div class='flex-grow overflow-auto border-2 bg-zinc-950'>
+	<div class='overflow-auto border-2 bg-zinc-950 max-w-4xl mx-auto w-full'>
 		<section class='flex flex-col cursor-default items-center justify-center'>
 			<!-- Body content here -->
 			<Pergament lang={lang || 'en'} classNames='p-4 text-black h-full rounded-xs overflow-y-auto border-none w-full'>
