@@ -33,7 +33,8 @@
 		const menuOverlayNavWrapper = document.getElementById('menu-overlay--nav-wrapper')
 		const headerLogo = document.getElementById('overlay-logo')
 
-		console.log(e.target)
+		// Scroll to top of scrollable container
+		document.getElementById('scrollable-container').scrollTop = 0
 
 		if (
 			e.target === menuOverlay ||
@@ -54,6 +55,28 @@
 		}
 
 		localStorage.setItem('menuOpen', 'false')
+
+		// Check if e.target has class nav-button
+		if (!e.target.classList.contains('nav-button')) {
+			// Hide all .content-container elements
+			const contentContainers = document.querySelectorAll('.content-container')
+			contentContainers.forEach((el) => {
+				el.style.display = 'none'
+			})
+
+			// Show #intro element
+			const intro = document.getElementById('intro')
+			intro.style.display = 'block'
+
+			// Select all elements with the class 'nav-button' and remove active class
+			const navButtons = document.querySelectorAll('.nav-button')
+			navButtons.forEach((button) => {
+				button.classList.remove('active')
+			})
+
+			// Add active class to the first nav button
+			navButtons[0].classList.add('active')
+		}
 	}
 
 	function initMenuOverlay() {

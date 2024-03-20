@@ -22,17 +22,23 @@ if (!lang) {
 }
 
 const navButtonClasses =
-	'text-white bg-black px-3 py-1 border-white border-2 font-bold text-base hover:text-black transition-colors cursor-pointer hover:bg-white'
-  // hover:bg-white hover:text-black font-bold border-2 cursor-pointer font-normal px-3 py-1 text-white menu-close-button menu-close-button--text transition-colors
+	'text-white bg-black px-3 py-1 border-white border sm:border-2 font-normal sm:font-semibold text-base hover:text-black transition-colors cursor-pointer hover:bg-white'
+// hover:bg-white hover:text-black font-bold border-2 cursor-pointer font-normal px-3 py-1 text-white menu-close-button menu-close-button--text transition-colors
 ---
 
 <div id='menu-overlay' class='flex flex-col min-h-screen bg-black p-5 sm:p-8 gap-y-5 sm:gap-y-8' transition:persist>
-  <div class='fixed top-0 left-0 w-screen h-screen -z-1 pointer-events-none' id='stars' transition:persist></div>
+	<!-- City and stars -->
+	<div class='fixed top-0 left-0 w-screen h-screen -z-1 pointer-events-none' id='stars' transition:persist></div>
 	<div id='city' class='top-0 left-0 fixed w-full h-full -z-1'></div>
+
 	<!-- Menu section -->
 	<div class='flex flex-col items-center justify-center gap-y-5' id='menu-overlay--nav-wrapper'>
+		<!-- Logo here -->
+		<div class='w-40 sm:w-56 md:w-72 h-auto'>
+			<Logo id='overlay-logo' />
+		</div>
+
 		<!-- Menu content here -->
-		<div class='w-56 sm:w-80 md:w-96 h-auto'><Logo id="overlay-logo" /></div>
 		<div class='flex flex-col items-center justify-center gap-x-2 sm:gap-x-5 gap-y-5 w-full z-50' id='menu-overlay--nav'>
 			<nav class='flex flex-row text-right items-center sm:items-center gap-x-5'>
 				{
@@ -53,17 +59,17 @@ const navButtonClasses =
 	</div>
 
 	<!-- Body content -->
-	<div class='overflow-auto border-2 bg-zinc-950 max-w-4xl mx-auto w-full'>
+	<div class='max-h-1/2 sm:max-h-none overflow-y-auto border-2 bg-zinc-950 max-w-4xl mx-auto w-full' id="scrollable-container">
 		<section class='flex flex-col cursor-default items-center justify-center'>
 			<!-- Body content here -->
-			<Pergament lang={lang || 'en'} classNames='p-4 text-black h-full rounded-xs overflow-y-auto border-none w-full'>
-				<div class='content-container' id='intro'>
+			<Pergament lang={lang || 'en'} classNames='p-4 text-black h-full rounded-xs border-none w-full'>
+				<div class='content-container intro' id='intro'>
 					<Intro lang={lang} />
 				</div>
-				<div class='content-container' id='about'>
+				<div class='content-container about' id='about'>
 					<About lang={lang} />
 				</div>
-				<div class='content-container' id='credits'>
+				<div class='content-container credits' id='credits'>
 					<Credits lang={lang} />
 				</div>
 			</Pergament>
@@ -71,7 +77,7 @@ const navButtonClasses =
 	</div>
 
 	<!-- Close button -->
-	<div class='self-center' id='close-button--text'>
+	<div class='block self-center' id='close-button--text'>
 		<div
 			class='hover:bg-white hover:text-black font-bold border-2 cursor-pointer font-normal px-3 py-1 text-white menu-close-button menu-close-button--text transition-colors'
 		>
@@ -81,7 +87,7 @@ const navButtonClasses =
 
 	{
 		lang === 'ar' ? (
-			<div class='absolute top-1 left-7 w-8 h-8 cursor-pointer text-white hover:text-burgundy transition-colors menu-close-button z-50'>
+			<div class='absolute -top-1 sm:top-1 left-7 w-8 h-8 cursor-pointer text-white hover:text-burgundy transition-colors menu-close-button z-50'>
 				<svg class='fill-current' width='100%' height='90' viewBox='0 0 90 90' fill='none' xmlns='http://www.w3.org/2000/svg'>
 					<path
 						class='fill-current'
@@ -92,7 +98,7 @@ const navButtonClasses =
 				</svg>
 			</div>
 		) : (
-			<div class='absolute top-1 right-7 w-8 h-8 cursor-pointer text-white hover:text-burgundy transition-colors menu-close-button z-[9999]'>
+			<div class='absolute -top-1 sm:top-1 right-7 w-8 h-8 cursor-pointer text-white hover:text-burgundy transition-colors menu-close-button z-[9999]'>
 				<svg class='fill-current' width='100%' height='90' viewBox='0 0 90 90' fill='none' xmlns='http://www.w3.org/2000/svg'>
 					<path
 						class='fill-current'
@@ -178,12 +184,18 @@ const navButtonClasses =
 			const content = event.currentTarget.getAttribute('data-content')
 
 			// Optionally, log the saved value to confirm it's working
-			console.log('Active Intro Slide set to:', content)
+			// console.log('Active Intro Slide set to:', content)
 
 			// Select element with id === content and show it
 			hideAllContainers()
 			const contentContainer = document.getElementById(content)
 			contentContainer.style.display = 'block'
+
+			// Scroll the #pergament container to the top
+			const pergamentContainer = document.querySelector('#pergament')
+			if (pergamentContainer) {
+				pergamentContainer.scrollTop = 0
+			}
 		}
 
 		// Function to activate the nav button based on localStorage or default to first button

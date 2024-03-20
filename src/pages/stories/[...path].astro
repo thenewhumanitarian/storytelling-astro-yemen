@@ -323,11 +323,23 @@ const hasAudioFiles = processedAudioFiles.length > 0
 	}
 </style>
 
-<script define:vars={{ lang: lang, slugEN: story.slugs.en, slugAR: story.slugs.ar }} is:inline>
+<!-- HammerJS -->
+<script is:inline src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/204379/hammer.min.js'></script>
+
+<script define:vars={{ lang: lang, slugEN: story.slugs.en, slugAR: story.slugs.ar, prevStorySlug, nextStorySlug }} is:inline>
 	// Retrieve the read articles array from localStorage or initialize a new one
 	let readArticles = JSON.parse(localStorage.getItem('readArticles')) || []
 
 	// console.log(slugEN)
+
+	// Keypress events for arrow left and arrow right to navigate to previous and next stories
+	document.addEventListener('keydown', (e) => {
+		if (e.key === 'ArrowLeft') {
+			window.location = `/stories/${lang}/${prevStorySlug}`
+		} else if (e.key === 'ArrowRight') {
+			window.location = `/stories/${lang}/${nextStorySlug}`
+		}
+	})
 
 	if (lang === 'en') {
 		// Check if the current article's slug is not in the array
@@ -375,12 +387,13 @@ const hasAudioFiles = processedAudioFiles.length > 0
 	document.addEventListener('astro:after-swap', changeOverviewButtonHref)
 
 	/* Adds twinkling stars */
-	var NUMBER_OF_STARS = 75
+	var NUMBER_OF_STARS = 100
+
 	if (window.innerWidth <= 1024) {
-		NUMBER_OF_STARS = 50
+		NUMBER_OF_STARS = 75
 	}
 	if (window.innerWidth <= 500) {
-		NUMBER_OF_STARS = 15
+		NUMBER_OF_STARS = 25
 	}
 
 	var addPulse = function (element) {
@@ -395,7 +408,7 @@ const hasAudioFiles = processedAudioFiles.length > 0
 	var starAnimationClassesArray = ['one', 'two', 'three', 'four', 'five']
 
 	function createStars() {
-		console.log(`adding ${NUMBER_OF_STARS} stars`)
+		// console.log(`adding ${NUMBER_OF_STARS} stars`)
 
 		for (var jess = 0; jess < NUMBER_OF_STARS; jess++) {
 			setTimeout(() => {

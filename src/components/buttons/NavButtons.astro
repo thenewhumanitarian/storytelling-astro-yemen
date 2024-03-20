@@ -91,10 +91,12 @@ const className = `transition-colors duration-150 relative inline-flex gap-x-2 i
 		// Read localStorage.getItem('currentView') and adjust the overview button accordingly, if it exists
 		const currentView = localStorage.getItem('currentView')
 		const overviewButton = document.getElementById('overview-button')
-		if (currentView === 'list' && overviewButton) {
-			overviewButton.setAttribute('href', `/${lang}/list`)
-		} else {
-			overviewButton.setAttribute('href', `/${lang}/grid`)
+		if (overviewButton) {
+			if (currentView === 'list' && overviewButton) {
+				overviewButton.setAttribute('href', `/${lang}/list`)
+			} else {
+				overviewButton.setAttribute('href', `/${lang}/grid`)
+			}
 		}
 	})
 </script>

@@ -29,7 +29,7 @@ const { src, start, end, plays, text, lang } = Astro.props as Props
 {/* Add Soundcite to the page */}
 <script is:inline define:vars={{ lang }}>
 	document.addEventListener('astro:before-swap', () => {
-		console.log('astro:after-swap from Soundcite.astro')
+		// console.log('astro:after-swap from Soundcite.astro')
 
 		if (window.soundcite) {
 			// Delete window.soundcite to avoid conflicts
@@ -40,7 +40,7 @@ const { src, start, end, plays, text, lang } = Astro.props as Props
 	})
 
 	document.addEventListener('astro:after-swap', () => {
-		console.log('astro:after-swap from Soundcite.astro')
+		// console.log('astro:after-swap from Soundcite.astro')
 
 		/* soundcite - v0.5.1 - 2017-07-10
 		 * Copyright (c) 2017 Tyler J. Fisher and Northwestern University Knight Lab
@@ -455,7 +455,7 @@ const { src, start, end, plays, text, lang } = Astro.props as Props
 	})
 
 	document.addEventListener('astro:page-load', () => {
-		console.log('astro:page-load from Soundcite.astro')
+		// console.log('astro:page-load from Soundcite.astro')
 
 		/* soundcite - v0.5.1 - 2017-07-10
 		 * Copyright (c) 2017 Tyler J. Fisher and Northwestern University Knight Lab
@@ -874,7 +874,7 @@ const { src, start, end, plays, text, lang } = Astro.props as Props
 				soundcite = undefined
 				window.soundcite = undefined
 			} else {
-				console.log(`${soundcite.clips.length} ${soundcite.clips.length === 1 ? 'clip' : 'clips'} found`)
+				// console.log(`${soundcite.clips.length} ${soundcite.clips.length === 1 ? 'clip' : 'clips'} found`)
 			}
 		})
 	})
