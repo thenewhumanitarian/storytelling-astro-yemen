@@ -120,6 +120,7 @@
 ## Scraper
 
 * DONE Check if those with bespoke teaser/preview images do actually work when scraping the data
+* Make sure images get resized to sensible sizes before storing in attachments folder
 
 ## Social share
 
