@@ -141,3 +141,6 @@
 * Tags for video and audio would be great
 * Arabic description on og:description doesn't work
 * Fallback social debug can be both in English
+* New WhatsApp folder
+* Arrows left right being square
+* Credits back to list and now make responsive
