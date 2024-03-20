@@ -126,6 +126,7 @@
 ## Social share
 
 * Meta data in Arabic showing weird characters in description...
+  * Fallback social debug can be both in English
 
 # Notes from call on 20 March 2024
 
@@ -135,12 +136,12 @@
 * Open Natakallam on new _blank tab
 * Scroll to top not on click 
 * Integration of Mailchimp with Wisepops popup missing
-* URL we were sharing
+* Shuffle in tags and list view (optional)
 * Soundcite not Arabic anymore
-* Shuffle in tags and list view
-* Tags for video and audio would be great
+* Tags for video and audio would be great -> Annie is adding tags
 * Arabic description on og:description doesn't work
-* Fallback social debug can be both in English
 * New WhatsApp folder
 * Arrows left right being square
 * Credits back to list and now make responsive
+* URL we were sharing
+* Metadata: Title, Subhed, Summary for stub article
