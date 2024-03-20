@@ -22,7 +22,7 @@ if (!lang) {
 }
 
 const navButtonClasses =
-	'text-white bg-black px-3 py-1 border-white border sm:border-2 font-bold text-base hover:text-black transition-colors cursor-pointer hover:bg-white'
+	'text-white bg-black px-3 py-1 border-white border sm:border-2 font-semibold text-base hover:text-black transition-colors cursor-pointer hover:bg-white'
 // hover:bg-white hover:text-black font-bold border-2 cursor-pointer font-normal px-3 py-1 text-white menu-close-button menu-close-button--text transition-colors
 ---
 
@@ -32,18 +32,20 @@ const navButtonClasses =
 	<div id='city' class='top-0 left-0 fixed w-full h-full -z-1'></div>
 
 	<!-- Menu section -->
-	<div class='flex flex-col items-center justify-center gap-y-5' id='menu-overlay--nav-wrapper'>
+	<div class='flex flex-col items-center justify-center gap-y-5 pt-0' id='menu-overlay--nav-wrapper'>
 		<!-- Logo here -->
-		<div class='w-40 sm:w-56 md:w-72 h-auto'>
+		<div class='w-56 sm:w-56 md:w-72 h-auto pb-2 sm:pb-4'>
 			<Logo id='overlay-logo' />
 		</div>
 
+		<LanguageButtons alwaysVisible={true} classNames='intro__language--button' links={{ en: '/en/grid', ar: '/ar/grid' }} />
+
 		<!-- Menu content here -->
-		<div class='flex flex-col items-center justify-center gap-x-2 sm:gap-x-5 gap-y-5 w-full z-50 pt-5 sm:pt-0' id='menu-overlay--nav'>
-			<nav class='flex flex-row text-right items-center sm:items-center gap-x-5'>
+		<div class='flex flex-col items-center justify-center w-full z-50 pt-2 sm:pt-0' id='menu-overlay--nav'>
+			<nav class='flex flex-row text-right items-center sm:items-center gap-x-3 sm:gap-x-3'>
 				{
 					static_pages.links[lang].map((page, i) => {
-						const { className, href, text } = page
+						const { className, text } = page
 						return (
 							<span data-content={page.id} class={`nav-button ${navButtonClasses} ${className}`} data-astro-reload>
 								{text}
@@ -52,14 +54,15 @@ const navButtonClasses =
 					})
 				}
 			</nav>
-			<div class='text-center'>
-				<LanguageButtons classNames='intro__language--button' links={{ en: '/en/grid', ar: '/ar/grid' }} />
-			</div>
 		</div>
 	</div>
 
 	<!-- Body content -->
-	<div class='max-h-1/2 sm:max-h-none overflow-y-auto border-2 bg-zinc-950 max-w-4xl mx-auto w-full' id="scrollable-container">
+	<div
+		class='max-h-[50vh] sm:max-h-none overflow-y-auto border-2 bg-zinc-900 max-w-4xl mx-auto w-full'
+		id='scrollable-container'
+		style='height: -webkit-fill-available;'
+	>
 		<section class='flex flex-col cursor-default items-center justify-center'>
 			<!-- Body content here -->
 			<Pergament lang={lang || 'en'} classNames='p-4 text-black h-full rounded-xs border-none w-full'>
@@ -77,9 +80,9 @@ const navButtonClasses =
 	</div>
 
 	<!-- Close button -->
-	<div class='block self-center' id='close-button--text'>
+	<div class='block self-center mt-1' id='close-button--text'>
 		<div
-			class='hover:bg-white hover:text-black font-bold border-2 cursor-pointer font-normal px-3 py-1 text-white menu-close-button menu-close-button--text transition-colors'
+			class='hover:bg-white hover:text-black border-2 cursor-pointer font-semibold px-3 py-1 text-white menu-close-button menu-close-button--text transition-colors'
 		>
 			{translations.close[lang]}
 		</div>

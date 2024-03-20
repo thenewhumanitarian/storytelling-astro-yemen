@@ -46,11 +46,11 @@ const formattedTag = formatTagName(tag) || tag + '(NOT FOUND)'
 >
 	{
 		translations.tags[formattedTag] ? (
-			<span class='block text-sm sm:text-base sm:font-bold bg-transparent group-hover:text-black border-transparent text-zinc-200'>
+			<span class='block text-sm sm:text-base font-semibold bg-transparent group-hover:text-black border-transparent text-zinc-200'>
 				{translations.tags[formattedTag][lang]}
 			</span>
 		) : (
-			<span class='block text-sm sm:text-base sm:font-bold bg-transparent group-hover:text-black border-transparent text-zinc-200'>
+			<span class='block text-sm sm:text-base font-semibold bg-transparent group-hover:text-black border-transparent text-zinc-200'>
 				{formattedTag} ERROR
 			</span>
 		)
