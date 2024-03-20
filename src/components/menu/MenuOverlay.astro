@@ -22,7 +22,7 @@ if (!lang) {
 }
 
 const navButtonClasses =
-	'text-white bg-black px-3 py-1 border-white border sm:border-2 font-normal sm:font-semibold text-base hover:text-black transition-colors cursor-pointer hover:bg-white'
+	'text-white bg-black px-3 py-1 border-white border sm:border-2 font-bold text-base hover:text-black transition-colors cursor-pointer hover:bg-white'
 // hover:bg-white hover:text-black font-bold border-2 cursor-pointer font-normal px-3 py-1 text-white menu-close-button menu-close-button--text transition-colors
 ---
 
@@ -39,7 +39,7 @@ const navButtonClasses =
 		</div>
 
 		<!-- Menu content here -->
-		<div class='flex flex-col items-center justify-center gap-x-2 sm:gap-x-5 gap-y-5 w-full z-50' id='menu-overlay--nav'>
+		<div class='flex flex-col items-center justify-center gap-x-2 sm:gap-x-5 gap-y-5 w-full z-50 pt-5 sm:pt-0' id='menu-overlay--nav'>
 			<nav class='flex flex-row text-right items-center sm:items-center gap-x-5'>
 				{
 					static_pages.links[lang].map((page, i) => {

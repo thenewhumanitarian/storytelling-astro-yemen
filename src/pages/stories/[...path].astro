@@ -330,8 +330,6 @@ const hasAudioFiles = processedAudioFiles.length > 0
 	// Retrieve the read articles array from localStorage or initialize a new one
 	let readArticles = JSON.parse(localStorage.getItem('readArticles')) || []
 
-	// console.log(slugEN)
-
 	// Keypress events for arrow left and arrow right to navigate to previous and next stories
 	document.addEventListener('keydown', (e) => {
 		if (e.key === 'ArrowLeft') {
@@ -340,6 +338,22 @@ const hasAudioFiles = processedAudioFiles.length > 0
 			window.location = `/stories/${lang}/${nextStorySlug}`
 		}
 	})
+
+	// Add event listeners for using Hammer JS to swipe left and right for changing stories
+	const storyWrapper = document.getElementById('story-wrapper')
+	if (storyWrapper) {
+		const mc = new Hammer(storyWrapper)
+
+		// Handling swipe right - Go to previous story
+		mc.on('swiperight', function () {
+			window.location.href = `/stories/${lang}/${prevStorySlug}`
+		})
+
+		// Handling swipe left - Go to next story
+		mc.on('swipeleft', function () {
+			window.location.href = `/stories/${lang}/${nextStorySlug}`
+		})
+	}
 
 	if (lang === 'en') {
 		// Check if the current article's slug is not in the array
