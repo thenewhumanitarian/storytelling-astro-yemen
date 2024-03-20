@@ -74,10 +74,10 @@
 * DONE Share/meta for SEO: Title is Yemen Listening Project (and Arabic) and description: Title of story
 * DONE Detail page if 2 or fewer attachments then on left side of text, above each other
 * DONE Detail page if 3 or more attachements then keep as is now with flowing left-to-right
-* Highlighted for the grid
-* Alternative for "All stories"?
+* DONE Highlighted for the grid
+* DONE Alternative for "All stories"?
 * DONE Make a plan for the soundcite embeds
-* Create embeddable for Spotlight on homepage? Or use Spotlight for individual stories?
+* Create embeddable for Spotlight on homepage? Or use Spotlight for individual stories? (optional)
 * Stub article to be done
 
 # Deadline is end of next week / 9 March 2024
@@ -107,7 +107,7 @@
 * DONE Block body scroll when static pages visible
 * Links should not always go to /lang/grid instead stay on same side when changing language inside of overlay
 * DONE Links and logo should not move!
-* Redesign the Wisepops section
+* DONE Redesign the Wisepops section
 
 ## Detail pages
 
@@ -116,6 +116,7 @@
 * DONE Check if all videos and photos are loading...
 * DONE The Soundcite works in English but seems to be only for the first paragraph? Looking at 1038 as an example
 * DONE Soundcite in Arabic works too, same issue. is it possible for the movement to be right to left on Arabic? That would make more logical sense
+* Check with Matt what exactly Wisepops does...
 
 ## Scraper
 
@@ -125,3 +126,18 @@
 ## Social share
 
 * Meta data in Arabic showing weird characters in description...
+
+# Notes from call on 20 March 2024
+
+* This line must not be fat:
+  يمكنك العثور على جميع مراحل تغطية وكالة «ذا نيو هيومانيترين» للحرب والأزمة الإنسانية في اليمن هنا.
+* Why wasn’t every story published? -> Must be Arabic
+* Open Natakallam on new _blank tab
+* Scroll to top not on click 
+* Integration of Mailchimp with Wisepops popup missing
+* URL we were sharing
+* Soundcite not Arabic anymore
+* Shuffle in tags and list view
+* Tags for video and audio would be great
+* Arabic description on og:description doesn't work
+* Fallback social debug can be both in English
