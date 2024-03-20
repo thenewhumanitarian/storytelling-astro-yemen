@@ -145,3 +145,4 @@
 * Credits back to list and now make responsive
 * URL we were sharing
 * Metadata: Title, Subhed, Summary for stub article
+* Rule to only show real photos every now and then in between puzzle imgs (optional)

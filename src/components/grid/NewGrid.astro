@@ -758,10 +758,14 @@ if (!lang) {
 		overflow: hidden;
 		position: absolute;
 		aspect-ratio: 1/1;
-		border: 3px solid rgba(255,255,255,0.1);
+		border: 3px solid rgba(255, 255, 255, 0.1);
 		opacity: 1;
 		transition: opacity 0.5s;
 		will-change: transform, opacity;
+
+		@media screen and (max-width: 640px) {
+			border: 2px solid #666;
+		}
 
 		&.highlighted {
 			&:not(:hover) {
@@ -769,7 +773,7 @@ if (!lang) {
 			}
 
 			h2 {
-        display: inline;
+				display: inline;
 				width: auto;
 				text-shadow: none;
 				box-decoration-break: clone;
@@ -799,13 +803,13 @@ if (!lang) {
 		cursor: move;
 	}
 
-  .card {
-    .shader {
+	.card {
+		.shader {
 			opacity: 0.5;
 			transition: opacity 0.5s;
 			will-change: opacity;
-    }
-  }
+		}
+	}
 
 	.card:hover {
 		opacity: 1;
@@ -814,6 +818,10 @@ if (!lang) {
 		h2 {
 			text-shadow: inherit;
 			background: transparent;
+		}
+
+		@media screen and (max-width: 640px) {
+			border: 2px solid #444;
 		}
 
 		.shader {
@@ -825,7 +833,7 @@ if (!lang) {
 		}
 
 		@media screen and (max-width: 640px) {
-			border-color: black;
+			// border-color: black;
 		}
 	}
 
