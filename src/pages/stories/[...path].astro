@@ -1,5 +1,5 @@
 ---
-import { ViewTransitions } from 'astro:transitions'
+// import { ViewTransitions } from 'astro:transitions'
 // import ReplacementSwap from 'astro-vtbot/components/ReplacementSwap.astro'
 // import LoadingIndicator from 'astro-vtbot/components/LoadingIndicator.astro'
 // import VtBotDebug from 'astro-vtbot/components/VtBotDebug.astro'
@@ -90,7 +90,7 @@ const hasAudioFiles = processedAudioFiles.length > 0
 	dir={dir}
 >
 	<SEO slot='seo' title={`The Yemen Listening Project`} description={story.story[lang].title} />
-	<ViewTransitions />
+	<!-- <ViewTransitions /> -->
 	<!-- <ReplacementSwap /> -->
 	<!-- <LoadingIndicator /> -->
 
@@ -167,6 +167,10 @@ const hasAudioFiles = processedAudioFiles.length > 0
 <style is:global>
 	body * {
 		color: white;
+	}
+
+	body {
+		overflow-y: scroll;
 	}
 
 	#stars {
@@ -333,8 +337,10 @@ const hasAudioFiles = processedAudioFiles.length > 0
 	// Keypress events for arrow left and arrow right to navigate to previous and next stories
 	document.addEventListener('keydown', (e) => {
 		if (e.key === 'ArrowLeft') {
+      console.log('Arrow left')
 			window.location = `/stories/${lang}/${prevStorySlug}`
 		} else if (e.key === 'ArrowRight') {
+      console.log('Arrow right')
 			window.location = `/stories/${lang}/${nextStorySlug}`
 		}
 	})

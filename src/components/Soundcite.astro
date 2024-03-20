@@ -35,8 +35,6 @@ const { src, start, end, plays, text, lang } = Astro.props as Props
 			// Delete window.soundcite to avoid conflicts
 			delete window.soundcite
 		}
-
-		console.log(window.soundcite)
 	})
 
 	document.addEventListener('astro:after-swap', () => {

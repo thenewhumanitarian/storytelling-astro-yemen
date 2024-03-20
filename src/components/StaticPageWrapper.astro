@@ -1,5 +1,5 @@
 ---
-import { ViewTransitions } from 'astro:transitions'
+// import { ViewTransitions } from 'astro:transitions'
 import Layout from '@layouts/Layout.astro'
 import Pergament from '@components/Pergament.astro'
 // import SEO from '@components/SEO.astro'
@@ -11,7 +11,7 @@ const dir = lang === 'ar' ? 'rtl' : 'ltr'
 ---
 
 <Layout dark title='The Yemen Listening Project' header={true} switchViewButtons={false} overflow={'always'} dir={dir}>
-	<ViewTransitions />
+	<!-- <ViewTransitions /> -->
 	<div class='fixed top-0 left-0 w-screen h-screen -z-1 pointer-events-none' id='stars'></div>
 	<div class='fixed top-0 left-0 w-screen h-screen -z-1 pointer-events-none' id='city'></div>
 	<section id='static-page-content' class='w-full max-w-5xl mx-auto py-6 sm:py-12 mb-8 sm:mb-24 px-4' dir={dir}>
