@@ -106,27 +106,4 @@
 	document.addEventListener('DOMContentLoaded', () => {
 		initMenuOverlay()
 	})
-
-	document.addEventListener('astro:after-swap', () => {
-		initMenuOverlay()
-	})
-
-	document.addEventListener('astro:page-load', () => {
-		initMenuOverlay()
-	})
-
-	document.addEventListener('astro:before-swap', () => {
-		const menuOverlay = document.getElementById('menu-overlay')
-		const menuButton = document.getElementById('menu-button--open')
-		const closeButtons = document.querySelectorAll('.menu-close-button')
-
-		// Remove event listeners
-		closeButtons.forEach((el) => {
-			el.removeEventListener('click', closeMenu)
-		})
-
-		// Correctly remove event listeners using the named functions
-		menuButton.removeEventListener('click', openMenu)
-		menuOverlay.removeEventListener('click', closeMenu)
-	})
 </script>

@@ -147,29 +147,7 @@ if (visibleAttachments.length > 0 && visibleAttachments.length < 4) {
 	const mediaElements = document.querySelectorAll('[data-lightbox]')
 
 	document.addEventListener('DOMContentLoaded', () => {
-		console.log('DOMContentLoaded')
-
-		mediaElements.forEach((el, index) => {
-			el.addEventListener('click', () => {
-				currentIndex = index // Update the current index
-				showLightbox(currentIndex)
-			})
-		})
-	})
-
-	document.addEventListener('astro:before-swap', () => {
-		console.log('astro:before-swap')
-
-		mediaElements.forEach((el, index) => {
-			el.removeEventListener('click', () => {
-				currentIndex = index // Update the current index
-				showLightbox(currentIndex)
-			})
-		})
-	})
-
-	document.addEventListener('astro:after-swap', () => {
-		console.log('astro:after-swap')
+		// console.log('DOMContentLoaded')
 
 		mediaElements.forEach((el, index) => {
 			el.addEventListener('click', () => {

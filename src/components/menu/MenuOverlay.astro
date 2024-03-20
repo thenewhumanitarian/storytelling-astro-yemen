@@ -247,14 +247,6 @@ const navButtonClasses =
 		document.getElementById('intro').style.display = 'block'
 	}
 
-	document.addEventListener('astro:page-load', (event) => {
-		initOverlay(event)
-	})
-
-	document.addEventListener('astro:after-swap', (event) => {
-		initOverlay(event)
-	})
-
 	document.addEventListener('DOMContentLoaded', (event) => {
 		initOverlay(event)
 	})

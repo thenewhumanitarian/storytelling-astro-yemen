@@ -519,7 +519,7 @@ if (!lang) {
 
 		// Handle mouse wheel event
 		onMouseWheel(event) {
-      // if (localStorage.getItem('menuOpen') === 'true') return
+			// if (localStorage.getItem('menuOpen') === 'true') return
 
 			const deltaY = event.deltaY
 
@@ -791,14 +791,9 @@ if (!lang) {
 
 	#js-grid.filter--read .card:not([data-lastread='never']) {
 		opacity: 0.2;
-		/* transition: opacity 0.1s ease-out 1; */
 	}
 
 	#js-grid.filter--read .card:not([data-lastread='never']),
-	#js-grid.filter--read .card:not([data-lastread='never']) * {
-		/* pointer-events: none; */
-	}
-
 	#js-grid.filter--read .card:not([data-lastread='never']):hover,
 	#js-grid.filter--read .card:not([data-lastread='never']):hover * {
 		cursor: move;

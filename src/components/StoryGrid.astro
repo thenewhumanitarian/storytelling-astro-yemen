@@ -231,7 +231,7 @@ if (!lang) {
 	}
 
 	// Window load event
-	window.addEventListener('astro:page-load', function () {
+	window.addEventListener('DOMContentLoaded', function () {
 		filterGridBasedOnLocalStorage()
 
 		const grid = optimalGridDimensions()

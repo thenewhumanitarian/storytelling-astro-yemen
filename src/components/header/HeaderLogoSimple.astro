@@ -196,7 +196,7 @@ if (!lang) {
 </script>
 
 <script define:vars={{ lang }}>
-	document.addEventListener('astro:page-load', () => {
+	document.addEventListener('DOMContentLoaded', () => {
 		// Read localStorage.getItem('currentView') and adjust the overview button accordingly, if it exists
 		const currentView = localStorage.getItem('currentView')
 		const headerLogoButton = document.getElementById('header-button')

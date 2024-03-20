@@ -53,7 +53,7 @@ const { stories, tags, view } = Astro.props
 		<>
 			{/* Story list view */}
 			<div class={`stories-container--tags mt-16 sm:mt-20`} id='stories-container--tags'>
-        <div class='fixed top-0 left-0 w-screen h-screen -z-1 pointer-events-none' id='stars' transition:persist />
+				<div class='fixed top-0 left-0 w-screen h-screen -z-1 pointer-events-none' id='stars' transition:persist />
 				<div id='city' class='top-0 left-0 fixed w-full h-full -z-1' />
 				<div class='w-full text-center'>
 					<slot name='top' />
@@ -215,7 +215,8 @@ const { stories, tags, view } = Astro.props
 </style>
 
 <script define:vars={{ view }}>
-	document.addEventListener('astro:page-load', () => {
+	document.addEventListener('DOMContentLoaded', () => {
+		if (view === 'tags') return
 		localStorage.setItem('currentView', view)
 	})
 </script>
