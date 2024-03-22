@@ -19,18 +19,22 @@ async function processWhatsAppAttachments(entryID, files, basePath) {
     const sourceFilePath = path.join(basePath, `./assets/whatsapp_assets/${entryID}`, file);
     let newFilename;
     let newFilePath;
+    let additionalFilePath; // For ../src/assets
 
     let durationSuffix = '';
     newFilename = `${entryID}-${index + 1}${extension}`;
     newFilePath = path.join(basePath, '../public/attachments/', newFilename);
+    additionalFilePath = path.join(basePath, '../src/assets/', newFilename); // New path for ../src/assets
 
     if (extension === '.heic') {
       // Convert to JPG or handle HEIC files here
       // The conversion logic is omitted for simplicity
       newFilename = `${entryID}-${index + 1}.jpg`;
       newFilePath = path.join(basePath, '../public/attachments/', newFilename);
+      additionalFilePath = path.join(basePath, '../src/assets/', newFilename); // Update for converted file
       // Example of moving/renaming file, adjust according to actual conversion logic
       await fs.rename(sourceFilePath, newFilePath);
+      await fs.copyFile(newFilePath, additionalFilePath); // Copy to ../src/assets
     }
     else if (['.m4a', '.opus', '.ogg', '.wav', '.mp3'].includes(extension)) {
       const durationInSeconds = await getAudioDuration(sourceFilePath);
@@ -39,25 +43,32 @@ async function processWhatsAppAttachments(entryID, files, basePath) {
       durationSuffix = `-${Math.round(durationInSeconds.duration)}s`;
       newFilename = `${entryID}-${index + 1}${durationSuffix}${extension}`;
       newFilePath = path.join(basePath, '../public/attachments/', newFilename);
+      additionalFilePath = path.join(basePath, '../src/assets/', newFilename); // Update for audio files
 
       await fs.copyFile(sourceFilePath, newFilePath);
+      await fs.copyFile(newFilePath, additionalFilePath); // Copy to ../src/assets
     }
     else if (extension === '.mp4' || extension === '.mov') {
       newFilePath = path.join(basePath, '../public/attachments/', newFilename);
+      additionalFilePath = path.join(basePath, '../src/assets/', newFilename); // Path for video files
 
       // Example usage
-      const outputFilePath = newFilePath
+      const outputFilePath = newFilePath;
       const maxWidth = 800; // For example, 800 pixels in width
       const quality = 23; // CRF value, where a lower number means better quality
 
       await resizeVideo(sourceFilePath, outputFilePath, maxWidth, quality)
-        .then(resizedFilePath => console.log(`Resized video saved to: ${resizedFilePath}`))
+        .then(resizedFilePath => {
+          console.log(`Resized video saved to: ${resizedFilePath}`);
+          fs.copyFile(resizedFilePath, additionalFilePath); // Copy resized video to ../src/assets
+        })
         .catch(error => console.error(`Failed to resize video: ${error}`));
 
-      // await fs.copyFile(sourceFilePath, newFilePath);
+      // Note: No need to copy the original file again, it's already moved by resizeVideo
     }
     else {
       await fs.copyFile(sourceFilePath, newFilePath);
+      await fs.copyFile(newFilePath, additionalFilePath); // Copy to ../src/assets
     }
 
     return newFilename;
