@@ -52,7 +52,18 @@ export async function getStaticPaths() {
 const { story } = Astro.props
 
 // Create array out of story.story[lang].content by splitting the string wherever there is an \n
-const contentArray = story.story[lang].content.split('\n')
+// const contentArray = story.story[lang].content
+// 	.split('\n\n') // Split at double newline to get paragraphs
+// 	.map(
+// 		(paragraph) => paragraph.replace(/\n/g, '<br/>'), // Replace single newlines with <br/> within paragraphs
+// 	)
+
+// Break any \n into double line breaks and replace <single-break/> with <br/>
+const contentArray = story.story[lang].content
+	.split('\n') // Split at every newline
+	.map(
+		(paragraph) => paragraph.replace(/<single-break\/>/g, '<br/>'), // Replace <single-break/> with <br/>
+	)
 
 // Find the current story index based on the slug in the provided language
 const currentIndex = stories.findIndex((s) => s.slugs.en === story.slugs.en)
@@ -337,17 +348,17 @@ const hasAudioFiles = processedAudioFiles.length > 0
 	// Keypress events for arrow left and arrow right to navigate to previous and next stories
 	document.addEventListener('keydown', (e) => {
 		if (e.key === 'ArrowLeft') {
-      console.log('Arrow left')
+			console.log('Arrow left')
 			window.location = `/stories/${lang}/${prevStorySlug}`
 		} else if (e.key === 'ArrowRight') {
-      console.log('Arrow right')
+			console.log('Arrow right')
 			window.location = `/stories/${lang}/${nextStorySlug}`
 		}
 	})
 
 	// Add event listeners for using Hammer JS to swipe left and right for changing stories
 	const storyWrapper = document.getElementById('story-wrapper')
-	if (storyWrapper) {
+	if (storyWrapper && 'ontouchstart' in document.documentElement) {
 		const mc = new Hammer(storyWrapper)
 
 		// Handling swipe right - Go to previous story
