@@ -58,14 +58,16 @@ const { story } = Astro.props
 // 		(paragraph) => paragraph.replace(/\n/g, '<br/>'), // Replace single newlines with <br/> within paragraphs
 // 	)
 
-// Replace <single-break/> with <br/> globally
-let modifiedContent = story.story[lang].content.replace(/<single-break\/>/g, '<br/>')
+// Assuming story.story[lang].content contains your text
+const content = story.story[lang].content
 
-modifiedContent = modifiedContent.split('\n').join('<br/><br/>')
+// Step 1: Split into paragraphs at every "\n\n"
+const paragraphs = content.split('\n')
 
-modifiedContent = modifiedContent.replace(/(<br\/><br\/>)+/g, '<br/><br/>')
-
-const contentArray = modifiedContent.split('<br/><br/>')
+// Step 2: Within each paragraph, replace "<single-break/>" with "<br/>", and handle single "\n" by replacing them with "<br/>" as well
+const contentArray = paragraphs.map(
+	(paragraph) => paragraph.replace(/<single-break\/>/g, '<br/>').replace(/\n/g, '<br/>'), // Replace single newlines with <br/>, assuming that's the desired behavior
+)
 
 // Find the current story index based on the slug in the provided language
 const currentIndex = stories.findIndex((s) => s.slugs.en === story.slugs.en)
@@ -157,6 +159,7 @@ const hasAudioFiles = processedAudioFiles.length > 0
 					}
 					{
 						contentArray.map((line) => {
+							console.log(line)
 							if (line !== '') {
 								return <p class='text-white sm:text-lg' set:html={line} />
 							}
