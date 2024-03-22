@@ -29,7 +29,7 @@ const navButtonClasses =
 <div id='menu-overlay' class='flex flex-col min-h-screen bg-black p-5 sm:p-8 gap-y-5 sm:gap-y-8' transition:persist>
 	<!-- City and stars -->
 	<div class='fixed top-0 left-0 w-screen h-screen -z-1 pointer-events-none' id='stars' transition:persist></div>
-	<div id='city' class='top-0 left-0 fixed w-full h-full -z-1'></div>
+	<div id='overlay-city' class='top-0 left-0 fixed w-full h-full -z-1'></div>
 
 	<!-- Menu section -->
 	<div class='flex flex-col items-center justify-center gap-y-5 pt-0' id='menu-overlay--nav-wrapper'>
@@ -174,7 +174,7 @@ const navButtonClasses =
 
 		// Function to handle click events on nav buttons
 		function handleNavButtonClick(event) {
-      console.log(e.target)
+      // console.log(event.target)
 
 			// Prevent default action
 			event.preventDefault()

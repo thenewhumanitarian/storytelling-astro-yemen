@@ -27,21 +27,38 @@
 
 	/* CLOSE MENU */
 	function closeMenu(e) {
+		console.log(e.target)
+
 		const menuOverlay = document.getElementById('menu-overlay')
 		const closeButtonText = document.getElementById('close-button--text')
 		const menuOverlayNav = document.getElementById('menu-overlay--nav')
 		const menuOverlayNavWrapper = document.getElementById('menu-overlay--nav-wrapper')
 		const headerLogo = document.getElementById('overlay-logo')
+		const cityEl = document.getElementById('city')
 
-		// Scroll to top of scrollable container
-		document.getElementById('scrollable-container').scrollTop = 0
-
+		// Scroll to top first
 		if (
 			e.target === menuOverlay ||
 			e.target === closeButtonText ||
 			e.target === menuOverlayNav ||
 			e.target === menuOverlayNavWrapper ||
-			e.target === headerLogo
+			e.target === headerLogo ||
+			e.target === cityEl ||
+			// If e.target has class 'nav-button'
+			e.target.classList.contains('nav-button')
+		) {
+			// Scroll to top of scrollable container
+			document.getElementById('scrollable-container').scrollTop = 0
+		}
+
+		// Handle button events
+		if (
+			e.target === menuOverlay ||
+			e.target === closeButtonText ||
+			e.target === menuOverlayNav ||
+			e.target === menuOverlayNavWrapper ||
+			e.target === headerLogo ||
+			e.target === cityEl
 		) {
 			// Hide menu overlay
 			menuOverlay.style.display = 'none'
@@ -77,8 +94,6 @@
 		}
 
 		localStorage.setItem('menuOpen', 'false')
-
-		console.log(e.target)
 	}
 
 	function initMenuOverlay() {
