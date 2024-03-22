@@ -4,19 +4,19 @@
       {
         "href": "/info/ar/intro",
         "id": "intro",
-        "text": "حول",
+        "text": "مقدمة",
         "className": "navButtonClasses"
       },
       {
         "href": "/info/ar/about",
         "id": "about",
-        "text": "حول",
+        "text": "حول المشروع",
         "className": "navButtonClasses"
       },
       {
         "href": "/info/ar/credits",
         "id": "credits",
-        "text": "الشكر والتقدير",
+        "text": "طاقم العمل",
         "className": "navButtonClasses"
       }
     ],

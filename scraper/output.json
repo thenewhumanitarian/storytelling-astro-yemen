@@ -6,20 +6,20 @@
       "ar": "the-war-destroyed-my-life"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-10.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-10.png"
+      "main": "/images/placeholder_images/puzzle-02.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-02.png"
     },
     "personalInfo": {
       "en": {
         "name": "Riad",
         "surname": "Dahboul",
-        "whereFrom": "Yemen",
+        "whereFrom": "",
         "livingIn": "Sana'a"
       },
       "ar": {
         "name": "رائد",
         "surname": "دهبول",
-        "whereFrom": "اليمن",
+        "whereFrom": "",
         "livingIn": "صنعاء"
       }
     },
@@ -60,8 +60,8 @@
       "ar": "striving-for-an-education"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-06.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-06.jpg"
+      "main": "/images/placeholder_images/puzzle-02.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-02.jpg"
     },
     "personalInfo": {
       "en": {
@@ -177,8 +177,8 @@
       "ar": "hope-is-keeping-me-alive"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-28.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-28.jpg"
+      "main": "/images/placeholder_images/puzzle-20.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-20.png"
     },
     "personalInfo": {
       "en": {
@@ -234,8 +234,8 @@
       "ar": "life-doesnt-stop"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-31.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-31.png"
+      "main": "/images/placeholder_images/puzzle-03.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-03.jpg"
     },
     "personalInfo": {
       "en": {
@@ -291,8 +291,8 @@
       "ar": "i-hoped-it-was-a-cruel-joke"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-19.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-19.png"
+      "main": "/images/placeholder_images/puzzle-04.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-04.jpg"
     },
     "personalInfo": {
       "en": {
@@ -316,7 +316,7 @@
     "story": {
       "en": {
         "title": "\"I hoped it was a cruel joke.\"",
-        "content": "As the conflict escalated, I was ill-prepared, ignorant of the devastating consequences it would have, naively hoping it was a cruel joke. Regrettably, it was an unimaginable truth I was compelled to accept. \nThe misery I witnessed and endured over nine years of sheer horror weighs heavily on my heart. Our nation still bears the burden of political and economic actions that have brought millions to their knees. Luckily I survived, narrowly avoiding the long-lasting trauma that only a few could endure. \nWithin this narrative, there is no love story, no glory, and no tears. Our failure as humans to find a moral alternative to war is a profound shame. It is a testament to the absence of such an alternative, and it is disheartening. \nA story worth telling will emerge only when world leaders, local politicians, arms traders, and all those involved acknowledge their responsibility to compensate the widows, orphans, and victims of this bloodshed. It will be a tale of healing when our air and sea ports reopen, our sovereignty is safeguarded, our economy flourishes, and the memory of our fallen is honoured. Justice must prevail as criminals are held accountable and duly punished. Finally, a promise must be made that such horrors shall not befall us again, at least for a substantial period of time. \nOnly then, when these conditions are met, can a story emerge from the ashes—a story of resilience, hope, and the triumph of humanity over the ravages of war."
+        "content": "As the conflict escalated, I was ill-prepared, ignorant of the devastating consequences it would have, naively hoping it was a cruel joke. Regrettably, it was an unimaginable truth that I was compelled to accept. \nThe misery I witnessed and endured over nine years of sheer horror weighs heavily on my heart. Our nation still bears the burden of political and economic actions that have brought millions to their knees. Luckily I survived, narrowly avoiding the long-lasting trauma that only a few could endure. \nWithin this narrative, there is no love story, no glory, and no tears. Our failure as humans to find a moral alternative to war is a profound shame. It is a testament to the absence of such an alternative, and it is disheartening. \nA story worth telling will emerge only when world leaders, local politicians, arms traders, and all those involved acknowledge their responsibility and compensate the widows, orphans, and victims of this bloodshed. It will be a tale of healing when our air and sea ports reopen, our sovereignty is safeguarded, our economy flourishes, and the memory of our fallen is honoured. Justice must prevail, as criminals are held accountable and duly punished. Finally, a promise must be made that such horrors shall not befall us again, at least for a substantial period of time. \nOnly then, when these conditions are met, can a story emerge from the ashes. A story of resilience, hope, and the triumph of humanity over the ravages of war."
       },
       "ar": {
         "title": "\"تمنيت أن يكون مجرد مزحة قاسية.\"",
@@ -345,8 +345,8 @@
       "ar": "we-want-this-war-to-end-and-we-want-a-country"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-22.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-22.png"
+      "main": "/images/placeholder_images/puzzle-14.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-14.png"
     },
     "personalInfo": {
       "en": {
@@ -405,8 +405,8 @@
       "ar": "our-lives-are-suspended"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-10.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-10.jpg"
+      "main": "/images/placeholder_images/puzzle-06.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-06.png"
     },
     "personalInfo": {
       "en": {
@@ -462,8 +462,8 @@
       "ar": "no-end-in-sight"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-02.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-02.png"
+      "main": "/images/placeholder_images/puzzle-04.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-04.jpg"
     },
     "personalInfo": {
       "en": {
@@ -519,8 +519,8 @@
       "ar": "dashed-dreams-steadfast-determination"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-16.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-16.png"
+      "main": "/images/placeholder_images/puzzle-07.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-07.jpg"
     },
     "personalInfo": {
       "en": {
@@ -575,8 +575,8 @@
       "ar": "how-long"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-22.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-22.jpg"
+      "main": "/images/placeholder_images/puzzle-05.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-05.jpg"
     },
     "personalInfo": {
       "en": {
@@ -632,8 +632,8 @@
       "ar": "the-kindness-of-strangers"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-02.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-02.png"
+      "main": "/images/placeholder_images/puzzle-31.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-31.png"
     },
     "personalInfo": {
       "en": {
@@ -688,8 +688,8 @@
       "ar": "shocking-news"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-22.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-22.png"
+      "main": "/images/placeholder_images/puzzle-16.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-16.jpg"
     },
     "personalInfo": {
       "en": {
@@ -746,8 +746,8 @@
       "ar": "every-day-brought-a-new-kind-of-pain"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-10.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-10.jpg"
+      "main": "/images/placeholder_images/puzzle-12.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-12.png"
     },
     "personalInfo": {
       "en": {
@@ -863,8 +863,8 @@
       "ar": "salaries-and-warring-sides"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-12.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-12.png"
+      "main": "/images/placeholder_images/puzzle-14.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-14.png"
     },
     "personalInfo": {
       "en": {
@@ -920,8 +920,8 @@
       "ar": "i-hope-the-fighting-ends"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-18.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-18.jpg"
+      "main": "/images/placeholder_images/puzzle-14.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-14.jpg"
     },
     "personalInfo": {
       "en": {
@@ -977,8 +977,8 @@
       "ar": "meaningless-aid-numbers"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-07.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-07.jpg"
+      "main": "/images/placeholder_images/puzzle-03.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-03.jpg"
     },
     "personalInfo": {
       "en": {
@@ -1002,7 +1002,7 @@
     "story": {
       "en": {
         "title": "Meaningless aid numbers",
-        "content": "My story may not be as miserable as the stories of most Yemeni people. Mine is just a story of a lost future, which fades in comparison to the horrors of war that Yemenis have witnessed since 2015. \nLike many others, I lost my job after the war started. It was a lucrative private-sector job that I never imagined would come to such an abrupt ending. I was in my late 20s then, hopeful for a secure future for myself and the family I once had. I am now in my late 30s. I feel like I have lost the best years of my life waiting for the war to end and for the light at the end of what I thought was a tunnel. It now it just feels like an endless abyss of darkness, and I no longer hope for more than just a painless fall to the ground. \nBut I still do consider myself lucky. I found a job at an organisation with access to so much information on humanitarian response in Yemen. But numbers like the billions of dollars in foreign aid, or the millions of people reached with food baskets which usually last for a few days, became meaningless. I worked on these figures almost weekly, for five years. In this work, I then went on a mission to a relatively poor yet stable country in Africa, to respond to a natural disaster. I got to witness how the horrors of war go beyond any imaginable impact of floods, droughts, and storms. Liberty, security, and hope for a better future keep people and communities strong and hopeful together, despite nature’s fury. \nThrough it all, nothing compares to that dark feeling when my neighbor, who once owned fancy cars and gadgets, asks me for bread money when he sees me walking back to my empty home."
+        "content": "My story may not be as miserable as the stories of most Yemeni people. Mine is just a story of a lost future. It fades in comparison to the horrors of war that Yemenis have witnessed since 2015. \nLike many, I lost my job after the war started. It was a lucrative private-sector job that I never imagined would come to such an abrupt ending. I was in my late 20s then, hopeful for a secure future for myself and the family that I once had. I am now in my late 30s. I feel like I have lost the best years of my life waiting for the war to end, and for the light at the end of what I thought was a tunnel. It now it just feels like an endless abyss of darkness, and I no longer hope for more than just a painless fall to the ground. \nBut I still do consider myself lucky. I found a job at an organisation with access to information on the humanitarian response in Yemen. But numbers like the billions of dollars in foreign aid, or the millions of people reached with food baskets which usually last for a few days, became meaningless. I worked on these figures almost weekly, for five years. In this work, I then went on a mission to a relatively poor yet stable country in Africa, to respond to a natural disaster. I got to witness how the horrors of war go beyond any imaginable impact of floods, droughts, and storms. Liberty, security, and hope for a better future keep people and communities strong and hopeful together, despite nature’s fury. \nThrough it all, nothing compares to the dark feeling when my neighbour, who once owned fancy cars and gadgets, asks me for bread money when he sees me walking back to my empty home."
       },
       "ar": {
         "title": "أرقام بلا معنى",
@@ -1034,8 +1034,8 @@
       "ar": "stolen-dreams"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-19.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-19.png"
+      "main": "/images/placeholder_images/puzzle-06.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-06.png"
     },
     "personalInfo": {
       "en": {
@@ -1158,8 +1158,8 @@
       "ar": "longing-from-afar"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-05.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-05.png"
+      "main": "/images/placeholder_images/puzzle-03.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-03.png"
     },
     "personalInfo": {
       "en": {
@@ -1215,8 +1215,8 @@
       "ar": "the-city-of-stars-and-dreams"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-21.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-21.jpg"
+      "main": "/images/placeholder_images/puzzle-12.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-12.jpg"
     },
     "personalInfo": {
       "en": {
@@ -1240,7 +1240,7 @@
     "story": {
       "en": {
         "title": "The city of stars and dreams",
-        "content": "I lived all my life outside of Yemen. I longed for the moment I would land there for the first time, to see the soil, the sea, and the land of my imagination. I was always talking about my country, even though I had never been there. About its beauty, and its openness to the world; especially the city of Aden, where my father is from. I spent my nights watching the stars, then closing them to dream about Yemen. \nWhen the war arrived in Aden, it tore the city apart, and my heart with it. With every bullet that hit the city, I fell apart a bit more. I felt great sadness for the city. When the fighting stopped, I felt normal again too. It was like we had one soul. \nIn 2017, my father and I decided to finally visit the place I call the city of stars of dreams, Aden. I was so excited, but the shock of what things were really like broke my back. I’m still in pain from what I saw there. The war had brought out the worst of the city. It was depressing, defeated by corruption. It was ruled by village and tribe. Law, order, and culture had been replaced by fear, death, and gunpowder. The city that I thought would be young forever had grown old. My heart ached. \nMy father and I went looking for the city’s ancient heritage sites, but we found only remains. What was still standing had been neglected and looted. History had been destroyed. I searched for ancient religious sites, because Aden is a city that never used to distinguish between sect and religion. But they were shuttered. Aden was a city we didn’t recognise. It was like the history books had been written about an imaginary city, not this Aden. Like my father had been telling me fairy tales.\nIt was even worse for my father, because he had lived in Aden’s splendid days and starry nights. He could not bear what he saw, and left. I stayed, searching for myself in the city. I insisted on it. I tried to walk through its long roads and narrow alleys, but I got lost. And Aden was lost to me."
+        "content": "I lived all my life outside of Yemen. I longed for the moment I would land there for the first time, to see the soil, the sea, and the land of my imagination. I was always talking about my country, even though I had never been. About its beauty, and its openness to the world; especially the city of Aden, where my father is from. I spent my nights gazing at the stars, then closing my eyes to dream about Yemen. \nWhen the war arrived in Aden, it tore the city apart, and it tore my heart into pieces. With every bullet that hit the city, I fell apart a bit more. I felt such sadness for the city. When the fighting stopped, I felt normal again, too. It was like we had one soul. \nIn 2017, my father and I decided to finally visit Aden, the place I call the \"city of stars of dreams.\" I was so excited. But the shock of what things were really like broke me. I’m still in pain from what I saw there. The war had brought out the worst in Aden. It was depressing, defeated by corruption. It was ruled by village and tribe. Law, order, and culture had been replaced by fear, death, and gunpowder. The city that I thought would be young forever had grown old. My heart ached. \nMy father and I went looking for the city’s ancient heritage sites, but we found only remains. What was still standing had been neglected and looted. History had been destroyed. I searched for historic religious sites, because Aden is a city that never used to distinguish between sects and religions. But they were shuttered. Aden was a city we didn’t recognise. It was like the history books had been written about an imaginary city, not this Aden. Like my father had been telling me fairy tales.\nIt was even worse for my father, because he had lived through Aden’s splendid days and starry nights. He could not bear what he saw, and left. I stayed, searching for myself in the city. I insisted on it. I tried to walk through its long roads and narrow alleys, but I got lost. And Aden was lost to me."
       },
       "ar": {
         "title": "مدينة النجوم والأحلام",
@@ -1272,8 +1272,8 @@
       "ar": "nothing-for-granted"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-11.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-11.png"
+      "main": "/images/placeholder_images/puzzle-29.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-29.png"
     },
     "personalInfo": {
       "en": {
@@ -1329,8 +1329,8 @@
       "ar": "i-was-strong-enough"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-14.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-14.png"
+      "main": "/images/placeholder_images/puzzle-19.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-19.jpg"
     },
     "personalInfo": {
       "en": {
@@ -1383,8 +1383,8 @@
       "ar": "a-letter-to-the-next-generation"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-07.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-07.jpg"
+      "main": "/images/placeholder_images/puzzle-28.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-28.png"
     },
     "personalInfo": {
       "en": {
@@ -1498,8 +1498,8 @@
       "ar": "i-worry-all-the-time-about-their-future"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-15.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-15.jpg"
+      "main": "/images/placeholder_images/puzzle-28.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-28.jpg"
     },
     "personalInfo": {
       "en": {
@@ -1555,8 +1555,8 @@
       "ar": "the-tragedies-of-a-country-and-a-family"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-26.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-26.jpg"
+      "main": "/images/placeholder_images/puzzle-23.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-23.png"
     },
     "personalInfo": {
       "en": {
@@ -1580,7 +1580,7 @@
     "story": {
       "en": {
         "title": "The tragedies of a country, and a family",
-        "content": "It was early in the war. The bombing in Sana’a was terrifying, and it felt like death could come at any moment. I was depressed. One of my brothers, who was sick before the war, had just had several operations but could not get all the treatment he needed. He was so sick. We couldn’t escape the city to our home village, or to anywhere. \nMy other brother was mentally exhausted, and the rest of our family had left for Egypt, Sudan, or other countries. A few relatives stayed behind with me, and we suffered through the bombing together. We were together when water was cut off, when the electricity went out, and when we had almost no money. Through all this, we consoled each other, dreaming of peace and quiet. I was not comforted, though. I was in a lot of pain at what had happened to my country. I felt alone in my tears. \nThat's when I decided to begin working on my first novel. I had promised my late mother I would write it, and under the light of fading candles and with a burning heart, I inked my novel with tears. “Gharb al-Gash” (West of the al-Gash River) is about the diaspora where I was born, and spent my childhood. I presented it to my friends at the Yemeni Story Club, a group of writers, novelists, and cultural enthusiasts. To my surprise, the club’s president brought it to a publishing house in London, and in August 2019 it was published. Only then did the darkness inside me begin to dissipate, although a shadow of pain remained. I told myself that if I die now, at least I have left something good behind me.\nBut like all Yemenis, I mostly remained miserable, and my heart hurt for my brother, who we still could not afford good medical care for. One day we took him to the government hospital, because treatment there costs less. That was 4 December 2017, the same day of the killing of [former] President Ali Abdullah Saleh. Everything stopped that day, everything but fear and panic. My hopes were dashed, only pain remained. My brother died after drinking juice I had poured with my own hand. These are the tragedies of my country, and the tragedy of my brother, for whom I could do nothing."
+        "content": "It was early in the war. The bombing in Sana’a was terrifying, and it felt like death could come at any moment. I was depressed. One of my brothers, who was sick before the war, recently had several operations. But he couldn't get all the treatment he needed. He was so sick. We couldn’t escape the city to our home village, or to anywhere. \nMy other brother was mentally exhausted, and the rest of our family had left for Egypt, Sudan, or other countries. A few relatives stayed behind with me, and we suffered through the bombing together. We were together when water was cut off, when the electricity went out, and when we had almost no money. Through it all, we tried to console each other, dreaming of peace and quiet. But I was not comforted. I was in a lot of pain at what had happened to my country. I felt so alone in my tears. \nThat's when I decided to begin working on my first novel. I had promised my late mother I would write it, and under the light of fading candles and with a burning heart, I inked the text with tears. “Gharb al-Gash” (West of the al-Gash River) is about the diaspora where I was born, and spent my childhood. I presented it to my friends at the Yemeni Story Club, a group of writers, novelists, and cultural enthusiasts. To my surprise, the club’s president brought it to a publishing house in London, and it was published in August 2019. Only then did the darkness inside me begin to dissipate, although a shadow of pain remained. I told myself: \"If I die now, at least I have left something good behind me.\"\nBut like all Yemenis, most of the time I was still miserable. My heart hurt for my brother, who we still could not afford good medical care for. One day we took him to the government hospital, because treatment there costs less. That was 4 December 2017, the same day of the killing of [former] President Ali Abdullah Saleh. Everything stopped that day, everything but fear and panic. My hopes were dashed, only pain remained. My brother died after drinking juice I had poured with my own hand. These are the tragedies of my country, and the tragedy of my brother, for whom I could do nothing."
       },
       "ar": {
         "title": "\"مأساتي وطني، مأساتي أخي.\"",
@@ -1615,8 +1615,8 @@
       "ar": "we-have-lost-people-we-love-and-so-much-more"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-12.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-12.jpg"
+      "main": "/images/placeholder_images/puzzle-26.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-26.png"
     },
     "personalInfo": {
       "en": {
@@ -1735,8 +1735,8 @@
       "ar": "the-worst-luck-of-all"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-04.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-04.jpg"
+      "main": "/images/placeholder_images/puzzle-18.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-18.jpg"
     },
     "personalInfo": {
       "en": {
@@ -1760,7 +1760,7 @@
     "story": {
       "en": {
         "title": "The worst luck of all",
-        "content": "If you say to sign up for the lottery, \nI would have the worst luck of all\n\nAnd if you say \"be patient,\" how long can a rational person wait?\nLiving like this for nine years, most of them on borrowed time\n\nI want to leave this homeland, where I am a stranger\nA displaced stranger whose value is like a mosquito's\n\nPoverty and our questionable reality,\nAnd this war that we have been fighting for nine years\n\nThe fiercest battles, whose heat rages like flames,\nMassacres, woundes and bruises\n\nIt is playing games with us\nFrom every direction, it wins, and the confusion increases\n\n(A citizen’s dream of leaving his homeland)\nWe ask God to grant relief to this country and her people"
+        "content": "If you say to sign up for the lottery, \nI would have the worst luck of all\n\nAnd if you say \"be patient,\" how long can a rational person wait?\n\nLiving like this for nine years, most of them on borrowed time\n\nI want to leave this homeland, where I am a stranger\nA displaced stranger whose value is like a mosquito's\n\nPoverty and our questionable reality,\nAnd this war that we have been fighting for nine years\n\nThe fiercest battles, whose heat rages like flames,\nMassacres, woundes and bruises\n\nIt is playing games with us\nFrom every direction, it wins, and the confusion increases\n\n(A citizen’s dream of leaving his homeland)\nWe ask God to grant relief to this country and her people"
       },
       "ar": {
         "title": "أسوء حظ",
@@ -1791,8 +1791,8 @@
       "ar": "so-much-loss"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-26.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-26.png"
+      "main": "/images/placeholder_images/puzzle-03.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-03.png"
     },
     "personalInfo": {
       "en": {
@@ -1849,8 +1849,8 @@
       "ar": "all-that-we-ask"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-27.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-27.png"
+      "main": "/images/placeholder_images/puzzle-09.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-09.png"
     },
     "personalInfo": {
       "en": {
@@ -1905,8 +1905,8 @@
       "ar": "the-strong-eat-the-weak"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-16.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-16.jpg"
+      "main": "/images/placeholder_images/puzzle-14.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-14.jpg"
     },
     "personalInfo": {
       "en": {
@@ -1966,8 +1966,8 @@
       "ar": "the-edge-of-an-abyss"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-09.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-09.png"
+      "main": "/images/placeholder_images/puzzle-07.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-07.jpg"
     },
     "personalInfo": {
       "en": {
@@ -2024,8 +2024,8 @@
       "ar": "nothing-but-bread-and-water"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-15.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-15.jpg"
+      "main": "/images/placeholder_images/puzzle-21.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-21.jpg"
     },
     "personalInfo": {
       "en": {
@@ -2081,8 +2081,8 @@
       "ar": "cut-roads-and-lost-touch"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-06.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-06.jpg"
+      "main": "/images/placeholder_images/puzzle-19.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-19.jpg"
     },
     "personalInfo": {
       "en": {
@@ -2140,8 +2140,8 @@
       "ar": "yemens-people-are-exhausted"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-22.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-22.png"
+      "main": "/images/placeholder_images/puzzle-09.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-09.png"
     },
     "personalInfo": {
       "en": {
@@ -2258,8 +2258,8 @@
       "ar": "the-deep-scars-of-war"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-18.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-18.png"
+      "main": "/images/placeholder_images/puzzle-26.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-26.jpg"
     },
     "personalInfo": {
       "en": {
@@ -2316,8 +2316,8 @@
       "ar": "what-the-war-took"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-10.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-10.jpg"
+      "main": "/images/placeholder_images/puzzle-09.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-09.png"
     },
     "personalInfo": {
       "en": {
@@ -2375,8 +2375,8 @@
       "ar": "away-from-home-and-back-again"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-17.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-17.jpg"
+      "main": "/images/placeholder_images/puzzle-32.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-32.png"
     },
     "personalInfo": {
       "en": {
@@ -2433,8 +2433,8 @@
       "ar": "economic-changes"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-13.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-13.png"
+      "main": "/images/placeholder_images/puzzle-24.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-24.jpg"
     },
     "personalInfo": {
       "en": {
@@ -2553,8 +2553,8 @@
       "ar": "our-hearts-are-broken"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-26.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-26.png"
+      "main": "/images/placeholder_images/puzzle-02.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-02.jpg"
     },
     "personalInfo": {
       "en": {
@@ -2610,8 +2610,8 @@
       "ar": "vignettes-from-a-war"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-13.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-13.png"
+      "main": "/images/placeholder_images/puzzle-19.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-19.png"
     },
     "personalInfo": {
       "en": {
@@ -2668,8 +2668,8 @@
       "ar": "dreams-on-hold"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-31.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-31.png"
+      "main": "/images/placeholder_images/puzzle-03.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-03.jpg"
     },
     "personalInfo": {
       "en": {
@@ -2693,7 +2693,7 @@
     "story": {
       "en": {
         "title": "Dreams on hold",
-        "content": "I have been displaced from my home in al-Hasha, in al-Dhale province, since 2015. I live in the same province as the rest of my family, but because roads are blocked I can’t see them.\nI spent the last eight years displaced in al-Dhale. I am unemployed, and I can’t support my family. But I still have to take care of my seven brothers and my father, who don’t have jobs. So I pay 40,000 Riyals for a bag of flour and another 10,000 Riyals to have it delivered to them. \nThe war destroyed the country. Roads are closed, and I’m living under siege. I am struggling here. \nI had dreams of studying medicine, but the war got in the way. I’m still hoping to do it someday, but instead I spend my time thinking about how to find enough money to send flour to my family.\n"
+        "content": "I have been displaced from my home in al-Hasha, in al-Dhale province, since 2015. I live in the same province as the rest of my family, but because roads are blocked I can’t see them.\nI have been displaced for the past eight years. I am unemployed, and I can’t support my family. But I still have to take care of my father and seven brothers, who also don’t have jobs. So I pay 40,000 Riyals for a bag of flour, and another 10,000 Riyals to have it delivered to them. \nThe war destroyed the country. Roads are closed, and I’m living under siege. I am struggling here. \nI had dreams of studying medicine, but the war got in the way. I’m still hoping to do it someday, but instead I spend my time thinking about how to find enough money to send flour to my family.\n"
       },
       "ar": {
         "title": "\"وما زال حلمي معلقًا.\"",
@@ -2787,8 +2787,8 @@
       "ar": "what-was-it-for"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-09.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-09.png"
+      "main": "/images/placeholder_images/puzzle-05.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-05.png"
     },
     "personalInfo": {
       "en": {
@@ -2846,8 +2846,8 @@
       "ar": "our-lives-completely-changed"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-28.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-28.jpg"
+      "main": "/images/placeholder_images/puzzle-20.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-20.png"
     },
     "personalInfo": {
       "en": {
@@ -2907,8 +2907,8 @@
       "ar": "stop-this-senseless-war"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-18.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-18.png"
+      "main": "/images/placeholder_images/puzzle-14.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-14.png"
     },
     "personalInfo": {
       "en": {
@@ -2966,8 +2966,8 @@
       "ar": "my-story-told-two-ways"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-16.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-16.png"
+      "main": "/images/placeholder_images/puzzle-23.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-23.jpg"
     },
     "personalInfo": {
       "en": {
@@ -3020,8 +3020,8 @@
       "ar": "so-much-suffering"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-23.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-23.png"
+      "main": "/images/placeholder_images/puzzle-26.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-26.png"
     },
     "personalInfo": {
       "en": {
@@ -3078,8 +3078,8 @@
       "ar": "the-war-destroyed-everything-beautiful"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-29.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-29.png"
+      "main": "/images/placeholder_images/puzzle-18.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-18.jpg"
     },
     "personalInfo": {
       "en": {
@@ -3135,8 +3135,8 @@
       "ar": "my-daughter-refuses-to-give-up"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-20.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-20.png"
+      "main": "/images/placeholder_images/puzzle-29.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-29.png"
     },
     "personalInfo": {
       "en": {
@@ -3195,8 +3195,8 @@
       "ar": "shared-moments"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-28.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-28.png"
+      "main": "/images/placeholder_images/puzzle-15.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-15.jpg"
     },
     "personalInfo": {
       "en": {
@@ -3252,8 +3252,8 @@
       "ar": "my-children-had-ambitions"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-13.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-13.jpg"
+      "main": "/images/placeholder_images/puzzle-09.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-09.png"
     },
     "personalInfo": {
       "en": {
@@ -3285,6 +3285,7 @@
       }
     },
     "tags": [
+      "Audio",
       "Family",
       "Health",
       "Violence",
@@ -3294,7 +3295,7 @@
       "1034-1-77s.m4a"
     ],
     "audioReadouts": {
-      "en": "I am a 50-year-old teacher from Taiz. Before the war began, I lived with my husband and children. My husband died early in the war from a stroke, and two years later one of my sons was shot by a sniper in the street, while he was on the way to his final high school exams. My other son fell into a dark mental place. He hated life and became severely depressed. He turned to a group of friends who had a bad impact on him. Later he had two strokes, which affected his speech and vision. If it were not here, we would not be here. My children had other ambitions, not this.",
+      "en": "I am a 50-year-old teacher from Taiz. Before the war, I lived with my husband and children. My husband died early in the war from a stroke. Two years later, while on the way to his final high school exams, one of my sons was shot by a sniper in the street. My other son fell into a dark mental state. He hated life, and became severely depressed. He turned to a group of friends who were bad for him. Later, he had two strokes, which affected his speech and vision. If it were not for the war, we would not be here. My children had other ambitions, not this.",
       "ar": "أنا مدرسة من تعز، عمري خمسون عامًا. كنت أعيش أنا وزوجي وأبنائي. توفى زوجي في بداية الحرب بسبب جلطة. بعدها بعامين تم قنص ابني في الشارع، أثناء ما كان يستعد لاختبارات الثانوية. ابني الثاني دخل في حالة نفسية، كره الحياة وأصيب بحالة اكتئاب شديد، ما جعله يتجه إلى أن يصادق جماعة من الجماعات السيئة. وبنهاية المطاف أصيب ابني بجلطتين دماغيتين، فقد إثرهما النطق والنظر. الحمد لله. لولا الحرب لما كنا وصلنا إلى هنا. طموحات أبنائي كانت مختلفة. "
     },
     "highlighted": false,
@@ -3313,8 +3314,8 @@
       "ar": "the-bare-necessities"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-08.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-08.png"
+      "main": "/images/placeholder_images/puzzle-02.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-02.jpg"
     },
     "personalInfo": {
       "en": {
@@ -3373,8 +3374,8 @@
       "ar": "a-future-for-our-children"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-32.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-32.png"
+      "main": "/images/placeholder_images/puzzle-19.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-19.png"
     },
     "personalInfo": {
       "en": {
@@ -3398,11 +3399,11 @@
     "story": {
       "en": {
         "title": "A future for our children",
-        "content": "The war has affected us in every single way: It has impacted our livelihoods, the future of our children, and our safety. We are facing disease, a lack of security, high costs, shortages of electricity and water, and we don’t have the basic things you need for a peaceful life. \nThe war forced us to flee and shattered our family. It took away our friends and loved ones, and made it harder to travel because the costs are so high. The war devastated the country’s economy and infrastructure. It is so bad that we can’t give our kids a decent life, let alone the joyful lives we want for them. We are frustrated and full of despair. There has been an expansion in crime, and it is especially hard on vulnerable groups. It is hard to secure our children’s futures, because we don’t have futures either."
+        "content": "The war has affected us in every single way: It has impacted our livelihoods, the future of our children, and our safety. We are facing disease, a lack of security, high costs, shortages of electricity and water, and we don’t have the basic things you need for a peaceful life. \nThe war forced us to flee and shattered our family. It took away our friends and loved ones, and made it harder to travel because it is so expensive. The war devastated the country’s economy and infrastructure. It is so bad that we can’t give our kids a decent life, let alone the joyful lives we want for them. We are frustrated and full of despair. There has been an expansion in crime, and it is especially hard on vulnerable groups. It is hard to secure a future for our children, because we don’t have futures ourselves."
       },
       "ar": {
         "title": "\"من الصعب أن نؤمن مستقبل أولادنا.\"",
-        "content": "الحرب أثرت علي من جميع النواحي. أثرت من ناحيه المعيشة ومن ناحية الأمان ومن ناحية مستقبل أولادنا. نعاني من عدم وجود الأمان وكذلك من ارتفاع الأسعار، وكذلك عدم وجود مقومات الحياه الهادئة وعدم وجود المياه، وكذلك عدم وجود كهرباء وعدم وجود الصحة، وكذلك الأوبئة والأمراض. وأيضًا الحرب أخذت منا أحبة وأصدقاء، وأيضًا الحرب حرمتنا من أهلنا وصعبت علينا السفر في ظل غلاء المشتقات النفطية. والحرب أطاحت بالبنية التحتية وأطاحت باقتصاد البلد. وانعدمت أيضا سبل العيش، فبتنا مشردين، وانعدم الأمن والأمان وتفشت الأمراض حتي صرنا لا نستطيع توفير لقمة عيش لأولادنا أو حتي نوفر لهم حياة سعيدة، وهي ما نتمناه في ظل الحرب الحاصلة. فصار اليأس والإحباط موجود في حياتنا اليومية. وأيضًا الحرب أفشت الجرائم والنهب والسلب وأكل حقوق الضعيف وصرنا بلا مستقبل، ومن الصعب أن نؤمن مستقبل أولادنا."
+        "content": "الحرب أثرت علي من جميع النواحي. أثرت من ناحيه المعيشة ومن ناحية الأمان ومن ناحية مستقبل أولادنا. نعاني من عدم وجود الأمان وكذلك من ارتفاع الأسعار، وكذلك عدم وجود مقومات الحياه الهادئة وعدم وجود المياه، وكذلك عدم وجود كهرباء وعدم وجود الصحة، وكذلك الأوبئة والأمراض.\nوأيضًا الحرب أخذت منا أحبة وأصدقاء، وأيضًا الحرب حرمتنا من أهلنا وصعبت علينا السفر في ظل غلاء المشتقات النفطية. والحرب أطاحت بالبنية التحتية وأطاحت باقتصاد البلد. وانعدمت أيضا سبل العيش، فبتنا مشردين، وانعدم الأمن والأمان وتفشت الأمراض حتي صرنا لا نستطيع توفير لقمة عيش لأولادنا أو حتي نوفر لهم حياة سعيدة، وهي ما نتمناه في ظل الحرب الحاصلة. فصار اليأس والإحباط موجود في حياتنا اليومية. وأيضًا الحرب أفشت الجرائم والنهب والسلب وأكل حقوق الضعيف وصرنا بلا مستقبل، ومن الصعب أن نؤمن مستقبل أولادنا."
       }
     },
     "tags": [
@@ -3431,8 +3432,8 @@
       "ar": "every-day-i-think-of-leaving"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-06.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-06.jpg"
+      "main": "/images/placeholder_images/puzzle-12.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-12.jpg"
     },
     "personalInfo": {
       "en": {
@@ -3489,8 +3490,8 @@
       "ar": "the-war-has-changed-people"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-05.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-05.png"
+      "main": "/images/placeholder_images/puzzle-03.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-03.jpg"
     },
     "personalInfo": {
       "en": {
@@ -3551,8 +3552,8 @@
       "ar": "debts-piling-up"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-22.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-22.png"
+      "main": "/images/placeholder_images/puzzle-13.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-13.jpg"
     },
     "personalInfo": {
       "en": {
@@ -3637,11 +3638,12 @@
         "content": "I am a displaced woman from Taiz. I live with my children in a grocery shop, which at least provides us with shelter. We don’t have any of the essentials, like bedding, clothing, or food. All this because of the war."
       },
       "ar": {
-        "title": "",
+        "title": "\"أعيش في محل لبيع الأدوات الغذائية.\"",
         "content": "أعيش مع أولادي في محل لبيع الأدوات الغذائية في الحي، ليأوينا. نعيش بدون أي مستلزمات أولوية، كالفراش والملابس والغذاء. وكل هذا بسبب الحرب."
       }
     },
     "tags": [
+      "Video",
       "Displacement"
     ],
     "attachments": [
@@ -3727,8 +3729,8 @@
       "ar": "a-wide-ranging-economic-crisis"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-26.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-26.jpg"
+      "main": "/images/placeholder_images/puzzle-10.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-10.jpg"
     },
     "personalInfo": {
       "en": {
@@ -3846,8 +3848,8 @@
       "ar": "life-is-knowledge"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-04.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-04.jpg"
+      "main": "/images/placeholder_images/puzzle-02.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-02.jpg"
     },
     "personalInfo": {
       "en": {
@@ -3904,8 +3906,8 @@
       "ar": "a-dark-place"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-17.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-17.jpg"
+      "main": "/images/placeholder_images/puzzle-31.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-31.jpg"
     },
     "personalInfo": {
       "en": {
@@ -3963,8 +3965,8 @@
       "ar": "we-are-all-in-this-hole-together"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-11.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-11.jpg"
+      "main": "/images/placeholder_images/puzzle-13.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-13.png"
     },
     "personalInfo": {
       "en": {
@@ -4080,8 +4082,8 @@
       "ar": "what-if-we-could-go-back"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-23.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-23.png"
+      "main": "/images/placeholder_images/puzzle-07.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-07.jpg"
     },
     "personalInfo": {
       "en": {
@@ -4260,8 +4262,8 @@
       "ar": "i-am-suffering-and-my-children-are-suffering"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-31.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-31.png"
+      "main": "/images/placeholder_images/puzzle-10.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-10.png"
     },
     "personalInfo": {
       "en": {
@@ -4319,8 +4321,8 @@
       "ar": "economic-war"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-21.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-21.png"
+      "main": "/images/placeholder_images/puzzle-09.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-09.png"
     },
     "personalInfo": {
       "en": {
@@ -4332,7 +4334,7 @@
       "ar": {
         "name": "عبدالسلام",
         "surname": "السماوي",
-        "whereFrom": "رداع",
+        "whereFrom": "البيضاء",
         "livingIn": "البيضاء"
       }
     },
@@ -4344,7 +4346,7 @@
     "story": {
       "en": {
         "title": "Economic war",
-        "content": "I am an impoverished Yemeni citizen. I suffer from chronic migraines, and I was shot in the leg three times.\nI have to support my mother, my wife, and our four children, but my only source of income is my motorbike, which I use to transport people. \nI have suffered, and I continue to suffer, because of my health problems. My children are suffering from a lack of schooling. I am suffering because of this country’s economic situation. I don’t earn enough for anything. In short, every day I wish I had never been born. Economic war is the worst type of war. \n"
+        "content": "I am an impoverished Yemeni citizen. I suffer from chronic migraines, and I was shot in the leg three times.\nI have to support my mother, my wife, and our four children. But my only source of income is my motorbike, which I use to transport people. \nI have suffered, and I continue to suffer, because of my health problems. My children are suffering from a lack of schooling. I am suffering because of this country’s economic situation. I don’t earn enough for anything. In short, every day I wish I had never been born. Economic war is the worst type of war. \n"
       },
       "ar": {
         "title": "الحرب الاقتصادية",
@@ -4436,8 +4438,8 @@
       "ar": "i-suffered-so-much-but-i-changed-too"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-09.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-09.jpg"
+      "main": "/images/placeholder_images/puzzle-31.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-31.jpg"
     },
     "personalInfo": {
       "en": {
@@ -4556,8 +4558,8 @@
       "ar": "the-war-made-me-stronger"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-09.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-09.png"
+      "main": "/images/placeholder_images/puzzle-13.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-13.jpg"
     },
     "personalInfo": {
       "en": {
@@ -4679,8 +4681,8 @@
       "ar": "we-are-doing-our-best-all-by-ourselves"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-32.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-32.jpg"
+      "main": "/images/placeholder_images/puzzle-14.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-14.png"
     },
     "personalInfo": {
       "en": {
@@ -4854,8 +4856,8 @@
   {
     "id": "1065",
     "slugs": {
-      "en": "forced-from-home-because-of-a-photo",
-      "ar": "forced-from-home-because-of-a-photo"
+      "en": "guilty-of-taking-a-photo",
+      "ar": "guilty-of-taking-a-photo"
     },
     "storyImage": {
       "main": "/images/thumbnails/1065-thumbnail.jpg",
@@ -4882,16 +4884,17 @@
     },
     "story": {
       "en": {
-        "title": "Forced from home because of a photo",
-        "content": "In 2015, early in the war, I moved from Sana’a to Marib. I was forced to move because I took a photograph. It was a picture of a child whose house had been bombed in Arhab, part of Sana’a province. I took the photo and wrote about it. The photo went viral. I was accused of defamation [by the Houthi rebels] and imprisoned, but I knew the only thing I was guilty of was taking a photo. That’s when I decided to leave. It was no longer safe for me to live and work as a journalist in Sana’a. It was a bizarre experience, it was the first time in my life I had been in jail, and I hadn’t done anything wrong. I was forced to go south, to Marib, [which is not controlled by the Houthis]. \n\nI have been separated from my family and home for nine years because I took a photograph. Marib doesn’t have many basics of life, it’s so different from Sana’a. I am better off than other displaced people here, who are living in camps, but I am so much worse off than I was before. I’ve tried to adapt to life here and accept what happened, but I still can’t. I hope that one day I can go back to my home and family, and do my job freely.\n\n"
+        "title": "\"Guilty of taking a photo.\"",
+        "content": "In 2015, early in the war, I moved from Sana’a to Marib. I was forced to move because I took a photograph. It was a picture of a child whose house had been bombed in Arhab, part of Sana’a province. I took the photo and wrote about it. The photo went viral. I was accused of defamation by the Houthi rebels and jailed, but I knew the only thing I was guilty of was taking a photo. \n\nThat’s when I decided to leave. It was no longer safe for me to live and work as a journalist in Sana’a. It was a bizarre experience, it was the first time in my life I had been in jail, and I hadn’t done anything wrong. I was forced to go south, to Marib, [which is not controlled by the Houthis]. \n\nI have been separated from my family and home for nine years because I took a photograph. \n\nMarib doesn’t have many basics of life; it’s so different from Sana’a. I am better off than other displaced people here, who are living in camps, but I am so much worse off than I was before. I’ve tried to adapt to life here and accept what happened, but I still can’t. I hope that one day I can go back to my home and family, and do my job freely.\n\n"
       },
       "ar": {
         "title": "\"تسع سنوات وأنا بعيد عن عائلتي ومنزلي لأنني التقطت صورة.\"",
-        "content": "أنا مصور وصحفي. في عام ٢٠١٥ انتقلت للعيش في مأرب، وكان سبب انتقالي هو أنني التقطت صورة. وكانت الصورة لطفل تعرض منزله للقصف في منطقة أرحب. قمت بتصويرها وكتبت تقريرًا عنها. انتشرت هذه الصورة على نطاق واسع، وذنبي الوحيد هو أنني التقطتها. تم استدعائي لتشويه سمعتهم، وتم سجني لمدة أسبوع، وبعد ذلك تم إطلاق سراحي بضمانات قبلية. ثم قررت الانتقال، لأنه لم يعد الوضع آمنًا في صنعاء، للعيش والعمل كصحفي. كانت هذه التجربة غير عادية، حيث أنها كانت أول مرة في حياتي أسجن فيها وبدون أي نشاط إجرامي. اضطررت للانتقال إلى مأرب. تسع سنوات وأنا بعيد عن عائلتي ومنزلي لأنني التقطت صورة. تختلف مأرب عن صنعاء. لا تتوفر فيها مقومات الحياة. وضعي أفضل من كثير من النازحين هنا في المخيمات، لكنه لا يقارن بالوضع السابق الذي كنت أعيش فيه. حاولت التأقلم والتقبل، لكن إلى يومنا هذا لم أقبل العيش هنا والوضع الذي أنا فيه. أتمنى أن أعود يومًا ما إلى بيتي وعائلتي وأن أمارس مهنتي بكل حرية.\n"
+        "content": "أنا مصور وصحفي. في عام ٢٠١٥ انتقلت للعيش في مأرب، وكان سبب انتقالي هو أنني التقطت صورة. وكانت الصورة لطفل تعرض منزله للقصف في منطقة أرحب. قمت بتصويرها وكتبت تقريرًا عنها. انتشرت هذه الصورة على نطاق واسع، وذنبي الوحيد هو أنني التقطتها.\nتم استدعائي لتشويه سمعتهم، وتم سجني لمدة أسبوع، وبعد ذلك تم إطلاق سراحي بضمانات قبلية. ثم قررت الانتقال، لأنه لم يعد الوضع آمنًا في صنعاء، للعيش والعمل كصحفي. كانت هذه التجربة غير عادية، حيث أنها كانت أول مرة في حياتي أسجن فيها وبدون أي نشاط إجرامي. اضطررت للانتقال إلى مأرب.\nتسع سنوات وأنا بعيد عن عائلتي ومنزلي لأنني التقطت صورة. تختلف مأرب عن صنعاء. لا تتوفر فيها مقومات الحياة. وضعي أفضل من كثير من النازحين هنا في المخيمات، لكنه لا يقارن بالوضع السابق الذي كنت أعيش فيه. حاولت التأقلم والتقبل، لكن إلى يومنا هذا لم أقبل العيش هنا والوضع الذي أنا فيه. أتمنى أن أعود يومًا ما إلى بيتي وعائلتي وأن أمارس مهنتي بكل حرية.\n"
       }
     },
     "tags": [
-      "Displacement"
+      "Displacement",
+      "Video"
     ],
     "attachments": [
       "1065-1.mp4"
