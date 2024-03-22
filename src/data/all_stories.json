@@ -6,8 +6,8 @@
       "ar": "the-war-destroyed-my-life"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-04.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-04.png"
+      "main": "/images/placeholder_images/puzzle-20.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-20.jpg"
     },
     "personalInfo": {
       "en": {
@@ -60,8 +60,8 @@
       "ar": "striving-for-an-education"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-12.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-12.png"
+      "main": "/images/placeholder_images/puzzle-28.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-28.png"
     },
     "personalInfo": {
       "en": {
@@ -177,8 +177,8 @@
       "ar": "hope-is-keeping-me-alive"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-08.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-08.png"
+      "main": "/images/placeholder_images/puzzle-04.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-04.jpg"
     },
     "personalInfo": {
       "en": {
@@ -190,8 +190,8 @@
       "ar": {
         "name": "ج.",
         "surname": "",
-        "whereFrom": "عمران-اليمن",
-        "livingIn": "أسوان-مصر"
+        "whereFrom": "عمران",
+        "livingIn": "اسوان، مصر"
       }
     },
     "contact": {
@@ -202,7 +202,7 @@
     "story": {
       "en": {
         "title": "\"Hope is keeping me alive.\"",
-        "content": "When the war started, I realised that I had to fight to find a way to survive, but there were limited job opportunities and lots of competition. So many jobs went to people with powerful connections. \nI went through trauma and severe mental shocks, and uncertainty haunted me every day. This makes me one of the millions of Yemenis who are suffering from mental health issues as a result of so many years of war and economic collapse. \nI finally found a job I like. It’s the only healthy environment I have right now, and I spend hours working relentlessly, to avoid going out into the unpleasant land that was once nicknamed \"The Happy Yemen.\" Out there, it still feels like I am walking a rocky path, living in a land surrounded by hyenas. \nOverall, I am pleased with what I've accomplished in spite of all the limitations. I still believe that things will unfold for the better, although I’m not sure when. But hope is keeping me alive. Yemenis are still holding their breaths for change, but we are not the same anymore.\n\n"
+        "content": "When the war started, I realised that I had to fight to find a way to survive, but there were limited job opportunities and lots of competition. So many jobs went to people with powerful connections. \nI went through trauma and severe mental shocks, and uncertainty haunted me every day. This makes me one of the millions of Yemenis who are suffering from mental health issues as a result of so many years of war and economic collapse. \nI finally found a job I like. It’s the only healthy environment I have right now, and I spend hours working relentlessly, to avoid going out into the unpleasant land that was once nicknamed \"The Happy Yemen.\" Out there, it still feels like I am walking a rocky path, living in a land surrounded by hyenas. \nOverall, I am pleased with what I've accomplished in spite of all the limitations. I still believe that things will unfold for the better, although I’m not sure when. But hope is keeping me alive. Yemenis are holding their breaths for change, but we are not the same anymore.\n\n"
       },
       "ar": {
         "title": "\"الأمل يبقيني على قيد الحياة.\"",
@@ -230,12 +230,12 @@
   {
     "id": "37",
     "slugs": {
-      "en": "life-doesnt-stop",
-      "ar": "life-doesnt-stop"
+      "en": "hope-is-keeping-me-alive",
+      "ar": "hope-is-keeping-me-alive"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-05.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-05.png"
+      "main": "/images/placeholder_images/puzzle-27.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-27.jpg"
     },
     "personalInfo": {
       "en": {
@@ -258,7 +258,7 @@
     },
     "story": {
       "en": {
-        "title": "\"Life doesn't stop.\"",
+        "title": "\"Hope is keeping me alive.\"",
         "content": "The war robbed me of safety and stability. I can't see my family in Yemen, because I'm a refugee in another country. \nThe one beautiful thing in all of this might be that I learned there is always hope, and life doesn’t stop.\nNow I watch my baby daughter growing up in a country that respects human rights and freedoms, and it brings me joy. Perhaps if it were not for the war, I would not be here, building this happy family. Seeing my daughter grow up in a healthy environment makes me feel happy and reassured."
       },
       "ar": {
@@ -291,8 +291,8 @@
       "ar": "i-hoped-it-was-a-cruel-joke"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-31.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-31.jpg"
+      "main": "/images/placeholder_images/puzzle-09.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-09.png"
     },
     "personalInfo": {
       "en": {
@@ -345,8 +345,8 @@
       "ar": "we-want-this-war-to-end-and-we-want-a-country"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-09.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-09.png"
+      "main": "/images/placeholder_images/puzzle-28.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-28.png"
     },
     "personalInfo": {
       "en": {
@@ -405,8 +405,8 @@
       "ar": "our-lives-are-suspended"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-04.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-04.jpg"
+      "main": "/images/placeholder_images/puzzle-30.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-30.jpg"
     },
     "personalInfo": {
       "en": {
@@ -419,7 +419,7 @@
         "name": "ضحى",
         "surname": "",
         "whereFrom": "تعز",
-        "livingIn": "عمان الاردن"
+        "livingIn": "عمان، الاردن"
       }
     },
     "contact": {
@@ -430,7 +430,7 @@
     "story": {
       "en": {
         "title": "\"Our lives are suspended.\"",
-        "content": "I wake up every day in Amman, the capital of Jordan, and ask myself, \"Where to next year?\" But we have been here in Jordan for eight and a half years, and the ninth year is knocking on the door. We have been staying in this rented house since the war forced me and my family to flee from our home city of Taiz, and from Yemen. The war displaced my entire family. Our neighbours left too, though some didn't leave, they were killed by bombs or snipers' bullets.\nFor a long time, I spent most of my days in Jordanian government offices, renewing temporary residence permits so that we wouldn't have to pay fines for staying without papers. Now we finally have official residency papers, but we still tell ourselves that next year we will return to our city.  \nBut the war doesn't stop. So we are here, still waiting. We do not buy many things because we will go back; we do not settle in because we are thinking about returning. But we may be heading into our tenth year of living out of suitcases.\nWe can't plan for the future, and everything in our lives has been suspended. I have not married because I am waiting to go back to Yemen. Even dreaming about small luxuries or stability has stopped, because perhaps the next moment will be the one when we return. "
+        "content": "I wake up every day in Amman, the capital of Jordan, and ask myself, \"Where to next year?\" But we have been here in Jordan for eight and a half years, and the ninth year is knocking on the door. We have been staying in this rented house since the war forced me and my family to flee from our home city of Taiz, and from Yemen. The war displaced my entire family. Our neighbours left too. Those who didn't leave were killed by bombs or snipers' bullets.\nFor a long time, I spent most of my days in Jordanian government offices, renewing temporary residence permits so that we wouldn't have to pay fines for staying without papers. Finally, we were granted official residency, but we still tell ourselves that next year we will return to our city.  \nBut the war doesn't stop. So we are here... still waiting. We do not buy many things because we will go back. We do not settle in, because we will return. But it looks like we are heading into our tenth year of living out of suitcases.\nWe can't plan for the future. Everything about our lives has been suspended. I have not married because I am waiting to go back to Yemen. Dreaming about small luxuries or stability has stopped, because perhaps the next moment will be the one when we return. "
       },
       "ar": {
         "title": "\" كل شي في حياتنا معلق.\"",
@@ -462,8 +462,8 @@
       "ar": "no-end-in-sight"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-18.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-18.png"
+      "main": "/images/placeholder_images/puzzle-22.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-22.jpg"
     },
     "personalInfo": {
       "en": {
@@ -519,8 +519,8 @@
       "ar": "dashed-dreams-steadfast-determination"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-31.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-31.png"
+      "main": "/images/placeholder_images/puzzle-22.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-22.png"
     },
     "personalInfo": {
       "en": {
@@ -575,8 +575,8 @@
       "ar": "how-long"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-13.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-13.jpg"
+      "main": "/images/placeholder_images/puzzle-12.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-12.jpg"
     },
     "personalInfo": {
       "en": {
@@ -632,8 +632,8 @@
       "ar": "the-kindness-of-strangers"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-09.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-09.jpg"
+      "main": "/images/placeholder_images/puzzle-26.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-26.png"
     },
     "personalInfo": {
       "en": {
@@ -688,8 +688,8 @@
       "ar": "shocking-news"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-23.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-23.jpg"
+      "main": "/images/placeholder_images/puzzle-19.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-19.png"
     },
     "personalInfo": {
       "en": {
@@ -746,8 +746,8 @@
       "ar": "every-day-brought-a-new-kind-of-pain"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-13.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-13.png"
+      "main": "/images/placeholder_images/puzzle-01.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-01.jpg"
     },
     "personalInfo": {
       "en": {
@@ -863,8 +863,8 @@
       "ar": "salaries-and-warring-sides"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-17.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-17.jpg"
+      "main": "/images/placeholder_images/puzzle-09.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-09.jpg"
     },
     "personalInfo": {
       "en": {
@@ -920,8 +920,8 @@
       "ar": "i-hope-the-fighting-ends"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-05.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-05.jpg"
+      "main": "/images/placeholder_images/puzzle-03.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-03.png"
     },
     "personalInfo": {
       "en": {
@@ -977,8 +977,8 @@
       "ar": "meaningless-aid-numbers"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-03.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-03.png"
+      "main": "/images/placeholder_images/puzzle-09.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-09.jpg"
     },
     "personalInfo": {
       "en": {
@@ -1034,8 +1034,8 @@
       "ar": "stolen-dreams"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-11.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-11.jpg"
+      "main": "/images/placeholder_images/puzzle-28.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-28.jpg"
     },
     "personalInfo": {
       "en": {
@@ -1158,8 +1158,8 @@
       "ar": "longing-from-afar"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-10.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-10.jpg"
+      "main": "/images/placeholder_images/puzzle-16.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-16.png"
     },
     "personalInfo": {
       "en": {
@@ -1215,8 +1215,8 @@
       "ar": "the-city-of-stars-and-dreams"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-22.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-22.jpg"
+      "main": "/images/placeholder_images/puzzle-23.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-23.jpg"
     },
     "personalInfo": {
       "en": {
@@ -1272,8 +1272,8 @@
       "ar": "nothing-for-granted"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-06.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-06.jpg"
+      "main": "/images/placeholder_images/puzzle-14.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-14.jpg"
     },
     "personalInfo": {
       "en": {
@@ -1329,8 +1329,8 @@
       "ar": "i-was-strong-enough"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-21.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-21.jpg"
+      "main": "/images/placeholder_images/puzzle-31.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-31.png"
     },
     "personalInfo": {
       "en": {
@@ -1383,8 +1383,8 @@
       "ar": "a-letter-to-the-next-generation"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-07.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-07.png"
+      "main": "/images/placeholder_images/puzzle-25.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-25.png"
     },
     "personalInfo": {
       "en": {
@@ -1408,7 +1408,7 @@
     "story": {
       "en": {
         "title": "A letter to the next generation",
-        "content": "A letter\nTo: the next generation\nFrom: A person lived through the war and the killings\nDate: 1 September 2023\nSubject: War may end, but killing does not. There are those who will kill you every day, in different ways.\nWar is ugly. The ugliest thing is that it doesn't stop until it stops life and the people who lived through it, in one way or another. Even when the fighting ends, nothing goes back to how it was before. You may still be alive and breathing, but you are not living. You are technically alive, but you are not really living life.\nThis is what I was thinking recently as I watched a Yemeni plane flying in the sky, carrying passengers to and from Sana’a airport. For many years, the skies were closed because of sieges. This is what one of the warring sides decided for us.\nFor three years, we didn’t see civilian airplanes. They become a memory of the days before the war, when there was peace and freedom of movement, and travel abroad. Then there was a ceasefire, and it was announced that flights would resume. I remember the happiness that filled me as I saw the first plane in the air again. For me, it was not just an airplane, but a declaration of life, an end to war, and a return to normalcy. The war is over. We survived, and we will return to how we were, even stronger.\nBut I was wrong. It was not long before women were restricted from leaving their homes without a mahram (a male relative). This is what another of the warring parties decided for us.\nWars may end. But the most vulnerable of society will continue to pay the price. Wars may end, but nothing will go back to how it was. Yemen’s planes may return to flight, but we will not.\nIn conclusion, we need a lasting peace that will preserve freedom, dignity, rights, and equality for all. War may end, but killing does not. There are those who will kill you every day, in different ways\n"
+        "content": "A letter\nTo: the next generation\nFrom: A person lived through the war and the killings\nDate: 1 September 2023\nSubject: War may end, but killing does not. There are those who will kill you every day, in different ways.\nWar is ugly. The ugliest thing about it is that it doesn't end until it stops life, and stops the people who lived through it. Even when the fighting ends, things do not go back to how they were before. You may still be alive and breathing, but you are not really living. You are technically alive, but not living life.\nThis is what I was thinking as I recently watched a Yemeni plane flying in the sky, carrying passengers to and from Sana’a airport. For many years, the skies were closed because of sieges. This closure is what one of the warring sides decided for us.\nFor three years, we didn’t see any civilian airplanes. They become a memory of the days before the war, when there was peace and freedom of movement, and travel abroad. Then there was a ceasefire, and it was announced that flights would resume. I remember being filled with happiness when I saw the first plane in the air. For me, it was not just a plane, but a declaration of life, an end to war, and a return to normalcy. The war is over. We survived, and we will return to how we were, even stronger.\nBut I was wrong. It was not long before women were restricted from leaving their homes without a mahram (a male guardian). This is what another of the warring parties decided for us.\nWars may end. But the most vulnerable of society will continue to pay the price. Wars may end, but nothing will go back to how it once was. Yemen’s planes may return to flight, but we will not.\nIn conclusion, we need a lasting peace that will preserve freedom, dignity, rights, and equality for all. War may end, but killing does not. There are those who will kill you every day, in different ways\n"
       },
       "ar": {
         "title": "رسالة إلى الأجيال القادمة",
@@ -1498,8 +1498,8 @@
       "ar": "i-worry-all-the-time-about-their-future"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-12.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-12.jpg"
+      "main": "/images/placeholder_images/puzzle-08.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-08.jpg"
     },
     "personalInfo": {
       "en": {
@@ -1555,8 +1555,8 @@
       "ar": "the-tragedies-of-a-country-and-a-family"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-23.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-23.png"
+      "main": "/images/placeholder_images/puzzle-20.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-20.jpg"
     },
     "personalInfo": {
       "en": {
@@ -1615,8 +1615,8 @@
       "ar": "we-have-lost-people-we-love-and-so-much-more"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-22.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-22.jpg"
+      "main": "/images/placeholder_images/puzzle-19.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-19.jpg"
     },
     "personalInfo": {
       "en": {
@@ -1735,8 +1735,8 @@
       "ar": "the-worst-luck-of-all"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-11.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-11.png"
+      "main": "/images/placeholder_images/puzzle-19.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-19.png"
     },
     "personalInfo": {
       "en": {
@@ -1760,7 +1760,7 @@
     "story": {
       "en": {
         "title": "The worst luck of all",
-        "content": "If you say to sign up for the lottery, \nI would have the worst luck of all\n\nAnd if you say to be patient, how long can a rational person wait?\nLiving like this for nine years, most of them on borrowed time\n\nI want to leave this homeland, where I am a stranger,\nA displaced stranger whose value is like a mosquito's\n\nPoverty and our questionable reality,\nAnd this war that we have been fighting for nine years\n\nThe fiercest battles, whose heat rages like flames,\nMassacres, wounds and bruises\n\nIt plays games with us,\nFrom every direction, it wins, and the confusion increases\n\n(A citizen’s dream of leaving his homeland)\nWe ask God to grant relief to this country and her people"
+        "content": "If you say to sign up for the lottery<single-break/>I would have the worst luck of all\n\nAnd if you say to be patient, how long can a rational person wait?<single-break/>Living like this for nine years, most of them on borrowed time\n\nI want to leave this homeland, where I am a stranger<single-break/>A displaced stranger whose value is like a mosquito's\n\nPoverty and our questionable reality<single-break/>And this war that we have been fighting for nine years\n\nThe fiercest battles, whose heat rages like flames<single-break/>Massacres, wounds and bruises\n\nIt plays games with us<single-break/>From every direction, it wins, and the confusion increases\n\n(A citizen’s dream of leaving his homeland)<single-break/>We ask God to grant relief to this country and her people"
       },
       "ar": {
         "title": "أسوء حظ",
@@ -1791,8 +1791,8 @@
       "ar": "so-much-loss"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-02.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-02.jpg"
+      "main": "/images/placeholder_images/puzzle-15.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-15.jpg"
     },
     "personalInfo": {
       "en": {
@@ -1849,8 +1849,8 @@
       "ar": "all-that-we-ask"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-16.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-16.png"
+      "main": "/images/placeholder_images/puzzle-07.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-07.jpg"
     },
     "personalInfo": {
       "en": {
@@ -1905,8 +1905,8 @@
       "ar": "the-strong-eat-the-weak"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-01.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-01.jpg"
+      "main": "/images/placeholder_images/puzzle-17.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-17.jpg"
     },
     "personalInfo": {
       "en": {
@@ -1966,8 +1966,8 @@
       "ar": "the-edge-of-an-abyss"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-21.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-21.jpg"
+      "main": "/images/placeholder_images/puzzle-25.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-25.jpg"
     },
     "personalInfo": {
       "en": {
@@ -2024,8 +2024,8 @@
       "ar": "nothing-but-bread-and-water"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-09.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-09.png"
+      "main": "/images/placeholder_images/puzzle-31.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-31.png"
     },
     "personalInfo": {
       "en": {
@@ -2081,8 +2081,8 @@
       "ar": "cut-roads-and-lost-touch"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-07.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-07.jpg"
+      "main": "/images/placeholder_images/puzzle-10.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-10.png"
     },
     "personalInfo": {
       "en": {
@@ -2140,8 +2140,8 @@
       "ar": "yemens-people-are-exhausted"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-03.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-03.jpg"
+      "main": "/images/placeholder_images/puzzle-26.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-26.jpg"
     },
     "personalInfo": {
       "en": {
@@ -2258,8 +2258,8 @@
       "ar": "the-deep-scars-of-war"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-17.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-17.jpg"
+      "main": "/images/placeholder_images/puzzle-11.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-11.png"
     },
     "personalInfo": {
       "en": {
@@ -2283,7 +2283,7 @@
     "story": {
       "en": {
         "title": "The deep scars of war",
-        "content": "The effects of the war on each Yemeni are massive and devastating. The negative impacts include, among many others: loss of life, physical injuries, displacement of so many people, and the loss of safe shelter. There are also significant economic and social impacts, including job loss, a deteriorating economic situation, the rise of poverty and hunger, and a lack of basic services, like electricity, water, health, and education. There has also been an impact on our mental health, as we deal with anxiety, stress, and trauma. The war has exacerbated political and social divisions in Yemen, increasing tensions and conflicts between groups. All of this has left deep scars, and continues to impact the lives of every Yemeni."
+        "content": "The war has had a massive and devastating effect on every Yemeni person. The negative impacts include, among so many others: loss of life, physical injuries, displacement of so many people, and the loss of safe shelter. There are also significant economic and social impacts, including job losses, a deteriorating economic situation, the rise of poverty and hunger, and a lack of basic services like electricity, water, health, and education. There has also been an impact on our mental health, as we deal with anxiety, stress, and trauma. The war has exacerbated political and social divisions in Yemen, increasing tensions and conflicts between groups. All of this has left deep scars, and continues to impact the lives of every Yemeni."
       },
       "ar": {
         "title": "جروح الحرب",
@@ -2316,8 +2316,8 @@
       "ar": "what-the-war-took"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-02.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-02.jpg"
+      "main": "/images/placeholder_images/puzzle-21.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-21.png"
     },
     "personalInfo": {
       "en": {
@@ -2375,8 +2375,8 @@
       "ar": "away-from-home-and-back-again"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-09.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-09.png"
+      "main": "/images/placeholder_images/puzzle-07.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-07.png"
     },
     "personalInfo": {
       "en": {
@@ -2433,8 +2433,8 @@
       "ar": "economic-changes"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-10.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-10.png"
+      "main": "/images/placeholder_images/puzzle-15.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-15.png"
     },
     "personalInfo": {
       "en": {
@@ -2553,8 +2553,8 @@
       "ar": "our-hearts-are-broken"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-23.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-23.png"
+      "main": "/images/placeholder_images/puzzle-29.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-29.png"
     },
     "personalInfo": {
       "en": {
@@ -2610,8 +2610,8 @@
       "ar": "vignettes-from-a-war"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-29.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-29.jpg"
+      "main": "/images/placeholder_images/puzzle-01.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-01.png"
     },
     "personalInfo": {
       "en": {
@@ -2668,8 +2668,8 @@
       "ar": "dreams-on-hold"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-19.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-19.png"
+      "main": "/images/placeholder_images/puzzle-18.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-18.jpg"
     },
     "personalInfo": {
       "en": {
@@ -2787,8 +2787,8 @@
       "ar": "what-was-it-for"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-23.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-23.jpg"
+      "main": "/images/placeholder_images/puzzle-10.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-10.jpg"
     },
     "personalInfo": {
       "en": {
@@ -2846,8 +2846,8 @@
       "ar": "our-lives-completely-changed"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-07.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-07.jpg"
+      "main": "/images/placeholder_images/puzzle-06.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-06.jpg"
     },
     "personalInfo": {
       "en": {
@@ -2907,8 +2907,8 @@
       "ar": "stop-this-senseless-war"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-22.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-22.png"
+      "main": "/images/placeholder_images/puzzle-04.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-04.png"
     },
     "personalInfo": {
       "en": {
@@ -2966,8 +2966,8 @@
       "ar": "my-story-told-two-ways"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-19.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-19.png"
+      "main": "/images/placeholder_images/puzzle-14.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-14.jpg"
     },
     "personalInfo": {
       "en": {
@@ -3020,8 +3020,8 @@
       "ar": "so-much-suffering"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-13.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-13.jpg"
+      "main": "/images/placeholder_images/puzzle-09.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-09.jpg"
     },
     "personalInfo": {
       "en": {
@@ -3078,8 +3078,8 @@
       "ar": "the-war-destroyed-everything-beautiful"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-10.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-10.jpg"
+      "main": "/images/placeholder_images/puzzle-06.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-06.png"
     },
     "personalInfo": {
       "en": {
@@ -3135,8 +3135,8 @@
       "ar": "my-daughter-refuses-to-give-up"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-13.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-13.png"
+      "main": "/images/placeholder_images/puzzle-07.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-07.jpg"
     },
     "personalInfo": {
       "en": {
@@ -3195,8 +3195,8 @@
       "ar": "shared-moments"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-03.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-03.jpg"
+      "main": "/images/placeholder_images/puzzle-18.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-18.png"
     },
     "personalInfo": {
       "en": {
@@ -3252,8 +3252,8 @@
       "ar": "my-children-had-ambitions"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-26.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-26.jpg"
+      "main": "/images/placeholder_images/puzzle-12.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-12.png"
     },
     "personalInfo": {
       "en": {
@@ -3314,8 +3314,8 @@
       "ar": "the-bare-necessities"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-28.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-28.jpg"
+      "main": "/images/placeholder_images/puzzle-25.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-25.png"
     },
     "personalInfo": {
       "en": {
@@ -3374,8 +3374,8 @@
       "ar": "a-future-for-our-children"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-22.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-22.png"
+      "main": "/images/placeholder_images/puzzle-26.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-26.jpg"
     },
     "personalInfo": {
       "en": {
@@ -3432,8 +3432,8 @@
       "ar": "every-day-i-think-of-leaving"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-32.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-32.jpg"
+      "main": "/images/placeholder_images/puzzle-14.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-14.jpg"
     },
     "personalInfo": {
       "en": {
@@ -3490,8 +3490,8 @@
       "ar": "the-war-has-changed-people"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-06.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-06.jpg"
+      "main": "/images/placeholder_images/puzzle-13.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-13.png"
     },
     "personalInfo": {
       "en": {
@@ -3552,8 +3552,8 @@
       "ar": "debts-piling-up"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-15.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-15.png"
+      "main": "/images/placeholder_images/puzzle-09.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-09.jpg"
     },
     "personalInfo": {
       "en": {
@@ -3729,8 +3729,8 @@
       "ar": "a-wide-ranging-economic-crisis"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-10.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-10.png"
+      "main": "/images/placeholder_images/puzzle-27.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-27.jpg"
     },
     "personalInfo": {
       "en": {
@@ -3848,8 +3848,8 @@
       "ar": "life-is-knowledge"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-23.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-23.jpg"
+      "main": "/images/placeholder_images/puzzle-14.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-14.jpg"
     },
     "personalInfo": {
       "en": {
@@ -3881,7 +3881,8 @@
       }
     },
     "tags": [
-      "Education"
+      "Education",
+      "Audio"
     ],
     "attachments": [
       "1047-1-89s.mp3"
@@ -3906,8 +3907,8 @@
       "ar": "a-dark-place"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-24.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-24.png"
+      "main": "/images/placeholder_images/puzzle-12.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-12.png"
     },
     "personalInfo": {
       "en": {
@@ -3965,8 +3966,8 @@
       "ar": "we-are-all-in-this-hole-together"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-08.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-08.jpg"
+      "main": "/images/placeholder_images/puzzle-26.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-26.png"
     },
     "personalInfo": {
       "en": {
@@ -4082,8 +4083,8 @@
       "ar": "what-if-we-could-go-back"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-06.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-06.jpg"
+      "main": "/images/placeholder_images/puzzle-11.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-11.jpg"
     },
     "personalInfo": {
       "en": {
@@ -4262,8 +4263,8 @@
       "ar": "i-am-suffering-and-my-children-are-suffering"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-32.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-32.png"
+      "main": "/images/placeholder_images/puzzle-10.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-10.jpg"
     },
     "personalInfo": {
       "en": {
@@ -4321,8 +4322,8 @@
       "ar": "economic-war"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-20.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-20.jpg"
+      "main": "/images/placeholder_images/puzzle-13.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-13.png"
     },
     "personalInfo": {
       "en": {
@@ -4438,8 +4439,8 @@
       "ar": "i-suffered-so-much-but-i-changed-too"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-25.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-25.png"
+      "main": "/images/placeholder_images/puzzle-22.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-22.png"
     },
     "personalInfo": {
       "en": {
@@ -4558,8 +4559,8 @@
       "ar": "the-war-made-me-stronger"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-22.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-22.png"
+      "main": "/images/placeholder_images/puzzle-19.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-19.png"
     },
     "personalInfo": {
       "en": {
@@ -4681,8 +4682,8 @@
       "ar": "we-are-doing-our-best-all-by-ourselves"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-11.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-11.png"
+      "main": "/images/placeholder_images/puzzle-04.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-04.jpg"
     },
     "personalInfo": {
       "en": {

@@ -58,12 +58,14 @@ const { story } = Astro.props
 // 		(paragraph) => paragraph.replace(/\n/g, '<br/>'), // Replace single newlines with <br/> within paragraphs
 // 	)
 
-// Break any \n into double line breaks and replace <single-break/> with <br/>
-const contentArray = story.story[lang].content
-	.split('\n') // Split at every newline
-	.map(
-		(paragraph) => paragraph.replace(/<single-break\/>/g, '<br/>'), // Replace <single-break/> with <br/>
-	)
+// Replace <single-break/> with <br/> globally
+let modifiedContent = story.story[lang].content.replace(/<single-break\/>/g, '<br/>')
+
+modifiedContent = modifiedContent.split('\n').join('<br/><br/>')
+
+modifiedContent = modifiedContent.replace(/(<br\/><br\/>)+/g, '<br/><br/>')
+
+const contentArray = modifiedContent.split('<br/><br/>')
 
 // Find the current story index based on the slug in the provided language
 const currentIndex = stories.findIndex((s) => s.slugs.en === story.slugs.en)
