@@ -44,9 +44,9 @@ const className = `transition-colors duration-150 relative inline-flex gap-x-2 i
 {
 	button === 'overview' && (
 		<a href={`${href || lang === 'ar' ? '/ar' : '/en'}`} target='_self' data-astro-prefetch data-astro-reload id={`${id || 'overview-button'}`}>
-			<button class={className}>
+			<button class={`z-50 ${className}`}>
 				<>
-					<span class='group-hover:text-burgundy inline text-xs sm:text-sm'>
+					<span class='group-hover:text-burgundy text-white inline text-xs sm:text-sm'>
 						{prefix}
 						{translations.allStories[lang]}
 					</span>

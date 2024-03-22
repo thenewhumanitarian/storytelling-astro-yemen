@@ -13,11 +13,12 @@
 	/* OPEN MENU */
 	function openMenu() {
 		const menuOverlay = document.getElementById('menu-overlay')
+
 		setTimeout(() => {
 			menuOverlay.style.display = 'flex'
 			menuOverlay.style.visibility = 'visible'
 			menuOverlay.style.opacity = 1
-		}, 100)
+		}, 50)
 
 		// Block scrolling on body when menu is open
 		document.body.style.overflow = 'hidden'
@@ -27,8 +28,6 @@
 
 	/* CLOSE MENU */
 	function closeMenu(e) {
-		console.log(e.target)
-
 		const menuOverlay = document.getElementById('menu-overlay')
 		const closeButtonText = document.getElementById('close-button--text')
 		const menuOverlayNav = document.getElementById('menu-overlay--nav')
@@ -49,6 +48,9 @@
 		) {
 			// Scroll to top of scrollable container
 			document.getElementById('scrollable-container').scrollTop = 0
+			localStorage.setItem('menuOpen', 'false')
+		} else {
+			localStorage.setItem('menuOpen', 'true')
 		}
 
 		// Handle button events
@@ -93,7 +95,7 @@
 			}
 		}
 
-		localStorage.setItem('menuOpen', 'false')
+		// localStorage.setItem('menuOpen', 'false')
 	}
 
 	function initMenuOverlay() {
@@ -103,6 +105,8 @@
 		// Add event listeners
 		menuOverlay.addEventListener('click', closeMenu)
 		menuButtonOpen.addEventListener('click', openMenu)
+
+		localStorage.setItem('menuOpen', 'false')
 
 		checkIntroOverlay()
 	}
@@ -121,4 +125,14 @@
 	document.addEventListener('DOMContentLoaded', () => {
 		initMenuOverlay()
 	})
+
+	// document.addEventListener('keydown', function (event) {
+	// 	if (event.key === 'Escape') {
+	// 		// For modern browsers
+	// 		closeMenu(event)
+	// 	} else if (event.keyCode === 27) {
+	// 		// For older browsers
+	// 		closeMenu(event)
+	// 	}
+	// })
 </script>
