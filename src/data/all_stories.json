@@ -242,13 +242,13 @@
         "name": "N.",
         "surname": "S.",
         "whereFrom": "al-Dhale",
-        "livingIn": "Outside Yemen"
+        "livingIn": "CUSTOM:lives outside Yemen"
       },
       "ar": {
         "name": "ن.",
         "surname": "ص.",
         "whereFrom": "الضالع",
-        "livingIn": "خارج اليمن"
+        "livingIn": "CUSTOM:خارج اليمن"
       }
     },
     "contact": {

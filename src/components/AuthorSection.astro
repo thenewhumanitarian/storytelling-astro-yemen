@@ -12,10 +12,47 @@ export interface Props {
 const { lang, name, age, from, livingIn } = Astro.props as Props
 
 const comma = lang === 'ar' ? '،' : ','
+
+// Function to process the 'from' and 'livingIn' properties
+function processLocation(location: string | undefined) {
+	if (location && location.startsWith('CUSTOM:')) {
+		// If location starts with 'CUSTOM:', use the text after the prefix directly
+		return {
+			text: location.substring('CUSTOM:'.length).trim(),
+			isCustom: true, // Indicate that this text is custom and should not prepend translation
+		}
+	}
+	// For non-custom texts, return the original string and indicate it's not custom
+	return {
+		text: location,
+		isCustom: false,
+	}
+}
+
+// Process 'from' and 'livingIn' with potential 'CUSTOM:' prefix
+const customFrom = processLocation(from)
+const customLivingIn = processLocation(livingIn)
+
+// Construct the text for the span
+let userInfo = `${name && name !== '' ? name.trim() : translations.nameUnknown[lang]}`
+
+if (age) {
+	userInfo += `${comma} ${age.trim()}`
+}
+
+if (customFrom.text) {
+	// Only prepend "from" translation if it's not custom text
+	userInfo += customFrom.isCustom ? `${comma} ${customFrom.text}` : `${comma} ${translations.from[lang].toLowerCase()} ${customFrom.text}`
+}
+
+if (customLivingIn.text && customLivingIn.text !== customFrom.text) {
+	// Only prepend "lives in" translation if it's not custom text
+	userInfo += customLivingIn.isCustom ? `${comma} ${customLivingIn.text}` : `${comma} ${translations.livesIn[lang].toLowerCase()} ${customLivingIn.text}`
+}
 ---
 
 <div class='mt-0 text-center sm:text-base lg:text-lg xl:text-xl' dir={`${lang === 'ar' ? 'rtl' : 'ltr'}`}>
-	<span class='font-normal inline-block pt-2'></span>{name && name !== '' ? name.trim() : translations.nameUnknown[lang]}{age ? `${comma} ${age.trim()}` : ``}{from ? `${comma} ${translations.from[lang].toLowerCase()} ${from}` : ``}{livingIn && livingIn !== from ? `${comma} ${translations.livesIn[lang].toLowerCase()} ${livingIn}` : ``}
+	<span class='font-normal inline-block pt-2'>{userInfo}</span>
 </div>
 
 <style>

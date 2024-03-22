@@ -93,6 +93,8 @@ function processAudioFiles(files) {
 // Example of using the function
 const processedAudioFiles = processAudioFiles(story.attachments)
 const hasAudioFiles = processedAudioFiles.length > 0
+
+const storyTitle = story.story[lang].title || `${lang.toUpperCase()} title for story ID #${story.id} is missing`
 ---
 
 <Layout
@@ -127,7 +129,7 @@ const hasAudioFiles = processedAudioFiles.length > 0
 				{/* Header section */}
 				<div class='w-full flex flex-col items-center justify-center'>
 					<Title>
-						{story.story[lang].title || `${lang.toUpperCase()} title for story ID #${story.id} is missing`}
+						{storyTitle}
 					</Title>
 					<AuthorSection
 						lang={lang}
