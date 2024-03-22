@@ -17,9 +17,11 @@ const placeholderImageOutputDirectory = path.join(__dirname, '../public/images/p
 
 // Fetch data
 fetchAndParseCSV(csvUrl)
-  .then(data => {
+.then(data => {
+    console.log(data)
     // Filter out unpublished stories
-    const filteredData = data.filter(item => item['Publish'] === 'x');
+    const filteredData = data.filter(item => item['Publish'].trim() === 'x');
+    // const filteredData = data.filter(item => item['Publish'] === 'x');
 
     // Process data once fetched
     processData(filteredData)

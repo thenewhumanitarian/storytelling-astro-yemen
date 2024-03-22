@@ -6,8 +6,8 @@
       "ar": "the-war-destroyed-my-life"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-19.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-19.jpg"
+      "main": "/images/placeholder_images/puzzle-09.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-09.jpg"
     },
     "personalInfo": {
       "en": {
@@ -60,8 +60,8 @@
       "ar": "striving-for-an-education"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-13.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-13.png"
+      "main": "/images/placeholder_images/puzzle-31.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-31.png"
     },
     "personalInfo": {
       "en": {
@@ -123,13 +123,13 @@
       "en": {
         "name": "Zaid",
         "surname": "Rafiqallah",
-        "whereFrom": "Yemen",
+        "whereFrom": "",
         "livingIn": "Sana'a"
       },
       "ar": {
         "name": "زيد",
         "surname": "رفيق الله",
-        "whereFrom": "اليمن",
+        "whereFrom": "",
         "livingIn": "صنعاء"
       }
     },
@@ -141,7 +141,7 @@
     "story": {
       "en": {
         "title": "\"Hard work and fate had done their jobs.\"",
-        "content": "It took a few years of war, and for the government to stop paying public employees, before I realised that life and work were not going to return to normal. I decided to work on developing new skills in languages, communication, and negotiation. For two years, I worked from 10 at night until 7 in the morning, to cover the costs. And then I studied during the day.\nWhen I finished, I couldn’t find a job. I worked for a time as an English teacher, but it didn't feel like the right place for me. So I went on to study accounting, again working at the same time, always trying to support my family. But I still couldn’t find a job. \nDespair was beginning to knock me down. I considered going to the frontlines of the war to fight. I didn’t really want to fight, but I did want to die. I felt like I was a burden to my family. I figured that if I were killed, other people would step in and help my family get by.\nOne day my phone rang. The caller said that I had an interview. I got dressed quickly, and looked at myself in the mirror. “Is this finally the job?” I wondered. \nI waited for weeks, everyday wishing that it would all end. I carried so much anxiety, stress, and fear that I had missed my once chance. Finally, there was an offer and a contract: A job in the humanitarian field, trying to ease the burden of the war on other people. I felt hard work and fate had done their jobs. I am now in a place where I can help others."
+        "content": "It took a few years of war, and for the government to stop paying public employees, before I realised that life and work were not going to return to normal. I decided to work on developing new skills in languages, communication, and negotiation. For two years, I worked from 10 at night until 7 in the morning, to cover the costs. I studied during the day.\nWhen I finished, I couldn’t find a job. I worked for a time as an English teacher, but it didn't feel like the right place for me. So I went on to study accounting, again working at the same time, always trying to support my family. But I still couldn’t find a job. \nDespair was beginning to knock me down. I considered going to the frontlines of the war to fight. I didn’t really want to fight, but I did want to die. I felt like I was a burden to my family. I figured that if I were killed, other people would step in and help my family get by.\nOne day my phone rang. The caller said that I had an interview. I got dressed quickly, and looked at myself in the mirror. “Is this finally the job?” I wondered. \nI waited for weeks, everyday wishing that it would all end. I carried so much anxiety, stress, and fear that I had missed my once chance. Finally, there was an offer and a contract: A job in the humanitarian field, trying to ease the burden of the war on other people. I felt hard work and fate had done their jobs. I am now in a place where I can help others."
       },
       "ar": {
         "title": "\"لقد عمل القدر عمله.\"",
@@ -177,21 +177,21 @@
       "ar": "hope-is-keeping-me-alive"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-15.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-15.jpg"
+      "main": "/images/placeholder_images/puzzle-15.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-15.png"
     },
     "personalInfo": {
       "en": {
         "name": "G.",
         "surname": "",
         "whereFrom": "Amran",
-        "livingIn": "Aswan, Egypt"
+        "livingIn": "Egypt"
       },
       "ar": {
         "name": "ج.",
         "surname": "",
         "whereFrom": "عمران",
-        "livingIn": "اسوان، مصر"
+        "livingIn": "مصر"
       }
     },
     "contact": {
@@ -234,8 +234,8 @@
       "ar": "hope-is-keeping-me-alive"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-20.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-20.jpg"
+      "main": "/images/placeholder_images/puzzle-22.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-22.jpg"
     },
     "personalInfo": {
       "en": {
@@ -248,7 +248,7 @@
         "name": "ن.",
         "surname": "ص.",
         "whereFrom": "الضالع",
-        "livingIn": "CUSTOM:خارج اليمن"
+        "livingIn": "CUSTOM:يعيش خارج اليمن"
       }
     },
     "contact": {
@@ -291,8 +291,8 @@
       "ar": "i-hoped-it-was-a-cruel-joke"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-12.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-12.png"
+      "main": "/images/placeholder_images/puzzle-08.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-08.png"
     },
     "personalInfo": {
       "en": {
@@ -345,21 +345,21 @@
       "ar": "we-want-this-war-to-end-and-we-want-a-country"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-29.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-29.png"
+      "main": "/images/placeholder_images/puzzle-09.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-09.png"
     },
     "personalInfo": {
       "en": {
         "name": "Hessah",
         "surname": "Mohammed",
         "whereFrom": "Yemen",
-        "livingIn": "Jeddah, Saudi Arabia"
+        "livingIn": "Jeddah"
       },
       "ar": {
         "name": "حصه",
         "surname": "محمد",
         "whereFrom": "اليمن",
-        "livingIn": "السعودية _ جدة"
+        "livingIn": "جدة"
       }
     },
     "contact": {
@@ -370,7 +370,7 @@
     "story": {
       "en": {
         "title": "\"We want this war to end, and we want a country.\"",
-        "content": "The war had a massive psychological and social impact on me, both as a human being and as a woman. I was impacted by the sounds of military planes and missiles in Sana’a — to this day I am still terrified by loud sounds or sudden movements. I was impacted by the dead bodies. I was impacted by witnessing the suffering of others, their displacement from home, the cutting off of salaries [for public employees]. \nAt first, I didn’t realise how much all of this was impacting me psychologically. I felt so much sorrow and pain because of what I had seen, and from my inability to do anything about it. I wanted to live, and leave all this misery behind. \nThe violence the Houthis used on the people they were arrested made me feel unsafe and afraid. I had trouble traveling within the country, and I was accused of belonging to various parties to the war, even though I didn’t belong to any of them. When I finally left Yemen for Egypt in 2020, I was interrogated at an office in Aden airport. \nI returned to Sana’a in late 2021 because I could not bear to live outside my country anymore. But with no jobs, high prices, and high rents, my psychological state worsened. I had worked as an independent journalist, but I couldn’t do that anymore. The internet was bad, and people in both Sana’a and Aden just weren’t the same anymore. They were so much worse off. \nI decided to leave again, hoping that maybe I would find something outside Yemen that I couldn’t find in my homeland. I am now more than twice the age of the war —  the media says it has been eight years, but I think it has been 16. And I saw the horrors of it all. I am still searching for a place where I can have safety, stability, and a dignified life. We want this war to end, and we want a country."
+        "content": "The war had a massive psychological and social impact on me, both as a human being and as a woman. I was impacted by the sounds of military planes and missiles in Sana’a. To this day I am still terrified by loud sounds or sudden movements. I was impacted by the dead bodies. I was impacted by witnessing the suffering of others, their displacement from home, the cutting off of salaries for public employees.\nAt first, I didn’t realise how much all of this was impacting me. I felt so much sorrow and pain because of what I had seen, and from my inability to do anything about it. I wanted to live, and leave all this misery behind. \nThe violence the Houthis used on people they were arrested made me feel unsafe and afraid in Sana'a. I had trouble traveling within the country, and I was accused of belonging to various parties to the war, even though I didn’t belong to any of them. When I finally left Yemen for Egypt in 2020, I was interrogated at an office in Aden airport. \nI returned to Sana’a in late 2021 because I couldn't bear to live outside my country anymore. But with no jobs, high prices, and high rents, my mental state worsened. I had worked as an independent journalist, but I couldn’t do that anymore. The internet was bad, and people in both Sana’a and Aden just weren’t the same anymore. They were so much worse off. \nI decided to leave again, hoping that maybe I would find something outside Yemen that I couldn’t find in my homeland. I am now more than twice the age of the war. The media says it has been eight years, but it feels like has been more like 16. And I saw the horror of it all. I am still searching for a place where I can have safety, stability, and a dignified life. \nWe want this war to end, and we want a country."
       },
       "ar": {
         "title": "\"نريد أن تنتهي الحرب وأن يكون لنا بلد.\"",
@@ -405,15 +405,15 @@
       "ar": "our-lives-are-suspended"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-29.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-29.png"
+      "main": "/images/placeholder_images/puzzle-10.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-10.png"
     },
     "personalInfo": {
       "en": {
         "name": "Dhuha",
         "surname": "",
         "whereFrom": "Taiz",
-        "livingIn": "Amman, Jordan"
+        "livingIn": "Amman"
       },
       "ar": {
         "name": "ضحى",
@@ -462,8 +462,8 @@
       "ar": "no-end-in-sight"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-09.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-09.jpg"
+      "main": "/images/placeholder_images/puzzle-06.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-06.jpg"
     },
     "personalInfo": {
       "en": {
@@ -487,7 +487,7 @@
     "story": {
       "en": {
         "title": "No end in sight",
-        "content": "By the time the Saudi Arabia-led coalition began bombing in Yemen on 26 March 2015, I had been working in the media for nine years, six as a journalist specialised in science. I didn’t realise that day was a turning point that threatened to undermine everything I had accomplished in my career.\nA year into the war, I lost my most important source of income. The place I worked was raided and closed. Soon after, government salaries were cut off, and I lost my other source of income.\nThrough these jobs I had carved out a space for myself in science journalism. I traveled, built a good name for myself, and saw success. \nBy 2017, I was desperately holding on to my only link with science media; keeping in touch with outlets outside Yemen, and working remotely as a freelancer. But with time, this space began to narrow. Science-focused publications filled up with the pain and suffering of the Yemeni people, and politics and war eventually dominated the media scene.\nI found myself inside the largest prison in the world: Yemen. Inside Yemen was another prison: The part of the country controlled by the Houthis. They imposed severe restrictions on my work as a correspondent for foreign media. I was accused of espionage, my phones and accounts were monitored, and I was prevented from receiving money transfers from abroad. I lose my only remaining source of income. \nI can’t communicate with sources or travel anymore. The internet is now my only link to my former colleagues.  \nOver the past two years, I have been pressured to work in political media for one side in the war. But I refused. Today, after more than eight years of war, I can say that I have been completely cut off as a science journalist. In order to provide my family with their basic needs, I’ve been working in calligraphy, drawing, and design.\nThe war destroyed everything I achieved, and there seems to be no end in sight. "
+        "content": "By the time the Saudi Arabia-led coalition began bombing in Yemen on 26 March 2015, I had been working in the media for nine years, six as a journalist specialised in science. I didn’t realise that day was a turning point that threatened to undermine everything I had accomplished in my career.\nA year into the war, I lost my most important source of income. The place I worked was raided and closed. Soon after, government salaries were cut off, and I lost my other source of income.\nThrough these jobs I had carved out a space for myself in science journalism. I travelled, built a good name for myself, and saw success. \nBy 2017, I was desperately holding on to my only remaining links with science-focused meida. I kept in touch with outlets outside Yemen and worked remotely as a freelancer. But with time, this space began to narrow. Science publications filled up with the pain and suffering of the Yemeni people, and politics and war eventually dominated the media scene.\nI found myself inside the largest prison in the world: Yemen. Inside that was another prison: The part of the country controlled by the Houthis. They imposed severe restrictions on my work as a correspondent for foreign media. I was accused of espionage, my phones and accounts were monitored, and I was prevented from receiving money transfers from abroad. I lost my only remaining source of income. \nI can’t communicate with sources or travel anymore. The internet is my only link to my former colleagues.  \nOver the past two years, I have been pressured to work in political media for one side in the war. But I refused. After more than eight years of war, I am now completely cut off as a science journalist. In order to provide my family with their basic needs, I’ve been working in calligraphy, drawing, and design.\nThe war destroyed everything I achieved, and there seems to be no end in sight. "
       },
       "ar": {
         "title": "\"يبدو أنها لن تنتهي قريبًا.\"",
@@ -519,8 +519,8 @@
       "ar": "dashed-dreams-steadfast-determination"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-07.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-07.png"
+      "main": "/images/placeholder_images/puzzle-18.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-18.png"
     },
     "personalInfo": {
       "en": {
@@ -544,7 +544,7 @@
     "story": {
       "en": {
         "title": "Dashed dreams, steadfast determination",
-        "content": "My journey began upon my graduation in Egypt, where I returned to my homeland of Yemen, full of dreams. Having spent years in exile, far from my family and country, I felt like a bird whose wings had grown weary from flying for eight long years. Upon landing in Yemen, I was overcome with emotion and anticipation as I was greeted by my mother's warm embrace. \nI began my career as an assistant professor at a university, specialising in clinical biochemistry, feeling as though I had taken the first steps towards realising my dreams. My newfound sense of warmth was short-lived, as the onset of war shattered all hopes and dreams. I was gripped with panic and fear, not wanting to lose my life, a part of my body, or a member of my family. As we fled, we encountered a horrific accident caused by collisions and gunfire, but miraculously, we survived and returned. Despite the destruction and siege imposed on our city, we refused to succumb to the circumstances and kept universities open. \nHowever, as time passed, I felt helpless and yearned for personal development. The war had placed new limits on everyone, so I looked to reach out to organizations for assistance. Eventually, a UK-based charity responded to my pleas and provided me with the support and resources I needed to travel and further my education. I continue to persevere towards enhancing my academic and research capabilities, despite the numerous obstacles. I remain steadfast in my determination."
+        "content": "My journey began upon my graduation in Egypt, where I returned to my homeland of Yemen, full of dreams. Having spent so long in exile, far from my family and country, I felt like a bird whose wings had grown weary from flying for eight long years. Upon landing in Yemen, I was overcome with emotion and anticipation as I was greeted by my mother's warm embrace. \nI began my career as an assistant professor at a university, specialising in clinical biochemistry, feeling that I had taken the first steps towards realising my dreams. But my newfound sense of warmth was short-lived, as the onset of war shattered everything. I was gripped with panic and fear, not wanting to lose my life, a part of my body, or a member of my family. Once day my family encountered a horrific accident caused by collisions and gunfire. Miraculously, we survived and managed to get home. Despite the destruction and siege imposed on our city, we refused to succumb to the circumstances of the war. We kept the universities open. \nHowever, as time passed, I felt helpless and yearned for personal development. The war had placed new limits on everyone, so I looked to reach out to various organisations for assistance. Eventually, a UK-based charity responded to my pleas and provided me with the support and resources I needed to travel and further my education. I continue to persevere towards enhancing my academic and research capabilities, despite the numerous obstacles. I remain steadfast in my determination."
       },
       "ar": {
         "title": "\"سأظل ثابتًا على عزمي وعلى تحقيق هدفي.\"",
@@ -552,7 +552,9 @@
       }
     },
     "tags": [
-      "Education"
+      "Education",
+      "Violence",
+      "Exile"
     ],
     "attachments": [],
     "audioReadouts": {
@@ -575,8 +577,8 @@
       "ar": "how-long"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-20.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-20.jpg"
+      "main": "/images/placeholder_images/puzzle-04.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-04.png"
     },
     "personalInfo": {
       "en": {
@@ -632,8 +634,8 @@
       "ar": "the-kindness-of-strangers"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-03.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-03.jpg"
+      "main": "/images/placeholder_images/puzzle-19.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-19.jpg"
     },
     "personalInfo": {
       "en": {
@@ -688,8 +690,8 @@
       "ar": "shocking-news"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-18.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-18.jpg"
+      "main": "/images/placeholder_images/puzzle-17.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-17.png"
     },
     "personalInfo": {
       "en": {
@@ -746,8 +748,8 @@
       "ar": "every-day-brought-a-new-kind-of-pain"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-28.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-28.jpg"
+      "main": "/images/placeholder_images/puzzle-28.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-28.png"
     },
     "personalInfo": {
       "en": {
@@ -863,8 +865,8 @@
       "ar": "salaries-and-warring-sides"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-32.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-32.jpg"
+      "main": "/images/placeholder_images/puzzle-06.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-06.png"
     },
     "personalInfo": {
       "en": {
@@ -920,8 +922,8 @@
       "ar": "i-hope-the-fighting-ends"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-15.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-15.jpg"
+      "main": "/images/placeholder_images/puzzle-18.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-18.jpg"
     },
     "personalInfo": {
       "en": {
@@ -977,8 +979,8 @@
       "ar": "meaningless-aid-numbers"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-29.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-29.jpg"
+      "main": "/images/placeholder_images/puzzle-07.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-07.jpg"
     },
     "personalInfo": {
       "en": {
@@ -1034,21 +1036,21 @@
       "ar": "stolen-dreams"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-25.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-25.png"
+      "main": "/images/placeholder_images/puzzle-32.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-32.jpg"
     },
     "personalInfo": {
       "en": {
         "name": "Malek",
         "surname": "Lukah",
         "whereFrom": "Ibb",
-        "livingIn": "Outside Yemen"
+        "livingIn": "CUSTOM:lives outside Yemen"
       },
       "ar": {
         "name": "مالك",
         "surname": "لوكه",
         "whereFrom": "إب",
-        "livingIn": "خارج اليمن"
+        "livingIn": "CUSTOM:يعيش خارج اليمن"
       }
     },
     "contact": {
@@ -1098,14 +1100,14 @@
       "en": {
         "name": "Sofiane",
         "surname": "Alsaar",
-        "whereFrom": "Paris, France",
-        "livingIn": "Cairo, Egypt"
+        "whereFrom": "Paris",
+        "livingIn": "Cairo"
       },
       "ar": {
         "name": "سفيان",
         "surname": "الصعر",
-        "whereFrom": "باريس فرنسا",
-        "livingIn": "القاهره مصر"
+        "whereFrom": "باريس",
+        "livingIn": "القاهره"
       }
     },
     "contact": {
@@ -1116,7 +1118,7 @@
     "story": {
       "en": {
         "title": "Childhood memories of Sana'a",
-        "content": "Born and raised in France, Yemen is the country of my father. \nEvery summer, my family and I traveled all over Yemen. We stayed in Aden, Ibb, Taiz, Bab al-Mandeb, Mokha, Hodeidah... My parents used to take the three of us hiking in the Yemeni mountains, swimming in waterfalls, visiting lush green wadis. The memories my brother, sister and I share of our visits are indelible.\nOf all these memories, those spent in the family home in Sana'a are undeniably the sweetest. The hours spent in my grandmother's orchard could have lasted forever, and we would never have tired of it. It was a veritable Garden of Eden. \nA native of the Yemeni mountains and a lover of nature, my grandmother looked after her vines, pomegranate and fig trees like the apple of her eye. In the shade of the vineyard, two turtles made their home, much to our delight. The climate is mild but dry in the Sana'a summer, ideal for our children's games. Summer is also the season of monsoon rains, and not a summer went by without us witnessing downpours of water pouring down on the city. Sana’a gives off a soul-soothing smell of wet earth. \r\nWe often lost ourselves in the old town, one of the most beautiful in the Arab world, dotted with gardens and tower-houses elegantly decorated with stucco and a thousand-colored stained-glass windows.\r\nI visited Sana’a in 2013, and didn’t return until 2021. Despite the war and its scars, I was finally able to reconnect with my family and my second country, only to realise how much I had lost.\n"
+        "content": "I was born and raised in France, and Yemen is the country of my father. \nEvery summer, my family and I traveled all over Yemen. We stayed in Aden, Ibb, Taiz, Bab al-Mandeb, Mokha, Hodeidah... My parents used to take the three of us hiking in the Yemeni mountains, swimming in waterfalls, visiting lush green wadis. The memories my brother, sister and I share of our visits are indelible.\nOf all these memories, those spent in the family home in Sana'a are undeniably the sweetest. The hours spent in my grandmother's orchard could have lasted forever, and we would never have tired of it. It was a veritable Garden of Eden. \nA native of the Yemeni mountains and a lover of nature, my grandmother looked after her vines, pomegranate and fig trees like they were the apple of her eye. In the shade of the vineyard, two turtles made their home, much to our delight. The climate is mild but dry in the Sana'a summer, ideal for our children's games. It is also the season of monsoon rains, and not a summer went by without us witnessing downpours of water pouring down on the city. After the rain, Sana’a gives off a soul-soothing smell of wet earth. \nWe often lost ourselves in the old town, one of the most beautiful in the Arab world, dotted with gardens and tower houses elegantly decorated with stucco and a thousand-coloured stained glass windows.\nI visited Sana’a in 2013, and didn’t return until 2021. Despite the war and its scars, I was finally able to reconnect with my family and my second country, only to realise how much I had lost.\n"
       },
       "ar": {
         "title": "بستان جدتي في صنعاء",
@@ -1158,8 +1160,8 @@
       "ar": "longing-from-afar"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-27.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-27.png"
+      "main": "/images/placeholder_images/puzzle-23.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-23.png"
     },
     "personalInfo": {
       "en": {
@@ -1172,7 +1174,7 @@
         "name": "س. ا.",
         "surname": "يافعي",
         "whereFrom": "لحج",
-        "livingIn": "برمنجهام,الولايات المتحدة البريطانية"
+        "livingIn": "برمنجهام، بريطانيا"
       }
     },
     "contact": {
@@ -1183,7 +1185,7 @@
     "story": {
       "en": {
         "title": "Longing from afar",
-        "content": "My mother was first separated from two of her four children in 1971. At the time, my father was working in the UK, and the family decided he should take two of the children with him, and leave two behind in Yemen. My mother had no say in the decision. \nMy father took me (the youngest child), and my eldest brother with him. I was 6, my brother was 12. The years passed, and my father would go back to Yemen every few years, but they couldn’t afford the trip for all of us. My mother eventually left Yemen too, but they tried to visit friends and family every five years or so. \nAs time passed my parents got older and weaker, their health was deteriorating. The war started. I remember seeing and hearing my mother’s cries every night, that she longed to see my brother and his family back home in Yemen. We promised to take her, but the years passed, and the war went on so there was no way we could go back. Her health got worse, and her longing to see her children caused her so much grief. When God took my mom back to him, she called out the names of my brother and sister. \n"
+        "content": "My mother was first separated from two of her four children in 1971. At the time, my father was working in the UK, and the family decided he should take two of the children with him, and leave two behind in Yemen. My mother had no say in the decision. \nMy father took me – the youngest child – and my oldest brother with him. I was 6, my brother was 12. The years passed, and my father would go back to visit Yemen every few years, but couldn’t afford to take us with him. My mother eventually left Yemen too. They they tried to visit friends and family every five years or so. \nAs time passed, my parents got older and weaker. Their health was deteriorating. The war started. I remember seeing and hearing my mother’s cries every night. She longed to see my brother and his family back home in Yemen. We promised to take her, but the years passed, and the war went on, so there was no way we could go back. Her health got worse, and her longing to see her children caused her so much grief. When God took my mom back to him, she called out the names of my brother and sister. \n"
       },
       "ar": {
         "title": "\"وعندما أخذ الله والدتي كانت تنادي بأسماء أخي وأختي.\"",
@@ -1215,8 +1217,8 @@
       "ar": "the-city-of-stars-and-dreams"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-24.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-24.jpg"
+      "main": "/images/placeholder_images/puzzle-14.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-14.jpg"
     },
     "personalInfo": {
       "en": {
@@ -1272,8 +1274,8 @@
       "ar": "nothing-for-granted"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-18.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-18.jpg"
+      "main": "/images/placeholder_images/puzzle-30.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-30.png"
     },
     "personalInfo": {
       "en": {
@@ -1329,21 +1331,21 @@
       "ar": "i-was-strong-enough"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-27.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-27.png"
+      "main": "/images/placeholder_images/puzzle-19.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-19.png"
     },
     "personalInfo": {
       "en": {
         "name": "Majda",
         "surname": "al-Haddad",
         "whereFrom": "Ibb",
-        "livingIn": "New York, US"
+        "livingIn": "New York"
       },
       "ar": {
         "name": "ماجدة",
         "surname": "الحداد",
         "whereFrom": "إب",
-        "livingIn": "نيويورك, الولايات المتحدة الامريكية"
+        "livingIn": "نيويورك"
       }
     },
     "contact": {
@@ -1354,7 +1356,7 @@
     "story": {
       "en": {
         "title": "\"I was strong enough.\"",
-        "content": "I am a single woman who left Yemen with my three children and fear, hope, sadness, and ambition. I went to the United States in 2014 to find a new life, safety, home, dignity, equality, justice, and freedom.\nI am an activist. I participated in the Arab Spring in 2011, and I was in Change Square [the centre of activism in Sana’a] since the first day of our revolution against the regime [of President Ali Abdullah Saleh]. We spent more than eight months working on demonstrations and meetings. There were violent confrontations, we faced death, gunfire, and tear gas. We watched our friends shot and killed, but we remained strong, full of life and hope. We dreamt of a new Yemen, but our revolution ended with the Gulf initiative [a late 2011 plan for political transition]. It was our first big failure.\nI do not believe we are to blame for the war, which began a few years later, but I know that our revolution was not well-prepared or well-organised. But in those year we worked on campaigns, demonstrations, and conferences, all in search of the Yemen we wanted. \nI was the owner and principal of a school in Sana’a, but because of the Arab Spring and the war, we couldn’t continue. I lost my school, and my business, and I had to leave Yemen.\nIt was difficult for a single mom and three children to start a new life in America, but I was strong enough to do it. My children and I all finished our higher education, found jobs, and built new lives. But Yemen remains our greatest pain.\n\n"
+        "content": "I am a single woman who left Yemen with my three children and fear, hope, sadness, and ambition. I went to the United States in 2014 to find a new life, safety, home, dignity, equality, justice, and freedom.\nI am an activist. I participated in the Arab Spring in 2011, and I was in Change Square [the centre of activism in Sana’a] since the first day of our revolution against the regime [of then-President Ali Abdullah Saleh]. We spent more than eight months working on demonstrations and meetings. There were violent confrontations. We faced death, gunfire, and tear gas. We saw our friends shot and killed, but we remained strong, full of life and hope. We dreamt of a new Yemen, but our revolution ended with the Gulf initiative [a 2011 plan for political transition]. It was our first big failure.\nI do not believe we are to blame for the war, which began a few years later, but I know that our revolution was not well-prepared or well-organised. But in those years we worked on campaigns, demonstrations, and conferences, all in search of the Yemen we wanted. \nI was the owner and principal of a school in Sana’a, but because of the Arab Spring and the war, we couldn’t continue. I lost my school, and my business, and I had to leave Yemen.\nIt was difficult for a single mom and three children to start a new life in the United States, but I was strong enough to do it. My children and I have all finished our higher education, found jobs, and built new lives. But Yemen remains our greatest pain.\n\n"
       },
       "ar": {
         "title": "\"كنتُ قوية بما يكفي.\"",
@@ -1383,8 +1385,8 @@
       "ar": "a-letter-to-the-next-generation"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-22.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-22.png"
+      "main": "/images/placeholder_images/puzzle-26.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-26.jpg"
     },
     "personalInfo": {
       "en": {
@@ -1498,8 +1500,8 @@
       "ar": "i-worry-all-the-time-about-their-future"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-30.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-30.jpg"
+      "main": "/images/placeholder_images/puzzle-09.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-09.png"
     },
     "personalInfo": {
       "en": {
@@ -1616,8 +1618,8 @@
       "ar": "we-have-lost-people-we-love-and-so-much-more"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-31.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-31.png"
+      "main": "/images/placeholder_images/puzzle-27.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-27.jpg"
     },
     "personalInfo": {
       "en": {
@@ -1641,7 +1643,7 @@
     "story": {
       "en": {
         "title": "\"We have lost people we love, and so much more.\"",
-        "content": "Unlike others, I haven't experienced just one war. I lived through more than six wars while living in Sa'ada province, northern Yemen, a place where we have never felt safe and where fear has always prevailed.\nI started university there. It wasn’t satisfying or sufficient. The academic year was only two months long.\nThis kind of life, which most people never have to go through, cannot be expressed in just 300 words. \nWar is not just something that comes and goes. It still affects our hearts. We have lost people we love, and so much more. \n"
+        "content": "Unlike others, I haven't experienced just one war. I lived through more than six wars while living in Sa'ada province, northern Yemen, a place where we have never felt safe and where fear has always prevailed.\nI started university there. It wasn’t satisfying or sufficient. The academic year was only two months long.\nThis kind of life, which most people never have to go through, cannot be expressed in a short number of words.\nWar is not just something that comes and goes. It still affects our hearts. We have lost people we love, and so much more. \n"
       },
       "ar": {
         "title": "\"فقدنا الكثير ممن نحب.\"",
@@ -1738,8 +1740,8 @@
       "ar": "the-worst-luck-of-all"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-26.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-26.jpg"
+      "main": "/images/placeholder_images/puzzle-03.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-03.jpg"
     },
     "personalInfo": {
       "en": {
@@ -1794,8 +1796,8 @@
       "ar": "so-much-loss"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-27.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-27.png"
+      "main": "/images/placeholder_images/puzzle-03.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-03.jpg"
     },
     "personalInfo": {
       "en": {
@@ -1846,14 +1848,72 @@
     "englishEdited": false
   },
   {
+    "id": "1006",
+    "slugs": {
+      "en": "this-war-is-no-picnic",
+      "ar": "this-war-is-no-picnic"
+    },
+    "storyImage": {
+      "main": "/images/placeholder_images/puzzle-27.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-27.png"
+    },
+    "personalInfo": {
+      "en": {
+        "name": "Ameen",
+        "surname": "al-Wajeeh",
+        "whereFrom": "al-Dhale",
+        "livingIn": "al-Dhale"
+      },
+      "ar": {
+        "name": "امين",
+        "surname": "الوجيه",
+        "whereFrom": "الضالع",
+        "livingIn": "الضالع"
+      }
+    },
+    "contact": {
+      "email": "",
+      "phone": "967777081217",
+      "age": "40"
+    },
+    "story": {
+      "en": {
+        "title": "\"This war is no picnic.\"",
+        "content": "This war is no picnic. The war is destruction, devastation, displacement, and killing. We have suffered for eight years, and are still suffering.\nOur salaries, jobs, and schools are all gone. We are suffering from shortages of food, medicine, and all the basics of a decent life. We appeal to the world and all international organisations to look at us with humanity and a conscience. Stop the war. This is our demand.\n"
+      },
+      "ar": {
+        "title": "\"الحرب ليست نزهة.\"",
+        "content": "الحرب ليست نزهة. الحرب دمار وخراب وتشريد وقتل. عانينا فيها الأمرين منذ ثماني سنوات وما زلنا نعاني. رواتبنا مقطوعة، أعمالنا ومدارسنا منقطعة. نعاني من نقص في الغذاء والدواء وفي كل ما نحتاجه من سبل العيش الكريم. نناشد العالم ومنظماته ومؤسساته النظر إلينا بإنسانية وضمير. أوقفوا الحرب. هذا مطلبنا."
+      }
+    },
+    "tags": [
+      "Violence",
+      "Destruction",
+      "Salaries"
+    ],
+    "attachments": [],
+    "audioReadouts": {
+      "en": null,
+      "ar": null
+    },
+    "highlighted": false,
+    "languageOfSubmission": "Arabic",
+    "location": "Yemen",
+    "methodOfSubmission": "WhatsApp",
+    "followUpRequired": false,
+    "contacted": false,
+    "contactedBeforePublication": false,
+    "englishEdited": false
+  },
+  {
     "id": "1007",
     "slugs": {
       "en": "all-we-ask",
       "ar": "all-we-ask"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-12.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-12.png"
+      "main": "/images/placeholder_images/puzzle-20.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-20.png"
     },
     "personalInfo": {
       "en": {
@@ -1908,8 +1968,8 @@
       "ar": "the-strong-eat-the-weak"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-14.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-14.jpg"
+      "main": "/images/placeholder_images/puzzle-27.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-27.png"
     },
     "personalInfo": {
       "en": {
@@ -1969,8 +2029,8 @@
       "ar": "the-edge-of-an-abyss"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-30.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-30.jpg"
+      "main": "/images/placeholder_images/puzzle-31.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-31.png"
     },
     "personalInfo": {
       "en": {
@@ -2027,8 +2087,8 @@
       "ar": "nothing-but-bread-and-water"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-29.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-29.png"
+      "main": "/images/placeholder_images/puzzle-05.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-05.jpg"
     },
     "personalInfo": {
       "en": {
@@ -2052,7 +2112,7 @@
     "story": {
       "en": {
         "title": "Nothing but bread and water",
-        "content": "The impacts of the war are numerous, you can see how they impact individuals economically and in daily life. There are families have nothing to eat but bread and water. Others scavenge their food from the garbage, which leads to malnutrition and various diseases. There is a psychological impact to all of this, of the lack of stability. Having to move, to flee, losing loved ones in war, all of these are ways the war has impacted us, and they cannot be expressed in words."
+        "content": "The impacts of the war are numerous. You can see how it has impacted people, in an economic sense and in their day-to-day lives. Some families have nothing to eat but bread and water. Others have no choice but to scavenge for food from the garbage, ending up malnourished or with various diseases. The lack of stability has a psychological impact, too. Being forced to move, to flee, losing loved ones in war: These are all ways the war has impacted us, and words cannot fully express what it is like. "
       },
       "ar": {
         "title": "الخبز والماء والقمامة",
@@ -2084,8 +2144,8 @@
       "ar": "cut-roads-and-lost-touch"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-09.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-09.jpg"
+      "main": "/images/placeholder_images/puzzle-25.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-25.png"
     },
     "personalInfo": {
       "en": {
@@ -2143,8 +2203,8 @@
       "ar": "yemens-people-are-exhausted"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-16.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-16.jpg"
+      "main": "/images/placeholder_images/puzzle-27.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-27.png"
     },
     "personalInfo": {
       "en": {
@@ -2261,8 +2321,8 @@
       "ar": "the-deep-scars-of-war"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-25.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-25.jpg"
+      "main": "/images/placeholder_images/puzzle-22.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-22.png"
     },
     "personalInfo": {
       "en": {
@@ -2319,8 +2379,8 @@
       "ar": "what-the-war-took"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-26.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-26.jpg"
+      "main": "/images/placeholder_images/puzzle-19.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-19.png"
     },
     "personalInfo": {
       "en": {
@@ -2378,8 +2438,8 @@
       "ar": "away-from-home-and-back-again"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-07.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-07.jpg"
+      "main": "/images/placeholder_images/puzzle-18.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-18.jpg"
     },
     "personalInfo": {
       "en": {
@@ -2436,8 +2496,8 @@
       "ar": "economic-changes"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-08.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-08.jpg"
+      "main": "/images/placeholder_images/puzzle-24.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-24.png"
     },
     "personalInfo": {
       "en": {
@@ -2556,8 +2616,8 @@
       "ar": "our-hearts-are-broken"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-27.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-27.jpg"
+      "main": "/images/placeholder_images/puzzle-30.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-30.jpg"
     },
     "personalInfo": {
       "en": {
@@ -2613,8 +2673,8 @@
       "ar": "vignettes-from-a-war"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-01.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-01.png"
+      "main": "/images/placeholder_images/puzzle-31.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-31.jpg"
     },
     "personalInfo": {
       "en": {
@@ -2671,8 +2731,8 @@
       "ar": "dreams-on-hold"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-16.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-16.png"
+      "main": "/images/placeholder_images/puzzle-12.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-12.jpg"
     },
     "personalInfo": {
       "en": {
@@ -2790,8 +2850,8 @@
       "ar": "what-was-it-for"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-02.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-02.jpg"
+      "main": "/images/placeholder_images/puzzle-03.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-03.png"
     },
     "personalInfo": {
       "en": {
@@ -2849,8 +2909,8 @@
       "ar": "our-lives-completely-changed"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-31.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-31.png"
+      "main": "/images/placeholder_images/puzzle-12.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-12.png"
     },
     "personalInfo": {
       "en": {
@@ -2910,8 +2970,8 @@
       "ar": "stop-this-senseless-war"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-23.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-23.jpg"
+      "main": "/images/placeholder_images/puzzle-05.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-05.jpg"
     },
     "personalInfo": {
       "en": {
@@ -2969,8 +3029,8 @@
       "ar": "my-story-told-two-ways"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-05.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-05.jpg"
+      "main": "/images/placeholder_images/puzzle-01.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-01.png"
     },
     "personalInfo": {
       "en": {
@@ -3023,8 +3083,8 @@
       "ar": "so-much-suffering"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-02.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-02.png"
+      "main": "/images/placeholder_images/puzzle-19.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-19.jpg"
     },
     "personalInfo": {
       "en": {
@@ -3056,13 +3116,14 @@
       }
     },
     "tags": [
-      "Family"
+      "Family",
+      "Audio"
     ],
     "attachments": [
       "1030-1-38s.mp3"
     ],
     "audioReadouts": {
-      "en": "I am suffering so much because of this war. I lost my husband and my son due to this war. I am a woman on my own, exhausted from working, but I have keep going in order to provide for my four children. I am trying to do what I can for them, as much as I can.",
+      "en": "I am suffering so much because of this war. I lost my husband and my son to this war. I am a woman on my own, exhausted from working, but I have keep going in order to provide for my four children. I am trying to do what I can for them, as much as I can.",
       "ar": "أعاني من الحرب كثيرًا، فقد فقدت كلا من زوجي وابني في الحرب. أنا امرأه وحيدة، متعبة من العمل، لكنني مضطرة للعمل كي أوفر لبقية أبنائي الأربعة لقمة عيش. أوفر لهم بقدر استطاعتي. "
     },
     "highlighted": false,
@@ -3081,8 +3142,8 @@
       "ar": "the-war-destroyed-everything-beautiful"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-25.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-25.png"
+      "main": "/images/placeholder_images/puzzle-01.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-01.jpg"
     },
     "personalInfo": {
       "en": {
@@ -3138,8 +3199,8 @@
       "ar": "my-daughter-refuses-to-give-up"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-18.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-18.jpg"
+      "main": "/images/placeholder_images/puzzle-17.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-17.jpg"
     },
     "personalInfo": {
       "en": {
@@ -3198,8 +3259,8 @@
       "ar": "shared-moments"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-01.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-01.jpg"
+      "main": "/images/placeholder_images/puzzle-27.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-27.png"
     },
     "personalInfo": {
       "en": {
@@ -3255,8 +3316,8 @@
       "ar": "my-children-had-ambitions"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-04.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-04.jpg"
+      "main": "/images/placeholder_images/puzzle-09.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-09.png"
     },
     "personalInfo": {
       "en": {
@@ -3317,8 +3378,8 @@
       "ar": "the-bare-necessities"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-18.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-18.png"
+      "main": "/images/placeholder_images/puzzle-29.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-29.png"
     },
     "personalInfo": {
       "en": {
@@ -3377,8 +3438,8 @@
       "ar": "a-future-for-our-children"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-01.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-01.jpg"
+      "main": "/images/placeholder_images/puzzle-06.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-06.png"
     },
     "personalInfo": {
       "en": {
@@ -3435,8 +3496,8 @@
       "ar": "every-day-i-think-of-leaving"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-08.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-08.jpg"
+      "main": "/images/placeholder_images/puzzle-19.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-19.jpg"
     },
     "personalInfo": {
       "en": {
@@ -3493,8 +3554,8 @@
       "ar": "the-war-has-changed-people"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-25.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-25.jpg"
+      "main": "/images/placeholder_images/puzzle-05.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-05.jpg"
     },
     "personalInfo": {
       "en": {
@@ -3732,8 +3793,8 @@
       "ar": "a-wide-ranging-economic-crisis"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-24.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-24.jpg"
+      "main": "/images/placeholder_images/puzzle-10.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-10.png"
     },
     "personalInfo": {
       "en": {
@@ -3851,8 +3912,8 @@
       "ar": "life-is-knowledge"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-31.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-31.png"
+      "main": "/images/placeholder_images/puzzle-23.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-23.png"
     },
     "personalInfo": {
       "en": {
@@ -3910,8 +3971,8 @@
       "ar": "a-dark-place"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-07.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-07.jpg"
+      "main": "/images/placeholder_images/puzzle-23.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-23.png"
     },
     "personalInfo": {
       "en": {
@@ -3970,8 +4031,8 @@
       "ar": "we-are-all-in-this-hole-together"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-28.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-28.png"
+      "main": "/images/placeholder_images/puzzle-25.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-25.jpg"
     },
     "personalInfo": {
       "en": {
@@ -4087,8 +4148,8 @@
       "ar": "what-if-we-could-go-back"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-16.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-16.jpg"
+      "main": "/images/placeholder_images/puzzle-10.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-10.png"
     },
     "personalInfo": {
       "en": {
@@ -4267,8 +4328,8 @@
       "ar": "i-am-suffering-and-my-children-are-suffering"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-32.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-32.png"
+      "main": "/images/placeholder_images/puzzle-18.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-18.png"
     },
     "personalInfo": {
       "en": {
@@ -4326,8 +4387,8 @@
       "ar": "economic-war"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-21.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-21.jpg"
+      "main": "/images/placeholder_images/puzzle-05.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-05.jpg"
     },
     "personalInfo": {
       "en": {
@@ -4443,8 +4504,8 @@
       "ar": "i-suffered-so-much-but-i-changed-too"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-07.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-07.jpg"
+      "main": "/images/placeholder_images/puzzle-06.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-06.jpg"
     },
     "personalInfo": {
       "en": {
@@ -4563,8 +4624,8 @@
       "ar": "the-war-made-me-stronger"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-08.png",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-08.png"
+      "main": "/images/placeholder_images/puzzle-24.png",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-24.png"
     },
     "personalInfo": {
       "en": {
@@ -4687,8 +4748,8 @@
       "ar": "we-are-doing-our-best-all-by-ourselves"
     },
     "storyImage": {
-      "main": "/images/placeholder_images/puzzle-12.jpg",
-      "pixelated": "/images/placeholder_images/pixelated/puzzle-12.jpg"
+      "main": "/images/placeholder_images/puzzle-07.jpg",
+      "pixelated": "/images/placeholder_images/pixelated/puzzle-07.jpg"
     },
     "personalInfo": {
       "en": {

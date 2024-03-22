@@ -29,7 +29,7 @@ const navButtonClasses =
 <div id='menu-overlay' class='flex flex-col min-h-screen bg-black p-5 sm:p-8 gap-y-5 sm:gap-y-8' transition:persist>
 	<!-- City and stars -->
 	<div class='fixed top-0 left-0 w-screen h-screen -z-1 pointer-events-none' id='stars' transition:persist></div>
-	<div id='overlay-city' class='top-0 left-0 fixed w-full h-full -z-1'></div>
+	<div id='overlay-city' class='top-0 left-0 fixed w-full h-full z-1'></div>
 
 	<!-- Menu section -->
 	<div class='flex flex-col items-center justify-center gap-y-5 pt-0' id='menu-overlay--nav-wrapper'>
@@ -59,7 +59,7 @@ const navButtonClasses =
 
 	<!-- Body content -->
 	<div
-		class='max-h-[50vh] sm:max-h-none overflow-y-auto border-2 bg-zinc-900 max-w-4xl mx-auto w-full'
+		class='max-h-[50vh] sm:max-h-none overflow-y-auto border-2 bg-zinc-900 max-w-4xl mx-auto w-full z-50'
 		id='scrollable-container'
 		style='height: -webkit-fill-available;'
 	>
@@ -151,7 +151,7 @@ const navButtonClasses =
 	}
 </style>
 
-<script>
+<script is:inline>
 	function initOverlay(event) {
 		// Select all elements with the class 'nav-button'
 		const navButtons = document.querySelectorAll('.nav-button')
@@ -174,7 +174,7 @@ const navButtonClasses =
 
 		// Function to handle click events on nav buttons
 		function handleNavButtonClick(event) {
-      // console.log(event.target)
+			// console.log(event.target)
 
 			// Prevent default action
 			event.preventDefault()
@@ -252,4 +252,73 @@ const navButtonClasses =
 	document.addEventListener('DOMContentLoaded', (event) => {
 		initOverlay(event)
 	})
+
+	/**
+	 * STARS
+	 */
+
+	class Star {
+		constructor(container, delay) {
+			this.container = container
+			this.delay = delay // Delay before the star starts flickering
+			this.init()
+		}
+
+		init() {
+			this.element = document.createElement('div')
+			this.element.className = 'star' // Base class for all stars
+			this.move(true) // Initial position without visibility
+			this.setSize() // Set random size
+			setTimeout(() => {
+				this.container.appendChild(this.element)
+				this.startFlickering()
+			}, this.delay)
+		}
+
+		move(makeInvisible = false) {
+			const x = Math.random() * window.innerWidth
+			const y = Math.random() * (window.innerHeight - 90)
+			this.element.style.left = `${x}px`
+			this.element.style.top = `${y}px`
+			if (makeInvisible) {
+				// Temporarily make the star invisible to change position
+				this.element.style.opacity = '0'
+			}
+		}
+
+		setSize() {
+			const size = Math.random() * 3 + 1 // Random size between 1px and 4px
+			this.element.style.width = `${size}px`
+			this.element.style.height = `${size}px`
+		}
+
+		startFlickering() {
+			// Make the star visible and start flickering
+			this.element.style.opacity = '1'
+			const flickerDuration = this.getRandomDuration()
+			this.element.style.animation = `pulse ${flickerDuration}s infinite`
+
+			// Schedule a move when the star is not visible
+			const interval = flickerDuration * 1000 // Convert seconds to milliseconds
+			setTimeout(() => {
+				this.move() // This will execute when the star is "invisible" during animation
+				this.startFlickering() // Restart flickering after moving
+			}, interval)
+		}
+
+		getRandomDuration() {
+			// Return a random duration between 1 to 5 seconds for the flicker effect
+			return Math.random() * 4 + 1 // 1 to 5 seconds
+		}
+	}
+
+	const NUMBER_OF_STARS = window.innerWidth <= 1024 ? (window.innerWidth <= 500 ? 15 : 25) : 40
+	const starContainer = document.querySelector('#stars')
+
+	if (starContainer.innerHTML === '') {
+		for (let i = 0; i < NUMBER_OF_STARS; i++) {
+			// Increment delay for each star to stagger the start of the flickering
+			new Star(starContainer, i * 50)
+		}
+	}
 </script>
