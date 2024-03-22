@@ -155,6 +155,14 @@ export const translations = {
     mentalHealth: {
       ar: 'الصحة النفسية والعقلية',
       en: 'Mental Health'
-    }
+    },
+    video: {
+      ar: 'فيديو',
+      en: 'Video'
+    },
+    audio: {
+      ar: 'صوت',
+      en: 'Audio'
+    },
   }
 }
