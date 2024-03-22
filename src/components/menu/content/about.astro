@@ -1,4 +1,6 @@
 ---
+import SignUpForm from '@components/forms/SignUp.astro'
+
 const { lang } = Astro.props
 ---
 
@@ -23,10 +25,13 @@ const { lang } = Astro.props
 			<p class='text-white font-bold text-text-xl sm:2xl'>What’s next for The Yemen Listening Project?</p>
 			<p>
 				The Yemen Listening Project will be hosting online and in-person events about the project, about Yemen, and about inclusive journalism.{' '}
-				<a class='font-bold hover:underline' href='#' onclick="wisepops('event', 'ylp-click'); return false;">
+				<a class='font-bold hover:underline signup-link' href='#'>
 					Click here to receive updates.
 				</a>
 			</p>
+			<div class='signup-form'>
+				<SignUpForm />
+			</div>
 			<p class='text-white font-bold text-text-xl sm:2xl'>I have an idea for my own listening project. Who should I contact?</p>
 			Email{' '}
 			<a class='font-bold hover:underline' href='mailto:yemenlistening@thenewhumanitarian.org?subject=Listening project idea' rel='noopener noreferrer'>
@@ -66,11 +71,14 @@ const { lang } = Astro.props
 			<p class='text-white font-bold text-text-xl sm:2xl'>ما الذي سيقوم به مشروع الاستماع إلى اليَمنيّين في المرحلة القادمة؟</p>
 			<p>
 				سيستضيف المشروع فعاليات عبر الإنترنت وفعاليات حضورية تتمحور حول المشروع واليمن والصحافة الشاملة.{' '}
-				<a class='text-bold hover:underline' href='#' onclick="wisepops('event', 'ylp-click'); return false;">
+				<a class='font-bold hover:underline signup-link' href='#'>
 					اضغط هنا
 				</a>{' '}
 				لتلقي المستجدات.
 			</p>
+			<div class='signup-form'>
+				<SignUpForm />
+			</div>
 			<p class='text-white font-bold text-text-xl sm:2xl'>لدي فكرة لمشروع استماع خاص بي. مع من يجب أن أتواصل؟</p>
 			<p>
 				يمكنك التواصل مع البريد الإلكتروني{' '}
@@ -103,3 +111,36 @@ const { lang } = Astro.props
 		</div>
 	)
 }
+
+<style is:global>
+	.signup-form {
+		display: none;
+		direction: ltr; /* Ensure the form is always left-to-right */
+	}
+
+	.signup-form input,
+	.signup-form label,
+	.signup-form button {
+		/* Additional styling here if needed, e.g., text alignment */
+		text-align: left !important;
+	}
+</style>
+
+<script>
+	document.addEventListener('DOMContentLoaded', () => {
+		const signupLinks = document.querySelectorAll('.signup-link')
+		const signupForms = document.querySelectorAll('.signup-form')
+
+		// Add click event listener to each signup link
+		signupLinks.forEach((link) => {
+			link.addEventListener('click', function (e) {
+				e.preventDefault() // Prevent the default link action
+				// Display all signup forms
+				signupForms.forEach((form) => {
+					// @ts-ignore
+					form.style.display = 'block'
+				})
+			})
+		})
+	})
+</script>
