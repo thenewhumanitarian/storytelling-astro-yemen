@@ -186,10 +186,20 @@ const { src, start, end, plays, text, lang } = Astro.props as Props
 			}
 			var update_playing_element = function (el, percentage) {
 				var color = SOUNDCITE_CONFIG.background_color || '0,0,0'
-				el.style.cssText = `
-          background: -webkit-linear-gradient(left, rgba(${color},.0) ${percentage}%, rgba(${color},.9) ${percentage + 1}%);
-          background: linear-gradient(to right, rgba(${color},.8) ${percentage}%, rgba(${color},.5) ${percentage + 1}%);
-        `
+
+				if (lang === 'ar') {
+					percentage = 100 - percentage
+
+					el.style.cssText = `
+            background: -webkit-linear-gradient(right, rgba(${color},.0) ${100 - percentage}%, rgba(${color},.9) ${100 - (percentage + 1)}%);
+            background: linear-gradient(to left, rgba(${color},.5) ${100 - percentage}%, rgba(${color},.4) ${100 - (percentage + 1)}%);
+          `
+				} else {
+					el.style.cssText = `
+            background: -webkit-linear-gradient(left, rgba(${color},.0) ${percentage}%, rgba(${color},.9) ${percentage + 1}%);
+            background: linear-gradient(to right, rgba(${color},.5) ${percentage}%, rgba(${color},.4) ${percentage + 1}%);
+          `
+				}
 			}
 
 			window.soundcite = {}
