@@ -65,7 +65,7 @@ const filteredStories = allStories.filter((story) => story.tags.some((tag) => ta
 		<SEO
 			slot='seo'
 			title={`The Yemen Listening Project | ${currentTag}`}
-			description={lang === 'ar' ? '.حيثُ يتحدّث اليَمنيّون ويستمع العالمُ إليهم' : 'Where Yemenis talk, and the world listens.'}
+			description={'Where Yemenis talk, and the world listens.'}
 		/>
 		<StoryWrapper stories={filteredStories} view='tags' tags={uniqueTags}>
 			<NavButtons
