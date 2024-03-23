@@ -173,4 +173,8 @@ export const translations = {
       en: 'Audio'
     },
   },
+  readIn: {
+    ar: 'English',
+    en: 'العربية'
+  }
 }

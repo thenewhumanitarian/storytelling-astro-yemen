@@ -22,7 +22,7 @@ const { lang, story } = Astro.props as Props
 // mailto:?subject=Snapshots: Palestinian journalists capture life under bombardment in Gaza &body=https://www.thenewhumanitarian.org/video/2024/02/20/snapshots-palestinian-photographer-captures-life-under-bombardment-gaza
 
 // @ts-ignore
-const storyUrl = `${STORY_DATA.baseUrl}stories/${lang}/${story.slugs[lang]}`
+const storyUrl = `${STORY_DATA.baseUrl}stories/${lang}/${story.slugs['en']}`
 
 const shareLinks = {
 	// @ts-ignore

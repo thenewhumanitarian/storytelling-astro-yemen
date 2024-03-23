@@ -16,6 +16,7 @@ import ShareStory from '@components/ShareStory.astro'
 import Soundcite from '@components/Soundcite.astro'
 import SEO from '@components/SEO.astro'
 import stories from '@data/all_stories.json'
+import { translations } from '@data/translations.js'
 
 // Read path parameters for language and slug
 const { path } = Astro.params
@@ -50,13 +51,6 @@ export async function getStaticPaths() {
 
 // Define props
 const { story } = Astro.props
-
-// Create array out of story.story[lang].content by splitting the string wherever there is an \n
-// const contentArray = story.story[lang].content
-// 	.split('\n\n') // Split at double newline to get paragraphs
-// 	.map(
-// 		(paragraph) => paragraph.replace(/\n/g, '<br/>'), // Replace single newlines with <br/> within paragraphs
-// 	)
 
 // Assuming story.story[lang].content contains your text
 const content = story.story[lang].content
@@ -95,6 +89,8 @@ const processedAudioFiles = processAudioFiles(story.attachments)
 const hasAudioFiles = processedAudioFiles.length > 0
 
 const storyTitle = story.story[lang].title || `${lang.toUpperCase()} title for story ID #${story.id} is missing`
+
+const readInOtherLanguage = translations.readIn[lang]
 ---
 
 <Layout
@@ -144,6 +140,9 @@ const storyTitle = story.story[lang].title || `${lang.toUpperCase()} title for s
 						livingIn={story.personalInfo[lang].livingIn}
 						age={story.contact.age}
 					/>
+					<a id='read-in-other-language' href='#' class='sm:hidden py-2'>
+						<span class='text-sm opacity-60'>{readInOtherLanguage}</span>
+					</a>
 				</div>
 			</div>
 			{/* Body section */}
@@ -355,11 +354,11 @@ const storyTitle = story.story[lang].title || `${lang.toUpperCase()} title for s
 		justify-content: center;
 		gap: 1rem;
 		font-family: 'Comic Sans MS', 'Arial', sans-serif;
-    opacity: .5
+		opacity: 0.5;
 	}
 
 	.key {
-    border: 2px solid white;
+		border: 2px solid white;
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -375,13 +374,12 @@ const storyTitle = story.story[lang].title || `${lang.toUpperCase()} title for s
 		font-size: 24px;
 		color: #333;
 	}
-
 </style>
 
 <!-- HammerJS -->
 <script is:inline src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/204379/hammer.min.js'></script>
 
-<script define:vars={{ lang: lang, slugEN: story.slugs.en, slugAR: story.slugs.ar, prevStorySlug, nextStorySlug }} is:inline>
+<script define:vars={{ translations, lang, slugEN: story.slugs.en, slugAR: story.slugs.ar, prevStorySlug, nextStorySlug }} is:inline>
 	// Retrieve the read articles array from localStorage or initialize a new one
 	let readArticles = JSON.parse(localStorage.getItem('readArticles')) || []
 
@@ -453,8 +451,14 @@ const storyTitle = story.story[lang].title || `${lang.toUpperCase()} title for s
 		overviewButtonTop.href = `/${lang}/${currentView}`
 		overviewButtonBottom.href = `/${lang}/${currentView}`
 	}
-
 	document.addEventListener('DOMContentLoaded', changeOverviewButtonHref)
+
+	// Function to change href attribute of button id="read-in-other-language" depending on lang, use EN and AR slug and lang variables
+	function changeReadInOtherLanguageHref() {
+		const readInOtherLanguageButton = document.getElementById('read-in-other-language')
+		readInOtherLanguageButton.href = lang === 'en' ? `/stories/ar/${slugAR}` : `/stories/en/${slugEN}`
+	}
+	document.addEventListener('DOMContentLoaded', changeReadInOtherLanguageHref)
 
 	class Star {
 		constructor(container, delay) {
