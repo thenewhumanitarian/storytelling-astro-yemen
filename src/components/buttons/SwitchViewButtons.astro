@@ -186,4 +186,13 @@ const view = pathParams?.[1]
 	for (let button of buttons) {
 		button.addEventListener('click', buttonHandler)
 	}
+
+	// If currentView is not set, set to grid on big screens and list on small screens
+	// if (!localStorage.getItem('currentView')) {
+	// 	if (window.innerWidth > 640) {
+	// 		localStorage.setItem('currentView', 'grid')
+	// 	} else {
+	// 		localStorage.setItem('currentView', 'list')
+	// 	}
+	// }
 </script>
