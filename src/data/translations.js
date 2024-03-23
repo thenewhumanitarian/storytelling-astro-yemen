@@ -3,6 +3,10 @@ export const translations = {
     ar: 'تصفية القصص',
     en: 'Filter Stories'
   },
+  searchStories: {
+    ar: 'البحث في القصص',
+    en: 'Search stories'
+  },
   back: {
     ar: 'رجوع',
     en: 'Back'

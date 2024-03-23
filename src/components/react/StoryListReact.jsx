@@ -116,19 +116,20 @@ const StoryListReact = ({ stories, lang = 'en' }) => {
   return (
     <div className='text-white flex items-center justify-center flex-col'>
       <div className='flex flex-col gap-y-3 max-w-xl w-full px-8 mt-5 sm:mt-3'>
-        <div onClick={() => toggleCollapsible()} className={'z-50 flex items-center justify-center cursor-pointer gap-x-2 opacity-70 hover:opacity-100 transition-opacity'}>
+        <div onClick={() => toggleCollapsible()} className={'z-50 flex items-center justify-center cursor-pointer gap-x-2 opacity-50 hover:opacity-100 transition-opacity'}>
           <span className={'text-white w-5 h-5 inline-block'}>
-            <svg width="100%" viewBox="0 0 117 118" fill="none" xmlns="http://www.w3.org/2000/svg" className={'w-full h-full'}>
-              <path d="M4.49999 0.333332C1.37492 0.333332 -0.708278 3.87493 0.958388 6.58333L46.1664 66.9993V112.833C46.1664 115.958 49.4997 118.041 52.208 116.583L68.8747 108.249C70.3331 107.624 71.1664 106.166 71.1664 104.499V66.9993L116.374 6.58333C118.041 3.87507 115.958 0.333332 112.833 0.333332H4.49999Z" fill="current" className={'fill-current'} />
+            <svg width="100%" className={'fill-current w-full h-auto'} viewBox="0 0 97 97" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M94.6093 86.8334L65.724 57.9427C70.1666 52.1094 72.6666 44.6094 72.6666 36.552C72.6666 16.552 56.5573 0.442688 36.5573 0.442688C16.5573 0.442688 0.442627 16.5574 0.442627 36.5574C0.442627 56.5574 16.552 72.6667 36.552 72.6667C44.6093 72.6667 51.828 70.1667 57.9426 65.724L86.8333 94.6147C87.9427 95.7241 89.3333 96.2814 90.724 96.2814C92.1146 96.2814 93.5 95.7241 94.6146 94.6147C96.8334 92.3907 96.8333 89.0572 94.6093 86.8334ZM36.5573 61.5574C22.6666 61.5574 11.5573 50.448 11.5573 36.5574C11.5573 22.6667 22.6666 11.5574 36.5573 11.5574C50.448 11.5574 61.5573 22.6667 61.5573 36.5574C61.5573 50.4427 50.4428 61.5574 36.5573 61.5574Z" fill="current" />
             </svg>
+
           </span>
-          <span className={'inline-block'}>{translations.filterStories[lang]}</span>
+          <span className={'inline-block'}>{translations.searchStories[lang]}</span>
         </div>
         {isCollapsibleOpen && (
           <input
             type='text'
             className='bg-white text-black px-3 py-1 text-lg z-50'
-            placeholder='Search entries...'
+            placeholder='Search...'
             id='searchInput'
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
