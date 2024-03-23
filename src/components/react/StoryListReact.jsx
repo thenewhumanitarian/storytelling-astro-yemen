@@ -71,6 +71,23 @@ const StoryListReact = ({ stories, lang = 'en' }) => {
   }
 
   useEffect(() => {
+    // Initialize searchTerm from localStorage on component mount
+    const storedSearchTerm = localStorage.getItem('searchTerm');
+    if (storedSearchTerm) {
+      setSearchTerm(storedSearchTerm);
+    }
+  }, []);
+
+  useEffect(() => {
+    // No dependencies array means this runs on mount only
+    return () => {
+      // Cleanup function runs on component unmount
+      localStorage.setItem('searchTerm', ''); // Optionally reset searchTerm in localStorage
+      setSearchTerm(''); // Reset searchTerm when leaving the component
+    };
+  }, []);
+
+  useEffect(() => {
     // Filter stories by search term
     let newFilteredStories = stories;
     if (searchTerm && searchTerm !== '') {
