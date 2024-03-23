@@ -118,7 +118,7 @@ if (visibleAttachments.length > 0 && visibleAttachments.length < 4) {
 							// Render video attachments
 							return (
 								<div class={`${attachmentItemClassName} basis-0`} data-lightbox={attachment.fileName} data-type='video'>
-									<video class='w-full h-full' muted>
+									<video class='w-full h-full' muted poster={`/images/posters/${attachment.fileName}-poster.jpg`}>
 										<source src={`/attachments/${attachment.fileName}`} type='video/mp4' />
 									</video>
 									<div class='group m-0 z-30 w-8 h-8 flex items-center justify-center absolute'>
@@ -269,10 +269,10 @@ if (visibleAttachments.length > 0 && visibleAttachments.length < 4) {
 		align-items: center;
 		justify-content: center;
 
-    &:hover {
-      background: white;
-      color: black;
-    }
+		&:hover {
+			background: white;
+			color: black;
+		}
 
 		&.button--prev {
 			left: 1.1rem;

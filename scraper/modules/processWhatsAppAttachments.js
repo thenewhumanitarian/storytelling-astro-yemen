@@ -1,5 +1,7 @@
 const fs = require('fs').promises; // Use fs promises for async operations
 const path = require('path');
+const { extractFrame } = require('./videoProcessor'); // Ensure extractFrame is correctly imported
+
 const { getAudioDuration } = require('./audioProcessor');
 const { resizeVideo } = require('./resizeVideo');
 const sharp = require('sharp');
@@ -50,6 +52,33 @@ async function processWhatsAppAttachments(entryID, files, basePath) {
       await fs.copyFile(newFilePath, additionalFilePath); // Copy to ../src/assets
     }
     else if (extension === '.mp4' || extension === '.mov') {
+
+      // Corrected path for postersDir using `basePath`
+      const postersDir = path.join(basePath, '../public/images/posters/');
+      try {
+        // Check if the directory exists asynchronously
+        await fs.access(postersDir);
+      } catch (error) {
+        if (error.code === 'ENOENT') {
+          // If the directory doesn't exist, create it
+          await fs.mkdir(postersDir, { recursive: true });
+        } else {
+          // If another error occurred, throw it to be caught by the calling function
+          throw error;
+        }
+      }
+
+      // Define videoPath here, pointing to the original video file location
+      const videoPath = sourceFilePath; // Assuming sourceFilePath is the path to the video file
+      const framePath = path.join(postersDir, `${newFilename}-poster.jpg`); // Naming the poster file with entryID and video file name
+
+      try {
+        await extractFrame(videoPath, framePath);
+        console.log(`Poster created for video ${file} at ${framePath}`);
+      } catch (error) {
+        console.error(`Error extracting frame from video ${file}:`, error);
+      }
+
       newFilePath = path.join(basePath, '../public/attachments/', newFilename);
       additionalFilePath = path.join(basePath, '../src/assets/', newFilename); // Path for video files
 
@@ -67,6 +96,7 @@ async function processWhatsAppAttachments(entryID, files, basePath) {
 
       // Note: No need to copy the original file again, it's already moved by resizeVideo
     }
+
     else if (['.jpg', '.jpeg', '.png', '.gif', '.webp'].includes(extension)) {
       // Resize images with sharp
       const maxWidth = 1000;
