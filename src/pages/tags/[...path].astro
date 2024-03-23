@@ -58,10 +58,24 @@ const currentTag = pathParams?.[1]
 
 // Filter stories that include the current tag (case-insensitive)
 const filteredStories = allStories.filter((story) => story.tags.some((tag) => tag.toLowerCase() === currentTag.toLowerCase()))
+
+// Construct languageButtons for /tags/en/ and /tags/ar/ including current tag name
+const languageButtons = {
+	ar: `/tags/ar/${currentTag}`,
+	en: `/tags/en/${currentTag}`,
+}
 ---
 
 <div class='pt-12'>
-	<Layout dark title='The Yemen Listening Project' header={true} filterButtons={false} switchViewButtons={false} dir={lang === 'ar' ? 'rtl' : 'ltr'}>
+	<Layout
+		languageButtons={languageButtons}
+		dark
+		title='The Yemen Listening Project'
+		header={true}
+		filterButtons={false}
+		switchViewButtons={false}
+		dir={lang === 'ar' ? 'rtl' : 'ltr'}
+	>
 		<SEO slot='seo' title={`The Yemen Listening Project | ${currentTag}`} description={'Where Yemenis talk, and the world listens.'} />
 		<StoryWrapper stories={filteredStories} view='tags' tags={uniqueTags}>
 			<NavButtons
@@ -69,7 +83,6 @@ const filteredStories = allStories.filter((story) => story.tags.some((tag) => ta
 				slot='top'
 				lang={lang}
 				classNames='-mt-6 text-white bg-burgundy hover:bg-zinc-100 px-3 py-2'
-				prefix={'←'}
 				id='overview--button--top'
 			/>
 		</StoryWrapper>
