@@ -1,4 +1,9 @@
 ---
+interface Props {
+	stories: object[]
+	id?: string
+}
+
 const { stories, id } = Astro.props
 
 import StoryListItem from '@components/StoryListItem.astro'

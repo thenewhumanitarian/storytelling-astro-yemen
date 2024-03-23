@@ -1,0 +1,55 @@
+---
+interface Props {
+	tags?: string[]
+	stories: object[]
+}
+
+import NavButtons from '@components/buttons/NavButtons.astro'
+// import StoryList from '@components/StoryList.astro'
+import ReactStoryList from '@components/react/StoryListReact.jsx'
+import { translations } from '@data/translations'
+
+let { lang } = Astro.params
+
+const { stories } = Astro.props
+
+if (!lang) {
+	// Read path parameters for language and slug
+	const { path } = Astro.params
+
+	const pathParams = path?.toString().split('/')
+	lang = pathParams?.[0] || 'en'
+}
+
+// Function to format tag names
+function formatTagName(tagName) {
+	// Split the tag name into words
+	const words = tagName.split(' ')
+
+	// If there's only one word, return it in lowercase
+	if (words.length === 1) {
+		return tagName.toLowerCase()
+	}
+
+	// If there are two words, return in camelCase
+	if (words.length === 2) {
+		return words[0].toLowerCase() + words[1].charAt(0).toUpperCase() + words[1].slice(1).toLowerCase()
+	}
+
+	// Fallback for other cases (not covered by your current requirement)
+	return tagName.toLowerCase()
+}
+---
+
+<div>
+	<section class='text-center max-w-5xl mx-auto pb-6 sm:pb-12'>
+		<NavButtons
+			prefix={'←'}
+			id='overview--button--top'
+			button='overview'
+			lang={lang}
+			classNames='text-white bg-burgundy hover:bg-zinc-100 hover:text-burgundy mt-8'
+		/>
+		<ReactStoryList client:load stories={stories} lang={lang} />
+	</section>
+</div>
