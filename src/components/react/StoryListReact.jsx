@@ -5,6 +5,7 @@ import ReactStoryItem from '@components/react/StoryListItemReact.jsx'
 const StoryListReact = ({ stories, lang = 'en' }) => {
   const [filteredStories, setFilteredStories] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
+  const [showAll, setShowAll] = useState(() => typeof window !== 'undefined' ? localStorage.getItem('showAll') !== 'false' : true);
 
   // Function to shuffle array (keep it the same)
   const shuffleArray = (array) => {
@@ -13,6 +14,21 @@ const StoryListReact = ({ stories, lang = 'en' }) => {
       [array[i], array[j]] = [array[j], array[i]];
     }
   };
+
+  useEffect(() => {
+    const handleShowAllChange = (event) => {
+      // Update showAll based on the event detail
+      setShowAll(event.detail.showAll);
+    };
+
+    // Add event listener for custom showAllChanged event
+    window.addEventListener('showAllChanged', handleShowAllChange);
+
+    // Cleanup the event listener on component unmount
+    return () => {
+      window.removeEventListener('showAllChanged', handleShowAllChange);
+    };
+  }, []);
 
   function sortStoriesWithHighlights(stories) {
     const highlightedStories = stories.filter((story) => story.highlighted)
@@ -64,15 +80,15 @@ const StoryListReact = ({ stories, lang = 'en' }) => {
   }, [stories, searchTerm, lang]);
 
   return (
-    <div className='text-white w-full flex items-center justify-center flex-col'>
-      <div className='flex flex-col gap-y-3 max-w-lg w-full'>
-        <h2 className='font-sans text-white text-2xl sm:text-3xl font-bold m-0 text-center'>Search stories</h2>
-        <input type='text' className='bg-white text-black px-3 py-1 text-lg' placeholder='Search entries...' id='searchInput' onChange={(e) => setSearchTerm(e.target.value)} />
+    <div className='text-white flex items-center justify-center flex-col'>
+      <div className='flex flex-col gap-y-3 max-w-5xl w-full px-8 mt-5 sm:mt-3'>
+        <h2 className='font-sans text-white text-2xl sm:text-3xl font-bold m-0 text-center'>Filter stories</h2>
+        <input type='text' className='bg-white text-black px-3 py-1 text-lg z-50' placeholder='Search entries...' id='searchInput' onChange={(e) => setSearchTerm(e.target.value)} />
       </div>
 
-      <div className={'py-8 hidden flex-row gap-y-0 sm:gap-y-2 md:gap-y-3 max-w-2xl lg:max-w-5xl mx-auto'}>
+      <div className={'py-8 flex flex-col gap-y-0 sm:gap-y-2 md:gap-y-3 max-w-2xl lg:max-w-5xl w-full'}>
         {filteredStories.map((story, index) => (
-          <ReactStoryItem client:load story={story} lang={lang} key={index} />
+          <ReactStoryItem client:load story={story} lang={lang} key={index} showAll={showAll} />
         ))}
       </div>
     </div>

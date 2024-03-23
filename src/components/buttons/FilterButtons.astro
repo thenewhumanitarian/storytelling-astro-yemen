@@ -46,8 +46,14 @@ if (!lang) {
 	const buttonAll = document.querySelector('#filter-button--all')
 	const buttonUnread = document.querySelector('#filter-button--unread')
 
+	function dispatchShowAllChanged(showAll) {
+		window.dispatchEvent(new CustomEvent('showAllChanged', { detail: { showAll } }))
+	}
+
 	function onButtonAllHandler() {
 		localStorage.setItem('showAll', 'true')
+		dispatchShowAllChanged(true)
+
 		if (buttonAll) {
 			buttonAll.classList.remove('bg-black')
 			buttonAll.classList.add('bg-burgundy')
@@ -66,6 +72,8 @@ if (!lang) {
 
 	function onButtonUnreadHandler() {
 		localStorage.setItem('showAll', 'false')
+		dispatchShowAllChanged(false)
+
 		if (buttonAll) {
 			buttonAll.classList.remove('bg-burgundy')
 			buttonAll.classList.add('bg-black')
