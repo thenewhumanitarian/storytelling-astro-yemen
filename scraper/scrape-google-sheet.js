@@ -1,5 +1,6 @@
 const path = require('path');
 const fs = require('fs');
+const sharp = require('sharp');
 
 // Import necessary modules
 const { fetchAndParseCSV } = require('./modules/csvHandler');
@@ -17,7 +18,7 @@ const placeholderImageOutputDirectory = path.join(__dirname, '../public/images/p
 
 // Fetch data
 fetchAndParseCSV(csvUrl)
-.then(data => {
+  .then(data => {
     console.log(data)
     // Filter out unpublished stories
     const filteredData = data.filter(item => item['Publish'].trim() === 'x');
@@ -117,7 +118,7 @@ async function processData(data) {
         console.error('An error occurred while creating a thumbnail:', error);
       }
 
-      // Process all attachments for MachForm entry and name incrementally, starting at -1
+      // Process all attachments for MachForm entry and name incrementally, starting a gt -1
       let attachmentCounter = 1;
 
       // Save attachments in the src/assets folder
@@ -146,18 +147,27 @@ async function processData(data) {
             console.error('Error copying file:', err);
           }
         }
-        // else if (extension === '.mp4') {
-        // console.log('MachForm video file:', newFilename);
-        // Create thumbnails for these video files
-        // TODO: leave open because no MachForm video files (so far)
-        // }
-        // Handle audio files differently to include duration in the filename
-        // Handle audio files differently to include duration in the filename
-        if (['.m4a', '.opus', '.ogg', '.wav', '.mp3'].includes(extension)) {
-          // Implement audioProcessor functions here
-          // TODO: leave open because no MachForm audio files (so far)
-        }
-        else {
+        // Insert image resizing logic here for supported image types
+        else if (['.jpg', '.jpeg', '.png', '.gif', '.webp'].includes(extension)) {
+          const maxWidth = 1000; // Maximum width in pixels
+          // Use sharp to resize the image
+
+          console.log('Resizing MachForm image: ' + newFilename)
+
+          sharp(sourceFilePath)
+            .resize(maxWidth, null, {
+              withoutEnlargement: true
+            })
+            .toFile(newFilePath)
+            .then(() => {
+              console.log(`Resized image saved to: ${newFilePath}`);
+              // Once the image is resized and saved to src/assets, copy it to public/attachments
+              fs.copyFileSync(newFilePath, newPublicFilePath);
+            })
+            .catch(err => {
+              console.error(`Error resizing image: ${err}`);
+            });
+        } else {
           // src/assets
           try {
             fs.copyFileSync(sourceFilePath, newFilePath);
@@ -166,7 +176,7 @@ async function processData(data) {
           }
           // public/attachments
           try {
-            fs.copyFileSync(sourceFilePath, newPublicFilePath);
+            fs.copyFileSync(newFilePath, newPublicFilePath);
           } catch (err) {
             console.error('Error copying file:', err);
           }

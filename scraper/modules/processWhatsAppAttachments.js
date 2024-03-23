@@ -2,6 +2,7 @@ const fs = require('fs').promises; // Use fs promises for async operations
 const path = require('path');
 const { getAudioDuration } = require('./audioProcessor');
 const { resizeVideo } = require('./resizeVideo');
+const sharp = require('sharp');
 
 /**
  * Processes WhatsApp attachments.
@@ -66,7 +67,27 @@ async function processWhatsAppAttachments(entryID, files, basePath) {
 
       // Note: No need to copy the original file again, it's already moved by resizeVideo
     }
+    else if (['.jpg', '.jpeg', '.png', '.gif', '.webp'].includes(extension)) {
+      // Resize images with sharp
+      const maxWidth = 1000;
+      const outputFilePath = path.join(basePath, '../public/attachments/', newFilename);
+      const additionalOutputFilePath = path.join(basePath, '../src/assets/', newFilename);
+
+      console.log('Resizing image: ' + newFilename)
+
+      await sharp(sourceFilePath)
+        .resize(maxWidth, null, {
+          withoutEnlargement: true // This ensures the image is not enlarged if it's smaller than maxWidth
+        })
+        .toFile(outputFilePath)
+        .then(() => {
+          console.log(`Resized image saved to: ${outputFilePath}`);
+          return fs.copyFile(outputFilePath, additionalOutputFilePath); // Copy resized image to ../src/assets
+        })
+        .catch(error => console.error(`Failed to resize image: ${error}`));
+    }
     else {
+      // Existing logic for non-image files
       await fs.copyFile(sourceFilePath, newFilePath);
       await fs.copyFile(newFilePath, additionalFilePath); // Copy to ../src/assets
     }
