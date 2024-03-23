@@ -19,9 +19,6 @@ const StoryListItem = ({ story, lang, showAll }) => {
 
   useEffect(() => {
     // Check the showAll status from localStorage
-    const showAllSetting = localStorage.getItem('showAll');
-    setShowAll(showAllSetting !== 'false'); // If showAll is 'false', setShowAll to false; otherwise, true
-
     // Read from local storage to check if the story has been read
     const readArticles = JSON.parse(localStorage.getItem('readArticles')) || [];
     const readArticle = readArticles.find(article => article.slug === story.slugs[lang]);
@@ -29,7 +26,7 @@ const StoryListItem = ({ story, lang, showAll }) => {
   }, [story, lang]);
 
   // Adjust the logic to apply readClass based on both isRead and showAll status
-  const opacityClass = isRead && !showAll ? 'opacity-30' : 'opacity-100';
+  const opacityClass = isRead && !showAll ? 'transition-opacity opacity-30' : 'transition-opacity opacity-100';
 
   // Use `opacityClass` for elements you want to conditionally style
   const storyClass = `flex group border-t sm:border-2 border-zinc-200 ${story.highlighted ? 'w-full pt-6 pb-3 sm:py-0 bg-black gap-x-2' : 'bg-black flex-row-reverse pb-0 pt-3 lg:max-w-3xl mx-auto'} px-3 sm:pt-3 w-full hover:bg-zinc-800 hover:border-white`;

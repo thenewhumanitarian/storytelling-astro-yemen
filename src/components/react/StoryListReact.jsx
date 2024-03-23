@@ -5,7 +5,14 @@ import ReactStoryItem from '@components/react/StoryListItemReact.jsx'
 const StoryListReact = ({ stories, lang = 'en' }) => {
   const [filteredStories, setFilteredStories] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
-  const [showAll, setShowAll] = useState(() => typeof window !== 'undefined' ? localStorage.getItem('showAll') !== 'false' : true);
+  // Initialize showAll using a state initialization function
+  const [showAll, setShowAll] = useState(() => {
+    // This ensures the code is executed only on the client-side
+    if (typeof window !== 'undefined') {
+      return localStorage.getItem('showAll') !== 'false';
+    }
+    return true;
+  });
 
   // Function to shuffle array (keep it the same)
   const shuffleArray = (array) => {
@@ -17,17 +24,19 @@ const StoryListReact = ({ stories, lang = 'en' }) => {
 
   useEffect(() => {
     const handleShowAllChange = (event) => {
-      // Update showAll based on the event detail
+      // Directly use setShowAll here
       setShowAll(event.detail.showAll);
     };
 
-    // Add event listener for custom showAllChanged event
-    window.addEventListener('showAllChanged', handleShowAllChange);
+    // Make sure we're on the client-side before adding the event listener
+    if (typeof window !== 'undefined') {
+      window.addEventListener('showAllChanged', handleShowAllChange);
 
-    // Cleanup the event listener on component unmount
-    return () => {
-      window.removeEventListener('showAllChanged', handleShowAllChange);
-    };
+      // Return a cleanup function to remove the event listener
+      return () => {
+        window.removeEventListener('showAllChanged', handleShowAllChange);
+      };
+    }
   }, []);
 
   function sortStoriesWithHighlights(stories) {
@@ -81,7 +90,7 @@ const StoryListReact = ({ stories, lang = 'en' }) => {
 
   return (
     <div className='text-white flex items-center justify-center flex-col'>
-      <div className='flex flex-col gap-y-3 max-w-5xl w-full px-8 mt-5 sm:mt-3'>
+      <div className='flex flex-col gap-y-3 max-w-xl w-full px-8 mt-5 sm:mt-3'>
         <h2 className='font-sans text-white text-2xl sm:text-3xl font-bold m-0 text-center'>Filter stories</h2>
         <input type='text' className='bg-white text-black px-3 py-1 text-lg z-50' placeholder='Search entries...' id='searchInput' onChange={(e) => setSearchTerm(e.target.value)} />
       </div>
