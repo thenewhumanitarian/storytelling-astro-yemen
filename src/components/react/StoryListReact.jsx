@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 
 import ReactStoryItem from '@components/react/StoryListItemReact.jsx'
 
+import { translations } from '@data/translations.js';
+
 const StoryListReact = ({ stories, lang = 'en' }) => {
   const [filteredStories, setFilteredStories] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
@@ -13,6 +15,7 @@ const StoryListReact = ({ stories, lang = 'en' }) => {
     }
     return true;
   });
+  const [isCollapsibleOpen, setIsCollapsibleOpen] = useState(false);
 
   // Function to shuffle array (keep it the same)
   const shuffleArray = (array) => {
@@ -20,6 +23,11 @@ const StoryListReact = ({ stories, lang = 'en' }) => {
       const j = Math.floor(Math.random() * (i + 1));
       [array[i], array[j]] = [array[j], array[i]];
     }
+  };
+
+  // Toggle the visibility of the collapsible section
+  const toggleCollapsible = () => {
+    setIsCollapsibleOpen(!isCollapsibleOpen);
   };
 
   useEffect(() => {
@@ -108,8 +116,24 @@ const StoryListReact = ({ stories, lang = 'en' }) => {
   return (
     <div className='text-white flex items-center justify-center flex-col'>
       <div className='flex flex-col gap-y-3 max-w-xl w-full px-8 mt-5 sm:mt-3'>
-        <h2 className='font-sans text-white text-2xl sm:text-3xl font-bold m-0 text-center'>Filter stories</h2>
-        <input type='text' className='bg-white text-black px-3 py-1 text-lg z-50' placeholder='Search entries...' id='searchInput' onChange={(e) => setSearchTerm(e.target.value)} />
+        <div onClick={() => toggleCollapsible()} className={'z-50 flex items-center justify-center cursor-pointer gap-x-2 opacity-70 hover:opacity-100 transition-opacity'}>
+          <span className={'text-white w-5 h-5 inline-block'}>
+            <svg width="100%" viewBox="0 0 117 118" fill="none" xmlns="http://www.w3.org/2000/svg" className={'w-full h-full'}>
+              <path d="M4.49999 0.333332C1.37492 0.333332 -0.708278 3.87493 0.958388 6.58333L46.1664 66.9993V112.833C46.1664 115.958 49.4997 118.041 52.208 116.583L68.8747 108.249C70.3331 107.624 71.1664 106.166 71.1664 104.499V66.9993L116.374 6.58333C118.041 3.87507 115.958 0.333332 112.833 0.333332H4.49999Z" fill="current" className={'fill-current'} />
+            </svg>
+          </span>
+          <span className={'inline-block'}>{translations.filterStories[lang]}</span>
+        </div>
+        {isCollapsibleOpen && (
+          <input
+            type='text'
+            className='bg-white text-black px-3 py-1 text-lg z-50'
+            placeholder='Search entries...'
+            id='searchInput'
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+          />
+        )}
       </div>
 
       <div className={'py-8 flex flex-col gap-y-0 sm:gap-y-2 md:gap-y-3 max-w-2xl lg:max-w-5xl w-full'}>

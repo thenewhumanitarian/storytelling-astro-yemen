@@ -1,4 +1,8 @@
 export const translations = {
+  filterStories: {
+    ar: 'تصفية القصص',
+    en: 'Filter Stories'
+  },
   back: {
     ar: 'رجوع',
     en: 'Back'
@@ -164,5 +168,5 @@ export const translations = {
       ar: 'صوت',
       en: 'Audio'
     },
-  }
+  },
 }
