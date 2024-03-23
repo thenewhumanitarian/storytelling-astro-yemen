@@ -56,16 +56,16 @@
 
 ### Questions
 * DONE What are we doing with "documents" such as Word/PDF attachments? Make them open in new tab/download them?
-  * Annie is removing those and will eventually add photos for them by adding the new media file names to the spreadsheet and sending the files to Marc
+  * DONE Annie is removing those and will eventually add photos for them by adding the new media file names to the spreadsheet and sending the files to Marc
 * DONE Audios will be videos so didn't build a view for them to play in lightbox
-  * Some audios will be soundcites...
+  * DONE Some audios will be soundcites...
 * DONE SEO for grid/list views but also detail views to be done
 * Optimise image sizes further (detail pages, list view)
 * DONE Highlighted entries in the list view are now spread out
 * DONE Family names? Do we show them?
-* Who is going to do testing?
-* Content for intro slides and static pages
-* Infinite grid highlighted entries shouldn't touch each other
+* DONE Who is going to do testing?
+* DONE Content for intro slides and static pages
+* DONE Infinite grid highlighted entries shouldn't touch each other
 
 ### The big and ugly to do list
 * DONE Adjust scraper to only use entries that have 'x' in Published column
@@ -105,9 +105,9 @@
 * DONE Clicking on Arabic button from the English introduction does not switch to the Arabic introduction, but just to the grid
 * DONE “About” in Arabic seem to be a mix of Arabic and English, and it includes start of English credits at the bottom
 * DONE Block body scroll when static pages visible
-* Links should not always go to /lang/grid instead stay on same side when changing language inside of overlay
 * DONE Links and logo should not move!
 * DONE Redesign the Wisepops section
+* Links should not always go to /lang/grid instead stay on same side when changing language inside of overlay
 
 ## Detail pages
 
@@ -116,33 +116,33 @@
 * DONE Check if all videos and photos are loading...
 * DONE The Soundcite works in English but seems to be only for the first paragraph? Looking at 1038 as an example
 * DONE Soundcite in Arabic works too, same issue. is it possible for the movement to be right to left on Arabic? That would make more logical sense
-* Check with Matt what exactly Wisepops does...
+* DONE Check with Matt what exactly Wisepops does...
 
 ## Scraper
 
 * DONE Check if those with bespoke teaser/preview images do actually work when scraping the data
-* Make sure images get resized to sensible sizes before storing in attachments folder
+* DONE Make sure images get resized to sensible sizes before storing in attachments folder
 
 ## Social share
 
-* Meta data in Arabic showing weird characters in description...
-  * Fallback social debug can be both in English
+* DONE Meta data in Arabic showing weird characters in description...
+  * DONE Fallback social debug can be both in English
 
 # Notes from call on 20 March 2024
 
-* This line must not be fat:
+* DONE This line must not be fat:
   يمكنك العثور على جميع مراحل تغطية وكالة «ذا نيو هيومانيترين» للحرب والأزمة الإنسانية في اليمن هنا.
-* Why wasn’t every story published? -> Must be Arabic
-* Open Natakallam on new _blank tab
-* Scroll to top not on click 
-* Integration of Mailchimp with Wisepops popup missing
-* Shuffle in tags and list view (optional)
-* Soundcite not Arabic anymore
-* Tags for video and audio would be great -> Annie is adding tags
-* Arabic description on og:description doesn't work
-* New WhatsApp folder
-* Arrows left right being square
-* Credits back to list and now make responsive
-* URL we were sharing
+* DONE Why wasn’t every story published? -> Must be Arabic
+* DONE Open Natakallam on new _blank tab
+* DONE Scroll to top not on click 
+* DONE Integration of Mailchimp with Wisepops popup missing
+* DONE Soundcite not Arabic anymore
+* DONE Tags for video and audio would be great -> Annie is adding tags
+* DONE URL we were sharing
+* DONE Arabic description on og:description doesn't work
+* DONE New WhatsApp folder
+* DONE Arrows left right being square
+* DONE Credits back to list and now make responsive
 * Metadata: Title, Subhed, Summary for stub article
+* Shuffle in tags and list view (optional)
 * Rule to only show real photos every now and then in between puzzle imgs (optional)

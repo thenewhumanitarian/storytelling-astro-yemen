@@ -12,6 +12,7 @@ export default defineConfig({
   redirects: {
     '/en': '/en/grid',
     '/ar': '/ar/grid',
+    '/': '/en/grid',
   },
   integrations: [
     tailwind({

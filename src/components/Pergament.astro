@@ -24,10 +24,15 @@ const direction = lang === 'en' ? 'ltr' : 'rtl'
 	<slot />
 </div>
 
-<style define:vars={{ direction, overflowY }}>
+<style define:vars={{ direction, overflowY }} is:global>
 	#pergament {
 		/* background-color: rgba(0, 0, 0, 0.85); */
 		direction: var(--direction);
 		overflow-y: var(--overflowY);
+	}
+
+	strong {
+		font-weight: bold;
+		font-family: 'Roboto bold', sans-serif;
 	}
 </style>
