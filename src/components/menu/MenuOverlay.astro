@@ -38,10 +38,10 @@ const navButtonClasses =
 			<Logo id='overlay-logo' />
 		</div>
 
-		<LanguageButtons alwaysVisible={true} classNames='intro__language--button mb-0 mt-1 sm:mt-0' links={{ en: '/en/grid', ar: '/ar/grid' }} />
+		<LanguageButtons alwaysVisible={true} classNames='intro__language--button mb-0 mt-1 sm:mt-2' links={{ en: '/en/grid', ar: '/ar/grid' }} />
 
 		<!-- Menu content here -->
-		<div class='flex flex-col items-center justify-center w-full z-50 pt-2 sm:pt-0' id='menu-overlay--nav'>
+		<div class='flex flex-col items-center justify-center w-full z-50 pt-2 sm:pt-3' id='menu-overlay--nav'>
 			<nav class='flex flex-row text-right items-center sm:items-center mb-2 sm:mb-8'>
 				{
 					static_pages.links[lang].map((page, i) => {
@@ -63,7 +63,7 @@ const navButtonClasses =
 		id='scrollable-container'
 		style='height: -webkit-fill-available;'
 	>
-		<section class='flex flex-col cursor-default items-center justify-center'>
+		<section class='flex flex-col cursor-default items-center justify-center pointer-events-auto'>
 			<!-- Body content here -->
 			<Pergament lang={lang || 'en'} classNames='p-2 text-black h-full rounded-xs border-none w-full'>
 				<div class='content-container intro' id='intro'>
