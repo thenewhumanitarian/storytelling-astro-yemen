@@ -29,13 +29,13 @@ const StoryListItem = ({ story, lang, showAll }) => {
   const opacityClass = isRead && !showAll ? 'transition-opacity opacity-30' : 'transition-opacity opacity-100';
 
   // Use `opacityClass` for elements you want to conditionally style
-  const storyClass = `flex group border-t sm:border-2 border-zinc-200 ${story.highlighted ? 'w-full pt-6 pb-3 sm:py-0 bg-black gap-x-2' : 'bg-black flex-row-reverse pb-0 pt-3 lg:max-w-3xl mx-auto'} px-3 sm:pt-3 w-full hover:bg-zinc-800 hover:border-white`;
+  const storyClass = `relative flex group border-t sm:border-2 border-zinc-200 ${story.highlighted ? 'w-full pt-6 pb-3 sm:py-0 bg-black gap-x-2' : 'bg-black flex-row-reverse pb-0 pt-3 lg:max-w-3xl mx-auto'} px-3 sm:pt-3 w-full hover:bg-zinc-800 hover:border-white`;
 
   return (
     <a className='z-40 block w-full' href={`/stories/${lang}/${story.slugs[lang]}`} id={`story-tile--${story.id}`}>
       <div className={storyClass}>
-        <div className={`relative mb-3 aspect-square ${story.highlighted ? 'w-64 lg:w-96' : 'w-32 lg:w-56'} overflow-hidden self-center ${opacityClass}`}>
-          <img src={story.storyImage.main} alt={story.story[lang].title} className='absolute top-0 left-0 w-full h-full object-cover aspect-square' />
+        <div className={`relative mb-3 h-0 ${story.highlighted ? 'w-56 lg:w-96 pt-32 lg:pt-64' : 'w-32 lg:w-56 pt-32 lg:pt-40'} overflow-hidden self-center bg-transparent ${opacityClass}`}>
+          <img src={story.storyImage.main} alt={story.story[lang].title} className='top-0 left-0 w-full h-full object-cover absolute bg-transparent' />
         </div>
         <div className={`flex flex-col w-full p-3 ${story.highlighted ? 'pb-0 bg-black group-hover:bg-zinc-800 hover:border-white' : ''}`}>
           <h3

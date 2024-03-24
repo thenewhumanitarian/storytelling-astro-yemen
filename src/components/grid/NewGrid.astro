@@ -420,6 +420,7 @@ if (!lang) {
 			let cssBatch = ''
 			cssBatch += `transform: translate3d(${this.x}px, ${this.y}px, 0);`
 			cssBatch += `width: ${calculateGridDimensions().cardSize - 8}px;`
+			cssBatch += `height: ${calculateGridDimensions().cardSize - 8}px;`
 			cssBatch += `background-image: url(${this.descriptor.storyImage.pixelated})`
 
 			this.rootElement.setAttribute('style', cssBatch)
@@ -473,14 +474,14 @@ if (!lang) {
 			// Define your mobile breakpoint
 			// const mobileBreakpoint = 640
 			// if (window.innerWidth < mobileBreakpoint) {
-				// Assuming calculateGridDimensions().cardSize gives you the card width
-				const cardWidth = calculateGridDimensions().cardSize
-				// Generate a random fraction between 1/2 and 1/3
-				const randomFraction = Math.random() * (1 / 2 - 2 / 4) + 1 / 4
-				// Calculate the shift amount based on the random fraction
-				const shiftAmount = cardWidth * randomFraction
-				// Shift grid elements to the left by the calculated shift amount
-				this.offsetX -= shiftAmount
+			// Assuming calculateGridDimensions().cardSize gives you the card width
+			const cardWidth = calculateGridDimensions().cardSize
+			// Generate a random fraction between 1/2 and 1/3
+			const randomFraction = Math.random() * (1 / 2 - 2 / 4) + 1 / 4
+			// Calculate the shift amount based on the random fraction
+			const shiftAmount = cardWidth * randomFraction
+			// Shift grid elements to the left by the calculated shift amount
+			this.offsetX -= shiftAmount
 			// }
 		}
 
@@ -774,7 +775,7 @@ if (!lang) {
 		opacity: 1;
 		overflow: hidden;
 		position: absolute;
-		aspect-ratio: 1/1;
+		// aspect-ratio: 1/1;
 
 		border: 3px solid rgba(255, 255, 255, 0.1);
 		opacity: 1;
