@@ -65,3 +65,34 @@ shuffleArray(stories)
 	<!-- <div class='fixed top-0 left-0 w-screen h-screen -z-1 pointer-events-none' id='city'></div> -->
 	<StoryWrapper stories={stories} view={view} lang={lang} />
 </Layout>
+
+<script>
+	// Prevent the default pull-to-refresh behavior when the user attempts to scroll up.
+	let lastTouchY = 0
+	const maybePreventPullToRefresh = (event) => {
+		const firstTouchY = event.touches[0].clientY
+		const bodyScrollTop = document.body.scrollTop || document.documentElement.scrollTop
+		const documentScrollTop = document.documentElement.scrollTop
+
+		if (bodyScrollTop === 0 && documentScrollTop === 0 && firstTouchY > lastTouchY) {
+			// To prevent pull-to-refresh action, prevent the default behavior.
+			event.preventDefault()
+		}
+
+		lastTouchY = firstTouchY
+	}
+
+	document.addEventListener(
+		'touchstart',
+		(event) => {
+			if (event.touches.length !== 1) return
+
+			lastTouchY = event.touches[0].clientY
+			// Optional: Detect if the user is touching within certain elements that
+			// should still allow scrolling.
+		},
+		{ passive: false },
+	)
+
+	document.addEventListener('touchmove', maybePreventPullToRefresh, { passive: false })
+</script>

@@ -16,15 +16,19 @@
     "@astrojs/sitemap": "^3.1.1",
     "@astrojs/tailwind": "^5.0.0",
     "@astrojs/vercel": "^5.0.0",
+    "@babel/preset-env": "^7.24.3",
     "@kaitos/audioquote": "^0.0.1",
     "@nanostores/persistent": "^0.10.1",
     "@nanostores/react": "^0.7.2",
     "@rvxlab/tailwind-plugin-ios-full-height": "^1.1.0",
+    "@tailwindcss/aspect-ratio": "^0.4.2",
     "@tailwindcss/nesting": "^0.0.0-insiders.565cd3e",
     "@tailwindcss/typography": "^0.5.10",
     "@types/react": "^18.2.61",
     "@types/react-dom": "^18.2.19",
     "astro": "^3.0.9",
+    "astro-babel": "^0.0.3",
+    "astro-babel-inline-scripts": "^1.0.1",
     "astro-vtbot": "^1.6.0",
     "basiclightbox": "^5.0.4",
     "heroicons-astro": "^1.0.4",
@@ -37,6 +41,7 @@
     "tailwindcss": "^3.0.24"
   },
   "devDependencies": {
-    "@tailwindcss/line-clamp": "^0.4.4"
+    "@tailwindcss/line-clamp": "^0.4.4",
+    "autoprefixer": "^10.4.19"
   }
 }

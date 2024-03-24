@@ -59,7 +59,7 @@ const navButtonClasses =
 
 	<!-- Body content -->
 	<div
-		class='max-h-[50vh] sm:max-h-none overflow-y-auto border-2 bg-zinc-900 max-w-4xl mx-auto w-full z-50'
+		class='max-h-[48vh] sm:max-h-none overflow-y-auto border-2 bg-zinc-900 max-w-4xl mx-auto w-full z-50'
 		id='scrollable-container'
 		style='height: -webkit-fill-available;'
 	>
@@ -80,17 +80,17 @@ const navButtonClasses =
 	</div>
 
 	<!-- Close button -->
-	<!-- <div class='block self-center mt-1' id='close-button--text'>
+	<div class='block sm:hidden self-center mt-1' id='close-button--text'>
 		<div
 			class='hover:bg-white hover:text-black bg-black border-2 cursor-pointer font-semibold px-3 py-1 text-white menu-close-button menu-close-button--text transition-colors'
 		>
 			{translations.close[lang]}
 		</div>
-	</div> -->
+	</div>
 
 	{
 		lang === 'ar' ? (
-			<div class='absolute -top-1 sm:top-1 left-7 w-8 h-8 cursor-pointer text-white hover:text-burgundy transition-colors menu-close-button z-50'>
+			<div class='absolute -top-0 sm:top-1 left-5 sm:left-7 w-5 h-5 sm:w-8 sm:h-8 cursor-pointer text-white hover:text-burgundy transition-colors menu-close-button z-50'>
 				<svg class='fill-current' width='100%' height='90' viewBox='0 0 90 90' fill='none' xmlns='http://www.w3.org/2000/svg'>
 					<path
 						class='fill-current'
@@ -101,7 +101,7 @@ const navButtonClasses =
 				</svg>
 			</div>
 		) : (
-			<div class='absolute -top-1 sm:top-1 right-7 w-8 h-8 cursor-pointer text-white hover:text-burgundy transition-colors menu-close-button z-[9999]'>
+			<div class='absolute -top-0 sm:top-1 right-5 sm:right-7 w-5 h-5 sm:w-8 sm:h-8 cursor-pointer text-white hover:text-burgundy transition-colors menu-close-button z-[9999]'>
 				<svg class='fill-current' width='100%' height='90' viewBox='0 0 90 90' fill='none' xmlns='http://www.w3.org/2000/svg'>
 					<path
 						class='fill-current'

@@ -4,6 +4,9 @@ const plugin = require('tailwindcss/plugin')
 
 module.exports = {
   content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
+  // corePlugins: {
+  //   aspectRatio: false,
+  // },
   theme: {
     extend: {
       textShadow: {
@@ -33,6 +36,7 @@ module.exports = {
   plugins: [
     require('@tailwindcss/typography'),
     require('@rvxlab/tailwind-plugin-ios-full-height'),
+    // require('@tailwindcss/aspect-ratio'),
     plugin(function ({ matchUtilities, theme }) {
       matchUtilities(
         {
