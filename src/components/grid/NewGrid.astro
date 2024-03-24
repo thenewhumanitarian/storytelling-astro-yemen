@@ -714,7 +714,8 @@ if (!lang) {
 				// Find out if descriptor is in readArticles
 				const readArticle = this.readArticles.find((article) => article.slug === descriptor.slugs[lang])
 				// console.log(readArticle)
-				return new Card(descriptor, readArticle?.timestamp || 'never')
+				// return new Card(descriptor, readArticle?.timestamp || 'never')
+				return new Card(descriptor, readArticle ? readArticle.timestamp : 'never');
 			}
 		}
 	}
