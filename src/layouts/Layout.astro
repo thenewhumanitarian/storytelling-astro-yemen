@@ -72,19 +72,19 @@ const isProd = import.meta.env.PROD
 			console.log(browser)
 			let redirectToLegacy = false
 
-			if (browser.name === 'Safari' && browser.version < 15) {
+			if (browser.name === 'Safari' && +browser.version < 15) {
 				console.log('Safari version is less than 15')
 				redirectToLegacy = true
-			} else if (browser.name === 'Firefox' && browser.version < 100) {
+			} else if (browser.name === 'Firefox' && +browser.version < 100) {
 				console.log('Firefox version smaller than 100')
 				redirectToLegacy = true
-			} else if (browser.name === 'Chrome' && browser.version < 90) {
+			} else if (browser.name === 'Chrome' && +browser.version < 90) {
 				console.log('Chrome version smaller than 90')
 				redirectToLegacy = true
-			} else if (browser.name === 'Edge' && browser.version < 90) {
-				console.log('Edge version smaller than 90')
+			} else if (browser.name === 'Edge' && +browser.version < 88) {
+				console.log('Edge version smaller than 88')
 				redirectToLegacy = true
-			} else if (browser.name === 'Opera' && browser.version < 90) {
+			} else if (browser.name === 'Opera' && +browser.version < 90) {
 				console.log('Opera version smaller than 90')
 				redirectToLegacy = true
 			} else if (browser.name === 'IE') {
@@ -93,7 +93,7 @@ const isProd = import.meta.env.PROD
 			}
 
 			if (redirectToLegacy) {
-				window.location.href = '/legacy'
+				// window.location.href = '/legacy'
 			}
 		} else {
 			console.log('This is a legacy page. No browser detection needed.')

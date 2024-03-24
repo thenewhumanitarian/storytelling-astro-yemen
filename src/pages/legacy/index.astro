@@ -1,14 +1,30 @@
 ---
 import Layout from '@layouts/Layout.astro'
+import SEO from '@components/SEO.astro'
 ---
 
-<Layout>
-	<div class='w-screen h-screen h-screen-ios fixed top-0 left-0 bg-black flex flex-col items-center justify-center'>
-		<div class='p-5 flex flex-col items-center justify-center'>
-			<div class='max-w-xl w-full'>
+<Layout dark>
+	<SEO slot='seo' title={`The Yemen Listening Project`} description={'Where Yemenis talk, and the world listens.'} />
+
+	<div class='w-screen h-screen h-screen-ios fixed top-0 left-0 bg-transparent flex flex-col items-center justify-center -z-1'>
+		<div id='message-wrapper' class='p-5 flex flex-col items-center justify-center'>
+			<div class='max-w-lg w-full'>
 				<img src='/images/legacy-logo.png' width='100%' />
 			</div>
-			<h1 class='text-white text-5xl mt-8'>This website does not support your browser.</h1>
+			<h1 class='mt-8'>This website does not support your browser.</h1>
 		</div>
 	</div>
 </Layout>
+
+<style>
+	h1 {
+		font-size: 2rem;
+		color: white;
+	}
+
+	@media screen and (max-width: 640px) {
+		h1 {
+			font-size: 0.9rem;
+		}
+	}
+</style>

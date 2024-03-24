@@ -102,24 +102,32 @@ async function processWhatsAppAttachments(entryID, files, basePath) {
       const maxWidth = 1000;
       const outputFilePath = path.join(basePath, '../public/attachments/', newFilename);
       const additionalOutputFilePath = path.join(basePath, '../src/assets/', newFilename);
-
-      console.log('Resizing image: ' + newFilename)
-
-      await sharp(sourceFilePath)
-        .resize(maxWidth, null, {
-          withoutEnlargement: true // This ensures the image is not enlarged if it's smaller than maxWidth
-        })
-        .toFile(outputFilePath)
-        .then(() => {
-          console.log(`Resized image saved to: ${outputFilePath}`);
-          return fs.copyFile(outputFilePath, additionalOutputFilePath); // Copy resized image to ../src/assets
-        })
-        .catch(error => console.error(`Failed to resize image: ${error}`));
+    
+      console.log('Resizing image: ' + newFilename);
+    
+      try {
+        // Await the completion of the resizing operation
+        await sharp(sourceFilePath)
+          .resize(maxWidth, null, { withoutEnlargement: true }) // This ensures the image is not enlarged if it's smaller than maxWidth
+          .toFile(outputFilePath);
+    
+        console.log(`Resized image saved to: ${outputFilePath}`);
+    
+        // Ensure the image has been saved and is accessible before copying
+        await fs.access(outputFilePath);
+    
+        // Await the completion of the copy operation to ensure the file is fully copied
+        await fs.copyFile(outputFilePath, additionalOutputFilePath);
+        console.log(`Image successfully copied to: ${additionalOutputFilePath}`);
+      } catch (error) {
+        console.error(`Failed to process image ${newFilename}: ${error}`);
+      }
     }
+    
     else {
       // Existing logic for non-image files
       await fs.copyFile(sourceFilePath, newFilePath);
-      await fs.copyFile(newFilePath, additionalFilePath); // Copy to ../src/assets
+      await fs.copyFile(sourceFilePath, additionalFilePath); // Copy to ../src/assets
     }
 
     return newFilename;
@@ -127,7 +135,7 @@ async function processWhatsAppAttachments(entryID, files, basePath) {
 
   // Wait for all promises to resolve
   const processedFiles = await Promise.all(processedFilesPromises);
-  console.log('Processed files:', processedFiles);
+  console.log('Processed files for WA:', processedFiles);
 
   return processedFiles;
 }
