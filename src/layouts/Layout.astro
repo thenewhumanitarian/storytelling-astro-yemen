@@ -75,8 +75,8 @@ const isProd = import.meta.env.PROD
 			if (browser.name === 'Safari' && +browser.version < 15) {
 				console.log('Safari version is less than 15')
 				redirectToLegacy = true
-			} else if (browser.name === 'Firefox' && +browser.version < 100) {
-				console.log('Firefox version smaller than 100')
+			} else if (browser.name === 'Firefox' && +browser.version < 89) {
+				console.log('Firefox version smaller than 89')
 				redirectToLegacy = true
 			} else if (browser.name === 'Chrome' && +browser.version < 90) {
 				console.log('Chrome version smaller than 90')
@@ -93,7 +93,7 @@ const isProd = import.meta.env.PROD
 			}
 
 			if (redirectToLegacy) {
-				// window.location.href = '/legacy'
+				window.location.href = '/legacy'
 			}
 		} else {
 			console.log('This is a legacy page. No browser detection needed.')
