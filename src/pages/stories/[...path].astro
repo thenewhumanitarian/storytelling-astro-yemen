@@ -449,7 +449,7 @@ const readInOtherLanguage = translations.readIn[lang]
 		const currentView = localStorage.getItem('currentView')
 
 		overviewButtonTop.href = `/${lang}/${currentView}`
-		overviewButtonBottom.href = `/${lang}/${currentView}`
+		if (overviewButtonBottom) overviewButtonBottom.href = `/${lang}/${currentView}`
 	}
 	document.addEventListener('DOMContentLoaded', changeOverviewButtonHref)
 

@@ -73,8 +73,8 @@ const isProd = import.meta.env.PROD
 				console.log(browser)
 				let redirectToLegacy = false
 
-				if (browser.name === 'Safari' && +browser.version < 14) {
-					console.log('Safari version is less than 14')
+				if (browser.name === 'Safari' && +browser.version < 12) {
+					console.log('Safari version is less than 12')
 					redirectToLegacy = true
 				} else if (browser.name === 'Firefox' && +browser.version < 89) {
 					console.log('Firefox version smaller than 89')

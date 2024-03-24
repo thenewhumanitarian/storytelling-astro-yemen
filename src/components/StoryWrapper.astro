@@ -44,7 +44,12 @@ const { stories, tags, view, lang } = Astro.props
 			<div class={`stories-container--list mt-[8rem] lg:mt-20 pt-0 sm:py-5`} id='stories-container--list bg-black'>
 				<div class='fixed top-0 left-0 w-screen h-screen -z-1 pointer-events-none' id='stars' />
 				<div id='city' class='top-0 left-0 fixed w-full h-full -z-1' />
-				<ReactStoryList client:load stories={stories} lang={lang} />
+				<div class="hidden sm:block">
+					<ReactStoryList client:load stories={stories} lang={lang} />
+				</div>
+				<div class="block sm:hidden">
+					<StoryList stories={stories} id='tags' />
+				</div>
 			</div>
 		</>
 	)
@@ -69,10 +74,11 @@ const { stories, tags, view, lang } = Astro.props
 }
 
 {
-  view === 'legacy' &&
-  <div class="mt-40">
-    <h1 class="text-white">LEGACY</h1>
-  </div>
+	view === 'legacy' && (
+		<div class='mt-40'>
+			<h1 class='text-white'>LEGACY</h1>
+		</div>
+	)
 }
 
 <style is:global>

@@ -22,27 +22,27 @@ if (!lang) {
 }
 
 const navButtonClasses =
-	'text-white bg-black px-3 py-1 border-white border sm:border-2 font-semibold text-base hover:text-black transition-colors cursor-pointer hover:bg-white'
+	'text-white bg-black px-3 py-1 border-white border sm:border-2 font-semibold text-sm hover:text-black transition-colors cursor-pointer hover:bg-white mx-1'
 // hover:bg-white hover:text-black font-bold border-2 cursor-pointer font-normal px-3 py-1 text-white menu-close-button menu-close-button--text transition-colors
 ---
 
-<div id='menu-overlay' class='flex flex-col min-h-screen bg-black p-5 sm:p-8 gap-y-5 sm:gap-y-8' transition:persist>
+<div id='menu-overlay' class='flex flex-col min-h-screen bg-black p-3 sm:p-8'>
 	<!-- City and stars -->
-	<div class='fixed top-0 left-0 w-screen h-screen -z-1 pointer-events-none' id='stars' transition:persist></div>
+	<div class='fixed top-0 left-0 w-screen h-screen -z-1 pointer-events-none' id='stars'></div>
 	<div id='overlay-city' class='top-0 left-0 fixed w-full h-full z-1'></div>
 
 	<!-- Menu section -->
-	<div class='flex flex-col items-center justify-center gap-y-5 pt-0' id='menu-overlay--nav-wrapper'>
+	<div class='flex flex-col items-center justify-center pt-0' id='menu-overlay--nav-wrapper'>
 		<!-- Logo here -->
 		<div class='w-60 sm:w-64 md:w-72 h-auto pb-3 sm:pb-4'>
 			<Logo id='overlay-logo' />
 		</div>
 
-		<LanguageButtons alwaysVisible={true} classNames='intro__language--button' links={{ en: '/en/grid', ar: '/ar/grid' }} />
+		<LanguageButtons alwaysVisible={true} classNames='intro__language--button mb-0 mt-1 sm:mt-0' links={{ en: '/en/grid', ar: '/ar/grid' }} />
 
 		<!-- Menu content here -->
 		<div class='flex flex-col items-center justify-center w-full z-50 pt-2 sm:pt-0' id='menu-overlay--nav'>
-			<nav class='flex flex-row text-right items-center sm:items-center gap-x-3 sm:gap-x-3'>
+			<nav class='flex flex-row text-right items-center sm:items-center mb-2 sm:mb-8'>
 				{
 					static_pages.links[lang].map((page, i) => {
 						const { className, text } = page
@@ -65,7 +65,7 @@ const navButtonClasses =
 	>
 		<section class='flex flex-col cursor-default items-center justify-center'>
 			<!-- Body content here -->
-			<Pergament lang={lang || 'en'} classNames='p-4 text-black h-full rounded-xs border-none w-full'>
+			<Pergament lang={lang || 'en'} classNames='p-2 text-black h-full rounded-xs border-none w-full'>
 				<div class='content-container intro' id='intro'>
 					<Intro lang={lang} />
 				</div>
@@ -80,9 +80,9 @@ const navButtonClasses =
 	</div>
 
 	<!-- Close button -->
-	<div class='block sm:hidden self-center mt-1' id='close-button--text'>
+	<div class='block sm:hidden self-center mt-0' id='close-button--text'>
 		<div
-			class='text-xs mt-1 hover:bg-white hover:text-black bg-black border-2 cursor-pointer font-semibold px-3 py-1 text-white menu-close-button menu-close-button--text transition-colors'
+			class='mt-2 hover:bg-white hover:text-black bg-black border-2 cursor-pointer font-semibold px-3 py-1 text-white menu-close-button menu-close-button--text transition-colors'
 		>
 			{translations.close[lang]}
 		</div>

@@ -59,10 +59,13 @@ const currentTag = pathParams?.[1]
 // Filter stories that include the current tag (case-insensitive)
 const filteredStories = allStories.filter((story) => story.tags.some((tag) => tag.toLowerCase() === currentTag.toLowerCase()))
 
+const languageButtonClass = 'hidden sm:block'
+
 // Construct languageButtons for /tags/en/ and /tags/ar/ including current tag name
 const languageButtons = {
 	ar: `/tags/ar/${currentTag}`,
 	en: `/tags/en/${currentTag}`,
+	class: languageButtonClass,
 }
 ---
 
@@ -134,7 +137,7 @@ const languageButtons = {
 		const currentView = localStorage.getItem('currentView')
 
 		overviewButtonTop.href = `/${lang}/${currentView}`
-		overviewButtonBottom.href = `/${lang}/${currentView}`
+    if (overviewButtonBottom) overviewButtonBottom.href = `/${lang}/${currentView}`
 	}
 
 	document.addEventListener('DOMContentLoaded', changeOverviewButtonHref)

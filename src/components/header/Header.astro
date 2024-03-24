@@ -5,8 +5,6 @@ import FilterButtons from '@components/buttons/FilterButtons.astro'
 import SwitchViewButtons from '@components/buttons/SwitchViewButtons.astro'
 import LanguageButtons from '@components/buttons/LanguageButtons.astro'
 
-// import ReactHeader from '../islands/ReactHeader'
-
 export interface Props {
 	filterButtons?: boolean
 	languageButtons?: object
@@ -40,7 +38,7 @@ if (!lang) {
 			{switchViewButtons && <SwitchViewButtons />}
 			{filterButtons && <FilterButtons />}
 		</div>
-		<div class='flex justify-center'>
+		<div class='flex justify-center h-full w-full'>
 			<HeaderLogo dark={dark} />
 		</div>
 		<!-- <div class='justify-end hidden sm:flex'><p class={`${dark ? 'text-white' : ''} font-serif`}>Journalism from the heart of crises</p></div> -->

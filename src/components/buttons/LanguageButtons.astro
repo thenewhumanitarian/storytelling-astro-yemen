@@ -4,9 +4,7 @@ const inactiveClasses = 'bg-black text-white hover:bg-white hover:text-burgundy'
 
 const { classNames, links, alwaysVisible } = Astro.props
 
-let { lang } = Astro.params
-
-const { path } = Astro.params
+let { lang, path } = Astro.params
 
 if (!lang) {
 	// Read path parameters for language and slug
@@ -19,7 +17,7 @@ const view = path?.toString().split('/')?.[1] || 'grid'
 import { translations } from '@data/translations'
 ---
 
-<div class={`isolate inline-flex rounded-xs shadow-sm ${alwaysVisible ? 'always-visible' : ''}`} id='language-buttons'>
+<div class={`isolate inline-flex rounded-xs shadow-sm ${alwaysVisible ? 'always-visible' : ''} ${links.class}`} id='language-buttons'>
 	<a
 		data-astro-reload
 		id='language-button--en'

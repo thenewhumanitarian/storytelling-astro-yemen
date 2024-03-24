@@ -141,7 +141,9 @@ const StoryListReact = ({ stories, lang = 'en' }) => {
 
       <div className={'py-8 flex flex-col gap-y-0 sm:gap-y-2 md:gap-y-3 max-w-2xl lg:max-w-5xl w-full'}>
         {filteredStories.map((story, index) => (
+          <>
           <ReactStoryItem client:load story={story} lang={lang} key={index} showAll={showAll} />
+          </>
         ))}
       </div>
     </div>

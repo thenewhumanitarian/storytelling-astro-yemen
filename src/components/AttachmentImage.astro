@@ -6,6 +6,12 @@ export interface Props {
 import DynamicImage from '@components/DynamicImage.astro'
 
 const { fileName } = Astro.props as Props
+console.log(fileName)
 ---
 
-<DynamicImage fileName={fileName} altText='An image alt text' />
+<div class='block sm:hidden'>
+	<img src={`/attachments/${fileName}`} alt='An image alt text' />
+</div>
+<div class='hidden sm:block'>
+	<DynamicImage fileName={fileName} altText='An image alt text' />
+</div>
