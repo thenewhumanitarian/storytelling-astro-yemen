@@ -241,7 +241,7 @@ if (!lang) {
 			const touchDuration = Date.now() - this.touchStartTime
 
 			// Check duration and act accordingly
-			if (touchDuration < 150) {
+			if (touchDuration < 200) {
 				// This checks if the touch lasted less than 100ms
 				// This was a short tap:
 				const href = e.target.getAttribute('data-href')
