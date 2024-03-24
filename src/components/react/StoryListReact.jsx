@@ -123,13 +123,15 @@ const StoryListReact = ({ stories, lang = 'en' }) => {
             </svg>
 
           </span>
-          <span className={'inline-block'}>{translations.searchStories[lang]}</span>
+          {/* {lang === 'en' && <span className={'inline-block'}>{translations.searchStories[lang]}</span>} */}
+          <span className={'inline-block'}>{translations.searchStories['en']}</span>
         </div>
         {isCollapsibleOpen && (
           <input
             type='text'
             className='bg-white text-black px-3 py-1 text-lg z-50'
-            placeholder='Search...'
+            placeholder={lang === 'en' ? 'Search' : null}
+            // placeholder={'Search...'}
             id='searchInput'
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}

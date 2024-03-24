@@ -446,11 +446,13 @@ if (!lang) {
 			this.viewWidth = 0
 			this.viewHeight = 0
 			this.readArticles = JSON.parse(localStorage.getItem('readArticles')) || []
+			this.init()
 		}
 
 		init() {
 			window.addEventListener('resize', debounce(this.onResize.bind(this)), 250)
 			this.onResize()
+			this.adjustInitialOffsetForMobile()
 			let d = new SimpleDrag(this.DOMElement, this.onDrag.bind(this))
 
 			// Add functionality for arrow keys
@@ -465,6 +467,21 @@ if (!lang) {
 					75,
 				),
 			)
+		}
+
+		adjustInitialOffsetForMobile() {
+			// Define your mobile breakpoint
+			// const mobileBreakpoint = 640
+			// if (window.innerWidth < mobileBreakpoint) {
+				// Assuming calculateGridDimensions().cardSize gives you the card width
+				const cardWidth = calculateGridDimensions().cardSize
+				// Generate a random fraction between 1/2 and 1/3
+				const randomFraction = Math.random() * (1 / 2 - 2 / 4) + 1 / 4
+				// Calculate the shift amount based on the random fraction
+				const shiftAmount = cardWidth * randomFraction
+				// Shift grid elements to the left by the calculated shift amount
+				this.offsetX -= shiftAmount
+			// }
 		}
 
 		getGalleryDescriptor(index) {
