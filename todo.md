@@ -143,6 +143,9 @@
 * DONE New WhatsApp folder
 * DONE Arrows left right being square
 * DONE Credits back to list and now make responsive
+* DONE Shuffle in tags and list view (optional)
+
+# To do on publication day
+
 * Metadata: Title, Subhed, Summary for stub article
-* Shuffle in tags and list view (optional)
 * Rule to only show real photos every now and then in between puzzle imgs (optional)
