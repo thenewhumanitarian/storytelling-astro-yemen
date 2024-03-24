@@ -131,18 +131,20 @@ if (!lang) {
 					font-weight: bold;
 				}
 			}
+      @media screen and (min-width: 640px) {
+        &:hover {
+          border-color: white;
+  
+          h2 {
+            background: transparent;
+          }
+  
+          // @media screen and (max-width: 640px) {
+          //   border-color: #9f3e52;
+          // }
+        }
 
-			&:hover {
-				border-color: white;
-
-				h2 {
-					background: transparent;
-				}
-
-				@media screen and (max-width: 640px) {
-					border-color: #9f3e52;
-				}
-			}
+      }
 		}
 	}
 
@@ -508,6 +510,7 @@ if (!lang) {
 			this.tileHeight = tileHeight
 
 			ele.addEventListener('click', this.onClick.bind(this), false)
+			ele.addEventListener('dblclick', this.onClick.bind(this), false)
 
 			ele.addEventListener('touchstart', this.onStart.bind(this), false)
 			ele.addEventListener('touchmove', this.onMove.bind(this), false)
@@ -521,6 +524,8 @@ if (!lang) {
 
 		onClick(ev) {
 			ev.preventDefault()
+
+      console.log(ev)
 
 			// Check if #grid is hidden and if yes return
 			if (document.getElementById('grid').style.display === 'none') return
@@ -613,7 +618,7 @@ if (!lang) {
 				if (ev.target.tagName.toLowerCase() === 'a' && touchDuration) {
 					const href = ev.target.getAttribute('href')
 					if (href) {
-						window.location = href
+						// window.location = href
 					}
 				} else {
 					return

@@ -79,13 +79,13 @@ const isProd = import.meta.env.PROD
 				} else if (browser.name === 'Firefox' && +browser.version < 89) {
 					console.log('Firefox version smaller than 89')
 					redirectToLegacy = true
-				} else if (browser.name === 'Chrome' && +browser.version < 90) {
+				} else if (browser.name === 'Chrome' && +browser.version < 70) {
 					console.log('Chrome version smaller than 90')
 					redirectToLegacy = true
-				} else if (browser.name === 'Edge' && +browser.version < 88) {
+				} else if (browser.name === 'Edge' && +browser.version < 70) {
 					console.log('Edge version smaller than 88')
 					redirectToLegacy = true
-				} else if (browser.name === 'Opera' && +browser.version < 90) {
+				} else if (browser.name === 'Opera' && +browser.version < 70) {
 					console.log('Opera version smaller than 90')
 					redirectToLegacy = true
 				} else if (browser.name === 'IE') {
