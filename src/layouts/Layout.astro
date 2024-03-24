@@ -1,8 +1,8 @@
 ---
 import Header from '@components/header/Header.astro'
 import MenuOverlay from '@components/menu/MenuOverlay.astro'
-// import ReplacementSwap from 'astro-vtbot/components/ReplacementSwap.astro'
 import GoogleTagManager from '@components/GoogleTagManager.astro'
+import OldBrowserDetector from 'old-browser-detector'
 
 import '@styles/tailwind.css'
 import '@styles/global.css'
@@ -38,33 +38,6 @@ const isProd = import.meta.env.PROD
 		<!-- GA4 -->
 		{isProd && <GoogleTagManager partytown={true} measurementId='G-CN7NT4K7P4' />}
 		<!-- End GA4 -->
-
-		<!-- Wisepops -->
-		<!-- <script data-cfasync='false'>
-			;(function (w, i, s, e) {
-				window[w] =
-					window[w] ||
-					function () {
-						;(window[w].q = window[w].q || []).push(arguments)
-					}
-				window[w].l = Date.now()
-				s = document.createElement('script')
-				e = document.getElementsByTagName('script')[0]
-				s.defer = 1
-				s.src = i
-				e.parentNode.insertBefore(s, e)
-			})('wisepops', 'https://wisepops.net/loader.js?v=2&h=kcb6dfpU9E')
-		</script> -->
-		<!-- End Wisepops -->
-
-		<!-- Todo: Change meta tags using Drupal tags before publication  -->
-		<slot name='seo' />
-		<!-- GOOGLE TAG MANAGER -->
-		<!-- <GoogleTagManager measurementId='GTM-T5C2M82' /> -->
-		<!-- END GTM -->
-
-		<!-- <ReplacementSwap /> -->
-    <!-- <script src="https://polyfill.io/v3/polyfill.min.js?features=default,fetch,IntersectionObserver"></script> -->
 	</head>
 	<body>
 		<!-- Header  -->
@@ -77,6 +50,16 @@ const isProd = import.meta.env.PROD
 		<!-- No footer set -->
 	</body>
 </html>
+
+<script is:inline>
+  document.addEventListener('DOMContentLoaded', function () {
+    const Detector = new OldBrowserDetector({ i: 11, s: 13 }, function () {
+      alert('Old browser detected.')
+    })
+  
+    Detector.detect(); // Return `true` if old browser is detected.
+  })
+</script>
 
 <style is:global lang={'scss'}>
   html[dir='ltr'] {
