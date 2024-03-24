@@ -115,7 +115,7 @@ const StoryListReact = ({ stories, lang = 'en' }) => {
 
   return (
     <div className='text-white flex items-center justify-center flex-col'>
-      <div className='flex flex-col gap-y-3 max-w-xl w-full px-8 mt-5 sm:mt-3'>
+      <div className='flex flex-col max-w-xl w-full px-8 mt-5 sm:mt-3'>
         <div onClick={() => toggleCollapsible()} className={'z-50 flex items-center justify-center cursor-pointer gap-x-2 opacity-50 hover:opacity-100 transition-opacity'}>
           <span className={'text-white w-5 h-5 inline-block'}>
             <svg width="100%" className={'fill-current w-full h-auto'} viewBox="0 0 97 97" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -129,7 +129,7 @@ const StoryListReact = ({ stories, lang = 'en' }) => {
         {isCollapsibleOpen && (
           <input
             type='text'
-            className='bg-white text-black px-3 py-1 text-lg z-50'
+            className='bg-white text-black px-3 py-1 text-lg z-50 mt-3'
             placeholder={lang === 'en' ? 'Search' : null}
             // placeholder={'Search...'}
             id='searchInput'
