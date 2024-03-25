@@ -26,10 +26,14 @@ const direction = lang === 'en' ? 'ltr' : 'rtl'
 
 <style define:vars={{ direction, overflowY }} is:global>
 	#pergament {
-		/* background-color: rgba(0, 0, 0, 0.85); */
+		background-color: rgba(0, 0, 0, 0.85);
 		direction: var(--direction);
 		overflow-y: var(--overflowY);
 	}
+
+  #pergament p {
+    color: white;
+  }
 
 	strong {
 		font-weight: bold;

@@ -128,3 +128,28 @@ body.no-scroll {
   overflow: hidden;
   height: 100% !important;
 }
+
+/* Tailwind overwrites */
+.text-white {
+  color: white;
+}
+
+.text-black {
+  color: black;
+}
+
+.border-white {
+  border-color: white;
+}
+
+.text-burgundy {
+  color: #9f3e52;
+}
+
+.bg-burgundy {
+  background-color: #9f3e52;
+}
+
+*:hover .bg-white {
+  background: white;
+}
