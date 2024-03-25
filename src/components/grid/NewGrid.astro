@@ -203,7 +203,7 @@ if (!lang) {
 			const touchDuration = Date.now() - this.touchStartTime
 
 			// Check duration and act accordingly
-			if (touchDuration < window.innerWidth > 640 ? 150 : 100) {
+			if (touchDuration < (window.innerWidth > 640 ? 150 : 100)) {
         console.log(touchDuration)
 
 				// This checks if the touch lasted less than 100ms
