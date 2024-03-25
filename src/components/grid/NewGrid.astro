@@ -133,43 +133,6 @@ if (!lang) {
 		return { cardSize, targetColumns, targetRows }
 	}
 
-	const NEIGHBOURS = [
-		// Directly four tiles away
-		[0, -4], // 4 up
-		[0, 4], // 4 down
-		[4, 0], // 4 right
-		[-4, 0], // 4 left
-
-		// Diagonally four tiles away
-		[4, 4], // bottom right
-		[-4, 4], // bottom left
-		[-4, -4], // upper left
-		[4, -4], // upper right
-
-		// Additional positions to ensure no tile is closer than four tiles
-		// These include positions that are "knight moves" away in chess,
-		// as well as some additional spots to ensure a full coverage.
-		// Knight moves (L-shape patterns)
-		[2, -3],
-		[2, 3],
-		[-2, -3],
-		[-2, 3],
-		[3, -2],
-		[3, 2],
-		[-3, -2],
-		[-3, 2],
-
-		// Ensuring that the spacing criteria are met in a broadened context
-		[4, -1],
-		[4, 1],
-		[-4, -1],
-		[-4, 1], // Horizontal edges near the 4-tile-away row
-		[1, 4],
-		[-1, 4],
-		[1, -4],
-		[-1, -4], // Vertical edges near the 4-tile-away column
-	]
-
 	class SimpleDrag {
 		constructor(DOMElement, onDrag) {
 			this.useTouch = this.isTouch()
@@ -187,15 +150,18 @@ if (!lang) {
 		onMove(e) {
 			if (this.dragging) {
 				e = e.type == 'touchmove' ? e.touches[0] : e
+
 				let xDelta = e.clientX - this.lastX
 				let yDelta = e.clientY - this.lastY
 				let velocity = Math.abs(xDelta * yDelta)
 
-				if (velocity > 50) {
-					//this.dragging = false;
+				if (velocity > 1000) {
+					// console.log('Velocity > 1000')
+					this.dragging = false
+
 					let v = { x: xDelta * 0.5, y: yDelta * 0.5 }
 					if (this.tween) this.tween.kill()
-					this.tween = TweenMax.to(v, window.innerWidth < 500 ? 0 : 0, {
+					this.tween = TweenMax.to(v, 0.55, {
 						x: 0,
 						y: 0,
 						onUpdate: () => {
@@ -205,6 +171,7 @@ if (!lang) {
 				}
 
 				this.onDragCallback(xDelta, yDelta)
+
 				this.lastX = e.clientX
 				this.lastY = e.clientY
 			}
@@ -223,7 +190,7 @@ if (!lang) {
 			document.body.classList.add('is-dragging')
 
 			// Set setting overscroll-behavior: none; to html
-			document.documentElement.style.overscrollBehavior = 'none'
+			// document.documentElement.style.overscrollBehavior = 'none'
 		}
 
 		onEnd(e) {
@@ -235,15 +202,14 @@ if (!lang) {
 			document.body.classList.remove('is-dragging')
 
 			// Set setting overscroll-behavior: unset;
-			document.documentElement.style.overscrollBehavior = 'auto'
+			// document.documentElement.style.overscrollBehavior = 'auto'
 
 			// Calculate the duration of the tap
 			const touchDuration = Date.now() - this.touchStartTime
 
 			// Check duration and act accordingly
-			if (touchDuration < 200) {
+			if (touchDuration < 100) {
 				// This checks if the touch lasted less than 100ms
-				// This was a short tap:
 				const href = e.target.getAttribute('data-href')
 				if (href) {
 					window.location = href
@@ -277,7 +243,6 @@ if (!lang) {
 			this.x = 0
 			this.y = 0
 			this.lastRead = lastRead
-			// this.touchStartTime = 0
 		}
 
 		createDOMElement() {
@@ -341,8 +306,6 @@ if (!lang) {
 			highlightedText.classList.add('p-0')
 			highlightedText.classList.add('m-0')
 			highlightedText.classList.add('font-serif')
-			// highlightedText.classList.add('text-shadow-xl')
-			// highlightedText.classList.add('shadow-black')
 
 			starDiv.appendChild(highlightedText)
 			this.rootElement.appendChild(starDiv)
@@ -372,7 +335,6 @@ if (!lang) {
 		load() {
 			let { imgElement } = this
 			if (imgElement.src !== this.descriptor.storyImage.main) {
-				// console.log('Changed image: ', this.descriptor.storyImage.main)
 				imgElement.src = this.descriptor.storyImage.main
 				imgElement.onload = () => {
 					this.update()
@@ -383,7 +345,6 @@ if (!lang) {
 
 		appendTo(el) {
 			if (this.rootElement.parentElement !== el) {
-				//console.log('append');
 				el.appendChild(this.rootElement)
 				this.load()
 			}
@@ -398,8 +359,6 @@ if (!lang) {
 		}
 
 		update() {
-			// console.log(calculateGridDimensions().cardSize)
-
 			if (!this.lastRead) {
 				// Don't bother with this if it's not on "unread only" filter
 			} else {
@@ -456,8 +415,10 @@ if (!lang) {
 			this.adjustInitialOffsetForMobile()
 			let d = new SimpleDrag(this.DOMElement, this.onDrag.bind(this))
 
-			// Add functionality for arrow keys
-			window.addEventListener('keydown', this.onKeyDown.bind(this))
+			if (window.innerWidth > 500) {
+				// Add functionality for arrow keys
+				window.addEventListener('keydown', this.onKeyDown.bind(this))
+			}
 
 			window.addEventListener(
 				'wheel',
@@ -567,35 +528,6 @@ if (!lang) {
 			)
 		}
 
-		// getRandomSafe(col, row) {
-		// 	let pick
-		// 	let tries = 0
-		// 	let i = 0
-
-		// 	while (pick === undefined) {
-		// 		let rnd = ~~(Math.random() * 10000)
-		// 		let item = this.getGalleryDescriptor(rnd)
-
-		// 		// Check if the item is not already assigned to a neighbour
-		// 		for (i = 0; i < NEIGHBOURS.length; i++) {
-		// 			let offsets = NEIGHBOURS[i]
-		// 			let key = `${col + offsets[0]}:${row + offsets[1]}`
-		// 			if (this.picks[key] === item) {
-		// 				break
-		// 			}
-		// 		}
-
-		// 		if (tries++ > 20 || i === NEIGHBOURS.length) {
-		// 			pick = item
-		// 		}
-		// 	}
-
-		// 	setOfIDs.add(pick.id)
-		// 	console.log(setOfIDs.size)
-
-		// 	return pick
-		// }
-
 		getRandomSafe() {
 			let availableStories
 
@@ -631,8 +563,6 @@ if (!lang) {
 					const oldestId = Array.from(recentIDs)[0]
 					this.recentIDs.delete(oldestId)
 				}
-
-				// console.log(this.recentIDs.size)
 
 				return selectedStory
 			}
@@ -715,7 +645,7 @@ if (!lang) {
 				const readArticle = this.readArticles.find((article) => article.slug === descriptor.slugs[lang])
 				// console.log(readArticle)
 				// return new Card(descriptor, readArticle?.timestamp || 'never')
-				return new Card(descriptor, readArticle ? readArticle.timestamp : 'never');
+				return new Card(descriptor, readArticle ? readArticle.timestamp : 'never')
 			}
 		}
 	}
@@ -786,8 +716,50 @@ if (!lang) {
 		@media screen and (max-width: 640px) {
 			border: 2px solid #666;
 		}
+	}
 
-		&.highlighted {
+	#js-grid.filter--read .card:not([data-lastread='never']) {
+		opacity: 0.2;
+	}
+
+	#js-grid.filter--read .card:not([data-lastread='never']),
+	#js-grid.filter--read .card:not([data-lastread='never']):hover,
+	#js-grid.filter--read .card:not([data-lastread='never']):hover * {
+		cursor: move;
+	}
+
+	.card {
+		.shader {
+			opacity: 0.5;
+			transition: all 0.5s;
+			will-change: opacity;
+		}
+	}
+
+	body:not(.is-dragging) {
+		.card:hover {
+			opacity: 1;
+			border: 3px solid white;
+
+			h2 {
+				text-shadow: inherit;
+				background: transparent;
+			}
+
+			@media screen and (max-width: 640px) {
+				border: 2px solid #444;
+			}
+
+			.shader {
+				opacity: 0;
+
+				@media screen and (max-width: 640px) {
+					// opacity: 0;
+				}
+			}
+		}
+
+    .card.highlighted {
 			&:not(:hover) {
 				border-color: #9f3e52;
 			}
@@ -809,46 +781,6 @@ if (!lang) {
 				@media screen and (max-width: 640px) {
 					border-color: #9f3e52;
 				}
-			}
-		}
-	}
-
-	#js-grid.filter--read .card:not([data-lastread='never']) {
-		opacity: 0.2;
-	}
-
-	#js-grid.filter--read .card:not([data-lastread='never']),
-	#js-grid.filter--read .card:not([data-lastread='never']):hover,
-	#js-grid.filter--read .card:not([data-lastread='never']):hover * {
-		cursor: move;
-	}
-
-	.card {
-		.shader {
-			opacity: 0.5;
-			transition: opacity 0.5s;
-			will-change: opacity;
-		}
-	}
-
-	.card:hover {
-		opacity: 1;
-		border: 3px solid white;
-
-		h2 {
-			text-shadow: inherit;
-			background: transparent;
-		}
-
-		@media screen and (max-width: 640px) {
-			border: 2px solid #444;
-		}
-
-		.shader {
-			opacity: 0;
-
-			@media screen and (max-width: 640px) {
-				// opacity: 0;
 			}
 		}
 	}

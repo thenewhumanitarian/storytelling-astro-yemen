@@ -523,7 +523,7 @@ if (!lang) {
 		onClick(ev) {
 			ev.preventDefault()
 
-      console.log(ev)
+			// console.log(ev)
 
 			// Check if #grid is hidden and if yes return
 			if (document.getElementById('grid').style.display === 'none') return
@@ -566,11 +566,11 @@ if (!lang) {
 			let yDelta = ev.clientY - this.lastY
 
 			let vel = Math.abs(xDelta * yDelta)
-			if (vel > 20) {
+			if (vel > 50) {
 				let v = { x: xDelta * 0, y: yDelta * 0 }
-				// if (window.innerWidth < 500 || isMobileDevice()) {
-				// 	v = { x: xDelta * 1, y: yDelta * 1 } // Make it snappier on mobile
-				// }
+				if (window.innerWidth < 500 || isMobileDevice()) {
+					v = { x: xDelta * 1, y: yDelta * 1 } // Make it snappier on mobile
+				}
 				if (this.anime) this.anime.pause()
 				this.anime = anime({
 					targets: v,
