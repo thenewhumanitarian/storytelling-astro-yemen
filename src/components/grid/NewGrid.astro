@@ -153,22 +153,22 @@ if (!lang) {
 
 				let xDelta = e.clientX - this.lastX
 				let yDelta = e.clientY - this.lastY
-				let velocity = Math.abs(xDelta * yDelta)
+				// let velocity = Math.abs(xDelta * yDelta)
 
-				if (velocity > 3000) {
-					// console.log('Velocity > 3000')
-					this.dragging = false
+				// if (velocity > 3000) {
+				// 	// console.log('Velocity > 3000')
+				// 	this.dragging = false
 
-					let v = { x: xDelta * 0.5, y: yDelta * 0.5 }
-					if (this.tween) this.tween.kill()
-					this.tween = TweenMax.to(v, window.innerWidth > 640 ? 0.25 : 0, {
-						x: 0,
-						y: 0,
-						onUpdate: () => {
-							this.onDragCallback(v.x, v.y)
-						},
-					})
-				}
+				// 	let v = { x: xDelta * 0.5, y: yDelta * 0.5 }
+				// 	if (this.tween) this.tween.kill()
+				// 	this.tween = TweenMax.to(v, window.innerWidth > 640 ? 0.25 : 0, {
+				// 		x: 0,
+				// 		y: 0,
+				// 		onUpdate: () => {
+				// 			this.onDragCallback(v.x, v.y)
+				// 		},
+				// 	})
+				// }
 
 				this.onDragCallback(xDelta, yDelta)
 
