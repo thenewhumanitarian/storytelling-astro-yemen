@@ -155,8 +155,8 @@ if (!lang) {
 				let yDelta = e.clientY - this.lastY
 				let velocity = Math.abs(xDelta * yDelta)
 
-				if (velocity > 1000) {
-					// console.log('Velocity > 1000')
+				if (velocity > 3000) {
+					// console.log('Velocity > 3000')
 					this.dragging = false
 
 					let v = { x: xDelta * 0.5, y: yDelta * 0.5 }

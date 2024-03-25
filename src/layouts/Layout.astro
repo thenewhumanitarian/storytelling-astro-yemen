@@ -76,14 +76,14 @@ const isProd = import.meta.env.PROD
 				if (browser.name === 'Safari' && +browser.version < 12) {
 					console.log('Safari version is less than 12')
 					redirectToLegacy = true
-				} else if (browser.name === 'Firefox' && +browser.version < 70) {
-					console.log('Firefox version smaller than 70')
+				} else if (browser.name === 'Firefox' && +browser.version < 60) {
+					console.log('Firefox version smaller than 60')
 					redirectToLegacy = true
-				} else if (browser.name === 'Chrome' && +browser.version < 70) {
-					console.log('Chrome version smaller than 90')
+				} else if (browser.name === 'Chrome' && +browser.version < 65) {
+					console.log('Chrome version smaller than 65')
 					redirectToLegacy = true
-				} else if (browser.name === 'Edge' && +browser.version < 70) {
-					console.log('Edge version smaller than 88')
+				} else if (browser.name === 'Edge' && +browser.version < 60) {
+					console.log('Edge version smaller than 60')
 					redirectToLegacy = true
 				} else if (browser.name === 'Opera' && +browser.version < 70) {
 					console.log('Opera version smaller than 90')

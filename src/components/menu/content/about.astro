@@ -7,7 +7,7 @@ const { lang } = Astro.props
 {
 	lang === 'en' ? (
 		<div class='text-white overflow-x-hidden'>
-			<p class='text-white font-bold text-xl' style='margin-top: 0;'>
+			<p class='text-white font-semibold text-xl' style='margin-top: 0;'>
 				How did The Yemen Listening Project collect stories?
 			</p>
 			<p class='text-white'>
@@ -15,27 +15,27 @@ const { lang } = Astro.props
 				submissions came in, we asked local journalists to gather stories from some parts of Yemen that were not yet well represented in the
 				submissions.
 			</p>
-			<p class='text-white font-bold text-xl'>Why wasn’t every story published?</p>
+			<p class='text-white font-semibold text-xl'>Why wasn’t every story published?</p>
 			<p class='text-white'>Unfortunately, we did not have the space to publish every story, but we did read every entry.</p>
-			<p class='text-white font-bold text-xl'>Were the stories edited?</p>
+			<p class='text-white font-semibold text-xl'>Were the stories edited?</p>
 			<p class='text-white'>
 				Stories were edited for style, length, and clarity. We did add a little context to some stories to help readers who are not familiar with
 				Yemen’s war. Translations between languages are not always word for word.
 			</p>
-			<p class='text-white font-bold text-xl'>What’s next for The Yemen Listening Project?</p>
+			<p class='text-white font-semibold text-xl'>What’s next for The Yemen Listening Project?</p>
 			<p>
 				The Yemen Listening Project will be hosting online and in-person events about the project, about Yemen, and about inclusive journalism.{' '}
-				<a class='font-bold hover:underline signup-link' href='#'>
+				<a class='font-semibold hover:underline signup-link' href='#'>
 					Click here to receive updates.
 				</a>
 			</p>
 			<div class='signup-form'>
 				<SignUpForm />
 			</div>
-			<p class='text-white font-bold text-xl'>I have an idea for my own listening project. Who should I contact?</p>
+			<p class='text-white font-semibold text-xl'>I have an idea for my own listening project. Who should I contact?</p>
 			Email{' '}
 			<a
-				class='break-words font-bold hover:underline'
+				class='break-words font-semibold hover:underline'
 				href='mailto:yemenlistening@thenewhumanitarian.org?subject=Listening project idea'
 				rel='noopener noreferrer'
 			>
@@ -43,7 +43,7 @@ const { lang } = Astro.props
 			</a>{' '}
 			with the subject line “listening project idea”. If we have enough takers, we will invite you to future workshops about what we have learned in the
 			process of making The Yemen Listening Project, and help connect you with other people who are interested in the same things.
-			<p class='text-white font-bold text-xl'>Where can I learn more about Yemen?</p>
+			<p class='text-white font-semibold text-xl'>Where can I learn more about Yemen?</p>
 			Houthi rebels, officially called Ansar Allah, took over Yemen’s capital city of Sana’a in late 2014. In March 2015, a Saudi Arabia and United Arab
 			Emirates-led coalition began bombing Houthi-controlled parts of the country, as part of a military campaign to support Yemen’s internationally
 			recognised government.
@@ -53,12 +53,12 @@ const { lang } = Astro.props
 					href='https://www.thenewhumanitarian.org/middle-east-and-north-africa/yemen'
 					rel='noopener noreferrer'
 					target='_blank'
-					class='font-bold hover:underline'
+					class='font-semibold hover:underline'
 				>
 					here.
 				</a>
 			</p>
-			<p class='text-white font-bold text-xl'>What is The New Humanitarian?</p>
+			<p class='text-white font-semibold text-xl'>What is The New Humanitarian?</p>
 			<p class='text-white'>
 				The New Humanitarian is a nonprofit newsroom that puts quality, independent journalism at the service of the millions of people affected by
 				humanitarian crises around the world. We report from the heart of conflicts and disasters to inform prevention and response.
@@ -67,7 +67,7 @@ const { lang } = Astro.props
 	) : (
 		<>
 			<div class='text-white overflow-x-hidden'>
-				<p class='text-white font-bold text-xl' style='margin-top: 0;'>
+				<p class='text-white font-semibold text-xl' style='margin-top: 0;'>
 					كيف جمع مشروع الاستماع إلى اليَمنيّين تلك القصص؟
 				</p>
 				<p class='text-white'>
@@ -75,17 +75,17 @@ const { lang } = Astro.props
 					مُخصص للتواصل عبر واتساب. وبمجرّد وصول المُشاركات، طلبنا من الصحفيين المحليين جمع القصص من مختلف أنحاء اليمن التي لم يتم تمثيلها بشكلٍ جيد
 					حتى الآن في المشاركات.{' '}
 				</p>
-				<p class='text-white font-bold text-xl'>لماذا لم يتم نشر جميع القصص؟</p>
+				<p class='text-white font-semibold text-xl'>لماذا لم يتم نشر جميع القصص؟</p>
 				<p class='text-white'>لسوء الحظ، لم تتوفر لدينا المساحة الكافية لنشر جميع القصص، لكننا قرأنا كل قصة وردت إلينا. </p>
-				<p class='text-white font-bold text-xl'>هل تم تحرير القصص؟</p>
+				<p class='text-white font-semibold text-xl'>هل تم تحرير القصص؟</p>
 				<p class='text-white'>
 					تم تحرير القصص من حيث الأسلوب والطول والوضوح، كما أضفنا القليل من السياق إلى بعض القصص لمُساعدة القرّاء الذين لا يعرفون الكثير عن حرب اليمن،
 					ولم تكن الترجمات بين اللغات ترجمة حرفية دائمًا.
 				</p>
-				<p class='text-white font-bold text-xl'>ما الذي سيقوم به مشروع الاستماع إلى اليَمنيّين في المرحلة القادمة؟</p>
+				<p class='text-white font-semibold text-xl'>ما الذي سيقوم به مشروع الاستماع إلى اليَمنيّين في المرحلة القادمة؟</p>
 				<p class='text-white'>
 					سيستضيف المشروع فعاليات عبر الإنترنت وفعاليات حضورية تتمحور حول المشروع واليمن والصحافة الشاملة.{' '}
-					<a class='font-bold hover:underline signup-link' href='#'>
+					<a class='font-semibold hover:underline signup-link' href='#'>
 						اضغط هنا
 					</a>{' '}
 					لتلقي المستجدات.
@@ -93,11 +93,11 @@ const { lang } = Astro.props
 				<div class='signup-form'>
 					<SignUpForm />
 				</div>
-				<p class='text-white font-bold text-xl'>لدي فكرة لمشروع استماع خاص بي. مع من يجب أن أتواصل؟</p>
+				<p class='text-white font-semibold text-xl'>لدي فكرة لمشروع استماع خاص بي. مع من يجب أن أتواصل؟</p>
 				<p class='text-white' />
 				يمكنك التواصل مع البريد الإلكتروني{' '}
 				<a
-					class='break-words text-white font-bold hover:underline'
+					class='break-words text-white font-semibold hover:underline'
 					href='mailto:yemenlistening@thenewhumanitarian.org?subject=Listening project idea'
 					target='_blank'
 					rel='noopener noreferrer'
@@ -107,7 +107,7 @@ const { lang } = Astro.props
 				واستخدام عنوان الرسالة التالي: «فكرة مشروع استماع». إذا كان لدينا ما يكفي من المتقدّمين، سندعوك لحضور وُرَش عمل مستقبلية حول ما تعلمناه في عملية
 				إنشاء مَشروع الاستماع إلى اليَمنيّين، وسنساعدك على التواصل مع الأشخاص الآخرين المهتمّين بنفس الأفكار.{' '}
 			</div>
-			<p class='text-white font-bold text-xl'>أين يمكنني معرفة المزيد حول اليمن؟</p>
+			<p class='text-white font-semibold text-xl'>أين يمكنني معرفة المزيد حول اليمن؟</p>
 			<p class='text-white'>
 				سيطر المتمردون الحوثيون، الذين يُطلق عليهم رسميًا اسم جماعة «أنصار الله»، على العاصمة اليمنية صنعاء في أواخر عام 2014. وفي مارس (آذار) من عام
 				2015، بدأ تحالف بقيادة المملكة العربية السعودية والإمارات العربية المتحدة في قصف الأجزاء التي يسيطر عليها الحوثيون في البلاد، كجزءٍ من حملة
@@ -117,7 +117,7 @@ const { lang } = Astro.props
 				يمكنك العثور على جميع مراحل تغطية وكالة «ذا نيو هيومانيترين» للحرب والأزمة الإنسانية في اليمن{' '}
 				<a target="_blank" rel="noopener noreferrer" href='https://www.thenewhumanitarian.org/middle-east-and-north-africa/yemen'>هنا</a>.
 			</p>
-			<p class='text-white font-bold text-xl'>ما هي وكالة «ذا نيو هيومانيترين»؟</p>
+			<p class='text-white font-semibold text-xl'>ما هي وكالة «ذا نيو هيومانيترين»؟</p>
 			<p class='text-white'>
 				«ذا نيو هيومانيترين» هي وكالة إخبارية غير ربحية تسخّر الصحافة عالية الجودة والمستقلة في خدمة ملايين الأشخاص المتضررين من الأزمات الإنسانية حول
 				العالم. نحن ننقل الأخبار من قلب الأحداث والصراعات والكوارث لنشر الوعي بشأن التدابير الوقائية والاستجابة المناسبة.

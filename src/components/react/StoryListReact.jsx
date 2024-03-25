@@ -146,6 +146,8 @@ const StoryListReact = ({ stories, lang = 'en' }) => {
           </>
         ))}
       </div>
+
+      {/* <p>Can't see list? Click here.</p> */}
     </div>
   );
 };
