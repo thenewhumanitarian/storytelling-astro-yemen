@@ -202,8 +202,10 @@ if (!lang) {
 			// Calculate the duration of the tap
 			const touchDuration = Date.now() - this.touchStartTime
 
+      const maxTouchDuration = window.innerWidth > 640 ? 150 : 100
+
 			// Check duration and act accordingly
-			if (touchDuration < (window.innerWidth > 640 ? 150 : 100)) {
+			if (touchDuration < maxTouchDuration) {
         console.log(touchDuration)
 
 				// This checks if the touch lasted less than 100ms
