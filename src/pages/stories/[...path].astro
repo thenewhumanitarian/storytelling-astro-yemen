@@ -386,7 +386,7 @@ const readInOtherLanguage = translations.readIn[lang]
 	document.addEventListener('DOMContentLoaded', () => {
 		// Keypress events for arrow left and arrow right to navigate to previous and next stories
 		document.addEventListener('keydown', (e) => {
-      // Add event listeners for using arrow keys to navigate left and right for changing stories
+			// Add event listeners for using arrow keys to navigate left and right for changing stories
 
 			if (e.key === 'ArrowLeft') {
 				// console.log('Arrow left')
@@ -450,17 +450,20 @@ const readInOtherLanguage = translations.readIn[lang]
 	function changeOverviewButtonHref() {
 		const overviewButtonTop = document.getElementById('overview--button--top')
 		const overviewButtonBottom = document.getElementById('overview--button--bottom')
+		const headerLogo = document.getElementById('header-button')
 		const currentView = localStorage.getItem('currentView')
+		console.log(currentView)
 
-		overviewButtonTop.href = `/${lang}/${currentView}`
-		if (overviewButtonBottom) overviewButtonBottom.href = `/${lang}/${currentView}`
+		overviewButtonTop.setAttribute('href', `/${lang}/${currentView}`)
+		if (headerLogo) headerLogo.setAttribute('href', `/${lang}/${currentView}`)
+		if (overviewButtonBottom) overviewButtonBottom.setAttribute('href', `/${lang}/${currentView}`)
 	}
 	document.addEventListener('DOMContentLoaded', changeOverviewButtonHref)
 
 	// Function to change href attribute of button id="read-in-other-language" depending on lang, use EN and AR slug and lang variables
 	function changeReadInOtherLanguageHref() {
 		const readInOtherLanguageButton = document.getElementById('read-in-other-language')
-		readInOtherLanguageButton.href = lang === 'en' ? `/stories/ar/${slugAR}` : `/stories/en/${slugEN}`
+		readInOtherLanguageButton.setAttribute('href', lang === 'en' ? `/stories/ar/${slugAR}` : `/stories/en/${slugEN}`)
 	}
 	document.addEventListener('DOMContentLoaded', changeReadInOtherLanguageHref)
 

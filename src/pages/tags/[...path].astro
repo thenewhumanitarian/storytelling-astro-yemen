@@ -79,7 +79,7 @@ const languageButtons = {
 		switchViewButtons={false}
 		dir={lang === 'ar' ? 'rtl' : 'ltr'}
 	>
-		<SEO slot='seo' title={`The Yemen Listening Project | ${currentTag}`} description={'Where Yemenis talk, and the world listens.'} />
+		<SEO slot='seo' title={`The Yemen Listening Project | ${currentTag}`} description={'Where Yemenis talk, and the world listens'} />
 		<StoryWrapper stories={filteredStories} view='tags' tags={uniqueTags}>
 			<NavButtons
 				button='overview'
@@ -134,10 +134,12 @@ const languageButtons = {
 	function changeOverviewButtonHref() {
 		const overviewButtonTop = document.getElementById('overview--button--top')
 		const overviewButtonBottom = document.getElementById('overview--button--bottom')
+		const headerLogo = document.getElementById('header-button')
 		const currentView = localStorage.getItem('currentView')
 
-		overviewButtonTop.href = `/${lang}/${currentView}`
-    if (overviewButtonBottom) overviewButtonBottom.href = `/${lang}/${currentView}`
+		overviewButtonTop.setAttribute('href', `/${lang}/${currentView}`)
+		if (overviewButtonBottom) overviewButtonBottom.setAttribute('href', `/${lang}/${currentView}`)
+		if (headerLogo) headerLogo.setAttribute('href', `/${lang}/${currentView}`)
 	}
 
 	document.addEventListener('DOMContentLoaded', changeOverviewButtonHref)
@@ -174,7 +176,7 @@ const languageButtons = {
 
 		setSize() {
 			// const size = Math.random() * 3 + 1 // Random size between 1px and 4px
-      const size = Math.random() * 1.5 + 1
+			const size = Math.random() * 1.5 + 1
 			this.element.style.width = `${size}px`
 			this.element.style.height = `${size}px`
 		}
