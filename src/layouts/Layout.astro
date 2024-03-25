@@ -42,7 +42,7 @@ const isProd = import.meta.env.PROD
 		<script>
 			// Check current page URL contains word legacy
 			if (window.location.href.indexOf('legacy') <= 0) {
-				console.log('Detecting browser...')
+				// console.log('Detecting browser...')
 
 				var browser = (function () {
 					var ua = navigator.userAgent,
@@ -70,7 +70,7 @@ const isProd = import.meta.env.PROD
 					return { name: M[0], version: M[1] }
 				})()
 
-				console.log(browser)
+				// console.log(browser)
 				let redirectToLegacy = false
 
 				if (browser.name === 'Safari' && +browser.version < 12) {
