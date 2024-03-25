@@ -37,7 +37,7 @@ const fullUrl = `${baseUrl}${pathname}`
 ---
 
 <!-- TITLE -->
-<title>{title || 'The New Humanitarian'}</title>
+<title>{`The New Humanitarian | ${title}` || 'The New Humanitarian'}</title>
 
 <!-- CANONICAL URL -->
 <link rel='canonical' href={url || fullUrl || 'https://yemenlisteningproject.thenewhumanitarian.org/en'} />
@@ -77,11 +77,11 @@ const fullUrl = `${baseUrl}${pathname}`
 {siteName && <meta name='pagename' content={siteName} />}
 
 <!-- MAIN GRAPH TAGS -->
-<meta property='og:title' content={title || 'TNH| Yemen Listening Project'} />
-<meta property='og:type' content='website' />
+<meta property='og:title' content={title || 'The New Humanitarian | The Yemen Listening Project'} />
 <meta property='og:url' content={url || fullUrl || 'https://yemenlisteningproject.thenewhumanitarian.org/en'} />
 <meta property='og:image' content={imageUrl || 'https://yemenlisteningproject.thenewhumanitarian.org/images/share-teaser.jpg'} />
-<meta property='og:site_name' content={title || 'TNH| Yemen Listening Project'} />
+<meta property='og:site_name' content='The New Humanitarian' />
+<meta property='og:type' content='Article' />
 <meta property='og:description' content={description} />
 
 <!-- OPTIONAL OPEN GRAPH TAGS -->
@@ -96,6 +96,11 @@ const fullUrl = `${baseUrl}${pathname}`
 <!-- TWITTER CARD TAGS -->
 <meta name='twitter:card' content='summary_large_image' />
 <meta name='twitter:site' content='@newhumanitarian' />
-<meta name='twitter:title' content={title || 'TNH| Yemen Listening Project'} />
+<meta name='twitter:title' content={title || 'The New Humanitarian'} />
 <meta name='twitter:description' content={description} />
 <meta name='twitter:image' content={imageUrl || 'https://yemenlisteningproject.thenewhumanitarian.org/images/share-teaser.jpg'} />
+
+<!-- TAGS FROM DRUPAL -->
+<meta property='og:updated_time' content='2024-03-25T08:27:38+00:00' />
+<meta property='article:published_time' content='2024-03-25T10:00:00+00:00' />
+<meta property='article:modified_time' content='2024-03-25T08:27:38+00:00' />
