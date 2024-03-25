@@ -95,7 +95,7 @@ if (!lang) {
 		if (window.innerWidth < 1280) {
 			rows = 10
 			cols = 10
-			targetSize = 280
+			targetSize = 250
 			margin = 10
 		}
 
@@ -722,6 +722,10 @@ if (!lang) {
 			transition: all 0.5s;
 			will-change: opacity;
 		}
+
+    h2 {
+      pointer-events: none;
+    }
 	}
 
 	body:not(.is-dragging) {
