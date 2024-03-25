@@ -179,9 +179,10 @@ if (!lang) {
 
 			this.lastX = e.clientX
 			this.lastY = e.clientY
+
 			this.dragging = true
 
-			console.log(this.lastX, this.lastY)
+			// console.log(this.lastX, this.lastY)
 
 			// Record touch start time
 			this.touchStartTime = Date.now()
@@ -441,7 +442,7 @@ if (!lang) {
 			const shiftAmount = cardWidth * randomFraction
 			// Shift grid elements to the left by the calculated shift amount
 			this.offsetX -= shiftAmount
-      // this.lastX -= shiftAmount
+			// this.lastX -= shiftAmount
 		}
 
 		getGalleryDescriptor(index) {
