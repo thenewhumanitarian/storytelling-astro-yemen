@@ -161,7 +161,7 @@ if (!lang) {
 
 					let v = { x: xDelta * 0.5, y: yDelta * 0.5 }
 					if (this.tween) this.tween.kill()
-					this.tween = TweenMax.to(v, 0.55, {
+					this.tween = TweenMax.to(v, 0.5, {
 						x: 0,
 						y: 0,
 						onUpdate: () => {
@@ -179,6 +179,7 @@ if (!lang) {
 
 		onStart(e) {
 			e = e.type == 'touchstart' ? e.touches[0] : e
+
 			this.lastX = e.clientX
 			this.lastY = e.clientY
 			this.dragging = true
@@ -188,9 +189,6 @@ if (!lang) {
 
 			// Add .is-dragging to body to prevent text selection
 			document.body.classList.add('is-dragging')
-
-			// Set setting overscroll-behavior: none; to html
-			// document.documentElement.style.overscrollBehavior = 'none'
 		}
 
 		onEnd(e) {
@@ -200,9 +198,6 @@ if (!lang) {
 
 			// Remove is-dragging from body
 			document.body.classList.remove('is-dragging')
-
-			// Set setting overscroll-behavior: unset;
-			// document.documentElement.style.overscrollBehavior = 'auto'
 
 			// Calculate the duration of the tap
 			const touchDuration = Date.now() - this.touchStartTime
@@ -362,7 +357,7 @@ if (!lang) {
 			if (!this.lastRead) {
 				// Don't bother with this if it's not on "unread only" filter
 			} else {
-				debounce(this.rootElement.setAttribute('data-lastread', this.lastRead), 250)
+				debounce(this.rootElement.setAttribute('data-lastread', this.lastRead), 500)
 			}
 
 			// Replace link data attribute
@@ -426,15 +421,13 @@ if (!lang) {
 					function (event) {
 						this.onMouseWheel(event)
 					}.bind(this),
-					75,
+					100,
 				),
 			)
 		}
 
 		adjustInitialOffsetForMobile() {
 			// Define your mobile breakpoint
-			// const mobileBreakpoint = 640
-			// if (window.innerWidth < mobileBreakpoint) {
 			// Assuming calculateGridDimensions().cardSize gives you the card width
 			const cardWidth = calculateGridDimensions().cardSize
 			// Generate a random fraction between 1/2 and 1/3
@@ -453,7 +446,7 @@ if (!lang) {
 
 		onDragEnd() {
 			// this.DOMElement.classList.remove( "hover-enabled" );
-			this.DOMElement.classList.add('hover-enabled')
+			// this.DOMElement.classList.add('hover-enabled')
 		}
 
 		onDrag(deltaX, deltaY) {
@@ -477,16 +470,16 @@ if (!lang) {
 
 			switch (keyCode) {
 				case 37: // Left arrow key
-					this.offsetX += calculateGridDimensions().cardSize
+					this.offsetX += calculateGridDimensions().cardSize / 4
 					break
 				case 38: // Up arrow key
-					this.offsetY += calculateGridDimensions().cardSize
+					this.offsetY += calculateGridDimensions().cardSize / 4
 					break
 				case 39: // Right arrow key
-					this.offsetX -= calculateGridDimensions().cardSize
+					this.offsetX -= calculateGridDimensions().cardSize / 4
 					break
 				case 40: // Down arrow key
-					this.offsetY -= calculateGridDimensions().cardSize
+					this.offsetY -= calculateGridDimensions().cardSize / 4
 					break
 				default:
 					return // Exit function for other keys
@@ -507,9 +500,6 @@ if (!lang) {
 
 			// Update the grid
 			this.updateGrid()
-
-			// Prevent default scrolling behavior of the page
-			// event.preventDefault()
 		}
 
 		updateViewColRows() {
@@ -655,7 +645,7 @@ if (!lang) {
 	grid.init()
 
 	// Adjust card size on resize
-	window.addEventListener('resize', debounce(adjustAndApplyCardSize, 250))
+	window.addEventListener('resize', throttle(adjustAndApplyCardSize, 250))
 </script>
 
 <style is:global lang='scss'>
@@ -706,8 +696,6 @@ if (!lang) {
 		opacity: 1;
 		overflow: hidden;
 		position: absolute;
-		// aspect-ratio: 1/1;
-
 		border: 3px solid rgba(255, 255, 255, 0.1);
 		opacity: 1;
 		transition: opacity 0.5s;
@@ -759,7 +747,7 @@ if (!lang) {
 			}
 		}
 
-    .card.highlighted {
+		.card.highlighted {
 			&:not(:hover) {
 				border-color: #9f3e52;
 			}
