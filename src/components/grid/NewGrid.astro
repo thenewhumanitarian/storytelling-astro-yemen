@@ -153,22 +153,19 @@ if (!lang) {
 
 				let xDelta = e.clientX - this.lastX
 				let yDelta = e.clientY - this.lastY
-				// let velocity = Math.abs(xDelta * yDelta)
 
-				// if (velocity > 3000) {
-				// 	// console.log('Velocity > 3000')
-				// 	this.dragging = false
-
-				// 	let v = { x: xDelta * 0.5, y: yDelta * 0.5 }
-				// 	if (this.tween) this.tween.kill()
-				// 	this.tween = TweenMax.to(v, window.innerWidth > 640 ? 0.25 : 0, {
-				// 		x: 0,
-				// 		y: 0,
-				// 		onUpdate: () => {
-				// 			this.onDragCallback(v.x, v.y)
-				// 		},
-				// 	})
-				// }
+				// Example of using TweenMax to smoothly transition an element
+				// based on the drag. This code assumes you are applying a visual effect
+				// rather than moving the element with the mouse.
+				TweenMax.to(this.DOMElement, 0.5, {
+					x: '+=' + xDelta,
+					y: '+=' + yDelta,
+					ease: Power1.easeOut,
+					onUpdate: () => {
+						// Optionally, you can perform actions on update
+						// For moving the element in real-time, it's better to apply the position directly.
+					},
+				})
 
 				this.onDragCallback(xDelta, yDelta)
 
@@ -183,6 +180,8 @@ if (!lang) {
 			this.lastX = e.clientX
 			this.lastY = e.clientY
 			this.dragging = true
+
+			console.log(this.lastX, this.lastY)
 
 			// Record touch start time
 			this.touchStartTime = Date.now()
@@ -202,11 +201,11 @@ if (!lang) {
 			// Calculate the duration of the tap
 			const touchDuration = Date.now() - this.touchStartTime
 
-      const maxTouchDuration = window.innerWidth > 640 ? 150 : 100
+			const maxTouchDuration = window.innerWidth > 640 ? 150 : 100
 
 			// Check duration and act accordingly
 			if (touchDuration < maxTouchDuration) {
-        console.log(touchDuration)
+				// console.log(touchDuration)
 
 				// This checks if the touch lasted less than 100ms
 				const href = e.target.getAttribute('data-href')
@@ -411,7 +410,7 @@ if (!lang) {
 		init() {
 			window.addEventListener('resize', debounce(this.onResize.bind(this)), 250)
 			this.onResize()
-			this.adjustInitialOffsetForMobile()
+			// this.adjustInitialXOffset()
 			let d = new SimpleDrag(this.DOMElement, this.onDrag.bind(this))
 
 			if (window.innerWidth > 500) {
@@ -430,7 +429,9 @@ if (!lang) {
 			)
 		}
 
-		adjustInitialOffsetForMobile() {
+		adjustInitialXOffset() {
+			if (this.dragging) return
+
 			// Define your mobile breakpoint
 			// Assuming calculateGridDimensions().cardSize gives you the card width
 			const cardWidth = calculateGridDimensions().cardSize
@@ -440,7 +441,7 @@ if (!lang) {
 			const shiftAmount = cardWidth * randomFraction
 			// Shift grid elements to the left by the calculated shift amount
 			this.offsetX -= shiftAmount
-			// }
+      // this.lastX -= shiftAmount
 		}
 
 		getGalleryDescriptor(index) {
@@ -727,9 +728,9 @@ if (!lang) {
 			will-change: opacity;
 		}
 
-    h2 {
-      pointer-events: none;
-    }
+		h2 {
+			pointer-events: none;
+		}
 	}
 
 	body:not(.is-dragging) {
