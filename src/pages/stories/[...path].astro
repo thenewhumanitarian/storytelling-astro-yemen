@@ -117,10 +117,10 @@ const readInOtherLanguage = translations.readIn[lang]
 	dark
 	title='The Yemen Listening Project'
 	header={true}
-	languageButtons={{ 
-    ar: legacy ? `/stories/ar/legacy/${story.slugs.ar}` : `/stories/ar/${story.slugs.ar}`, 
-    en: legacy ? `/stories/en/legacy/${story.slugs.en}` : `/stories/en/${story.slugs.en}`
-  }}
+	languageButtons={{
+		ar: legacy ? `/stories/ar/legacy/${story.slugs.ar}` : `/stories/ar/${story.slugs.ar}`,
+		en: legacy ? `/stories/en/legacy/${story.slugs.en}` : `/stories/en/${story.slugs.en}`,
+	}}
 	switchViewButtons={false}
 	overflow={'always'}
 	dir={dir}
@@ -403,9 +403,10 @@ const readInOtherLanguage = translations.readIn[lang]
 <script is:inline src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/204379/hammer.min.js'></script>
 
 <script define:vars={{ translations, lang, slugEN: story.slugs.en, slugAR: story.slugs.ar, prevStorySlug, nextStorySlug, legacy }} is:inline>
+	let readArticles = JSON.parse(localStorage.getItem('readArticles')) || []
+
 	if (!legacy) {
 		// Retrieve the read articles array from localStorage or initialize a new one
-		let readArticles = JSON.parse(localStorage.getItem('readArticles')) || []
 
 		document.addEventListener('DOMContentLoaded', () => {
 			// Keypress events for arrow left and arrow right to navigate to previous and next stories

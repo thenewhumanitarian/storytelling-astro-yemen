@@ -234,7 +234,7 @@ const otherLanguageLink = lang === 'ar' ? '/legacy/en' : '/legacy/ar'
 
 <script define:vars={{ view }}>
 	document.addEventListener('DOMContentLoaded', () => {
-		if (view === 'tags') return
+		if (view === 'tags' || view === 'legacy') return
 		localStorage.setItem('currentView', view)
 	})
 </script>
