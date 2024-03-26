@@ -32,22 +32,6 @@ if (!lang) {
 	</div>
 </a>
 
-<script define:vars={{ lang, story }} is:inline>
-	// Select the article element
-	const articleEl = document.querySelector(`#story-tile--${story.id}`)
-
-	// Check if article was read before and write date of last read if that's the case
-	let readArticles = JSON.parse(localStorage.getItem('readArticles')) || []
-	let readArticle = readArticles.find((article) => article.slug === story.slugs[lang])
-	if (readArticle) {
-		// If the current article has been read before, set the data-lastread attribute with the timestamp
-		articleEl.setAttribute('data-lastread', readArticle.timestamp)
-	} else {
-		// If the current article has not been read, set data-lastread to a default value or omit this part altogether
-		articleEl.setAttribute('data-lastread', 'never')
-	}
-</script>
-
 <style>
 	.border-white {
 		border-color: white !important;

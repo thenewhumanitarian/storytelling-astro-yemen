@@ -2,8 +2,8 @@
 import Layout from '@layouts/Layout.astro'
 import StoryWrapper from '@components/StoryWrapper.astro'
 import SEO from '@components/SEO.astro'
-import NavButtons from '@components/buttons/NavButtons.astro'
 import stories from '@data/all_stories.json'
+// import NavButtons from '@components/buttons/NavButtons.astro'
 
 // Read path parameters for language and slug
 const { path } = Astro.params
@@ -64,12 +64,12 @@ const { allStories } = Astro.props
 </script>
 
 <style is:inline>
-  header {
-    background: black;
-    z-index: 9999;
-  }
+	header {
+		background: black;
+		z-index: 9999;
+	}
 
-  .bg-black {
-    background-color: black !important;
-  }
+	.bg-black {
+		background-color: black !important;
+	}
 </style>
