@@ -11,7 +11,14 @@ import SEO from '@components/SEO.astro'
 			<div class='max-w-lg w-full'>
 				<img src='/images/legacy-logo.png' width='100%' />
 			</div>
-			<h1 class='mt-8 text-center'>This website does not support your browser.<br />إنّ الموقع الذي تحاول الوصول إليه لا يدعمه هذا المتصفّح.</h1>
+			<div>
+				<h1 class='mt-8'>This website does not support your browser.</h1>
+				<p class='m-0'><a href='/legacy/en'>Click here to see a minified version.</a></p>
+			</div>
+			<div>
+				<h1 class='mt-3'>إنّ الموقع الذي تحاول الوصول إليه لا يدعمه هذا المتصفّح.</h1>
+				<p class='m-0'><a href='/legacy/en'>Click here to see a minified version.</a></p>
+			</div>
 		</div>
 	</div>
 </Layout>
@@ -20,11 +27,26 @@ import SEO from '@components/SEO.astro'
 	h1 {
 		font-size: 2rem;
 		color: white;
+		text-align: center;
 	}
 
+	p {
+		color: white;
+		font-size: 1.8rem;
+		text-align: center;
+	}
 	@media screen and (max-width: 640px) {
 		h1 {
+			font-size: 1rem;
+		}
+
+		p {
 			font-size: 0.9rem;
+		}
+
+		a {
+			text-decoration: underline;
+      color: white;
 		}
 	}
 </style>

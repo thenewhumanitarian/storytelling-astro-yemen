@@ -1,0 +1,55 @@
+---
+const { story } = Astro.props
+
+let { lang } = Astro.params
+if (!lang) {
+	// Read path parameters for language and slug
+	const { path } = Astro.params
+
+	const pathParams = path?.toString().split('/')
+	lang = pathParams?.[0] || 'en'
+}
+---
+
+<a class='z-40 inline' href={`/stories/${lang}/legacy/${story.slugs[lang]}`} id={`story-tile--${story.id}`}>
+	<div
+		class={`flex group border-t sm:border-2 border-white ${story.highlighted ? 'w-full pt-6 pb-5 sm:py-0 bg-black gap-x-2' : 'bg-black flex-row-reverse pb-0 pt-3 lg:max-w-3xl mx-auto'} px-3 sm:pt-3 w-full hover:bg-zinc-800 hover:border-white`}
+	>
+		<div class={`relative mb-3 ${story.highlighted ? 'w-56 lg:w-96 pt-32 lg:pt-64' : 'w-32 lg:w-56 pt-32 lg:pt-40'} overflow-hidden self-center`}>
+			<img src={`${story.storyImage.main}`} alt={story.story[lang].title} class='absolute top-0 left-0 w-full h-full object-cover' />
+		</div>
+		<div class={`flex flex-col w-full px-3 ${story.highlighted ? 'pt-1 pb-0 bg-black group-hover:bg-zinc-800 hover:border-white' : 'pt-4'}`}>
+			<h3
+				class={`text-white leading-tight font-title ${story.highlighted ? 'text-2xl lg:text-3xl xl:text-4l m-0' : 'text-xl lg:text-2xl line-clamp-3 mb-0'}`}
+			>
+				{story.story[lang].title || 'Title not available'}
+			</h3>
+			<p class={`text-zinc-200 m-0 ${story.highlighted ? 'text-base sm:text-lg' : 'text-sm sm:text-base'}`} style='margin-bottom: 0;'>
+				{story.personalInfo[lang].name}
+				{story.personalInfo[lang].surname}
+			</p>
+		</div>
+	</div>
+</a>
+
+<script define:vars={{ lang, story }} is:inline>
+	// Select the article element
+	const articleEl = document.querySelector(`#story-tile--${story.id}`)
+
+	// Check if article was read before and write date of last read if that's the case
+	let readArticles = JSON.parse(localStorage.getItem('readArticles')) || []
+	let readArticle = readArticles.find((article) => article.slug === story.slugs[lang])
+	if (readArticle) {
+		// If the current article has been read before, set the data-lastread attribute with the timestamp
+		articleEl.setAttribute('data-lastread', readArticle.timestamp)
+	} else {
+		// If the current article has not been read, set data-lastread to a default value or omit this part altogether
+		articleEl.setAttribute('data-lastread', 'never')
+	}
+</script>
+
+<style>
+  .border-white {
+    border-color: white !important;
+  }
+</style>

@@ -44,13 +44,33 @@ export async function getStaticPaths() {
 		},
 	}))
 
-	const allPaths = [...allPathsEN, ...allPathsAR]
+	const allPathsENLegacy = stories.map((story) => ({
+		params: {
+			path: `en/legacy/${story.slugs.en}`,
+		},
+		props: {
+			story,
+			legacy: true,
+		},
+	}))
+
+	const allPathsARLegacy = stories.map((story) => ({
+		params: {
+			path: `ar/legacy/${story.slugs.ar}`,
+		},
+		props: {
+			story,
+			legacy: true,
+		},
+	}))
+
+	const allPaths = [...allPathsEN, ...allPathsAR, ...allPathsENLegacy, ...allPathsARLegacy]
 
 	return allPaths
 }
 
 // Define props
-const { story } = Astro.props
+const { story, legacy } = Astro.props
 
 // Assuming story.story[lang].content contains your text
 const content = story.story[lang].content
@@ -103,12 +123,8 @@ const readInOtherLanguage = translations.readIn[lang]
 	dir={dir}
 >
 	<SEO slot='seo' title={`The Yemen Listening Project`} description={story.story['en'].title} />
-	<!-- <ViewTransitions /> -->
-	<!-- <ReplacementSwap /> -->
-	<!-- <LoadingIndicator /> -->
-
-	<div class='fixed top-0 left-0 w-screen h-screen -z-1 pointer-events-none' id='stars'></div>
-	<div class='fixed top-0 left-0 w-screen h-screen -z-1 pointer-events-none' id='city'></div>
+	{!legacy && <div class='fixed top-0 left-0 w-screen h-screen -z-1 pointer-events-none' id='stars' />}
+	{!legacy && <div class='fixed top-0 left-0 w-screen h-screen -z-1 pointer-events-none' id='city' />}
 	<div
 		class='w-full max-w-5xl mx-auto mt-2 sm:mt-5 mb-8 sm:mb-24 px-4'
 		class='story-detail-page--wrapper'
@@ -120,12 +136,6 @@ const readInOtherLanguage = translations.readIn[lang]
 			<NavButtons id='overview--button--top' button='overview' lang={lang} classNames='text-white bg-burgundy hover:bg-zinc-100 hover:text-burgundy' />
 			<NavButtons button='next' lang={lang} href={`/stories/${lang}/${nextStorySlug}`} classNames='hover:text-white hover:bg-zinc-100' />
 		</div>
-		<!-- <div class='absolute bottom-5 left-5'>
-			<div class='keyboard'>
-				<div class='key left'><span>←</span></div>
-				<div class='key right'><span>→</span></div>
-			</div>
-		</div> -->
 		<div class='flex flex-col gap-3 sm:gap-5 z-10'>
 			<div class='flex flex-col lg:flex-row lg:gap-x-5 mb-6'>
 				{/* Header section */}
@@ -379,70 +389,76 @@ const readInOtherLanguage = translations.readIn[lang]
 <!-- HammerJS -->
 <script is:inline src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/204379/hammer.min.js'></script>
 
-<script define:vars={{ translations, lang, slugEN: story.slugs.en, slugAR: story.slugs.ar, prevStorySlug, nextStorySlug }} is:inline>
-	// Retrieve the read articles array from localStorage or initialize a new one
-	let readArticles = JSON.parse(localStorage.getItem('readArticles')) || []
+<script define:vars={{ translations, lang, slugEN: story.slugs.en, slugAR: story.slugs.ar, prevStorySlug, nextStorySlug, legacy }} is:inline>
+	if (!legacy) {
+		// Retrieve the read articles array from localStorage or initialize a new one
+		let readArticles = JSON.parse(localStorage.getItem('readArticles')) || []
 
-	document.addEventListener('DOMContentLoaded', () => {
-		// Keypress events for arrow left and arrow right to navigate to previous and next stories
-		document.addEventListener('keydown', (e) => {
-			// Add event listeners for using arrow keys to navigate left and right for changing stories
+		document.addEventListener('DOMContentLoaded', () => {
+			// Keypress events for arrow left and arrow right to navigate to previous and next stories
+			document.addEventListener('keydown', (e) => {
+				// Add event listeners for using arrow keys to navigate left and right for changing stories
 
-			if (e.key === 'ArrowLeft') {
-				// console.log('Arrow left')
-				window.location = `/stories/${lang}/${prevStorySlug}`
-			} else if (e.key === 'ArrowRight') {
-				// console.log('Arrow right')
-				window.location = `/stories/${lang}/${nextStorySlug}`
-			}
-		})
-	})
-
-	// Add event listeners for using Hammer JS to swipe left and right for changing stories
-	const storyWrapper = document.getElementById('story-wrapper')
-	if (storyWrapper && 'ontouchstart' in document.documentElement) {
-		const mc = new Hammer(storyWrapper)
-
-		// Handling swipe right - Go to previous story
-		mc.on('swiperight', function () {
-			window.location.href = `/stories/${lang}/${prevStorySlug}`
-		})
-
-		// Handling swipe left - Go to next story
-		mc.on('swipeleft', function () {
-			window.location.href = `/stories/${lang}/${nextStorySlug}`
+				if (e.key === 'ArrowLeft') {
+					// console.log('Arrow left')
+					window.location = `/stories/${lang}/${prevStorySlug}`
+				} else if (e.key === 'ArrowRight') {
+					// console.log('Arrow right')
+					window.location = `/stories/${lang}/${nextStorySlug}`
+				}
+			})
 		})
 	}
 
-	if (lang === 'en') {
-		// Check if the current article's slug is not in the array
-		if (!readArticles.some((article) => article.slug === slugEN)) {
-			// Create an object with the current article's slug and the current timestamp
-			const articleObject = {
-				slug: slugEN,
-				timestamp: new Date().toISOString(),
-			}
+	if (!legacy) {
+		// Add event listeners for using Hammer JS to swipe left and right for changing stories
+		const storyWrapper = document.getElementById('story-wrapper')
+		if (storyWrapper && 'ontouchstart' in document.documentElement) {
+			const mc = new Hammer(storyWrapper)
 
-			// Add the object to the read articles array
-			readArticles.push(articleObject)
+			// Handling swipe right - Go to previous story
+			mc.on('swiperight', function () {
+				window.location.href = `/stories/${lang}/${prevStorySlug}`
+			})
 
-			// Save the updated array back to localStorage
-			localStorage.setItem('readArticles', JSON.stringify(readArticles))
+			// Handling swipe left - Go to next story
+			mc.on('swipeleft', function () {
+				window.location.href = `/stories/${lang}/${nextStorySlug}`
+			})
 		}
-	} else {
-		// Check if the current article's slug is not in the array
-		if (!readArticles.some((article) => article.slug === slugAR)) {
-			// Create an object with the current article's slug and the current timestamp
-			const articleObject = {
-				slug: slugAR,
-				timestamp: new Date().toISOString(),
+	}
+
+	if (!legacy) {
+		if (lang === 'en') {
+			// Check if the current article's slug is not in the array
+			if (!readArticles.some((article) => article.slug === slugEN)) {
+				// Create an object with the current article's slug and the current timestamp
+				const articleObject = {
+					slug: slugEN,
+					timestamp: new Date().toISOString(),
+				}
+
+				// Add the object to the read articles array
+				readArticles.push(articleObject)
+
+				// Save the updated array back to localStorage
+				localStorage.setItem('readArticles', JSON.stringify(readArticles))
 			}
+		} else {
+			// Check if the current article's slug is not in the array
+			if (!readArticles.some((article) => article.slug === slugAR)) {
+				// Create an object with the current article's slug and the current timestamp
+				const articleObject = {
+					slug: slugAR,
+					timestamp: new Date().toISOString(),
+				}
 
-			// Add the object to the read articles array
-			readArticles.push(articleObject)
+				// Add the object to the read articles array
+				readArticles.push(articleObject)
 
-			// Save the updated array back to localStorage
-			localStorage.setItem('readArticles', JSON.stringify(readArticles))
+				// Save the updated array back to localStorage
+				localStorage.setItem('readArticles', JSON.stringify(readArticles))
+			}
 		}
 	}
 
@@ -452,11 +468,11 @@ const readInOtherLanguage = translations.readIn[lang]
 		const overviewButtonBottom = document.getElementById('overview--button--bottom')
 		const headerLogo = document.getElementById('header-button')
 		const currentView = localStorage.getItem('currentView')
-		console.log(currentView)
+		let newLink = legacy ? `/legacy/${lang}` : `/${lang}/${currentView}`
 
-		overviewButtonTop.setAttribute('href', `/${lang}/${currentView}`)
-		if (headerLogo) headerLogo.setAttribute('href', `/${lang}/${currentView}`)
-		if (overviewButtonBottom) overviewButtonBottom.setAttribute('href', `/${lang}/${currentView}`)
+		overviewButtonTop.setAttribute('href', newLink)
+		if (headerLogo) headerLogo.setAttribute('href', newLink)
+		if (overviewButtonBottom) overviewButtonBottom.setAttribute('href', newLink)
 	}
 	document.addEventListener('DOMContentLoaded', changeOverviewButtonHref)
 
@@ -526,7 +542,7 @@ const readInOtherLanguage = translations.readIn[lang]
 	const NUMBER_OF_STARS = window.innerWidth <= 1024 ? (window.innerWidth <= 500 ? 20 : 40) : 60
 	const starContainer = document.querySelector('#stars')
 
-	if (starContainer.innerHTML === '') {
+	if (starContainer.innerHTML === '' && !legacy) {
 		for (let i = 0; i < NUMBER_OF_STARS; i++) {
 			// Increment delay for each star to stagger the start of the flickering
 			new Star(starContainer, i * 50)

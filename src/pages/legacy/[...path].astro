@@ -1,0 +1,75 @@
+---
+import Layout from '@layouts/Layout.astro'
+import StoryWrapper from '@components/StoryWrapper.astro'
+import SEO from '@components/SEO.astro'
+import NavButtons from '@components/buttons/NavButtons.astro'
+import stories from '@data/all_stories.json'
+
+// Read path parameters for language and slug
+const { path } = Astro.params
+
+const pathParams = path?.toString().split('/')
+const lang = pathParams?.[0] || 'en'
+
+// Create all pages based on stories array, for both English and Arabic language
+export async function getStaticPaths() {
+	const allPaths = [
+		{
+			params: {
+				path: `ar`,
+			},
+			props: {
+				allStories: stories,
+			},
+		},
+		{
+			params: {
+				path: `en`,
+			},
+			props: {
+				allStories: stories,
+			},
+		},
+	]
+
+	return allPaths
+}
+
+// Define props
+const { allStories } = Astro.props
+---
+
+<div class='pt-12'>
+	<Layout
+		dark
+		title='The Yemen Listening Project'
+		languageButtons={false}
+		header={true}
+		filterButtons={false}
+		switchViewButtons={false}
+		dir={lang === 'ar' ? 'rtl' : 'ltr'}
+		legacy={true}
+	>
+		<SEO slot='seo' title={`The Yemen Listening Project`} description={'Where Yemenis talk, and the world listens'} />
+		<StoryWrapper stories={allStories} view='legacy' lang={lang} />
+	</Layout>
+</div>
+
+<script define:vars={{ lang }}>
+	// Select #header-button on Content Load and change href based on language
+	document.addEventListener('DOMContentLoaded', function () {
+		const headerButton = document.querySelector('#header-button')
+		headerButton.href = lang === 'ar' ? '/legacy/ar' : '/legacy/en'
+	})
+</script>
+
+<style is:inline>
+  header {
+    background: black;
+    z-index: 9999;
+  }
+
+  .bg-black {
+    background-color: black !important;
+  }
+</style>

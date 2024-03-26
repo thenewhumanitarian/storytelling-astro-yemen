@@ -153,3 +153,7 @@ body.no-scroll {
 *:hover .bg-white {
   background: white;
 }
+
+.bg-black {
+  background: black;
+}

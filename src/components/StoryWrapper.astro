@@ -1,12 +1,16 @@
 ---
-// import StoryGrid from '@components/StoryGrid.astro'
 import NewGrid from '@components/grid/NewGrid.astro'
 import StoryList from '@components/StoryList.astro'
+import StoryListLegacy from '@components/StoryListLegacy.astro'
 import TagsHeader from '@components/tags/TagsHeader.astro'
 import TagsFooter from '@components/tags/TagsFooter.astro'
 import ReactStoryList from '@components/react/StoryListReact.jsx'
+import { translations } from '@data/translations.js'
 
 const { stories, tags, view, lang } = Astro.props
+
+const readInOtherLanguage = translations.readIn[lang]
+const otherLanguageLink = lang === 'ar' ? '/legacy/en' : '/legacy/ar'
 ---
 
 {
@@ -27,10 +31,10 @@ const { stories, tags, view, lang } = Astro.props
 			<div class={`stories-container--list mt-[8rem] lg:mt-20 pt-0 sm:py-5`} id='stories-container--list'>
 				<div class='fixed top-0 left-0 w-screen h-screen -z-1 pointer-events-none' id='stars' />
 				<div id='city' class='top-0 left-0 fixed w-full h-full -z-1' />
-				<div class="hidden sm:block">
+				<div class='hidden sm:block'>
 					<ReactStoryList client:load stories={stories} lang={lang} />
 				</div>
-				<div class="block sm:hidden">
+				<div class='block sm:hidden'>
 					<StoryList stories={stories} id='list' />
 				</div>
 			</div>
@@ -58,8 +62,22 @@ const { stories, tags, view, lang } = Astro.props
 
 {
 	view === 'legacy' && (
-		<div class='mt-40'>
-			<h1 class='text-white'>LEGACY</h1>
+		<div class='mt-7 max-w-4xl mx-auto'>
+			<div class='text-white p-5 text-sm'>
+				<p class='text-center'>
+					<>
+						<strong>Please note:</strong>
+						<br />
+					</>
+					You are seeing a more basic version of this website as your browser doesn't support all the features of The Yemen Listening Project.
+				</p>
+
+				<a href={otherLanguageLink} class='block py-2 text-white text-center'>
+					<span class='text-white text-sm opacity-80'>{readInOtherLanguage}</span>
+				</a>
+			</div>
+
+			<StoryListLegacy stories={stories} id='tags' />
 		</div>
 	)
 }

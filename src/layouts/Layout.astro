@@ -15,9 +15,10 @@ export interface Props {
 	title?: string
 	dir?: string
 	overflow?: string
+  legacy?: boolean
 }
 
-const { filterButtons, languageButtons, dark, header, switchViewButtons } = Astro.props as Props
+const { filterButtons, languageButtons, dark, header, switchViewButtons, legacy } = Astro.props as Props
 let { lang } = Astro.params
 
 if (!lang) {
@@ -41,8 +42,10 @@ const isProd = import.meta.env.PROD
 		<!-- Browser detection -->
 		<script>
 			// Check current page URL contains word legacy
-			if (window.location.href.indexOf('legacy') <= 0) {
-				// console.log('Detecting browser...')
+			if (window.location.href.indexOf('legacy') <= 0 || window.location.href.indexOf('stories') <= 0) {
+				console.log('Detecting browser...')
+
+				localStorage.setItem('legacyBrowser', 'true')
 
 				var browser = (function () {
 					var ua = navigator.userAgent,
@@ -70,7 +73,7 @@ const isProd = import.meta.env.PROD
 					return { name: M[0], version: M[1] }
 				})()
 
-				// console.log(browser)
+				console.log(browser)
 				let redirectToLegacy = false
 
 				if (browser.name === 'Safari' && +browser.version < 12) {
@@ -102,18 +105,20 @@ const isProd = import.meta.env.PROD
 
 		<slot name='seo' />
 	</head>
+
 	<body>
 		<!-- Header  -->
-		{header && <Header dark={dark} filterButtons={filterButtons} languageButtons={languageButtons} switchViewButtons={switchViewButtons} />}
+		{header && <Header legacy={legacy} dark={dark} filterButtons={filterButtons} languageButtons={languageButtons} switchViewButtons={switchViewButtons} />}
 		<!-- Main content -->
 		<slot />
 		<!-- Menu overlay -->
-		<MenuOverlay />
+		<MenuOverlay legacy={legacy} />
 		<!-- Footer  -->
 		<!-- No footer set -->
 	</body>
+</html>
 
-	<style is:global lang={'scss'}>
+<style is:global lang={'scss'}>
   html[dir='ltr'] {
     /* Styles for left-to-right direction */
   }
@@ -156,4 +161,3 @@ const isProd = import.meta.env.PROD
 		}
 	}
 </style>
-</html>

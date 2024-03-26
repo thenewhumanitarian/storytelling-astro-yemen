@@ -1,5 +1,6 @@
 ---
 import MenuIcon from '@components/menu/MenuIcon.astro'
+import MenuIconLegacy from '@components/menu/MenuIconLegacy.astro'
 import HeaderLogo from '@components/header/HeaderLogoSimple.astro'
 import FilterButtons from '@components/buttons/FilterButtons.astro'
 import SwitchViewButtons from '@components/buttons/SwitchViewButtons.astro'
@@ -10,9 +11,10 @@ export interface Props {
 	languageButtons?: object
 	switchViewButtons?: boolean
 	dark?: boolean
+  legacy?: boolean
 }
 
-const { filterButtons, languageButtons, dark, switchViewButtons } = Astro.props as Props
+const { filterButtons, languageButtons, dark, switchViewButtons, legacy } = Astro.props as Props
 
 let { lang } = Astro.params
 if (!lang) {
@@ -32,7 +34,7 @@ if (!lang) {
 	<div class='grid grid-cols-3 items-center px-6 w-full'>
 		<div class='flex justify-start gap-x-2 items-center'>
 			<div class={`${dark ? 'text-white' : 'text-black'} fill-current flex gap-3 items-center justify-start mr-3`}>
-				<MenuIcon />
+				{legacy ? <MenuIconLegacy /> : <MenuIcon />}
 			</div>
 			{switchViewButtons && <SwitchViewButtons />}
 			{filterButtons && <FilterButtons />}
