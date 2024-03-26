@@ -42,24 +42,11 @@ if (!lang) {
   <div class='flex justify-center h-full w-full'>
     <HeaderLogo dark={dark} />
   </div>
-  {legacy ? (
-    <div class={`${dark ? 'text-white' : 'text-black'} opacity-0 fill-current flex gap-3 items-center justify-start ml-3`}>
-      <MenuIconLegacy />
-    </div>) : (
-      <div class='justify-end flex gap-x-4'>
-        {
-          languageButtons && (
-            <div class='fixed top-24 right-2 -mt-2 md:-mt-0 md:top-0 md:left-0 shadow-lg md:shadow-none md:relative flex items-center gap-3 z-20'>
-              <LanguageButtons links={languageButtons} />
-            </div>
-          )
-        }
-      </div>
-    )}
+
 </div>) : (<div class='grid grid-cols-3 items-center px-6 w-full'>
   <div class='flex justify-start gap-x-2 items-center'>
     <div class={`${dark ? 'text-white' : 'text-black'} fill-current flex gap-3 items-center justify-start mr-3`}>
-      {legacy ? <MenuIconLegacy /> : <MenuIcon />}
+      <MenuIcon />
     </div>
     {switchViewButtons && <SwitchViewButtons />}
     {filterButtons && <FilterButtons />}

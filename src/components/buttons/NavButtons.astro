@@ -50,7 +50,6 @@ const className = `transition-colors duration-150 relative inline-flex gap-x-2 i
 						{prefix}
 						{translations.allStories[lang]}
 					</span>
-					{/* <span class='group-hover:text-burgundy text-xs sm:text-sm'>↑</span> */}
 				</>
 			</button>
 		</a>
@@ -63,7 +62,6 @@ const className = `transition-colors duration-150 relative inline-flex gap-x-2 i
 			<button class={className} id='prev-button'>
 				<>
 					<span class='group-hover:text-burgundy text-xs sm:text-sm'>←</span>
-					{/* <span class='group-hover:text-burgundy inline text-xs sm:text-sm'>{translations.previous[lang]}</span> */}
 				</>
 			</button>
 		</a>
@@ -74,6 +72,9 @@ const className = `transition-colors duration-150 relative inline-flex gap-x-2 i
 	a {
 		z-index: 0;
 	}
+  .ring-zinc-300 {
+    border-color: white;
+  }
 </style>
 
 <script define:vars={{ lang }}>

@@ -1,10 +1,4 @@
 ---
-// import { ViewTransitions } from 'astro:transitions'
-// import ReplacementSwap from 'astro-vtbot/components/ReplacementSwap.astro'
-// import LoadingIndicator from 'astro-vtbot/components/LoadingIndicator.astro'
-// import VtBotDebug from 'astro-vtbot/components/VtBotDebug.astro'
-// import Linter from 'astro-vtbot/components/Linter.astro'
-
 import NavButtons from '@components/buttons/NavButtons.astro'
 import Layout from '@layouts/Layout.astro'
 import Title from '@components/Title.astro'
@@ -124,6 +118,7 @@ const readInOtherLanguage = translations.readIn[lang]
 	switchViewButtons={false}
 	overflow={'always'}
 	dir={dir}
+	legacy={legacy}
 >
 	<SEO slot='seo' title={`The Yemen Listening Project`} description={story.story['en'].title} />
 	{!legacy && <div class='fixed top-0 left-0 w-screen h-screen -z-1 pointer-events-none' id='stars' />}
@@ -442,37 +437,35 @@ const readInOtherLanguage = translations.readIn[lang]
 		}
 	}
 
-	if (!legacy) {
-		if (lang === 'en') {
-			// Check if the current article's slug is not in the array
-			if (!readArticles.some((article) => article.slug === slugEN)) {
-				// Create an object with the current article's slug and the current timestamp
-				const articleObject = {
-					slug: slugEN,
-					timestamp: new Date().toISOString(),
-				}
-
-				// Add the object to the read articles array
-				readArticles.push(articleObject)
-
-				// Save the updated array back to localStorage
-				localStorage.setItem('readArticles', JSON.stringify(readArticles))
+	if (lang === 'en') {
+		// Check if the current article's slug is not in the array
+		if (!readArticles.some((article) => article.slug === slugEN)) {
+			// Create an object with the current article's slug and the current timestamp
+			const articleObject = {
+				slug: slugEN,
+				timestamp: new Date().toISOString(),
 			}
-		} else {
-			// Check if the current article's slug is not in the array
-			if (!readArticles.some((article) => article.slug === slugAR)) {
-				// Create an object with the current article's slug and the current timestamp
-				const articleObject = {
-					slug: slugAR,
-					timestamp: new Date().toISOString(),
-				}
 
-				// Add the object to the read articles array
-				readArticles.push(articleObject)
+			// Add the object to the read articles array
+			readArticles.push(articleObject)
 
-				// Save the updated array back to localStorage
-				localStorage.setItem('readArticles', JSON.stringify(readArticles))
+			// Save the updated array back to localStorage
+			localStorage.setItem('readArticles', JSON.stringify(readArticles))
+		}
+	} else {
+		// Check if the current article's slug is not in the array
+		if (!readArticles.some((article) => article.slug === slugAR)) {
+			// Create an object with the current article's slug and the current timestamp
+			const articleObject = {
+				slug: slugAR,
+				timestamp: new Date().toISOString(),
 			}
+
+			// Add the object to the read articles array
+			readArticles.push(articleObject)
+
+			// Save the updated array back to localStorage
+			localStorage.setItem('readArticles', JSON.stringify(readArticles))
 		}
 	}
 
