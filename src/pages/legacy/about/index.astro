@@ -29,7 +29,7 @@ import Credits from '@components/menu/content/credits.astro'
 	</div>
 </Layout>
 
-<script>
+<script is:inline>
 	// Select #header-button on Content Load and change href based on language
 	document.addEventListener('DOMContentLoaded', function () {
 		const headerButton = document.querySelector('#header-button')
