@@ -1,0 +1,72 @@
+---
+import Layout from '@layouts/Layout.astro'
+import SEO from '@components/SEO.astro'
+
+import Intro from '@components/menu/content/intro.astro'
+import About from '@components/menu/content/about.astro'
+import Credits from '@components/menu/content/credits.astro'
+---
+
+<Layout dark title='The Yemen Listening Project' header={true} switchViewButtons={false}>
+	<SEO slot='seo' title={`Browser not supported | The Yemen Listening Project`} description={'Where Yemenis talk, and the world listens'} />
+
+	<div class='p-5 text-white'>
+		<div id='content--en'>
+			<Intro lang='en' />
+			<hr class='my-8 border-2' />
+			<About lang='en' />
+			<hr class='my-8 border-2' />
+			<Credits lang='en' />
+		</div>
+		<hr class='my-16 border-2' />
+		<div id='content--ar' dir='rtl'>
+			<Intro lang='ar' dir='rtl' />
+			<hr class='my-8 border-2' />
+			<About lang='ar' dir='rtl' />
+			<hr class='my-8 border-2' />
+			<Credits lang='ar' dir='rtl' />
+		</div>
+	</div>
+</Layout>
+
+<script>
+	// Select #header-button on Content Load and change href based on language
+	document.addEventListener('DOMContentLoaded', function () {
+		const headerButton = document.querySelector('#header-button')
+		headerButton.setAttribute('href', '/legacy')
+	})
+</script>
+
+<style>
+	h1 {
+		font-size: 2rem;
+		color: white;
+		text-align: center;
+	}
+
+	p {
+		color: white;
+		font-size: 1.6rem;
+		text-align: center;
+	}
+	@media screen and (max-width: 640px) {
+		.text-white {
+			color: white;
+		}
+
+		h1 {
+			font-size: 1rem;
+		}
+
+		p {
+			font-size: 0.9rem;
+		}
+
+		a {
+			text-decoration: underline;
+			color: white;
+		}
+	}
+</style>
+
+<script></script>

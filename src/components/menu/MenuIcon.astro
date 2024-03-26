@@ -114,6 +114,7 @@
 	function checkIntroOverlay() {
 		// Check if 'hideIntro' is not set to 'false'
 		if (localStorage.getItem('hideIntro') !== 'true' || DEBUG_MODE) {
+      if (legacy) return
 			openMenu() // Automatically open the menu if condition is met
 		}
 	}
