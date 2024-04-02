@@ -153,3 +153,35 @@ body.no-scroll {
 *:hover .bg-white {
   background: white;
 }
+
+.card:hover .icon--audio,
+.card:hover .icon--video {
+  opacity: 1;
+}
+
+/* Icons for labels in the grid */
+.icon--audio {
+  background-image: url('/images/icons/audio--icon.svg');
+  background-size: 60%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  opacity: 1;
+  transition: opacity 0.5s;
+}
+
+.icon--video {
+  background-image: url('/images/icons/video--icon.svg');
+  background-size: 60%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  opacity: 1;
+  transition: opacity 0.5s;
+}
+
+.card:not(.has-audio) .icon--audio {
+  opacity: 0;
+}
+
+.card:not(.has-video) .icon--video {
+  opacity: 0;
+}

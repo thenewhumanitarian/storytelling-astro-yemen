@@ -452,7 +452,7 @@ const readInOtherLanguage = translations.readIn[lang]
 		const overviewButtonBottom = document.getElementById('overview--button--bottom')
 		const headerLogo = document.getElementById('header-button')
 		const currentView = localStorage.getItem('currentView')
-		console.log(currentView)
+		// console.log(currentView)
 
 		overviewButtonTop.setAttribute('href', `/${lang}/${currentView}`)
 		if (headerLogo) headerLogo.setAttribute('href', `/${lang}/${currentView}`)

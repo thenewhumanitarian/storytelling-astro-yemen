@@ -445,8 +445,6 @@ const { src, start, end, plays, text, lang } = Astro.props as Props
 			if (soundcite.clips.length === 0) {
 				soundcite = undefined
 				window.soundcite = undefined
-			} else {
-				console.log(`${soundcite.clips.length} ${soundcite.clips.length === 1 ? 'clip' : 'clips'} found`)
 			}
 		})
 	})

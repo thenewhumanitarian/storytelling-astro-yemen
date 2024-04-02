@@ -244,6 +244,29 @@ if (!lang) {
 			this.lastRead = lastRead
 		}
 
+		evaluateAttachments(attachments) {
+			// console.log(attachments)
+
+			if (!attachments) return { audio: false, video: false }
+
+			let hasAudio = false
+			let hasVideo = false
+
+			attachments.forEach((attachment) => {
+				if (attachment.indexOf('mp3') > -1 || attachment.indexOf('m4a') > -1) {
+					hasAudio = true
+				}
+
+				if (attachment.indexOf('mp4') > -1 || attachment.indexOf('mov') > -1) {
+					hasVideo = true
+				}
+			})
+
+			// console.log({ audio: hasAudio, video: hasVideo })
+
+			return { audio: hasAudio, video: hasVideo }
+		}
+
 		createDOMElement() {
 			this.rootElement = document.createElement('div')
 			this.rootElement.setAttribute('backgroundImage', `url(${this.descriptor.storyImage.pixelated})`)
@@ -277,37 +300,46 @@ if (!lang) {
 			this.rootElement.appendChild(emptyDiv)
 
 			// Create div element as a wrapper for the highlighted text
+			const audioLabel = document.createElement('span')
+			audioLabel.classList.add('flex')
+			audioLabel.classList.add('icon--audio')
+			audioLabel.classList.add('font-serif')
+			audioLabel.classList.add('items-center')
+			audioLabel.classList.add('justify-center')
+			audioLabel.classList.add('absolute')
+			audioLabel.classList.add('text-white')
+			audioLabel.classList.add('bottom-1')
+			audioLabel.classList.add('right-0')
+			audioLabel.classList.add('w-8')
+			audioLabel.classList.add('h-8')
+			audioLabel.classList.add('p-0')
+			audioLabel.classList.add('m-0')
+			audioLabel.classList.add('mx-1')
+			audioLabel.classList.add('pointer-events-none')
+			audioLabel.classList.add('bg-transparent')
 
-			// Create a h3 element and append to rootElement
-			const starDiv = document.createElement('div')
-			starDiv.classList.add('flex')
-			starDiv.classList.add('items-center')
-			starDiv.classList.add('justify-center')
-			starDiv.classList.add('absolute')
-			starDiv.classList.add('bottom-3')
-			starDiv.classList.add('right-3')
-			starDiv.classList.add('w-8')
-			starDiv.classList.add('h-8')
-			starDiv.classList.add('m-0')
-			starDiv.classList.add('p-2')
-			starDiv.classList.add('rounded-full')
-			starDiv.classList.add('bg-burgundy')
-			starDiv.classList.add('pointer-events-none')
-			starDiv.classList.add('shadow-lg')
-			starDiv.classList.add('shadow-black')
-			starDiv.classList.add('hidden')
-			starDiv.classList.add(this.descriptor.highlighted ? 'opacity-80' : 'opacity-0')
+			this.rootElement.appendChild(audioLabel)
 
-			const highlightedText = document.createElement('span')
-			highlightedText.textContent = '★'
-			highlightedText.classList.add('text-white')
-			highlightedText.classList.add('text-base')
-			highlightedText.classList.add('p-0')
-			highlightedText.classList.add('m-0')
-			highlightedText.classList.add('font-serif')
+			// if (this.evaluateAttachments(this.descriptor.attachments).video) {
+			const videoLabel = document.createElement('span')
+			videoLabel.classList.add('flex')
+			videoLabel.classList.add('icon--video')
+			videoLabel.classList.add('font-serif')
+			videoLabel.classList.add('items-center')
+			videoLabel.classList.add('justify-center')
+			videoLabel.classList.add('absolute')
+			videoLabel.classList.add('text-white')
+			videoLabel.classList.add('bottom-1')
+			videoLabel.classList.add('right-0')
+			videoLabel.classList.add('w-8')
+			videoLabel.classList.add('h-8')
+			videoLabel.classList.add('p-0')
+			videoLabel.classList.add('m-0')
+			videoLabel.classList.add('mx-1')
+			videoLabel.classList.add('pointer-events-none')
+			videoLabel.classList.add('bg-transparent')
 
-			starDiv.appendChild(highlightedText)
-			this.rootElement.appendChild(starDiv)
+			this.rootElement.appendChild(videoLabel)
 
 			// Create h2 title and append to rootElement
 			const titleText =
@@ -380,6 +412,22 @@ if (!lang) {
 			cssBatch += `width: ${calculateGridDimensions().cardSize - 8}px;`
 			cssBatch += `height: ${calculateGridDimensions().cardSize - 8}px;`
 			cssBatch += `background-image: url(${this.descriptor.storyImage.pixelated})`
+			cssBatch += `background-image: url(${this.descriptor.storyImage.pixelated})`
+
+			const hasAudio = this.evaluateAttachments(this.descriptor.attachments).audio
+			const hasVideo = this.evaluateAttachments(this.descriptor.attachments).video
+
+			if (hasAudio) {
+				this.rootElement.classList.add('has-audio')
+			} else {
+				this.rootElement.classList.remove('has-audio')
+			}
+
+			if (hasVideo) {
+				this.rootElement.classList.add('has-video')
+			} else {
+				this.rootElement.classList.remove('has-video')
+			}
 
 			this.rootElement.setAttribute('style', cssBatch)
 		}
@@ -639,8 +687,6 @@ if (!lang) {
 			} else {
 				// Find out if descriptor is in readArticles
 				const readArticle = this.readArticles.find((article) => article.slug === descriptor.slugs[lang])
-				// console.log(readArticle)
-				// return new Card(descriptor, readArticle?.timestamp || 'never')
 				return new Card(descriptor, readArticle ? readArticle.timestamp : 'never')
 			}
 		}
