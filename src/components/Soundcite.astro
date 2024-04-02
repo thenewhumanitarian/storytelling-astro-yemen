@@ -14,7 +14,7 @@ const { src, start, end, plays, text, lang, short } = Astro.props as Props
 
 <section class='py-4'>
 	<div class='soundcite' id=`soundcite-${end}` data-url={src} data-start={start} data-end={end} data-plays={plays}>
-		<span class={`text-white sm:text-lg ${short ? 'line-clamp line-clamp-6' : ''}`} set:html={text} />
+		<span class={`text-white sm:text-lg ${short ? 'line-clamp line-clamp-3' : ''}`} set:html={text} />
 		{short && <span>...</span>}
 	</div>
 </section>
