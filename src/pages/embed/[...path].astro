@@ -1,0 +1,484 @@
+---
+import NavButtons from '@components/buttons/NavButtons.astro'
+import EmbedLayout from '@layouts/EmbedLayout.astro'
+import Title from '@components/Title.astro'
+import AuthorSection from '@components/AuthorSection.astro'
+import TagList from '@components/tags/TagList.astro'
+import BodySection from '@components/BodySection.astro'
+import Message from '@components/Message.astro'
+import ShareStory from '@components/ShareStory.astro'
+import Soundcite from '@components/Soundcite.astro'
+import SEO from '@components/SEO.astro'
+import allStories from '@data/all_stories.json'
+import { translations } from '@data/translations.js'
+
+const lang = 'en'
+
+// Create all pages based on stories array, for both English and Arabic language
+export async function getStaticPaths() {
+	// Filter stories only use those with .m4a or .mp3 in the attachments
+	const stories = allStories.filter((story) => story.attachments.some((attachment) => attachment.endsWith('.m4a') || attachment.endsWith('.mp3')))
+
+	const allPathsAudio = stories.map((story) => ({
+		params: {
+			path: `audio/${story.slugs.en}`,
+		},
+		props: {
+			story,
+			stories,
+		},
+	}))
+
+	const allPaths = [...allPathsAudio]
+
+	return allPaths
+}
+
+// Define props
+const { story, stories } = Astro.props
+
+// Assuming story.story[lang].content contains your text
+const content = story.story[lang].content
+
+// Step 1: Split into paragraphs at every "\n\n"
+const paragraphs = content.split('\n')
+
+// Step 2: Within each paragraph, replace "<single-break/>" with "<br/>", and handle single "\n" by replacing them with "<br/>" as well
+const contentArray = paragraphs.map(
+	(paragraph) => paragraph.replace(/<single-break\/>/g, '<br/>').replace(/\n/g, '<br/>'), // Replace single newlines with <br/>, assuming that's the desired behavior
+)
+
+// Find the current story index based on the slug in the provided language
+const currentIndex = stories.findIndex((s) => s.slugs.en === story.slugs.en)
+
+// Calculate previous and next indexes with wrapping
+const prevIndex = currentIndex - 1 < 0 ? stories.length - 1 : currentIndex - 1
+const nextIndex = (currentIndex + 1) % stories.length
+
+// Extract slugs for previous and next stories in the desired language
+const prevStorySlug = stories[prevIndex].slugs[lang] // Adjust 'en' as needed for language
+const nextStorySlug = stories[nextIndex].slugs[lang] // Adjust 'en' as needed for language
+
+const dir = 'ltr'
+
+function processAudioFiles(files) {
+	// Filter the array for audio files (.mp3 or .m4a extensions)
+	const audioFiles = files.filter((file) => file.endsWith('.mp3') || file.endsWith('.m4a'))
+
+	// In case you need the filtered list outside, you can also return it
+	return audioFiles
+}
+
+// Example of using the function
+const processedAudioFiles = processAudioFiles(story.attachments)
+const hasAudioFiles = processedAudioFiles.length > 0
+
+const storyTitle = story.story[lang].title || `${lang.toUpperCase()} title for story ID #${story.id} is missing`
+
+const readInOtherLanguage = translations.readIn[lang]
+---
+
+<EmbedLayout>
+	<SEO title={storyTitle} description={story.story[lang].content} />
+	<!-- <div class='fixed top-0 left-0 w-screen h-screen -z-1 pointer-events-none' id='stars'></div>
+	<div class='fixed top-0 left-0 w-screen h-screen -z-1 pointer-events-none' id='city'></div> -->
+	<div class='w-full max-w-5xl mx-auto mt-2 sm:mt-5 mb-8 sm:mb-24 px-4' class='story-detail-page--wrapper' id='story-wrapper' dir='ltr'>
+		<div class='flex flex-col gap-3 sm:gap-5 z-10 h-screen'>
+			<!-- Adjusted: added h-screen for full viewport height -->
+			<div class='w-full grid grid-cols-3 mt-3 mb-1'>
+				<a href={`/embed/audio/${prevStorySlug}`}><button class='bg-white text-black font-bold px-3 py-1'>← Back</button></a>
+				<a
+					class='text-center'
+					href={`https://yemenlisteningproject.thenewhumanitarian.org/stories/en/${story.slugs.en}`}
+					target='_blank'
+					rel='noopener noreferrer'><button class='bg-burgundy text-white font-bold px-3 py-1'>Read more</button></a
+				>
+				<a class='text-right' href={`/embed/audio/${nextStorySlug}`}><button class='bg-white text-black font-bold px-3 py-1'>Next →</button></a>
+			</div>
+			<div class='flex'>
+				<div class='w-full flex flex-col items-center justify-center'>
+					<h1 class='font-title m-0 p-0 text-center text-2xl mt-3 mb-2'>{storyTitle}</h1>
+				</div>
+			</div>
+
+			<div class='flex-grow'>
+				<!-- Adjusted: added flex-grow -->
+				<Message contentArray={contentArray} lang={'en'} slot='message'>
+					{
+						hasAudioFiles &&
+							processedAudioFiles.map((file, i) => (
+								<div class='text-left'>
+									<Soundcite
+										data-vtbot-replace='main'
+										text={`${story.audioReadouts[lang] || `Audio readout text for ${lang.toUpperCase()} is missing in Google Spreadsheet...`}`}
+										src={`/attachments/${file}`}
+										plays={1}
+										start={0}
+										end={parseInt(file.match(/(\d+)s\.[a-zA-Z0-9]+$/)[1], 10) * 1000}
+										lang={lang}
+										short={true}
+									/>
+								</div>
+							))
+					}
+				</Message>
+				<!-- <a href={`https://yemenlisteningproject.thenewhumanitarian.org/stories/en/${story.slugs.en}`} target='_blank' rel='noopener noreferrer'>
+					<button class='text-white px-3 py-1 underline hover:text-burgundy transition-all'>Read more</button>
+				</a> -->
+			</div>
+		</div>
+	</div>
+</EmbedLayout>
+
+<style>
+	body {
+		background: black;
+	}
+</style>
+
+<style is:global>
+	body * {
+		color: white;
+	}
+
+	body {
+		overflow-y: scroll;
+	}
+
+	#stars {
+		z-index: -1;
+		background: black;
+		/* Add the blur effect */
+		filter: blur(3px);
+		-webkit-filter: blur(3px);
+	}
+
+	.story-w a {
+		color: white;
+	}
+
+	#story-wrapper.en * {
+		text-align: left;
+	}
+
+	#story-wrapper.ar * {
+		text-align: right;
+	}
+
+	#story-wrapper code {
+		display: none;
+	}
+
+	/* Classes and keyframe animations for stars */
+	@keyframes STAR {
+		0% {
+			background: powderblue;
+			height: 1px;
+			width: 1px;
+			box-shadow: 0px 0px 10px white;
+		}
+
+		10% {
+			background: #b0e5de;
+		}
+
+		20% {
+			background: #b0e5cc;
+		}
+
+		30% {
+			background: #cce5b0;
+		}
+
+		40% {
+			background: #dae5b0;
+		}
+
+		50% {
+			background: #e5ddb0;
+			width: 4px;
+			height: 4px;
+			box-shadow: 0px 0px 10px #d3bd3d;
+		}
+
+		100% {
+			width: 1px;
+			height: 1px;
+			background: powderblue;
+			box-shadow: 0px 0px 10px white;
+		}
+	}
+
+	@keyframes pulse {
+		0% {
+			background: powderblue;
+			height: 1px;
+			width: 1px;
+			box-shadow: 0px 0px 10px white;
+		}
+
+		10% {
+			background: #b0e5de;
+		}
+
+		20% {
+			background: #b0e5cc;
+		}
+
+		30% {
+			background: #cce5b0;
+		}
+
+		40% {
+			background: #dae5b0;
+		}
+
+		50% {
+			background: #e5ddb0;
+			width: 4px;
+			height: 4px;
+			box-shadow: 0px 0px 10px #d3bd3d;
+		}
+
+		100% {
+			width: 1px;
+			height: 1px;
+			background: powderblue;
+			box-shadow: 0px 0px 10px white;
+		}
+	}
+
+	.star {
+		z-index: -1;
+		height: 1px;
+		width: 1px;
+		border-radius: 5px;
+		box-shadow: 0px 0px 10px white;
+		background: powderblue;
+		position: absolute;
+	}
+
+	.star.pulse {
+		z-index: 10;
+	}
+
+	.star.pulse.one {
+		-webkit-animation: STAR 1s infinite;
+		animation: STAR 1s infinite;
+		-moz-animation: STAR 1s infinite;
+	}
+
+	.star.pulse.two {
+		-webkit-animation: STAR 2s infinite;
+		animation: STAR 2s infinite;
+		-moz-animation: STAR 2s infinite;
+	}
+
+	.star.pulse.three {
+		-webkit-animation: STAR 3s infinite;
+		animation: STAR 3s infinite;
+		-moz-animation: STAR 3s infinite;
+	}
+
+	.star.pulse.four {
+		-webkit-animation: STAR 4s infinite;
+		animation: STAR 4s infinite;
+		-moz-animation: STAR 4s infinite;
+	}
+
+	.star.pulse.five {
+		-webkit-animation: STAR 5s infinite;
+		animation: STAR 5s infinite;
+		-moz-animation: STAR 5s infinite;
+	}
+
+	@media screen and (max-width: 768px) {
+		#language-buttons:not(.always-visible) {
+			display: none;
+		}
+	}
+
+	.keyboard {
+		display: flex;
+		justify-content: center;
+		gap: 1rem;
+		font-family: 'Comic Sans MS', 'Arial', sans-serif;
+		opacity: 0.5;
+	}
+
+	.key {
+		border: 2px solid white;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 3rem;
+		height: 3rem;
+		background-color: #ddd;
+		border-radius: 10px;
+		box-shadow: 3px 3px 0px #b0b0b0;
+	}
+
+	.key span {
+		display: block;
+		font-size: 24px;
+		color: #333;
+	}
+</style>
+
+<!-- HammerJS -->
+<!-- <script is:inline src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/204379/hammer.min.js'></script> -->
+
+<!-- <script define:vars={{ translations, lang, slugEN: story.slugs.en, slugAR: story.slugs.ar, prevStorySlug, nextStorySlug }} is:inline>
+	// Retrieve the read articles array from localStorage or initialize a new one
+	let readArticles = JSON.parse(localStorage.getItem('readArticles')) || []
+
+	document.addEventListener('DOMContentLoaded', () => {
+		// Keypress events for arrow left and arrow right to navigate to previous and next stories
+		document.addEventListener('keydown', (e) => {
+			// Add event listeners for using arrow keys to navigate left and right for changing stories
+
+			if (e.key === 'ArrowLeft') {
+				// console.log('Arrow left')
+				window.location = `/stories/${lang}/${prevStorySlug}`
+			} else if (e.key === 'ArrowRight') {
+				// console.log('Arrow right')
+				window.location = `/stories/${lang}/${nextStorySlug}`
+			}
+		})
+	})
+
+	// Add event listeners for using Hammer JS to swipe left and right for changing stories
+	const storyWrapper = document.getElementById('story-wrapper')
+	if (storyWrapper && 'ontouchstart' in document.documentElement) {
+		const mc = new Hammer(storyWrapper)
+
+		// Handling swipe right - Go to previous story
+		mc.on('swiperight', function () {
+			window.location.href = `/stories/${lang}/${prevStorySlug}`
+		})
+
+		// Handling swipe left - Go to next story
+		mc.on('swipeleft', function () {
+			window.location.href = `/stories/${lang}/${nextStorySlug}`
+		})
+	}
+
+	if (lang === 'en') {
+		// Check if the current article's slug is not in the array
+		if (!readArticles.some((article) => article.slug === slugEN)) {
+			// Create an object with the current article's slug and the current timestamp
+			const articleObject = {
+				slug: slugEN,
+				timestamp: new Date().toISOString(),
+			}
+
+			// Add the object to the read articles array
+			readArticles.push(articleObject)
+
+			// Save the updated array back to localStorage
+			localStorage.setItem('readArticles', JSON.stringify(readArticles))
+		}
+	} else {
+		// Check if the current article's slug is not in the array
+		if (!readArticles.some((article) => article.slug === slugAR)) {
+			// Create an object with the current article's slug and the current timestamp
+			const articleObject = {
+				slug: slugAR,
+				timestamp: new Date().toISOString(),
+			}
+
+			// Add the object to the read articles array
+			readArticles.push(articleObject)
+
+			// Save the updated array back to localStorage
+			localStorage.setItem('readArticles', JSON.stringify(readArticles))
+		}
+	}
+
+	// Function to change href attribute of button id="overview--button--top" and button id="overview--button--bottom" depending on lang and currentView from localStorage
+	function changeOverviewButtonHref() {
+		const overviewButtonTop = document.getElementById('overview--button--top')
+		const overviewButtonBottom = document.getElementById('overview--button--bottom')
+		const headerLogo = document.getElementById('header-button')
+		const currentView = localStorage.getItem('currentView')
+		// console.log(currentView)
+
+		overviewButtonTop.setAttribute('href', `/${lang}/${currentView}`)
+		if (headerLogo) headerLogo.setAttribute('href', `/${lang}/${currentView}`)
+		if (overviewButtonBottom) overviewButtonBottom.setAttribute('href', `/${lang}/${currentView}`)
+	}
+	document.addEventListener('DOMContentLoaded', changeOverviewButtonHref)
+
+	// Function to change href attribute of button id="read-in-other-language" depending on lang, use EN and AR slug and lang variables
+	function changeReadInOtherLanguageHref() {
+		const readInOtherLanguageButton = document.getElementById('read-in-other-language')
+		readInOtherLanguageButton.setAttribute('href', lang === 'en' ? `/stories/ar/${slugAR}` : `/stories/en/${slugEN}`)
+	}
+	document.addEventListener('DOMContentLoaded', changeReadInOtherLanguageHref)
+
+	class Star {
+		constructor(container, delay) {
+			this.container = container
+			this.delay = delay // Delay before the star starts flickering
+			this.init()
+		}
+
+		init() {
+			this.element = document.createElement('div')
+			this.element.className = 'star' // Base class for all stars
+			this.move(true) // Initial position without visibility
+			this.setSize() // Set random size
+			setTimeout(() => {
+				this.container.appendChild(this.element)
+				this.startFlickering()
+			}, this.delay)
+		}
+
+		move(makeInvisible = false) {
+			const x = Math.random() * window.innerWidth
+			const y = Math.random() * (window.innerHeight - 90)
+			this.element.style.left = `${x}px`
+			this.element.style.top = `${y}px`
+			if (makeInvisible) {
+				// Temporarily make the star invisible to change position
+				this.element.style.opacity = '0'
+			}
+		}
+
+		setSize() {
+			// const size = Math.random() * 3 + 1 // Random size between 1px and 4px
+			const size = Math.random() * 1.5 + 1
+			this.element.style.width = `${size}px`
+			this.element.style.height = `${size}px`
+		}
+
+		startFlickering() {
+			// Make the star visible and start flickering
+			this.element.style.opacity = '1'
+			const flickerDuration = this.getRandomDuration()
+			this.element.style.animation = `pulse ${flickerDuration}s infinite`
+
+			// Schedule a move when the star is not visible
+			const interval = flickerDuration * 1000 // Convert seconds to milliseconds
+			setTimeout(() => {
+				this.move() // This will execute when the star is "invisible" during animation
+				this.startFlickering() // Restart flickering after moving
+			}, interval)
+		}
+
+		getRandomDuration() {
+			// Return a random duration between 1 to 5 seconds for the flicker effect
+			return Math.random() * 4 + 1 // 1 to 5 seconds
+		}
+	}
+
+	const NUMBER_OF_STARS = window.innerWidth <= 1024 ? (window.innerWidth <= 500 ? 20 : 40) : 60
+	const starContainer = document.querySelector('#stars')
+
+	if (starContainer.innerHTML === '') {
+		for (let i = 0; i < NUMBER_OF_STARS; i++) {
+			// Increment delay for each star to stagger the start of the flickering
+			new Star(starContainer, i * 50)
+		}
+	}
+</script> -->

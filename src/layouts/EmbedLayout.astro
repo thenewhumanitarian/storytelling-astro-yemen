@@ -1,0 +1,76 @@
+---
+import Header from '@components/header/Header.astro'
+import MenuOverlay from '@components/menu/MenuOverlay.astro'
+import GoogleTagManager from '@components/GoogleTagManager.astro'
+
+import '@styles/tailwind.css'
+import '@styles/global.css'
+
+export interface Props {
+	filterButtons?: boolean
+	languageButtons?: object
+	switchViewButtons?: boolean
+	dark?: boolean
+	header?: boolean
+	title?: string
+	dir?: string
+	overflow?: string
+}
+
+const { filterButtons, languageButtons, dark, header, switchViewButtons } = Astro.props as Props
+let { lang } = Astro.params
+
+if (!lang) {
+	// Read path parameters for language and slug
+	const { path } = Astro.params
+
+	const pathParams = path?.toString().split('/')
+	lang = pathParams?.[0] || 'en'
+}
+
+const isProd = import.meta.env.PROD
+---
+
+<!doctype html>
+<html lang='en' dir={lang === 'ar' ? 'rtl' : 'ltr'}>
+	<head>
+		<slot name='seo' />
+	</head>
+
+	<body>
+		<slot />
+	</body>
+
+	<style is:global lang={'scss'}>
+  body {
+    background: black;
+		background-image: url('https://assets.thenewhumanitarian.org/s3fs-public/styles/responsive_large/public/2023-06/night-sky-overlay_0.png.webp');
+		background-size: cover;
+    background-position: center;
+		background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+
+  #city, #overlay-city {
+		z-index: -1;
+    background-color: transparent;
+		background-image: url('https://assets.thenewhumanitarian.org/s3fs-public/styles/responsive_large/public/2023-06/night-sky-overlay_0.png.webp');
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+  }
+  #city {
+    /* Add the blur effect */
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
+  }
+
+	@media screen and (max-width: 640px) {
+		#city, #overlay-city {
+			background-position: bottom center;
+      filter: blur(2px);
+      -webkit-filter: blur(2px);
+		}
+	}
+</style>
+</html>
