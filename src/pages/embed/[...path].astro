@@ -82,7 +82,7 @@ const readInOtherLanguage = translations.readIn[lang]
 	<SEO title={storyTitle} description={story.story[lang].content} />
 	<!-- <div class='fixed top-0 left-0 w-screen h-screen -z-1 pointer-events-none' id='stars'></div>-->
 	<div class='fixed top-0 left-0 w-screen h-screen -z-1 pointer-events-none' id='city'></div>
-	<div class='w-full max-w-5xl mx-auto mt-2 sm:mt-5 mb-8 sm:mb-24 px-4' class='story-detail-page--wrapper' id='story-wrapper' dir='ltr'>
+	<div class='w-full max-w-5xl m-0 px-4' class='story-detail-page--wrapper' id='story-wrapper' dir='ltr'>
 		<div class='flex flex-col gap-3 sm:gap-5 z-10 h-screen'>
 			<!-- Adjusted: added h-screen for full viewport height -->
 			<div class='w-full grid grid-cols-3 mt-3 mb-1'>
@@ -142,7 +142,7 @@ const readInOtherLanguage = translations.readIn[lang]
 	}
 
 	body {
-		overflow-y: scroll;
+		overflow-y: hidden;
 	}
 
 	#stars {
